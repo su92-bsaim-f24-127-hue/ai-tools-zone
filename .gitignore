@@ -1,0 +1,14 @@
+.test-deps/
+verification/
+__pycache__/
+demo.html
+reference-app.js
+ai-tools-zone.zip
+.tools/
+.env
+.env.*
+!.env.example
+adjust_review_tests.py
+install_logo.py
+polish.py
+review_fixes.py
