@@ -42,4 +42,4 @@ The September 11 review repaired dialog feedback, direct bag access, quantity-co
 
 ## Privacy and accessibility
 
-Only the bag is saved locally in the browser. There is no analytics integration or backend. Native modal dialogs provide keyboard focus containment and Escape dismissal. The layout includes keyboard focus indicators, labeled controls, reduced-motion handling and a 3D fallback for browsers without WebGL.
+Only the bag and the visitor's selected color theme are saved locally in the browser. There is no analytics integration or backend. Native modal dialogs provide keyboard focus containment and Escape dismissal. The layout includes keyboard focus indicators, labeled controls, reduced-motion handling and a 3D fallback for browsers without WebGL.

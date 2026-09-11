@@ -16,6 +16,22 @@
   const modalHistory = [];
   let finderChoices = {intent:'writing', budget:'3000', access:'all'};
   const modal = $('#modal'), content = $('#modal-content');
+  const themeKey = 'atz-theme-v1';
+  const themeToggle = $('#theme-toggle');
+  function setTheme(theme, save = false) {
+    const isLight = theme === 'light';
+    const nextTheme = isLight ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    document.documentElement.style.colorScheme = nextTheme;
+    const action = isLight ? 'Switch to dark theme' : 'Switch to light theme';
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    themeToggle.setAttribute('aria-label', action);
+    themeToggle.title = action;
+    $('meta[name="theme-color"]')?.setAttribute('content', isLight ? '#f7f8f2' : '#10110f');
+    if (save) try { localStorage.setItem(themeKey, nextTheme); } catch (_) {}
+  }
+  setTheme(document.documentElement.dataset.theme, false);
+  themeToggle.addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light', true));
   const mark = p => `<span class="tool-mark mark-${p.id}" aria-hidden="true">${marks[p.id] || '✳'}</span>`;
   const waUrl = text => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
   const singleMessage = p => `Assalam-o-Alaikum AI Tools Zone!\nI would like to order:\n\n${p.name}\nListed price: ${money(p.price)}\nDuration: ${p.duration}\nAccess: ${p.access}\nDelivery estimate: ${p.delivery}\nReplacement warranty: ${p.warranty}\n\nPlease confirm availability, plan limits, final price and payment details.`;
@@ -141,7 +157,7 @@
     if(target.hasAttribute('data-browse-category')){resetFilters();chooseCategory(target.dataset.browseCategory);$('#marketplace').scrollIntoView();}
     if(target.hasAttribute('data-quantity')){const id=target.dataset.quantity,change=target.dataset.change;cart[id]=Math.max(0,Math.min(99,(cart[id]||0)+Number(change)));if(!cart[id])delete cart[id];persist();refreshCart(`[data-quantity="${id}"][data-change="${change}"]`);}
     if(target.hasAttribute('data-remove')){delete cart[target.dataset.remove];persist();refreshCart('[data-remove]');}
-    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>This site stores your shopping bag in your browser’s local storage so it can be restored on your next visit. It does not collect payments, passwords or account details through a website form.</p><p>Google Fonts may receive your IP address when fonts load. When you open a WhatsApp link, your selected order information is included in the link. You choose whether to send the message. WhatsApp processes that interaction under its own privacy policy.</p><p>Information you send in a support conversation is used to discuss and fulfill your request. For privacy questions, contact AI Tools Zone at +92 313 6726285.</p><button class="button button-outline" id="clear-local">Clear saved shopping bag</button>`);
+    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>This site stores your shopping bag and display-theme preference locally in your browser so they can be restored on your next visit. It does not collect payments, passwords or account details through a website form.</p><p>Google Fonts may receive your IP address when fonts load. When you open a WhatsApp link, your selected order information is included in the link. You choose whether to send the message. WhatsApp processes that interaction under its own privacy policy.</p><p>Information you send in a support conversation is used to discuss and fulfill your request. For privacy questions, contact AI Tools Zone at +92 313 6726285.</p><button class="button button-outline" id="clear-local">Clear saved shopping bag</button>`);
     if(target.id==='clear-local'){cart={};persist();toast('Your saved shopping bag has been cleared');}
   });
   document.addEventListener('change',e=>{if(!e.target.matches('[data-compare]'))return;const id=e.target.dataset.compare;if(e.target.checked){if(selected.size>=3){e.target.checked=false;toast('Compare up to 3 tools at a time');return;}selected.add(id);}else selected.delete(id);updateCompare();});

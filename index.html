@@ -4,15 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10110f">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('atz-theme-v1');
+        const theme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'light' ? '#f7f8f2' : '#10110f');
+      } catch (_) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
   <meta name="description" content="Discover 20 AI tools and digital subscriptions at AI Tools Zone. Compare PKR prices, find your creative stack and order directly on WhatsApp in Pakistan.">
   <meta property="og:title" content="AI Tools Zone — Your next unfair advantage.">
   <meta property="og:description" content="Premium AI tools. Clear PKR pricing. Personal WhatsApp support. Build your next big thing with AI Tools Zone.">
   <meta property="og:type" content="website">
   <title>AI Tools Zone — Premium tools. Bigger possibilities.</title>
   <link rel="icon" href="assets/favicon-logo.svg?v=2" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=theme-1">
   <script src="catalog.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=theme-1" defer></script>
   <script src="scene.js" defer></script>
 </head>
 <body>
@@ -21,7 +35,7 @@
   <header class="header wrap">
     <a class="brand" href="#" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="assets/ai-tools-zone-logo.png" alt="" width="1697" height="927" decoding="async"></span><span>AI TOOLS<span class="brand-bottom">ZONE<span class="lime">®</span></span></span></a>
     <nav id="main-nav" aria-label="Main navigation"><a href="#marketplace">Marketplace</a><a href="#categories">Categories</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a></nav>
-    <div class="header-actions"><button class="cart-trigger" data-cart aria-label="Open shopping bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z M8 8V6a4 4 0 0 1 8 0v2"/></svg><span class="cart-count">0</span></button><a class="button button-small button-outline desktop-contact" data-wa="Hi AI Tools Zone! I need help choosing a tool.">Let's talk <span>↗</span></a><button id="menu-toggle" class="icon-button menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button></div>
+    <div class="header-actions"><button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch to light theme"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg><span class="sr-only">Toggle color theme</span></button><button class="cart-trigger" data-cart aria-label="Open shopping bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z M8 8V6a4 4 0 0 1 8 0v2"/></svg><span class="cart-count">0</span></button><a class="button button-small button-outline desktop-contact" data-wa="Hi AI Tools Zone! I need help choosing a tool.">Let's talk <span>↗</span></a><button id="menu-toggle" class="icon-button menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button></div>
   </header>
   <main>
     <section class="hero wrap" aria-labelledby="hero-heading">
