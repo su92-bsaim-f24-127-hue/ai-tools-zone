@@ -12,3 +12,4 @@ adjust_review_tests.py
 install_logo.py
 polish.py
 review_fixes.py
+_site/
