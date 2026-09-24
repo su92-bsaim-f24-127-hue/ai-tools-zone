@@ -1,0 +1,127 @@
+{
+  "chatgpt": {
+    "website": "https://chatgpt.com/",
+    "source": "https://openai.com/favicon.ico",
+    "path": "assets/products/chatgpt.webp",
+    "bytes": 720
+  },
+  "gemini": {
+    "website": "https://gemini.google.com/",
+    "source": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+    "path": "assets/products/gemini.webp",
+    "bytes": 7192
+  },
+  "veo": {
+    "website": "https://deepmind.google/models/veo/",
+    "source": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_2x_96dp.png",
+    "path": "assets/products/veo.webp",
+    "bytes": 5380
+  },
+  "leonardo": {
+    "website": "https://leonardo.ai/",
+    "source": "https://files.readme.io/e6fd24fe6d94d90d5c885217bfc7e206f382cccef4e950586465ac1a3750f90d-Leonardo_Icon_ElectricPurple_1.png",
+    "path": "assets/products/leonardo.webp",
+    "bytes": 9522,
+    "source_page": "https://docs.leonardo.ai/"
+  },
+  "elevenlabs": {
+    "website": "https://elevenlabs.io/",
+    "source": "https://elevenlabs.io/apple-icon.png?6592732ab34b1d42",
+    "path": "assets/products/elevenlabs.webp",
+    "bytes": 170
+  },
+  "canva": {
+    "website": "https://www.canva.com/",
+    "source": "https://www.canva.com/favicon.ico",
+    "path": "assets/products/canva.webp",
+    "bytes": 2122
+  },
+  "figma": {
+    "website": "https://www.figma.com/",
+    "source": "https://static.figma.com/app/icon/2/touch-76.png",
+    "path": "assets/products/figma.webp",
+    "bytes": 626
+  },
+  "capcut": {
+    "website": "https://www.capcut.com/",
+    "source": "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/common/images/lv_web-2.ico",
+    "path": "assets/products/capcut.webp",
+    "bytes": 1220
+  },
+  "adobe": {
+    "website": "https://www.adobe.com/creativecloud.html",
+    "source": "https://www.adobe.com/favicon.ico",
+    "path": "assets/products/adobe.webp",
+    "bytes": 560
+  },
+  "lovable": {
+    "website": "https://lovable.dev/",
+    "source": "https://lovable.dev/apple-touch-icon.png",
+    "path": "assets/products/lovable.webp",
+    "bytes": 7416
+  },
+  "gamma": {
+    "website": "https://gamma.app/",
+    "source": "https://static.gamma.app/favicons/favicon_dark.svg",
+    "path": "assets/products/gamma.svg",
+    "bytes": 2100
+  },
+  "replit": {
+    "website": "https://replit.com/",
+    "source": "https://replit.com/public/icons/favicon-prompt-192-rebrand.png",
+    "path": "assets/products/replit.webp",
+    "bytes": 916
+  },
+  "n8n": {
+    "website": "https://n8n.io/",
+    "source": "https://n8n.io/apple-touch-icon.png",
+    "path": "assets/products/n8n.webp",
+    "bytes": 2614
+  },
+  "notion": {
+    "website": "https://www.notion.com/",
+    "source": "https://www.notion.com/front-static/logo-ios.png",
+    "path": "assets/products/notion.webp",
+    "bytes": 2548
+  },
+  "nordvpn": {
+    "website": "https://nordvpn.com/",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11/icons/nordvpn.svg",
+    "path": "assets/products/nordvpn.svg",
+    "bytes": 371,
+    "colour": "#4687FF",
+    "attribution": "Simple Icons v11, CC0. Brand trademarks remain with their owners."
+  },
+  "surfshark": {
+    "website": "https://surfshark.com/",
+    "source": "https://surfshark.com/website/_next/public/global/favicon-180.png",
+    "path": "assets/products/surfshark.webp",
+    "bytes": 3626
+  },
+  "youtube": {
+    "website": "https://www.youtube.com/",
+    "source": "https://www.youtube.com/s/desktop/dc4e66d7/img/favicon_96x96.png",
+    "path": "assets/products/youtube.webp",
+    "bytes": 724
+  },
+  "netflix": {
+    "website": "https://www.netflix.com/",
+    "source": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png",
+    "path": "assets/products/netflix.webp",
+    "bytes": 996
+  },
+  "linkedin": {
+    "website": "https://www.linkedin.com/",
+    "source": "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
+    "path": "assets/products/linkedin.webp",
+    "bytes": 268
+  },
+  "windows": {
+    "website": "https://www.microsoft.com/en-us/windows/",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11/icons/windows11.svg",
+    "path": "assets/products/windows.svg",
+    "bytes": 221,
+    "colour": "#0078D4",
+    "attribution": "Simple Icons v11, CC0. Brand trademarks remain with their owners."
+  }
+}

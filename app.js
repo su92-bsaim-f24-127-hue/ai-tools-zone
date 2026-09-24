@@ -6,33 +6,13 @@
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const money = n => 'PKR ' + n.toLocaleString('en-PK');
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const marks = {chatgpt:'✳',gemini:'✧',veo:'▷',leonardo:'◈',elevenlabs:'Ⅱ',canva:'C',figma:'◒',capcut:'⋈',adobe:'A',lovable:'♥',gamma:'G',replit:'⊞',n8n:'⌘',notion:'N',nordvpn:'⌁',surfshark:'S',youtube:'▶',netflix:'N',linkedin:'in',windows:'⊞'};
-  const categoryIcons = {'AI Assistants':'✳','AI Video':'▷',Design:'◈',Development:'⌘',Productivity:'▤','AI Voice':'∿','VPN & Security':'◇',Entertainment:'▶',Business:'↗',Software:'⊞'};
   const categories = [...new Set(products.map(p => p.category))];
-  let cart = {};
-  try { const stored = JSON.parse(localStorage.getItem('atz-cart-v1') || '{}'); if (stored && typeof stored === 'object' && !Array.isArray(stored)) products.forEach(p => {if(Number.isInteger(stored[p.id]) && stored[p.id] > 0) cart[p.id] = Math.min(99, stored[p.id]);}); } catch (_) {}
   const selected = new Set();
   let category = 'All tools', expanded = false, toastTimer, lastFocus;
   const modalHistory = [];
   let finderChoices = {intent:'writing', budget:'3000', access:'all'};
   const modal = $('#modal'), content = $('#modal-content');
-  const themeKey = 'atz-theme-v1';
-  const themeToggle = $('#theme-toggle');
-  function setTheme(theme, save = false) {
-    const isLight = theme === 'light';
-    const nextTheme = isLight ? 'light' : 'dark';
-    document.documentElement.dataset.theme = nextTheme;
-    document.documentElement.style.colorScheme = nextTheme;
-    const action = isLight ? 'Switch to dark theme' : 'Switch to light theme';
-    themeToggle.setAttribute('aria-pressed', String(isLight));
-    themeToggle.setAttribute('aria-label', action);
-    themeToggle.title = action;
-    $('meta[name="theme-color"]')?.setAttribute('content', isLight ? '#f7f8f2' : '#10110f');
-    if (save) try { localStorage.setItem(themeKey, nextTheme); } catch (_) {}
-  }
-  setTheme(document.documentElement.dataset.theme, false);
-  themeToggle.addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light', true));
-  const mark = p => `<span class="tool-mark mark-${p.id}" aria-hidden="true">${marks[p.id] || '✳'}</span>`;
+  const mark = p => `<span class="tool-mark mark-${p.id}"><img src="${escape(p.logo)}" alt="" width="64" height="64" loading="lazy" decoding="async"></span>`;
   const waUrl = text => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
   const singleMessage = p => `Assalam-o-Alaikum AI Tools Zone!\nI would like to order:\n\n${p.name}\nListed price: ${money(p.price)}\nDuration: ${p.duration}\nAccess: ${p.access}\nDelivery estimate: ${p.delivery}\nReplacement warranty: ${p.warranty}\n\nPlease confirm availability, plan limits, final price and payment details.`;
   const waLink = (message, text, classes = 'button button-lime') => `<a class="${classes}" href="${escape(waUrl(message))}" target="_blank" rel="noopener noreferrer">${text} <span>↗</span></a>`;
@@ -55,8 +35,6 @@
     else {$('#toast').textContent=message;$('#toast').classList.add('visible');}
     toastTimer=setTimeout(()=>{$('#toast').classList.remove('visible');},2700);
   }
-  function persist() {try {localStorage.setItem('atz-cart-v1', JSON.stringify(cart));} catch (_) {} $$('.cart-count').forEach(el => el.textContent = Object.values(cart).reduce((a,b) => a+b,0));}
-  function add(id, silent = false) {if (!products.some(p => p.id === id)) return;if(cart[id]>=99){if(!silent)toast('Maximum 99 of each tool per order');return;} cart[id] = (cart[id] || 0)+1;persist();if(!silent) toast(`${products.find(p => p.id === id).name} added to your bag`);}
   function openModal(html, type = '', remember = false) {
     if (!modal.open) {lastFocus=document.activeElement;modalHistory.length=0;}
     else if(remember) modalHistory.push({html:content.innerHTML,type:modal.className,scroll:modal.scrollTop});
@@ -69,7 +47,7 @@
   $('.close-modal').addEventListener('click', closeModal);
   modal.addEventListener('click', e => {if(e.target === modal){const r = modal.getBoundingClientRect();if(e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeModal();}});
   function renderTabs() {const focused=document.activeElement?.dataset.category;$('#category-tabs').innerHTML = ['All tools',...categories].map(c => `<button data-category="${escape(c)}" class="${category === c ? 'active' : ''}" aria-pressed="${category === c}">${escape(c)}</button>`).join('');if(focused)$$('[data-category]').find(el=>el.dataset.category===focused)?.focus({preventScroll:true});}
-  function card(p) {return `<article class="product-card" data-product="${p.id}"><div class="product-card-top">${mark(p)}<span class="badge ${['Best Seller','Best Value','Trending'].includes(p.badge)?'accent':''}">${escape(p.badge)}</span></div><div class="product-category">${escape(p.category)}</div><h3><button data-detail="${p.id}">${escape(p.name)}</button></h3><p>${escape(p.description)}</p><div class="plan-meta"><span>${escape(p.duration)}</span><span>${escape(p.access)}</span></div><div class="card-price"><small>PKR</small> ${p.price.toLocaleString('en-PK')}<del aria-label="Previously ${money(p.oldPrice)}">${p.oldPrice.toLocaleString('en-PK')}</del></div><div class="card-actions"><button class="button" data-add="${p.id}" aria-label="Add ${escape(p.name)} to bag">Add to bag <span>＋</span></button><button class="details-button" data-detail="${p.id}" aria-label="View ${escape(p.name)} details">↗</button></div><label class="card-compare"><input type="checkbox" data-compare="${p.id}" ${selected.has(p.id)?'checked':''}> Compare tool</label></article>`;}
+  function card(p) {return `<article class="product-card" data-product="${p.id}"><div class="product-card-top">${mark(p)}<span class="badge">${escape(p.access)}</span></div><div class="product-category">${escape(p.category)}</div><h3><a href="products/${p.slug}/">${escape(p.name)}</a></h3><p>${escape(p.description)}</p><div class="plan-meta"><span>${escape(p.duration)}</span><span>${escape(p.access)}</span></div><div class="card-price"><small>PKR</small> ${p.price.toLocaleString('en-PK')}</div><div class="card-actions"><a class="button buy-now" href="${escape(waUrl(singleMessage(p)))}" target="_blank" rel="noopener noreferrer" aria-label="Buy ${escape(p.name)} on WhatsApp">Buy Now <span>↗</span></a><button class="details-button" data-detail="${p.id}" aria-label="Quick view ${escape(p.name)}">ⓘ</button></div><label class="card-compare"><input type="checkbox" data-compare="${p.id}" ${selected.has(p.id)?'checked':''}> Compare tool</label></article>`;}
   function renderProducts() {
     const query = $('#search').value.trim().toLowerCase(), access = $('#access-filter').value;
     const budget = $('#budget-filter').value === '' ? Infinity : Math.max(0, Number($('#budget-filter').value));
@@ -89,20 +67,7 @@
   function chooseCategory(c) {category=c;renderTabs();renderProducts();}
   function details(id) {
     const p = products.find(p=>p.id===id);if(!p)return;
-    openModal(`<div class="detail-heading">${mark(p)}<div><div class="eyebrow">${escape(p.category)}</div><h2 id="modal-title">${escape(p.name)}</h2></div></div><p>${escape(p.description)}</p><div class="detail-price">${money(p.price)} <small>for ${escape(p.duration)}</small></div><div class="detail-specs"><div><small>ACCESS TYPE</small><b>${escape(p.access)}</b></div><div><small>DURATION / ALLOWANCE</small><b>${escape(p.duration)}</b></div><div><small>DELIVERY ESTIMATE</small><b>${escape(p.delivery)}</b></div><div><small>REPLACEMENT WARRANTY</small><b>${escape(p.warranty)}</b></div></div><h3>What’s in your toolkit</h3><ul class="feature-list">${p.features.map(f=>`<li>${escape(f)}</li>`).join('')}</ul><p class="modal-note">Plan features and usage limits are subject to the selected offer. Confirm the current limits, eligibility and availability with us before payment.</p><div class="modal-actions">${waLink(singleMessage(p),'Order on WhatsApp')}<button class="button button-outline" data-add="${p.id}">Add to bag ＋</button><button class="button button-outline" data-cart>View bag ↗</button></div>`, '', modal.open);
-  }
-  function renderCart(remember = false) {
-    const entries = products.filter(p=>cart[p.id]);
-    const total = entries.reduce((n,p)=>n+p.price*cart[p.id],0);
-    const message = `Assalam-o-Alaikum AI Tools Zone!\nI would like to order:\n\n${entries.map(p=>`${cart[p.id]} × ${p.name} — ${money(p.price*cart[p.id])}\n${p.duration} | ${p.access} | Warranty: ${p.warranty}`).join('\n\n')}\n\nEstimated total: ${money(total)}\nPlease confirm availability, final price, plan limits and payment details.`;
-    openModal(`<h2 id="modal-title">Your creative stack.</h2><p>A few good tools. A lot of possibilities.</p>${entries.length ? `<div class="cart-items">${entries.map(p=>`<article class="cart-item">${mark(p)}<div class="cart-item-details"><h3>${escape(p.name)}</h3><small>${escape(p.duration)} · ${escape(p.access)}</small><div class="quantity"><button data-quantity="${p.id}" data-change="-1" aria-label="Decrease ${escape(p.name)} quantity">−</button><span>${cart[p.id]}</span><button data-quantity="${p.id}" data-change="1" aria-label="Increase ${escape(p.name)} quantity" ${cart[p.id]>=99?'disabled':''}>+</button><button class="remove-item" data-remove="${p.id}">Remove</button></div></div><span class="cart-item-price">${money(p.price*cart[p.id])}</span></article>`).join('')}</div><div class="cart-total"><span>Estimated total</span><strong>${money(total)}</strong></div>${waLink(message,'Order on WhatsApp','button button-lime cart-checkout')}<p class="modal-note">WhatsApp opens with your order ready to review and send. Final availability, price and payment are confirmed in chat. No payment is taken here.</p><button class="inline-button" data-explore>Continue exploring ↗</button>` : `<div class="empty-state"><div class="empty-icon">＋</div><h3>Your next big thing starts here.</h3><p>Your bag is empty. Explore the tools and add your favorites.</p><button class="button button-lime" data-explore>Explore the tools ↗</button></div>`}`, 'cart-dialog', remember);
-  }
-  function refreshCart(selector) {
-    const scroll=modal.scrollTop;renderCart();
-    const control=$(selector,content)||$('[data-quantity]',content)||$('[data-explore]',content);
-    if(control && !control.disabled)control.focus({preventScroll:true});
-    else $('#modal-title')?.focus({preventScroll:true});
-    modal.scrollTop=scroll;
+    openModal(`<div class="detail-heading">${mark(p)}<div><div class="eyebrow">${escape(p.category)}</div><h2 id="modal-title">${escape(p.name)}</h2></div></div><p>${escape(p.description)}</p><div class="detail-price">${money(p.price)} <small>for ${escape(p.duration)}</small></div><div class="detail-specs"><div><small>ACCESS TYPE</small><b>${escape(p.access)}</b></div><div><small>DURATION / ALLOWANCE</small><b>${escape(p.duration)}</b></div><div><small>DELIVERY ESTIMATE</small><b>${escape(p.delivery)}</b></div><div><small>REPLACEMENT WARRANTY</small><b>${escape(p.warranty)}</b></div></div><h3>What’s in your toolkit</h3><ul class="feature-list">${p.features.map(f=>`<li>${escape(f)}</li>`).join('')}</ul><p class="modal-note">Plan features and usage limits are subject to the selected offer. Confirm the current limits, eligibility and availability with us before payment.</p><div class="modal-actions">${waLink(singleMessage(p),'Buy Now')}<a class="button button-outline" href="products/${p.slug}/">Full plan details ↗</a></div>`, '', modal.open);
   }
   function exploreAll() {
     resetFilters();expanded=true;renderProducts();
@@ -136,12 +101,10 @@
     const result=products.filter(p=>p.intent.includes(intent)&&(intent!=='video'||p.category!=='Entertainment')&&p.price<=budget&&(access==='all'||p.access===access)).sort((a,b)=>a.price-b.price).slice(0,4);
     openModal(`<h2 id="modal-title">${result.length?'Welcome to your zone.':'Let’s widen the possibilities.'}</h2><p>${result.length?'These tools match your workflow, access preference and total plan budget.':'No tools match all three choices. Try a higher budget or another access type.'}</p>${result.map(p=>`<div class="finder-result">${mark(p)}<div><h3>${escape(p.name)}</h3><small>${money(p.price)} · ${escape(p.duration)} · ${escape(p.access)}</small></div><button class="button button-outline" data-detail="${p.id}">View ↗</button></div>`).join('')}<div class="modal-actions"><button class="button button-outline" data-finder>Try again ↺</button>${waLink('Hi AI Tools Zone! Please help me choose a tool for '+intent+(budget===Infinity?' with no fixed budget.':' with a total plan budget of '+money(budget)+'.'),'Ask a human')}</div>`);
   });
-  $('#category-grid').innerHTML=categories.map(c=>`<button class="category-card" data-browse-category="${escape(c)}"><span class="category-icon">${categoryIcons[c]}</span><h3>${escape(c)}</h3><small>${products.filter(p=>p.category===c).length} tools</small><span aria-hidden="true">↗</span></button>`).join('');
+  $('#category-grid').innerHTML=categories.map(c=>`<button class="category-card" data-browse-category="${escape(c)}"><span class="category-icon"><img src="assets/brand-icon.webp" alt="" width="40" height="40" loading="lazy"></span><h3>${escape(c)}</h3><small>${products.filter(p=>p.category===c).length} tools</small><span aria-hidden="true">↗</span></button>`).join('');
   document.addEventListener('click',e=>{
     const target=e.target.closest('button,a');if(!target)return;
-    if(target.hasAttribute('data-add'))add(target.dataset.add);
     if(target.hasAttribute('data-detail'))details(target.dataset.detail);
-    if(target.hasAttribute('data-cart'))renderCart(modal.open && modal.className !== 'cart-dialog');
     if(target.hasAttribute('data-finder')){finder();Object.entries(finderChoices).forEach(([name,value])=>{$(`[name="${name}"]`,content).value=value;});}
     if(target.hasAttribute('data-open-compare'))renderCompare();
     if(target.hasAttribute('data-edit-compare'))comparePicker();
@@ -154,11 +117,8 @@
     if(target.hasAttribute('data-close'))closeModal();
     if(target.hasAttribute('data-reset'))resetFilters();
     if(target.hasAttribute('data-category'))chooseCategory(target.dataset.category);
-    if(target.hasAttribute('data-browse-category')){resetFilters();chooseCategory(target.dataset.browseCategory);$('#marketplace').scrollIntoView();}
-    if(target.hasAttribute('data-quantity')){const id=target.dataset.quantity,change=target.dataset.change;cart[id]=Math.max(0,Math.min(99,(cart[id]||0)+Number(change)));if(!cart[id])delete cart[id];persist();refreshCart(`[data-quantity="${id}"][data-change="${change}"]`);}
-    if(target.hasAttribute('data-remove')){delete cart[target.dataset.remove];persist();refreshCart('[data-remove]');}
-    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>This site stores your shopping bag and display-theme preference locally in your browser so they can be restored on your next visit. It does not collect payments, passwords or account details through a website form.</p><p>Google Fonts may receive your IP address when fonts load. When you open a WhatsApp link, your selected order information is included in the link. You choose whether to send the message. WhatsApp processes that interaction under its own privacy policy.</p><p>Information you send in a support conversation is used to discuss and fulfill your request. For privacy questions, contact AI Tools Zone at +92 313 6726285.</p><button class="button button-outline" id="clear-local">Clear saved shopping bag</button>`);
-    if(target.id==='clear-local'){cart={};persist();toast('Your saved shopping bag has been cleared');}
+    if(target.hasAttribute('data-browse-category')){e.preventDefault();resetFilters();chooseCategory(target.dataset.browseCategory);$('#marketplace').scrollIntoView();}
+    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>Your selected colour theme is stored only in this browser. We do not collect payment details or passwords on this website.</p><p>Buy Now opens WhatsApp with the chosen plan details. You review and send the message yourself. WhatsApp handles the conversation under its own privacy policy.</p><p>Information you send is used to discuss and fulfil your request. For questions, contact +92 313 6726285. <a class="inline-link" href="privacy/">Read the privacy policy</a>.</p>`);
   });
   document.addEventListener('change',e=>{if(!e.target.matches('[data-compare]'))return;const id=e.target.dataset.compare;if(e.target.checked){if(selected.size>=3){e.target.checked=false;toast('Compare up to 3 tools at a time');return;}selected.add(id);}else selected.delete(id);updateCompare();});
   $('#search').addEventListener('input',renderProducts);
@@ -169,7 +129,6 @@
   $('#filter-toggle').addEventListener('click',()=>{const open=$('#advanced-filters').hidden;$('#advanced-filters').hidden=!open;$('#filter-toggle').setAttribute('aria-expanded',open);});
   $('#show-more').addEventListener('click',()=>{expanded=!expanded;renderProducts();if(!expanded)$('#marketplace').scrollIntoView();});
   $('#clear-compare').addEventListener('click',()=>{selected.clear();updateCompare();});
-  $('#add-stack').addEventListener('click',()=>{['chatgpt','canva','capcut','elevenlabs'].forEach(id=>add(id,true));renderCart();toast('Your creator stack is ready');});
   function setMenu(open) {$('#main-nav').classList.toggle('open',open);$('#menu-toggle').setAttribute('aria-expanded',String(open));$('#menu-toggle').setAttribute('aria-label',open?'Close menu':'Open menu');$('#menu-toggle').textContent=open?'×':'☰';}
   $('#menu-toggle').addEventListener('click',()=>setMenu(!$('#main-nav').classList.contains('open')));
   $$('#main-nav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
@@ -182,5 +141,5 @@
   // Open policy disclosures when arriving from the footer or a bookmarked link.
   function openHash(){if(location.hash==='#refund-policy')$('#refund-policy').open=true;}
   window.addEventListener('hashchange',openHash);openHash();
-  persist();renderTabs();renderProducts();
+  renderTabs();renderProducts();
 })();

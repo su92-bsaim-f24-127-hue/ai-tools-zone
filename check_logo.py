@@ -18,6 +18,8 @@ with sync_playwright() as p:
         assert page.locator('footer .brand img').evaluate('e=>e.complete && e.naturalWidth>0')
         page.locator('header .brand').click()
         assert page.url.endswith('#')
-    assert page.request.get('http://127.0.0.1:8080/assets/favicon-logo.svg?v=2').status==200
+    assert page.request.get('http://127.0.0.1:8080/assets/icon-48.png').status==200
+    assert (root/'assets/icon-48.png').stat().st_size<10000
+    assert page.locator('.hero-brand-logo').evaluate('e=>e.complete && e.naturalWidth>0')
     print('PASS: header/footer logos load at desktop and mobile sizes; no overflow; home link and favicon work.')
     browser.close()
