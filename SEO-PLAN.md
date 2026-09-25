@@ -5,7 +5,7 @@ Production origin: https://aitoolszone.tech
 ## 1. Brand and purchase journey
 - Replace the hero rings and placeholder brand decorations with the existing AI Tools Zone favicon artwork; preserve depth, floating motion, pointer tilt, pause, and reduced-motion support.
 - Use locally hosted original product logos in their original colours, with an asset source manifest.
-- Replace the shopping bag with direct Buy Now links to +92 313 6726285. Include product, PKR price, duration, access and warranty in a message the customer reviews and sends.
+- Replace the shopping bag with direct Buy Now links to +92 343 0173923. Include product, PKR price, duration, access and warranty in a message the customer reviews and sends.
 - Retain filtering, comparison, tool finder and both colour themes.
 
 ## 2. SEO and crawlability

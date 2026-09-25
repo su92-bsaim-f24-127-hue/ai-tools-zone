@@ -6,7 +6,7 @@ Audit date: September 16, 2026. Target domain: https://aitoolszone.tech.
 
 - Replaced the hero rings and temporary brand decorations with the supplied favicon artwork. The hero retains floating CSS 3D motion, pointer tilt, a pause control and reduced-motion support.
 - Added locally hosted, original-colour brand icons for all twenty products. Asset sources are recorded in `assets/product-logo-sources.json`. Veo uses the official Google DeepMind vendor icon; Adobe uses its official parent-brand mark. These are not claims of official affiliation.
-- Removed shopping-bag controls. Buy Now opens WhatsApp at +92 313 6726285 with the selected plan and listed purchase details. The customer reviews and sends the message; the website does not send it automatically or collect payment.
+- Removed shopping-bag controls. Buy Now opens WhatsApp at +92 343 0173923 with the selected plan and listed purchase details. The customer reviews and sends the message; the website does not send it automatically or collect payment.
 - Verified working, persistent dark/light themes. Retained search, category and advanced filters, sorting, comparison and the tool finder.
 - Improved mobile card readability, image rendering, keyboard access and colour contrast. Added crawlable information and ordering-policy pages.
 

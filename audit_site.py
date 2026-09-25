@@ -38,11 +38,11 @@ with sync_playwright() as p:
  for product in products:
   a=page.locator(f'[data-product="{product["id"]}"] .buy-now')
   link=a.get_attribute('href'); order=parse_qs(urlparse(link).query)['text'][0]
-  check(product['name']+' direct Buy Now details',urlparse(link).netloc=='wa.me' and urlparse(link).path=='/923136726285' and all(str(v) in order for v in [product['name'],f'{product["price"]:,}',product['duration'],product['access'],product['warranty']]))
+  check(product['name']+' direct Buy Now details',urlparse(link).netloc=='wa.me' and urlparse(link).path=='/923430173923' and all(str(v) in order for v in [product['name'],f'{product["price"]:,}',product['duration'],product['access'],product['warranty']]))
   check(product['name']+' original local logo',page.locator(f'[data-product="{product["id"]}"] .tool-mark img').evaluate('el=>el.complete && el.naturalWidth>0') and product['logo'].startswith('assets/products/'))
  with page.expect_popup() as popup_info: page.locator('.buy-now').first.click()
  popup=popup_info.value; popup.wait_for_load_state()
- check('Buy Now opens the correct WhatsApp destination',popup.url.startswith('https://wa.me/923136726285?text='))
+ check('Buy Now opens the correct WhatsApp destination',popup.url.startswith('https://wa.me/923430173923?text='))
  popup.close()
  page.locator('#search').fill('ChatGPT'); check('Search returns matching product',page.locator('.product-card').count()==1)
  page.locator('#search').fill('no-result-123'); check('Empty search offers reset',page.locator('[data-reset]').is_visible())
@@ -96,7 +96,7 @@ with sync_playwright() as p:
   schemas=[json.loads(s) for s in page.locator('script[type="application/ld+json"]').all_text_contents()]
   product_schema=schemas[0]['@graph'][0]
   check(product['name']+' crawlable page and schema',response.status==200 and page.locator('h1').inner_text()==product['name'] and page.locator('link[rel=canonical]').get_attribute('href')=='https://aitoolszone.tech'+path and product_schema['offers']['price']==product['price'] and 'aggregateRating' not in product_schema)
-  check(product['name']+' page Buy Now',urlparse(page.locator('.buy-now').get_attribute('href')).path=='/923136726285')
+  check(product['name']+' page Buy Now',urlparse(page.locator('.buy-now').get_attribute('href')).path=='/923430173923')
   if product['id']=='chatgpt':
    for theme in ['dark','light']:
     if page.locator('html').get_attribute('data-theme')!=theme:page.locator('#theme-toggle').click()
@@ -124,7 +124,7 @@ with sync_playwright() as p:
  nojs=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':844})
  plain=nojs.new_page();plain.goto(BASE,wait_until='networkidle')
  check('All 20 plans readable without JavaScript',plain.locator('.product-card').count()==20)
- check('Buy Now works without JavaScript',plain.locator('.product-card .buy-now[href^="https://wa.me/923136726285"]').count()==20)
+ check('Buy Now works without JavaScript',plain.locator('.product-card .buy-now[href^="https://wa.me/923430173923"]').count()==20)
  check('No-JS mobile layout fits',no_overflow(plain))
  plain.goto(BASE+'/products/chatgpt-plus/',wait_until='domcontentloaded');check('Product details readable without JavaScript',plain.locator('h1').inner_text()=='ChatGPT Plus' and plain.locator('.buy-now').count()==1)
  check('No uncaught JavaScript errors',not errors)

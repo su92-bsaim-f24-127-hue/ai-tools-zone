@@ -33,7 +33,7 @@ Product icons are hosted locally. Most are from vendors' own sites or documented
 
 ## WhatsApp purchases
 
-All Buy Now links open `https://wa.me/923136726285` with the selected plan details. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
+All Buy Now links open `https://wa.me/923430173923` with the selected plan details. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
 
 ## Catalog accuracy
 
