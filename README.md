@@ -64,6 +64,18 @@ Canonical URLs point to the user-confirmed production domain. Indexing, rankings
 
 ## Privacy
 
-Only the selected theme is stored by this version. Any old bag value is left untouched in browser storage but is no longer read. Search and comparison run locally. Google Fonts remains the only runtime asset dependency outside this website. Privacy, ordering/warranty and contact information are available as crawlable pages.
+Only the selected theme is stored by this version. Any old bag value is left untouched in browser storage but is no longer read. Search and comparison run locally. Google Fonts and Cloudflare Web Analytics are external runtime services. Privacy, ordering/warranty and contact information are available as crawlable pages.
 
 `measurement.js` exposes optional document events named `aitz:measure`; it does not send analytics, use cookies or persist events. See `SEO-STRATEGY.md` before connecting any collection service. GPTBot training access is disallowed separately from OAI-SearchBot search access.
+
+## Private visitor analytics
+
+Cloudflare Web Analytics is installed by the shared HTML writer in `build_site.py`, including every generated page. The public beacon token identifies the collection site; it is not a credential for reading reports. The existing `measurement.js` custom events remain local and are not forwarded to Cloudflare.
+
+To view counts, log into your own Cloudflare account, open **Web Analytics**, choose **aitoolszone.tech**, and select the date range. Keep account access limited to yourself; this website does not provide public reports, a shared dashboard link, or a client-side admin password. Dashboard membership cannot be verified from the public token.
+
+Visits/page views are measured browser activity, not a verified count of distinct people. Ad blockers and disabled JavaScript can reduce collection; verification visits may appear. Historical visits before installation cannot be recovered. Data may take a few minutes to appear.
+
+The privacy page describes the service. `_headers` allows its script/collection endpoint on compatible hosts; GitHub Pages does not apply that configuration file.
+
+Setup reference: https://developers.cloudflare.com/web-analytics/get-started/

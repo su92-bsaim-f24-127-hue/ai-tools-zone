@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from zipfile import ZipFile
 import hashlib,json,subprocess,sys
 import seo_pages
+from audit_seo import Page
 ROOT=Path(__file__).parent
 assert seo_pages.content_date(datetime(2026,9,29,19,30,tzinfo=timezone.utc)).isoformat()=='2026-09-30'
 assert seo_pages.content_date(datetime(2026,9,29,18,30,tzinfo=timezone.utc)).isoformat()=='2026-09-29'
@@ -30,6 +31,10 @@ subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,ca
 state=json.loads((ROOT/'data/page-state.json').read_text())
 files=[ROOT/('index.html' if path=='/' else path.strip('/')+'/index.html') for path in state]
 files += [ROOT/'sitemap.xml',ROOT/'data/page-state.json',ROOT/'catalog.js',ROOT/'robots.txt']
+for file in [f for f in files if f.suffix=='.html']+[ROOT/'404.html']:
+    scripts=Page(file.read_text(encoding='utf-8')).attrs('script',src='https://static.cloudflareinsights.com/beacon.min.js')
+    assert len(scripts)==1 and 'defer' in scripts[0],f'{file}: missing/duplicate non-blocking analytics beacon'
+    assert json.loads(scripts[0]['data-cf-beacon'])=={'token':'d2b7303797fa48c694dde2b0ff780947'},f'{file}: wrong analytics destination'
 snapshot={f:hashlib.sha256(f.read_bytes()).hexdigest() for f in files}
 subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,capture_output=True)
 assert snapshot=={f:hashlib.sha256(f.read_bytes()).hexdigest() for f in files},'Build output must be deterministic'
