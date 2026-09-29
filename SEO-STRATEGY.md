@@ -38,7 +38,7 @@ Edit `data/catalog.json`, preserving each `slug` even when a display name change
 
 Edit original guidance in `data/seo-content.json`; update it when vendor policies or buyer needs change. All price tables, structured offers and prepared messages derive from the catalog. There are no independently maintained price copies in the new editorial copy.
 
-`data/page-state.json` persists a semantic content hash and lastmod. The fingerprint includes visible text, metadata, links and schema, while ignoring style/ordinary script bodies and asset cache tokens. Unchanged builds retain dates. Dates indicate a page-content change, not a price/stock verification. Never reset the state file just to make pages look fresh. Review deleted URLs before removing a page: GitHub Pages has no general per-path 301 configuration. Preserve useful URLs or configure a real host redirect before a migration.
+`data/page-state.json` persists a semantic content hash and lastmod. The fingerprint includes visible text, metadata, links and schema, while ignoring style/ordinary script bodies and asset cache tokens. Unchanged builds retain dates. Date-only freshness uses the Pakistan business calendar (UTC+05:00) consistently in local builds and UTC-hosted CI. Dates indicate a page-content change, not a price/stock verification. Never reset the state file just to make pages look fresh. Review deleted URLs before removing a page: GitHub Pages has no general per-path 301 configuration. Preserve useful URLs or configure a real host redirect before a migration.
 
 ## Measurement without invented results
 

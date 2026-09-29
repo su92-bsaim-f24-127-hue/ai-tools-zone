@@ -31,3 +31,11 @@ Existing optimized hero WebP sizes are 228,446 bytes (desktop) and 73,008 bytes 
 No authenticated Search Console, Bing Webmaster, CrUX or analytics property is connected. Index counts, rankings, traffic, real-user LCP/INP/CLS and conversions are unknown. Direct Google and Bing result-page requests failed in the research tool; they do not establish Pakistan rankings. AI Overview/Copilot/ChatGPT citation presence is not verified. Seller prices and access claims originate in the owner's catalog, not vendor authorization or a new stock check.
 
 Final validation and deployment results will be recorded in SEO-IMPLEMENTATION.md. Competitor observations and uncertainty are documented separately in SEO-COMPETITOR-GAPS.md.
+
+## Post-implementation validation
+
+The generated site now has 52 indexable canonical pages and 135 mapped search intents. All 4,197 static SEO checks passed, with no missing metadata, broken internal references, schema/breadcrumb mismatches, orphan pages or initial-HTML product omissions. Maximum crawl depth is two links from home. Browser coverage includes all 52 pages in mobile/no-JS and desktop/JS modes, with additional 320/768/1024-width checks; 121 checks passed. The original storefront regression suite remains at 149 passing checks and axe reported zero violations across 36 states.
+
+External link sampling found 18 accessible destinations and five blocked/timed-out requests among 23 references, with no observed missing-page response. Those five need manual checking; do not equate a bot access error with a broken public link. No controlled before/after speed test or field INP measurement was available, so performance gains are not quantified. Dead-looking legacy CSS was not aggressively removed without proving it unused across all interactive states.
+
+The first CI attempt correctly stopped publishing when the date audit treated Pakistan midnight as a future UTC date. Build and validation now use the same Pakistan calendar, with explicit midnight-boundary regression checks. See the implementation report for the successful deployment record and live URL verification.

@@ -82,4 +82,10 @@ No claims are made about Page 1 rankings, indexing counts, traffic growth, offic
 
 ## Deployment record
 
-GitHub push and live post-deployment verification are recorded here after the deployment completes.
+Implementation commit `4339d2e` and timezone correction `b952707` were pushed to `su92-bsaim-f24-127-hue/ai-tools-zone` on `main`. [GitHub Pages deployment 36617092751](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/actions/runs/36617092751) completed successfully. The workflow now also runs the freshness/determinism/package regression test before its SEO gate.
+
+Live verification completed at 2026-09-29T19:09:12.746152+00:00. All 52 sitemap URLs returned HTTP 200 with matching canonical URLs, a single H1 and their entity graphs. All 58 live page/variant checks passed: 57 final HTTP 200 responses and the expected HTTP 404 for an invented route. HTTP/www and missing-slash variants redirect correctly; query parameters canonicalize to the clean homepage.
+
+Live robots.txt exactly matches the build. The manifest and measurement asset returned 200. `/data/catalog.json`, `/templates/home.html`, `/README.md` and `/audit_seo.py` returned 404 from the production host, confirming those sampled source/development files are excluded. This is deployment hygiene, not a claim that a public GitHub repository is private.
+
+The initial CI run exposed a local-Pakistan versus UTC-midnight mismatch in lastmod validation. It was corrected by using a consistent UTC+05:00 business calendar and adding regression cases on both sides of midnight; the successful CI run includes that fix.
