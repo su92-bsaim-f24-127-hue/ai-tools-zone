@@ -1,11 +1,13 @@
 """Regression checks for stable freshness and production packaging."""
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from datetime import date
+from datetime import datetime, timezone
 from zipfile import ZipFile
 import hashlib,json,subprocess,sys
 import seo_pages
 ROOT=Path(__file__).parent
+assert seo_pages.content_date(datetime(2026,9,29,19,30,tzinfo=timezone.utc)).isoformat()=='2026-09-30'
+assert seo_pages.content_date(datetime(2026,9,29,18,30,tzinfo=timezone.utc)).isoformat()=='2026-09-29'
 
 with TemporaryDirectory() as directory:
     original_root=seo_pages.ROOT
@@ -21,7 +23,7 @@ with TemporaryDirectory() as directory:
         seo_pages.finalize(['/'],'https://example.test',write)
         assert record()==state,'Asset/cache/style changes must not pretend content is fresh'
         write('index.html',html.replace('PKR 100','PKR 200'));seo_pages.finalize(['/'],'https://example.test',write)
-        assert record()['lastmod']==date.today().isoformat() and record()['sha256']!=state['sha256'],'A changed visible price must update freshness'
+        assert record()['lastmod']==seo_pages.content_date().isoformat() and record()['sha256']!=state['sha256'],'A changed visible price must update freshness'
     finally:seo_pages.ROOT=original_root
 
 subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,capture_output=True)

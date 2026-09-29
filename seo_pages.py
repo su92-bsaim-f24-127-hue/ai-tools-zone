@@ -2,12 +2,19 @@
 from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
-from datetime import date
+from datetime import datetime, timezone, timedelta
 import hashlib
 import json
 import re
 
 ROOT = Path(__file__).parent
+# Pakistan has a fixed UTC+05:00 offset. Keep local Windows and UTC CI dates aligned
+# without requiring an OS timezone database on Windows.
+SITE_TIMEZONE = timezone(timedelta(hours=5))
+
+def content_date(now=None):
+    return (now or datetime.now(timezone.utc)).astimezone(SITE_TIMEZONE).date()
+
 CONTENT = json.loads((ROOT / 'data/seo-content.json').read_text(encoding='utf-8'))
 CATEGORIES = {c['name']: c for c in CONTENT['categories']}
 HUBS = {
@@ -162,8 +169,7 @@ def finalize(paths, origin, write):
         parser=ContentFingerprint(); parser.feed(html)
         digest=hashlib.sha256('\n'.join(parser.parts).encode()).hexdigest()
         old=previous.get(path,{})
-        state[path]={'sha256':digest,'lastmod':old['lastmod'] if old.get('sha256')==digest else date.today().isoformat()}
+        state[path]={'sha256':digest,'lastmod':old['lastmod'] if old.get('sha256')==digest else content_date().isoformat()}
     write('data/page-state.json',json.dumps(state,indent=2)+'\n')
     write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{origin}{path}</loc><lastmod>{state[path]["lastmod"]}</lastmod></url>\n' for path in paths)+'</urlset>\n')
     write('robots.txt',f'# Public search discovery; this file is not access control.\nUser-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\n# Model-training policy is independent of search discovery.\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: {origin}/sitemap.xml\n')
-

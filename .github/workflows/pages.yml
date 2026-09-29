@@ -28,6 +28,7 @@ jobs:
       - name: Build static website
         run: |
           python build_site.py
+          python test_seo_build.py
           python audit_seo.py
           python package_site.py
           python -m zipfile -e ai-tools-zone.zip _site

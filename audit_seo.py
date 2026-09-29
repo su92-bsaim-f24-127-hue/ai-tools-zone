@@ -9,6 +9,7 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
+from seo_pages import content_date
 
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
@@ -61,7 +62,7 @@ def run():
     for node in sitemap.findall('{*}url'):
         path=urlparse(node.find('{*}loc').text).path
         lastmod=node.find('{*}lastmod')
-        check(lastmod is not None and date.fromisoformat(lastmod.text)<=date.today(),path+' invalid lastmod')
+        check(lastmod is not None and date.fromisoformat(lastmod.text)<=content_date(),path+' invalid lastmod')
         check(lastmod is not None and lastmod.text==states.get(path,{}).get('lastmod'),path+' lastmod differs from source record')
     catalog=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
     products={'/products/'+p['slug']+'/':p for p in catalog}
