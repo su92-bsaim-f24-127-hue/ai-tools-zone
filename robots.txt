@@ -1,4 +1,12 @@
+# Public search discovery; this file is not access control.
 User-agent: *
 Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Model-training policy is independent of search discovery.
+User-agent: GPTBot
+Disallow: /
 
 Sitemap: https://aitoolszone.tech/sitemap.xml

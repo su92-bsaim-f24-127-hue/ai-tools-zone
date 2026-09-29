@@ -1,0 +1,210 @@
+{
+  "/": {
+    "sha256": "83b0585e507dd3a19c8621d88518f7c2426e7326b22c3711083383d415ff1d20",
+    "lastmod": "2026-09-29"
+  },
+  "/products/chatgpt-plus/": {
+    "sha256": "ed7da1dc4cb487d9cae4cb27a19a48f25bdbd99e3a9c679fe4c1604faaff00df",
+    "lastmod": "2026-09-30"
+  },
+  "/products/gemini-pro/": {
+    "sha256": "0f81d358ff03fa7662c764173071376a8c6d7dcb8dfd8f3da6a65cb1dc506f5d",
+    "lastmod": "2026-09-30"
+  },
+  "/products/veo-3-ultra/": {
+    "sha256": "b640f12a34041be32a2859e9c6e00458526d567a4df237187093358c4ab46e9f",
+    "lastmod": "2026-09-30"
+  },
+  "/products/leonardo-ai-essential/": {
+    "sha256": "b9974277a2fbe01459281a8aa38dd1d60aca69e5723ff9431ee549aa5a5d40b1",
+    "lastmod": "2026-09-30"
+  },
+  "/products/elevenlabs/": {
+    "sha256": "4b26b12d9c3c420bbcfad4d4896665677893824caae90a57336d3ccefb481dc2",
+    "lastmod": "2026-09-30"
+  },
+  "/products/canva-pro-edu/": {
+    "sha256": "e448746d6477e74d4d48bfe744863c82496b2f1103a676a68f51ff01b86bc7e6",
+    "lastmod": "2026-09-30"
+  },
+  "/products/figma-pro-private/": {
+    "sha256": "c73a3964bbe5bc0ba2c8017936bd7ccd9332e91c711770f989b348c976553038",
+    "lastmod": "2026-09-30"
+  },
+  "/products/capcut-pro/": {
+    "sha256": "63e4e047865c338bccfcd6071555e7f3161204bddfa4f05d552fbc4862ec8abf",
+    "lastmod": "2026-09-30"
+  },
+  "/products/adobe-creative-cloud/": {
+    "sha256": "87ec5e365814410fef2f9741c0315c009009bbe2add720f1a5b30ff3fe02ca6d",
+    "lastmod": "2026-09-30"
+  },
+  "/products/lovable-pro/": {
+    "sha256": "04b7b2edd55197f06e815256be9679658019235cb590ec8962b3002264467101",
+    "lastmod": "2026-09-30"
+  },
+  "/products/gamma-pro/": {
+    "sha256": "0138df8c273622bd37e72c98c2de67596df889f9580e9e0ad9a426a72f68c8f3",
+    "lastmod": "2026-09-30"
+  },
+  "/products/replit-core/": {
+    "sha256": "ead67fd7a8e8905903553d54cc6eab00aac9edb97f61a2a3c67b93da7ecb82f9",
+    "lastmod": "2026-09-30"
+  },
+  "/products/n8n-starter/": {
+    "sha256": "dacf8d445d9b4ec15019e6a6156f2b1d95583267d6a2a2f22fe7e9445ff9fb9f",
+    "lastmod": "2026-09-30"
+  },
+  "/products/notion-business/": {
+    "sha256": "ff2fa5481094556d0b23bca05e4717925b9f8b8895a007364728b76077b640c4",
+    "lastmod": "2026-09-30"
+  },
+  "/products/nordvpn/": {
+    "sha256": "f2b33ea76e5b9763c498d2a9f5d982254f879344c19e0209b5c6942ee516ee5d",
+    "lastmod": "2026-09-30"
+  },
+  "/products/surfshark-vpn/": {
+    "sha256": "8e0ce1b5d36ce05864115e969f5ee8e50aab431ef4cfa61cc5441df9045c851c",
+    "lastmod": "2026-09-30"
+  },
+  "/products/youtube-premium/": {
+    "sha256": "031a97f3256db5a0d550f1998d436ebb8a15a8f5395fc3654ccda34c9a0e9db5",
+    "lastmod": "2026-09-30"
+  },
+  "/products/netflix-premium-4k/": {
+    "sha256": "a05708ac50c2d8117742656047aacff85ea0fa1ea501603c94247008082fa664",
+    "lastmod": "2026-09-30"
+  },
+  "/products/linkedin-premium/": {
+    "sha256": "15d0479f9f83adb56518770f882b362702fa53b17eba4ac9135d1c5787ad6e1b",
+    "lastmod": "2026-09-30"
+  },
+  "/products/windows-11-pro-key/": {
+    "sha256": "82a0d203bb9f46298001e13d9b23819580069b2a4e21a5ca4a6561ef727b4e68",
+    "lastmod": "2026-09-30"
+  },
+  "/about/": {
+    "sha256": "96fb28d66af87b85b725d85114f074ad29792c3017449b364b398d4ba45db8a6",
+    "lastmod": "2026-09-29"
+  },
+  "/privacy/": {
+    "sha256": "0e07bf2214924a46b2b707d014069360abb00d90a606cabe0f498893e452cedd",
+    "lastmod": "2026-09-29"
+  },
+  "/terms/": {
+    "sha256": "694aaac4f650e9429aa50a29a886dedcf61c24e5dc0336a6b4c9f3f5b3f6a6f8",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/ai-assistants/": {
+    "sha256": "418838bdeb04058d53bc57556a6a844fad4f2738e30a6160a9602e60b531f871",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/ai-video/": {
+    "sha256": "50578c69cf10d7eb95fbd2bd82da22c50303eb4da0f3e4c5366c0c434f729351",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/design/": {
+    "sha256": "df281a8f4ea0efec241204e6c996c34b16a21905b45cb386cd886ad12b92a52a",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/ai-voice/": {
+    "sha256": "887a7147eaa12977d7b3e77af658b1e6525cd1b22e7a04a3f92b9795e8b5d7db",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/development/": {
+    "sha256": "b74fb2b736cb8891d48b71009f85652e07a1290abac1667f58d812b27695c930",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/productivity/": {
+    "sha256": "d0fa6ac162c62b9af6c6ac3cbc547304e66e271c16c0e552159345a0d5b330c1",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/vpn-security/": {
+    "sha256": "c40d1c7b905710ec8f93019a65042a0569b6c88b3c234bcec8aa0932a27b2a40",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/entertainment/": {
+    "sha256": "e956c3d55d99284915e62ea5415de8064de6341983f1ec23e2044dd8f881ffc9",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/business/": {
+    "sha256": "6b36720b4948397a019dacbd27f82d0a50acffa3138c1ba779b959e4479d5b51",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/software/": {
+    "sha256": "5cbb95e41999d5d72ccb95f1f80205e6f33009a0d361bc7c3eaf2327b552e521",
+    "lastmod": "2026-09-29"
+  },
+  "/use-cases/ai-tools-for-students/": {
+    "sha256": "7687604219e61a2a65e883405ed9a177d94a34bcfb947033fd948ba2ca5ba96e",
+    "lastmod": "2026-09-29"
+  },
+  "/use-cases/ai-tools-for-creators/": {
+    "sha256": "2b0a5e215d8ce82e47c6070c7fe9b8eee6d95c1231d0bdae1a4e3d68f8ddf156",
+    "lastmod": "2026-09-29"
+  },
+  "/use-cases/ai-tools-for-developers/": {
+    "sha256": "0179452b1e5dc03c9ce30dfac2857ba8b162732f9bdc18428aa694c6f619f2f6",
+    "lastmod": "2026-09-29"
+  },
+  "/use-cases/ai-tools-for-business/": {
+    "sha256": "f3791acec1118c6a7e9f94a1dd82c9a20ce1b912032996ecca9267f16584523e",
+    "lastmod": "2026-09-29"
+  },
+  "/compare/chatgpt-vs-gemini/": {
+    "sha256": "992ac37a54f7b42b927837a7dcc950720566214b9b4ebb8df0c299d70b875904",
+    "lastmod": "2026-09-29"
+  },
+  "/compare/canva-vs-adobe/": {
+    "sha256": "fc3c865ebba34bdc34199c6d8175a88787c1bcfac04d287019ab32f5842dc140",
+    "lastmod": "2026-09-29"
+  },
+  "/compare/capcut-vs-canva/": {
+    "sha256": "c14bbca77377abadd8dab3fe47a822446bb27cd7c3daf68dbe82ecfd348a7cd9",
+    "lastmod": "2026-09-29"
+  },
+  "/alternatives/chatgpt/": {
+    "sha256": "58e3b62475a267add1f7b818904110447b1205bf066eecb43061b45c04d40401",
+    "lastmod": "2026-09-29"
+  },
+  "/alternatives/canva/": {
+    "sha256": "e07f180f5b483b8b2cedc62828214416f813e4cbd617babd9444cdc04ba9c0c1",
+    "lastmod": "2026-09-29"
+  },
+  "/guides/choose-ai-subscription/": {
+    "sha256": "b971e1ded1366ecf84cd713746ed5fa7332d4f91d1bb7a1a31fe99256e9c8463",
+    "lastmod": "2026-09-29"
+  },
+  "/guides/private-vs-shared-access/": {
+    "sha256": "a8df847501bc9618c6dc29395816961df5a94cb09afd25902960c33c9fb2e918",
+    "lastmod": "2026-09-29"
+  },
+  "/products/": {
+    "sha256": "2a4950d6c0197afb1d152a62c1cfdc6d97389e435119258824246891e24ad716",
+    "lastmod": "2026-09-29"
+  },
+  "/categories/": {
+    "sha256": "25155fcf978488e433c2b8522ccf4b3a3f62947d84ab6280ca047509d085285a",
+    "lastmod": "2026-09-29"
+  },
+  "/use-cases/": {
+    "sha256": "3803bf8e81361be1f9e570a626395b334b3934a17466ecb5c31b563c10627f03",
+    "lastmod": "2026-09-29"
+  },
+  "/compare/": {
+    "sha256": "637ce501f1b10ca04f0e7045007ceee7d1e6fc3d7945147f9a4d9b8007a6588f",
+    "lastmod": "2026-09-29"
+  },
+  "/alternatives/": {
+    "sha256": "3a4642681d5bcc0a577098b6055a2adabb14aafc2643aabeeec45aae31703fd4",
+    "lastmod": "2026-09-29"
+  },
+  "/guides/": {
+    "sha256": "0432c0af4999a0ff1d0e1526e81344ac5d531f9999e1d6612e171f50f9ad2808",
+    "lastmod": "2026-09-29"
+  },
+  "/pricing/": {
+    "sha256": "a34dd5aba44ab47780d86b4c278b08c4f59bae58e6dfa3a600cd4cdd22ea5780",
+    "lastmod": "2026-09-29"
+  }
+}

@@ -28,7 +28,8 @@
       "code",
       "coding",
       "content"
-    ]
+    ],
+    "slug": "chatgpt-plus"
   },
   {
     "id": "gemini",
@@ -57,7 +58,8 @@
       "research",
       "study",
       "content"
-    ]
+    ],
+    "slug": "gemini-pro"
   },
   {
     "id": "veo",
@@ -85,7 +87,8 @@
       "video",
       "videos",
       "creator"
-    ]
+    ],
+    "slug": "veo-3-ultra"
   },
   {
     "id": "leonardo",
@@ -114,7 +117,8 @@
       "images",
       "design",
       "creator"
-    ]
+    ],
+    "slug": "leonardo-ai-essential"
   },
   {
     "id": "elevenlabs",
@@ -143,7 +147,8 @@
       "audio",
       "video",
       "creator"
-    ]
+    ],
+    "slug": "elevenlabs"
   },
   {
     "id": "canva",
@@ -175,7 +180,8 @@
       "study",
       "creator",
       "social"
-    ]
+    ],
+    "slug": "canva-pro-edu"
   },
   {
     "id": "figma",
@@ -204,7 +210,8 @@
       "code",
       "coding",
       "business"
-    ]
+    ],
+    "slug": "figma-pro-private"
   },
   {
     "id": "capcut",
@@ -233,7 +240,8 @@
       "videos",
       "creator",
       "social"
-    ]
+    ],
+    "slug": "capcut-pro"
   },
   {
     "id": "adobe",
@@ -263,7 +271,8 @@
       "design",
       "video",
       "creator"
-    ]
+    ],
+    "slug": "adobe-creative-cloud"
   },
   {
     "id": "lovable",
@@ -292,7 +301,8 @@
       "coding",
       "business",
       "automation"
-    ]
+    ],
+    "slug": "lovable-pro"
   },
   {
     "id": "gamma",
@@ -321,7 +331,8 @@
       "content",
       "business",
       "study"
-    ]
+    ],
+    "slug": "gamma-pro"
   },
   {
     "id": "replit",
@@ -349,7 +360,8 @@
       "code",
       "coding",
       "automation"
-    ]
+    ],
+    "slug": "replit-core"
   },
   {
     "id": "n8n",
@@ -378,7 +390,8 @@
       "coding",
       "automation",
       "business"
-    ]
+    ],
+    "slug": "n8n-starter"
   },
   {
     "id": "notion",
@@ -407,7 +420,8 @@
       "content",
       "business",
       "study"
-    ]
+    ],
+    "slug": "notion-business"
   },
   {
     "id": "nordvpn",
@@ -435,7 +449,8 @@
       "vpn",
       "security",
       "privacy"
-    ]
+    ],
+    "slug": "nordvpn"
   },
   {
     "id": "surfshark",
@@ -463,7 +478,8 @@
       "vpn",
       "security",
       "privacy"
-    ]
+    ],
+    "slug": "surfshark-vpn"
   },
   {
     "id": "youtube",
@@ -491,7 +507,8 @@
       "entertainment",
       "video",
       "music"
-    ]
+    ],
+    "slug": "youtube-premium"
   },
   {
     "id": "netflix",
@@ -519,7 +536,8 @@
       "entertainment",
       "video",
       "movies"
-    ]
+    ],
+    "slug": "netflix-premium-4k"
   },
   {
     "id": "linkedin",
@@ -547,7 +565,8 @@
       "business",
       "jobs",
       "study"
-    ]
+    ],
+    "slug": "linkedin-premium"
   },
   {
     "id": "windows",
@@ -575,6 +594,7 @@
       "software",
       "windows",
       "business"
-    ]
+    ],
+    "slug": "windows-11-pro-key"
   }
 ]

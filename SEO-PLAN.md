@@ -1,3 +1,5 @@
+> Historical record. For the September 2026 SEO expansion and current deployment results, see [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md), [SEO-AUDIT.md](SEO-AUDIT.md) and [SEO-STRATEGY.md](SEO-STRATEGY.md).
+
 # AI Tools Zone: implementation plan
 
 Production origin: https://aitoolszone.tech

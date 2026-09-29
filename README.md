@@ -8,13 +8,16 @@ Run `python -m http.server 8080 --bind 127.0.0.1` from this directory, then open
 
 The deployed site is static. No runtime framework, API keys, payment SDK or build server is required. Use a local server to preview folder-based product URLs.
 
-Run `python build_site.py` after changing the catalog or homepage template. Then run `python package_site.py` to refresh `ai-tools-zone.zip`.
+Run `python build_site.py` after changing the catalog, homepage template or editorial data, then `python audit_seo.py`. Run `python package_site.py` to refresh `ai-tools-zone.zip`. Run `python build_keyword_map.py` when updating search-intent coverage.
 
 ## Source files
 
-- `data/catalog.json`: editable plan prices, descriptions, duration, access, delivery and replacement coverage.
+- `data/catalog.json`: editable plan prices, descriptions, duration, access, delivery, replacement coverage and stable URL slugs. Preserve slugs when renaming products.
+- `data/seo-content.json`: original category, workflow, comparison, alternatives and buying-guide content.
+- `seo_pages.py`: renders editorial pages and shared catalog tables; records content-based sitemap freshness.
+- `data/page-state.json`: persisted content fingerprints and lastmod dates. Do not reset this file for routine builds.
 - `templates/home.html`: homepage layout and copy.
-- `build_site.py`: builds index.html, catalog.js, twenty product pages, information pages, sitemap, robots and manifest.
+- `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest (52 canonical pages).
 - `app.js`: search, filters, finder, quick views and comparison.
 - `theme.js`: early theme selection, persistent preference and system-theme fallback.
 - `scene.js`: CSS 3D logo motion, pause, pointer tilt and reduced-motion handling.
@@ -41,6 +44,8 @@ Listed prices and plan details originate from the user-supplied catalog, initial
 
 ## Verification
 
+Run `python audit_seo.py` for dependency-free checks on all generated metadata, schema, prices, links, crawl depth, robots and sitemap entries. It also runs in GitHub Actions before deployment. `python test_seo_build.py` checks content freshness, build determinism and production package boundaries. `python audit_seo_browser.py` checks all pages in mobile/no-JS and desktop/JS contexts. `python audit_seo_live.py` checks the deployed sitemap, page responses and redirects; add `--external` to report outbound vendor URL accessibility.
+
 With the local server running, use `python audit_site.py` for the full storefront audit and `python audit_accessibility.py` for axe-core checks across page templates, both themes and modal states. The latter expects the pinned axe-core 4.10.3 diagnostic file in `verification/axe.min.js`.
 
 `check_theme.py` and `check_logo.py` provide focused checks. The old `test_site.py` and `review_site.py` commands now forward to the current audit, since bag-based tests no longer match the buying flow.
@@ -49,15 +54,16 @@ Tests use the installed Chrome and Playwright in `.test-deps`. Screenshots and m
 
 ## Publish to aitoolszone.tech
 
-1. Upload the contents of ai-tools-zone.zip to the static host's document root.
-2. Connect aitoolszone.tech, enable HTTPS, and redirect any alternate www/http hostname to https://aitoolszone.tech.
-3. Ensure clean folder URLs serve their index.html files and unknown URLs return a real HTTP 404 with 404.html.
-4. If the host supports Netlify/Cloudflare Pages-style `_headers`, the supplied headers add security and cache settings. Otherwise configure equivalents in the host. Python's development server does not apply this file.
-5. Verify the live canonical URLs, social card, robots.txt and sitemap.xml. Then verify domain ownership in Search Console and submit https://aitoolszone.tech/sitemap.xml.
-6. Measure real production performance and inspect representative URLs after deployment.
+Push to `main` in `su92-bsaim-f24-127-hue/ai-tools-zone`. `.github/workflows/pages.yml` builds, runs the SEO audit, packages only production files and deploys to GitHub Pages. `CNAME` preserves `aitoolszone.tech`; `.nojekyll` preserves plain static publishing. The ZIP remains suitable for another static host if needed.
 
-Canonical URLs point to the user-confirmed production domain. A local build does not publish the website or guarantee search indexing, rich results or AI citations. SEO-PLAN.md documents the strategy; AUDIT.md records checks and deployment follow-ups.
+After deployment, run `python audit_seo_live.py`. Verify ownership in Google Search Console and Bing Webmaster Tools and submit `https://aitoolszone.tech/sitemap.xml`. Actual indexed pages, search performance and field Core Web Vitals need those external tools; local passing tests do not establish them.
+
+GitHub Pages and the Python development server do not apply `_headers`. It is a portable Netlify/Cloudflare-style configuration example. Stronger custom response headers require a compatible host or proxy.
+
+Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, `SEO-KEYWORD-MAP.csv`, and `SEO-IMPLEMENTATION.md`. `SEO-PLAN.md` and `AUDIT.md` are historical records.
 
 ## Privacy
 
 Only the selected theme is stored by this version. Any old bag value is left untouched in browser storage but is no longer read. Search and comparison run locally. Google Fonts remains the only runtime asset dependency outside this website. Privacy, ordering/warranty and contact information are available as crawlable pages.
+
+`measurement.js` exposes optional document events named `aitz:measure`; it does not send analytics, use cookies or persist events. See `SEO-STRATEGY.md` before connecting any collection service. GPTBot training access is disallowed separately from OAI-SearchBot search access.

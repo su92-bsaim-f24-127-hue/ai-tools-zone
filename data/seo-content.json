@@ -1,0 +1,817 @@
+{
+  "categories": [
+    {
+      "name": "AI Assistants",
+      "slug": "ai-assistants",
+      "heading": "AI assistants and writing tools in Pakistan",
+      "intro": [
+        "Compare ChatGPT and Gemini for drafting, studying and working through questions. The useful choice starts with the tasks you repeat, then the access arrangement you can accept.",
+        "Test the same real prompt with each vendor where a trial or free option is available. Check whether the answer follows your instructions and whether you can verify its sources. A fluent answer is not evidence that a fact is correct."
+      ],
+      "choose": "For writing, compare an outline, a revision and a source-checking task. For study, ask for an explanation and practice questions. Check file support, usage limits and account privacy for the actual offer before paying.",
+      "faq": [
+        [
+          "Which assistant should I choose for writing?",
+          "Use the assistant that follows your brief and is easy to revise with. Compare a sample of your own work; this catalog does not claim a universal benchmark winner."
+        ],
+        [
+          "Does an assistant subscription include API credits?",
+          "Do not assume it does. Ask for the exact consumer subscription and any separately billed API entitlement before ordering."
+        ]
+      ],
+      "related": [
+        "/compare/chatgpt-vs-gemini/",
+        "/use-cases/ai-tools-for-students/",
+        "/alternatives/chatgpt/"
+      ]
+    },
+    {
+      "name": "AI Video",
+      "slug": "ai-video",
+      "heading": "AI video generation and editing tools in Pakistan",
+      "intro": [
+        "Choose video tools by the stage of production you need help with. This collection includes a Veo listing for generation and CapCut for editing; creating a clip and finishing a video are different jobs.",
+        "Before choosing a plan, write down the output length, aspect ratio and delivery date you need. Ask which export settings, watermark conditions and generation allowances apply to that specific offer."
+      ],
+      "choose": "For footage you already have, start by testing your editing workflow. For a missing visual, evaluate generation separately and budget for revisions. Confirm export quality and permitted commercial use instead of treating the word Unlimited as a verified quota.",
+      "faq": [
+        [
+          "Which tool should I use for video editing?",
+          "Start with the CapCut listing when you need to edit existing clips. Check your device and the required export features before choosing the plan."
+        ],
+        [
+          "Does a video generation plan replace an editor?",
+          "Not necessarily. You may still need to assemble clips, adjust timing, add sound and review the final export in an editor."
+        ]
+      ],
+      "related": [
+        "/compare/capcut-vs-canva/",
+        "/use-cases/ai-tools-for-creators/",
+        "/categories/ai-voice/"
+      ]
+    },
+    {
+      "name": "Design",
+      "slug": "design",
+      "heading": "Design and AI image tools in Pakistan",
+      "intro": [
+        "Design work can mean a social post, an original image, an interface prototype or an editable client file. Canva, Leonardo, Figma and Adobe listings address different parts of that workflow.",
+        "Start with your final deliverable. A flattened image, a layered source file and a prototype are not interchangeable. Ask the client or teacher which format they need before comparing subscription prices."
+      ],
+      "choose": "Shortlist Canva for layout work, Leonardo for image-generation exploration, Figma for interface work, or Adobe for the specific creative application you need. Confirm that the seller offer includes that application, export format and usage allowance.",
+      "faq": [
+        [
+          "Is Canva Pro Edu the same as a regular Canva Pro subscription?",
+          "Do not assume equivalence from the listing name. This catalog marks the offer as Invitation. Ask which workspace, eligibility and feature conditions apply, and check Canva's education information."
+        ],
+        [
+          "Can I use generated images in client work?",
+          "Check the relevant vendor's current licensing terms and the rights to your inputs. The marketplace listing alone is not a commercial-use license."
+        ]
+      ],
+      "related": [
+        "/compare/canva-vs-adobe/",
+        "/alternatives/canva/",
+        "/use-cases/ai-tools-for-creators/"
+      ]
+    },
+    {
+      "name": "AI Voice",
+      "slug": "ai-voice",
+      "heading": "AI voice tools and narration plans in Pakistan",
+      "intro": [
+        "For narration, choose a voice tool by how it handles your script, language and pronunciation. The current voice collection contains ElevenLabs; this is a focused catalog, not a ranking of every voice platform.",
+        "Prepare a short sample with the names and phrases that matter to your project. Listen for pacing and clarity before you commit to a full recording workflow."
+      ],
+      "choose": "Estimate finished audio length and likely retakes. Confirm the current character or credit allowance, supported export format and commercial-use rights. If a voice resembles a real person, obtain the permissions required for your intended use.",
+      "faq": [
+        [
+          "Can I make Urdu narration with this offer?",
+          "Ask for confirmation of the available models, languages and a suitable sample. The listing does not establish a quality benchmark for Urdu or a guarantee for every voice."
+        ],
+        [
+          "What should a YouTuber check before buying?",
+          "Check the voice allowance, rights for published content, pronunciation quality and whether revisions consume the same allowance as the first generation."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-creators/",
+        "/categories/ai-video/",
+        "/guides/choose-ai-subscription/"
+      ]
+    },
+    {
+      "name": "Development",
+      "slug": "development",
+      "heading": "AI coding, app building and automation tools in Pakistan",
+      "intro": [
+        "An app builder, a coding environment and a workflow automation service solve different problems. Compare the Lovable, Replit and n8n listings against what you actually need to ship.",
+        "A prototype is only part of a production application. Account for hosting, database access, credentials, maintenance and any third-party APIs before treating a subscription as your complete running cost."
+      ],
+      "choose": "For a new app, check code export, repository access and deployment ownership. For automation, map the trigger, each action and failure recovery. Confirm hosted versus self-hosted access, execution allowances and any additional service charges.",
+      "faq": [
+        [
+          "Are API and hosting costs included?",
+          "Only rely on inclusions explicitly confirmed for your offer. A tool subscription does not establish that all connected API, database or deployment costs are included."
+        ],
+        [
+          "Can I use these tools for a client project?",
+          "First confirm workspace ownership, the ability to transfer or export the project, and who pays recurring costs after handover."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-developers/",
+        "/use-cases/ai-tools-for-business/",
+        "/guides/private-vs-shared-access/"
+      ]
+    },
+    {
+      "name": "Productivity",
+      "slug": "productivity",
+      "heading": "AI productivity and presentation tools in Pakistan",
+      "intro": [
+        "Choose productivity software around the work that needs organizing. This collection includes Notion and Gamma listings for workspace and presentation workflows.",
+        "A polished presentation does not automatically solve information management. Decide whether you need a reusable team knowledge base, a presentation deliverable, or both, before choosing a paid plan."
+      ],
+      "choose": "Test one real document or presentation from start to export. Check collaborators, edit permissions, required file formats and whether AI allowances are part of the specific workspace offer. Keep a copy you can use if the subscription ends.",
+      "faq": [
+        [
+          "Does a Notion Business listing include every AI feature?",
+          "The plan name alone does not establish that. Ask which AI features and usage limits are included in this invitation before payment."
+        ],
+        [
+          "What should a team check before joining a workspace?",
+          "Confirm administrator control, who can see documents, member limits, export options and what happens to your files when access ends."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-business/",
+        "/use-cases/ai-tools-for-students/",
+        "/guides/private-vs-shared-access/"
+      ]
+    },
+    {
+      "name": "VPN & Security",
+      "slug": "vpn-security",
+      "heading": "VPN subscription plans in Pakistan",
+      "intro": [
+        "Compare the listed NordVPN and Surfshark offers by access type, supported devices and the connection requirements you need. These are digital subscriptions, not AI assistants.",
+        "A VPN subscription does not replace secure passwords, software updates or careful handling of sensitive information. Assess the vendor's service and privacy information separately from the marketplace's delivery arrangement."
+      ],
+      "choose": "List the operating systems you use and how many devices need access at once. Confirm login ownership, device limits and connection requirements. Shared and private offers should not be treated as equivalent simply because both connect to the same vendor.",
+      "faq": [
+        [
+          "Is a VPN a guarantee of anonymity?",
+          "No such guarantee is made by this marketplace. Review the vendor's privacy information and understand the limits of your own setup."
+        ],
+        [
+          "Which access details matter most?",
+          "Confirm who controls the login, whether other users share it, which devices are allowed and what support applies if access stops."
+        ]
+      ],
+      "related": [
+        "/guides/private-vs-shared-access/",
+        "/pricing/",
+        "/terms/"
+      ]
+    },
+    {
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "heading": "Entertainment subscription plans in Pakistan",
+      "intro": [
+        "This collection separates YouTube and Netflix entertainment listings from the AI-tool catalog. Compare the seller-listed plan duration and account arrangement before choosing.",
+        "A family invitation, a shared profile and an individually controlled account have different conditions. Ask which arrangement is being offered and review the vendor's household, eligibility and device requirements."
+      ],
+      "choose": "Confirm the intended device, profile access and whether the advertised playback quality is supported by your device and connection. Do not treat a shared profile as ownership of an entire subscription.",
+      "faq": [
+        [
+          "Will an invitation work with my existing account?",
+          "Ask support to confirm account eligibility and the specific invitation process before payment. Compatibility is not established by the category page."
+        ],
+        [
+          "Is this an AI tools category?",
+          "No. These entertainment subscriptions are included in the broader digital marketplace and kept in a separate category."
+        ]
+      ],
+      "related": [
+        "/guides/private-vs-shared-access/",
+        "/pricing/",
+        "/terms/"
+      ]
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "heading": "Business and professional subscription plans in Pakistan",
+      "intro": [
+        "The current business category contains a LinkedIn Premium listing. Use it as a starting point for a professional subscription inquiry, not a promise of leads, jobs or sales.",
+        "Business users should define the particular task they need help with before selecting a plan. Different premium tiers can have different entitlements, so a broad product name is not enough to confirm suitability."
+      ],
+      "choose": "Ask for the exact plan tier, invitation conditions and which account receives access. Check the features needed for your workflow, renewal arrangements and whether existing subscriptions affect eligibility.",
+      "faq": [
+        [
+          "Does a premium subscription guarantee a job or clients?",
+          "No. AI Tools Zone does not promise hiring outcomes, responses, leads or revenue from a subscription."
+        ],
+        [
+          "Where can I compare tools for a wider business workflow?",
+          "Use the business workflow guide to consider documentation, drafting and automation alongside professional subscriptions."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-business/",
+        "/categories/productivity/",
+        "/guides/choose-ai-subscription/"
+      ]
+    },
+    {
+      "name": "Software",
+      "slug": "software",
+      "heading": "Software license listings in Pakistan",
+      "intro": [
+        "The software collection contains a Windows 11 Pro key listing. Compare the edition and activation requirements with your device before ordering a license key.",
+        "A key listing is different from a recurring AI subscription. Establish the license channel, device count and transfer conditions; successful activation alone does not answer every licensing question."
+      ],
+      "choose": "Confirm that the edition matches your installation, that your hardware meets vendor requirements and that the license type suits your intended use. Ask what Lifetime means for this offer and what the stated replacement window covers.",
+      "faq": [
+        [
+          "Can I transfer the key to another computer?",
+          "That depends on the confirmed license type and vendor terms. The catalog does not establish transfer rights; ask before purchasing."
+        ],
+        [
+          "Does Lifetime mean lifetime replacement support?",
+          "Do not assume that. The listing's duration label and replacement warranty are separate fields and should be confirmed separately."
+        ]
+      ],
+      "related": [
+        "/guides/private-vs-shared-access/",
+        "/pricing/",
+        "/terms/"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "path": "/use-cases/ai-tools-for-students/",
+      "type": "use-cases",
+      "title": "AI Tools for Students in Pakistan",
+      "description": "Choose AI tools for study, research notes and presentations. Compare PKR plans, access conditions and an academic-use checklist.",
+      "answer": "Start with your hardest recurring study task: understanding a concept, organizing notes or presenting work. Compare an assistant for explanations with a workspace or design tool for your final deliverable; you may not need several paid subscriptions.",
+      "products": [
+        "chatgpt",
+        "gemini",
+        "notion",
+        "canva"
+      ],
+      "sections": [
+        [
+          "Build a study workflow",
+          "Try explaining a course concept in your own words, ask an assistant to identify gaps, and check the response against your course materials. Keep your own notes and record real references. For presentations, decide whether your priority is a clear visual layout or detailed source notes."
+        ],
+        [
+          "For teachers and researchers",
+          "Use the same workflow to draft practice exercises or organize a reading list. Independently verify references and quotations; generated citations can be incorrect. Follow your institution's rules on assessment, disclosure and student information."
+        ],
+        [
+          "Choose within a student budget",
+          "The table shows total listed offer prices, not normalized monthly costs. An invitation can have eligibility or workspace restrictions. Check official education options directly with the vendor before paying for an independently supplied offer."
+        ]
+      ],
+      "faq": [
+        [
+          "What is the best AI tool for students?",
+          "There is no single choice for every course. Test an assistant on explanations, then choose a note-taking or presentation tool only if it solves a separate recurring problem."
+        ],
+        [
+          "Can every student use Canva education access?",
+          "Eligibility and workspace conditions need to be checked with Canva and for the specific offer. The Pro Edu listing name is not proof of eligibility."
+        ]
+      ],
+      "related": [
+        "/categories/ai-assistants/",
+        "/compare/chatgpt-vs-gemini/",
+        "/guides/choose-ai-subscription/"
+      ],
+      "sources": [
+        [
+          "Canva education information",
+          "https://www.canva.com/education/"
+        ],
+        [
+          "ChatGPT overview",
+          "https://chatgpt.com/overview/"
+        ]
+      ]
+    },
+    {
+      "path": "/use-cases/ai-tools-for-creators/",
+      "type": "use-cases",
+      "title": "AI Tools for Creators & Freelancers in Pakistan",
+      "description": "Plan a creator workflow for scripts, thumbnails, video edits and voiceovers. Compare seller-listed PKR prices and usage conditions.",
+      "answer": "Choose tools for the production step that slows you down: scripting, visuals, editing or narration. A creator stack should fit your deliverables and budget, with usage rights confirmed before client work or publication.",
+      "products": [
+        "chatgpt",
+        "canva",
+        "capcut",
+        "elevenlabs",
+        "leonardo"
+      ],
+      "sections": [
+        [
+          "For YouTubers and short-form creators",
+          "Write a brief and script first, collect the visuals you have permission to use, edit a rough cut and then add narration. Test one complete short video before buying several subscriptions. Check that the final export works on your publishing platform."
+        ],
+        [
+          "For designers and marketers",
+          "Agree the dimensions, brand requirements and editable-file handover with the client. A thumbnail, a print file and an interface prototype require different deliverables. Compare Canva, Adobe and Figma in the design category before choosing only on price."
+        ],
+        [
+          "For freelancers with repeat clients",
+          "Estimate how often you will revise the work and whether revisions consume credits. Keep source files under an account you can control. Confirm commercial rights, asset restrictions and the continuity of access before committing to a client deadline."
+        ]
+      ],
+      "faq": [
+        [
+          "Should I buy a complete creator bundle first?",
+          "Start with the tool that solves your current bottleneck. Add narration or generation when a project actually needs it, rather than paying for overlapping functions."
+        ],
+        [
+          "Are these tools a promise of channel growth?",
+          "No. The catalog compares access offers, not audience outcomes. Content quality, distribution and consistency still need your judgment."
+        ]
+      ],
+      "related": [
+        "/categories/design/",
+        "/categories/ai-video/",
+        "/categories/ai-voice/",
+        "/compare/capcut-vs-canva/"
+      ],
+      "sources": [
+        [
+          "CapCut product information",
+          "https://www.capcut.com/"
+        ],
+        [
+          "ElevenLabs product information",
+          "https://elevenlabs.io/"
+        ]
+      ]
+    },
+    {
+      "path": "/use-cases/ai-tools-for-developers/",
+      "type": "use-cases",
+      "title": "AI Tools for Developers in Pakistan",
+      "description": "Compare app-building, coding and automation offers with PKR pricing. Check ownership, deployment, API costs and project handover.",
+      "answer": "Choose an app builder for a prototype, a coding environment for implementation work, or automation software for a repeatable workflow. Confirm project ownership and running costs before treating the listed subscription as the full cost of a deployed application.",
+      "products": [
+        "lovable",
+        "replit",
+        "n8n",
+        "chatgpt"
+      ],
+      "sections": [
+        [
+          "From prototype to owned project",
+          "Define the smallest working feature, then check code export, source control and access to the deployment account. Review generated code and test behavior with real error cases. Keep credentials outside public source files."
+        ],
+        [
+          "Automation needs an operating plan",
+          "Draw the trigger, inputs, actions and failure path before choosing an automation subscription. Confirm execution limits, scheduling, credential storage and who receives failure alerts. A workflow that runs once is not yet a reliable business process."
+        ],
+        [
+          "Separate credits from time",
+          "Some catalog entries describe credits rather than a calendar subscription period. Confirm expiration, overage costs, hosting charges and separately billed APIs. Do not divide a credit package into a monthly price without those details."
+        ]
+      ],
+      "faq": [
+        [
+          "Can an AI coding tool replace code review?",
+          "No. Review generated changes and test the behavior, security and maintainability relevant to your application."
+        ],
+        [
+          "What should I ask before handing an app to a client?",
+          "Confirm repository ownership, data export, deployment ownership, recurring costs and whether the client can continue independently after your access ends."
+        ]
+      ],
+      "related": [
+        "/categories/development/",
+        "/use-cases/ai-tools-for-business/",
+        "/guides/private-vs-shared-access/"
+      ],
+      "sources": [
+        [
+          "Replit",
+          "https://replit.com/"
+        ],
+        [
+          "n8n",
+          "https://n8n.io/"
+        ],
+        [
+          "Lovable",
+          "https://lovable.dev/"
+        ]
+      ]
+    },
+    {
+      "path": "/use-cases/ai-tools-for-business/",
+      "type": "use-cases",
+      "title": "AI Tools for Business Teams in Pakistan",
+      "description": "Plan drafting, team documentation and automation workflows. Compare PKR offers and check team permissions, account ownership and costs.",
+      "answer": "Start with a repeatable business task and decide who owns its inputs and output. Drafting, documentation and automation can require different tools; choose the smallest set that your team can maintain and control.",
+      "products": [
+        "chatgpt",
+        "notion",
+        "gamma",
+        "n8n",
+        "linkedin"
+      ],
+      "sections": [
+        [
+          "Pick a measurable pilot",
+          "Choose one internal task such as drafting an approved reply or preparing a meeting summary. Set a review owner and compare the result against your existing process. Record actual time and error rates instead of assuming a productivity gain."
+        ],
+        [
+          "Check workspace ownership",
+          "For a team invitation, establish who administers the workspace, who can access documents and how members leave or export data. An independent invitation listing is not automatically an enterprise contract with the vendor."
+        ],
+        [
+          "Budget beyond the first payment",
+          "Confirm per-person access, renewal, extra credits and any connected services. Keep procurement details and agreed support terms with the order. For sensitive work, review the vendor's current data controls and your organization's requirements first."
+        ]
+      ],
+      "faq": [
+        [
+          "Does a plan called Business include all team features?",
+          "The name is not sufficient evidence. Confirm the exact tier, permissions, seat count and included features for the offer being supplied."
+        ],
+        [
+          "Can I automate without replacing my current tools?",
+          "Map the existing process and check the integrations needed. A small, monitored workflow may be enough; additional software is only useful if it solves a clear step."
+        ]
+      ],
+      "related": [
+        "/categories/productivity/",
+        "/categories/development/",
+        "/categories/business/",
+        "/guides/choose-ai-subscription/"
+      ],
+      "sources": [
+        [
+          "Notion",
+          "https://www.notion.com/"
+        ],
+        [
+          "n8n",
+          "https://n8n.io/"
+        ]
+      ]
+    },
+    {
+      "path": "/compare/chatgpt-vs-gemini/",
+      "type": "compare",
+      "title": "ChatGPT vs Gemini: PKR Plans & Access",
+      "description": "Compare AI Tools Zone's ChatGPT and Gemini offers by listed price, duration and access. Choose with a practical writing and study checklist.",
+      "answer": "Both ChatGPT and Gemini are general AI assistants. In this catalog, the important purchase difference is the specific offer: compare the listed duration and Private versus Invitation access before deciding from the headline price.",
+      "products": [
+        "chatgpt",
+        "gemini"
+      ],
+      "sections": [
+        [
+          "Compare with the same task",
+          "Give both assistants the same brief, input and requested output. Check whether they follow constraints and whether their reasoning or references can be verified. We have not run a controlled performance benchmark and do not declare an overall winner."
+        ],
+        [
+          "Price is not an equivalent-plan benchmark",
+          "The offers below have different access arrangements and durations. The figures are seller-listed PKR amounts, not official vendor prices or proof of equal entitlements. Ask which current plan, models, tools and limits you will actually receive."
+        ],
+        [
+          "How to make the choice",
+          "Prefer the option that completes your repeated tasks with acceptable review effort and account conditions. If either vendor offers a suitable free option, test your workflow before paying. For confidential documents, understand the account and workspace controls first."
+        ]
+      ],
+      "faq": [
+        [
+          "Which is cheaper in this marketplace?",
+          "Compare the amounts in the live catalog table below. A lower total offer price does not establish better value when duration, eligibility and account control differ."
+        ],
+        [
+          "Are all official paid features included?",
+          "No such equivalence is claimed. Confirm the actual feature set for the specific seller offer before purchasing."
+        ]
+      ],
+      "related": [
+        "/categories/ai-assistants/",
+        "/alternatives/chatgpt/",
+        "/use-cases/ai-tools-for-students/"
+      ],
+      "sources": [
+        [
+          "ChatGPT overview",
+          "https://chatgpt.com/overview/"
+        ],
+        [
+          "Gemini overview",
+          "https://gemini.google/about/"
+        ]
+      ]
+    },
+    {
+      "path": "/compare/canva-vs-adobe/",
+      "type": "compare",
+      "title": "Canva vs Adobe: Design Workflow & PKR Plans",
+      "description": "Compare Canva and Adobe listings by design deliverables, access and PKR price. Check education eligibility, included apps and file handover.",
+      "answer": "Choose around the design file you need to deliver. Canva is a starting point for layout-led work, while an Adobe offer should be checked against the specific creative application and source-file workflow your project requires.",
+      "products": [
+        "canva",
+        "adobe"
+      ],
+      "sections": [
+        [
+          "Start with the handover format",
+          "Ask whether the recipient needs a finished image, a shareable design or an editable file in a particular application. Try opening and editing a representative sample before choosing a subscription. This is more useful than comparing broad product labels."
+        ],
+        [
+          "Inspect the exact access offer",
+          "The Canva listing is marked Pro Edu and Invitation; the Adobe listing is marked Private. Confirm education eligibility, workspace restrictions and the Adobe applications included. These are not equivalent retail plans with identical conditions."
+        ],
+        [
+          "Check assets and collaboration",
+          "Review rights for fonts, templates and stock elements used in client work. Confirm how collaborators receive access and whether exports remain usable when a plan ends. We do not rate either vendor on benchmark speed or output quality."
+        ]
+      ],
+      "faq": [
+        [
+          "Which should a beginner choose?",
+          "Try the workflow that produces your required deliverable with the least rework. If an editable Adobe file is mandatory, a visually similar export from another tool may not satisfy the brief."
+        ],
+        [
+          "Does the Canva listing prove education eligibility?",
+          "No. Check Canva's own education requirements and ask exactly how the invitation is supplied before ordering."
+        ]
+      ],
+      "related": [
+        "/categories/design/",
+        "/alternatives/canva/",
+        "/use-cases/ai-tools-for-creators/"
+      ],
+      "sources": [
+        [
+          "Canva education",
+          "https://www.canva.com/education/"
+        ],
+        [
+          "Adobe Creative Cloud",
+          "https://www.adobe.com/creativecloud.html"
+        ]
+      ]
+    },
+    {
+      "path": "/compare/capcut-vs-canva/",
+      "type": "compare",
+      "title": "CapCut vs Canva: Creator Workflow & PKR Prices",
+      "description": "Compare CapCut and Canva for a creator workflow. See seller-listed PKR prices, durations and access, plus export and eligibility questions.",
+      "answer": "Start with CapCut when your main task is editing video clips, and consider Canva when layouts and accompanying visual assets are central to the project. Test the actual deliverable; the two offers have different access conditions and durations.",
+      "products": [
+        "capcut",
+        "canva"
+      ],
+      "sections": [
+        [
+          "Test a complete deliverable",
+          "Prepare a short clip and its thumbnail using the formats you publish. Check captions, layout changes, audio adjustments and the final exported file. Only pay for the features you will repeat in your workflow."
+        ],
+        [
+          "Check export and device requirements",
+          "Confirm whether your device supports the workflow and whether the needed export settings are included. Ask about watermarks, premium assets and commercial-use conditions for the specific offer; the marketplace does not guarantee every vendor feature."
+        ],
+        [
+          "Compare the plans carefully",
+          "The table shows a Private CapCut offer and an Invitation Canva Pro Edu offer. Confirm account ownership and eligibility, not only price. If one tool already handles your deliverable adequately, a second paid subscription may be unnecessary."
+        ]
+      ],
+      "faq": [
+        [
+          "Do I need both tools for YouTube?",
+          "Not necessarily. Test a video and its accompanying visuals first. Add a second subscription only when it solves a recurring limitation."
+        ],
+        [
+          "Which offer lasts longer?",
+          "The catalog table shows the seller-listed duration of each offer. Reconfirm those terms and the renewal arrangements before payment."
+        ]
+      ],
+      "related": [
+        "/categories/ai-video/",
+        "/categories/design/",
+        "/use-cases/ai-tools-for-creators/"
+      ],
+      "sources": [
+        [
+          "CapCut",
+          "https://www.capcut.com/"
+        ],
+        [
+          "Canva",
+          "https://www.canva.com/"
+        ]
+      ]
+    },
+    {
+      "path": "/alternatives/chatgpt/",
+      "type": "alternatives",
+      "title": "ChatGPT Alternatives: Choose by Task in Pakistan",
+      "description": "Consider Gemini or a task-specific tool instead of ChatGPT. Compare listed PKR offers without assuming equivalent features or a universal winner.",
+      "answer": "Gemini is the other general assistant currently listed by AI Tools Zone. If you need a finished video, design or application workflow, a specialized tool may solve the task more directly than switching between general assistants.",
+      "products": [
+        "gemini",
+        "capcut",
+        "canva",
+        "replit"
+      ],
+      "sections": [
+        [
+          "Replace a task, not only a brand name",
+          "Write down why your current workflow is failing: unclear answers, editing effort, output format or access conditions. For assistant-style questions, test Gemini with the same input. For a specific deliverable, evaluate the corresponding tool category."
+        ],
+        [
+          "For people comparing Gemini alternatives too",
+          "The same decision works in reverse: ChatGPT is the other assistant in this catalog. Use the ChatGPT versus Gemini comparison for the two offers. This page is not an exhaustive directory and does not claim that all alternatives have equivalent capabilities."
+        ],
+        [
+          "When changing tools is unnecessary",
+          "A clearer brief, a reusable template or reviewing the free options offered directly by a vendor may solve the problem. Do not buy another subscription until you can identify the benefit and verify the account arrangement."
+        ]
+      ],
+      "faq": [
+        [
+          "Is there a cheaper equivalent to ChatGPT Plus here?",
+          "A lower-priced listing is not proof of equivalent features. Compare the price, duration and access in the catalog and test the task you need."
+        ],
+        [
+          "Why are editing and design tools included?",
+          "They are task-specific alternatives for producing a deliverable, not replacements for every feature of a conversational assistant."
+        ]
+      ],
+      "related": [
+        "/compare/chatgpt-vs-gemini/",
+        "/categories/ai-assistants/",
+        "/categories/design/",
+        "/categories/development/"
+      ],
+      "sources": [
+        [
+          "Gemini",
+          "https://gemini.google/about/"
+        ],
+        [
+          "ChatGPT",
+          "https://chatgpt.com/overview/"
+        ]
+      ]
+    },
+    {
+      "path": "/alternatives/canva/",
+      "type": "alternatives",
+      "title": "Canva Alternatives for Design Work in Pakistan",
+      "description": "Compare Adobe, Figma and Leonardo as task-specific Canva alternatives. Check editable files, image credits, PKR prices and access conditions.",
+      "answer": "Consider Adobe for a required creative application, Figma for interface work, or Leonardo for image-generation tasks. These are alternatives for particular deliverables, not identical replacements for Canva's full workflow.",
+      "products": [
+        "adobe",
+        "figma",
+        "leonardo",
+        "canva"
+      ],
+      "sections": [
+        [
+          "Match the replacement to the file",
+          "An interface prototype, a generated concept image and an editable production file have different requirements. Confirm the format and collaborator needs before deciding which alternative to test. Moving to a more complex tool may add learning time."
+        ],
+        [
+          "Separate generation from layout",
+          "An image generator can supply an image for a design, but it does not automatically replace the process of arranging text, brand elements and final dimensions. Test both the asset and the layout stage of the work."
+        ],
+        [
+          "Compare access and allowances",
+          "The catalog includes different durations and credit-based allowances. Confirm the specific application, export options and ownership of files before paying. Education-related access should be checked against the vendor's actual eligibility rules."
+        ]
+      ],
+      "faq": [
+        [
+          "Which alternative is best for client handover?",
+          "Choose the tool that can produce the client's requested editable format and that you can continue using under the confirmed access conditions."
+        ],
+        [
+          "Can I transfer all my existing designs?",
+          "Do not assume full compatibility. Export and reopen a representative design in the new workflow before moving a large project."
+        ]
+      ],
+      "related": [
+        "/categories/design/",
+        "/compare/canva-vs-adobe/",
+        "/use-cases/ai-tools-for-creators/"
+      ],
+      "sources": [
+        [
+          "Adobe",
+          "https://www.adobe.com/creativecloud.html"
+        ],
+        [
+          "Figma",
+          "https://www.figma.com/"
+        ],
+        [
+          "Leonardo",
+          "https://leonardo.ai/"
+        ]
+      ]
+    },
+    {
+      "path": "/guides/choose-ai-subscription/",
+      "type": "guides",
+      "title": "How to Choose an AI Subscription in Pakistan",
+      "description": "A practical buying checklist for AI subscriptions: task, PKR budget, access, allowances, availability, payment and support.",
+      "answer": "Choose a subscription by the task you need to complete, then confirm the exact offer: total PKR price, duration or credits, access type, limits, delivery and replacement terms. AI Tools Zone confirms orders through WhatsApp before payment.",
+      "products": [],
+      "sections": [
+        [
+          "1. Define the job and test it",
+          "Use a real example rather than a generic demo. Write down the required output format, your device, the people who will use it and whether you need rights for client work. Check direct vendor options as well as independently listed offers."
+        ],
+        [
+          "2. Compare the complete cost",
+          "Read the duration or allowance next to the price. One month, a number of credits and an invitation for a longer period are not equal units. Confirm renewals and additional API, hosting or credit charges; do not assume a cheap headline price covers everything."
+        ],
+        [
+          "3. Confirm account and delivery conditions",
+          "Ask who controls the account or workspace, whether other people share access and what happens at expiry. Request confirmation of eligibility, current availability and the seller-listed delivery estimate before arranging payment."
+        ],
+        [
+          "4. Keep the confirmed terms",
+          "Select Buy Now and review the prepared message. Send it only when you are ready to discuss the order. Keep the agreed plan and support terms in your chat. This website does not collect card details or process the payment."
+        ]
+      ],
+      "faq": [
+        [
+          "What payment methods can I ask about?",
+          "The site's ordering terms list JazzCash, Easypaisa and bank transfer as methods arranged in chat. Confirm the payment instructions for your actual order."
+        ],
+        [
+          "What happens if the confirmed plan cannot be delivered?",
+          "The published ordering terms allow you to request a full refund if the confirmed plan cannot be delivered. After activation, review the stated replacement coverage and contact support."
+        ]
+      ],
+      "related": [
+        "/pricing/",
+        "/guides/private-vs-shared-access/",
+        "/terms/",
+        "/about/"
+      ],
+      "sources": []
+    },
+    {
+      "path": "/guides/private-vs-shared-access/",
+      "type": "guides",
+      "title": "Private vs Shared AI Access: Invitations & Keys",
+      "description": "Understand Private, Shared, Invitation and License Key offers before buying. Check account control, workspace privacy and replacement terms.",
+      "answer": "Access type describes how an offer is supplied. Private refers to separately supplied access, Shared involves access used by others, Invitation joins a workspace or team, and License Key provides an activation code. Confirm the exact account and permission conditions for every order.",
+      "products": [],
+      "sections": [
+        [
+          "Private: establish account control",
+          "The Private label does not by itself tell you whether the offer uses your existing account or a separately supplied one. Ask who can reset credentials, which devices are allowed and what happens when the paid period ends."
+        ],
+        [
+          "Shared: understand who else has access",
+          "Ask which parts of the account or profile are shared and who can see activity or files. A shared plan is not equivalent to a personal account you control. Avoid entering sensitive project information until you understand the arrangement."
+        ],
+        [
+          "Invitation: check the workspace",
+          "Confirm the organization or team you are joining, eligibility, administrator permissions and export options. Ask what happens to files and access if the invitation is removed or the subscription ends. A workspace invitation does not establish vendor affiliation."
+        ],
+        [
+          "License Key: confirm activation terms",
+          "Ask for the edition, license channel, permitted device count and transfer conditions. Check compatibility before ordering. A duration such as Lifetime and a replacement warranty such as 7 Days describe different things."
+        ]
+      ],
+      "faq": [
+        [
+          "Is Private always the right choice?",
+          "The label alone is not enough. Choose based on confirmed account ownership, permitted usage and privacy conditions, alongside the task and budget."
+        ],
+        [
+          "Can AI Tools Zone guarantee every vendor feature from an access label?",
+          "No. Access type describes the supply arrangement, not a complete entitlement list. Confirm the exact plan and current limits before payment."
+        ]
+      ],
+      "related": [
+        "/guides/choose-ai-subscription/",
+        "/pricing/",
+        "/terms/",
+        "/categories/ai-assistants/"
+      ],
+      "sources": []
+    }
+  ]
+}

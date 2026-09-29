@@ -17,7 +17,7 @@ with sync_playwright() as p:
  for theme in ['light','dark']:
   context=browser.new_context(color_scheme=theme,reduced_motion='reduce',viewport={'width':1440,'height':1000})
   page=context.new_page()
-  for route in ['/','/products/chatgpt-plus/','/about/','/privacy/','/terms/']:
+  for route in ['/','/products/chatgpt-plus/','/about/','/privacy/','/terms/','/categories/','/categories/ai-assistants/','/compare/chatgpt-vs-gemini/','/use-cases/ai-tools-for-students/','/alternatives/canva/','/guides/private-vs-shared-access/','/pricing/']:
    page.goto('http://127.0.0.1:8080'+route,wait_until='networkidle')
    audit(page,theme+' desktop '+route)
    if route=='/products/chatgpt-plus/':

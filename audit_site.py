@@ -94,7 +94,7 @@ with sync_playwright() as p:
   path='/products/'+product['slug']+'/'
   response=page.goto(BASE+path,wait_until='domcontentloaded')
   schemas=[json.loads(s) for s in page.locator('script[type="application/ld+json"]').all_text_contents()]
-  product_schema=schemas[0]['@graph'][0]
+  product_schema=next(n for n in schemas[0]['@graph'] if n.get('@type')=='Product')
   check(product['name']+' crawlable page and schema',response.status==200 and page.locator('h1').inner_text()==product['name'] and page.locator('link[rel=canonical]').get_attribute('href')=='https://aitoolszone.tech'+path and product_schema['offers']['price']==product['price'] and 'aggregateRating' not in product_schema)
   check(product['name']+' page Buy Now',urlparse(page.locator('.buy-now').get_attribute('href')).path=='/923430173923')
   if product['id']=='chatgpt':
@@ -107,7 +107,7 @@ with sync_playwright() as p:
   response=page.goto(BASE+'/'+slug+'/',wait_until='domcontentloaded');check(slug+' information page',response.status==200 and page.locator('h1').count()==1)
  sitemap=ET.fromstring(page.request.get(BASE+'/sitemap.xml').text())
  urls=[n.text for n in sitemap.findall('{*}url/{*}loc')]
- check('Sitemap contains 24 canonical URLs',len(urls)==24 and all(u.startswith('https://aitoolszone.tech/') for u in urls))
+ check('Sitemap contains every canonical URL',len(urls)==len(json.loads((ROOT/'data/page-state.json').read_text())) and all(u.startswith('https://aitoolszone.tech/') for u in urls))
  check('Robots lists correct sitemap','Sitemap: https://aitoolszone.tech/sitemap.xml' in page.request.get(BASE+'/robots.txt').text())
  check('Favicon optimized below 10 KB',(ROOT/'assets/icon-48.png').stat().st_size<10000)
  # Check all internally referenced resources and links from generated pages.
