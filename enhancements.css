@@ -88,3 +88,11 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 .card-actions .buy-now{white-space:normal;text-align:center;line-height:1.35;min-height:44px}
 .plan-table td:last-child{min-width:145px}
 .compare-table .inline-link{display:block;margin-top:12px}
+.card-actions{flex-wrap:wrap}
+.order-alternatives{display:flex;flex-wrap:wrap;gap:8px 16px;flex-basis:100%;order:3;margin:8px 0;font-size:13px;line-height:1.6}
+.order-alternatives>a,.order-alternatives>button{color:var(--text);text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center;background:none;border:0;padding:0;font:inherit;cursor:pointer}
+.order-copy-status{flex-basis:100%;font-size:12px}
+.order-copy-status:empty{display:none}
+.order-alternatives textarea{width:100%;min-height:150px;font:inherit;padding:10px}
+.order-alternatives textarea{width:100%;min-height:150px;font:inherit;padding:10px}
+@media(max-width:1100px){.hero-art{overflow:clip}}

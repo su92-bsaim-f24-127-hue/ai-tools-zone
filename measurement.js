@@ -22,9 +22,10 @@
     const link=event.target.closest('a[href]');
     if(link){
       const url=new URL(link.href,location.href);
-      if(url.hostname==='wa.me'&&url.pathname==='/923430173923'){
-        emit('whatsapp_click',{product:link.dataset.productId});
-        if(ids.has(link.dataset.productId))emit('product_whatsapp_click',{product:link.dataset.productId});
+      if((url.hostname==='wa.me'&&url.pathname==='/923430173923')||(url.hostname==='web.whatsapp.com'&&url.pathname==='/send/'&&url.searchParams.get('phone')==='923430173923')){
+        const product=link.dataset.productId||link.dataset.waProduct;
+        emit('whatsapp_click',{product});
+        if(ids.has(product))emit('product_whatsapp_click',{product});
       } else if(link.matches('main a[target="_blank"]')&&url.protocol==='https:'&&url.origin!==location.origin)emit('outbound_vendor_click');
     }
     if(event.target.closest('[data-finder]'))emit('tool_finder_start');

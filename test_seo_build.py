@@ -31,10 +31,11 @@ subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,ca
 state=json.loads((ROOT/'data/page-state.json').read_text())
 files=[ROOT/('index.html' if path=='/' else path.strip('/')+'/index.html') for path in state]
 files += [ROOT/'sitemap.xml',ROOT/'data/page-state.json',ROOT/'catalog.js',ROOT/'robots.txt']
-for file in [f for f in files if f.suffix=='.html']+[ROOT/'404.html']:
+for file in [f for f in files if f.suffix=='.html']:
     scripts=Page(file.read_text(encoding='utf-8')).attrs('script',src='https://static.cloudflareinsights.com/beacon.min.js')
     assert len(scripts)==1 and 'defer' in scripts[0],f'{file}: missing/duplicate non-blocking analytics beacon'
     assert json.loads(scripts[0]['data-cf-beacon'])=={'token':'d2b7303797fa48c694dde2b0ff780947'},f'{file}: wrong analytics destination'
+assert not Page((ROOT/'404.html').read_text(encoding='utf-8')).attrs('script',src='https://static.cloudflareinsights.com/beacon.min.js'),'404 traffic must not be counted as a storefront visit'
 snapshot={f:hashlib.sha256(f.read_bytes()).hexdigest() for f in files}
 subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,capture_output=True)
 assert snapshot=={f:hashlib.sha256(f.read_bytes()).hexdigest() for f in files},'Build output must be deterministic'
@@ -43,5 +44,5 @@ with ZipFile(ROOT/'ai-tools-zone.zip') as archive:
     names=set(archive.namelist())
     assert all(f.relative_to(ROOT).as_posix() in names for f in files if f.parent!=ROOT/'data'),'Missing generated production file'
     assert not any(n.startswith(('data/','templates/','.git/','.tools/','verification/','tmp/','output/')) or n.endswith(('.py','.md','.env')) for n in names),'Development or private file packaged'
-    assert 'CNAME' in names and 'measurement.js' in names and '404.html' in names
+    assert 'CNAME' in names and 'measurement.js' in names and 'whatsapp.js' in names and '404.html' in names
 print('PASS: meaningful freshness, unchanged-date preservation, deterministic build and safe production package.')

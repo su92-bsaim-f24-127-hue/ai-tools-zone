@@ -18,7 +18,7 @@ Run `python build_site.py` after changing the catalog, homepage template or edit
 - `data/page-state.json`: persisted content fingerprints and lastmod dates. Do not reset this file for routine builds.
 - `templates/home.html`: homepage layout and copy.
 - `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest (53 canonical pages).
-- `app.js`: search, filters, finder, quick views and comparison.
+- `app.js`: search, filters, finder, quick views and comparison. `whatsapp.js` adds a direct WhatsApp Web route and copyable order details to catalog order links.
 - `theme.js`: early theme selection, persistent preference and system-theme fallback.
 - `scene.js`: CSS 3D logo motion, pause, pointer tilt and reduced-motion handling.
 - `styles.css` and `enhancements.css`: layout, both themes and accessibility improvements.
@@ -36,7 +36,7 @@ Product icons are hosted locally. Most are from vendors' own sites or documented
 
 ## WhatsApp purchases
 
-All Order on WhatsApp links open `https://wa.me/923430173923` with the selected plan details. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
+Order on WhatsApp opens `https://wa.me/923430173923` with the selected plan details. Desktop users also have a direct WhatsApp Web option and can copy the prepared details if chat prefill is unavailable. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
 
 ## Catalog accuracy
 
