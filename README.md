@@ -87,3 +87,5 @@ Read [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md) for changes, evidence and re
 Run `python audit_growth.py`, `python test_growth.py`, `python audit_growth_browser.py` (local server required), and `python scripts/build_seo_reports.py` for release validation and the per-page reports. `scripts/competitor_research.py` is a manual, robots-respecting research task, excluded from deployment. `scripts/indexnow.py` defaults to a dry run; the Pages workflow submits semantic URL changes only after successful deployment. The public proof key is not a secret.
 
 [Search Console setup](SEARCH-CONSOLE-SETUP.md) ? [Bing and IndexNow](BING-WEBMASTER-SETUP.md) ? [Citation readiness](AI-CITATION-READINESS.md) ? [Customer and AI monitoring](AI-VISIBILITY-MONITORING.md). Cloudflare visit analytics is connected, but the optional conversion events are local hooks and have no configured collector.
+
+The practical earned-mention and backlink plan is in [BACKLINK-STRATEGY.md](BACKLINK-STRATEGY.md); no paid link placements or outreach have been sent.
