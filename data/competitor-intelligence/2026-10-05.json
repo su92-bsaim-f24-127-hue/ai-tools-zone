@@ -1,0 +1,197 @@
+[
+  {
+    "name": "TAAFT",
+    "url": "https://theresanaiforthat.com/",
+    "page_type": "directory",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "There's An AI For That® — The front page of AI",
+    "headings": [
+      "Go to section",
+      "Search"
+    ],
+    "schema_types": [],
+    "navigation_prefixes": [],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Futurepedia",
+    "url": "https://www.futurepedia.io/ai-tools/productivity",
+    "page_type": "category",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "AI Productivity Tools & Software for 2026",
+    "headings": [
+      "AI Productivity Tools - Boosting Your Output with Smart Innovation",
+      "Maximize Your Workflow with 705 AI Productivity"
+    ],
+    "schema_types": [
+      "BreadcrumbList",
+      "ListItem",
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/about-us/",
+      "/ai-innovations/",
+      "/ai-tools/",
+      "/contact/",
+      "/editorial-guidelines/",
+      "/free-claude-course/",
+      "/login/",
+      "/newsletter/",
+      "/register/",
+      "/resources/",
+      "/subscribe/",
+      "/tutorials/",
+      "/update-a-tool/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Toolify",
+    "url": "https://www.toolify.ai/",
+    "page_type": "directory",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Best AI Tools Directory & AI Tools List - Toolify",
+    "headings": [
+      "Discover The Best AI Websites & Tools",
+      "Free AI Tools by Category"
+    ],
+    "schema_types": [],
+    "navigation_prefixes": [
+      "/Best-AI-Tools-Category/",
+      "/Best-AI-Tools-Source/",
+      "/Best-AI-Tools-region/",
+      "/Best-AI-Tools-revenue/",
+      "/Best-trending-AI-Tools/",
+      "/advertise/",
+      "/ai-model/",
+      "/ai-news/",
+      "/alphabet-a/",
+      "/alphabet-b/",
+      "/alphabet-c/",
+      "/alphabet-d/",
+      "/alphabet-e/",
+      "/alphabet-f/",
+      "/alphabet-g/",
+      "/alphabet-h/",
+      "/alphabet-i/",
+      "/alphabet-j/",
+      "/alphabet-k/",
+      "/alphabet-l/",
+      "/alphabet-m/",
+      "/alphabet-n/",
+      "/alphabet-o/",
+      "/alphabet-other/",
+      "/alphabet-p/",
+      "/alphabet-q/",
+      "/alphabet-r/",
+      "/alphabet-s/",
+      "/alphabet-t/",
+      "/alphabet-u/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "TopAI",
+    "url": "https://topai.tools/",
+    "page_type": "directory",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Find the Right AI Tools for Every Task | TopAI.tools",
+    "headings": [
+      "Find the AI Tool You Need, Instantly.",
+      "🛬 Just Landed - AI tools"
+    ],
+    "schema_types": [
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/about/",
+      "/ai-assist/",
+      "/browse/",
+      "/categories/",
+      "/category/",
+      "/dashboard/",
+      "/deals/",
+      "/faq/",
+      "/free-ai-tools/",
+      "/guides/",
+      "/login/",
+      "/playbooks/",
+      "/privacy/",
+      "/submit/",
+      "/t/",
+      "/terms/",
+      "/top-100-ai-tools/",
+      "/update-ai/",
+      "/usecases/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "FutureTools",
+    "url": "https://www.futuretools.io/",
+    "page_type": "directory",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 308: Permanent Redirect"
+  },
+  {
+    "name": "AIxploria",
+    "url": "https://www.aixploria.com/en/categories-ai/",
+    "page_type": "category",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "skipped: <urlopen error [Errno 11002] getaddrinfo failed>"
+  },
+  {
+    "name": "AI Tools Pak",
+    "url": "https://aitoolspak.tech/",
+    "page_type": "marketplace",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Cheap AI Tools Pakistan | AI Tools Sale & PKR Prices",
+    "headings": [
+      "AI Tools PakCheap AI tools in Pakistan.",
+      "Enterprise AI API Credits at Wholesale"
+    ],
+    "schema_types": [
+      "Brand",
+      "BreadcrumbList",
+      "ContactPoint",
+      "Country",
+      "DefinedRegion",
+      "ItemList",
+      "ListItem",
+      "MerchantReturnPolicy",
+      "MonetaryAmount",
+      "Offer",
+      "OfferShippingDetails",
+      "Organization",
+      "Person",
+      "Product",
+      "QuantitativeValue",
+      "SearchAction",
+      "ShippingDeliveryTime",
+      "WebPage",
+      "WebSite"
+    ],
+    "navigation_prefixes": [],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Bunny Tools",
+    "url": "https://www.bunnytools.store/",
+    "page_type": "marketplace",
+    "collected_at": "2026-10-05T19:58:15.719680+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 404: Not Found"
+  }
+]

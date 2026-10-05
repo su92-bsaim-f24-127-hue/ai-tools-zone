@@ -1,3 +1,5 @@
+> **6 October 2026 update:** October release delivered task-aware search, two additional filter dimensions, direct order CTAs, catalog methodology, IndexNow and release contracts. Remaining owner actions: webmaster verification, real entitlement review and private visitor/inquiry/order measurements. See [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md).
+
 > Historical record. For the September 2026 SEO expansion and current deployment results, see [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md), [SEO-AUDIT.md](SEO-AUDIT.md) and [SEO-STRATEGY.md](SEO-STRATEGY.md).
 
 # AI Tools Zone: implementation plan

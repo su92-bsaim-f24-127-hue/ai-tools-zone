@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.12'
@@ -30,6 +32,8 @@ jobs:
           python build_site.py
           python test_seo_build.py
           python audit_seo.py
+          python audit_growth.py
+          python test_growth.py
           python package_site.py
           python -m zipfile -e ai-tools-zone.zip _site
       - uses: actions/configure-pages@v6.0.0
@@ -40,3 +44,7 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v5.0.1
+      - name: Notify IndexNow of changed pages
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: python scripts/indexnow.py --submit --base-ref HEAD^

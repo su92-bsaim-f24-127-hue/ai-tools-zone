@@ -1,3 +1,5 @@
+> **6 October 2026 update:** Current release: 53 canonical pages; natural-language discovery, direct order tables, route/slug contracts, stable offer/breadcrumb IDs and full page inventory. See [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md) for evidence and current limitations. Earlier sections below are historical baseline findings.
+
 # AI Tools Zone SEO audit
 
 Audit started 29 September 2026. Scope: source generator, templates, catalog, generated HTML, assets, JavaScript, existing test scripts, packaging, GitHub Pages workflow and the public website.

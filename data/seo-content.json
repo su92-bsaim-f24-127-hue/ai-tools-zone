@@ -812,6 +812,57 @@
         "/categories/ai-assistants/"
       ],
       "sources": []
+    },
+    {
+      "path": "/guides/catalog-methodology/",
+      "type": "guides",
+      "title": "How We List and Compare AI Subscription Offers",
+      "description": "Understand AI Tools Zone PKR prices, access descriptions, shortlists and update policy. Separate seller-listed offers from vendor features before paying.",
+      "answer": "AI Tools Zone comparisons use our own seller-listed catalog: total PKR price, duration or allowance, access type, delivery estimate and replacement coverage. They are buying guides, not hands-on performance tests or official vendor price comparisons.",
+      "products": [],
+      "sections": [
+        [
+          "What does the listed price cover?",
+          "The price belongs to the specific offer on its product page. Compare it together with duration and access. A credit allowance, a one-month private plan and a longer invitation plan are different offers; dividing each price by months can conceal important differences. We do not present them as equivalent subscriptions."
+        ],
+        [
+          "How do we choose a shortlist?",
+          "We start with the intended output: an edited video, a draft, a design, research or a working application. We connect that workflow to catalog categories and stated uses, then show the relevant plans. Position in a table is not a quality ranking. We have not published controlled performance benchmarks or independent customer ratings."
+        ],
+        [
+          "Which information comes from vendors?",
+          "Official website links provide vendor context. The price, access route, delivery estimate and replacement coverage on AI Tools Zone describe our marketplace offer. A vendor link does not verify that every vendor feature is included in that offer or establish an official reseller relationship."
+        ],
+        [
+          "When is information updated?",
+          "The seller maintains the catalog. Generated product pages and comparison tables read that same data so a catalog edit updates the visible offer and its structured data together. Sitemap modification dates change when meaningful page content changes; a page update is not a live stock check or a vendor verification date."
+        ],
+        [
+          "What should I confirm before paying?",
+          "Ask about the exact plan, included usage, account eligibility, device limits, account or workspace ownership, privacy conditions, delivery time and replacement terms. Tell support if you need a feature for client or confidential work. Confirm current availability and the final price in WhatsApp before payment."
+        ],
+        [
+          "How do I report an incorrect listing?",
+          "Use the WhatsApp contact on the product page. The prepared message includes the product URL and listed plan details, so you can point out the specific fact that needs checking. You review the message before sending."
+        ]
+      ],
+      "faq": [
+        [
+          "Are these independently tested rankings?",
+          "No. The comparisons explain catalog offers and workflow tradeoffs. They do not claim hands-on benchmarks, vendor endorsement or customer ratings."
+        ],
+        [
+          "Does a longer plan always offer better value?",
+          "No. Check allowance, eligibility, access controls, support and your actual usage before comparing total cost."
+        ]
+      ],
+      "related": [
+        "/pricing/",
+        "/guides/choose-ai-subscription/",
+        "/guides/private-vs-shared-access/",
+        "/about/"
+      ],
+      "sources": []
     }
   ]
 }

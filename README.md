@@ -17,7 +17,7 @@ Run `python build_site.py` after changing the catalog, homepage template or edit
 - `seo_pages.py`: renders editorial pages and shared catalog tables; records content-based sitemap freshness.
 - `data/page-state.json`: persisted content fingerprints and lastmod dates. Do not reset this file for routine builds.
 - `templates/home.html`: homepage layout and copy.
-- `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest (52 canonical pages).
+- `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest (53 canonical pages).
 - `app.js`: search, filters, finder, quick views and comparison.
 - `theme.js`: early theme selection, persistent preference and system-theme fallback.
 - `scene.js`: CSS 3D logo motion, pause, pointer tilt and reduced-motion handling.
@@ -36,7 +36,7 @@ Product icons are hosted locally. Most are from vendors' own sites or documented
 
 ## WhatsApp purchases
 
-All Buy Now links open `https://wa.me/923430173923` with the selected plan details. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
+All Order on WhatsApp links open `https://wa.me/923430173923` with the selected plan details. Customers review and send their message. No message is sent automatically and no payment is collected by this website. The shopping bag and its checkout controls have been removed.
 
 ## Catalog accuracy
 
@@ -79,3 +79,11 @@ Visits/page views are measured browser activity, not a verified count of distinc
 The privacy page describes the service. `_headers` allows its script/collection endpoint on compatible hosts; GitHub Pages does not apply that configuration file.
 
 Setup reference: https://developers.cloudflare.com/web-analytics/get-started/
+
+## October customer-discovery release
+
+Read [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md) for changes, evidence and remaining owner actions. `search.js` interprets bounded catalog queries; audience/duration filters are client-side. `data/seo-contract.json` protects the route count and stable product slugs. `audit_growth.py` checks order-message parity, entity IDs, placeholder navigation and common credential signatures. Signature scanning cannot prove that all private data has been detected; review the staged diff too.
+
+Run `python audit_growth.py`, `python test_growth.py`, `python audit_growth_browser.py` (local server required), and `python scripts/build_seo_reports.py` for release validation and the per-page reports. `scripts/competitor_research.py` is a manual, robots-respecting research task, excluded from deployment. `scripts/indexnow.py` defaults to a dry run; the Pages workflow submits semantic URL changes only after successful deployment. The public proof key is not a secret.
+
+[Search Console setup](SEARCH-CONSOLE-SETUP.md) ? [Bing and IndexNow](BING-WEBMASTER-SETUP.md) ? [Citation readiness](AI-CITATION-READINESS.md) ? [Customer and AI monitoring](AI-VISIBILITY-MONITORING.md). Cloudflare visit analytics is connected, but the optional conversion events are local hooks and have no configured collector.

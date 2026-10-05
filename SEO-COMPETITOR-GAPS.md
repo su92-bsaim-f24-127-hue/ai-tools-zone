@@ -1,3 +1,5 @@
+> **6 October 2026 update:** Fresh bounded research is in [COMPETITOR-RESEARCH.md](COMPETITOR-RESEARCH.md) and data/competitor-intelligence/2026-10-05.json (UTC; 6 October Pakistan). Five samples succeeded; three were skipped. The matrix below is dated September evidence. Keyword map now contains 205 intent mappings, without ranking/volume assumptions.
+
 # Competitor intelligence and content gaps
 
 Research date: 29 September 2026. These are sampled page observations, not a full competitive crawl or ranking study. No competitor descriptions, testimonials, ratings, datasets or images were copied into the site. All new editorial copy is original.

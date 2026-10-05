@@ -1,4 +1,5 @@
 """Static editorial pages and freshness records; no browser or third-party build dependency."""
+from urllib.parse import quote
 from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
@@ -54,7 +55,7 @@ def breadcrumbs(items):
         for i, (label,url) in enumerate(items)) + '</ol></nav>'
 
 def breadcrumb_schema(origin, items):
-    return {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':label,'item':origin+url} for i,(label,url) in enumerate(items)]}
+    return {'@type':'BreadcrumbList','@id':origin+items[-1][1]+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':i+1,'name':label,'item':origin+url} for i,(label,url) in enumerate(items)]}
 
 def faq_html(items):
     # Visible answers are useful even without a search-engine FAQ enhancement.
@@ -63,8 +64,8 @@ def faq_html(items):
 def plan_table(products, caption='Compare seller-listed plans'):
     if not products:
         return '<p>No offers currently match this budget. <a href="/products/">Explore all listed plans</a>.</p>'
-    rows=''.join(f'<tr><th scope="row"><a href="{product_path(p)}">{e(p["name"])}</a><span class="table-category">{e(p["category"])}</span></th><td>PKR {p["price"]:,}</td><td>{e(p["duration"])}</td><td>{e(p["access"])}</td></tr>' for p in products)
-    return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr><th scope="col">Tool</th><th scope="col">Listed price</th><th scope="col">Duration / allowance</th><th scope="col">Access</th></tr></thead><tbody>{rows}</tbody></table></div>'
+    rows=''.join(f'<tr><th scope="row"><a href="{product_path(p)}">{e(p["name"])}</a><span class="table-category">{e(p["category"])}</span></th><td>PKR {p["price"]:,}</td><td>{e(p["duration"])}</td><td>{e(p["access"])}</td><td><a class="inline-link" data-product-id="{p['id']}" href="https://wa.me/923430173923?text={quote(p['orderMessage'])}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a></td></tr>' for p in products)
+    return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr><th scope="col">Tool</th><th scope="col">Listed price</th><th scope="col">Duration / allowance</th><th scope="col">Access</th><th scope="col">Next step</th></tr></thead><tbody>{rows}</tbody></table></div>'
 
 def tiles(entries):
     return '<div class="editorial-grid">' + ''.join(f'<article class="editorial-card"><h2><a href="{path}">{e(title)}</a></h2><p>{e(summary)}</p></article>' for path,title,summary in entries) + '</div>'
@@ -79,7 +80,7 @@ def home_discovery():
 def build_pages(products, origin, shell, write):
     paths = []
     by_id = {p['id']:p for p in products}
-    disclaimer = '<p class="offer-note">Prices describe AI Tools Zone offers, not official vendor pricing. Availability, included features, eligibility and the final price are confirmed before payment. <a href="/guides/choose-ai-subscription/">See the buying checklist</a>.</p>'
+    disclaimer = '<p class="offer-note">Prices describe AI Tools Zone offers, not official vendor pricing. Availability, included features, eligibility and the final price are confirmed before payment. <a href="/guides/choose-ai-subscription/">See the buying checklist</a> and <a href="/guides/catalog-methodology/">how we compare offers</a>.</p>'
 
     def publish(path, title, description, content, listed=(), crumbs=None):
         items = crumbs or [('Home','/'), (title,path)]
@@ -104,10 +105,10 @@ def build_pages(products, origin, shell, write):
     for page in CONTENT['pages']:
         selected=[by_id[id] for id in page['products']]
         content='<p class="direct-answer">'+e(page['answer'])+'</p>'
-        for heading,body in page['sections']:
-            content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{e(body)}</p></section>'
         if selected:
             content += '<section class="content-block"><h2>Listed plans at a glance</h2>'+plan_table(selected)+disclaimer+'</section>'
+        for heading,body in page['sections']:
+            content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{e(body)}</p></section>'
         content += faq_html(page['faq']) + '<section class="content-block"><h2>Continue your comparison</h2>'+links(page['related'])+'</section>'
         if page['sources']:
             content += '<section class="content-block"><h2>Official product references</h2><ul>'+''.join(f'<li><a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(name)}</a></li>' for name,url in page['sources'])+'</ul><p>These references describe the vendors. They do not establish authorization or the entitlements of an independently supplied offer.</p></section>'

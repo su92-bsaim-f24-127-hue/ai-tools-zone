@@ -37,7 +37,7 @@ with sync_playwright() as pw:
             with page.expect_popup() as popup:page.locator('.buy-now').click()
             popup.value.close()
             events=page.evaluate('testEvents')
-            checks.append({'name':'Optional WhatsApp click event has no message or personal fields','passed':len(events)==1 and events[0]['name']=='whatsapp_click' and set(events[0])=={'name','page','section'}})
+            checks.append({'name':'Optional WhatsApp click events have only bounded product context, no personal fields','passed':len(events)==2 and {e['name'] for e in events}=={'whatsapp_click','product_whatsapp_click'} and all(set(e)=={'name','page','section','product'} and e['product']=='chatgpt' for e in events)})
         context.close()
     # A local desktop lab observation, explicitly not field CWV or a ranking score.
     context=browser.new_context(viewport={'width':1440,'height':1000},reduced_motion='reduce')
