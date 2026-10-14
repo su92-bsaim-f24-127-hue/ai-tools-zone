@@ -1,5 +1,11 @@
 # Bounded competitor research
 
+## Public-search matrix update: 14 October 2026
+
+The spreadsheet-compatible [competitor matrix](SEO-COMPETITOR-MATRIX.csv) records 15 competitor samples plus an AI Tools Zone self-benchmark, including structure, content, search-sample visibility, public mention/backlink limits and user-experience observations. It opens in Excel and other spreadsheet apps. Queries covered global AI directories and Pakistan subscription sellers. Search-result observations describe the public search tool's sample only; they are not Google rankings, traffic estimates or proof of indexing. The exact-domain search for `aitoolszone.tech` returned no result in that limited sample, while direct Google Search access returned a restriction page rather than ordinary results. Neither observation establishes that Google has or has not indexed the site.
+
+Backlink notes are deliberately conservative: no backlink index was available. A third-party mention is not a verified link, endorsement, editorially earned link or measure of authority. Competitor prices, inventory, ratings, counts, seller status and service claims were not copied or independently verified. For the latest site-by-site evidence, sample status and opportunities, use the CSV; the machine-readable page sample remains [2026-10-14.json](data/competitor-intelligence/2026-10-14.json).
+
 ## Fresh sample: 14 October 2026 (Pakistan time)
 
 Evidence: [machine-readable 12-page sample](data/competitor-intelligence/2026-10-14.json). Eight public pages were sampled; four were skipped (TAAFT and Toolify returned 403, FutureTools redirected with 308, and Pak Tools Store returned 421). The collector checked robots rules, did not follow those redirects or bypass challenges, and sampled no more than one page per host. Global tool directories are discovery competitors; local sellers and marketplaces are the closer commercial comparison set. This is page-level research, not a rank, traffic, conversion, customer-review or whole-site study.
