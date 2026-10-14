@@ -1,4 +1,4 @@
-> **6 October 2026 update:** Fresh bounded research is in [COMPETITOR-RESEARCH.md](COMPETITOR-RESEARCH.md) and data/competitor-intelligence/2026-10-05.json (UTC; 6 October Pakistan). Five samples succeeded; three were skipped. The matrix below is dated September evidence. Keyword map now contains 205 intent mappings, without ranking/volume assumptions.
+> **14 October 2026 update:** A fresh robots-respecting sample covered 12 public pages: 8 sampled and 4 skipped (403, redirect, or 421; no access controls were bypassed). Current evidence and per-site limits are in [COMPETITOR-RESEARCH.md](COMPETITOR-RESEARCH.md) and [data/competitor-intelligence/2026-10-14.json](data/competitor-intelligence/2026-10-14.json). Pakistan-market opportunity: maintain a dated, owner-verified price/access snapshot with a clear method; keep item-level duration, total PKR price, access and eligibility visible; distinguish independent seller claims from vendor-confirmed facts. These are content hypotheses, not proof of competitor rankings or traffic. Keyword map contains 205 intent mappings with no invented search volumes.
 
 # Competitor intelligence and content gaps
 

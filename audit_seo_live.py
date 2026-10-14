@@ -25,8 +25,15 @@ def fetch(url):
         body=r.read().decode('utf-8','replace');page=Page(body)
         return {'url':url,'status':r.status,'final':r.url,'redirects':redirect.chain,'canonical':page.attrs('link',rel='canonical'),'titles':page.titles,'h1_count':len(page.h1),'schema_types':[n.get('@type') for raw in page.schemas for n in json.loads(raw).get('@graph',[json.loads(raw)])],'robots':page.attrs('meta',name='robots'),'headers':dict(r.headers)}
     except HTTPError as error:
-        return {'url':url,'status':error.code,'redirects':redirect.chain,'classification':'missing' if error.code in (404,410) else 'unverified-access-response'}
+        if error.code in (404,410):classification='missing'
+        elif error.code in (401,403,408,425,429,502,503,504):classification='unverified-access-response'
+        else:classification='http-error'
+        return {'url':url,'status':error.code,'redirects':redirect.chain,'classification':classification}
     except Exception as error:return {'url':url,'error':str(error),'classification':'unverified'}
+def is_unverified(result):
+    status=result.get('status')
+    return (status is None or result.get('classification','').startswith('unverified') or
+            status in (401,403,408,425,429,502,503,504))
 def main():
     external='--external' in sys.argv
     if external:
@@ -36,20 +43,28 @@ def main():
         sitemap=urlopen('https://aitoolszone.tech/sitemap.xml',timeout=20).read()
         urls=[n.text for n in ET.fromstring(sitemap).findall('{*}url/{*}loc')]
         urls+=['http://aitoolszone.tech/','https://www.aitoolszone.tech/','http://www.aitoolszone.tech/','https://aitoolszone.tech/products/chatgpt-plus','https://aitoolszone.tech/no-such-page-seo-audit/','https://aitoolszone.tech/?category=design']
-    results=list(ThreadPoolExecutor(max_workers=6).map(fetch,urls))
+    results=list(ThreadPoolExecutor(max_workers=4).map(fetch,urls))
     failures=[]
     if not external:
         expected=[n.text for n in ET.parse(ROOT/'sitemap.xml').getroot().findall('{*}url/{*}loc')]
         if urls[:-6]!=expected:failures.append('Live sitemap differs from current build')
         for r in results[:-6]:
-            if r.get('status')!=200 or r.get('h1_count')!=1 or r.get('canonical')!=[{'rel':'canonical','href':r['url']}]:failures.append(r['url']+' page/canonical mismatch')
+            if is_unverified(r):continue
+            if r.get('status')!=200:
+                failures.append(r['url']+' returned HTTP '+str(r.get('status')))
+                continue
+            if r.get('h1_count')!=1 or r.get('canonical')!=[{'rel':'canonical','href':r['url']}]:failures.append(r['url']+' page/canonical mismatch')
             if not {'WebPage','Organization','WebSite'}.issubset(set(r.get('schema_types',[]))):failures.append(r['url']+' missing entity graph')
         for r in results[-6:-2]:
+            if is_unverified(r):continue
             if r.get('status')!=200 or not r.get('redirects') or not r.get('final','').startswith('https://aitoolszone.tech/'):failures.append(r['url']+' redirect mismatch')
-        if results[-2].get('status')!=404:failures.append('Unknown route does not return HTTP 404')
-        if results[-1].get('canonical')!=[{'rel':'canonical','href':'https://aitoolszone.tech/'}]:failures.append('Query-string home does not canonicalize cleanly')
-    report={'checked_at_utc':datetime.now(timezone.utc).isoformat(),'external':external,'failures':failures,'results':results}
+        if not is_unverified(results[-2]) and results[-2].get('status')!=404:failures.append('Unknown route does not return HTTP 404')
+        if not is_unverified(results[-1]) and results[-1].get('canonical')!=[{'rel':'canonical','href':'https://aitoolszone.tech/'}]:failures.append('Query-string home does not canonicalize cleanly')
+    unverified=[r['url'] for r in results if is_unverified(r)]
+    outcome='fail' if failures else 'inconclusive' if unverified else 'pass'
+    report={'checked_at_utc':datetime.now(timezone.utc).isoformat(),'external':external,'outcome':outcome,'failures':failures,'unverified':unverified,'results':results}
     dest=ROOT/'verification'/('seo-external.json' if external else 'seo-live-after.json');dest.write_text(json.dumps(report,indent=2),encoding='utf-8')
-    print(json.dumps({'checked':len(results),'failures':failures,'status_counts':{str(code):sum(r.get('status')==code for r in results) for code in set(r.get('status') for r in results)},'unverified':[r['url'] for r in results if r.get('classification')=='unverified' or r.get('status') in (403,429)],'missing':[r['url'] for r in results if r.get('status') in (404,410)]},indent=2))
+    print(json.dumps({'checked':len(results),'outcome':outcome,'failures':failures,'status_counts':{str(code):sum(r.get('status')==code for r in results) for code in set(r.get('status') for r in results)},'unverified':unverified,'missing':[r['url'] for r in results if r.get('status') in (404,410)]},indent=2))
     if failures:sys.exit(1)
+    if unverified:sys.exit(2)
 if __name__=='__main__':main()

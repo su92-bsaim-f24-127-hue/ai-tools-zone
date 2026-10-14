@@ -10,7 +10,20 @@ import json, time
 
 ROOT=Path(__file__).resolve().parents[1]
 AGENT='AIToolsZoneResearch/1.0 (+https://aitoolszone.tech/about/)'
-SAMPLES=[('TAAFT','https://theresanaiforthat.com/','directory'),('Futurepedia','https://www.futurepedia.io/ai-tools/productivity','category'),('Toolify','https://www.toolify.ai/','directory'),('TopAI','https://topai.tools/','directory'),('FutureTools','https://www.futuretools.io/','directory'),('AIxploria','https://www.aixploria.com/en/categories-ai/','category'),('AI Tools Pak','https://aitoolspak.tech/','marketplace'),('Bunny Tools','https://www.bunnytools.store/','marketplace')]
+SAMPLES=[
+    ('TAAFT','https://theresanaiforthat.com/','global directory'),
+    ('Futurepedia','https://www.futurepedia.io/ai-tools/productivity','global category'),
+    ('Toolify','https://www.toolify.ai/','global directory'),
+    ('TopAI.tools','https://topai.tools/','global directory'),
+    ('FutureTools','https://www.futuretools.io/','global directory'),
+    ('AI Tools Pak','https://aitoolspak.tech/ai-subscription-price-index-pakistan/','Pakistan price index'),
+    ('AI Tool Gems','https://aitoolgems.tech/','Pakistan marketplace'),
+    ('SubBazaar','https://subbazaar.pk/?category=ai-tools','Pakistan marketplace'),
+    ('Pak Tools Store','https://www.paktools.site/','Pakistan marketplace'),
+    ('JKDigital','https://www.jkdigital.pk/blog/best-ai-tools-provider-in-pakistan-lowest-prices-2026','Pakistan provider guide'),
+    ('PrimePass','https://primepass.app/','Pakistan subscription bundle'),
+    ('Toolmandi','https://toolmandi.store/about','Pakistan marketplace'),
+]
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs): return None
 opener=build_opener(NoRedirect())

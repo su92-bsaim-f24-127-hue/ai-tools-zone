@@ -1,0 +1,326 @@
+[
+  {
+    "name": "TAAFT",
+    "url": "https://theresanaiforthat.com/",
+    "page_type": "global directory",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "Futurepedia",
+    "url": "https://www.futurepedia.io/ai-tools/productivity",
+    "page_type": "global category",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "AI Productivity Tools & Software for 2026",
+    "headings": [
+      "AI Productivity Tools - Boosting Your Output with Smart Innovation",
+      "Maximize Your Workflow with 705 AI Productivity"
+    ],
+    "schema_types": [
+      "BreadcrumbList",
+      "ListItem",
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/about-us/",
+      "/ai-innovations/",
+      "/ai-tools/",
+      "/contact/",
+      "/editorial-guidelines/",
+      "/free-claude-course/",
+      "/login/",
+      "/newsletter/",
+      "/register/",
+      "/resources/",
+      "/subscribe/",
+      "/tutorials/",
+      "/update-a-tool/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Toolify",
+    "url": "https://www.toolify.ai/",
+    "page_type": "global directory",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "TopAI.tools",
+    "url": "https://topai.tools/",
+    "page_type": "global directory",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Find the Right AI Tools for Every Task | TopAI.tools",
+    "headings": [
+      "Find the AI Tool You Need, Instantly.",
+      "🛬 Just Landed - AI tools"
+    ],
+    "schema_types": [
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/about/",
+      "/ai-assist/",
+      "/browse/",
+      "/categories/",
+      "/category/",
+      "/dashboard/",
+      "/deals/",
+      "/faq/",
+      "/free-ai-tools/",
+      "/guides/",
+      "/login/",
+      "/playbooks/",
+      "/privacy/",
+      "/submit/",
+      "/t/",
+      "/terms/",
+      "/top-100-ai-tools/",
+      "/update-ai/",
+      "/usecases/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "FutureTools",
+    "url": "https://www.futuretools.io/",
+    "page_type": "global directory",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 308: Permanent Redirect"
+  },
+  {
+    "name": "AI Tools Pak",
+    "url": "https://aitoolspak.tech/ai-subscription-price-index-pakistan/",
+    "page_type": "Pakistan price index",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "AI Subscription Price Index Pakistan 2026 | AI Tools Pak",
+    "headings": [
+      "AI Subscription Price Index Pakistan — 2026",
+      "What this index measures"
+    ],
+    "schema_types": [
+      "DataDownload",
+      "Dataset",
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/capcut-pro-pakistan/",
+      "/chatgpt-plus-pakistan/",
+      "/claude-20x-max-pakistan/",
+      "/claude-pro-pakistan/",
+      "/coursera-premium-pakistan/",
+      "/dzine-master-pakistan/",
+      "/elevenlabs-creator-pakistan/",
+      "/gemini-pro-pakistan/",
+      "/google-ai-ultra-pakistan/",
+      "/grammarly-premium-pakistan/",
+      "/hailuo-ai-pakistan/",
+      "/helium-10-diamond-pakistan/",
+      "/helium-10-platinum-pakistan/",
+      "/heygen-ai-pakistan/",
+      "/ideogram-ai-plus-pakistan/",
+      "/jasper-ai-pakistan/",
+      "/leonardo-ai-pakistan/",
+      "/lovable-ai-pro-pakistan/",
+      "/netflix-pakistan/",
+      "/playht-pakistan/",
+      "/prime-video-pakistan/",
+      "/quillbot-premium-pakistan/",
+      "/runway-ml-max-pakistan/",
+      "/runway-ml-pakistan/",
+      "/semrush-pro-pakistan/",
+      "/storyblocks-unlimited-pakistan/",
+      "/success-ai-starter-pakistan/",
+      "/supergrok-pakistan/",
+      "/veo-3-extension-pakistan/",
+      "/veo-3-ultra-pakistan/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "AI Tool Gems",
+    "url": "https://aitoolgems.tech/",
+    "page_type": "Pakistan marketplace",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Buy Cheap AI Tools & License Keys in Pakistan (PKR)",
+    "headings": [
+      "Cheap AI Tools in Pakistan.Buy Subscriptions in PKR.",
+      "Trending 3D gems."
+    ],
+    "schema_types": [
+      "AggregateRating",
+      "Answer",
+      "Brand",
+      "Country",
+      "DefinedRegion",
+      "FAQPage",
+      "ImageObject",
+      "ItemList",
+      "ListItem",
+      "MerchantReturnPolicy",
+      "MonetaryAmount",
+      "Offer",
+      "OfferShippingDetails",
+      "OnlineStore",
+      "Organization",
+      "Person",
+      "Product",
+      "QuantitativeValue",
+      "Question",
+      "Rating",
+      "Review",
+      "SearchAction",
+      "ShippingDeliveryTime",
+      "WebPage",
+      "WebSite"
+    ],
+    "navigation_prefixes": [],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "SubBazaar",
+    "url": "https://subbazaar.pk/?category=ai-tools",
+    "page_type": "Pakistan marketplace",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "SubBazaar.pk — Subscriptions and licences, priced in the open",
+    "headings": [
+      "Every price,out in the open",
+      "AI Tools"
+    ],
+    "schema_types": [
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/c/",
+      "/how-it-works/",
+      "/order/",
+      "/p/",
+      "/privacy/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Pak Tools Store",
+    "url": "https://www.paktools.site/",
+    "page_type": "Pakistan marketplace",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "skipped: HTTP Error 421: Misdirected Request"
+  },
+  {
+    "name": "JKDigital",
+    "url": "https://www.jkdigital.pk/blog/best-ai-tools-provider-in-pakistan-lowest-prices-2026",
+    "page_type": "Pakistan provider guide",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "Best AI Tools Provider in Pakistan (2026): Lowest PKR Prices for ChatGPT, Claude, DeepSeek, Veo 3 & More · JKDigital",
+    "headings": [
+      "Best AI Tools Provider"
+    ],
+    "schema_types": [
+      "Article",
+      "Organization"
+    ],
+    "navigation_prefixes": [
+      "/blog/",
+      "/chat/",
+      "/contact/",
+      "/faq/",
+      "/login/",
+      "/pricing/",
+      "/privacy-policy/",
+      "/refund-policy/",
+      "/register/",
+      "/services/",
+      "/terms-of-service/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "PrimePass",
+    "url": "https://primepass.app/",
+    "page_type": "Pakistan subscription bundle",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "PrimePass — Premium AI Tools, One Affordable Pass | ChatGPT, Canva, Grammarly, Netflix in Pakistan",
+    "headings": [
+      "We Hunt.You Consume.",
+      "Premium tools. Pakistan prices."
+    ],
+    "schema_types": [
+      "AggregateRating",
+      "ContactPoint",
+      "ImageObject",
+      "Offer",
+      "Organization",
+      "SoftwareApplication",
+      "Store",
+      "WebSite"
+    ],
+    "navigation_prefixes": [
+      "/affiliate/",
+      "/ambassador/",
+      "/cdn-cgi/",
+      "/changelog/",
+      "/chat-with-us/",
+      "/faq/",
+      "/pricing/",
+      "/privacy/",
+      "/reviews/",
+      "/terms/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  },
+  {
+    "name": "Toolmandi",
+    "url": "https://toolmandi.store/about",
+    "page_type": "Pakistan marketplace",
+    "collected_at": "2026-10-14T06:42:30.200584+00:00",
+    "research_only": true,
+    "status": "sampled",
+    "title": "About — Toolmandi | Pakistan's AI & Software Marketplace",
+    "headings": [
+      "Built in Karachi, for every Pakistani builder",
+      "Stop paying dollar prices on a rupee budget"
+    ],
+    "schema_types": [],
+    "navigation_prefixes": [
+      "/about/",
+      "/admin/",
+      "/auth/",
+      "/become-a-seller/",
+      "/blog/",
+      "/categories/",
+      "/contact/",
+      "/deals/",
+      "/faq/",
+      "/how-it-works/",
+      "/orders/",
+      "/privacy/",
+      "/products/",
+      "/profile/",
+      "/refund/",
+      "/reviews/",
+      "/sellers/",
+      "/support/",
+      "/terms/",
+      "/wishlist/"
+    ],
+    "content_gap_notes": "Human review required; no automatic ranking conclusions."
+  }
+]

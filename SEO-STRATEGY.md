@@ -1,4 +1,4 @@
-> **6 October 2026 update:** Current strategy: improve qualified discovery and WhatsApp conversion using real offer clarity and buyer questions. Prioritize Search Console evidence over page volume. Cloudflare visitor analytics is connected; custom click events are local hooks only. See [AI-VISIBILITY-MONITORING.md](AI-VISIBILITY-MONITORING.md) for a 30-day operating plan and [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md) for the shipped changes.
+> **14 October 2026 update:** Keep the 53-page structure stable and improve qualified discovery from observed queries, buyer questions and verified offer facts. Cloudflare Web Analytics is installed for aggregate visits; the site measurement hooks still do not collect conversions. Search Console and Bing Webmaster ownership/data remain owner actions. See [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md), [SEO-PLAN.md](SEO-PLAN.md) and [AI-VISIBILITY-MONITORING.md](AI-VISIBILITY-MONITORING.md).
 
 # Search, answer and entity strategy
 
@@ -44,7 +44,7 @@ Edit original guidance in `data/seo-content.json`; update it when vendor policie
 
 ## Measurement without invented results
 
-No analytics service was present and none is connected now. `measurement.js` dispatches local `aitz:measure` events for page views, WhatsApp clicks, finder opens and comparison opens. It sends no network data and stores nothing. Payloads omit query strings, order-message text, phone/customer details and search terms. These events are integration hooks, not recorded conversion counts. A WhatsApp click is only a lead-intent event, not a sale.
+Cloudflare Web Analytics is installed for aggregate visits. `measurement.js` dispatches local `aitz:measure` events for page views, WhatsApp clicks, finder opens and comparison opens; those custom events send no network data and store nothing. Payloads omit query strings, order-message text, phone/customer details and search terms. These hooks are not recorded conversion counts. A WhatsApp click is only a lead-intent event, not a sale.
 
 If the owner later chooses a privacy-appropriate analytics provider, attach a listener before the deferred measurement script, review consent/privacy obligations for the selected setup and update the privacy policy. Measure organic landing-page visits and lead intent; reconcile actual sales separately with order records.
 
@@ -52,7 +52,7 @@ If the owner later chooses a privacy-appropriate analytics provider, attach a li
 |---|---|---|
 | Google Search Console | Impressions, clicks, CTR, position, queries, landing pages, indexed/excluded pages, CWV reports | Verify DNS domain property, submit sitemap, inspect representative templates |
 | Bing Webmaster Tools | Crawl/index status, query/page performance; AI Performance if exposed for the account | Verify/import property, submit sitemap, inspect URLs; do not claim unavailable reports exist |
-| Optional site analytics | Product/category/comparison visits and WhatsApp intent by landing page/referral | Choose provider and implement approved collection; current hooks do not collect |
+| Installed aggregate analytics | Cloudflare visits/page views; dashboard is owner-accessible | Use the Cloudflare dashboard; custom conversion events are not collected |
 | Manual AI/search sample | Citation URL, prompt, model/search mode, date, locale and whether site is actually cited | Repeat a small fixed sample without treating one result as rank or market share |
 | Actual order records | Confirmed inquiries and completed orders | Owner records outcomes; no message content captured by this website |
 

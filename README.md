@@ -60,7 +60,7 @@ After deployment, run `python audit_seo_live.py`. Verify ownership in Google Sea
 
 GitHub Pages and the Python development server do not apply `_headers`. It is a portable Netlify/Cloudflare-style configuration example. Stronger custom response headers require a compatible host or proxy.
 
-Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, `SEO-KEYWORD-MAP.csv`, and `SEO-IMPLEMENTATION.md`. `SEO-PLAN.md` and `AUDIT.md` are historical records.
+Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-CONTENT-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, `SEO-KEYWORD-MAP.csv`, `SEO-IMPLEMENTATION.md`, and the active 30/60/90-day `SEO-PLAN.md`. `AUDIT.md` is a historical record. Add `BACKLINK-STRATEGY.md` for a no-link-scheme reference plan.
 
 ## Privacy
 
@@ -84,8 +84,8 @@ Setup reference: https://developers.cloudflare.com/web-analytics/get-started/
 
 Read [SEO-GROWTH-RELEASE.md](SEO-GROWTH-RELEASE.md) for changes, evidence and remaining owner actions. `search.js` interprets bounded catalog queries; audience/duration filters are client-side. `data/seo-contract.json` protects the route count and stable product slugs. `audit_growth.py` checks order-message parity, entity IDs, placeholder navigation and common credential signatures. Signature scanning cannot prove that all private data has been detected; review the staged diff too.
 
-Run `python audit_growth.py`, `python test_growth.py`, `python audit_growth_browser.py` (local server required), and `python scripts/build_seo_reports.py` for release validation and the per-page reports. `scripts/competitor_research.py` is a manual, robots-respecting research task, excluded from deployment. `scripts/indexnow.py` defaults to a dry run; the Pages workflow submits semantic URL changes only after successful deployment. The public proof key is not a secret.
+Run `python audit_seo.py`, `python audit_growth.py`, `python test_growth.py`, `python audit_growth_browser.py`, `python audit_whatsapp.py`, and `python audit_accessibility.py` (browser audits require the local server) for release validation. `python scripts/build_seo_reports.py` refreshes the page inventory and adds live HTTP evidence when `verification/seo-live-after.json` exists. `scripts/competitor_research.py` is a manual, robots-respecting research task, excluded from deployment. `scripts/indexnow.py` defaults to a dry run; the Pages workflow submits semantic URL changes only after successful deployment. The public proof key is not a secret.
 
-[Search Console setup](SEARCH-CONSOLE-SETUP.md) ? [Bing and IndexNow](BING-WEBMASTER-SETUP.md) ? [Citation readiness](AI-CITATION-READINESS.md) ? [Customer and AI monitoring](AI-VISIBILITY-MONITORING.md). Cloudflare visit analytics is connected, but the optional conversion events are local hooks and have no configured collector.
+[Search Console setup](SEARCH-CONSOLE-SETUP.md) | [Bing and IndexNow](BING-WEBMASTER-SETUP.md) | [Citation readiness](AI-CITATION-READINESS.md) | [Customer and AI monitoring](AI-VISIBILITY-MONITORING.md). Cloudflare visit analytics is connected, but the optional conversion events are local hooks and have no configured collector.
 
 The practical earned-mention and backlink plan is in [BACKLINK-STRATEGY.md](BACKLINK-STRATEGY.md); no paid link placements or outreach have been sent.

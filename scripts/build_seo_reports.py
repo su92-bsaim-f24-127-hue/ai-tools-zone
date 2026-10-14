@@ -5,6 +5,23 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from audit_growth import run
 assert not run(),'Fix audit findings before preparing reports'
 pages=json.loads((ROOT/'verification/page-inventory.json').read_text(encoding='utf-8'))
+live_path=ROOT/'verification/seo-live-after.json'
+live=json.loads(live_path.read_text(encoding='utf-8')) if live_path.exists() else {}
+live_by_url={r.get('url'):r for r in live.get('results',[])}
+followup_path=ROOT/'verification/seo-live-followup.json'
+followup=json.loads(followup_path.read_text(encoding='utf-8')) if followup_path.exists() else {}
+live_by_url.update({r.get('url'):r for r in followup.get('results',[])})
+checked_at=live.get('checked_at_utc','')
+def live_fields(page):
+    result=live_by_url.get(page.get('url'))
+    fields={'live_http_status':'not checked','live_final_url':'','live_redirect_count':'','live_checked_at_utc':checked_at,'live_verification':'not checked'}
+    if not result:
+        if page.get('path')=='/404.html':fields['live_verification']='excluded from sitemap'
+        return fields
+    status=result.get('status')
+    fields.update({'live_http_status':status if status is not None else 'unverified','live_final_url':result.get('final',''),'live_redirect_count':len(result.get('redirects',[])),'live_checked_at_utc':followup.get('checked_at_utc',checked_at) if result in followup.get('results',[]) else checked_at,'live_verification':'unverified' if result.get('classification','').startswith('unverified') or status is None else 'verified'})
+    return fields
+pages=[{**page,**live_fields(page)} for page in pages]
 out=ROOT/'reports';out.mkdir(exist_ok=True)
 with (out/'seo-page-inventory.csv').open('w',encoding='utf-8',newline='') as f:
     writer=csv.DictWriter(f,fieldnames=list(pages[0]));writer.writeheader()
