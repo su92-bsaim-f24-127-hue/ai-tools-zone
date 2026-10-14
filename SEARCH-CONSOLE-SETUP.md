@@ -6,7 +6,7 @@ As of 14 October 2026, no connected browser account session was available to ins
 
 1. Sign in to [Search Console](https://search.google.com/search-console/) with your own Google account. Add the **Domain** property `aitoolszone.tech`.
 2. Copy Google's generated TXT verification value into your DNS provider, then verify. Do not send passwords or DNS API credentials to chat. No guessed verification tag has been added to this repository.
-3. Submit `https://aitoolszone.tech/sitemap.xml` in Sitemaps. Inspect the homepage, a product, pricing and the methodology guide with URL Inspection. A successful live test does not mean the page is indexed; request indexing for a small priority set where appropriate.
+3. Submit `https://aitoolszone.tech/sitemap.xml` in Sitemaps. Then inspect the homepage, ChatGPT Plus, Gemini Pro, Canva Pro, AI assistants category, Design category, subscription guide and private/shared access guide listed in [SEO-NEXT-ACTIONS.md](SEO-NEXT-ACTIONS.md). For each, record index status, crawl/index permissions, last crawl, Google-selected canonical and any reported error. A successful live test does not mean the page is indexed; investigate the reported reason before requesting indexing for a small priority set.
 4. Weekly, review Page indexing, sitemap processing, search queries/pages, Pakistan traffic, device, impressions, clicks and CTR. Compare equal date windows. A low CTR with meaningful impressions suggests a title/intent mismatch; no impressions first calls for indexing/discovery checks, not more duplicate pages.
 5. Check Core Web Vitals when enough field data exists. Local browser measurements are not field CWV.
 
