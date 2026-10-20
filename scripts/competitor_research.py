@@ -19,7 +19,7 @@ SAMPLES=[
     ('AI Tools Pak','https://aitoolspak.tech/ai-subscription-price-index-pakistan/','Pakistan price index'),
     ('AI Tool Gems','https://aitoolgems.tech/','Pakistan marketplace'),
     ('SubBazaar','https://subbazaar.pk/?category=ai-tools','Pakistan marketplace'),
-    ('Pak Tools Store','https://www.paktools.site/','Pakistan marketplace'),
+    ('Pak Tools Store','https://paktools.store/category/ai-tools','Pakistan marketplace'),
     ('JKDigital','https://www.jkdigital.pk/blog/best-ai-tools-provider-in-pakistan-lowest-prices-2026','Pakistan provider guide'),
     ('PrimePass','https://primepass.app/','Pakistan subscription bundle'),
     ('Toolmandi','https://toolmandi.store/about','Pakistan marketplace'),

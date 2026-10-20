@@ -1,10 +1,12 @@
 # Measure discovery through to customers
 
+Updated 20 October 2026. Use the webmaster reports as evidence about impressions and visits; they do not reveal completed WhatsApp orders.
+
 Start with evidence, not forecasts. Current traffic, ranking, citations, WhatsApp inquiries and completed orders are unknown to this agent. Cloudflare's public beacon ID does not grant access to the private dashboard.
 
 ## Weekly owner record
 
-Keep a private spreadsheet with week, visits, page views, top landing pages, referrers, Search Console impressions/clicks/CTR, Bing clicks/citations where available, WhatsApp inquiries, qualified inquiries, completed orders and cancellations. Do not commit names, phone numbers, transcripts, payments or this private sheet to GitHub. Ask a customer how they found the store only where useful; do not infer an order from a click.
+Keep a private spreadsheet with the date window, visits, page views, top landing pages, referrers, Search Console impressions/clicks/CTR, Generative AI report impressions and pages where shown, Bing clicks/AI citations where available, WhatsApp inquiries, qualified inquiries, completed orders and cancellations. Do not commit names, phone numbers, transcripts, payments or this private sheet to GitHub. Ask a customer how they found the store only where useful; do not infer an order from a click.
 
 Funnel: search impression → landing page → relevant plan/comparison → WhatsApp click → conversation → confirmed order. A click is only an intent signal; conversation and purchase happen off-site and need seller records. No custom click collector is currently configured. Therefore a website click-to-order conversion rate is not yet measurable end to end.
 
@@ -14,7 +16,9 @@ Available bounded hooks: product_view, category_view, comparison_view, alternati
 
 ## AI answer checks
 
-Monthly, use a fixed small set of questions about Pakistan offers, access and comparisons. Record date, engine/interface, locale, exact question, whether a citation actually appeared and its destination. Compare the same questions; a single personalized response is not a rank or market share. Do not automate prompts to manipulate engines or claim an answer was cited without saving evidence privately. GSC does not provide a clean separate AI conversion funnel; Bing reporting covers its stated experiences only.
+After the owner verifies Search Console, check its Generative AI performance report under Performance. Google announced worldwide availability for all websites from 31 August 2026. The report can show impressions and pages for Search and Discover generative features, countries, and dates; device breakdown is available for Search. For Search, this includes AI Overviews and AI Mode. If the report or data is absent, treat that as unavailable/insufficient report data, not proof of zero visibility. Compare its impression data with conventional Search clicks separately; neither report records an off-site WhatsApp conversation or sale. [Google's report announcement](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?facet3=pdf) documents the report dimensions.
+
+Monthly, use a fixed small set of questions about Pakistan offers, access and comparisons. Record date, engine/interface, locale, exact question, whether a citation actually appeared and its destination. Compare the same questions; a single personalized response is not a rank or market share. Do not automate prompts to manipulate engines or claim an answer was cited without saving evidence privately. Google's AI Search guidance says normal technical eligibility and helpful, reliable content remain the basis; it specifies no special AI markup or machine-readable file, and indexing or inclusion is not guaranteed ([Google AI features guidance](https://developers.google.com/search/docs/appearance/ai-features)).
 
 ## Customer acquisition priorities
 

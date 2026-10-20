@@ -1,6 +1,6 @@
 # AI Tools Zone content strategy
 
-Updated 14 October 2026. The site has 53 canonical sitemap URLs, including 20 product pages. The 205-row [keyword map](SEO-KEYWORD-MAP.csv) assigns intent to existing destinations; it contains no measured search volumes or rank estimates. This strategy keeps the current useful page set stable and improves it from real customer and webmaster evidence.
+Updated 20 October 2026. The site has 53 canonical sitemap URLs, including 20 product pages. The 205-row [keyword map](SEO-KEYWORD-MAP.csv) assigns intent to existing destinations; it contains no measured search volumes or rank estimates. This strategy keeps the current useful page set stable and improves it from real customer and webmaster evidence.
 
 ## Page roles and editorial rules
 
@@ -16,9 +16,9 @@ Each page should answer its intended question early, identify the source and dat
 
 ## Research and prioritization
 
-Start with Google Search Console and Bing Webmaster query/page data once the owner verifies those properties. Review impressions, clicks, country, device, indexed/canonical state and the actual landing page; annotate deployment dates and compare like-for-like date windows. Add recurring buyer questions from support only as anonymized themes. Use Cloudflare Web Analytics for aggregate visits/referrers; it does not currently record custom search, product, WhatsApp or purchase conversion events. A WhatsApp click is not a sale.
+Start with Google Search Console and Bing Webmaster query/page data once the owner verifies those properties. Review impressions, clicks, country, device, indexed/canonical state and the actual landing page; annotate deployment dates and compare like-for-like date windows. After verification, also inspect Search Console's Generative AI performance report for AI-feature impressions/pages where data is available; keep this separate from conventional clicks and owner-confirmed orders. Google announced worldwide report availability on 31 August 2026 ([official report announcement](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?facet3=pdf)). Add recurring buyer questions from support only as anonymized themes. Use Cloudflare Web Analytics for aggregate visits/referrers; it does not currently record custom search, product, WhatsApp or purchase conversion events. A WhatsApp click is not a sale.
 
-Competitor work is a bounded hypothesis source, not a proxy for ranking, traffic or quality. The 14 October sample found a local-market content opportunity for an owner-verified, dated PKR/access snapshot with a reproducible method. Publish or refresh it only after verifying the catalog facts and assigning someone to maintain them. Keep the eight robots-permitted sample pages and four skipped hosts documented in [COMPETITOR-RESEARCH.md](COMPETITOR-RESEARCH.md); do not infer the skipped sites' content.
+Competitor work is a bounded hypothesis source, not a proxy for ranking, traffic or quality. The 20 October public sample found global directories emphasizing category/task discovery and local seller pages showing dated PKR comparisons with duration, access and methodology. Improve the existing `/pricing/`, catalog-methodology and product pages only after the owner verifies their own current facts and assigns a maintenance owner. The new sample and earlier skipped-page limits are documented in [COMPETITOR-RESEARCH.md](COMPETITOR-RESEARCH.md); do not infer inaccessible competitors' content.
 
 Do not create pages for every product/query/city permutation. A new URL needs a distinct customer decision, original answer, sufficient current facts, a non-overlapping destination and a maintenance owner. Otherwise update the existing canonical page. Do not copy competitor copy, use generated doorway pages, fabricate reviews or claim first place.
 
