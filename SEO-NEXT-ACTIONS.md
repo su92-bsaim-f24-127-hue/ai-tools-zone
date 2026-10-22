@@ -4,7 +4,7 @@ Updated 22 October 2026 after a live crawl, local regression checks and a deeper
 
 ## What is confirmed
 
-- The prior published/live sitemap snapshot contained 53 canonical HTTPS URLs and passed its live crawl. The current local build has 66 canonical URLs, including 11 new comparison/editorial pages. The Pages workflow runs on pushes to `main`; confirm its deployment and crawl the new routes before claiming live HTTP status. Google indexing is not verified.
+- The successful Pages deployment published 66 canonical HTTPS URLs, including 11 new comparison/editorial pages. Production crawl passed 72 requests (71 HTTP 200 plus the expected fabricated-route 404); no failures or unverified responses. Google indexing is not verified.
 - The live homepage contains the supplied Google Search Console verification tag. The HTML verification URL returns HTTP 200 with Google?s exact expected body. You previously reported an ownership-verification failure; the Google account/property cannot be inspected here, so ownership and indexing are still unverified.
 - Latest local checks passed: SEO 5,907 assertions; growth 2,778; storefront 149; SEO browser 149 with no console errors; search/discovery 36; WhatsApp 30; growth regression 7; and zero axe violations across 36 representative theme/page states. The local desktop browser lab measured LCP 844 ms and CLS 0.0018; that is lab data, not field Core Web Vitals. Prior PageSpeed Insights requests returned HTTP 429, so no PSI score is available.
 - Search Console indexing, query rankings, impressions, clicks, citations, backlinks, inquiries, completed orders and conversions remain unverified. A public-search sample or a successful HTTP response is not proof of indexing or rank.

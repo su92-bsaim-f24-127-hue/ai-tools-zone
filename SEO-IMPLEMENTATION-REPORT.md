@@ -28,7 +28,7 @@ The local build now has 66 canonical sitemap URLs and 248 keyword mappings. Chan
 - `python audit_whatsapp.py` — 30 checks passed; no messages were sent.
 - `git diff --check` — passed; only existing line-ending conversion warnings remain.
 
-Pushing this commit to `main` runs the configured GitHub Pages workflow. After the push, confirm that workflow succeeds and crawl the 66-page sitemap; the new routes have not yet been verified in production. Search Console access is unavailable here, so indexing, rankings, traffic or customer outcomes remain unverified. Submit the expanded sitemap in Search Console only after deployment.
+Commit `14620f2` was pushed to the primary GitHub repository and the GitHub Pages workflow completed successfully. The production crawl passed 72 requests: 71 HTTP 200, the expected unknown-route 404, no failures or unverified responses; the live sitemap contains all 66 canonical URLs. Google Search Console indexing, rankings, traffic and customer outcomes remain unverified. The push to the second GitHub repository was rejected with HTTP 403 because the authenticated account lacks write access.
 
 ## Previous AI Tools Pak comparison follow-up — 22 October 2026
 
