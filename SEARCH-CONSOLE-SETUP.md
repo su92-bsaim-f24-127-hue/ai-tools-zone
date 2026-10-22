@@ -2,21 +2,29 @@
 
 This is an owner-run checklist. Search Console ownership, indexing status, impressions, clicks and rankings have not been verified from this code workspace. A page returning HTTP 200 or appearing in the sitemap does not mean Google has indexed it.
 
-**Live check on 20 October 2026:** the homepage and `robots.txt` returned HTTP 200, and `sitemap.xml` returned HTTP 200 with 53 URLs. The live homepage did not contain the Google verification meta tag, and `https://aitoolszone.tech/googleade07204a5ea7ade.html` returned HTTP 404. Both proof methods are present in this local project but have not reached the live site. This is consistent with an ownership-verification failure; publish the website changes first, then verify using the exact method selected in Search Console.
+**Live check on 22 October 2026:** the homepage, robots.txt and sitemap.xml returned HTTP 200. The sitemap contains 53 unique canonical HTTPS URLs. The homepage source contains the supplied Google verification meta tag, and https://aitoolszone.tech/googleade07204a5ea7ade.html returns HTTP 200 with the exact expected body shown below. These public checks confirm the proof files are deployed; they do not confirm Search Console ownership or indexing. You previously reported an ownership-verification failure; this workspace cannot see the selected Search Console property or account status.
 
 ## HTML-tag verification option
 
-The exact HTML tag you supplied is already in the homepage template and generated homepage in this project. After the change is published, open `https://aitoolszone.tech/` and use **View page source** to confirm the `google-site-verification` meta tag is in the `<head>`. Then choose the HTML-tag method for the `https://aitoolszone.tech/` **URL-prefix** property and click **Verify**. A Domain property cannot use this meta-tag method; use the DNS TXT method below. Keep the tag in the homepage template after verification.
+The exact HTML tag you supplied is published in the homepage head and was confirmed in the live page source on 22 October 2026. In Search Console, select the URL-prefix property https://aitoolszone.tech/, choose the HTML tag method, and verify that the token displayed in the current Google wizard matches the published tag. A Domain property cannot use this method; use the DNS TXT method below. Keep the tag in the homepage template after verification.
 
 ## HTML-file verification option
 
-If Google gave you the HTML file method for the URL-prefix property `https://aitoolszone.tech/`, the supplied verification filename and content have been added to the site root as `googleade07204a5ea7ade.html`, and the GitHub Pages production package is configured to publish it. It currently returns HTTP 404 on the live site. After you publish the change, open `https://aitoolszone.tech/googleade07204a5ea7ade.html` in a private/incognito browser window. Confirm it displays exactly:
+If Google gave you the HTML-file method for the URL-prefix property https://aitoolszone.tech/, the supplied verification file is published at the site root and is included in the production package. A live check on 22 October 2026 returned HTTP 200 and the exact body below. Open https://aitoolszone.tech/googleade07204a5ea7ade.html in a private/incognito browser window to confirm it remains accessible:
 
 ```text
 google-site-verification: googleade07204a5ea7ade.html
 ```
 
 Then return to the same URL-prefix property's verification screen and click **Verify**. Google says HTML-file verification is for URL-prefix properties, not Domain properties; a Domain property must be verified with the DNS TXT method in the next section. Keep the verification file on the site after verification so Google can continue confirming ownership. [Google ownership verification methods](https://support.google.com/webmasters/answer/9008080).
+
+## If ownership verification still fails
+
+1. Check the property shown in Search Console. The homepage tag and HTML file verify the URL-prefix property https://aitoolszone.tech/; they do not verify the Domain property aitoolszone.tech. A Domain property requires the exact DNS TXT value Google provides.
+2. Check the verification method selected in the Google wizard. Use the meta-tag proof with HTML tag, or the public file URL with HTML file. Confirm the current Google token/file name matches the proof being checked.
+3. Confirm you are signed into the Google account that was granted ownership and that the final address is the aitoolszone.tech host after redirects. Do not remove the live tag or file.
+4. If Google generated a new token or file name, use that exact new proof and publish it before retrying. Never guess a TXT value or overwrite unrelated DNS records.
+
 
 ## 1. Add the Domain property
 
@@ -55,7 +63,7 @@ After Search Console verifies the property:
 3. Enter `https://aitoolszone.tech/sitemap.xml` and submit it.
 4. Revisit the report and record Google's processing status and any reported errors. Submission is a discovery hint, not a promise of indexing.
 
-The public sitemap was checked on 20 October 2026: it returned HTTP 200 and contained 53 unique HTTPS URLs on `aitoolszone.tech`.
+The public sitemap was checked again on 22 October 2026: it returned HTTP 200 and contained 53 unique canonical HTTPS URLs on aitoolszone.tech.
 
 ## 4. Inspect important URLs
 
@@ -74,7 +82,13 @@ For each URL, note whether it is on Google, whether crawling and indexing are al
 
 ## 5. Review indexing, Search and generative-AI reports
 
-Review **Page indexing**, the sitemap report and the standard Search results Performance report. After verification, also look for the **Generative AI performance** report under Performance. Google says the report became available to all websites worldwide on 31 August 2026; it reports impressions and pages across generative Search/Discover features, countries and dates, with device detail for Search. Do not interpret missing report data as a zero or claim that impressions represent clicks, leads or sales. See [Google's report documentation announcement](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?facet3=pdf).
+Review **Page indexing**, the sitemap report and the standard Search results Performance report. After verification, look for the **Generative AI performance** report under Performance. Google says the Search report rolled out worldwide on 31 August 2026 and includes AI Overviews and AI Mode; Discover has a separate generative-AI report. The report can show impressions by page, country, date and device. Do not interpret a missing report or data as zero, or claim that impressions represent clicks, leads or sales. See [Google's Search report help](https://support.google.com/webmasters/answer/16984139) and [report announcement](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?facet3=pdf).
+
+### Check the Search generative AI inclusion setting
+
+After you can open the verified property, go to **Settings → Search generative AI**. Confirm that **Include my site's links and content in Search generative AI features** is selected, or that the property inherits an included setting from its parent. Google documents inclusion as the default for properties, but this project cannot inspect your account setting; its current value is **unverified**. Do not change a setting you do not understand. Google says this control affects eligibility for AI Overviews, AI Mode and generative features in Discover, but is not a ranking signal for other Search results. See [Google's Search generative AI control guide](https://support.google.com/webmasters/answer/16908024).
+
+The Search report covers impressions for AI Overviews and AI Mode; Discover has a separate generative-AI report. Google may not show a report when there is not enough reportable activity. A missing report does not prove that the website is excluded. The site source currently allows Googlebot and contains no `nosnippet`, `max-snippet:0` or `data-nosnippet` exclusion, but source inspection cannot reveal the account-level Search Console setting. Google's [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal Search eligibility and helpful content still apply; no special AI file or schema guarantees inclusion.
 
 ## 6. Resolve genuine errors
 

@@ -1,6 +1,6 @@
 # Measure discovery through to customers
 
-Updated 20 October 2026. Use the webmaster reports as evidence about impressions and visits; they do not reveal completed WhatsApp orders.
+Updated 22 October 2026. Use webmaster reports as evidence about search impressions and visits; they do not reveal completed WhatsApp orders.
 
 Start with evidence, not forecasts. Current traffic, ranking, citations, WhatsApp inquiries and completed orders are unknown to this agent. Cloudflare's public beacon ID does not grant access to the private dashboard.
 
@@ -13,6 +13,12 @@ Funnel: search impression → landing page → relevant plan/comparison → What
 Cloudflare Web Analytics already records visits/page views privately to the owner's account. The screenshot supplied on 6 October showed **Last 24 hours** (not 7 days), 9 visits and 9 page views. Its listed `/admin` and `/admin/` URLs return 404, so they are requests for missing pages rather than real storefront sections. The generated 404 previously loaded the beacon; this release removes analytics from 404 responses to keep missing-route probes out of storefront visit totals. Recheck the same date window after deployment; the reported count may fall even though qualified visits are unchanged. Its [FAQ](https://developers.cloudflare.com/web-analytics/faq/) says custom events and UTM reporting are not supported; ad blockers and delivery failures also affect measurement. The `aitz:measure` events are tested local integration hooks only. They are not saved, exported, shown publicly or sent to Cloudflare. To measure clicks centrally, supply a supported analytics property/collector and implement its consent/privacy requirements. Never expose a private dashboard credential in client code.
 
 Available bounded hooks: product_view, category_view, comparison_view, alternative_view, guide_view, pricing_view, tool_search, filter_use, compare_add, tool_finder_start, tool_finder_complete, whatsapp_click, product_whatsapp_click and outbound_vendor_click. Payloads contain only an allowlisted event name, canonical page path, section and optional allowlisted catalog product ID. Search text, query parameters, message bodies, phone numbers and purchase details are excluded.
+
+## Current Google visibility controls
+
+A source review found no nosnippet, max-snippet:0 or data-nosnippet directive excluding page text from Google snippets or AI-feature previews. Googlebot is allowed by the site's public wildcard robots rule. This only establishes that the checked source does not apply those exclusions; it does not establish indexing, inclusion in an AI answer or ranking. The Search Console account-level Search generative AI control cannot be inspected from this workspace and remains unverified. After verification, check **Settings → Search generative AI** and confirm inclusion is selected or inherited from an included parent property. Google's control guide says inclusion is the default but a property can be set to exclude or inherit another property's setting; see [the official control instructions](https://support.google.com/webmasters/answer/16908024).
+
+Google's Search Console Generative AI performance report has rolled out worldwide; Google says it may not appear when a property has too few impressions. Inspect it after property verification and when report data appears. Keep its impressions/pages separate from standard Search clicks and WhatsApp inquiries. Google also says its AI search features follow normal SEO eligibility and do not require special AI text files or schema. See [Google AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) and the [Search Console report help](https://support.google.com/webmasters/answer/16984139).
 
 ## AI answer checks
 

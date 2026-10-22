@@ -1,5 +1,6 @@
 """Discovery/conversion tests; WhatsApp requests are intercepted and never sent."""
 from pathlib import Path
+from urllib.parse import parse_qs, unquote, urlparse
 import sys,json
 ROOT=Path(__file__).parent;sys.path.insert(0,str(ROOT/'.test-deps'))
 from playwright.sync_api import sync_playwright
@@ -17,6 +18,18 @@ with sync_playwright() as pw:
     for query,expected in cases:
         page.locator('#search').fill(query)
         check(query,set(ids())==expected)
+    request_href=page.locator('#product-grid .empty-state a[href*="wa.me/"]').get_attribute('href')
+    check('Unlisted search offers a WhatsApp request with tool name prefilled',bool(request_href and 'nonexistent-unicorn-product' in unquote(request_href)))
+    for width in (320,390):
+        page.set_viewport_size({'width':width,'height':844})
+        check(f'Unlisted-tool request fits mobile width {width}',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+    page.locator('#search').fill('x'*120+'🙂')
+    capped_message=parse_qs(urlparse(page.locator('#product-grid .empty-state a[href*="wa.me/"]').get_attribute('href')).query).get('text',[''])[0]
+    check('WhatsApp request safely limits very long Unicode search terms',('x'*120) in capped_message and '🙂' not in capped_message)
+    page.locator('#filter-toggle').click()
+    page.locator('#search').fill('ChatGPT');page.locator('#budget-filter').fill('0')
+    check('Existing offer hidden by a filter is not presented as unlisted',page.locator('.empty-state a[href*="wa.me/"]').count()==0)
+    page.locator('#reset-filters').click();page.locator('#filter-toggle').click()
     page.locator('#search').fill('');page.locator('#filter-toggle').click()
     page.locator('#intent-filter').select_option('study');page.locator('#duration-filter').select_option('monthly')
     check('Audience + duration intersect',ids()==['chatgpt'])

@@ -13,7 +13,7 @@ from seo_pages import content_date
 
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
-FOLDERS=('products','categories','use-cases','compare','alternatives','guides','pricing','about','privacy','terms')
+FOLDERS=('products','categories','use-cases','compare','alternatives','guides','pricing','blog','about','privacy','terms')
 
 class Page(HTMLParser):
     def __init__(self, text):

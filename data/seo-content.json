@@ -516,6 +516,20 @@
           "Gemini overview",
           "https://gemini.google/about/"
         ]
+      ],
+      "comparison": [
+        {
+          "name": "ChatGPT Plus",
+          "officialUrl": "https://chatgpt.com/pricing/",
+          "product": "chatgpt",
+          "test": "Use the same prompt and source requirement; check whether evidence is visible and verifiable."
+        },
+        {
+          "name": "Gemini plan",
+          "officialUrl": "https://one.google.com/about/google-ai-plans/",
+          "product": "gemini",
+          "test": "Repeat the same task; check the exact Google account, region and app integration you rely on."
+        }
       ]
     },
     {
@@ -863,6 +877,353 @@
         "/about/"
       ],
       "sources": []
+    },
+    {
+      "path": "/compare/chatgpt-vs-claude/",
+      "type": "compare",
+      "title": "ChatGPT Plus vs Claude Pro for Pakistan buyers",
+      "description": "Compare ChatGPT Plus and Claude Pro by your real workflow, current plan terms and AI Tools Zone availability. No unsupported performance winner or imported price claims.",
+      "answer": "ChatGPT Plus and Claude Pro are separate assistant subscriptions. There is no universal winner: test the same real task, check the exact plan and regional availability, and compare account control before paying.",
+      "products": [
+        "chatgpt"
+      ],
+      "comparison": [
+        {
+          "name": "ChatGPT Plus",
+          "officialUrl": "https://chatgpt.com/pricing/",
+          "product": "chatgpt",
+          "test": "Ask it to draft a short customer reply in English and Roman Urdu with the same facts and length limit; verify every factual claim."
+        },
+        {
+          "name": "Claude Pro",
+          "officialUrl": "https://www.anthropic.com/pricing",
+          "test": "Run the same prompt and a long-document summary; compare instruction-following and the amount of editing you need."
+        }
+      ],
+      "sections": [
+        [
+          "Run a fair comparison",
+          "Use the same input, prompt, time limit and review checklist in both services. Try one writing task, one research task with source checking, and one coding or document task only if those match your work. Record errors and correction time rather than relying on a one-prompt winner."
+        ],
+        [
+          "Check the actual subscription",
+          "Features, model access and usage limits vary by plan, location and account and can change. Open each provider's current plan page before subscribing. AI Tools Zone currently lists a ChatGPT offer; Claude is not in our current catalogue, so no local Claude price or order is advertised."
+        ],
+        [
+          "Choose based on repeat use",
+          "If your work depends on a specific integration, model, privacy setting or output format, confirm that exact feature on the official plan page. Try a free option first when it covers the task. Do not send confidential client material until you understand the provider and account data controls."
+        ]
+      ],
+      "faq": [
+        [
+          "Which assistant is best?",
+          "That depends on your repeated tasks and the current plan limits. This page has no controlled benchmark and does not declare a universal winner."
+        ],
+        [
+          "Can I buy Claude Pro from AI Tools Zone?",
+          "Claude is not currently listed in the AI Tools Zone catalogue. Check the official provider for current availability; do not treat ChatGPT's seller-listed offer as a Claude plan."
+        ],
+        [
+          "Does the ChatGPT offer include every official Plus feature?",
+          "The offer's exact account, eligibility and included features must be confirmed before payment. The official vendor plan and a third-party offer are separate facts."
+        ]
+      ],
+      "related": [
+        "/compare/chatgpt-vs-gemini/",
+        "/products/chatgpt-plus/",
+        "/guides/choose-ai-subscription/",
+        "/use-cases/ai-tools-for-students/"
+      ]
+    },
+    {
+      "path": "/compare/claude-vs-gemini/",
+      "type": "compare",
+      "title": "Claude Pro vs Gemini: a practical plan comparison",
+      "description": "Compare Claude and Gemini by tasks, account ecosystem, plan availability and current seller listings for Pakistan. Check official terms before choosing.",
+      "answer": "Compare Claude and Gemini using the work you actually do and the apps or account ecosystem you rely on. AI Tools Zone lists a Gemini offer but not Claude, so this guide does not imply equivalent local plans or prices.",
+      "products": [
+        "gemini"
+      ],
+      "comparison": [
+        {
+          "name": "Claude Pro",
+          "officialUrl": "https://www.anthropic.com/pricing",
+          "test": "Try the same long source, writing brief and follow-up edits; verify limits, file support and account terms on the current plan page."
+        },
+        {
+          "name": "Gemini plan",
+          "officialUrl": "https://one.google.com/about/google-ai-plans/",
+          "product": "gemini",
+          "test": "Test the same task and any Google-app workflow you need; check country availability, included services and the exact Google account."
+        }
+      ],
+      "sections": [
+        [
+          "Compare workflow fit, not brand claims",
+          "Use one representative task from your week: summarize a document, draft a reply, or organize research. Check whether the answer is accurate, whether you can trace its sources and what steps remain outside the assistant. A vendor's feature list is not a side-by-side quality benchmark."
+        ],
+        [
+          "Treat plan and region details separately",
+          "Google AI membership benefits can vary by plan and product availability. Anthropic describes its own Claude plans separately from API usage. Confirm country, account, usage limits and billing terms directly with each provider. The current AI Tools Zone catalogue contains a Gemini seller-listed offer; it does not contain Claude."
+        ],
+        [
+          "Keep your data and cancellation needs in view",
+          "Before using either service for work, review data controls, workspace ownership and export options. Check renewal and cancellation terms on the provider's own page. Avoid choosing from a headline price if access, duration or eligibility differ."
+        ]
+      ],
+      "faq": [
+        [
+          "Are Claude and Gemini plans equivalent?",
+          "No equivalence is assumed. Their model access, usage limits, regional availability and account conditions are defined by their own providers and can change."
+        ],
+        [
+          "Does AI Tools Zone sell Claude?",
+          "No Claude listing is currently present. The Gemini offer is a separate seller-listed plan; confirm its exact terms before ordering."
+        ],
+        [
+          "Where do I verify Google AI plan benefits?",
+          "Use Google's current Google AI plan and help pages. Do not assume every benefit is available in Pakistan or on every account."
+        ]
+      ],
+      "related": [
+        "/compare/chatgpt-vs-gemini/",
+        "/products/gemini-pro/",
+        "/categories/ai-assistants/",
+        "/guides/private-vs-shared-access/"
+      ]
+    },
+    {
+      "path": "/compare/grammarly-vs-quillbot-vs-wordai/",
+      "type": "compare",
+      "title": "Grammarly vs QuillBot vs WordAI: choose a writing workflow",
+      "description": "Compare writing assistants through editing, rewriting, review and privacy checks. Verify current features and plans with each vendor; none is currently listed here.",
+      "answer": "Grammarly, QuillBot and WordAI are separate writing products. Choose by the writing step you need, test whether edits preserve meaning, and review the vendor's current terms before sharing unpublished work.",
+      "products": [],
+      "comparison": [
+        {
+          "name": "Grammarly",
+          "officialUrl": "https://www.grammarly.com/plans",
+          "test": "Check a short draft for corrections, tone changes and meaning preservation; inspect what the selected plan includes."
+        },
+        {
+          "name": "QuillBot",
+          "officialUrl": "https://quillbot.com/",
+          "test": "Test a paragraph rewrite and summary against your own rubric; verify citation and originality requirements independently."
+        },
+        {
+          "name": "WordAI",
+          "officialUrl": "https://wordai.com/",
+          "test": "Use a non-sensitive sample and compare readability, factual fidelity and how much human editing remains."
+        }
+      ],
+      "sections": [
+        [
+          "Start with the writing job",
+          "Proofreading, rewriting and drafting are different jobs. Decide whether you need error correction, a tone adjustment, a shorter draft or a first draft. A feature label alone does not show how well a tool handles your document, subject or language."
+        ],
+        [
+          "Use one sample and a human review",
+          "Prepare a paragraph you are allowed to share, then run the same brief through each service. Check that names, numbers, quotations and technical meaning remain intact. Read the output aloud and compare it with the original before accepting changes."
+        ],
+        [
+          "Check plan, rights and privacy",
+          "Plan features and limits can change. Review the current vendor terms for data retention, commercial use, plagiarism or citation features and cancellation. None of these three products is currently listed in AI Tools Zone, so this page does not publish a local PKR price or seller offer."
+        ]
+      ],
+      "faq": [
+        [
+          "Which tool is the best writer?",
+          "There is no verified winner on this page. Test with your own draft and score accuracy, edit time, style and policy fit."
+        ],
+        [
+          "Does an AI rewrite make text original or factually correct?",
+          "No. Rewriting does not verify facts, sources, permissions or originality. Review the result and follow your publisher, school or client rules."
+        ],
+        [
+          "Can I order these tools from AI Tools Zone?",
+          "They are not currently listed in our catalogue. Use each vendor's official plan page to check current features and availability."
+        ]
+      ],
+      "related": [
+        "/categories/ai-assistants/",
+        "/use-cases/ai-tools-for-students/",
+        "/guides/choose-ai-subscription/",
+        "/products/chatgpt-plus/"
+      ]
+    },
+    {
+      "path": "/compare/capcut-vs-runway/",
+      "type": "compare",
+      "title": "CapCut vs Runway: editing and AI video workflows",
+      "description": "Compare CapCut and Runway with a real video task, export checklist and clear Pakistan catalogue status. Check current credits, limits and rights with vendors.",
+      "answer": "CapCut and Runway can belong to different parts of a video workflow. Test the same brief to see whether you need an editor for existing footage, generative media, or both; confirm the exact tools and export terms in the selected plan.",
+      "products": [
+        "capcut"
+      ],
+      "comparison": [
+        {
+          "name": "CapCut Pro",
+          "officialUrl": "https://www.capcut.com/",
+          "product": "capcut",
+          "test": "Edit a short clip you already own; check captions, timeline control, export format and whether the required assets are included."
+        },
+        {
+          "name": "Runway",
+          "officialUrl": "https://runway.com/pricing",
+          "test": "Try one generative-video or image task; measure usable outputs per credit and verify export, watermark and commercial-use terms."
+        }
+      ],
+      "sections": [
+        [
+          "Separate editing from generation",
+          "Write down whether your project starts with footage or needs newly generated media. An editing workflow and a generative workflow have different inputs, iteration costs and review needs; one product label does not establish that either replaces the other."
+        ],
+        [
+          "Run a small production test",
+          "Use a short, non-client sample with the same target aspect ratio and delivery format. Track setup time, usable outputs, corrections, export quality and any watermark. For generative clips, include discarded attempts when estimating cost."
+        ],
+        [
+          "Check rights, credits and current access",
+          "Read the provider's current pricing and terms for export limits, model access, commercial use and credit behavior. AI Tools Zone currently lists a CapCut offer, but not Runway; the local listing's access and duration are separate from CapCut's official plan benefits."
+        ]
+      ],
+      "faq": [
+        [
+          "Is CapCut the same kind of tool as Runway?",
+          "They can serve different stages of a video workflow. Compare them using the source material and final deliverable your project requires."
+        ],
+        [
+          "Does AI Tools Zone offer Runway?",
+          "Runway is not currently listed. The CapCut page describes only the seller-listed CapCut offer; it does not promise Runway access."
+        ],
+        [
+          "Can I estimate generative-video cost from a monthly credit count alone?",
+          "Not reliably. Model, duration, resolution and failed attempts can affect usage. Check the provider's current credit rules and test your own short project."
+        ]
+      ],
+      "related": [
+        "/compare/capcut-vs-canva/",
+        "/products/capcut-pro/",
+        "/products/veo-3-ultra/",
+        "/categories/ai-video/",
+        "/use-cases/ai-tools-for-creators/"
+      ]
+    },
+    {
+      "path": "/compare/elevenlabs-vs-playht/",
+      "type": "compare",
+      "title": "ElevenLabs vs PlayHT: test voice tools for your project",
+      "description": "Compare voice-generation services using the same Urdu and English script, usage estimate and consent checklist. Verify current credits and commercial rights with vendors.",
+      "answer": "Compare ElevenLabs and PlayHT with the same script and target audience. Test pronunciation, editability, usage limits and rights rather than assuming a voice model handles Urdu, names or commercial use the same way.",
+      "products": [
+        "elevenlabs"
+      ],
+      "comparison": [
+        {
+          "name": "ElevenLabs",
+          "officialUrl": "https://elevenlabs.io/pricing",
+          "product": "elevenlabs",
+          "test": "Generate a short permitted script with Urdu and English names; assess pronunciation, controls, credits and the plan's rights."
+        },
+        {
+          "name": "PlayHT",
+          "officialUrl": "https://play.ht/",
+          "test": "Run the identical script and target voice; check pronunciation, export format, monthly limits and commercial-use terms."
+        }
+      ],
+      "sections": [
+        [
+          "Test the language you will actually publish",
+          "Prepare a short script containing local names, numbers and the Urdu or English phrasing your audience uses. Listen for pronunciation, pacing and emphasis, then check whether the provider lets you correct mistakes without rebuilding the whole clip. Do not assume a language label guarantees your preferred accent."
+        ],
+        [
+          "Budget by usage and rework",
+          "Estimate how much finished audio you need, not just the number of projects. Compare the providers' current credit or character rules, voice options, export formats and plan limits. Regenerate a few lines so you can see how iteration changes the actual cost."
+        ],
+        [
+          "Treat voice rights as a separate requirement",
+          "Use only voices and source recordings you have permission to use. Read current consent, cloning, commercial-use and data terms before uploading a voice or publishing generated speech. AI Tools Zone lists an ElevenLabs seller offer; PlayHT is not currently listed and no local PlayHT price is published."
+        ]
+      ],
+      "faq": [
+        [
+          "Which one sounds better in Urdu?",
+          "We have not run a controlled voice test. Compare both with your own permitted script, listener and publication context."
+        ],
+        [
+          "Does the ElevenLabs offer include API usage?",
+          "Do not assume that a consumer subscription includes API credits. Confirm the exact local offer and compare it with the provider's current API terms."
+        ],
+        [
+          "Can I clone a client's voice?",
+          "Only with clear permission and after checking the provider's current voice-cloning and usage rules. Keep consent records and follow applicable law."
+        ]
+      ],
+      "related": [
+        "/products/elevenlabs/",
+        "/categories/ai-voice/",
+        "/use-cases/ai-tools-for-creators/",
+        "/guides/private-vs-shared-access/"
+      ]
+    },
+    {
+      "path": "/compare/helium10-vs-semrush-vs-vidiq/",
+      "type": "compare",
+      "title": "Helium 10 vs Semrush vs vidIQ: choose by channel",
+      "description": "Compare e-commerce research, SEO marketing and YouTube workflow tools by the data source and job you need. None is currently listed in AI Tools Zone.",
+      "answer": "Helium 10, Semrush and vidIQ serve different marketing channels, so a single overall winner would be misleading. Start with whether you need marketplace seller research, search visibility work or YouTube channel planning, then test the current plan against that job.",
+      "products": [],
+      "comparison": [
+        {
+          "name": "Helium 10",
+          "officialUrl": "https://www.helium10.com/pricing/",
+          "test": "Check a marketplace product-research workflow and verify which marketplaces, data limits and tools your plan includes."
+        },
+        {
+          "name": "Semrush",
+          "officialUrl": "https://www.semrush.com/pricing/",
+          "test": "Run one search-marketing task; compare the domain, keyword, reporting and location data available to your plan."
+        },
+        {
+          "name": "vidIQ",
+          "officialUrl": "https://vidiq.com/plans/",
+          "test": "Evaluate one YouTube channel task such as topic research or optimization; confirm channel count, credits and plan limits."
+        }
+      ],
+      "sections": [
+        [
+          "These tools do different jobs",
+          "The vendors describe distinct product areas: marketplace seller operations, SEO and search marketing, and YouTube creator workflows. Treat this as a channel-selection guide, not a head-to-head performance test. If your work spans more than one channel, check whether a second paid subscription is actually needed."
+        ],
+        [
+          "Use a matching pilot",
+          "Choose one task your business already performs. For e-commerce research, verify the marketplace and the product data you need. For search marketing, use your target site and country. For YouTube, test a real channel and video topic. Record whether the data changes a decision you would otherwise make."
+        ],
+        [
+          "Compare total cost and data scope",
+          "Check billing interval, seats, tracked projects or channels, export limits, cancellation and local checkout price on each official page. AI Tools Zone does not currently list these three products, so there are no local seller prices or order links for them."
+        ]
+      ],
+      "faq": [
+        [
+          "Can I compare their prices directly?",
+          "Only after checking the current official plan pages and matching billing interval, seats, limits and use case. The products are not equivalent subscriptions."
+        ],
+        [
+          "Which one is right for a Pakistani small business?",
+          "That depends on whether the business sells on a marketplace, needs broader search marketing, or publishes on YouTube. Run a small task-based pilot before buying."
+        ],
+        [
+          "Are any of these sold by AI Tools Zone?",
+          "They are not currently listed in the catalogue. This page is an informational comparison, not an offer to supply or configure them."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-business/",
+        "/categories/business/",
+        "/guides/choose-ai-subscription/",
+        "/pricing/"
+      ]
     }
   ]
 }

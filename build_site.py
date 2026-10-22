@@ -11,7 +11,7 @@ ORIGIN='https://aitoolszone.tech'
 WA='923430173923'
 # Public collection identifier; this is not a dashboard credential.
 CLOUDFLARE_BEACON_TOKEN='d2b7303797fa48c694dde2b0ff780947'
-VERSION='20261006-orders-2'
+VERSION='20261022-business-ai-1'
 products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
 logos=json.loads((ROOT/'assets/product-logo-sources.json').read_text(encoding='utf-8'))
 e=lambda s:escape(str(s),quote=True)
@@ -54,9 +54,9 @@ def metadata(title,description,path,kind='website'):
 organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','contactPoint':{'@type':'ContactPoint','telephone':'+92-343-0173923','contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
 theme_button='''<button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Light theme" aria-pressed="false"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>'''
 def header(prefix):
- return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="" width="128" height="128"></span><span>AI TOOLS<span class="brand-bottom">ZONE</span></span></a><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
+ return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="" width="128" height="128"></span><span>AI TOOLS<span class="brand-bottom">ZONE</span></span></a><nav class="page-nav" aria-label="Main navigation"><a href="{prefix}compare/">Compare</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}categories/">Categories</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/" aria-label="AI phone agents and WhatsApp bots for Pakistani businesses">AI for Business</a></nav><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
 def footer(prefix):
- return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}categories/">Categories</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Ordering & warranty</a><a href="https://wa.me/{WA}">+92 343 0173923</a></footer>'''
+ return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}categories/">Categories</a><a href="{prefix}compare/">Compare AI tools</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/">AI for Business</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Ordering & warranty</a><a href="https://wa.me/{WA}">+92 343 0173923</a></footer>'''
 def shell(title,description,path,body,schema=None,prefix='../'):
  graph = list(schema.get('@graph',[]) if schema else [])
  if path != '/404.html' and not any(n.get('@type')=='BreadcrumbList' for n in graph):

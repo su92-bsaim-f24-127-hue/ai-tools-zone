@@ -49,7 +49,7 @@
   function renderTabs() {const focused=document.activeElement?.dataset.category;$('#category-tabs').innerHTML = ['All tools',...categories].map(c => `<button data-category="${escape(c)}" class="${category === c ? 'active' : ''}" aria-pressed="${category === c}">${escape(c)}</button>`).join('');if(focused)$$('[data-category]').find(el=>el.dataset.category===focused)?.focus({preventScroll:true});}
   function card(p) {return `<article class="product-card" data-product="${p.id}"><div class="product-card-top">${mark(p)}<span class="badge">${escape(p.access)}</span></div><div class="product-category">${escape(p.category)}</div><h3><a href="products/${p.slug}/">${escape(p.name)}</a></h3><p>${escape(p.description)}</p><div class="plan-meta"><span>${escape(p.duration)}</span><span>${escape(p.access)}</span></div><div class="card-price"><small>PKR</small> ${p.price.toLocaleString('en-PK')}</div><div class="card-actions"><a class="button buy-now" data-product-id="${p.id}" href="${escape(waUrl(singleMessage(p)))}" target="_blank" rel="noopener noreferrer" aria-label="Buy ${escape(p.name)} on WhatsApp">Order on WhatsApp <span>↗</span></a><button class="details-button" data-detail="${p.id}" aria-label="Quick view ${escape(p.name)}">ⓘ</button></div><label class="card-compare"><input type="checkbox" data-compare="${p.id}" ${selected.has(p.id)?'checked':''}> Compare tool</label></article>`;}
   function renderProducts() {
-    const query = $('#search').value.trim().toLowerCase(), intent=$('#intent-filter').value, duration=$('#duration-filter').value, access = $('#access-filter').value;
+    const rawQuery = $('#search').value.trim(), query = rawQuery.toLowerCase(), intent=$('#intent-filter').value, duration=$('#duration-filter').value, access = $('#access-filter').value;
     const budget = $('#budget-filter').value === '' ? Infinity : Math.max(0, Number($('#budget-filter').value));
     let results = products.filter(p => (category === 'All tools' || p.category === category) && (access === 'all' || p.access === access) && p.price <= budget && CatalogSearch.matches(p,query,{intent,duration}));
     const sort = $('#sort').value;
@@ -59,7 +59,14 @@
     const filtered = intent !== 'all' || duration !== 'all' || query || category !== 'All tools' || access !== 'all' || budget !== Infinity || sort !== 'featured';
     const visible = expanded || filtered ? results : results.slice(0,8);
     $('#result-count').textContent = `Showing ${visible.length} of ${results.length} tools`;
-    $('#product-grid').innerHTML = visible.length ? visible.map(card).join('') : `<div class="empty-state"><div class="empty-icon">⌕</div><h3>No tools found. New possibilities await.</h3><p>Try another search or reset your filters.</p><button class="button button-outline" data-reset>Reset all filters ↺</button></div>`;
+    const hasCatalogMatch = Boolean(query) && products.some(p => CatalogSearch.matches(p,query,{intent:'all',duration:'all'}));
+    const requestedTool = rawQuery && !hasCatalogMatch ? Array.from(rawQuery).slice(0,120).join('') : '';
+    const requestMessage = `Assalam-o-Alaikum AI Tools Zone!\nI couldn't find a matching listing for: ${requestedTool}\nCan you check whether you can offer it? Please confirm the current price, duration, access type, availability and terms before payment.`;
+    const requestLink = requestedTool ? `<a class="button button-lime" href="${escape(waUrl(requestMessage))}" target="_blank" rel="noopener noreferrer">Ask about this tool on WhatsApp <span aria-hidden="true">↗</span></a>` : '';
+    const emptyState = requestedTool
+      ? `<div class="empty-state"><div class="empty-icon">⌕</div><h3>No matching listing yet.</h3><p>We couldn't find a match for <strong>${escape(requestedTool)}</strong> with the current search and filters.</p><p>Ask us to check it. We will confirm the offer details with you before payment.</p>${requestLink}<p><button class="button button-outline" data-reset>Reset all filters ↺</button></p></div>`
+      : `<div class="empty-state"><div class="empty-icon">⌕</div><h3>No tools found. New possibilities await.</h3><p>Try another search or reset your filters.</p><button class="button button-outline" data-reset>Reset all filters ↺</button></div>`;
+    $('#product-grid').innerHTML = visible.length ? visible.map(card).join('') : emptyState;
     $('#show-more').hidden = filtered || results.length <= 8;
     $('#show-more').innerHTML = expanded ? 'Show featured tools <span>↑</span>' : 'Explore all 20 tools <span>↗</span>';
   }

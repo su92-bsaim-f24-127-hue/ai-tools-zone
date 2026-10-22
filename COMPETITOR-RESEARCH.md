@@ -1,5 +1,13 @@
 # Bounded competitor research
 
+## Cross-competitor refresh: 22 October 2026
+
+The latest page-level findings for Futurepedia, Toolify, TAAFT, Future Tools, TopAI.tools, SubBazaar, AI Tool Gems, AI Tools Pak and an additional Pakistan seller (SubStore.PK) are consolidated in [SEO-COMPETITOR-GAPS.md](SEO-COMPETITOR-GAPS.md). The [CSV evidence matrix](SEO-COMPETITOR-MATRIX.csv) now separates observed page facts, inferences, verification state and unverified metrics, with category/product/content/comparison/pricing/schema/conversion fields. Public page access is not evidence of rankings or market share; blocked pages remain unassessed, and publisher prices, reviews and stock claims were not copied.
+
+## Full AI Tools Pak review: 22 October 2026
+
+The expanded public review is documented in [COMPETITOR-AITOOLSPAK-RESEARCH.md](COMPETITOR-AITOOLSPAK-RESEARCH.md). It inventories all 233 URLs in the competitor's public sitemap, its published robots policy and AI-readable catalogue files, then checks the main storefront, PKR index, directory guide, one product page, comparison directory, blog, social-services page and business API page. The useful missing customer path was a request for an unlisted tool; the AI Tools Zone search empty state now opens a WhatsApp request with the entered name and asks the customer to confirm terms before paying. The existing `/pricing/` index is also linked directly in the homepage navigation. Competitor prices, copy, seller claims and service lines were not imported.
+
 ## Public-page refresh: 20 October 2026
 
 The robots-respecting collector sampled 12 public URLs: 9 pages were readable and 3 were skipped (TAAFT and Toolify returned 403; FutureTools returned 308, and no redirect was followed). The raw capture is [2026-10-20.json](data/competitor-intelligence/2026-10-20.json), and current observations are summarized in the [competitor matrix](SEO-COMPETITOR-MATRIX.csv). The sample includes Futurepedia, TopAI.tools, AI Tools Pak, AI Tool Gems, SubBazaar, Pak Tools Store, JKDigital, PrimePass and Toolmandi. Futurepedia exposes category discovery; TopAI.tools links categories, use-case and playbook routes; Pakistan-market price pages pair PKR with term/access and state source/method information. A separate read-only public page view exposed Toolify navigation, although the bounded direct fetch returned 403. These patterns suggest improving existing catalog, use-case and pricing routes with owner-confirmed facts. They do not establish competitor rankings, popularity, link authority or superiority.

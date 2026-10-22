@@ -1,6 +1,6 @@
 # AI Tools Zone: earned-link plan
 
-Reviewed 14 October 2026. The existing plan remains owner-operated because no authenticated Search Console/Bing referring-page data is available. This is a practical, low-risk plan for earning relevant references to `https://aitoolszone.tech/`. It does not predict rankings, traffic or customers, and no outreach has been sent.
+Reviewed 22 October 2026. The plan remains owner-operated because no authenticated Search Console/Bing referring-page data is available. This is a practical, low-risk plan for earning relevant references to `https://aitoolszone.tech/`. It does not predict rankings, traffic or customers, and no outreach has been sent. The latest public competitor sample is summarized in [SEO-COMPETITOR-GAPS.md](SEO-COMPETITOR-GAPS.md); its observed guide/index formats are idea sources only, not content or facts to copy.
 
 ## Position worth citing
 
@@ -13,7 +13,7 @@ Prioritize a small set of pages that help an author answer a real reader questio
 1. Keep the [catalog methodology guide](https://aitoolszone.tech/guides/catalog-methodology/) clear about what prices and access labels mean, how offers are compared, and what has not been independently verified.
 2. Improve the [private versus shared access guide](https://aitoolszone.tech/guides/private-vs-shared-access/) with plain-language buyer checks and links to authoritative vendor account/security guidance. Do not frame shared access as equivalent to an individual vendor subscription.
 3. Maintain the student, creator and developer buying guides from current catalog facts. Show the date and calculation method for any price comparison; avoid fabricated savings, review scores or recommendations presented as hands-on testing.
-4. If enough dated observations accumulate, publish an original Pakistan-focused price/access snapshot with a reproducible method and archived source notes. Do not invent historical prices or turn a single snapshot into a market-wide survey.
+4. If enough dated observations accumulate, publish an original Pakistan-focused price/access snapshot with a reproducible method, a named data scope, an owner who checks the records, a correction path and archived source notes. State that it represents the owner's catalog unless a broader source set is genuinely collected. Do not invent historical prices or turn a single snapshot into a market-wide survey.
 
 Each asset should stand on its own for a visitor who never clicks an order button. Add a contextual internal link to the relevant product or guide, but do not make external publishers use a required anchor phrase.
 

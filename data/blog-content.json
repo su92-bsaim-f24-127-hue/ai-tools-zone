@@ -1,0 +1,534 @@
+{
+  "articles": [
+    {
+      "path": "/blog/ai-phone-agents-whatsapp-bots-pakistan/",
+      "title": "AI Phone Agents & WhatsApp Bots for Pakistani Businesses",
+      "description": "A practical guide to WhatsApp bots and AI phone agents for Pakistan businesses: use cases, human handoff, privacy checks and cost factors.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "Phone agents handle voice calls; WhatsApp bots handle messages. Start with one repetitive customer task, give automation approved information, and make it easy to reach a person. Compare real provider requirements and costs before connecting a business number.",
+      "sections": [
+        {
+          "heading": "Choose the channel for the task",
+          "paragraphs": [
+            "A WhatsApp bot can guide a customer through a short message flow. A phone agent listens and responds during a call. Both can answer approved FAQs, collect a limited set of details, route requests and hand difficult cases to a staff member; they need different channel integrations and testing.",
+            "For a small Pakistani business, begin with the repeated question or missed handoff that costs staff time. A shop might start with opening hours or delivery-area questions. A booking-based business might collect a preferred time and ask staff to confirm it. Avoid automating decisions that need a qualified person or access to sensitive customer details."
+          ],
+          "bullets": [
+            "WhatsApp: FAQs, inquiry triage, order-intake prompts and requested status updates.",
+            "Phone: after-hours call answering, basic routing, appointment requests and capturing a callback request.",
+            "Keep payments, unusual account changes, complaints and uncertain answers on a clear human path."
+          ]
+        },
+        {
+          "heading": "Map a safe human handoff before building",
+          "paragraphs": [
+            "Write down what the bot may answer, which business source contains the approved answer, and what it must do when information is missing. Set explicit handoff triggers: the customer asks for a person, repeats a question, is upset, asks for an exception, or the system cannot verify an answer.",
+            "Pass only the context the staff member needs, such as the customer's stated request and a short conversation summary. Test the handoff with real staff before customers depend on it. Voice systems also need a fallback for poor audio, interruptions and calls that fail to connect."
+          ],
+          "bullets": [
+            "Identify the bot as an automated assistant where appropriate.",
+            "Let customers ask for a person without restarting their request.",
+            "Give staff a way to pause automation and correct outdated answers.",
+            "Test Urdu, Roman Urdu and English phrasing with your actual callers; do not assume one voice or model handles every accent and noisy call well."
+          ]
+        },
+        {
+          "heading": "Pick the simplest workable setup",
+          "paragraphs": [
+            "For low message volume, start by documenting FAQs and trying the reply and routing features already available in the business tools you use. A connected WhatsApp bot usually needs an approved messaging route, an integration or workflow layer, a maintained answer source, monitoring and a staffed escalation path. A phone agent additionally depends on a phone/voice provider and speech services.",
+            "Do not buy a custom build before you can describe the trigger, data, response, failure behavior and person responsible for updates. Ask providers which phone numbers and languages they support in Pakistan, whether your existing number can be kept, what systems they connect, and how staff take over a live conversation. Verify those details with the provider; availability varies by product and account."
+          ]
+        },
+        {
+          "heading": "Check WhatsApp rules and message costs",
+          "paragraphs": [
+            "Meta's WhatsApp Business Messaging Policy requires permission before a business contacts someone, requires businesses to respect opt-outs, and calls for clear escalation paths when automation is used on the Business Platform. Platform-initiated messages have additional template requirements. Check the current policy and technical documentation for your exact setup before enabling outreach.",
+            "Meta publishes WhatsApp Business Platform messaging rates by market and message category. A project budget may also include a provider, telephony minutes, AI usage, hosting, implementation and ongoing changes. These costs are separate and change over time, so this guide does not quote a Pakistan package price. Use the current provider rate cards and request a written, itemized scope."
+          ]
+        },
+        {
+          "heading": "Protect customer information",
+          "paragraphs": [
+            "Decide what data the workflow truly needs, who can see transcripts or lead records, how long they are kept, and how a person can correct or delete an inaccurate record. Do not place account passwords, payment-card numbers or identity documents in a prompt or bot flow. Make your customer notice and privacy policy match the tools and retention settings you actually use.",
+            "For a pilot, measure whether the workflow answers correctly, completes the intended handoff, captures only useful details and reduces repeat work without frustrating customers. Review failed conversations and give users a simple way to reach a person. A bot should not be judged by message volume alone."
+          ]
+        },
+        {
+          "heading": "What AI Tools Zone currently offers",
+          "paragraphs": [
+            "This is an informational planning guide. AI Tools Zone lists digital subscriptions and buying information; custom development or deployment of WhatsApp bots and AI phone agents is not currently listed as an orderable service. No implementation price, setup time or service guarantee is published here. A subscription to a software tool does not itself include a working business bot."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "WhatsApp Business Messaging Policy (Meta)",
+          "url": "https://whatsappbusiness.com/policy/"
+        },
+        {
+          "name": "WhatsApp Business Platform pricing (Meta)",
+          "url": "https://whatsappbusiness.com/products/platform-pricing/"
+        },
+        {
+          "name": "WhatsApp Business Platform developer documentation (Meta)",
+          "url": "https://developers.facebook.com/docs/whatsapp/"
+        },
+        {
+          "name": "Twilio Virtual Agent and voice integration guide",
+          "url": "https://www.twilio.com/docs/voice/virtual-agent"
+        },
+        {
+          "name": "Twilio human handoff guide",
+          "url": "https://www.twilio.com/docs/conversations/agent-connect/escalate-to-human-agent"
+        }
+      ],
+      "faq": [
+        [
+          "What is the difference between a WhatsApp bot and an AI phone agent?",
+          "A WhatsApp bot handles message conversations. A phone agent handles voice calls through a telephony and speech setup. Either can answer approved questions and route a request, but each needs its own integrations, testing and human handoff."
+        ],
+        [
+          "Can an AI agent handle Urdu or Roman Urdu?",
+          "Language support depends on the selected provider and configuration. Test Urdu, Roman Urdu, English, code-switching, names and real call conditions before relying on it with customers."
+        ],
+        [
+          "How much does WhatsApp or phone automation cost in Pakistan?",
+          "There is no single project price. Messaging platform rates, provider charges, call minutes, AI usage, setup and maintenance may all contribute. Check current official rate cards and get a written quote for your exact scope."
+        ],
+        [
+          "Does AI Tools Zone build custom WhatsApp bots or phone agents?",
+          "AI Tools Zone does not currently list custom bot or phone-agent implementation as an orderable service. This page is an educational guide, and no build price or delivery promise is being made."
+        ]
+      ],
+      "related": [
+        "/compare/",
+        "/use-cases/ai-tools-for-business/",
+        "/products/n8n-starter/",
+        "/guides/catalog-methodology/"
+      ],
+      "keywords": [
+        "AI phone agents Pakistan",
+        "AI phone agents for Pakistani businesses",
+        "WhatsApp bots Pakistan",
+        "WhatsApp bot for business Pakistan",
+        "AI WhatsApp chatbot Pakistan",
+        "AI automation for Pakistani businesses"
+      ]
+    },
+    {
+      "path": "/blog/free-ai-tools-pakistan/",
+      "title": "Free AI Tools in Pakistan: a practical starting guide",
+      "description": "Build a free-first AI workflow in Pakistan. Compare limits, privacy, language quality and when a paid subscription may be worthwhile.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "You can test an AI workflow before paying. Start with the official free options, use one task you repeat, and check limits, availability and data controls before upgrading.",
+      "sections": [
+        {
+          "heading": "What free access usually means",
+          "paragraphs": [
+            "A free tier may have smaller usage limits, fewer tools, slower access or feature restrictions than a paid plan. The exact difference is set by each provider and can change, so use its current plan page instead of an old price guide.",
+            "Availability can also vary by country, account, age and product. Before building a routine around a free feature, check whether it opens for your account in Pakistan and whether it works on your device."
+          ]
+        },
+        {
+          "heading": "Test a small set of real tasks",
+          "paragraphs": [
+            "Try one task from your week: outline a proposal, summarize a public source, generate a study explanation or draft a design brief. Keep the same input and checklist when comparing assistants. Record accuracy, time spent correcting, export needs and usage limits.",
+            "For a practical starting point, check the current free options from ChatGPT, Gemini, Canva and NotebookLM on their own sites. These products do different jobs; you do not need to create an account with every service to make a comparison."
+          ]
+        },
+        {
+          "heading": "Protect information and verify answers",
+          "paragraphs": [
+            "Do not paste a client password, private student record or confidential business file into a free service without permission and a clear understanding of its data settings. Remove names and identifiers from test material.",
+            "Treat generated answers as drafts. Verify dates, citations, calculations and any advice that could affect someone's money, health or legal position. A fluent answer is not evidence that a claim is correct."
+          ]
+        },
+        {
+          "heading": "Decide whether an upgrade solves a real limit",
+          "paragraphs": [
+            "Upgrade only when a specific recurring task is blocked by a limit that the paid plan actually removes. Check the provider's current benefits, regional availability, renewal and cancellation terms. Compare total price with your expected use, not just the headline monthly number.",
+            "AI Tools Zone's catalogue shows seller-listed offers with their own access type and duration. A local offer is not automatically the same as direct retail access or every vendor feature; review the product page and confirm the exact terms before paying."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "ChatGPT plans and features",
+          "url": "https://chatgpt.com/pricing/"
+        },
+        {
+          "name": "Google AI plans",
+          "url": "https://one.google.com/about/google-ai-plans/"
+        },
+        {
+          "name": "Canva plans",
+          "url": "https://www.canva.com/pricing/"
+        },
+        {
+          "name": "NotebookLM",
+          "url": "https://notebooklm.google/"
+        }
+      ],
+      "faq": [
+        [
+          "Are free plans unlimited?",
+          "Do not assume so. Providers set their own limits and can change them. Check the current plan details while signed into the account you will use."
+        ],
+        [
+          "Can I use a free AI plan for client work?",
+          "Check the provider terms, privacy controls and your client agreement first. Review every output and keep confidential material out unless it is approved."
+        ],
+        [
+          "Should I buy a paid plan immediately?",
+          "Usually test your repeated task with an available free option first. Pay only when a clearly identified limit matters to your workflow and the paid plan resolves it."
+        ]
+      ],
+      "related": [
+        "/compare/chatgpt-vs-gemini/",
+        "/use-cases/ai-tools-for-students/",
+        "/pricing/",
+        "/guides/choose-ai-subscription/"
+      ],
+      "keywords": [
+        "free AI tools Pakistan",
+        "best free AI tools in Pakistan",
+        "free AI tools for students Pakistan"
+      ]
+    },
+    {
+      "path": "/blog/ai-tools-for-pakistani-freelancers/",
+      "title": "AI Tools for Freelancers in Pakistan: choose by deliverable",
+      "description": "A workflow-first guide for Pakistani freelancers choosing AI assistants, design, video, voice and coding subscriptions without assuming every plan is equivalent.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "Freelancers get more from AI by choosing around a paid deliverable: a proposal, design, edited clip, voice track or working prototype. Compare the complete workflow and review effort before buying another tool.",
+      "sections": [
+        {
+          "heading": "Start with the deliverable",
+          "paragraphs": [
+            "For a proposal or research brief, test whether an assistant helps you outline, verify sources and revise the final copy. For design, check whether a client needs a shareable layout or an editable source file. For video, separate editing footage you already have from generating new scenes. For coding, confirm the tool fits your editor and handover requirements.",
+            "A tool that makes a draft faster may still create extra review work. Test one task from a real project using material you are allowed to share, then compare the finished result against the client's brief."
+          ]
+        },
+        {
+          "heading": "Build a small, repeatable toolkit",
+          "paragraphs": [
+            "Choose one tool for the most frequent bottleneck, then add another only when a distinct task remains. A writing assistant, a design application and a video editor solve different problems; the number of subscriptions is not a measure of productivity.",
+            "AI Tools Zone currently lists options such as ChatGPT Plus, Canva, CapCut, ElevenLabs and developer tools. The listed access methods and terms differ. Use the product pages to inspect the current seller offer and ask for confirmation before payment."
+          ]
+        },
+        {
+          "heading": "Keep client work secure and reviewable",
+          "paragraphs": [
+            "Check your contract and each provider's data settings before uploading client documents, brand assets, voice recordings or source code. Remove unnecessary identifiers from prompts. Keep the original brief and review each output for factual, licensing and brand issues.",
+            "For voice cloning, use only recordings with the speaker's clear permission. For generated images or video, check the provider's current commercial-use terms and any restrictions that apply to your project."
+          ]
+        },
+        {
+          "heading": "Measure the value over a project",
+          "paragraphs": [
+            "For a week, note the time required to draft, correct and deliver a repeated task, along with the subscription cost and any credits used. Include revisions and failed generations, not only the best result. Continue with a paid plan only if it reliably improves a deliverable you can bill for.",
+            "Before ordering a marketplace offer, confirm duration, access type, eligibility, included limits and what support can resolve. A seller-listed price is not proof that it is the same as a vendor's retail plan."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "ChatGPT plans",
+          "url": "https://chatgpt.com/pricing/"
+        },
+        {
+          "name": "Canva plans",
+          "url": "https://www.canva.com/pricing/"
+        },
+        {
+          "name": "CapCut",
+          "url": "https://www.capcut.com/"
+        },
+        {
+          "name": "ElevenLabs plans",
+          "url": "https://elevenlabs.io/pricing"
+        },
+        {
+          "name": "Replit plans",
+          "url": "https://replit.com/pricing"
+        }
+      ],
+      "faq": [
+        [
+          "Which AI subscription should a freelancer buy first?",
+          "Start with the deliverable that most often delays paid work. Test one tool on that task and compare the time needed for review and revisions."
+        ],
+        [
+          "Can an AI tool guarantee better freelance income?",
+          "No. A subscription cannot guarantee clients, earnings or better rankings. The freelancer remains responsible for quality, rights and delivery."
+        ],
+        [
+          "Are AI Tools Zone offers direct vendor accounts?",
+          "The catalogue states the access type for each offer. Read those terms and confirm the exact account setup and entitlements before paying."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-creators/",
+        "/use-cases/ai-tools-for-developers/",
+        "/categories/",
+        "/guides/private-vs-shared-access/"
+      ],
+      "keywords": [
+        "AI tools for freelancers in Pakistan",
+        "AI subscriptions for freelancers Pakistan",
+        "AI tools for Pakistani freelancers"
+      ]
+    },
+    {
+      "path": "/blog/ai-tools-for-teachers-pakistan/",
+      "title": "AI Tools for Teachers in Pakistan: a safe classroom workflow",
+      "description": "Use AI for lesson drafts and learning materials with teacher review, student privacy and school policy at the center.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "Teachers can use AI to prepare draft explanations, examples and questions, but the teacher must verify accuracy, curriculum fit, language and student privacy before classroom use.",
+      "sections": [
+        {
+          "heading": "Use AI for drafts, not classroom authority",
+          "paragraphs": [
+            "A teacher might ask an assistant to produce a first draft of a lesson outline, suggest examples at two reading levels or generate practice questions from material the teacher supplies. Treat the result as a starting point. Check it against the syllabus, the students' age and the source material.",
+            "Ask for plain language, relevant local examples and a format you can review. Test Urdu, English or bilingual outputs with a fluent speaker; do not assume that a model handles curriculum terms or local context correctly."
+          ]
+        },
+        {
+          "heading": "Protect students and follow school policy",
+          "paragraphs": [
+            "Do not enter student names, grades, contact details, disability information or identifiable work into an AI service unless your institution has approved that use and the provider's controls are understood. Use fictional examples or remove identifying details.",
+            "Before using AI for assessment or student-facing feedback, check school rules and explain when material has been AI-assisted if the school's policy requires it. A teacher should remain responsible for safeguarding, fairness and the final decision."
+          ]
+        },
+        {
+          "heading": "Review for accuracy, bias and access",
+          "paragraphs": [
+            "Verify facts, citations, worked solutions and answer keys from reliable sources. Check whether an example excludes a group or assumes a resource students may not have. Make the final material accessible to students using the devices and connectivity available to them.",
+            "A small pilot works better than putting an unreviewed tool into a whole class. Use one lesson, collect teacher observations and correct errors before repeating the workflow."
+          ]
+        },
+        {
+          "heading": "Choose a tool only after the task is clear",
+          "paragraphs": [
+            "An assistant, a document tool and a design tool have different roles. Check the provider's current education terms, account requirements and regional availability before using a feature with students.",
+            "If you are considering a paid offer, inspect its access type and duration. A marketplace subscription does not automatically include institutional licences, school privacy terms or permission to process student data."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "UNESCO guidance on generative AI in education and research",
+          "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research"
+        },
+        {
+          "name": "ChatGPT plans",
+          "url": "https://chatgpt.com/pricing/"
+        },
+        {
+          "name": "Google AI plans",
+          "url": "https://one.google.com/about/google-ai-plans/"
+        },
+        {
+          "name": "Canva for Education",
+          "url": "https://www.canva.com/education/"
+        }
+      ],
+      "faq": [
+        [
+          "Can AI grade student work without teacher review?",
+          "This guide does not recommend automated grading without human review. Follow the institution's rules and verify the impact on students before using AI in assessment."
+        ],
+        [
+          "Is it safe to paste student information into an AI chatbot?",
+          "Do not do so unless your institution has approved the service and its data controls for that information. Prefer anonymized examples."
+        ],
+        [
+          "Can AI-generated lesson content be wrong?",
+          "Yes. Verify facts, calculations, citations, curriculum alignment and language before using the material."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-students/",
+        "/categories/ai-assistants/",
+        "/products/chatgpt-plus/",
+        "/guides/choose-ai-subscription/"
+      ],
+      "keywords": [
+        "AI tools for teachers in Pakistan",
+        "AI lesson planning tools Pakistan"
+      ]
+    },
+    {
+      "path": "/blog/ai-tools-for-content-creators-pakistan/",
+      "title": "AI Tools for Pakistani Content Creators: plan the whole workflow",
+      "description": "Plan scripts, visuals, editing and voiceovers with AI tools while checking export limits, commercial rights and Pakistan availability.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "Creators should choose AI tools around the finished asset they need: a script, image, edited video or voice track. Test the full production and export process before paying for a subscription.",
+      "sections": [
+        {
+          "heading": "Map a content job from brief to export",
+          "paragraphs": [
+            "Write down the channel, audience, format and delivery date first. An assistant may help you outline a script; a design tool can support graphics; a video editor handles footage and captions; a voice service may produce narration. These are separate steps with separate review and rights checks.",
+            "For a short video, test the complete sequence on a sample: draft, factual review, visual creation, edit, captions, audio and final export. Track where the actual bottleneck occurs before paying for a second tool."
+          ]
+        },
+        {
+          "heading": "Test the output you will publish",
+          "paragraphs": [
+            "Check aspect ratio, resolution, captions, export format, watermarks and the time needed to correct errors. For generated voice, test the names and language used by your audience. For video generation, count failed or discarded attempts when estimating credits.",
+            "AI Tools Zone lists selected offers such as Canva, CapCut, Veo and ElevenLabs. The marketplace's duration and access type can differ by product; confirm the exact offer before ordering and verify the vendor's current terms separately."
+          ]
+        },
+        {
+          "heading": "Check rights and audience trust",
+          "paragraphs": [
+            "Review the current provider terms for commercial use, source assets and any limits on generated content. Obtain permission before cloning a real person's voice or likeness. Keep proof of licenses for music, images, fonts and recordings used in a client deliverable.",
+            "Review generated claims, names and translations before publishing. Tell viewers when disclosure is required by platform rules, contract or law. AI assistance does not remove the creator's responsibility for accuracy and rights."
+          ]
+        },
+        {
+          "heading": "Compare total cost with your content calendar",
+          "paragraphs": [
+            "Estimate the amount of usable output you produce in a month and include revisions, storage, collaboration and export needs. Check whether unused credits expire and whether plan limits match the volume you actually publish.",
+            "Use one representative project as a pilot. If a free tier completes the task well enough, postpone an upgrade. If you buy through a marketplace, confirm availability, access, included limits and the final PKR amount before paying."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "CapCut",
+          "url": "https://www.capcut.com/"
+        },
+        {
+          "name": "Canva plans",
+          "url": "https://www.canva.com/pricing/"
+        },
+        {
+          "name": "ElevenLabs plans",
+          "url": "https://elevenlabs.io/pricing"
+        },
+        {
+          "name": "Google Veo",
+          "url": "https://deepmind.google/models/veo/"
+        }
+      ],
+      "faq": [
+        [
+          "Should a creator pay for every AI tool used in production?",
+          "Not automatically. Test the complete output and upgrade only where a paid feature removes a repeat limitation that matters to the project."
+        ],
+        [
+          "Does an AI subscription include commercial rights to every output?",
+          "Do not assume so. Check the current provider terms for the feature, plan and assets involved."
+        ],
+        [
+          "Can I use a cloned voice in a client video?",
+          "Only after getting appropriate permission and checking the service's current voice-cloning and commercial-use rules."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-creators/",
+        "/compare/capcut-vs-canva/",
+        "/compare/capcut-vs-runway/",
+        "/categories/ai-voice/",
+        "/products/elevenlabs/"
+      ],
+      "keywords": [
+        "AI tools for content creators in Pakistan",
+        "AI video tools for Pakistani creators",
+        "AI subscriptions for content creators"
+      ]
+    },
+    {
+      "path": "/blog/ai-subscription-vs-api-credits-pakistan/",
+      "title": "AI Subscription vs API Credits in Pakistan: what you are paying for",
+      "description": "Understand the difference between an AI app subscription and metered API usage, how to estimate costs and how to protect API keys.",
+      "datePublished": "2026-10-22",
+      "dateLabel": "22 October 2026",
+      "summary": "A subscription to an AI chat app and usage of its developer API are usually separate products with separate billing. Check the exact provider plan before assuming one includes the other.",
+      "sections": [
+        {
+          "heading": "An app subscription and an API solve different jobs",
+          "paragraphs": [
+            "A consumer or team subscription gives access through a provider's application under that plan's terms. An API is a developer interface that software can call; its charges and limits are governed by a separate API account and pricing page.",
+            "For example, Anthropic says Claude Pro does not include Console API usage. OpenAI and Google also publish separate API pricing information from their consumer application plans. Always check the current provider terms for the exact product you plan to use."
+          ]
+        },
+        {
+          "heading": "Estimate API use before connecting a workflow",
+          "paragraphs": [
+            "List the expected requests, input size, output size and model for a small pilot. Include retries, longer conversations, document processing and peak traffic. Apply the provider's current per-unit rates, then test with a usage limit and billing alert where available.",
+            "Do not estimate costs from a single short prompt. A workflow can consume more when it sends long context repeatedly or retries a failed step. Log usage and review the first bill before expanding to customers."
+          ]
+        },
+        {
+          "heading": "Keep credentials and data secure",
+          "paragraphs": [
+            "Treat an API key like a password. Store it in a server-side secret manager or protected environment variable; never paste it into public code, a website or a customer WhatsApp chat. Rotate a key if it is exposed and restrict access to the people and services that need it.",
+            "Before sending customer data through an API, review the provider's current data terms, retention options and your own privacy obligations. Ask whether the workflow can use less data or remove personal identifiers."
+          ]
+        },
+        {
+          "heading": "Check Pakistan billing details",
+          "paragraphs": [
+            "Official pricing may be shown in a foreign currency and does not by itself establish the final amount charged by a card issuer. Verify accepted billing methods, taxes, currency conversion and account eligibility directly with the provider before committing to a recurring workflow.",
+            "AI Tools Zone currently lists selected software subscriptions but does not list API credits as an orderable offer. A seller-listed application subscription should not be treated as API balance or as permission to use an API."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "OpenAI API pricing",
+          "url": "https://openai.com/api/pricing/"
+        },
+        {
+          "name": "OpenAI ChatGPT plans",
+          "url": "https://chatgpt.com/pricing/"
+        },
+        {
+          "name": "Anthropic API pricing",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/pricing"
+        },
+        {
+          "name": "Claude plan details",
+          "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan"
+        },
+        {
+          "name": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      ],
+      "faq": [
+        [
+          "Does ChatGPT Plus include OpenAI API credits?",
+          "Do not assume so. Check the current official ChatGPT and API billing pages; app subscriptions and API usage have separate terms."
+        ],
+        [
+          "Does Claude Pro include API usage?",
+          "Anthropic's plan guidance says Claude Pro does not include Claude Console API usage. Verify the provider's current terms before budgeting."
+        ],
+        [
+          "Can I put an API key in a WhatsApp message to my developer?",
+          "Do not send API keys through chat. Use an approved secret-sharing or server-side credential process and revoke any key that has been exposed."
+        ]
+      ],
+      "related": [
+        "/use-cases/ai-tools-for-developers/",
+        "/use-cases/ai-tools-for-business/",
+        "/products/n8n-starter/",
+        "/guides/choose-ai-subscription/",
+        "/pricing/"
+      ],
+      "keywords": [
+        "AI subscription vs API credits Pakistan",
+        "Does ChatGPT Plus include API credits",
+        "AI API pricing guide Pakistan"
+      ]
+    }
+  ]
+}
