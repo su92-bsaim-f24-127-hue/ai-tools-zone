@@ -130,7 +130,31 @@ for slug,(title,description,body) in pages.items():
 notfound=shell('Page not found | AI Tools Zone','Return to the AI Tools Zone marketplace.','/404.html','<main id="main" class="wrap page-copy"><h1>This page has moved out of the zone.</h1><p>Explore the available tools or contact us for help.</p><a class="button button-lime" href="/">Back to the marketplace ↗</a></main>',prefix='/').replace('content="index,follow,max-image-preview:large"','content="noindex,follow"')
 write('404.html',notfound)
 paths += build_pages(products,ORIGIN,shell,write)
-write('site.webmanifest',json.dumps({'name':'AI Tools Zone','short_name':'AI Tools Zone','start_url':'/','display':'browser','background_color':'#10110f','theme_color':'#10110f','icons':[{'src':'assets/icon-192.png','sizes':'192x192','type':'image/png'},{'src':'assets/icon-512.png','sizes':'512x512','type':'image/png'}]},indent=2))
+manifest = {
+ 'id': ORIGIN + '/',
+ 'name': 'AI Tools Zone - AI Subscriptions & Software in Pakistan',
+ 'short_name': 'AI Tools Zone',
+ 'description': 'Buy AI tools and digital subscriptions in Pakistan with clear PKR prices. ChatGPT Plus, Canva Pro, Gemini, video, voice and design tools with WhatsApp ordering.',
+ 'categories': ['business', 'productivity', 'shopping', 'utilities'],
+ 'lang': 'en-PK',
+ 'dir': 'ltr',
+ 'start_url': '/',
+ 'scope': '/',
+ 'display': 'standalone',
+ 'background_color': '#10110f',
+ 'theme_color': '#10110f',
+ 'icons': [
+  {'src':'assets/icon-192.png','sizes':'192x192','type':'image/png','purpose':'any maskable'},
+  {'src':'assets/icon-512.png','sizes':'512x512','type':'image/png','purpose':'any maskable'}
+ ],
+ 'shortcuts': [
+  {'name':'All AI Tools','url':'/products/','description':'Browse all AI tools and subscription plans in Pakistan'},
+  {'name':'PKR Pricing','url':'/pricing/','description':'Compare subscription prices in Pakistani Rupees'},
+  {'name':'Compare Tools','url':'/compare/','description':'Compare AI tools and workflow options side by side'},
+  {'name':'How to Pay Guide','url':'/blog/how-to-pay-for-chatgpt-plus-pakistan/','description':'How to pay for ChatGPT Plus and AI subscriptions in Pakistan'}
+ ]
+}
+write('site.webmanifest',json.dumps(manifest,indent=2))
 print(f'Built homepage, {len(products)} product pages, {len(pages)} information pages, 404, sitemap and manifest for {ORIGIN}.')
 
 finalize(paths,ORIGIN,write)

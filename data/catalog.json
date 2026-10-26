@@ -27,7 +27,12 @@
       "study",
       "code",
       "coding",
-      "content"
+      "content",
+      "ai",
+      "gpt",
+      "plus",
+      "chatbot",
+      "assistant"
     ],
     "slug": "chatgpt-plus"
   },
@@ -57,7 +62,11 @@
       "writing",
       "research",
       "study",
-      "content"
+      "content",
+      "ai",
+      "google",
+      "assistant",
+      "pro"
     ],
     "slug": "gemini-pro"
   },
@@ -86,7 +95,11 @@
     "intent": [
       "video",
       "videos",
-      "creator"
+      "creator",
+      "ai",
+      "animation",
+      "deepmind",
+      "generator"
     ],
     "slug": "veo-3-ultra"
   },
@@ -116,7 +129,10 @@
       "image",
       "images",
       "design",
-      "creator"
+      "creator",
+      "ai",
+      "art",
+      "generator"
     ],
     "slug": "leonardo-ai-essential"
   },
@@ -146,7 +162,11 @@
       "voice",
       "audio",
       "video",
-      "creator"
+      "creator",
+      "ai",
+      "tts",
+      "speech",
+      "dubbing"
     ],
     "slug": "elevenlabs"
   },
@@ -179,7 +199,11 @@
       "presentation",
       "study",
       "creator",
-      "social"
+      "social",
+      "pro",
+      "edu",
+      "graphics",
+      "templates"
     ],
     "slug": "canva-pro-edu"
   },
@@ -239,7 +263,11 @@
       "video",
       "videos",
       "creator",
-      "social"
+      "social",
+      "pro",
+      "editor",
+      "reels",
+      "tiktok"
     ],
     "slug": "capcut-pro"
   },
@@ -300,7 +328,11 @@
       "code",
       "coding",
       "business",
-      "automation"
+      "automation",
+      "ai",
+      "web",
+      "app",
+      "builder"
     ],
     "slug": "lovable-pro"
   },
@@ -330,7 +362,10 @@
       "presentation",
       "content",
       "business",
-      "study"
+      "study",
+      "ai",
+      "deck",
+      "slides"
     ],
     "slug": "gamma-pro"
   },

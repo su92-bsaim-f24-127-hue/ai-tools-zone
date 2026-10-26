@@ -90,14 +90,16 @@ def add(keywords, path, intent_note, kind, coverage, competitors, priority='P2',
 
 add(['AI tools', 'best AI tools', 'AI tools directory', 'AI tools Pakistan',
      'AI tools in Pakistan', 'AI software Pakistan', 'AI subscriptions Pakistan',
-     'AI tools online Pakistan'], '/', 'Discovery / commercial', 'home',
+     'AI tools online Pakistan', 'buy AI tools Pakistan', 'buy AI tools in Pakistan',
+     'buy AI tools JazzCash', 'buy AI tools Easypaisa', 'cheap AI tools Pakistan'], '/', 'Discovery / commercial', 'home',
     'Live homepage and catalog; Google index status remains unverified',
     'Futurepedia, Toolify and TopAI category/task discovery observed; no query ranks measured',
     'P1', '/products/; /categories/; /use-cases/',
     'State marketplace identity and explain how buying works')
 add(['AI tools price Pakistan', 'AI tools pricing Pakistan', 'AI tools PKR',
      'buy AI subscriptions Pakistan', 'cheap AI tools Pakistan',
-     'AI subscription deals Pakistan', 'AI software deals Pakistan'], '/pricing/',
+     'AI subscription deals Pakistan', 'AI software deals Pakistan',
+     'buy AI subscriptions Pakistan JazzCash', 'buy AI tools in Pakistan with Easypaisa'], '/pricing/',
     'Commercial comparison', 'pricing', 'Live pricing page; listed offers have different terms',
     'AI Tools Pak and local price-guide structures observed; no query ranks measured',
     'P1', '/products/; /guides/choose-ai-subscription/',
@@ -122,11 +124,17 @@ for product in CATALOG:
 
 aliases = {
     'chatgpt-plus': ['ChatGPT price Pakistan', 'ChatGPT Plus price Pakistan',
-                     'How much does ChatGPT Plus cost in Pakistan?', 'Is ChatGPT Plus available in Pakistan?'],
-    'gemini-pro': ['Gemini price Pakistan', 'Gemini subscription Pakistan'],
-    'canva-pro-edu': ['Canva Pro Pakistan', 'Canva Pro price Pakistan', 'buy Canva Pro Pakistan'],
-    'figma-pro-private': ['Figma Pro Pakistan'], 'replit-core': ['Replit Pakistan'],
-    'n8n-starter': ['n8n Pakistan'], 'veo-3-ultra': ['Veo 3 Pakistan'],
+                     'How much does ChatGPT Plus cost in Pakistan?', 'Is ChatGPT Plus available in Pakistan?',
+                     'buy ChatGPT Plus Pakistan', 'ChatGPT Plus Pakistan JazzCash', 'ChatGPT Plus Pakistan Easypaisa'],
+    'gemini-pro': ['Gemini price Pakistan', 'Gemini subscription Pakistan', 'buy Gemini Pro Pakistan', 'Gemini Advanced Pakistan'],
+    'canva-pro-edu': ['Canva Pro Pakistan', 'Canva Pro price Pakistan', 'buy Canva Pro Pakistan', 'Canva Pro lifetime Pakistan', 'Canva Pro JazzCash Pakistan'],
+    'figma-pro-private': ['Figma Pro Pakistan', 'buy Figma Pro Pakistan'],
+    'replit-core': ['Replit Pakistan', 'Replit Core Pakistan'],
+    'n8n-starter': ['n8n Pakistan', 'buy n8n Pakistan'],
+    'veo-3-ultra': ['Veo 3 Pakistan', 'buy Veo 3 Pakistan', 'Veo AI video Pakistan'],
+    'capcut-pro': ['CapCut Pro Pakistan', 'CapCut Pro price Pakistan', 'buy CapCut Pro Pakistan'],
+    'elevenlabs': ['ElevenLabs Pakistan', 'ElevenLabs price Pakistan', 'buy ElevenLabs Pakistan'],
+    'leonardo-ai-essential': ['Leonardo AI Pakistan', 'buy Leonardo AI Pakistan'],
 }
 for slug, keywords in aliases.items():
     add(keywords, '/products/' + slug + '/', 'Commercial / direct question', 'product',
@@ -260,8 +268,8 @@ for article in BLOG['articles']:
                     if article['path'] != '/blog/ai-phone-agents-whatsapp-bots-pakistan/'
                     else 'Original informational guide; custom phone-agent and WhatsApp-bot implementation is not an orderable service')
         action = ('Publish useful, source-linked advice; do not copy competitor text or imply an unlisted offer'
-                  if article['path'] != '/blog/ai-phone-agents-whatsapp-bots-pakistan/'
-                  else 'Explain use cases, platform requirements, human handoff, policy and cost factors without promising deployment')
+                    if article['path'] != '/blog/ai-phone-agents-whatsapp-bots-pakistan/'
+                    else 'Explain use cases, platform requirements, human handoff, policy and cost factors without promising deployment')
         add(article['keywords'], article['path'], 'Pakistan-focused informational / commercial guide', 'blog',
             coverage, 'AI Tools Pak blog topic coverage observed; demand, rankings and traffic remain unverified',
             'P2', '; '.join(article['related']), action)
