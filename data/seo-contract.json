@@ -1,6 +1,6 @@
 {
-  "expected_pages": 66,
-  "reason": "Expand original comparison coverage to all seven topics in the researched AI Tools Pak comparison hub and add five original Pakistan-focused evergreen guides; preserve existing routes and do not copy competitor text, offers or prices.",
+  "expected_pages": 67,
+  "reason": "Add high-intent Pakistan payment guide for ChatGPT Plus covering card restrictions, virtual cards, and local wallet settlement; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -14,6 +14,7 @@
     "/blog/ai-tools-for-pakistani-freelancers/",
     "/blog/ai-tools-for-teachers-pakistan/",
     "/blog/free-ai-tools-pakistan/",
+    "/blog/how-to-pay-for-chatgpt-plus-pakistan/",
     "/categories/",
     "/categories/ai-assistants/",
     "/categories/ai-video/",

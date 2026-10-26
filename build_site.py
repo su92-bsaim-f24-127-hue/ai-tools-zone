@@ -110,7 +110,7 @@ access_explanations={
 for p in products:
  path='/products/'+p['slug']+'/'
  paths.append(path)
- title=f'{p["name"]} Price in Pakistan | AI Tools Zone'
+ title=f'{p["name"]} Price in Pakistan: {money(p["price"])} | AI Tools Zone'
  description=f'{p["name"]}: {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. View seller-listed features and order on WhatsApp. Availability confirmed before payment.'
  specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
  related=[q for q in products if q['category']==p['category'] and q['id']!=p['id']][:3]
