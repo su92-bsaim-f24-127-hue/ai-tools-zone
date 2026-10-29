@@ -235,6 +235,10 @@
     "sha256": "160430edce4620a5e2f00655bc565f487fefa9f2cb845b8042a84a6cb4132030",
     "lastmod": "2026-10-29"
   },
+  "/blog/jazzcash-easypaisa-ai-tools-pakistan/": {
+    "sha256": "707e917a23cc4aa3f0016e7d8254e2d7c0424342cbcdb8119b6433ad07c6871f",
+    "lastmod": "2026-10-30"
+  },
   "/products/": {
     "sha256": "ab1ba69658fe7efc4a47877ac2fdb68351260d35ddd05eecd438c03a51a7f8ed",
     "lastmod": "2026-10-29"
@@ -264,7 +268,7 @@
     "lastmod": "2026-10-29"
   },
   "/blog/": {
-    "sha256": "36f2383a2523cadadda4d8673e32694516843b9154226f08b48701d2b0699a12",
-    "lastmod": "2026-10-29"
+    "sha256": "52612335b91ca78d2f214e11a47dc7fa66365ba6296c65b3376d789cb0b08566",
+    "lastmod": "2026-10-30"
   }
 }
