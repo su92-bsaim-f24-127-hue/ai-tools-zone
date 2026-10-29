@@ -1224,6 +1224,75 @@
         "/guides/choose-ai-subscription/",
         "/pricing/"
       ]
+    },
+    {
+      "path": "/compare/replit-vs-lovable/",
+      "type": "compare",
+      "title": "Replit Core vs Lovable Pro: AI Coding & App Building in Pakistan",
+      "description": "Compare Replit Core and Lovable Pro in Pakistan: full-stack app generation vs cloud IDE capabilities, PKR pricing, workflow fit and access checks.",
+      "answer": "Lovable Pro excels at prompt-to-full-stack web application generation with Supabase backend integration, while Replit Core provides an all-in-one cloud coding environment with collaborative deployments and agent assistance. Compare both seller-listed PKR offers by project scope before purchasing.",
+      "products": [
+        "replit",
+        "lovable"
+      ],
+      "sections": [
+        [
+          "Prompt-driven builder vs complete cloud IDE",
+          "Lovable is purpose-built for non-technical founders, product managers, and agile developers who want to describe an application in plain English and receive production-grade React and Supabase code. Replit Core is a versatile cloud development environment supporting over 50 programming languages, persistent Linux containers, automated deployment hosting, and an integrated coding assistant for building scripts, bots, APIs, and web services."
+        ],
+        [
+          "Workflow fit for Pakistani freelancers and developers",
+          "For Pakistani freelancers delivering client MVPs, SaaS landing pages, or rapid prototypes in hours, Lovable dramatically reduces frontend boilerplate and backend wiring. If your work involves writing custom backend logic, deploying Discord or Telegram bots, running Python automation scripts, or collaborating live with team members in a shared terminal, Replit Core offers the flexibility of a complete Linux development stack."
+        ],
+        [
+          "Comparing seller-listed PKR prices and access models",
+          "On AI Tools Zone, both Replit Core and Lovable Pro are offered with private access. Review the listed monthly PKR rates and ask support on WhatsApp to confirm included generation credits, hosting allowances, and workspace limits before sending payment."
+        ]
+      ],
+      "faq": [
+        [
+          "Can I export the source code from Lovable and host it on Replit or GitHub?",
+          "Yes. Lovable connects directly to GitHub repositories, allowing you to export full React and TypeScript source code. You can clone the repository into Replit, Vercel, or your own server for custom hosting and backend customization."
+        ],
+        [
+          "Which tool is better for beginners learning to code in Pakistan?",
+          "Replit is generally more educational for learning core programming concepts (Python, JavaScript, C++) because it provides direct access to the console, terminal, and file system. Lovable is better for shipping visual web applications quickly without writing code manually."
+        ],
+        [
+          "Are generation credits and storage allowances verified before payment?",
+          "Yes. Because third-party subscription limits and vendor tiers change, AI Tools Zone confirms the exact available plan allowances on WhatsApp before you pay."
+        ]
+      ],
+      "related": [
+        "/categories/development/",
+        "/products/replit-core/",
+        "/products/lovable-pro/",
+        "/use-cases/ai-tools-for-developers/"
+      ],
+      "sources": [
+        [
+          "Replit official website",
+          "https://replit.com/"
+        ],
+        [
+          "Lovable official website",
+          "https://lovable.dev/"
+        ]
+      ],
+      "comparison": [
+        {
+          "name": "Replit Core",
+          "officialUrl": "https://replit.com/pricing",
+          "product": "replit",
+          "test": "Spin up a full-stack container, run terminal commands, and test deployment hosting."
+        },
+        {
+          "name": "Lovable Pro",
+          "officialUrl": "https://lovable.dev/pricing",
+          "product": "lovable",
+          "test": "Generate a multi-page web application with database auth and test prompt iteration speed."
+        }
+      ]
     }
   ]
 }

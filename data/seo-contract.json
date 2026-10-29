@@ -1,6 +1,6 @@
 {
-  "expected_pages": 68,
-  "reason": "Add high-intent Pakistan payment guide for buying AI tools with JazzCash, Easypaisa, and digital wallets, addressing cardless checkout and seller security checks; preserve all existing routes and product slugs.",
+  "expected_pages": 69,
+  "reason": "Add dedicated developer comparison hub for Replit Core vs Lovable Pro covering prompt-to-app building, cloud IDE workflows, and PKR pricing in Pakistan; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -37,6 +37,7 @@
     "/compare/elevenlabs-vs-playht/",
     "/compare/grammarly-vs-quillbot-vs-wordai/",
     "/compare/helium10-vs-semrush-vs-vidiq/",
+    "/compare/replit-vs-lovable/",
     "/guides/",
     "/guides/catalog-methodology/",
     "/guides/choose-ai-subscription/",

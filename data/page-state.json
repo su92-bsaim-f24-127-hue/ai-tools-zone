@@ -40,16 +40,16 @@
     "lastmod": "2026-10-29"
   },
   "/products/lovable-pro/": {
-    "sha256": "893f2c0d404517e4399871ca80ddc96759523eca75f655070c37c5f63578ad5e",
-    "lastmod": "2026-10-29"
+    "sha256": "301e0794bd3e891a2217919de4240493bb1ded351faf041a54373e1f0ab90c8d",
+    "lastmod": "2026-10-30"
   },
   "/products/gamma-pro/": {
     "sha256": "2f4d7de7b4f379482aec37c6cd8559512b49e25efd707a35045db9f93b2033a4",
     "lastmod": "2026-10-29"
   },
   "/products/replit-core/": {
-    "sha256": "7244a5de0431fa487a1b69f74e342cda7bfa0e5e0603e4f9765abd25f4ee2d0d",
-    "lastmod": "2026-10-29"
+    "sha256": "7b2667410f81e19351b246dca4506b38330bd486ec09ab36ec684daaa3462ba1",
+    "lastmod": "2026-10-30"
   },
   "/products/n8n-starter/": {
     "sha256": "98819ee0560a57a8a66a675845110d3afd090fe8a624572cac585290ac6b9054",
@@ -207,6 +207,10 @@
     "sha256": "2b90e9016abaac2b0fde64f52a1fa1252732800754970d0c9c20130680c49b88",
     "lastmod": "2026-10-29"
   },
+  "/compare/replit-vs-lovable/": {
+    "sha256": "63220ca33ee3b37047ebe821bcc26e544c398408f36ce6af30a36f92029ec8a3",
+    "lastmod": "2026-10-30"
+  },
   "/blog/ai-phone-agents-whatsapp-bots-pakistan/": {
     "sha256": "47acc48c8988874da65bbfea30eebacb609e431bb64ac1502a8e474a19b65c7f",
     "lastmod": "2026-10-29"
@@ -252,8 +256,8 @@
     "lastmod": "2026-10-29"
   },
   "/compare/": {
-    "sha256": "71ff6a696cb30ed1b1dcb2a5f940438d8270da123bb2d0d8a8387b9ed9ca1bbb",
-    "lastmod": "2026-10-29"
+    "sha256": "ba7fb4588c305b6d53f8af5eee825e17fa024e2ae244e4c0844b2be11e789413",
+    "lastmod": "2026-10-30"
   },
   "/alternatives/": {
     "sha256": "5b5c66e01c4ff1722bd2e8ec88b40df324384fc1928d0db1991a480c372b98e9",
