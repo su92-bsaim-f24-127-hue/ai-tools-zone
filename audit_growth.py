@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter
 from urllib.parse import urlparse, urljoin, parse_qs
 import csv,json,re,subprocess
-from audit_seo import Page, file_for, ORIGIN, ROOT
+from audit_seo import Page, file_for, ORIGIN, ROOT, WHATSAPP_NUMBER
 
 class InventoryPage(Page):
     def __init__(self,text):
@@ -48,7 +48,7 @@ def run():
             else:outgoing.append(u.netloc)
             if a.get('data-product-id'):
                 p=by_id.get(a['data-product-id']);message=parse_qs(u.query).get('text',[''])[0]
-                check(bool(p) and u.netloc=='wa.me' and u.path=='/923430173923' and all(str(v) in message for v in [p['name'],f"{p['price']:,}",p['duration'],p['access'],ORIGIN+'/products/'+p['slug']+'/']),path+' order message differs from catalog')
+                check(bool(p) and u.netloc=='wa.me' and u.path=='/'+WHATSAPP_NUMBER and all(str(v) in message for v in [p['name'],f"{p['price']:,}",p['duration'],p['access'],ORIGIN+'/products/'+p['slug']+'/']),path+' order message differs from catalog')
         levels=[int(h[0][1]) for h in page.headings]
         check(all(b<=a+1 for a,b in zip(levels,levels[1:])),path+' heading level skipped')
         visible=' '.join(page.visible)

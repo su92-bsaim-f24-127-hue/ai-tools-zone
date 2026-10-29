@@ -6,11 +6,11 @@
     for(const link of links){
       if(!link.dataset.productId||link.dataset.webEnhanced)continue;
       const original=new URL(link.href,location.href);
-      if(original.hostname!=='wa.me'||original.pathname!=='/923430173923')continue;
+      if(original.hostname!=='wa.me'||!/^\/\d{8,15}$/.test(original.pathname))continue;
       link.dataset.webEnhanced='true';
       const message=original.searchParams.get('text')||'';
       const web=new URL('https://web.whatsapp.com/send/');
-      web.searchParams.set('phone','923430173923');web.searchParams.set('text',message);
+      web.searchParams.set('phone',original.pathname.slice(1));web.searchParams.set('text',message);
       const options=document.createElement('span');options.className='order-alternatives';
       const browser=document.createElement('a');browser.href=web.href;browser.target='_blank';browser.rel='noopener noreferrer';browser.className='whatsapp-web-link';browser.textContent='WhatsApp Web';browser.dataset.waProduct=link.dataset.productId;
       browser.title='Open in your computer browser. Link your WhatsApp account first if asked.';

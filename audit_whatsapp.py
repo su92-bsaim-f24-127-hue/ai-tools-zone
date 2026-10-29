@@ -3,6 +3,7 @@ from pathlib import Path
 from urllib.parse import urlparse,parse_qs
 import sys,json
 ROOT=Path(__file__).parent;sys.path.insert(0,str(ROOT/'.test-deps'))
+WHATSAPP_NUMBER=''.join(ch for ch in json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))['whatsappNumber'] if ch.isdigit())
 from playwright.sync_api import sync_playwright
 results=[]
 def check(name,ok):results.append({'name':name,'passed':bool(ok)});print(('PASS ' if ok else 'FAIL ')+name,flush=True)
@@ -11,11 +12,11 @@ with sync_playwright() as p:
     context=browser.new_context(reduced_motion='reduce',viewport={'width':1440,'height':1000})
     context.route('https://web.whatsapp.com/**',lambda r:r.fulfill(status=200,body='Web navigation intercepted, no message sent.'))
     page=context.new_page();page.goto('http://127.0.0.1:8080/',wait_until='networkidle');page.locator('#show-more').click()
-    page.wait_for_function("document.querySelectorAll('.product-card .whatsapp-web-link').length===20")
+    page.wait_for_function("document.querySelectorAll('.product-card .whatsapp-web-link').length===window.PRODUCTS.length")
     for card in page.locator('.product-card').all():
         app=parse_qs(urlparse(card.locator('.buy-now').get_attribute('href')).query)
         web=urlparse(card.locator('.whatsapp-web-link').get_attribute('href'));params=parse_qs(web.query)
-        check(card.get_attribute('data-product')+' Web message parity',web.netloc=='web.whatsapp.com' and params.get('phone')==['923430173923'] and params.get('text')==app.get('text'))
+        check(card.get_attribute('data-product')+' Web message parity',web.netloc=='web.whatsapp.com' and params.get('phone')==[WHATSAPP_NUMBER] and params.get('text')==app.get('text'))
     page.locator('#search').fill('ChatGPT');page.wait_for_function("document.querySelectorAll('.product-card .whatsapp-web-link').length===1")
     check('Search rebuild has exactly one alternate per product',page.locator('.product-card .order-alternatives').count()==1)
     for width in (320,390,768,1440):
@@ -28,7 +29,7 @@ with sync_playwright() as p:
     page.locator('.order-alternatives button').click();check('Denied clipboard gives selectable message',page.locator('.order-alternatives textarea').input_value()==original)
     page.evaluate("window.events=[];document.addEventListener('aitz:measure',e=>events.push(e.detail))")
     with page.expect_popup() as popup:page.locator('.whatsapp-web-link').click()
-    check('Direct Web navigation uses correct phone',parse_qs(urlparse(popup.value.url).query).get('phone')==['923430173923']);popup.value.close()
+    check('Direct Web navigation uses correct phone',parse_qs(urlparse(popup.value.url).query).get('phone')==[WHATSAPP_NUMBER]);popup.value.close()
     check('Web click counted locally as order not vendor link',{e['name'] for e in page.evaluate('events')}=={'whatsapp_click','product_whatsapp_click'})
     page.goto('http://127.0.0.1:8080/',wait_until='networkidle');page.locator('[data-detail="chatgpt"]').click()
     check('Quick view Web alternative',page.locator('#modal .whatsapp-web-link').count()==1)

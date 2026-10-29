@@ -14,6 +14,7 @@ from seo_pages import content_date
 
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
+WHATSAPP_NUMBER=''.join(ch for ch in json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))['whatsappNumber'] if ch.isdigit())
 FOLDERS=('products','categories','use-cases','compare','alternatives','guides','pricing','blog','about','privacy','terms')
 
 class Page(HTMLParser):
@@ -146,7 +147,7 @@ def run():
                 if target.netloc!='aitoolszone.tech':
                     if tag=='a':external.add(target.geturl())
                     if target.netloc=='wa.me':
-                        check(target.path=='/923430173923',path+' incorrect WhatsApp number')
+                        check(target.path=='/'+WHATSAPP_NUMBER,path+' incorrect WhatsApp number')
                         if path in products and 'text' in parse_qs(target.query):
                             order=parse_qs(target.query)['text'][0]
                             check(products[path]['name'] in order and f'{products[path]["price"]:,}' in order,path+' stale WhatsApp order')

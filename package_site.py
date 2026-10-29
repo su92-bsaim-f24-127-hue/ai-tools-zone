@@ -4,6 +4,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 import json
 root=Path(__file__).parent
 production=['index.html','404.html','styles.css','enhancements.css','catalog.js','app.js','search.js','whatsapp.js','measurement.js','theme.js','scene.js','favicon.ico','site.webmanifest','robots.txt','sitemap.xml','llms.txt','llms-full.txt','_headers','googleade07204a5ea7ade.html','google536a56061139b8cf.html']
+production += ['admin/index.html','admin/admin.js','admin/admin.css']
 production += ['CNAME', '.nojekyll']
 production += [json.loads((root/'data/indexnow.json').read_text())['key']+'.txt']
 production += [p.relative_to(root).as_posix() for folder in ['products','about','privacy','terms','categories','use-cases','compare','alternatives','guides','pricing','blog'] for p in (root/folder).rglob('*.html')]

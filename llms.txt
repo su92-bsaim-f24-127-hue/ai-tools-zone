@@ -1,30 +1,42 @@
 # AI Tools Zone
 
-> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering transparent PKR pricing and direct WhatsApp ordering.
+> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering seller-listed PKR prices and WhatsApp ordering.
 
-AI Tools Zone helps creators, students, freelancers, and businesses in Pakistan compare and purchase verified digital subscriptions in Pakistani Rupees (PKR) with direct WhatsApp customer support (+92 343 0173923).
+Compare current listings by price, duration and access type. Confirm availability, included limits and final price before payment.
 
 ## Key Store Sections
 
-- [All AI Tools & Subscriptions](https://aitoolszone.tech/products/): Complete catalog of 20 digital subscriptions with PKR prices, access models, duration, and warranty.
-- [PKR Pricing Index](https://aitoolszone.tech/pricing/): Filter plans under PKR 1,000, under PKR 2,000, and full subscription pricing.
-- [Tool Comparison Hub](https://aitoolszone.tech/compare/): Side-by-side workflow and feature comparisons.
-- [Category Directory](https://aitoolszone.tech/categories/): Browse by category (AI Assistants, Video, Voice, Design, Business, Development).
-- [Buying Guides](https://aitoolszone.tech/guides/): Practical advisories on private vs shared accounts and subscription selection.
-- [Blog & Pakistan Payment Guides](https://aitoolszone.tech/blog/): Step-by-step guidance for paying without international credit cards in Pakistan.
-- [About & WhatsApp Support](https://aitoolszone.tech/about/): Contact details (+92 343 0173923) and business verification.
-- [Terms & Warranty](https://aitoolszone.tech/terms/): 7 to 30-day replacement warranty policies and ordering conditions.
+- [Current offers](https://aitoolszone.tech/products/): 20 currently active catalog listings.
+- [PKR pricing](https://aitoolszone.tech/pricing/): Compare listed offers and plan terms.
+- [Compare tools](https://aitoolszone.tech/compare/): Read workflow comparisons and selection notes.
+- [Categories](https://aitoolszone.tech/categories/): Browse offers by category.
+- [Buying guides](https://aitoolszone.tech/guides/): Review access and buying questions.
+- [About and WhatsApp support](https://aitoolszone.tech/about/): Contact and ordering information.
+- [Terms and warranty](https://aitoolszone.tech/terms/): Read ordering and support terms.
 
-## Featured AI Products in Pakistan
+## Current listings
 
-- [ChatGPT Plus in Pakistan](https://aitoolszone.tech/products/chatgpt-plus/): OpenAI ChatGPT Plus with GPT-4o, reasoning models, and Canvas.
-- [Gemini Pro in Pakistan](https://aitoolszone.tech/products/gemini-pro/): Google Gemini Pro / Advanced with 2M context window.
-- [Canva Pro (Edu) in Pakistan](https://aitoolszone.tech/products/canva-pro-edu/): Premium templates, brand kit, and Magic Studio.
-- [CapCut Pro in Pakistan](https://aitoolszone.tech/products/capcut-pro/): Video editing with pro transitions, auto-captions, and AI background removal.
-- [ElevenLabs in Pakistan](https://aitoolszone.tech/products/elevenlabs/): AI voice cloning and natural speech synthesis.
-- [Claude vs ChatGPT Guide](https://aitoolszone.tech/compare/chatgpt-vs-claude/): Comparison and access options for Anthropic Claude.
-- [Leonardo AI in Pakistan](https://aitoolszone.tech/products/leonardo-ai-essential/): Leonardo AI for creative asset generation.
+- [ChatGPT Plus](https://aitoolszone.tech/products/chatgpt-plus/): AI Assistants; PKR 2,300; 1 Month; Private access. Confirm current terms before ordering.
+- [Gemini Pro](https://aitoolszone.tech/products/gemini-pro/): AI Assistants; PKR 800; 18 Months; Invitation access. Confirm current terms before ordering.
+- [Veo 3 Ultra](https://aitoolszone.tech/products/veo-3-ultra/): AI Video; PKR 2,100; Confirm before ordering; Shared access. Confirm current terms before ordering.
+- [Leonardo AI Essential](https://aitoolszone.tech/products/leonardo-ai-essential/): Design; PKR 1,900; 8,500 Credits; Private access. Confirm current terms before ordering.
+- [ElevenLabs](https://aitoolszone.tech/products/elevenlabs/): AI Voice; PKR 3,300; 1 Month; Private access. Confirm current terms before ordering.
+- [Canva Pro Edu](https://aitoolszone.tech/products/canva-pro-edu/): Design; PKR 900; 1 Year; Invitation access. Confirm current terms before ordering.
+- [Figma Pro Private](https://aitoolszone.tech/products/figma-pro-private/): Design; PKR 3,000; 2 Years; Private access. Confirm current terms before ordering.
+- [CapCut Pro](https://aitoolszone.tech/products/capcut-pro/): AI Video; PKR 900; 1 Month; Private access. Confirm current terms before ordering.
+- [Adobe Creative Cloud](https://aitoolszone.tech/products/adobe-creative-cloud/): Design; PKR 1,700; 2 Months; Private access. Confirm current terms before ordering.
+- [Lovable Pro](https://aitoolszone.tech/products/lovable-pro/): Development; PKR 1,600; 1 Month; Private access. Confirm current terms before ordering.
+- [Gamma Pro](https://aitoolszone.tech/products/gamma-pro/): Productivity; PKR 23,000; 1 Year; Private access. Confirm current terms before ordering.
+- [Replit Core](https://aitoolszone.tech/products/replit-core/): Development; PKR 3,200; $40 Credits; Private access. Confirm current terms before ordering.
+- [n8n Starter](https://aitoolszone.tech/products/n8n-starter/): Development; PKR 7,000; 1 Year; Private access. Confirm current terms before ordering.
+- [Notion Business](https://aitoolszone.tech/products/notion-business/): Productivity; PKR 2,200; 3 Months; Invitation access. Confirm current terms before ordering.
+- [NordVPN](https://aitoolszone.tech/products/nordvpn/): VPN & Security; PKR 1,800; 3 Months; Private access. Confirm current terms before ordering.
+- [Surfshark VPN](https://aitoolszone.tech/products/surfshark-vpn/): VPN & Security; PKR 800; 2 Months; Shared access. Confirm current terms before ordering.
+- [YouTube Premium](https://aitoolszone.tech/products/youtube-premium/): Entertainment; PKR 1,200; 3 Months; Invitation access. Confirm current terms before ordering.
+- [Netflix Premium 4K](https://aitoolszone.tech/products/netflix-premium-4k/): Entertainment; PKR 400; 1 Month; Shared access. Confirm current terms before ordering.
+- [LinkedIn Premium](https://aitoolszone.tech/products/linkedin-premium/): Business; PKR 1,500; 2 Months; Invitation access. Confirm current terms before ordering.
+- [Windows 11 Pro Key](https://aitoolszone.tech/products/windows-11-pro-key/): Software; PKR 1,900; Lifetime; License Key access. Confirm current terms before ordering.
 
-## Full Catalog Manifest
+## Full catalog manifest
 
-- [Full Catalog & Offer Specifications](https://aitoolszone.tech/llms-full.txt): Detailed specifications, pricing in PKR, access types, delivery SLAs, and replacement warranties for all 20 products.
+- [Full catalog and offer specifications](https://aitoolszone.tech/llms-full.txt): details for 20 current listings.

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-PK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111511">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <title>Store Admin | AI Tools Zone</title>
+  <link rel="icon" href="../assets/icon-48.png" type="image/png">
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <main id="login-shell" class="login-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <a class="admin-brand" href="/" aria-label="AI Tools Zone home"><img src="../assets/brand-icon.webp" alt="" width="48" height="48"><span>AI TOOLS <b>ZONE</b></span></a>
+      <span class="eyebrow"><i></i> STORE MANAGEMENT</span>
+      <h1 id="login-title">Manage your store.</h1>
+      <p class="login-copy">Connect to the AI Tools Zone repository to edit live product listings, plan terms, discounts and WhatsApp contact details.</p>
+      <form id="connect-form" autocomplete="off">
+        <label for="github-token">Fine-grained GitHub token</label>
+        <input id="github-token" type="password" autocomplete="off" spellcheck="false" required aria-describedby="token-help" placeholder="github_pat_…">
+        <button class="button button-primary" type="submit"><span>Connect repository</span><span aria-hidden="true">↗</span></button>
+        <p class="field-help" id="token-help">The token stays in this page's memory and is sent only to api.github.com. It is not saved in browser storage.</p>
+      </form>
+      <div id="login-error" class="notice notice-error" role="alert" hidden></div>
+      <details class="token-help-panel">
+        <summary>Create the limited token</summary>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">GitHub fine-grained token settings ↗</a>.</li>
+          <li>Choose resource owner <code>su92-bsaim-f24-127-hue</code> and only repository <code>ai-tools-zone</code>.</li>
+          <li>Grant <strong>Contents: Read and write</strong>. Leave other permissions off; choose an expiration date.</li>
+          <li>Create the token and paste it here. Never paste it into a chat, commit, or document.</li>
+        </ol>
+        <p>Only use a token from an account that has write access to the repository. Revoke it in GitHub settings when it is no longer needed.</p>
+      </details>
+      <p class="security-footnote"><span aria-hidden="true">◈</span> Changes are committed to <code>main</code>. The existing GitHub Pages workflow validates and publishes them.</p>
+    </section>
+  </main>
+
+  <main id="workspace" class="workspace" hidden>
+    <aside class="sidebar">
+      <a class="admin-brand" href="/" aria-label="AI Tools Zone home"><img src="../assets/brand-icon.webp" alt="" width="42" height="42"><span>AI TOOLS <b>ZONE</b></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Admin sections">
+        <button type="button" class="nav-item is-current" data-panel="overview"><span aria-hidden="true">▦</span> Overview</button>
+        <button type="button" class="nav-item" data-panel="products"><span aria-hidden="true">◇</span> Products & plans <span id="nav-product-count" class="nav-count"></span></button>
+        <button type="button" class="nav-item" data-panel="settings"><span aria-hidden="true">⚙</span> Contact settings</button>
+      </nav>
+      <div class="sidebar-foot"><span class="secure-mark">✓</span><div><b>Private session</b><small>Token is memory only</small></div></div>
+    </aside>
+    <section class="main-area">
+      <header class="topbar"><div><span class="eyebrow">AI TOOLS ZONE / ADMIN</span><h1 id="page-title">Overview</h1></div><div class="top-actions"><span class="repo-status"><i></i><span id="repo-label">main</span></span><button type="button" class="button button-quiet" data-action="logout">Sign out</button></div></header>
+      <div id="workspace-notice" class="notice" role="status" hidden></div>
+      <section id="overview-panel" class="content-panel" aria-labelledby="overview-heading">
+        <div class="welcome-row"><div><p class="eyebrow">YOUR STORE, AT A GLANCE</p><h2 id="overview-heading">Good work starts with a clear catalog.</h2><p>Manage published offer details from one place. Your updates are committed to GitHub and then rebuilt by the site's deployment workflow.</p></div><button class="button button-primary" type="button" data-action="new-product"><span>＋ Add listing</span></button></div>
+        <div id="stats-grid" class="stats-grid"></div>
+        <div class="overview-grid"><section class="surface recent-surface"><div class="section-title"><div><span class="eyebrow">CATALOG</span><h3>Catalog snapshot</h3></div><button class="text-button" type="button" data-panel="products">View all ↗</button></div><div id="recent-list"></div></section><aside class="surface info-surface"><span class="info-icon">✳</span><h3>How publishing works</h3><p>Save creates one repository commit. GitHub Actions rebuilds the site and deploys only after its checks pass.</p><ul><li>Use verified seller prices and terms.</li><li>Use discounts only with a genuine regular price.</li><li>Archive a listing to remove it while preserving its URL.</li></ul><small>One catalog entry represents one seller-listed plan.</small></aside></div>
+      </section>
+      <section id="products-panel" class="content-panel" hidden aria-labelledby="products-heading">
+        <div class="panel-heading"><div><p class="eyebrow">CATALOG CONTROL</p><h2 id="products-heading">Products & plans</h2><p>Each entry is one offer plan. Add, edit, archive or remove a listing without changing existing slugs.</p></div><button class="button button-primary" type="button" data-action="new-product">＋ Add listing</button></div>
+        <div class="surface product-browser"><div class="table-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Search products" aria-label="Search products"></label><label class="filter-label"><span class="sr-only">Status filter</span><select id="status-filter"><option value="all">All listings</option><option value="active">Active</option><option value="archived">Archived</option></select></label></div><div class="table-scroll"><table class="admin-table"><thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Plan</th><th scope="col">Listed price</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="products-table"></tbody></table></div><p id="empty-products" class="empty-state" hidden>No listings match your search.</p></div>
+      </section>
+      <section id="settings-panel" class="content-panel" hidden aria-labelledby="settings-heading">
+        <div class="panel-heading"><div><p class="eyebrow">CUSTOMER CONTACT</p><h2 id="settings-heading">Contact settings</h2><p>Update the WhatsApp destination used by product orders, customer support links and structured data.</p></div></div>
+        <form id="settings-form" class="surface settings-form">
+          <label for="whatsapp-number">WhatsApp number <span>International format, digits only</span></label>
+          <input id="whatsapp-number" name="whatsappNumber" type="tel" inputmode="numeric" autocomplete="tel" required pattern="[0-9 +()-]{8,24}" aria-describedby="phone-hint">
+          <small id="phone-hint">Include country code, for example <code>923430173923</code>. The site formats the displayed number automatically.</small>
+          <div class="settings-preview"><span class="preview-icon">↗</span><div><small>ORDER LINK PREVIEW</small><b id="phone-preview"></b></div></div>
+          <div class="settings-footer"><p>Saving updates the generated pages after GitHub Actions completes. This page does not send WhatsApp messages.</p><button class="button button-primary" type="submit">Apply contact change</button></div>
+        </form>
+      </section>
+      <div id="publish-bar" class="publish-bar" hidden><div><b id="dirty-label">Unsaved changes</b><small>Review the values before publishing.</small></div><button class="button button-primary" type="button" data-action="publish">Save changes to GitHub <span aria-hidden="true">↗</span></button></div>
+    </section>
+  </main>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title"><form id="product-form" method="dialog"></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

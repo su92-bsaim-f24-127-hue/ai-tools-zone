@@ -58,6 +58,12 @@ Push to `main` in `su92-bsaim-f24-127-hue/ai-tools-zone`. `.github/workflows/pag
 
 After deployment, run `python audit_seo_live.py`. Verify ownership in Google Search Console and Bing Webmaster Tools and submit `https://aitoolszone.tech/sitemap.xml`. Actual indexed pages, search performance and field Core Web Vitals need those external tools; local passing tests do not establish them.
 
+## Store admin
+
+Open `/admin/` on the live website to manage product listings, plan terms, current and verified regular prices, archive status, and the WhatsApp contact number. Each catalog entry is one seller-listed plan; product URL slugs stay fixed. Adding a listing uses an existing category and logo asset. Permanent deletion is disabled for listings still referenced by editorial content or needed as the last active item in a category; archive those instead.
+
+The admin is a static page that writes changes to this repository through GitHub's API. To connect, create a fine-grained personal access token for resource owner `su92-bsaim-f24-127-hue`, select only `ai-tools-zone`, grant **Contents: Read and write**, and set an expiration. Paste it only into the admin page; it is held in page memory, sent to `api.github.com`, and cleared on sign-out or reload. Never commit or share the token. Saving creates a commit on `main`; GitHub Actions then builds, checks and deploys the updated site. If repository rules require pull requests, direct publishing will be rejected by GitHub.
+
 GitHub Pages and the Python development server do not apply `_headers`. It is a portable Netlify/Cloudflare-style configuration example. Stronger custom response headers require a compatible host or proxy.
 
 Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md), `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-CONTENT-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, the Excel-compatible `SEO-COMPETITOR-MATRIX.csv`, [SEO-NEXT-ACTIONS.md](SEO-NEXT-ACTIONS.md), `SEO-KEYWORD-MAP.csv`, `SEO-IMPLEMENTATION.md`, and the active 30/60/90-day `SEO-PLAN.md`. `AUDIT.md` is a historical record. The earned-mention plan is in `BACKLINK-STRATEGY.md`.

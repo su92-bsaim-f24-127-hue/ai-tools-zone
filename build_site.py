@@ -3,45 +3,60 @@ from pathlib import Path
 from html import escape
 from urllib.parse import quote
 from datetime import date
-import json, re
+import hashlib, json, re
 from seo_pages import category_path, breadcrumbs, breadcrumb_schema, product_context, home_discovery, build_pages, finalize
 
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
-WA='923430173923'
+WA=''
 # Public collection identifier; this is not a dashboard credential.
 CLOUDFLARE_BEACON_TOKEN='d2b7303797fa48c694dde2b0ff780947'
-VERSION='20261022-business-ai-1'
 LAST_VERIFIED='2026-10-29'
 LAST_VERIFIED_LABEL='29 October 2026'
-products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+all_products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+products=[p for p in all_products if p.get('active',True)]
 logos=json.loads((ROOT/'assets/product-logo-sources.json').read_text(encoding='utf-8'))
+settings=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))
+VERSION_INPUTS=('data/catalog.json','data/site-settings.json','assets/product-logo-sources.json','styles.css','enhancements.css','app.js','search.js','whatsapp.js','measurement.js','theme.js','scene.js')
+VERSION=hashlib.sha256(b'\0'.join((ROOT/name).read_bytes() for name in VERSION_INPUTS)).hexdigest()[:12]
+WA=re.sub(r'\D','',str(settings.get('whatsappNumber','')))
+if not 8 <= len(WA) <= 15: raise ValueError('data/site-settings.json needs an international WhatsApp number with 8–15 digits')
+PHONE='+'+WA
+if WA.startswith('92') and len(WA)==12: PHONE=f'+92 {WA[2:5]} {WA[5:8]} {WA[8:]}'
 e=lambda s:escape(str(s),quote=True)
 money=lambda n:f'PKR {n:,}'
-for p in products:
+for p in all_products:
  if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', p.get('slug','')): raise ValueError('A stable slug is required: '+p['id'])
  if 'path' not in logos[p['id']]: raise ValueError('Missing original logo: '+p['id'])
  p['logo']=logos[p['id']]['path']
  p['vendor']=logos[p['id']]['website']
 
-if len({p['slug'] for p in products}) != len(products): raise ValueError('Duplicate product slug')
+if len({p['slug'] for p in all_products}) != len(all_products): raise ValueError('Duplicate product slug')
 
 def write(path,text):
  # A static-host 404 document also appears at arbitrary missing URLs (e.g. /admin).
  # Exclude it from visitor analytics so error-path probes do not look like customers.
+ text=text.replace('923430173923',WA).replace('+92 343 0173923',PHONE)
  if path.endswith('.html') and path != '404.html':
   beacon='<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="'+e(json.dumps({'token':CLOUDFLARE_BEACON_TOKEN},separators=(',',':')))+'"></script>'
   text=text.replace('</body>','<script defer src="/whatsapp.js?v='+VERSION+'"></script>'+beacon+'</body>')
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text,encoding='utf-8')
 def wa(message): return 'https://wa.me/'+WA+'?text='+quote(message)
+def price_markup(p):
+ current=f'<span class="price-current"><small>PKR</small> {p["price"]:,}</span>'
+ regular=p.get('regularPrice')
+ if isinstance(regular,int) and regular>p['price']:
+  percent=round((regular-p['price'])*100/regular)
+  return current+f'<span class="price-discount"><del>PKR {regular:,}</del><b>{percent}% off</b></span>'
+ return current
 def message(p):
  return f"Assalam-o-Alaikum AI Tools Zone!\nI would like to buy {p['name']}.\nListed price: {money(p['price'])}\nDuration: {p['duration']}\nAccess: {p['access']}\nDelivery estimate: {p['delivery']}\nReplacement warranty: {p['warranty']}\nProduct: {ORIGIN}/products/{p['slug']}/\nPlease confirm availability, plan limits, final price and payment details."
-for product in products: product['orderMessage']=message(product)
+for product in all_products: product['orderMessage']=message(product)
 
 def mark(p,prefix=''):
  return f'<span class="tool-mark mark-{p["id"]}"><img src="{prefix}{p["logo"]}" alt="" width="64" height="64" loading="lazy" decoding="async"></span>'
 def card(p):
- return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price"><small>PKR</small> {p['price']:,}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><a class="details-button" href="products/{p['slug']}/" aria-label="View {e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare tool</label></article>'''
+ return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p.get('badge') or p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price">{price_markup(p)}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><a class="details-button" href="products/{p['slug']}/" aria-label="View {e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare tool</label></article>'''
 def structured(data):
  return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+'</script>'
 def metadata(title,description,path,kind='website'):
@@ -53,7 +68,7 @@ def metadata(title,description,path,kind='website'):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{ORIGIN}/assets/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Tools Zone logo — digital subscriptions in Pakistan">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{ORIGIN}/assets/social-card.jpg">'''
 
-organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','knowsAbout':['Artificial Intelligence Subscriptions','SaaS Pricing in Pakistan','Creative Software Licensing','AI Productivity Tools'],'currenciesAccepted':'PKR','paymentAccepted':'JazzCash, Easypaisa, Bank Transfer','contactPoint':{'@type':'ContactPoint','telephone':'+92-343-0173923','contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
+organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','knowsAbout':['Artificial Intelligence Subscriptions','SaaS Pricing in Pakistan','Creative Software Licensing','AI Productivity Tools'],'currenciesAccepted':'PKR','paymentAccepted':'JazzCash, Easypaisa, Bank Transfer','contactPoint':{'@type':'ContactPoint','telephone':'+'+WA,'contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
 theme_button='''<button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Light theme" aria-pressed="false"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>'''
 def header(prefix):
  return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="" width="128" height="128"></span><span>AI TOOLS<span class="brand-bottom">ZONE</span></span></a><nav class="page-nav" aria-label="Main navigation"><a href="{prefix}compare/">Compare</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}categories/">Categories</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/" aria-label="AI phone agents and WhatsApp bots for Pakistani businesses">AI for Business</a></nav><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
@@ -101,7 +116,7 @@ home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Pr
 home=home.replace('<h3>Here to help</h3>','<h3>Here to help</h3><a href="about/">About & contact</a>')
 home=home.replace('<section class="finder-section wrap"',home_discovery()+'<section class="finder-section wrap"')
 write('index.html',home)
-write('catalog.js','// Generated by build_site.py from data/catalog.json.\nwindow.PRODUCTS = '+json.dumps(products,ensure_ascii=False,separators=(',',':'))+';\n')
+write('catalog.js','// Generated by build_site.py from data/catalog.json and site settings.\nwindow.AITZ_WHATSAPP = '+json.dumps(WA)+';\nwindow.PRODUCTS = '+json.dumps(products,ensure_ascii=False,separators=(',',':'))+';\n')
 
 paths=['/']
 access_explanations={
@@ -109,15 +124,22 @@ access_explanations={
  'Invitation':'This listing uses an invitation to a workspace or team. Confirm eligibility, administrator controls, included features and what happens when the plan ends before paying.',
  'Shared':'This listing uses shared access. Confirm the permitted usage, profile or device limits, and privacy conditions before paying. It is not a private account.',
  'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.'}
-for p in products:
+for p in all_products:
  path='/products/'+p['slug']+'/'
+ if not p.get('active',True):
+  archived_title=f'{p["name"]} listing unavailable | AI Tools Zone'
+  archived_description=f'This AI Tools Zone listing for {p["name"]} is no longer available. Browse current offers or contact support.'
+  archived_body=f'<main id="main" class="wrap page-copy"><h1>{e(p["name"])} is no longer listed</h1><p>This offer has been removed from the active catalog. Browse current offers or contact support to ask about alternatives.</p><p><a class="button button-lime" href="/products/">Browse current offers</a> <a class="button button-outline" href="/categories/">Browse categories</a></p></main>'
+  archived=shell(archived_title,archived_description,path,archived_body,prefix='../../').replace('content="index,follow,max-image-preview:large"','content="noindex,follow"')
+  write('products/'+p['slug']+'/index.html',archived)
+  continue
  paths.append(path)
  title=f'{p["name"]} Price in Pakistan: {money(p["price"])} | AI Tools Zone'
  description=f'{p["name"]}: {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. View seller-listed features and order on WhatsApp. Availability confirmed before payment.'
  specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
  related=[q for q in products if q['category']==p['category'] and q['id']!=p['id']][:3]
  # No arbitrary cross-category recommendations for single-product categories.
- body=f'''<main id="main" class="wrap product-page">{breadcrumbs([('Home','/'),('All tools','/products/'),(p['name'],path)])}<section class="product-overview"><div>{mark(p,'../../')}<p class="eyebrow"><a href="{category_path(p['category'])}">{e(p['category'])}</a> · PAKISTAN</p><h1>{e(p['name'])}</h1><p class="direct-answer">{e(p['name'])} is listed by AI Tools Zone at {money(p['price'])} for {e(p['duration'])}, with {e(p['access'].lower())} access. This independent marketplace offer is for buyers in Pakistan; availability and the exact plan are confirmed before payment.</p><p>{e(p['description'])}</p><p>For {e(', '.join(p['bestFor']).lower())}. Compare this seller-listed plan’s price, duration and access conditions before ordering.</p><a class="inline-link" href="{e(p['vendor'])}" target="_blank" rel="noopener noreferrer">Visit the official product website ↗</a></div><aside class="offer-panel" aria-label="Plan and ordering details"><span class="eyebrow">LISTED PLAN PRICE</span><div class="price"><small>PKR</small> {p['price']:,}</div><p>{e(p['duration'])} · {e(p['access'])} access</p><dl class="spec-list">{specs}</dl><p class="verified-date">Offer details last checked on <time datetime="{LAST_VERIFIED}">{LAST_VERIFIED_LABEL}</time>. Confirm the current price, plan and access on WhatsApp before payment.</p><a class="button button-lime buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><p>Opens WhatsApp to +92 343 0173923. You review and send the message. On a computer, use WhatsApp Web; if asked to link your account, complete that step and reopen this order. Use Copy order details if the message is missing. Confirm availability, included limits and the final price before payment.</p></aside></section><section class="content-block"><h2>What’s listed in this plan?</h2><ul>{''.join('<li>'+e(f)+'</li>' for f in p['features'])}</ul><p>These are the seller-listed features for this offer, not a guarantee of every vendor entitlement. Ask us to confirm the current limits and eligibility for your intended use.</p></section><section class="content-block"><h2>How does {e(p['access'].lower())} access work?</h2><p>{e(access_explanations[p['access']])}</p></section><section class="content-block"><h2>Questions about {e(p['name'])}</h2><h3>How much does this plan cost in Pakistan?</h3><p>The listed price is {money(p['price'])} for {e(p['duration'])}. AI Tools Zone confirms the available plan and final price on WhatsApp before you pay.</p><h3>How do I buy this plan?</h3><p>Select Order on WhatsApp, review the prepared WhatsApp message and send it. We confirm the offer, payment instructions and access delivery. No payment is collected by this website.</p><h3>When will access be delivered?</h3><p>The seller-listed estimate is {e(p['delivery'])} after payment confirmation, subject to availability. Confirm the timing for your order in chat.</p><h3>What warranty is listed?</h3><p>This offer lists {e(p['warranty'])} replacement coverage. <a href="../../terms/">Read the ordering and warranty information</a> and confirm the terms before paying.</p></section><section class="content-block"><h2>Explore more tools</h2><div class="related-links">{''.join(f'<a href="../{q["slug"]}/">{e(q["name"])}</a>' for q in related)}</div></section>{product_context(p)}<p class="modal-note">AI Tools Zone is an independent marketplace. Product names and logos belong to their owners. No official affiliation or endorsement is claimed.</p></main>'''
+ body=f'''<main id="main" class="wrap product-page">{breadcrumbs([('Home','/'),('All tools','/products/'),(p['name'],path)])}<section class="product-overview"><div>{mark(p,'../../')}<p class="eyebrow"><a href="{category_path(p['category'])}">{e(p['category'])}</a> · PAKISTAN</p><h1>{e(p['name'])}</h1><p class="direct-answer">{e(p['name'])} is listed by AI Tools Zone at {money(p['price'])} for {e(p['duration'])}, with {e(p['access'].lower())} access. This independent marketplace offer is for buyers in Pakistan; availability and the exact plan are confirmed before payment.</p><p>{e(p['description'])}</p><p>For {e(', '.join(p['bestFor']).lower())}. Compare this seller-listed plan’s price, duration and access conditions before ordering.</p><a class="inline-link" href="{e(p['vendor'])}" target="_blank" rel="noopener noreferrer">Visit the official product website ↗</a></div><aside class="offer-panel" aria-label="Plan and ordering details"><span class="eyebrow">LISTED PLAN PRICE</span><div class="price">{price_markup(p)}</div><p>{e(p['duration'])} · {e(p['access'])} access</p><dl class="spec-list">{specs}</dl><p class="verified-date">Offer details last checked on <time datetime="{LAST_VERIFIED}">{LAST_VERIFIED_LABEL}</time>. Confirm the current price, plan and access on WhatsApp before payment.</p><a class="button button-lime buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><p>Opens WhatsApp to +92 343 0173923. You review and send the message. On a computer, use WhatsApp Web; if asked to link your account, complete that step and reopen this order. Use Copy order details if the message is missing. Confirm availability, included limits and the final price before payment.</p></aside></section><section class="content-block"><h2>What’s listed in this plan?</h2><ul>{''.join('<li>'+e(f)+'</li>' for f in p['features'])}</ul><p>These are the seller-listed features for this offer, not a guarantee of every vendor entitlement. Ask us to confirm the current limits and eligibility for your intended use.</p></section><section class="content-block"><h2>How does {e(p['access'].lower())} access work?</h2><p>{e(access_explanations[p['access']])}</p></section><section class="content-block"><h2>Questions about {e(p['name'])}</h2><h3>How much does this plan cost in Pakistan?</h3><p>The listed price is {money(p['price'])} for {e(p['duration'])}. AI Tools Zone confirms the available plan and final price on WhatsApp before you pay.</p><h3>How do I buy this plan?</h3><p>Select Order on WhatsApp, review the prepared WhatsApp message and send it. We confirm the offer, payment instructions and access delivery. No payment is collected by this website.</p><h3>When will access be delivered?</h3><p>The seller-listed estimate is {e(p['delivery'])} after payment confirmation, subject to availability. Confirm the timing for your order in chat.</p><h3>What warranty is listed?</h3><p>This offer lists {e(p['warranty'])} replacement coverage. <a href="../../terms/">Read the ordering and warranty information</a> and confirm the terms before paying.</p></section><section class="content-block"><h2>Explore more tools</h2><div class="related-links">{''.join(f'<a href="../{q["slug"]}/">{e(q["name"])}</a>' for q in related)}</div></section>{product_context(p)}<p class="modal-note">AI Tools Zone is an independent marketplace. Product names and logos belong to their owners. No official affiliation or endorsement is claimed.</p></main>'''
  schema={'@context':'https://schema.org','@graph':[{'@type':'Product','@id':ORIGIN+path+'#product','name':p['name'],'description':p['description'],'image':ORIGIN+'/'+p['logo'],'category':p['category'],'offers':{'@type':'Offer','@id':ORIGIN+path+'#offer','url':ORIGIN+path,'priceCurrency':'PKR','price':p['price'],'priceValidUntil':'2026-12-31','seller':{'@id':ORIGIN+'/#organization'}},'additionalProperty':[{'@type':'PropertyValue','name':label,'value':p[key]} for label,key in [('Duration or allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')]]},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':ORIGIN+'/'},{'@type':'ListItem','position':2,'name':'All tools','item':ORIGIN+'/products/'},{'@type':'ListItem','position':3,'name':p['name'],'item':ORIGIN+path}]}]}
  if not related: body=body.replace('<section class="content-block"><h2>Explore more tools</h2><div class="related-links"></div></section>','')
  write('products/'+p['slug']+'/index.html',shell(title,description,path,body,schema,'../../'))

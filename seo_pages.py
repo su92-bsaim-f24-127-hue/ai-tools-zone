@@ -18,6 +18,8 @@ def content_date(now=None):
 
 CONTENT = json.loads((ROOT / 'data/seo-content.json').read_text(encoding='utf-8'))
 BLOG = json.loads((ROOT / 'data/blog-content.json').read_text(encoding='utf-8'))
+SETTINGS = json.loads((ROOT / 'data/site-settings.json').read_text(encoding='utf-8'))
+WHATSAPP_NUMBER = ''.join(ch for ch in str(SETTINGS.get('whatsappNumber','')) if ch.isdigit())
 CATEGORIES = {c['name']: c for c in CONTENT['categories']}
 HUBS = {
     'products': ('All AI Tools & Digital Subscriptions in Pakistan', 'Compare the complete catalog by total PKR price, duration and access. AI and non-AI subscriptions are labeled by category so you can find the right kind of offer.'),
@@ -66,11 +68,22 @@ def faq_html(items):
     # Visible answers are useful even without a search-engine FAQ enhancement.
     return '<section class="content-block"><h2>Questions before you choose</h2>' + ''.join(f'<h3>{e(q)}</h3><p>{e(a)}</p>' for q,a in items) + '</section>'
 
+def price_markup(product):
+    current=f'<span class="price-current">PKR {product["price"]:,}</span>'
+    regular=product.get('regularPrice')
+    if isinstance(regular,int) and regular>product['price']:
+        percent=round((regular-product['price'])*100/regular)
+        return current+f'<span class="price-discount"><del>PKR {regular:,}</del><b>{percent}% off</b></span>'
+    return current
+
 def plan_table(products, caption='Compare seller-listed plans'):
     if not products:
         return '<p>No offers currently match this budget. <a href="/products/">Explore all listed plans</a>.</p>'
-    rows=''.join(f'<tr><th scope="row"><a href="{product_path(p)}">{e(p["name"])}</a><span class="table-category">{e(p["category"])}</span></th><td>PKR {p["price"]:,}</td><td>{e(p["duration"])}</td><td>{e(p["access"])}</td><td><a class="inline-link" data-product-id="{p['id']}" href="https://wa.me/923430173923?text={quote(p['orderMessage'])}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a></td></tr>' for p in products)
-    return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr><th scope="col">Tool</th><th scope="col">Listed price</th><th scope="col">Duration / allowance</th><th scope="col">Access</th><th scope="col">Next step</th></tr></thead><tbody>{rows}</tbody></table></div>'
+    rows=[]
+    for p in products:
+        order_url=f'https://wa.me/{WHATSAPP_NUMBER}?text={quote(p["orderMessage"])}'
+        rows.append(f'<tr><th scope="row"><a href="{product_path(p)}">{e(p["name"])}</a><span class="table-category">{e(p["category"])}</span></th><td>{price_markup(p)}</td><td>{e(p["duration"])}</td><td>{e(p["access"])}</td><td><a class="inline-link" data-product-id="{e(p["id"])}" href="{e(order_url)}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a></td></tr>')
+    return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr><th scope="col">Tool</th><th scope="col">Listed price</th><th scope="col">Duration / allowance</th><th scope="col">Access</th><th scope="col">Next step</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
 
 def comparison_table(entries, by_id):
     """Show source-backed evaluation routes without inventing equivalent plans."""
@@ -130,7 +143,7 @@ def build_pages(products, origin, shell, write):
         publish(category_path(c['name']),c['heading'],f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
 
     for page in CONTENT['pages']:
-        selected=[by_id[id] for id in page['products']]
+        selected=[by_id[id] for id in page['products'] if id in by_id]
         content='<p class="direct-answer">'+e(page['answer'])+'</p>'
         if selected:
             content += '<section class="content-block"><h2>Listed plans at a glance</h2>'+plan_table(selected)+disclaimer+'</section>'
@@ -226,31 +239,25 @@ class ContentFingerprint(HTMLParser):
             text=re.sub(r'© \d{4}', '© YEAR', text)
             if text: self.parts.append(text)
 
-def build_llms_txt(origin):
-    return (
-        f"# AI Tools Zone\n\n"
-        f"> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering transparent PKR pricing and direct WhatsApp ordering.\n\n"
-        f"AI Tools Zone helps creators, students, freelancers, and businesses in Pakistan compare and purchase verified digital subscriptions in Pakistani Rupees (PKR) with direct WhatsApp customer support (+92 343 0173923).\n\n"
-        f"## Key Store Sections\n\n"
-        f"- [All AI Tools & Subscriptions]({origin}/products/): Complete catalog of 20 digital subscriptions with PKR prices, access models, duration, and warranty.\n"
-        f"- [PKR Pricing Index]({origin}/pricing/): Filter plans under PKR 1,000, under PKR 2,000, and full subscription pricing.\n"
-        f"- [Tool Comparison Hub]({origin}/compare/): Side-by-side workflow and feature comparisons.\n"
-        f"- [Category Directory]({origin}/categories/): Browse by category (AI Assistants, Video, Voice, Design, Business, Development).\n"
-        f"- [Buying Guides]({origin}/guides/): Practical advisories on private vs shared accounts and subscription selection.\n"
-        f"- [Blog & Pakistan Payment Guides]({origin}/blog/): Step-by-step guidance for paying without international credit cards in Pakistan.\n"
-        f"- [About & WhatsApp Support]({origin}/about/): Contact details (+92 343 0173923) and business verification.\n"
-        f"- [Terms & Warranty]({origin}/terms/): 7 to 30-day replacement warranty policies and ordering conditions.\n\n"
-        f"## Featured AI Products in Pakistan\n\n"
-        f"- [ChatGPT Plus in Pakistan]({origin}/products/chatgpt-plus/): OpenAI ChatGPT Plus with GPT-4o, reasoning models, and Canvas.\n"
-        f"- [Gemini Pro in Pakistan]({origin}/products/gemini-pro/): Google Gemini Pro / Advanced with 2M context window.\n"
-        f"- [Canva Pro (Edu) in Pakistan]({origin}/products/canva-pro-edu/): Premium templates, brand kit, and Magic Studio.\n"
-        f"- [CapCut Pro in Pakistan]({origin}/products/capcut-pro/): Video editing with pro transitions, auto-captions, and AI background removal.\n"
-        f"- [ElevenLabs in Pakistan]({origin}/products/elevenlabs/): AI voice cloning and natural speech synthesis.\n"
-        f"- [Claude vs ChatGPT Guide]({origin}/compare/chatgpt-vs-claude/): Comparison and access options for Anthropic Claude.\n"
-        f"- [Leonardo AI in Pakistan]({origin}/products/leonardo-ai-essential/): Leonardo AI for creative asset generation.\n\n"
-        f"## Full Catalog Manifest\n\n"
-        f"- [Full Catalog & Offer Specifications]({origin}/llms-full.txt): Detailed specifications, pricing in PKR, access types, delivery SLAs, and replacement warranties for all 20 products.\n"
-    )
+def build_llms_txt(origin, products):
+    lines=[
+        "# AI Tools Zone\n\n",
+        "> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering seller-listed PKR prices and WhatsApp ordering.\n\n",
+        "Compare current listings by price, duration and access type. Confirm availability, included limits and final price before payment.\n\n",
+        "## Key Store Sections\n\n",
+        f"- [Current offers]({origin}/products/): {len(products)} currently active catalog listings.\n",
+        f"- [PKR pricing]({origin}/pricing/): Compare listed offers and plan terms.\n",
+        f"- [Compare tools]({origin}/compare/): Read workflow comparisons and selection notes.\n",
+        f"- [Categories]({origin}/categories/): Browse offers by category.\n",
+        f"- [Buying guides]({origin}/guides/): Review access and buying questions.\n",
+        f"- [About and WhatsApp support]({origin}/about/): Contact and ordering information.\n",
+        f"- [Terms and warranty]({origin}/terms/): Read ordering and support terms.\n\n",
+        "## Current listings\n\n",
+    ]
+    for product in products:
+        lines.append(f"- [{product['name']}]({origin}/products/{product['slug']}/): {product['category']}; PKR {product['price']:,}; {product['duration']}; {product['access']} access. Confirm current terms before ordering.\n")
+    lines.extend(["\n## Full catalog manifest\n\n",f"- [Full catalog and offer specifications]({origin}/llms-full.txt): details for {len(products)} current listings.\n"])
+    return ''.join(lines)
 
 def build_llms_full_txt(products, origin):
     lines = [
@@ -258,17 +265,19 @@ def build_llms_full_txt(products, origin):
         "",
         "> Independent digital marketplace for AI tools and digital subscriptions in Pakistan.",
         f"> Origin: {origin}",
-        "> Customer Support: WhatsApp +92 343 0173923",
+        f"> Customer Support: WhatsApp +{WHATSAPP_NUMBER}",
         "> Accepted Payment Methods: JazzCash, Easypaisa, Bank Transfer (arranged in chat)",
         "",
-        "## Product Catalog (20 Verified Offers in PKR)",
+        f"## Product Catalog ({len(products)} Seller-Listed Offers in PKR)",
         ""
     ]
     for p in products:
         lines.append(f"### {p['name']}")
         lines.append(f"- **URL**: {origin}/products/{p['slug']}/")
         lines.append(f"- **Category**: {p['category']}")
-        lines.append(f"- **Price**: PKR {p['price']:,}")
+        lines.append(f"- **Current seller-listed price**: PKR {p['price']:,}")
+        if p.get('regularPrice'):
+            lines.append(f"- **Regular price used for the promotion**: PKR {p['regularPrice']:,}")
         lines.append(f"- **Duration / Allowance**: {p['duration']}")
         lines.append(f"- **Access Type**: {p['access']}")
         lines.append(f"- **Delivery Estimate**: {p['delivery']}")
@@ -313,7 +322,7 @@ def finalize(paths, origin, write, products=None):
         f"Sitemap: {origin}/sitemap.xml\n"
     )
     write('robots.txt', robots_txt)
-    write('llms.txt', build_llms_txt(origin))
+    write('llms.txt', build_llms_txt(origin, products or []))
     if products is None:
         cat_file = ROOT/'data/catalog.json'
         if cat_file.is_file():
