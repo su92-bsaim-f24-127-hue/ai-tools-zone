@@ -4,7 +4,7 @@
   "name": "ai-tools-zone",
   "compatibility_date": "2026-10-28",
   "assets": {
-    "directory": "./",
+    "directory": "./_site",
     "not_found_handling": "404-page"
   }
 }

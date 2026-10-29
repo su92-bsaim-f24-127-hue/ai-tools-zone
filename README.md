@@ -56,6 +56,8 @@ Tests use the installed Chrome and Playwright in `.test-deps`. Screenshots and m
 
 Push to `main` in `su92-bsaim-f24-127-hue/ai-tools-zone`. `.github/workflows/pages.yml` builds, runs the SEO audit, packages only production files and deploys to GitHub Pages. `CNAME` preserves `aitoolszone.tech`; `.nojekyll` preserves plain static publishing. The ZIP remains suitable for another static host if needed.
 
+The custom domain is also routed through the Cloudflare Worker `ai-tools-zone`. `wrangler.jsonc` serves the production files from `_site`, not the project source tree. To update that Worker manually after a source change, run `python build_site.py`, `python package_site.py`, `python -m zipfile -e ai-tools-zone.zip _site`, then `wrangler deploy`. GitHub Pages deployment does not update the Worker. For automatic Worker deployments, connect this repository to Cloudflare Workers Builds or configure a GitHub Actions deploy with a scoped Cloudflare API token stored as a repository secret; never put that token in the repository.
+
 After deployment, run `python audit_seo_live.py`. Verify ownership in Google Search Console and Bing Webmaster Tools and submit `https://aitoolszone.tech/sitemap.xml`. Actual indexed pages, search performance and field Core Web Vitals need those external tools; local passing tests do not establish them.
 
 ## Store admin
