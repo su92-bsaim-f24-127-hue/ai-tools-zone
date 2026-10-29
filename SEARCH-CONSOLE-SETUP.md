@@ -1,8 +1,10 @@
 # Google Search Console setup
 
-This is an owner-run checklist. Search Console ownership, indexing status, impressions, clicks and rankings have not been verified from this code workspace. A page returning HTTP 200 or appearing in the sitemap does not mean Google has indexed it.
+This is an owner-run checklist. Current Search Console indexing, impressions, clicks and rankings were not inspected today. A page returning HTTP 200 or appearing in the sitemap does not mean Google has indexed it.
 
-**Live check on 22 October 2026:** the homepage, robots.txt and sitemap.xml returned HTTP 200. The sitemap contains 53 unique canonical HTTPS URLs. The homepage source contains the supplied Google verification meta tag, and https://aitoolszone.tech/googleade07204a5ea7ade.html returns HTTP 200 with the exact expected body shown below. These public checks confirm the proof files are deployed; they do not confirm Search Console ownership or indexing. You previously reported an ownership-verification failure; this workspace cannot see the selected Search Console property or account status.
+**Current public check — 29 October 2026:** the HTTPS homepage, `robots.txt` and `sitemap.xml` return HTTP 200. The sitemap contains 67 unique canonical HTTPS URLs, and all 67 pages return HTTP 200 with matching self-canonicals. The Google verification meta tag and HTML proof file remain public. These checks do not prove current Search Console ownership or indexing. An earlier authenticated Search Console visit on 22 October showed the URL-prefix property as verified and the submitted sitemap as successful with 66 discovered pages; that account view has not been refreshed today.
+
+**Canonical follow-up:** the HTTP homepage returns the same content as HTTPS without redirecting, and `www.aitoolszone.tech` currently returns DNS `NXDOMAIN`. See [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md) for the precise owner-controlled Cloudflare/GitHub Pages steps. Do not add extra canonical tags to compensate for missing host redirects.
 
 ## HTML-tag verification option
 
@@ -35,16 +37,14 @@ Then return to the same URL-prefix property's verification screen and click **Ve
 
 ## 2. Publish Google's TXT record in the active DNS zone
 
-The public DNS delegation checked on **14 October 2026** points to these authoritative nameservers:
+The public DNS delegation checked on **29 October 2026** points to these authoritative Cloudflare nameservers:
 
 ```text
-tech-domains.mercury.orderbox-dns.com
-tech-domains.mars.orderbox-dns.com
-tech-domains.earth.orderbox-dns.com
-tech-domains.venus.orderbox-dns.com
+amanda.ns.cloudflare.com
+giancarlo.ns.cloudflare.com
 ```
 
-These nameservers identify the active DNS service as Orderbox nameservers, but do not identify which registrar/reseller account provides your login. Open the domain/DNS dashboard for the registrar or reseller that manages the zone served by those nameservers. A Cloudflare dashboard or screenshot by itself does not prove Cloudflare is authoritative for this domain; do not switch nameservers just for verification.
+The earlier 14 October Orderbox delegation note is outdated. Cloudflare is the publicly delegated DNS provider now. Open the `aitoolszone.tech` zone in the Cloudflare account that manages these nameservers; do not switch nameservers or replace any existing records for Search Console verification.
 
 1. Open the active DNS zone for `aitoolszone.tech` and choose **Add record**.
 2. Select type **TXT**. For the name/host, use `@` or leave it blank if that dashboard instructs you to do so for the root domain.
@@ -63,7 +63,7 @@ After Search Console verifies the property:
 3. Enter `https://aitoolszone.tech/sitemap.xml` and submit it.
 4. Revisit the report and record Google's processing status and any reported errors. Submission is a discovery hint, not a promise of indexing.
 
-The public sitemap was checked again on 22 October 2026: it returned HTTP 200 and contained 53 unique canonical HTTPS URLs on aitoolszone.tech.
+The current public sitemap check on 29 October 2026 returned HTTP 200 and contained 67 unique canonical HTTPS URLs on `aitoolszone.tech`. All 67 listed pages returned HTTP 200 and declared the matching HTTPS self-canonical. The HTTP homepage still does not redirect to HTTPS, and `www.aitoolszone.tech` currently returns DNS `NXDOMAIN`; see [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md).
 
 ## 4. Inspect important URLs
 

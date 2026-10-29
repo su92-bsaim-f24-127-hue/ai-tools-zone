@@ -28,6 +28,9 @@ with TemporaryDirectory() as directory:
     finally:seo_pages.ROOT=original_root
 
 subprocess.run([sys.executable,str(ROOT/'build_site.py')],cwd=ROOT,check=True,capture_output=True)
+home=Page((ROOT/'index.html').read_text(encoding='utf-8'))
+assert home.attrs('meta',name='google-site-verification')==[{'name':'google-site-verification','content':'t1tK9C3NURU2IsEm5wkHhTL0ql_Sjy9mM_zM4bGJQfY'}],'Google Search Console verification must survive a rebuild'
+assert home.attrs('meta',name='msvalidate.01')==[{'name':'msvalidate.01','content':'8436AF7ED9811BADA3CA9BEB0851A939'}],'Bing verification must survive a rebuild'
 state=json.loads((ROOT/'data/page-state.json').read_text())
 files=[ROOT/('index.html' if path=='/' else path.strip('/')+'/index.html') for path in state]
 files += [ROOT/'sitemap.xml',ROOT/'data/page-state.json',ROOT/'catalog.js',ROOT/'robots.txt']

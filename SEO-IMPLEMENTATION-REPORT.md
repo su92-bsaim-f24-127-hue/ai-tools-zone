@@ -1,5 +1,17 @@
 # SEO implementation report
 
+## Canonical and duplicate URL cleanup — 29 October 2026
+
+The latest live and local review found **no duplicate sitemap entries, no duplicate page titles, and no exact duplicate visible main content among the 67 indexable routes**. All 67 live sitemap URLs return HTTP 200 and declare their matching HTTPS self-canonical. The sitemap and `robots.txt` are reachable; `robots.txt` allows public paths and points to the HTTPS sitemap. `/index.html` and the no-trailing-slash ChatGPT product URL already redirect to their preferred paths.
+
+One duplicate URL variant is confirmed: `http://aitoolszone.tech/` returns HTTP 200 with a byte-for-byte identical body to `https://aitoolszone.tech/`, instead of redirecting. Its HTML canonical already points to HTTPS. The `www` hostname currently returns DNS `NXDOMAIN`. Both require hosting or DNS settings, which cannot be fixed by this static site's page templates. Exact evidence and owner instructions are in [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md).
+
+Code changes: the SEO audit now fingerprints visible `<main>` content and fails on exact duplicate indexable pages; the live audit uses a browser-like user agent because the edge returned 403 to Python's default client; the Bing verification meta tag is preserved in the homepage source template and build regression test; and the README no longer hard-codes a stale page count. No valid route, canonical, or useful product disclosure was removed.
+
+Checks: `python build_site.py` passed (67 canonical routes); `python test_seo_build.py` passed (freshness, deterministic build, package boundaries, and Google/Bing proof preservation); `python audit_seo.py` passed 6,118 checks with zero errors or warnings and 67 unique main-content pages; `python audit_growth.py` passed 2,836 checks with zero errors; `python test_growth.py` passed seven assertions. The live audit checked 73 requests and found the known HTTP-to-HTTPS redirect failure; both `www` checks were unverified due to DNS NXDOMAIN. The sitemap-page crawl itself passed 67/67 status/canonical checks. No Search Console URL Inspection results were checked today.
+
+The public HTTP redirect and `www` DNS settings still require owner-controlled host/DNS changes; see the diagnosis before applying them.
+
 ## AI Tools Pak full content follow-up — 22 October 2026
 
 ### What the competitor inventory showed

@@ -17,7 +17,7 @@ Run `python build_site.py` after changing the catalog, homepage template or edit
 - `seo_pages.py`: renders editorial pages and shared catalog tables; records content-based sitemap freshness.
 - `data/page-state.json`: persisted content fingerprints and lastmod dates. Do not reset this file for routine builds.
 - `templates/home.html`: homepage layout and copy.
-- `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest (53 canonical pages).
+- `build_site.py`: builds the homepage, catalog.js, twenty product pages, information pages, editorial collections, sitemap, robots and manifest. The current route count is maintained in `data/seo-contract.json` rather than hard-coded in this overview.
 - `app.js`: search, filters, finder, quick views and comparison. `whatsapp.js` adds a direct WhatsApp Web route and copyable order details to catalog order links.
 - `theme.js`: early theme selection, persistent preference and system-theme fallback.
 - `scene.js`: CSS 3D logo motion, pause, pointer tilt and reduced-motion handling.
@@ -60,7 +60,7 @@ After deployment, run `python audit_seo_live.py`. Verify ownership in Google Sea
 
 GitHub Pages and the Python development server do not apply `_headers`. It is a portable Netlify/Cloudflare-style configuration example. Stronger custom response headers require a compatible host or proxy.
 
-Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-CONTENT-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, the Excel-compatible `SEO-COMPETITOR-MATRIX.csv`, [SEO-NEXT-ACTIONS.md](SEO-NEXT-ACTIONS.md), `SEO-KEYWORD-MAP.csv`, `SEO-IMPLEMENTATION.md`, and the active 30/60/90-day `SEO-PLAN.md`. `AUDIT.md` is a historical record. The earned-mention plan is in `BACKLINK-STRATEGY.md`.
+Canonical URLs point to the user-confirmed production domain. Indexing, rankings, rich results and AI citations are not guaranteed. Current documentation: [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md), `SEO-AUDIT.md`, `SEO-STRATEGY.md`, `SEO-CONTENT-STRATEGY.md`, `SEO-COMPETITOR-GAPS.md`, the Excel-compatible `SEO-COMPETITOR-MATRIX.csv`, [SEO-NEXT-ACTIONS.md](SEO-NEXT-ACTIONS.md), `SEO-KEYWORD-MAP.csv`, `SEO-IMPLEMENTATION.md`, and the active 30/60/90-day `SEO-PLAN.md`. `AUDIT.md` is a historical record. The earned-mention plan is in `BACKLINK-STRATEGY.md`.
 
 ## Privacy
 

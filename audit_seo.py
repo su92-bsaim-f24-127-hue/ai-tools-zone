@@ -8,6 +8,7 @@ from datetime import date
 import json
 import re
 import sys
+from hashlib import sha256
 import xml.etree.ElementTree as ET
 from seo_pages import content_date
 
@@ -67,9 +68,19 @@ def run():
     catalog=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
     products={'/products/'+p['slug']+'/':p for p in catalog}
     graph={path:set() for path in pages}; inbound=Counter(); descriptions=[]; titles=[]; external=set(); assets=set()
+    main_content_fingerprints={}
     for path,page in pages.items():
         check(len(page.titles)==1 and bool(page.titles[0]),path+' needs one title')
         check(len(page.h1)==1 and bool(page.h1[0]),path+' needs one H1')
+        page_html=file_for(path).read_text(encoding='utf-8')
+        main_match=re.search(r'<main\b[^>]*>(.*?)</main>',page_html,re.S|re.I)
+        main_text=' '.join(' '.join(Page(main_match.group(1) if main_match else '').visible).split()).casefold()
+        check(bool(main_text),path+' missing visible main content')
+        if main_text:
+            fingerprint=sha256(main_text.encode('utf-8')).hexdigest()
+            previous=main_content_fingerprints.get(fingerprint)
+            check(previous is None,path+' duplicates visible main content from '+str(previous))
+            if previous is None:main_content_fingerprints[fingerprint]=path
         titles+=page.titles
         description=page.attrs('meta',name='description')
         check(len(description)==1 and bool(description[0].get('content')),path+' missing description')
@@ -87,9 +98,9 @@ def run():
         check(len(ids)==len(set(ids)),path+' duplicate HTML IDs')
         if len(' '.join(page.visible).split())<120:warnings.append(path+' short content: review purpose, not an automatic ranking issue')
         schema_nodes=[]
-        for raw in page.schemas:
+        for schema_raw in page.schemas:
             try:
-                obj=json.loads(raw); check(obj.get('@context')=='https://schema.org',path+' incorrect schema context'); schema_nodes.extend(obj.get('@graph',[obj]))
+                obj=json.loads(schema_raw); check(obj.get('@context')=='https://schema.org',path+' incorrect schema context'); schema_nodes.extend(obj.get('@graph',[obj]))
             except ValueError:check(False,path+' invalid JSON-LD')
         types=[n.get('@type') for n in schema_nodes]
         schema_ids=[n['@id'] for n in schema_nodes if '@id' in n]
@@ -97,8 +108,7 @@ def run():
         for required in ['Organization','WebSite','WebPage']+(['BreadcrumbList'] if path!='/' else []):
             check(types.count(required)==1,path+' missing/duplicate '+required)
         if path!='/':
-            raw=file_for(path).read_text(encoding='utf-8')
-            nav=re.search(r'<nav aria-label="Breadcrumb">(.*?)</nav>',raw,re.S)
+            nav=re.search(r'<nav aria-label="Breadcrumb">(.*?)</nav>',page_html,re.S)
             check(nav is not None,path+' missing visible breadcrumb')
             if nav:
                 crumbs=[]
@@ -169,7 +179,7 @@ def run():
     notfound=Page((ROOT/'404.html').read_text(encoding='utf-8'))
     check(any('noindex' in a.get('content','') for a in notfound.attrs('meta',name='robots')),'404 missing noindex')
     check('/404.html' not in canonical_paths,'404 included in sitemap')
-    report={'pages':len(pages),'checks':checks,'errors':errors,'warnings':warnings,'max_crawl_depth':max(distances.values()),'external_links':sorted(external),'local_resources_checked':len(assets),'crawl_depth':distances}
+    report={'pages':len(pages),'unique_main_content_pages':len(main_content_fingerprints),'checks':checks,'errors':errors,'warnings':warnings,'max_crawl_depth':max(distances.values()),'external_links':sorted(external),'local_resources_checked':len(assets),'crawl_depth':distances}
     out=ROOT/'verification';out.mkdir(exist_ok=True)
     (out/'seo-audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ('external_links','crawl_depth')},indent=2))

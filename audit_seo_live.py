@@ -12,6 +12,9 @@ from datetime import datetime, timezone
 import json, sys, xml.etree.ElementTree as ET
 from audit_seo import Page
 ROOT=Path(__file__).parent
+# The Cloudflare edge returned 403 to Python's default client; this browser-like
+# identity matches the reproducible public browser request, not a Googlebot test.
+AUDIT_USER_AGENT='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 class RedirectRecorder(__import__('urllib.request',fromlist=['HTTPRedirectHandler']).HTTPRedirectHandler):
     def __init__(self):self.chain=[]
     def redirect_request(self,req,fp,code,msg,headers,newurl):
@@ -21,7 +24,7 @@ def fetch(url):
     from urllib.request import build_opener
     redirect=RedirectRecorder();opener=build_opener(redirect)
     try:
-        r=opener.open(Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; AI-Tools-Zone-audit/1.0)'}),timeout=25)
+        r=opener.open(Request(url,headers={'User-Agent':AUDIT_USER_AGENT}),timeout=25)
         body=r.read().decode('utf-8','replace');page=Page(body)
         return {'url':url,'status':r.status,'final':r.url,'redirects':redirect.chain,'canonical':page.attrs('link',rel='canonical'),'titles':page.titles,'h1_count':len(page.h1),'schema_types':[n.get('@type') for raw in page.schemas for n in json.loads(raw).get('@graph',[json.loads(raw)])],'robots':page.attrs('meta',name='robots'),'headers':dict(r.headers)}
     except HTTPError as error:
@@ -40,7 +43,7 @@ def main():
         links=json.loads((ROOT/'verification/seo-audit.json').read_text())['external_links']
         urls=sorted(set(u.split('#')[0] for u in links if urlparse(u).hostname!='wa.me'))
     else:
-        sitemap=urlopen('https://aitoolszone.tech/sitemap.xml',timeout=20).read()
+        sitemap=urlopen(Request('https://aitoolszone.tech/sitemap.xml',headers={'User-Agent':AUDIT_USER_AGENT}),timeout=20).read()
         urls=[n.text for n in ET.fromstring(sitemap).findall('{*}url/{*}loc')]
         urls+=['http://aitoolszone.tech/','https://www.aitoolszone.tech/','http://www.aitoolszone.tech/','https://aitoolszone.tech/products/chatgpt-plus','https://aitoolszone.tech/no-such-page-seo-audit/','https://aitoolszone.tech/?category=design']
     results=list(ThreadPoolExecutor(max_workers=4).map(fetch,urls))
@@ -62,7 +65,7 @@ def main():
         if not is_unverified(results[-1]) and results[-1].get('canonical')!=[{'rel':'canonical','href':'https://aitoolszone.tech/'}]:failures.append('Query-string home does not canonicalize cleanly')
     unverified=[r['url'] for r in results if is_unverified(r)]
     outcome='fail' if failures else 'inconclusive' if unverified else 'pass'
-    report={'checked_at_utc':datetime.now(timezone.utc).isoformat(),'external':external,'outcome':outcome,'failures':failures,'unverified':unverified,'results':results}
+    report={'checked_at_utc':datetime.now(timezone.utc).isoformat(),'external':external,'user_agent':AUDIT_USER_AGENT,'outcome':outcome,'failures':failures,'unverified':unverified,'results':results}
     dest=ROOT/'verification'/('seo-external.json' if external else 'seo-live-after.json');dest.write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps({'checked':len(results),'outcome':outcome,'failures':failures,'status_counts':{str(code):sum(r.get('status')==code for r in results) for code in set(r.get('status') for r in results)},'unverified':unverified,'missing':[r['url'] for r in results if r.get('status') in (404,410)]},indent=2))
     if failures:sys.exit(1)
