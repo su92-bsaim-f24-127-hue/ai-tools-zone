@@ -33,7 +33,7 @@ assert home.attrs('meta',name='google-site-verification')==[{'name':'google-site
 assert home.attrs('meta',name='msvalidate.01')==[{'name':'msvalidate.01','content':'8436AF7ED9811BADA3CA9BEB0851A939'}],'Bing verification must survive a rebuild'
 state=json.loads((ROOT/'data/page-state.json').read_text())
 files=[ROOT/('index.html' if path=='/' else path.strip('/')+'/index.html') for path in state]
-files += [ROOT/'sitemap.xml',ROOT/'data/page-state.json',ROOT/'catalog.js',ROOT/'robots.txt']
+files += [ROOT/'sitemap.xml',ROOT/'data/page-state.json',ROOT/'catalog.js',ROOT/'robots.txt',ROOT/'llms.txt',ROOT/'llms-full.txt']
 for file in [f for f in files if f.suffix=='.html']:
     scripts=Page(file.read_text(encoding='utf-8')).attrs('script',src='https://static.cloudflareinsights.com/beacon.min.js')
     assert len(scripts)==1 and 'defer' in scripts[0],f'{file}: missing/duplicate non-blocking analytics beacon'

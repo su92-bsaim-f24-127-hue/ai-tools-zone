@@ -41,3 +41,32 @@ The live crawl is a public web request and does not verify how Google's own craw
 ## Reproducibility
 
 From the repository root, run the commands in the tables above. `audit_seo_live.py` and `audit_seo_browser.py` require network/browser support. The static build does not change Cloudflare settings. After the owner enables an HTTP-to-HTTPS redirect and clears/waits out the stale edge cache, rerun the live audit and inspect representative changed URLs.
+
+## Re-validation after last-checked-date enhancement (29 October 2026)
+
+A visible, machine-readable last-checked date was added to the **20 product pages only** (single owner-curated constant `LAST_VERIFIED='2026-10-29'`; homepage, blog and information pages are unchanged). The site was rebuilt and the full local suite re-run:
+
+| Command | Result | Evidence |
+|---|---|---|
+| `python build_site.py` | PASS | 67 canonical pages; freshness note renders only on product pages. |
+| `python audit_seo.py` | PASS | 6,118 checks; 0 errors; 67 unique main-content pages. |
+| `python audit_growth.py` | PASS | 0 errors; 67 indexable pages; 1,752 incoming internal links (parity with baseline). |
+| `python test_seo_build.py` | PASS | Deterministic build, unchanged-date preservation, GSC/Bing verification tags survive rebuild. |
+| `python test_growth.py` | PASS | 7 growth regression assertions. |
+
+Live state is unchanged by this local edit: the host HTTP→HTTPS redirect and the stale Cloudflare edge cache (still serving the old Veo "Unlimited generations" copy) remain owner-controlled actions. The enhancement is local-only and was **not deployed or pushed**; it is staged in the working tree for the owner to review and commit.
+
+**Diff footprint:** `build_site.py` (+`LAST_VERIFIED`/`LAST_VERIFIED_LABEL` constants; one `<p class="verified-date">…<time>…</time>` in the product body) plus the 20 `products/*/index.html`, and the resulting `sitemap.xml` + `data/page-state.json` lastmod bumps for those 20 routes. Scope check: `verified-date` count = 0 on `index.html`, `about/index.html`, `pricing/index.html`, and the payment guide — confirming the change is product-page-scoped.
+
+## Re-validation after structured-data + description tightening (29 October 2026)
+
+Two more verified, committed-source gaps surfaced by the SEOmator report (94/100) were addressed and re-validated:
+
+| Change | Location | Verified |
+|---|---|---|
+| Availability omitted from Offer schema (audit-enforced) | `build_site.py:121` Offer dict; `audit_seo.py:130` | Removed orphaned `InStock` (not emitted by source); Offer keeps price/currency/seller -> audit-clean |
+| Shortened over-length meta descriptions (SERP truncation) | `build_site.py` homepage, `seo_pages.py` compare + pricing, `templates/home.html` | `/` / `/compare/` / `/pricing/` descriptions now ≤130 chars; meta + OG + schema identical |
+
+Rebuild + full local suite: `audit_seo.py` 6,254 checks / 0 errors / 0 warnings; `audit_growth.py` 0 errors / 1,752 internal links (parity with baseline); `test_seo_build.py` PASS (determinism + freshness + GSC/Bing verification tags); `test_growth.py` PASS (7 regression assertions). Local-only; not deployed.
+
+Note: several SEOmator failures were confirmed as artifacts of crawling non-canonical root URLs (e.g. `/gemini-pro` instead of `/products/gemini-pro/`), which correctly 404 to the shared handler and therefore render identical content (same hash → "duplicate"; same 23-word body → "thin"). The real `/products/<slug>/` pages are rich (797 words, self-canonical, structured data). Remaining SEOmator failures are owner/host-controlled: HTTP→HTTPS redirect, HSTS, `307`→`301` redirects, soft-404 on `/404.html`, CSP nonce for the Cloudflare beacon; see OWNER-ACTIONS checklist.

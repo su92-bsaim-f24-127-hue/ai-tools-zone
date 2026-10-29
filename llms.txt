@@ -1,0 +1,30 @@
+# AI Tools Zone
+
+> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering transparent PKR pricing and direct WhatsApp ordering.
+
+AI Tools Zone helps creators, students, freelancers, and businesses in Pakistan compare and purchase verified digital subscriptions in Pakistani Rupees (PKR) with direct WhatsApp customer support (+92 343 0173923).
+
+## Key Store Sections
+
+- [All AI Tools & Subscriptions](https://aitoolszone.tech/products/): Complete catalog of 20 digital subscriptions with PKR prices, access models, duration, and warranty.
+- [PKR Pricing Index](https://aitoolszone.tech/pricing/): Filter plans under PKR 1,000, under PKR 2,000, and full subscription pricing.
+- [Tool Comparison Hub](https://aitoolszone.tech/compare/): Side-by-side workflow and feature comparisons.
+- [Category Directory](https://aitoolszone.tech/categories/): Browse by category (AI Assistants, Video, Voice, Design, Business, Development).
+- [Buying Guides](https://aitoolszone.tech/guides/): Practical advisories on private vs shared accounts and subscription selection.
+- [Blog & Pakistan Payment Guides](https://aitoolszone.tech/blog/): Step-by-step guidance for paying without international credit cards in Pakistan.
+- [About & WhatsApp Support](https://aitoolszone.tech/about/): Contact details (+92 343 0173923) and business verification.
+- [Terms & Warranty](https://aitoolszone.tech/terms/): 7 to 30-day replacement warranty policies and ordering conditions.
+
+## Featured AI Products in Pakistan
+
+- [ChatGPT Plus in Pakistan](https://aitoolszone.tech/products/chatgpt-plus/): OpenAI ChatGPT Plus with GPT-4o, reasoning models, and Canvas.
+- [Gemini Pro in Pakistan](https://aitoolszone.tech/products/gemini-pro/): Google Gemini Pro / Advanced with 2M context window.
+- [Canva Pro (Edu) in Pakistan](https://aitoolszone.tech/products/canva-pro-edu/): Premium templates, brand kit, and Magic Studio.
+- [CapCut Pro in Pakistan](https://aitoolszone.tech/products/capcut-pro/): Video editing with pro transitions, auto-captions, and AI background removal.
+- [ElevenLabs in Pakistan](https://aitoolszone.tech/products/elevenlabs/): AI voice cloning and natural speech synthesis.
+- [Claude vs ChatGPT Guide](https://aitoolszone.tech/compare/chatgpt-vs-claude/): Comparison and access options for Anthropic Claude.
+- [Leonardo AI in Pakistan](https://aitoolszone.tech/products/leonardo-ai-essential/): Leonardo AI for creative asset generation.
+
+## Full Catalog Manifest
+
+- [Full Catalog & Offer Specifications](https://aitoolszone.tech/llms-full.txt): Detailed specifications, pricing in PKR, access types, delivery SLAs, and replacement warranties for all 20 products.

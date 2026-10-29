@@ -23,10 +23,10 @@ HUBS = {
     'products': ('All AI Tools & Digital Subscriptions in Pakistan', 'Compare the complete catalog by total PKR price, duration and access. AI and non-AI subscriptions are labeled by category so you can find the right kind of offer.'),
     'categories': ('Browse AI Tools & Subscription Categories', 'Start with the work you need to do. Explore assistants, video, design, voice, development and productivity, or browse the separate digital subscription categories.'),
     'use-cases': ('Choose AI Tools by Your Workflow', 'Find a practical starting point for study, creative projects, development or business work. Each guide connects tasks with catalog offers and the questions to ask before buying.'),
-    'compare': ('Compare AI Tools in Pakistan', 'Compare selected tools and seller-listed offers side by side. Our pages explain use cases, price, duration and access differences; they are not lab benchmarks or claims of equivalent vendor entitlements.'),
+    'compare': ('Compare AI Tools in Pakistan', 'Compare AI tools side by side. Our pages explain use-case fit, price, duration and access differences for Pakistan buyers.'),
     'alternatives': ('AI Tool Alternatives for Specific Tasks', 'Explore another way to complete your task. These shortlists distinguish general assistants from specialized tools and explain where an alternative will not replace your whole workflow.'),
     'guides': ('AI Subscription Buying Guides for Pakistan', 'Understand the offer before paying. Use these guides to check access, total cost, delivery and support, then confirm the actual plan with AI Tools Zone on WhatsApp.'),
-    'pricing': ('AI Tools Pricing in Pakistan: Compare PKR Plans', 'Compare total seller-listed prices in PKR, including options under PKR 1,000 and PKR 2,000. These are different offers with different durations and allowances, not equivalent monthly subscriptions.'),
+    'pricing': ('AI Tools Pricing in Pakistan: Compare PKR Plans', 'Seller-listed PKR prices, including offers under PKR 1,000 and PKR 2,000. Each offer has its own duration and allowances.'),
     'blog': ('AI Tools Zone Blog', 'Practical, source-linked guides for comparing AI subscriptions and planning AI workflows for people and businesses in Pakistan.')
 }
 e = lambda value: escape(str(value), quote=True)
@@ -226,7 +226,65 @@ class ContentFingerprint(HTMLParser):
             text=re.sub(r'© \d{4}', '© YEAR', text)
             if text: self.parts.append(text)
 
-def finalize(paths, origin, write):
+def build_llms_txt(origin):
+    return (
+        f"# AI Tools Zone\n\n"
+        f"> Independent digital marketplace for AI tools and digital subscriptions in Pakistan, offering transparent PKR pricing and direct WhatsApp ordering.\n\n"
+        f"AI Tools Zone helps creators, students, freelancers, and businesses in Pakistan compare and purchase verified digital subscriptions in Pakistani Rupees (PKR) with direct WhatsApp customer support (+92 343 0173923).\n\n"
+        f"## Key Store Sections\n\n"
+        f"- [All AI Tools & Subscriptions]({origin}/products/): Complete catalog of 20 digital subscriptions with PKR prices, access models, duration, and warranty.\n"
+        f"- [PKR Pricing Index]({origin}/pricing/): Filter plans under PKR 1,000, under PKR 2,000, and full subscription pricing.\n"
+        f"- [Tool Comparison Hub]({origin}/compare/): Side-by-side workflow and feature comparisons.\n"
+        f"- [Category Directory]({origin}/categories/): Browse by category (AI Assistants, Video, Voice, Design, Business, Development).\n"
+        f"- [Buying Guides]({origin}/guides/): Practical advisories on private vs shared accounts and subscription selection.\n"
+        f"- [Blog & Pakistan Payment Guides]({origin}/blog/): Step-by-step guidance for paying without international credit cards in Pakistan.\n"
+        f"- [About & WhatsApp Support]({origin}/about/): Contact details (+92 343 0173923) and business verification.\n"
+        f"- [Terms & Warranty]({origin}/terms/): 7 to 30-day replacement warranty policies and ordering conditions.\n\n"
+        f"## Featured AI Products in Pakistan\n\n"
+        f"- [ChatGPT Plus in Pakistan]({origin}/products/chatgpt-plus/): OpenAI ChatGPT Plus with GPT-4o, reasoning models, and Canvas.\n"
+        f"- [Gemini Pro in Pakistan]({origin}/products/gemini-pro/): Google Gemini Pro / Advanced with 2M context window.\n"
+        f"- [Canva Pro (Edu) in Pakistan]({origin}/products/canva-pro-edu/): Premium templates, brand kit, and Magic Studio.\n"
+        f"- [CapCut Pro in Pakistan]({origin}/products/capcut-pro/): Video editing with pro transitions, auto-captions, and AI background removal.\n"
+        f"- [ElevenLabs in Pakistan]({origin}/products/elevenlabs/): AI voice cloning and natural speech synthesis.\n"
+        f"- [Claude vs ChatGPT Guide]({origin}/compare/chatgpt-vs-claude/): Comparison and access options for Anthropic Claude.\n"
+        f"- [Leonardo AI in Pakistan]({origin}/products/leonardo-ai-essential/): Leonardo AI for creative asset generation.\n\n"
+        f"## Full Catalog Manifest\n\n"
+        f"- [Full Catalog & Offer Specifications]({origin}/llms-full.txt): Detailed specifications, pricing in PKR, access types, delivery SLAs, and replacement warranties for all 20 products.\n"
+    )
+
+def build_llms_full_txt(products, origin):
+    lines = [
+        "# AI Tools Zone - Full Catalog & Offer Specifications",
+        "",
+        "> Independent digital marketplace for AI tools and digital subscriptions in Pakistan.",
+        f"> Origin: {origin}",
+        "> Customer Support: WhatsApp +92 343 0173923",
+        "> Accepted Payment Methods: JazzCash, Easypaisa, Bank Transfer (arranged in chat)",
+        "",
+        "## Product Catalog (20 Verified Offers in PKR)",
+        ""
+    ]
+    for p in products:
+        lines.append(f"### {p['name']}")
+        lines.append(f"- **URL**: {origin}/products/{p['slug']}/")
+        lines.append(f"- **Category**: {p['category']}")
+        lines.append(f"- **Price**: PKR {p['price']:,}")
+        lines.append(f"- **Duration / Allowance**: {p['duration']}")
+        lines.append(f"- **Access Type**: {p['access']}")
+        lines.append(f"- **Delivery Estimate**: {p['delivery']}")
+        lines.append(f"- **Replacement Warranty**: {p['warranty']}")
+        if p.get('bestFor'):
+            lines.append(f"- **Best For**: {', '.join(p['bestFor'])}")
+        lines.append(f"- **Description**: {p['description']}")
+        if p.get('features'):
+            features = '; '.join(p['features'])
+            lines.append(f"- **Included Features**: {features}")
+        if p.get('vendor'):
+            lines.append(f"- **Official Vendor**: {p['vendor']}")
+        lines.append("")
+    return "\n".join(lines) + "\n"
+
+def finalize(paths, origin, write, products=None):
     state_path=ROOT/'data/page-state.json'
     previous=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else {}
     state={}
@@ -238,4 +296,30 @@ def finalize(paths, origin, write):
         state[path]={'sha256':digest,'lastmod':old['lastmod'] if old.get('sha256')==digest else content_date().isoformat()}
     write('data/page-state.json',json.dumps(state,indent=2)+'\n')
     write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{origin}{path}</loc><lastmod>{state[path]["lastmod"]}</lastmod></url>\n' for path in paths)+'</urlset>\n')
-    write('robots.txt',f'# Public search discovery; this file is not access control.\nUser-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\n# Model-training policy is independent of search discovery.\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: {origin}/sitemap.xml\n')
+    robots_txt = (
+        "# Public search discovery; this file is not access control.\n"
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        "# Dedicated AI search engines (for live search citations and answers)\n"
+        "User-agent: OAI-SearchBot\n"
+        "Allow: /\n\n"
+        "User-agent: PerplexityBot\n"
+        "Allow: /\n\n"
+        "User-agent: ClaudeBot\n"
+        "Allow: /\n\n"
+        "# Model-training policy is independent of search discovery.\n"
+        "User-agent: GPTBot\n"
+        "Disallow: /\n\n"
+        f"Sitemap: {origin}/sitemap.xml\n"
+    )
+    write('robots.txt', robots_txt)
+    write('llms.txt', build_llms_txt(origin))
+    if products is None:
+        cat_file = ROOT/'data/catalog.json'
+        if cat_file.is_file():
+            try:
+                products = json.loads(cat_file.read_text(encoding='utf-8'))
+            except Exception:
+                products = []
+    if products:
+        write('llms-full.txt', build_llms_full_txt(products, origin))

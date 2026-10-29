@@ -1,0 +1,269 @@
+# AI Tools Zone - Full Catalog & Offer Specifications
+
+> Independent digital marketplace for AI tools and digital subscriptions in Pakistan.
+> Origin: https://aitoolszone.tech
+> Customer Support: WhatsApp +92 343 0173923
+> Accepted Payment Methods: JazzCash, Easypaisa, Bank Transfer (arranged in chat)
+
+## Product Catalog (20 Verified Offers in PKR)
+
+### ChatGPT Plus
+- **URL**: https://aitoolszone.tech/products/chatgpt-plus/
+- **Category**: AI Assistants
+- **Price**: PKR 2,300
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Writing, Coding, Study
+- **Description**: Advanced reasoning and multimodal features. Available models and usage limits can vary by plan and change over time.
+- **Included Features**: Advanced AI models; Image generation; File analysis; Voice conversations
+- **Official Vendor**: https://chatgpt.com/
+
+### Gemini Pro
+- **URL**: https://aitoolszone.tech/products/gemini-pro/
+- **Category**: AI Assistants
+- **Price**: PKR 800
+- **Duration / Allowance**: 18 Months
+- **Access Type**: Invitation
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 30 Days
+- **Best For**: Research, Study, Google
+- **Description**: Google’s multimodal AI for deep research, documents, code and everyday workflow.
+- **Included Features**: 2M token context window; Google Workspace integration; Multimodal reasoning; Deep research mode
+- **Official Vendor**: https://gemini.google.com/
+
+### Veo 3 Ultra
+- **URL**: https://aitoolszone.tech/products/veo-3-ultra/
+- **Category**: AI Video
+- **Price**: PKR 2,100
+- **Duration / Allowance**: Confirm before ordering
+- **Access Type**: Shared
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Video, Ads, Creators
+- **Description**: Seller-listed access to Google's Veo video-generation service. Confirm the available plan, model, resolution, audio features and account terms before ordering.
+- **Included Features**: Confirm the available model and access tier before payment; Generation uses the current plan's credit and usage limits; Confirm resolution and audio features for this offer; Ask the seller to confirm the included allowance
+- **Official Vendor**: https://deepmind.google/models/veo/
+
+### Leonardo AI Essential
+- **URL**: https://aitoolszone.tech/products/leonardo-ai-essential/
+- **Category**: Design
+- **Price**: PKR 1,900
+- **Duration / Allowance**: 8,500 Credits
+- **Access Type**: Private
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Images, Assets, Concepts
+- **Description**: Create production-ready digital art, marketing visuals, assets and concepts.
+- **Included Features**: PhotoReal & Alchemy pipeline; Realtime canvas; Prompt enhancer; Commercial license
+- **Official Vendor**: https://leonardo.ai/
+
+### ElevenLabs
+- **URL**: https://aitoolszone.tech/products/elevenlabs/
+- **Category**: AI Voice
+- **Price**: PKR 3,300
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Voice, Dubbing, Audio
+- **Description**: Hyper-realistic AI voice synthesis & voice cloning for reels, ads, and podcasts.
+- **Included Features**: 130,000 credits/mo; Voice cloning library; Multilingual speech; Low latency API
+- **Official Vendor**: https://elevenlabs.io/
+
+### Canva Pro Edu
+- **URL**: https://aitoolszone.tech/products/canva-pro-edu/
+- **Category**: Design
+- **Price**: PKR 900
+- **Duration / Allowance**: 1 Year
+- **Access Type**: Invitation
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 30 Days
+- **Best For**: Design, Social, Students
+- **Description**: Design social media posts, pitch decks, presentations and branded assets.
+- **Included Features**: 100M+ premium assets; 1-click background remover; Magic Studio AI tools; Cloud brand kit
+- **Official Vendor**: https://www.canva.com/
+
+### Figma Pro Private
+- **URL**: https://aitoolszone.tech/products/figma-pro-private/
+- **Category**: Design
+- **Price**: PKR 3,000
+- **Duration / Allowance**: 2 Years
+- **Access Type**: Private
+- **Delivery Estimate**: 1–2 hours
+- **Replacement Warranty**: 30 Days
+- **Best For**: UI/UX, Teams, Web
+- **Description**: Professional interface design, prototyping and design system workspace.
+- **Included Features**: Unlimited files & version history; Dev Mode inspection; Shared design libraries; Full prototype viewer
+- **Official Vendor**: https://www.figma.com/
+
+### CapCut Pro
+- **URL**: https://aitoolszone.tech/products/capcut-pro/
+- **Category**: AI Video
+- **Price**: PKR 900
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Reels, Shorts, Editing
+- **Description**: Fast, intuitive editing suite for viral TikToks, Instagram Reels, and YouTube Shorts.
+- **Included Features**: Pro video transitions & filters; Auto captions generator; AI background remover; Cloud draft sync
+- **Official Vendor**: https://www.capcut.com/
+
+### Adobe Creative Cloud
+- **URL**: https://aitoolszone.tech/products/adobe-creative-cloud/
+- **Category**: Design
+- **Price**: PKR 1,700
+- **Duration / Allowance**: 2 Months
+- **Access Type**: Private
+- **Delivery Estimate**: 1–2 hours
+- **Replacement Warranty**: 7 Days
+- **Best For**: Creative, Photo, Video
+- **Description**: Complete suite of Photoshop, Illustrator, Premiere Pro, After Effects and Firefly.
+- **Included Features**: 20+ desktop & web apps; Firefly generative credits; 100GB Adobe Cloud storage; Adobe Fonts access
+- **Official Vendor**: https://www.adobe.com/creativecloud.html
+
+### Lovable Pro
+- **URL**: https://aitoolszone.tech/products/lovable-pro/
+- **Category**: Development
+- **Price**: PKR 1,600
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Apps, Web, MVPs
+- **Description**: Build, design and ship full-stack web applications and MVPs with natural language.
+- **Included Features**: AI full-stack code generator; Direct GitHub integration; Custom domains & deploy; Fast iterative edits
+- **Official Vendor**: https://lovable.dev/
+
+### Gamma Pro
+- **URL**: https://aitoolszone.tech/products/gamma-pro/
+- **Category**: Productivity
+- **Price**: PKR 23,000
+- **Duration / Allowance**: 1 Year
+- **Access Type**: Private
+- **Delivery Estimate**: 1–2 hours
+- **Replacement Warranty**: 30 Days
+- **Best For**: Slides, Pitching, Docs
+- **Description**: Turn raw ideas, briefs and outlines into interactive presentations, decks and docs.
+- **Included Features**: Unlimited AI generation; Custom fonts & themes; Analytics & tracking; Export to PDF/PowerPoint
+- **Official Vendor**: https://gamma.app/
+
+### Replit Core
+- **URL**: https://aitoolszone.tech/products/replit-core/
+- **Category**: Development
+- **Price**: PKR 3,200
+- **Duration / Allowance**: $40 Credits
+- **Access Type**: Private
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Coding, Apps, Deploy
+- **Description**: Code, collaborate, host and scale web applications with autonomous AI agents.
+- **Included Features**: Autonomous AI code agent; Instant cloud environments; Serverless hosting; $40 included usage credits
+- **Official Vendor**: https://replit.com/
+
+### n8n Starter
+- **URL**: https://aitoolszone.tech/products/n8n-starter/
+- **Category**: Development
+- **Price**: PKR 7,000
+- **Duration / Allowance**: 1 Year
+- **Access Type**: Private
+- **Delivery Estimate**: 1–2 hours
+- **Replacement Warranty**: 30 Days
+- **Best For**: Workflow, Agents, Teams
+- **Description**: Self-hosted or cloud visual workflow automation for AI agents, APIs and business logic.
+- **Included Features**: Visual drag-and-drop builder; 400+ native app integrations; LangChain AI nodes; Custom JavaScript execution
+- **Official Vendor**: https://n8n.io/
+
+### Notion Business
+- **URL**: https://aitoolszone.tech/products/notion-business/
+- **Category**: Productivity
+- **Price**: PKR 2,200
+- **Duration / Allowance**: 3 Months
+- **Access Type**: Invitation
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 30 Days
+- **Best For**: Docs, Projects, Teams
+- **Description**: All-in-one connected workspace for team knowledge, project boards, and AI summaries.
+- **Included Features**: Unlimited team blocks; Integrated Notion AI assistant; Advanced team permissions; Custom database views
+- **Official Vendor**: https://www.notion.com/
+
+### NordVPN
+- **URL**: https://aitoolszone.tech/products/nordvpn/
+- **Category**: VPN & Security
+- **Price**: PKR 1,800
+- **Duration / Allowance**: 3 Months
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Privacy, Travel, Streaming
+- **Description**: Military-grade encrypted browsing, high-speed servers, and threat protection.
+- **Included Features**: Ultra-fast 10Gbps servers; Threat protection & ad blocker; 6 simultaneous connections; Strict zero-logs policy
+- **Official Vendor**: https://nordvpn.com/
+
+### Surfshark VPN
+- **URL**: https://aitoolszone.tech/products/surfshark-vpn/
+- **Category**: VPN & Security
+- **Price**: PKR 800
+- **Duration / Allowance**: 2 Months
+- **Access Type**: Shared
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Privacy, Devices, Travel
+- **Description**: Reliable everyday privacy, geo-unblocking, and unlimited device connections.
+- **Included Features**: Unlimited device support; CleanWeb ad & tracker blocker; Global server locations; Bypasser split tunneling
+- **Official Vendor**: https://surfshark.com/
+
+### YouTube Premium
+- **URL**: https://aitoolszone.tech/products/youtube-premium/
+- **Category**: Entertainment
+- **Price**: PKR 1,200
+- **Duration / Allowance**: 3 Months
+- **Access Type**: Invitation
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 30 Days
+- **Best For**: Music, Video, Mobile
+- **Description**: Ad-free videos, background play on mobile, offline downloads, and YouTube Music.
+- **Included Features**: Zero video ads; Background & picture-in-picture; Offline smart downloads; Full YouTube Music access
+- **Official Vendor**: https://www.youtube.com/
+
+### Netflix Premium 4K
+- **URL**: https://aitoolszone.tech/products/netflix-premium-4k/
+- **Category**: Entertainment
+- **Price**: PKR 400
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Shared
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Movies, Series, 4K
+- **Description**: Stream global movies and series in crisp 4K Ultra HD with spatial audio.
+- **Included Features**: 4K Ultra HD & HDR resolution; Spatial audio support; Smart TV & laptop compatibility; Dedicated profile access
+- **Official Vendor**: https://www.netflix.com/
+
+### LinkedIn Premium
+- **URL**: https://aitoolszone.tech/products/linkedin-premium/
+- **Category**: Business
+- **Price**: PKR 1,500
+- **Duration / Allowance**: 2 Months
+- **Access Type**: Invitation
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Jobs, Learning, Sales
+- **Description**: Career growth insights, competitive applicant analysis, and LinkedIn Learning.
+- **Included Features**: 5 InMail credits per month; See who viewed your profile; Competitive job applicant insights; 16,000+ LinkedIn Learning courses
+- **Official Vendor**: https://www.linkedin.com/
+
+### Windows 11 Pro Key
+- **URL**: https://aitoolszone.tech/products/windows-11-pro-key/
+- **Category**: Software
+- **Price**: PKR 1,900
+- **Duration / Allowance**: Lifetime
+- **Access Type**: License Key
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: PC, Work, Security
+- **Description**: Official retail digital license key for permanent Windows 11 Pro activation.
+- **Included Features**: 100% genuine retail key; BitLocker drive encryption; Remote Desktop Host; Direct Microsoft online activation
+- **Official Vendor**: https://www.microsoft.com/en-us/windows/
+

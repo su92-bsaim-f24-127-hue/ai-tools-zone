@@ -2,7 +2,14 @@
 User-agent: *
 Allow: /
 
+# Dedicated AI search engines (for live search citations and answers)
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 # Model-training policy is independent of search discovery.

@@ -172,10 +172,12 @@ def run():
     for asset in assets:
         if asset.suffix in ('.png','.webp','.jpg','.svg') and asset.stat().st_size>300000:warnings.append(str(asset.relative_to(ROOT))+' image exceeds 300 KB')
     robots=RobotFileParser(); robots.parse((ROOT/'robots.txt').read_text().splitlines())
-    for bot in ('Googlebot','Bingbot','OAI-SearchBot','ChatGPT-User'):
+    for bot in ('Googlebot','Bingbot','OAI-SearchBot','ChatGPT-User','PerplexityBot','ClaudeBot'):
         for path in pages:check(robots.can_fetch(bot,ORIGIN+path),bot+' blocked '+path)
     check(not robots.can_fetch('GPTBot',ORIGIN+'/'),'Training policy unintentionally permits GPTBot')
     check(ORIGIN+'/sitemap.xml' in (robots.site_maps() or []),'Robots sitemap missing')
+    check((ROOT/'llms.txt').is_file() and (ROOT/'llms.txt').stat().st_size>100,'Missing or empty llms.txt')
+    check((ROOT/'llms-full.txt').is_file() and (ROOT/'llms-full.txt').stat().st_size>200,'Missing or empty llms-full.txt')
     notfound=Page((ROOT/'404.html').read_text(encoding='utf-8'))
     check(any('noindex' in a.get('content','') for a in notfound.attrs('meta',name='robots')),'404 missing noindex')
     check('/404.html' not in canonical_paths,'404 included in sitemap')
