@@ -2,6 +2,10 @@
 
 This is an owner-run checklist. Current Search Console indexing, impressions, clicks and rankings were not inspected today. A page returning HTTP 200 or appearing in the sitemap does not mean Google has indexed it.
 
+## Current owner action status ? 29 October 2026
+
+No authenticated Search Console report could be refreshed during this review. Current URL Inspection states, selected canonicals, query impressions, clicks and indexing exclusions are unknown. The 22 October property/sitemap observation is historical only. Open Search Console yourself and use the URL list below; do not share a password or verification code.
+
 **Current public check — 29 October 2026:** the HTTPS homepage, `robots.txt` and `sitemap.xml` return HTTP 200. The sitemap contains 67 unique canonical HTTPS URLs, and all 67 pages return HTTP 200 with matching self-canonicals. The Google verification meta tag and HTML proof file remain public. These checks do not prove current Search Console ownership or indexing. An earlier authenticated Search Console visit on 22 October showed the URL-prefix property as verified and the submitted sitemap as successful with 66 discovered pages; that account view has not been refreshed today.
 
 **Canonical follow-up:** the HTTP homepage returns the same content as HTTPS without redirecting, and `www.aitoolszone.tech` currently returns DNS `NXDOMAIN`. See [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md) for the precise owner-controlled Cloudflare/GitHub Pages steps. Do not add extra canonical tags to compensate for missing host redirects.

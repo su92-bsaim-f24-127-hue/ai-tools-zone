@@ -89,7 +89,16 @@ def tiles(entries):
 
 def product_context(p):
     related = [page['path'] for page in CONTENT['pages'] if p['id'] in page['products']]
-    return '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
+    note = ''
+    if p['id'] == 'chatgpt':
+        note = ('<section class="content-block"><h2>Confirm account ownership before ordering</h2>'
+                '<p>OpenAI says an account is meant for the individual who created it. This listing is marked Private by the seller, but that label alone does not verify who created or controls an account. Ask the seller to explain the setup and confirm the current terms before paying; never share your password or one-time codes.</p>'
+                '<p><a href="https://help.openai.com/en/articles/10471989-openai-account-sharing-policy" target="_blank" rel="noopener noreferrer">Read OpenAI account-sharing guidance</a>.</p></section>')
+    elif p['id'] == 'canva':
+        note = ('<section class="content-block"><h2>Check the Canva Education eligibility</h2>'
+                '<p>This seller-listed Pro Edu invitation is not proof of an official Canva Education entitlement. Canva Education is free for eligible K–12 teachers and schools; higher-education institutions are not currently eligible for that program. Check the current eligibility rules and ask the seller who controls the workspace and what happens if access is declined.</p>'
+                '<p><a href="https://www.canva.com/education/eligibility-guidelines/" target="_blank" rel="noopener noreferrer">Check Canva Education eligibility</a>.</p></section>')
+    return note + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
 def home_discovery():
     return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Choose with a clearer picture.</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy.</p>' + links(['/products/','/categories/','/use-cases/','/compare/','/alternatives/','/guides/','/pricing/']) + '</section>'
@@ -137,7 +146,11 @@ def build_pages(products, origin, shell, write):
     for article in BLOG['articles']:
         path=article['path']
         content='<p class="direct-answer">'+e(article['summary'])+'</p>'
-        content += '<p class="article-date">Published <time datetime="'+e(article['datePublished'])+'">'+e(article['dateLabel'])+'</time> · Research and planning guide</p>'
+        separator = chr(183)
+        date_line = 'Published <time datetime="'+e(article['datePublished'])+'">'+e(article['dateLabel'])+'</time>'
+        if article.get('dateModified'):
+            date_line += ' '+separator+' Updated <time datetime="'+e(article['dateModified'])+'">'+e(article.get('dateModifiedLabel', article['dateModified']))+'</time>'
+        content += '<p class="article-date">'+date_line+' '+separator+' Research and planning guide</p>'
         for section in article['sections']:
             content += '<section class="content-block"><h2>'+e(section['heading'])+'</h2>'
             content += ''.join('<p>'+e(paragraph)+'</p>' for paragraph in section.get('paragraphs',[]))
@@ -153,6 +166,8 @@ def build_pages(products, origin, shell, write):
             'inLanguage':'en-PK','mainEntityOfPage':origin+path,
             'author':{'@id':origin+'/#organization'},'publisher':{'@id':origin+'/#organization'}
         }
+        if article.get('dateModified'):
+            article_schema['dateModified'] = article['dateModified']
         publish(path,article['title'],article['description'],content,(),
                 [('Home','/'),('Blog','/blog/'),(article['title'],path)],(article_schema,))
 

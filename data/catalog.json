@@ -3,7 +3,7 @@
     "id": "chatgpt",
     "name": "ChatGPT Plus",
     "category": "AI Assistants",
-    "description": "Advanced reasoning (o1 models), multimodal search, canvas workspace and voice conversations.",
+    "description": "Advanced reasoning and multimodal features. Available models and usage limits can vary by plan and change over time.",
     "price": 2300,
     "duration": "1 Month",
     "access": "Private",
@@ -74,9 +74,9 @@
     "id": "veo",
     "name": "Veo 3 Ultra",
     "category": "AI Video",
-    "description": "Generate cinematic AI video with photorealistic motion, physics, and native audio.",
+    "description": "Seller-listed access to Google's Veo video-generation service. Confirm the available plan, model, resolution, audio features and account terms before ordering.",
     "price": 2100,
-    "duration": "Shared Access",
+    "duration": "Confirm before ordering",
     "access": "Shared",
     "delivery": "15–30 min",
     "warranty": "7 Days",
@@ -87,10 +87,10 @@
       "Creators"
     ],
     "features": [
-      "Text to 1080p video",
-      "Native synchronized audio",
-      "Consistent motion",
-      "Unlimited generations"
+      "Confirm the available model and access tier before payment",
+      "Generation uses the current plan's credit and usage limits",
+      "Confirm resolution and audio features for this offer",
+      "Ask the seller to confirm the included allowance"
     ],
     "intent": [
       "video",

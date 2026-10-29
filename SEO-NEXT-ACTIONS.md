@@ -7,9 +7,9 @@ Updated 29 October 2026 after a live canonical audit, a 67-page production crawl
 - Current public sitemap has 67 unique canonical HTTPS URLs. All 67 returned HTTP 200 and a matching self-canonical. The local scan found 67 unique main-content fingerprints and no repeated sitemap URLs or titles.
 - The confirmed duplicate URL variant is HTTP: `http://aitoolszone.tech/` returns the exact same body as HTTPS with no redirect, although its canonical points to HTTPS. `www.aitoolszone.tech` currently returns DNS `NXDOMAIN`. The first requires host configuration; the second requires a DNS record. See [SEO-INDEXING-DIAGNOSIS.md](SEO-INDEXING-DIAGNOSIS.md).
 - An earlier authenticated Search Console visit on 22 October showed the URL-prefix property verified and its sitemap submission successful with 66 pages discovered. That account view was not refreshed today; current URL Inspection and selected-canonical results are unknown.
-- Latest local checks: SEO 6,118 assertions with no errors/warnings; growth 2,836 assertions with no errors; deterministic build/package and 7 growth regression assertions passed. The 73-request live audit detected the HTTP redirect issue; both `www` controls were unverified due to DNS. No Lighthouse or field Core Web Vitals data was obtained today.
+- Latest local checks: SEO 6,118 assertions with no errors/warnings; growth 2,841 assertions with no errors; deterministic build/package and 7 growth regression assertions passed. The 73-request live audit detected the HTTP redirect issue; both `www` controls were unverified due to DNS. No Lighthouse or field Core Web Vitals data was obtained today.
 - Search Console indexing, query rankings, impressions, clicks, citations, backlinks, inquiries, completed orders and conversions remain unverified. A public-search sample or a successful HTTP response is not proof of indexing or rank.
-- The competitor review is recorded in [COMPETITOR-AITOOLSPAK-RESEARCH.md](COMPETITOR-AITOOLSPAK-RESEARCH.md). AI Tools Zone now covers all seven comparison-hub topics with original pages and has six original curated blog guides; overlapping student, business, developer, pricing and buying topics link to existing canonical pages. No competitor article text, offers, prices, ratings or service claims were copied.
+- The competitor review is recorded in [COMPETITOR-AITOOLSPAK-RESEARCH.md](COMPETITOR-AITOOLSPAK-RESEARCH.md). AI Tools Zone now covers all seven comparison-hub topics with original pages and has seven original curated blog guides; overlapping student, business, developer, pricing and buying topics link to existing canonical pages. No competitor article text, offers, prices, ratings or service claims were copied.
 
 ## Prioritized action register
 
@@ -22,7 +22,7 @@ Scores are 1–5. Impact, confidence, business value, SEO value and conversion v
 | P1 — Check **Settings → Search generative AI** and inspect available report data | 4 | 5 | 1 | 3 | 4 | 1 | 1 | The property setting is account-only and cannot be checked in this workspace. Confirm inclusion or inheritance from an included parent. Google says its default is inclusion; do not assume this property's current state. |
 | P1 — Reconfirm all 20 seller offers and update only verified catalog changes | 5 | 4 | 3 | 5 | 4 | 5 | 2 | Prices, eligibility, access and availability can change and feed pages, schema and WhatsApp drafts. Confirm against current supplier records before editing; preserve stable product URLs. |
 | P1 — Establish a private weekly baseline for visits, search activity and confirmed orders | 4 | 4 | 2 | 4 | 3 | 5 | 1 | Cloudflare reports aggregate visits; Search Console/Bing data and completed orders are not connected to this code workspace. Track anonymous totals and owner-confirmed order outcomes separately; never treat clicks as sales. |
-| P2 — Improve a page only when Search Console queries or recurring support questions show a real gap | 4 | 3 | 3 | 4 | 4 | 4 | 2 | The keyword map has 248 intent mappings but no measured search demand. Use the exact query and landing page to adjust its answer, terms or internal links; keep one canonical owner per topic. |
+| P2 — Improve a page only when Search Console queries or recurring support questions show a real gap | 4 | 3 | 3 | 4 | 4 | 4 | 2 | The keyword map has 270 intent mappings but no measured search demand. Use the exact query and landing page to adjust its answer, terms or internal links; keep one canonical owner per topic. |
 | P2 — Prepare one owner-verified Pakistan pricing/access reference asset before relevant outreach | 3 | 3 | 4 | 3 | 3 | 2 | 3 | Competitor samples show that source dates, term/access comparisons and a method are useful visible patterns. First confirm a reproducible data source and review owner; send no bulk outreach and buy no links. |
 | P3 — Consider a supported custom-event analytics collector only if the owner needs click-to-order measurement | 3 | 3 | 3 | 4 | 1 | 4 | 3 | Existing local hooks do not collect or transmit events, and Cloudflare Web Analytics does not provide this custom-event collector. Choose a supported provider and review consent/privacy requirements before any implementation. |
 
@@ -55,7 +55,7 @@ The current workspace has no connected browser window, so I could not produce a 
 
 ## Priority 3: use competitor observations to improve existing pages
 
-The [competitor matrix](SEO-COMPETITOR-MATRIX.csv) suggests content experiments, not proven ranking gaps. Keep the current 53-URL architecture and use Search Console queries to validate demand before adding routes.
+The [competitor matrix](SEO-COMPETITOR-MATRIX.csv) suggests content experiments, not proven ranking gaps. Keep the current 67-URL architecture and use Search Console queries to validate demand before adding routes.
 
 | Observed pattern | Existing AI Tools Zone page to improve | Next action |
 |---|---|---|

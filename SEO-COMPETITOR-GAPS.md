@@ -2,6 +2,20 @@
 
 # Competitor intelligence and content gaps
 
+## Follow-up public sample: 29 October 2026
+
+This follow-up checked public pages from [AI Tools Pak](https://aitoolspak.tech/), [Iku Digital Tools](https://www.ikudigitaltools.com/), [SubBazaar](https://subbazaar.pk/?category=ai-tools), [Futurepedia](https://www.futurepedia.io/discover) and [Toolify](https://www.toolify.ai/category/ai-writing). It is a limited page-architecture sample, not a localized Google ranking study, business verification or independent check of seller terms. No accounts, paywalls or bot challenges were bypassed.
+
+| Site / page intent | Publicly observed pattern on 29 Oct | Useful response for AI Tools Zone | Evidence limit |
+|---|---|---|---|
+| AI Tools Pak — Pakistan catalog and buying guides | Home presents a Pakistan-focused seller catalog with PKR terms, WhatsApp ordering and buyer checks; its broad buying guide combines catalog, comparisons, pricing and purchase questions. | Keep independent-seller identity, actual offer scope, access conditions, checking method and customer questions clear. AI Tools Zone already has product/category/comparison routes; add only verified decision-helpful detail. | Publisher offers, stock, prices, reviews and fulfillment are not independently verified; page count is not a Google-quality or ranking metric. |
+| Iku Digital Tools — multi-plan storefront | Homepage shows searchable catalog, product plans, WhatsApp support and buyer confirmation messaging. | Show exact duration/access for each offer and identify the confirmation step. Keep local ordering transparent. | Publisher prices and service claims were not verified; no order completed. |
+| SubBazaar — Pakistan AI subscription category | Public AI category presents multiple AI offers with price/term choices and WhatsApp support language. | Distinguish seller offers from official vendor plans; confirm account ownership and allowances before payment. | Seller prices, availability and delivery claims are not independently verified; no checkout completed. |
+| Futurepedia — global AI discovery | Discover page offers search, filters/categories and tool lists. | Existing categories and finder already support discovery; refine only when query or customer evidence reveals a gap. | Counts/popularity claims are publisher statements; no traffic or rank data obtained. |
+| Toolify — global tool directory/editorial | Category page shows intro, sorting and tool cards with navigation to rankings, workflows and resources. | Use original buyer guidance and clear seller terms rather than broad unverified popularity/ranking claims. | Publisher estimates and rankings are unverified; one category sample cannot establish search performance. |
+
+**Inference:** competitor storefronts make price, duration, access and confirmation conditions easy to scan. This is a useful UX pattern, not proof that any site ranks above AI Tools Zone. The actionable gap here is owner-verified offer accuracy, particularly account ownership/eligibility and usage allowances. No competitor text, prices, logos or reviews were copied.
+
 ## Fresh public sample: 22 October 2026
 
 This refresh examines public pages from the five requested global discovery sites plus local Pakistan seller pages. It is a page-level product and content sample, not a full crawl, localized Google ranking study or independent validation of seller claims. Current global samples are [Futurepedia Discover](https://www.futurepedia.io/discover) and its [workflow category](https://www.futurepedia.io/ai-tools/workflows), [Toolify's AI-writing category](https://www.toolify.ai/category/ai-writing), [TopAI's AI-assistant category](https://topai.tools/category/ai-assistant), and [Future Tools](https://futuretools.io/). TAAFT's direct page remained inaccessible to the research reader (HTTP 403 in the robots-respecting collector); no access controls were bypassed. The local seller sample includes [Subscription.PK](https://subscription.pk/category/ai-tools), [SubBazaar's AI category](https://subbazaar.pk/c/ai-tools) and [ChatGPT offer page](https://subbazaar.pk/p/chatgpt-plus), while AI Tools Pak has its own [expanded research record](COMPETITOR-AITOOLSPAK-RESEARCH.md).
@@ -62,7 +76,7 @@ Direct requests to [Google's Pakistan-targeted query](https://www.google.com/sea
 
 ## Prioritized gap matrix
 
-The keyword-to-page map is [SEO-KEYWORD-MAP.csv](SEO-KEYWORD-MAP.csv) (217 rows including its header). The site-by-site evidence matrix is [SEO-COMPETITOR-MATRIX.csv](SEO-COMPETITOR-MATRIX.csv). Keyword variants map to a bounded set of canonical destinations; they do not produce duplicate URLs. Search demand, competition and ranking status remain unverified without owner Search Console data or a reliable localized dataset. `build_keyword_map.py` regenerates the keyword map from the catalog and editorial architecture.
+The keyword-to-page map is [SEO-KEYWORD-MAP.csv](SEO-KEYWORD-MAP.csv) (270 unique intent mappings (271 CSV lines including its header) as of 29 October 2026). The site-by-site evidence matrix is [SEO-COMPETITOR-MATRIX.csv](SEO-COMPETITOR-MATRIX.csv). Keyword variants map to a bounded set of canonical destinations; they do not produce duplicate URLs. Search demand, competition and ranking status remain unverified without owner Search Console data or a reliable localized dataset. `build_keyword_map.py` regenerates the keyword map from the catalog and editorial architecture.
 
 | Cluster | Baseline gap | Implemented destination | Value and priority |
 |---|---|---|---|

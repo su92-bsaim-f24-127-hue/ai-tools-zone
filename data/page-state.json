@@ -1,19 +1,19 @@
 {
   "/": {
-    "sha256": "4b8968377d1ef8f6e22521d91247056b88fdc81557b51d022487a15c3bb19cf7",
-    "lastmod": "2026-10-26"
+    "sha256": "904583bdf0c3e1fcb9c95e5fd5c6b67e462606532431a9d7e50ac6406d2583a2",
+    "lastmod": "2026-10-29"
   },
   "/products/chatgpt-plus/": {
-    "sha256": "1d64a14848c3607db1d5bee6b3a63868cb6d69b6483f766b7bf598695ac1533e",
-    "lastmod": "2026-10-26"
+    "sha256": "978b130152bc13df25ed9a512a7b50f54ae20ea2d9e863d34b60544e2861476a",
+    "lastmod": "2026-10-29"
   },
   "/products/gemini-pro/": {
     "sha256": "17afd9b19f63b6a008cd1df6e00e3f8b7bd5284a5c22f1ec230f5fd7dbdff818",
     "lastmod": "2026-10-26"
   },
   "/products/veo-3-ultra/": {
-    "sha256": "e7970a08127f32ccd5e9d0aac941b78ae6d8c306f5e2f63cf5a6ad37c1a2ca0e",
-    "lastmod": "2026-10-26"
+    "sha256": "a122e52d20de0732c480528b1c280d5cb0dc0a334ab2e976d4a11e0e01037add",
+    "lastmod": "2026-10-29"
   },
   "/products/leonardo-ai-essential/": {
     "sha256": "0113176630fb86bc8e359b7c13bcc3db76e399ab8179740efe47ff7bc3beb699",
@@ -24,8 +24,8 @@
     "lastmod": "2026-10-26"
   },
   "/products/canva-pro-edu/": {
-    "sha256": "f8b041a1543a4942cab8b65dfff9b6eff4222922d0abcd9f6c880cbdfbf2609f",
-    "lastmod": "2026-10-26"
+    "sha256": "eb2aad911e38351eb0ae27ba102f02607e0112e417fe1309d116301e6979f5de",
+    "lastmod": "2026-10-29"
   },
   "/products/figma-pro-private/": {
     "sha256": "317b9b48df2e46e400095a3c6d07f2b50a6d36d235767d48a0218bc448b416be",
@@ -100,12 +100,12 @@
     "lastmod": "2026-10-22"
   },
   "/categories/ai-video/": {
-    "sha256": "15a7f6785568c66cbdcf11f89316484dfccb1303ef4775d3f877e466b4e6c2f9",
-    "lastmod": "2026-10-26"
+    "sha256": "aa9cbfdf8597ece81b48ecc3997eec9c4139f34cd45a33f3aad7b6a170fd938a",
+    "lastmod": "2026-10-29"
   },
   "/categories/design/": {
-    "sha256": "b03c679a15773e42b5c2782ec1d116512d4b96ac836a23d81cec30dff9e01e30",
-    "lastmod": "2026-10-22"
+    "sha256": "e153ac6dd15c30999ec35173d2f567e5d72827253353287f2ca48f5d030d6a27",
+    "lastmod": "2026-10-29"
   },
   "/categories/ai-voice/": {
     "sha256": "d545e330b10e0542dc737d68f66b3230a0380ce68c5ac893d8fa23f08459da7d",
@@ -232,12 +232,12 @@
     "lastmod": "2026-10-22"
   },
   "/blog/how-to-pay-for-chatgpt-plus-pakistan/": {
-    "sha256": "16785a91c12dcee9b0c640da005d72922b89d1379b215b6b09a3f2005728ab7b",
-    "lastmod": "2026-10-26"
+    "sha256": "efbf6b674b1e3fdce5145903b7610bad00beed56b1e0027a4dececbc25f5c849",
+    "lastmod": "2026-10-29"
   },
   "/products/": {
-    "sha256": "d34b503d287de37bf8ed18fb73b267f943d5fd47a26c51678e063f3786006a45",
-    "lastmod": "2026-10-26"
+    "sha256": "a94d77c4e098bef08b513a1f6f755cfe889c0af8b93801d1788bcb1542e84c85",
+    "lastmod": "2026-10-29"
   },
   "/categories/": {
     "sha256": "2679a1a0251517f0db80ba91683603e17bff18ee80f1281f5d548c77e59b51f4",
@@ -260,11 +260,11 @@
     "lastmod": "2026-10-22"
   },
   "/pricing/": {
-    "sha256": "e471de0e2020bf777ddb5679959f776f4ee8f674ba7826ae5914998b2129e53e",
-    "lastmod": "2026-10-26"
+    "sha256": "7d39e20117e2b4d484b78d2e998b6f0c89fd241b2869025ca54bbce0f410f8c0",
+    "lastmod": "2026-10-29"
   },
   "/blog/": {
-    "sha256": "c518262fa2a463c504ddb8309ead37eb4b60fed2ad1a202c3ea3b27a511679c1",
-    "lastmod": "2026-10-26"
+    "sha256": "34d588a5a421fd4474f4399d21dc01e1a7e38456ae86236ee46d4ba0aebbd85b",
+    "lastmod": "2026-10-29"
   }
 }

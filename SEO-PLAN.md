@@ -1,22 +1,22 @@
 # AI Tools Zone: 30/60/90-day search growth plan
 
-Updated 22 October 2026. The local site now builds 66 canonical pages, including original comparison and editorial additions; the public deployment has not been updated by this local work. This plan does not promise a ranking, traffic volume or customer count. Baseline implementation and current evidence are in [SEO-AUDIT.md](SEO-AUDIT.md), [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md) and [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md).
+Updated 29 October 2026. The live site currently exposes 67 canonical HTTPS pages. Source fixes from this review remain local until the GitHub Pages workflow successfully publishes them. This plan does not promise a ranking, traffic volume or customer count. Baseline implementation and current evidence are in [SEO-AUDIT.md](SEO-AUDIT.md), [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md) and [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md).
 
-## Days 1 to 30: establish reliable evidence (22 October to 20 November 2026)
+## Days 1 to 30: establish reliable evidence (29 October to 27 November 2026)
 
 - Owner: publish the pending website verification changes, then verify the appropriate URL-prefix HTML method or Domain DNS TXT property in Google Search Console and verify Bing Webmaster Tools; submit `https://aitoolszone.tech/sitemap.xml`. Check indexing, canonical selection, page experience and standard query/page reports. Once verified, inspect the Google Generative AI performance report if it appears and has data; record impressions and pages separately from clicks, inquiries and orders. Search engines decide whether and when pages appear.
 - Owner: re-confirm all 20 offer prices, duration, account/access type, eligibility, renewal, availability and replacement terms against current supplier terms. Update the catalog only with verified changes and rebuild the site.
-- Maintain the current 66 local canonical URLs. Fix newly observed crawl errors or broken links; add pages only for a distinct customer decision with current evidence, not for keyword permutations.
+- Maintain the current 67 canonical URLs. Fix newly observed crawl errors or broken links; add pages only for a distinct customer decision with current evidence, not for keyword permutations.
 - Review Cloudflare aggregate visits weekly. Record only anonymous totals/referrers for this work; keep customer chats, phone numbers and order records out of analytics exports and the repository.
 
-## Days 31 to 60: improve pages that show real demand (21 November to 20 December 2026)
+## Days 31 to 60: improve pages that show real demand (28 November to 27 December 2026)
 
 - Compare Search Console query/page/device/country windows after sufficient data accumulates. Separate branded, product, category, pricing and informational intents; annotate deployment dates and avoid drawing conclusions from tiny samples.
 - Update the exact page that under-serves a query: clarify the answer, offer limits, date/source, or internal link. Preserve stable URLs and canonical behavior. Add a new page only when it serves a distinct customer decision and has verified facts.
 - Ask a small number of recent customers for the questions they needed answered, without publishing names, chats, testimonials or ratings without permission and evidence.
 - Recheck representative mobile layouts, WhatsApp order-message content and live route/canonical behavior after any code change.
 
-## Days 61 to 90: evaluate and choose the next work (21 December 2026 to 19 January 2027)
+## Days 61 to 90: evaluate and choose the next work (28 December 2026 to 26 January 2027)
 
 - Compare equivalent date windows for impressions, clicks, landing pages, aggregate visits, WhatsApp click intent and owner-confirmed completed orders. Treat each as a different measure; clicks are not sales.
 - Refresh or consolidate only pages with evidence of stale facts, overlap, errors or unmet demand. Do not use mass-generated doorway pages, fake reviews, unsupported expertise claims or copied competitor content.
