@@ -2,7 +2,9 @@
 
 **Review date:** 29 October 2026<br>
 **Environment:** Windows local repository plus public production HTTP/DNS checks.<br>
-**Deployment:** Source edits are local until the GitHub Pages workflow successfully publishes them; a local build is not live-deployment evidence.
+**Deployment:** Commit `fa9319f` was pushed to the primary GitHub repository. GitHub Pages workflow [40870834971](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/actions/runs/40870834971) completed successfully.
+
+**Post-deploy check:** The GitHub Pages host `su92-bsaim-f24-127-hue.github.io/ai-tools-zone/` serves the new ChatGPT article, account-ownership note and corrected Veo listing. On 29 October at 12:09 UTC, `aitoolszone.tech` still returned Cloudflare `CF-Cache-Status: HIT` HTML from before the deployment for those pages. Purge those URLs from the Cloudflare zone or wait for its configured edge cache expiry, then verify the custom domain again. No Cloudflare credentials or settings were changed.
 
 ## Findings before changes
 

@@ -2,7 +2,7 @@
 
 **Run:** 29 October 2026 (Asia/Karachi)<br>
 **Target:** local rebuilt static site in the existing repository.<br>
-**Live comparison:** public production site before the pending source edits are deployed.
+**Live comparison:** GitHub Pages deployment succeeded; the custom domain was still returning a Cloudflare-cached previous response at the time of verification.
 
 ## Local build and code checks
 
@@ -32,10 +32,12 @@
 | `python audit_seo_live.py` | FAIL — owner-controlled redirect | 73 requests: 70 HTTP 200, two unresolved DNS/HTTP results for `www`, and one deliberate missing-route 404. The only failure was `http://aitoolszone.tech/` returning 200 instead of redirecting to HTTPS. The 67 sitemap URLs each passed 200/self-canonical checks. |
 | `https://aitoolszone.tech/robots.txt` | PASS | HTTP 200; intended public paths allowed; HTTPS sitemap referenced; Googlebot not blocked. |
 | `https://aitoolszone.tech/sitemap.xml` | PASS | HTTP 200; 67 unique canonical HTTPS routes. |
+| GitHub Pages deployment | PASS | Workflow [40870834971](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/actions/runs/40870834971) succeeded for commit `fa9319f`; direct `github.io` product/article pages contain the new text. |
+| Changed pages on `https://aitoolszone.tech/` | STALE EDGE CACHE | Requests returned HTTP 200 with Cloudflare `CF-Cache-Status: HIT`, but still served the old ChatGPT article title and Veo “Unlimited generations” copy after deployment. Purge the affected URLs in Cloudflare or wait for the configured edge TTL, then recheck. |
 | `www.aitoolszone.tech` | UNVERIFIED | DNS `NXDOMAIN`, so no HTTP response or redirect can be tested. |
 
 The live crawl is a public web request and does not verify how Google's own crawler or index sees a URL. Current Search Console URL Inspection, field Core Web Vitals and PageSpeed Insights results were not available. Search Console owner steps are in [SEARCH-CONSOLE-SETUP.md](SEARCH-CONSOLE-SETUP.md).
 
 ## Reproducibility
 
-From the repository root, run the commands in the tables above. `audit_seo_live.py` and `audit_seo_browser.py` require network/browser support. The static build does not change Cloudflare or GitHub Pages settings. After the owner enables an HTTP-to-HTTPS redirect and after deployment, rerun the live audit and inspect representative changed URLs.
+From the repository root, run the commands in the tables above. `audit_seo_live.py` and `audit_seo_browser.py` require network/browser support. The static build does not change Cloudflare settings. After the owner enables an HTTP-to-HTTPS redirect and clears/waits out the stale edge cache, rerun the live audit and inspect representative changed URLs.

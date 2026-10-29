@@ -1,6 +1,6 @@
 # AI Tools Zone: 30/60/90-day search growth plan
 
-Updated 29 October 2026. The live site currently exposes 67 canonical HTTPS pages. Source fixes from this review remain local until the GitHub Pages workflow successfully publishes them. This plan does not promise a ranking, traffic volume or customer count. Baseline implementation and current evidence are in [SEO-AUDIT.md](SEO-AUDIT.md), [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md) and [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md).
+Updated 29 October 2026. The live site currently exposes 67 canonical HTTPS pages. Commit `fa9319f` is deployed to GitHub Pages; Cloudflare was still serving an older cached copy on the custom domain at the last check. This plan does not promise a ranking, traffic volume or customer count. Baseline implementation and current evidence are in [SEO-AUDIT.md](SEO-AUDIT.md), [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md) and [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md).
 
 ## Days 1 to 30: establish reliable evidence (29 October to 27 November 2026)
 
