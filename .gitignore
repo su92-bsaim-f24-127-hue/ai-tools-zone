@@ -5,6 +5,7 @@ demo.html
 reference-app.js
 ai-tools-zone.zip
 .tools/
+node_modules/
 .env
 .env.*
 !.env.example
