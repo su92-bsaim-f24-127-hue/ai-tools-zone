@@ -2,6 +2,8 @@
 
 Updated 29 October 2026 after a 67-route live crawl and public competitor follow-up. The current sitemap has 67 canonical HTTPS URLs, including 20 product pages. The [keyword map](SEO-KEYWORD-MAP.csv) has 270 intent mappings; demand, competition, indexing and ranking remain unverified without current Search Console data. The site has seven original blog guides and seven comparison subjects. Prioritize accurate seller terms and reader evidence over creating more URLs.
 
+The owner-provided SEO audit (`docs/AI_Tools_Zone_SEO_Audit.md`) is a useful content and trust checklist, but its browser could not fetch the production site and it had no Search Console or backlink data. Later live checks supersede its technical “not verified” labels for the homepage, robots file, sitemap and current sitemap routes. Its page-value, trust and external-visibility suggestions should be tested against actual customer questions, owner-confirmed business facts and Search Console evidence; they are not established ranking causes.
+
 ## Page roles and editorial rules
 
 | Page group | Buyer intent | Content to maintain | Evidence required |
