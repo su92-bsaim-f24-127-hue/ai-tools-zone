@@ -13,6 +13,8 @@
     const detail={name,page:path,section:sections.has(section)?section:'other'};
     if(ids.has(extra.product))detail.product=extra.product;
     document.dispatchEvent(new CustomEvent('aitz:measure',{detail}));
+    if(typeof window.gtag==='function')window.gtag('event',name,detail);
+    else if(Array.isArray(window.dataLayer))window.dataLayer.push({event:name,...detail});
   };
   window.aitzMeasure=emit;
   emit('page_view');
