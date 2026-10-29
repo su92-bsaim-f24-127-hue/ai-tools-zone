@@ -1,6 +1,6 @@
 {
-  "expected_pages": 69,
-  "reason": "Add dedicated developer comparison hub for Replit Core vs Lovable Pro covering prompt-to-app building, cloud IDE workflows, and PKR pricing in Pakistan; preserve all existing routes and product slugs.",
+  "expected_pages": 70,
+  "reason": "Add practical advisory guide on avoiding account bans, IP stability, and session rules for shared AI subscriptions in Pakistan; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -13,6 +13,7 @@
     "/blog/ai-tools-for-content-creators-pakistan/",
     "/blog/ai-tools-for-pakistani-freelancers/",
     "/blog/ai-tools-for-teachers-pakistan/",
+    "/blog/avoiding-account-bans-shared-ai-tools-pakistan/",
     "/blog/free-ai-tools-pakistan/",
     "/blog/how-to-pay-for-chatgpt-plus-pakistan/",
     "/blog/jazzcash-easypaisa-ai-tools-pakistan/",

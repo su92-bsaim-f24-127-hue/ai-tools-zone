@@ -243,6 +243,10 @@
     "sha256": "707e917a23cc4aa3f0016e7d8254e2d7c0424342cbcdb8119b6433ad07c6871f",
     "lastmod": "2026-10-30"
   },
+  "/blog/avoiding-account-bans-shared-ai-tools-pakistan/": {
+    "sha256": "c99eadb08dac63eeff1716a1e29b48dfb637872625f8169860cf57e921818edd",
+    "lastmod": "2026-10-30"
+  },
   "/products/": {
     "sha256": "ab1ba69658fe7efc4a47877ac2fdb68351260d35ddd05eecd438c03a51a7f8ed",
     "lastmod": "2026-10-29"
@@ -272,7 +276,7 @@
     "lastmod": "2026-10-29"
   },
   "/blog/": {
-    "sha256": "52612335b91ca78d2f214e11a47dc7fa66365ba6296c65b3376d789cb0b08566",
+    "sha256": "1a2033aeeab16490c647773dae8133b0818fe673344e3c656a8f8181a748efb3",
     "lastmod": "2026-10-30"
   }
 }
