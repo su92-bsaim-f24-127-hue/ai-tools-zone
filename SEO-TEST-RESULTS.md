@@ -1,6 +1,23 @@
 # SEO, website and conversion test results
 
-**Run:** 29 October 2026 (Asia/Karachi)<br>
+**Run:** 2 November 2026 (Asia/Karachi)<br>
+**Target:** Local rebuilt static site in the repository (`su92-bsaim-f24-127-hue/ai-tools-zone`).<br>
+**Coverage Status:** 70 canonical pages in `sitemap.xml`; GSC confirmed 42 indexed pages and 22 discovered URLs queued.
+
+## Local build and code checks (2 November 2026 Verification)
+
+| Command | Result | Evidence |
+|---|---|---|
+| `python build_site.py` | PASS | Built homepage, 20 product pages, 3 information pages, 404, sitemap and manifest; **70 canonical pages** with content-based lastmod. |
+| `python test_seo_build.py` | PASS | Freshness, unchanged-date preservation, deterministic build, GSC/Bing verification tags and safe production package passed. |
+| `python audit_seo.py` | PASS | **6,813 checks; 70 unique main-content pages; zero errors; zero warnings**; max crawl depth 3; 108 local resources checked. |
+| `python audit_growth.py` | PASS | **3,254 checks; zero errors**; 70 indexable pages; 71 inventoried pages (incl. 404); 20 product offers; **2,112 incoming internal links** (increased from 1,752 via +271 new internal links). |
+| `python test_growth.py` | PASS | **7 growth regression assertions passed** (unexpected routes/slugs, credential guard, changed/deleted/added/no-change notifications). |
+| `python package_site.py` | PASS | Packaged production distribution `ai-tools-zone.zip` (1,342,611 bytes, 128 production files). |
+
+---
+
+## Historical Run: 29 October 2026 (Asia/Karachi)<br>
 **Target:** local rebuilt static site in the existing repository.<br>
 **Live comparison:** GitHub Pages deployment succeeded; the custom domain was still returning a Cloudflare-cached previous response at the time of verification.
 

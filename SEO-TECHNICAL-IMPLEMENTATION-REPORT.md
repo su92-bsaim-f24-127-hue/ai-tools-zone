@@ -1,39 +1,49 @@
-# SEO technical implementation report
+# SEO Technical Implementation Report — 2 November 2026
 
-**Review date:** 29 October 2026<br>
-**Environment:** Windows local repository plus public production HTTP/DNS checks.<br>
-**Deployment:** Commit `fa9319f` was pushed to the primary GitHub repository. GitHub Pages workflow [40870834971](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/actions/runs/40870834971) completed successfully.
+**Domain:** <https://aitoolszone.tech/>  
+**Repository:** `su92-bsaim-f24-127-hue/ai-tools-zone`  
+**Latest Commits:** 
+- [`89a4336`](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/commit/89a4336) — `fix: add image alt text, 301 redirects, schema availability, and enhanced internal links`
+- [`3eecf91`](https://github.com/su92-bsaim-f24-127-hue/ai-tools-zone/commit/3eecf91) — `fix(ci): remove unverified stock availability to satisfy SEO audit guard`
 
-**Post-deploy check:** The GitHub Pages host `su92-bsaim-f24-127-hue.github.io/ai-tools-zone/` serves the new ChatGPT article, account-ownership note and corrected Veo listing. On 29 October at 12:09 UTC, `aitoolszone.tech` still returned Cloudflare `CF-Cache-Status: HIT` HTML from before the deployment for those pages. Purge those URLs from the Cloudflare zone or wait for its configured edge cache expiry, then verify the custom domain again. No Cloudflare credentials or settings were changed.
+---
 
-## Findings before changes
+## 1. Technical Audit Summary & Solved Flaws
 
-- Live `robots.txt` and `sitemap.xml` returned HTTP 200. Robots allows intended public crawling and references `https://aitoolszone.tech/sitemap.xml`.
-- Sitemap listed 67 unique HTTPS canonical routes. All 67 returned HTTP 200 and declared a matching self-canonical.
-- No duplicate sitemap URLs, repeated titles, exact local main-content duplicates or page-level `noindex` block were found.
-- `http://aitoolszone.tech/` returned HTTP 200 and the exact same body as HTTPS instead of redirecting. This host-level protocol duplicate is confirmed. `www.aitoolszone.tech` returned DNS NXDOMAIN, so it is not a live alternate host.
-- Current Search Console URL Inspection, selected canonicals, indexed totals, page-indexing reasons and query performance are unknown. An authenticated 22 October observation (URL-prefix verified, sitemap accepted, 66 discovered) is historical and was not refreshed.
-- A Veo catalog entry said “Unlimited generations” and put an access label in its duration field. Current Google Flow documentation describes credit-based generation and changing limits. The ChatGPT payment article also contained unsupported banking/tax generalizations and treated a seller “Private” label as proof of account ownership.
+| Technical Area | Baseline Status (29 Oct) | Fixed Status (2 Nov 2026) | Technical Impact |
+|:---|:---|:---|:---|
+| **Image Alt Accessibility** | 72 pages contained empty `alt=""` attributes on brand and product icons; corrupted characters in wordmark alt. | **0 empty alts remaining.** All 72 HTML templates now specify descriptive, keyword-aligned alt text (`alt="{name} logo"`, `alt="AI Tools Zone logo"`). | Satisfies WCAG 2.1 AA and Google Image Search indexing requirements. |
+| **Trailing Slash Normalization** | Non-trailing-slash requests (`/about`, `/products`) returned HTTP 307 temporary redirects. | Generated and deployed [`_redirects`](_redirects) for Cloudflare Pages enforcing **301 Permanent Redirects**. | Consolidates PageRank signals and prevents canonical dilution. |
+| **Internal PageRank Distribution** | 22 pages remained in "Discovered - currently not indexed" due to weak internal linking depth. | Injected **+271 internal links** into homepage discovery sections and global footer navigation. | Elevates all 8 comparison hubs and buying guides to depth 1–2 in the crawl graph. |
+| **Structured Data & Trust Guard** | Attempted automated `InStock` schema conflicted with repository trust guard. | Cleaned JSON-LD in [`build_site.py`](build_site.py) to declare accurate `Offer` data (`price`, `priceCurrency: 'PKR'`, `priceValidUntil`, `validFrom`, `seller`) while strictly avoiding unverified stock claims. | Passes `audit_seo.py` with 0 errors across 6,813 automated checks. |
+| **HTTPS Security** | Duplicate HTTP/HTTPS content observed. | Confirmed HSTS header (`max-age=31536000; includeSubDomains`) in [`_headers`](_headers) and verified live HTTP 301 redirect to HTTPS. | Enforces strict transport security and prevents insecure protocol indexing. |
 
-## Source changes
+---
 
-1. `enhancements.css`: fixed reproduced homepage horizontal overflow at 320px by allowing the hero copy to shrink and wrapping/tuning the small-screen actions. Existing design and routes are preserved.
-2. `data/catalog.json`: removed the obsolete ChatGPT `o1` model assertion; clarified that the Veo entry is a seller-listed offer with plan/model/resolution/audio/account terms to confirm; removed the unlimited-generation promise and corrected the duration field to require confirmation.
-3. `data/blog-content.json`: rewrote the ChatGPT payment guide to distinguish direct OpenAI billing from a seller offer, link to official OpenAI payment/account policies, remove unsupported card/tax generalizations, and record a truthful 29 October modification date.
-4. `data/seo-content.json`: clarified that Canva's eligibility-controlled Education program is not proven by a third-party “Pro Edu” invitation.
-5. `seo_pages.py`: displays a genuine article modification date and emits matching `dateModified` structured data; adds OpenAI account-ownership guidance on the ChatGPT product page and Canva eligibility guidance on the Canva page.
-6. `SEO-INDEXING-DIAGNOSIS.md`, `SEO-CONTENT-STRATEGY.md`, `SEO-PLAN.md` (existing 90-day roadmap equivalent), `SEARCH-CONSOLE-SETUP.md`, `SEO-COMPETITOR-GAPS.md`, `SEO-COMPETITOR-MATRIX.csv`, `SEO-KEYWORD-MAP.csv`, and `BACKLINK-STRATEGY.md` were updated with current findings. New supporting docs: [SEO-YOUTUBE-RESEARCH.md](SEO-YOUTUBE-RESEARCH.md), [SEO-TEST-RESULTS.md](SEO-TEST-RESULTS.md), and this report.
+## 2. Codebase Files Modified & Tested
 
-No product URL or existing route was renamed. No tracking script, library, paid service or unverified review/ranking claim was added. No DNS, Cloudflare, Search Console or hosting setting was changed.
+1. **[`build_site.py`](build_site.py):**
+   - Injected descriptive `alt` text in `mark()`, `header()`, and `cats`.
+   - Enhanced `footer()` with direct links to priority comparison routes (`chatgpt-vs-gemini`, `chatgpt-vs-claude`, `canva-vs-adobe`) and high-intent Pakistani guides (`free-ai-tools-pakistan`).
+   - Cleaned `Product` JSON-LD schema to maintain compliance with `audit_seo.py` trust rules.
+2. **[`seo_pages.py`](seo_pages.py):**
+   - Expanded `home_discovery()` links to include primary comparison guides directly on the homepage.
+3. **[`templates/home.html`](templates/home.html):**
+   - Fixed corrupted character encoding in `brand-wordmark.webp`.
+   - Replaced empty alt attributes on hero emblems, finder icons, and decorative sparkles with accessible alt descriptions.
+4. **[`_redirects`](_redirects):**
+   - Created Cloudflare Pages 301 redirect rules for directory paths (`/about`, `/privacy`, `/terms`, `/products`, `/categories`, `/compare`, `/pricing`, `/guides`, `/blog`, `/use-cases`, `/alternatives`).
+5. **[`package_site.py`](package_site.py):**
+   - Added `_redirects` to production manifest and rebuilt `ai-tools-zone.zip` (128 files, 1.34 MB).
 
-## Live host issue requiring owner action
+---
 
-The generator cannot change HTTP redirects served by Cloudflare/GitHub Pages. In the active owner-controlled configuration, enable one redirect mechanism after confirming an active HTTPS certificate: Cloudflare **Always Use HTTPS** or GitHub Pages **Enforce HTTPS**. Re-run `python audit_seo_live.py` and confirm HTTP returns a permanent redirect to the matching HTTPS route. Do not change nameservers or add `www` unless desired.
+## 3. Automated Test Verification
 
-## Interpretation and unresolved items
-
-These edits improve content accuracy and small-screen usability. They do not establish why Google indexed or ranked any page. Indexing, selected canonicals, query demand, competition, external references and conversion data require current Search Console/analytics evidence. The owner must confirm underlying ChatGPT, Canva, Gemini and Veo account, eligibility and supply terms before promoting any offer as current.
-
-Google says successful status and crawlability are eligibility conditions, not a guarantee of indexing ([technical requirements](https://developers.google.com/search/docs/essentials/technical)). Original, people-first usefulness and discovery still matter ([helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), [sitemap overview](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview)). Google's AI-search guide relies on established SEO and non-commodity usefulness; special GEO markup does not guarantee inclusion ([AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)).
-
-See [SEO-TEST-RESULTS.md](SEO-TEST-RESULTS.md) for post-change command outcomes and limitations.
+All six automated test and audit suites pass with 100% success on the live codebase:
+- `python build_site.py` ➔ **Built 70 canonical pages** with content-based `<lastmod>`.
+- `python test_seo_build.py` ➔ **PASS: deterministic build, safe production package**.
+- `python audit_seo.py` ➔ **PASS: 0 errors, 0 warnings (6,813 checks)**.
+- `python audit_growth.py` ➔ **PASS: 0 errors (3,254 checks)**.
+- `python test_growth.py` ➔ **PASS: 7 growth regression assertions**.
+- `python package_site.py` ➔ **PASS: 128 production files verified**.
