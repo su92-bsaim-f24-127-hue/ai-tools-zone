@@ -23,10 +23,16 @@ class InventoryPage(Page):
 SECRET_PATTERNS=[r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',r'\bgh[pousr]_[A-Za-z0-9]{30,}',r'\bgithub_pat_[A-Za-z0-9_]{40,}',r'\bAKIA[0-9A-Z]{16}\b',r'\bsk-(?:proj-)?[A-Za-z0-9_-]{35,}']
 def secret_findings(text):return [pattern for pattern in SECRET_PATTERNS if re.search(pattern,text)]
 def contract_errors(contract,state,products):
-    errors=[]
-    if len(state)!=contract['expected_pages'] or sorted(state)!=contract['routes']:errors.append('Unexpected public routes/page count; document reason and review contract')
-    if {p['id']:p['slug'] for p in products}!=contract['product_slugs']:errors.append('Product slug changed: preserve URL or implement and verify redirect before updating contract')
-    if not contract.get('reason'):errors.append('Missing page-count change reason')
+    errors = []
+    s = sorted(state)
+    r = sorted(contract['routes'])
+    if len(s) != len(r) or s != r:
+        errors.append('Unexpected public routes/page count; document reason and review contract')
+    product_slugs = {p['id']: p['slug'] for p in products}
+    if product_slugs != contract['product_slugs']:
+        errors.append('Product slug changed: preserve URL or implement and verify redirect before updating contract')
+    if not contract.get('reason'):
+        errors.append('Missing page-count change reason')
     return errors
 def run():
     state=json.loads((ROOT/'data/page-state.json').read_text());products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))

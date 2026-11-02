@@ -1,6 +1,6 @@
 {
-  "expected_pages": 70,
-  "reason": "Add practical advisory guide on avoiding account bans, IP stability, and session rules for shared AI subscriptions in Pakistan; preserve all existing routes and product slugs.",
+  "expected_pages": 71,
+  "reason": "Add practical advisory guide on avoiding account bans, IP stability, and session rules for shared AI subscriptions in Pakistan; add comparison article ChatGPT Plus vs Gemini Pro for Pakistan; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -71,7 +71,8 @@
     "/use-cases/ai-tools-for-business/",
     "/use-cases/ai-tools-for-creators/",
     "/use-cases/ai-tools-for-developers/",
-    "/use-cases/ai-tools-for-students/"
+    "/use-cases/ai-tools-for-students/",
+    "/blog/chatgpt-plus-vs-gemini-pro-pakistan/"
   ],
   "product_slugs": {
     "chatgpt": "chatgpt-plus",
