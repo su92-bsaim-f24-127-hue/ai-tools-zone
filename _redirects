@@ -1,0 +1,12 @@
+# Enforce 301 Permanent Redirects for trailing slashes (preserves PageRank and canonical signals)
+/about /about/ 301
+/privacy /privacy/ 301
+/terms /terms/ 301
+/products /products/ 301
+/categories /categories/ 301
+/compare /compare/ 301
+/pricing /pricing/ 301
+/guides /guides/ 301
+/blog /blog/ 301
+/use-cases /use-cases/ 301
+/alternatives /alternatives/ 301
