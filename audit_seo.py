@@ -129,6 +129,7 @@ def run():
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
                 check('availability' not in offer,path+' unverified stock status')
+                check(offer.get('validFrom'),path+' missing validFrom in offer')
                 check(offer.get('seller',{}).get('@id')==ORIGIN+'/#organization',path+' disconnected seller identity')
             visible=' '.join(page.visible)
             check(all(str(value) in visible for value in [p['name'],f'{p["price"]:,}',p['duration'],p['access']]),path+' incomplete initial HTML plan')
