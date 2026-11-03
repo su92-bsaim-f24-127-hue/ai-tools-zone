@@ -88,8 +88,8 @@
     "lastmod": "2026-11-02"
   },
   "/privacy/": {
-    "sha256": "2a1712faa4b9f89e70ed6fe3b7c2e5d7429ce8977c0c2f85932ad66803be6c77",
-    "lastmod": "2026-11-02"
+    "sha256": "85b6ce71216a79262e3d8a1160ca834a94e74f3f563fb42975bcdc7da58d6e5b",
+    "lastmod": "2026-11-03"
   },
   "/terms/": {
     "sha256": "47594260e8445927a0d9943ab00cf6f9d916e057c36ca20f902f98a63dfd8efe",
@@ -247,6 +247,10 @@
     "sha256": "803afb1b3a42cdaccdd7186ec0276908afa56c2322ea8296fc4825b800cc3a2a",
     "lastmod": "2026-11-02"
   },
+  "/blog/chatgpt-plus-vs-gemini-pro-pakistan/": {
+    "sha256": "b82ce9ed077d6e070b8aebdd5c7580f84a66c8f4f3a9736046922e8ab910fe4b",
+    "lastmod": "2026-11-03"
+  },
   "/products/": {
     "sha256": "85638dbb87515ba9cbb3ff605a327b2e260c7f8350da063613ac26b7245eb84a",
     "lastmod": "2026-11-02"
@@ -276,7 +280,7 @@
     "lastmod": "2026-11-02"
   },
   "/blog/": {
-    "sha256": "9c502b19e8a5e932c3f41c55aa256ad7c66ed8a0735dcfd3ad2fc470b8cd9d9a",
-    "lastmod": "2026-11-02"
+    "sha256": "644ed8e0f3a85887fc1b47b3f6578ccb268cc9ae09f821bbe8c7ad373e36475e",
+    "lastmod": "2026-11-03"
   }
 }
