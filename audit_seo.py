@@ -125,6 +125,9 @@ def run():
             p=products[path]; nodes=[n for n in schema_nodes if n.get('@type')=='Product']
             check(len(nodes)==1,path+' missing Product schema')
             if nodes:
+                check(nodes[0].get('brand',{}).get('@type')=='Brand' and bool(nodes[0].get('brand',{}).get('name')),path+' missing product brand')
+                check(nodes[0].get('sku')==p['slug'],path+' missing product sku')
+                check(nodes[0].get('mpn')==p['slug'],path+' missing product mpn')
                 offer=nodes[0].get('offers',{})
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
