@@ -148,8 +148,8 @@ for p in all_products:
   continue
  paths.append(path)
  valid_from=page_state.get(path,{}).get('lastmod',LAST_VERIFIED)
- title=f'{p["name"]} Price in Pakistan: {money(p["price"])} | AI Tools Zone'
- description=f'{p["name"]}: {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. View seller-listed features and order on WhatsApp. Availability confirmed before payment.'
+ title=f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & EasyPaisa | AI Tools Zone'
+ description=f'Buy {p["name"]} in Pakistan for {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. Fast WhatsApp delivery & replacement warranty. Pay via JazzCash, EasyPaisa or Bank Transfer.'
  specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Brand','brand'),('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
  related=[q for q in products if q['category']==p['category'] and q['id']!=p['id']][:3]
  # No arbitrary cross-category recommendations for single-product categories.

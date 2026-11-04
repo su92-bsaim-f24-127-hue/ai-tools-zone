@@ -7,40 +7,51 @@
 
 ---
 
-## 1. Urgent Edge Fix: Cloudflare WWW Subdomain (Resolves Error 522)
+## 1. Urgent Edge Fix: Cloudflare WWW Subdomain (Resolves Error 522 & Error 1014)
 
 ### The Problem
-Currently, navigating to `https://www.aitoolszone.tech/` results in a **Cloudflare Error 522 (Connection Timed Out)**. Search engines and users who type `www.` cannot reach the site, causing dropped crawls and broken link equity.
+- Navigating to `https://www.aitoolszone.tech/` previously returned **Error 522**, and pointing a CNAME `www` to `pages.dev` or apex triggers **Cloudflare Error 1014 (CNAME Cross-User Banned / HTTP 403 Forbidden)** because Cloudflare Pages requires custom hostname authorization.
+- Googlebot encounters `403 Forbidden` on `https://www.aitoolszone.tech/robots.txt`, triggering Google Search Console's "High fail rate on robots.txt".
 
-### The Fix (2-Minute Setup in Cloudflare Dashboard)
+### The Fix (Choose Method 1 or Method 2)
 
-#### Step A: Configure the DNS CNAME Record
-1. Log in to your [Cloudflare Dashboard](https://dash.cloudflare.com/).
-2. Select your domain: `aitoolszone.tech`.
-3. In the left sidebar, navigate to **DNS** ➔ **Records**.
-4. Click **Add record**:
-   * **Type:** `CNAME`
-   * **Name:** `www`
-   * **Target:** `aitoolszone.tech` (or your Cloudflare Pages hostname, e.g., `ai-tools-zone.pages.dev`)
-   * **Proxy status:** **Proxied (🟧 Orange Cloud enabled)**
-   * **TTL:** `Auto`
-5. Click **Save**.
+#### Method 1: Clean 301 Redirect to Apex (Recommended for SEO)
+Using an A record with Cloudflare's dummy IP avoids Error 1014 completely and executes the 301 redirect cleanly at the edge.
 
-#### Step B: Create the 301 Permanent Redirect Rule
-1. In the Cloudflare left sidebar, click **Rules** ➔ **Redirect Rules**.
-2. Click **Create rule**.
-3. Configure the rule as follows:
-   * **Rule name:** `Redirect WWW to Non-WWW Apex`
-   * **If incoming requests match:**
-     * **Field:** `Hostname`
-     * **Operator:** `equals`
-     * **Value:** `www.aitoolszone.tech`
-   * **Then (URL Redirect):**
-     * **Type:** `Dynamic`
-     * **Expression:** `concat("https://aitoolszone.tech", http.request.uri.path)`
-     * **Status code:** `301` (Permanent Redirect)
-     * **Preserve query string:** Checked / Yes
-4. Click **Deploy**.
+1. **In Cloudflare DNS:**
+   * Go to **DNS** ➔ **Records**.
+   * Delete or edit the existing `www` CNAME record.
+   * Add / save an **A record**:
+     * **Type:** `A`
+     * **Name:** `www`
+     * **IPv4 address:** `192.0.2.1` (Cloudflare standard dummy IP for redirect-only records)
+     * **Proxy status:** **Proxied (🟧 Orange Cloud enabled)**
+     * **TTL:** `Auto`
+
+2. **In Cloudflare Redirect Rules:**
+   * Go to **Rules** ➔ **Redirect Rules**.
+   * Click **Create rule**:
+     * **Rule name:** `Redirect WWW to Non-WWW Apex`
+     * **If incoming requests match:**
+       * **Field:** `Hostname`
+       * **Operator:** `equals`
+       * **Value:** `www.aitoolszone.tech`
+     * **Then (URL Redirect):**
+       * **Type:** `Dynamic`
+       * **Expression:** `concat("https://aitoolszone.tech", http.request.uri.path)`
+       * **Status code:** `301` (Permanent Redirect)
+       * **Preserve query string:** Checked
+   * Click **Deploy**.
+
+---
+
+#### Method 2: Authorize `www` directly inside Cloudflare Pages
+If you prefer Cloudflare Pages to serve `www.aitoolszone.tech` natively:
+1. Go to **Workers & Pages** ➔ click your project (`ai-tools-zone`).
+2. Go to the **Custom domains** tab.
+3. Click **Set up a custom domain**.
+4. Enter `www.aitoolszone.tech` and click **Continue** ➔ **Activate domain**.
+5. Cloudflare will automatically authorize the CNAME, provision the SSL certificate, and eliminate Error 1014.
 
 ---
 
