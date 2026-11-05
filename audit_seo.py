@@ -121,22 +121,27 @@ def run():
                 if nodes:check(crumbs==[(n['name'],n['item']) for n in nodes[0]['itemListElement']],path+' visible/schema breadcrumb mismatch')
         for n in schema_nodes:
             check('aggregateRating' not in n and 'review' not in n,path+' unverified rating markup')
+            # The published terms provide conditional refunds and replacement support,
+            # without a general return window or physical shipping service.
+            if n.get('@type')=='Organization':
+                check('hasMerchantReturnPolicy' not in n,path+' unsupported organization return policy')
         if path in products:
             p=products[path]; nodes=[n for n in schema_nodes if n.get('@type')=='Product']
             check(len(nodes)==1,path+' missing Product schema')
             if nodes:
                 check(nodes[0].get('brand',{}).get('@type')=='Brand' and bool(nodes[0].get('brand',{}).get('name')),path+' missing product brand')
                 check(nodes[0].get('sku')==p['slug'],path+' missing product sku')
-                check(nodes[0].get('mpn')==p['slug'],path+' missing product mpn')
+                check('mpn' not in nodes[0],path+' seller slug must not become a manufacturer part number')
                 offer=nodes[0].get('offers',{})
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
-                check(offer.get('availability')=='https://schema.org/InStock',path+' missing offer availability')
-                check(offer.get('validFrom'),path+' missing validFrom in offer')
+                # Active listings require confirmation; the catalog has no verified
+                # inventory or offer-effective dates. Page lastmod is not a sale date.
+                check('availability' not in offer,path+' unverified stock claim')
+                check('validFrom' not in offer and 'priceValidUntil' not in offer,path+' unsupported offer dates')
                 check(offer.get('seller',{}).get('@id')==ORIGIN+'/#organization',path+' disconnected seller identity')
-                check(offer.get('hasMerchantReturnPolicy',{}).get('@type')=='MerchantReturnPolicy',path+' missing hasMerchantReturnPolicy')
-                check(offer.get('hasMerchantReturnPolicy',{}).get('applicableCountry')=='PK',path+' missing return policy applicableCountry')
-                check(offer.get('shippingDetails',{}).get('@type')=='OfferShippingDetails',path+' missing shippingDetails')
+                check('hasMerchantReturnPolicy' not in offer,path+' replacement warranty must not become a full-refund window')
+                check('shippingDetails' not in offer,path+' unsupported physical shipping terms')
             visible=' '.join(page.visible)
             check(all(str(value) in visible for value in [p['name'],f'{p["price"]:,}',p['duration'],p['access']]),path+' incomplete initial HTML plan')
             check(any(a.get('href','').startswith('/categories/') for a in page.attrs('a')),path+' missing category link')

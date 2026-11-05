@@ -1,123 +1,43 @@
-# Google Search Console & Cloudflare Owner Action Guide
+# Search Console and hostname owner actions
 
-**Date:** 2 November 2026 (Asia/Karachi)  
-**Target Domain:** <https://aitoolszone.tech/>  
-**Property in GSC:** `URL prefix: https://aitoolszone.tech/`  
-**Hosting Environment:** Cloudflare Pages (Custom Domain `aitoolszone.tech`)
+**Updated:** 6 November 2026, Asia/Karachi. The custom domain uses the Cloudflare Worker `ai-tools-zone` with static assets; GitHub Pages deploys separately. No DNS/account settings changed in this review.
 
----
+## 1. Resolve the confirmed www failure
 
-## 1. Urgent Edge Fix: Cloudflare WWW Subdomain (Resolves Error 522 & Error 1014)
+Public checks returned HTTP 522 for the www homepage. The canonical host is `aitoolszone.tech`.
 
-### The Problem
-- Navigating to `https://www.aitoolszone.tech/` previously returned **Error 522**, and pointing a CNAME `www` to `pages.dev` or apex triggers **Cloudflare Error 1014 (CNAME Cross-User Banned / HTTP 403 Forbidden)** because Cloudflare Pages requires custom hostname authorization.
-- Googlebot encounters `403 Forbidden` on `https://www.aitoolszone.tech/robots.txt`, triggering Google Search Console's "High fail rate on robots.txt".
+1. In the Cloudflare account managing this domain, inspect the existing www DNS record, proxy state, Worker domains/routes and redirect rules. Record their current values before editing.
+2. Configure a **Single Redirect** for the exact hostname:
+   - Match: `(http.host eq "www.aitoolszone.tech")`.
+   - Dynamic target: `concat("https://aitoolszone.tech", http.request.uri.path)`.
+   - Status: **301**. Enable **Preserve query string**.
+3. The redirect needs proxied DNS for www and an active edge certificate. If either is missing, correct that specific configuration using Cloudflare's domain-redirect guidance. Preserve unrelated DNS, TXT verification records, email records and nameservers. Do not point this Worker at an assumed Pages hostname.
+4. Check HTTPS and HTTP www for `/`, `/robots.txt`, and `/products/chatgpt-plus/?source=check`. Expect an apex redirect preserving path/query, then the appropriate response. Rerun `python audit_seo_live.py`.
 
-### The Fix (Choose Method 1 or Method 2)
+Worker `_redirects` supports path rules and cannot repair requests that fail before reaching the assets. References: [Cloudflare custom domains and www redirects](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/#redirect-between-www-and-root-domain), [Worker redirects](https://developers.cloudflare.com/workers/static-assets/redirects/).
 
-#### Method 1: Clean 301 Redirect to Apex (Recommended for SEO)
-Using an A record with Cloudflare's dummy IP avoids Error 1014 completely and executes the 301 redirect cleanly at the edge.
+If a crawler is challenged, find its request in Security Events and record timestamp, hostname, action and service. Verify the bot before creating a narrow exception. A user-agent substring is insufficient. WAF skip rules cannot bypass Bot Fight Mode; scoped Super Bot Fight Mode exceptions are different. [Cloudflare guidance](https://developers.cloudflare.com/bots/troubleshooting/false-positives/).
 
-1. **In Cloudflare DNS:**
-   * Go to **DNS** ➔ **Records**.
-   * Delete or edit the existing `www` CNAME record.
-   * Add / save an **A record**:
-     * **Type:** `A`
-     * **Name:** `www`
-     * **IPv4 address:** `192.0.2.1` (Cloudflare standard dummy IP for redirect-only records)
-     * **Proxy status:** **Proxied (🟧 Orange Cloud enabled)**
-     * **TTL:** `Auto`
+## 2. Check the right Search Console property
 
-2. **In Cloudflare Redirect Rules:**
-   * Go to **Rules** ➔ **Redirect Rules**.
-   * Click **Create rule**:
-     * **Rule name:** `Redirect WWW to Non-WWW Apex`
-     * **If incoming requests match:**
-       * **Field:** `Hostname`
-       * **Operator:** `equals`
-       * **Value:** `www.aitoolszone.tech`
-     * **Then (URL Redirect):**
-       * **Type:** `Dynamic`
-       * **Expression:** `concat("https://aitoolszone.tech", http.request.uri.path)`
-       * **Status code:** `301` (Permanent Redirect)
-       * **Preserve query string:** Checked
-   * Click **Deploy**.
+1. Open [Search Console](https://search.google.com/search-console/). Use the existing verified property when available.
+2. If verification is needed, add a **Domain** property for `aitoolszone.tech` and copy Google's exact unique DNS TXT value.
+3. Add it at the actual authoritative DNS provider. Confirm the provider/nameservers before editing; preserve existing records.
+4. Return and click Verify. Domain verification uses DNS. HTML tags/files are a separate URL-prefix method; existing site verification tokens remain intact.
+5. Submit `https://aitoolszone.tech/sitemap.xml` under Sitemaps. It is a URL-set sitemap with 71 entries, not a sitemap index. Record status and last-read date.
 
----
+## 3. Inspect important URLs
 
-#### Method 2: Authorize `www` directly inside Cloudflare Pages
-If you prefer Cloudflare Pages to serve `www.aitoolszone.tech` natively:
-1. Go to **Workers & Pages** ➔ click your project (`ai-tools-zone`).
-2. Go to the **Custom domains** tab.
-3. Click **Set up a custom domain**.
-4. Enter `www.aitoolszone.tech` and click **Continue** ➔ **Activate domain**.
-5. Cloudflare will automatically authorize the CNAME, provision the SSL certificate, and eliminate Error 1014.
+Start with the homepage, `/products/chatgpt-plus/`, `/products/canva-pro-edu/`, `/products/capcut-pro/`, `/categories/design/` and `/compare/chatgpt-vs-gemini/` on the HTTPS apex hostname.
 
----
+For each, record indexed status, exclusion reason, crawling/indexing permission, last crawl, user canonical and Google-selected canonical. Use Test Live URL to investigate current fetch/render problems. Fix genuine errors before requesting indexing for eligible important pages. Requests have quotas; no fixed daily allowance or indexing deadline is promised. [Google recrawl guide](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 
-## 2. Google Search Console: Sitemap Refresh
+A successful live test does not prove inclusion in the index. Normal product/blog pages are not eligible for the Google Indexing API.
 
-1. Open [Google Search Console](https://search.google.com/search-console).
-2. Ensure you have selected the property: `https://aitoolszone.tech/`.
-3. In the left navigation menu, click **Indexing** ➔ **Sitemaps**.
-4. Under **Add a new sitemap**, enter:
-   ```text
-   sitemap.xml
-   ```
-5. Click **Submit**.
-6. Verify the status changes to **Success** and that **Discovered pages: 70** is displayed.
+## 4. Measure outcomes
 
----
-
-## 3. Fast-Track Indexing: Manual Priority URL Inspection
-
-Because Google queues pages based on crawl budget for new domains, you can request immediate crawl indexing for our highest-priority commercial and comparison pages:
-
-1. At the very top of Google Search Console, find the search bar: **"Inspect any URL in 'aitoolszone.tech'"**.
-2. Paste each of the following 5 priority URLs one by one:
-   * `https://aitoolszone.tech/` (Apex Homepage)
-   * `https://aitoolszone.tech/compare/chatgpt-vs-gemini/` (High-volume comparison)
-   * `https://aitoolszone.tech/compare/canva-vs-adobe/` (High-volume creative comparison)
-   * `https://aitoolszone.tech/products/chatgpt-plus/` (Commercial flagship product)
-   * `https://aitoolszone.tech/products/capcut-pro/` (High-growth video editing tool)
-3. For each URL:
-   * Press **Enter**.
-   * Click the gray button: **Test Live URL** (Wait ~15-30 seconds).
-   * Confirm green checkmark: *"URL is available to Google"*.
-   * Click **Request Indexing**.
-   * Wait for the confirmation dialog: *"Indexing requested"*.
-
-*(Note: Google limits manual requests to roughly 10-15 per day, which is why doing these top 5 yields maximum immediate ROI).*
-
----
-
-## 4. Understanding the Search Console "Links" Report
-
-### The Screenshot Explained
-In Google Search Console under **Links** ➔ **Top internally-linked pages**, Google currently shows:
-* **Total internal links:** **320**
-* Top pages:
-  * `https://aitoolszone.tech/` — **50 links**
-  * `https://aitoolszone.tech/guides/` — **34 links**
-  * `https://aitoolszone.tech/privacy/` — **33 links**
-  * `https://aitoolszone.tech/products/` — **28 links**
-
-### Why this caused the 22 "Discovered - currently not indexed" pages:
-* Googlebot discovered pages via `sitemap.xml`, but saw that comparison pages (`/compare/chatgpt-vs-gemini/`) and newly added products had almost 0 direct links from the homepage body.
-* In contrast, utility pages like `/privacy/` had 33 links because they were in every footer.
-* Googlebot concluded: *"These comparison pages aren't linked prominently by the site owner, so they are low crawl priority."*
-
-### What We Did to Fix This:
-* In Commit `89a4336`, we injected **271 new contextual internal links** across the homepage body, header navigation, and category hubs pointing directly to all 8 comparison hubs and all 20 product pages.
-* **Expected Result:** Over the next 3 to 7 days, as Googlebot recrawls the homepage and navigation, Google's reported internal link count will jump from **320 to 591+**, automatically promoting the 22 queued pages into active indexing.
-
----
-
-## 5. How to Monitor Progress Over the Next 14 Days
-
-| Day Range | Search Console Metric to Check | Expected Health Milestone |
-|:---|:---|:---|
-| **Days 1–3** | Sitemaps ➔ `sitemap.xml` | Status: *Success*, Discovered: 70 URLs. |
-| **Days 4–7** | Pages ➔ "Discovered - not indexed" | Count should drop from 22 down to <10 as Google crawls the new internal links. |
-| **Days 8–10** | Links ➔ Top internally-linked pages | Total internal links should increase from 320 to 500+. |
-| **Days 11–14** | Performance ➔ Search Results | Daily impressions should increase above 15–20/day, with queries like `"ai tools zone pakistan"` maintaining #1 and product queries beginning to surface. |
+- Check Page Indexing, Crawl Stats, Sitemaps, Manual Actions and Security Issues separately. Coverage exports alone cannot prove no manual action exists.
+- Export a 28-day Performance baseline filtered to Pakistan: query, page, clicks, impressions, CTR and average position. Compare equal windows; average position is not a fixed live SERP rank.
+- Use Core Web Vitals for field data; keep Lighthouse lab results separate.
+- Verify the existing GA4 tag receives `page_view`, `product_view` and `product_whatsapp_click`; configure meaningful key events. Reconcile actual orders separately.
+- Retain dated exports. Set traffic/customer targets only after a measured baseline is available.

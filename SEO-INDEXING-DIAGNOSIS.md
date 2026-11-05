@@ -1,121 +1,41 @@
-# AI Tools Zone Indexing and Visibility Diagnosis
+# AI Tools Zone indexing diagnosis
 
-**Date:** 2 November 2026 (Asia/Karachi)  
-**Production Domain:** <https://aitoolszone.tech/>  
-**Repository:** `su92-bsaim-f24-127-hue/ai-tools-zone` (Commit `3eecf91`)  
-**Method:** Authenticated Google Search Console Coverage Archives (`aitoolszone.tech-Coverage-2026-11-02.zip` & `Coverage-Drilldown`), live HTTP/DNS probes, sitemap crawl, and local deterministic build verification.
+**Reviewed:** 6 November 2026, Asia/Karachi. Baseline repository: `4187477`. Requests used a browser-like user agent from this workstation, not a verified Googlebot address.
 
----
+## Confirmed evidence
 
-## 1. Executive Diagnosis: Indexing Reality Established
+| Evidence | Observed result | Interpretation |
+|---|---|---|
+| `python audit_seo_live.py`, 77 requests | 74 final HTTP 200 responses, two 522 responses, one expected 404 | All 71 sitemap pages passed response, single-H1, canonical and entity checks. Overall live audit **failed** because www variants failed. |
+| HTTPS www homepage | HTTP 522, no apex redirect | High-priority hostname availability defect. Exact cause requires Cloudflare routing/DNS/account evidence. |
+| HTTPS www robots.txt | HTTP 522 on a separate resource probe | The hostname problem also affects crawler-policy retrieval. Apex robots.txt, sitemap.xml, llms.txt and llms-full.txt all returned HTTP 200. |
+| HTTP www homepage | 301 to HTTPS www, then 522 | HTTPS upgrade alone does not repair www. |
+| HTTP apex homepage | 301 to HTTPS apex, final 200 | Main hostname HTTPS redirect works. |
+| `/products/chatgpt-plus` | 307 to `/products/chatgpt-plus/`, final 200 | Temporary normalization exists; it does not prove indexing failure. Links and sitemap use the trailing-slash canonical. |
+| Unknown audit route | HTTP 404 | Expected missing-page behavior. |
+| `/?category=design` | 200, canonical apex homepage | Query variant identifies the intended homepage. |
+| Apex headers | CSP, HSTS and HTTP/3 advertisement present | Observed hosting behavior; no Core Web Vitals score inferred. |
+| Product/organization JSON-LD | Seller slugs treated as MPNs; warranty days converted to refund windows; postal returns, zero-day shipping, fixed stock/expiry, lastmod used as validFrom | Unsupported claims confirmed in source. Generator and accuracy checks corrected in this review. |
 
-Unlike the earlier 29 October preliminary review (which lacked direct GSC access), the authenticated Google Search Console Coverage Export from **2 November 2026** provides definitive evidence on the indexation health of `aitoolszone.tech`:
+Raw local evidence is in `verification/strategy-live-before.json`, `verification/strategy-resources.json` and `verification/seo-audit.json`; diagnostics are excluded from production packaging. See [test results](SEO-TEST-RESULTS.md) for validation and deployment limits.
 
-1. **The Site Is NOT Deindexed and Has Zero Penalties:**
-   - **42 Pages are Indexed and Valid (60.9% of known pages).**
-   - **27 Pages are Unindexed / Excluded (39.1% of known pages).**
-   - **Zero Critical Errors:** 0 server errors (5xx), 0 redirect errors, 0 submitted URLs blocked by robots.txt, 0 submitted 404s.
-   - **Impressions Are Accelerating:** Total daily search impressions rose from 0–1 in mid-October to **7 daily impressions** on 23 October, correlating directly with Google expanding its indexed count from 13 to 42 pages.
+## What the saved Search Console exports establish
 
-```
-Total Known URLs in GSC: 69 (Matches 70-URL Live Sitemap)
-├── Indexed (Valid):              42 (60.9%)  ████████████░░░░░░░░
-└── Not Indexed (Excluded):       27 (39.1%)  ███████░░░░░░░░░░░░░
-    ├── Discovered - not indexed: 22 (81.5% of excluded)
-    ├── Page with redirect:        3 (11.1% of excluded)
-    └── Crawled - not indexed:     2 ( 7.4% of excluded)
-```
+Read directly from the owner's Downloads folder. No authenticated account actions were performed in this review.
 
----
+- `aitoolszone.tech-Coverage-2026-11-02.zip`: the last Chart.csv observation is **2026-10-23**, with **42 indexed, 27 not indexed and 7 impressions**. This is historical evidence, not a November 6 status.
+- Its issue table reports **22 discovered/currently not indexed, 2 crawled/currently not indexed and 3 redirect pages**. The 69 known URLs in that snapshot are not the same population as the current 71-URL sitemap.
+- `aitoolszone.tech-Coverage-Drilldown-2026-11-02.zip`: lists 22 discovered URLs. The `1970-01-01` last-crawl entries must not be reported as genuine crawl dates.
+- `www.aitoolszone.tech-Crawl-stats-Host-status-2026-11-05.zip`: robots fetch failures are **100% on November 1**, then **0% on November 2-4**. This is the **www** hostname. DNS and connectivity charts show 0% failures on those dates. Request volumes and the responsible service are not established.
 
-## 2. Deep Root-Cause Analysis of Unindexed Pages
+These files establish historical indexing and a historical www robots problem. They do not establish a WAF cause, a clean Manual Actions report, current rankings, or automatic indexing after adding links. Earlier promises of indexing within days, fixed future link counts and zero penalties are withdrawn.
 
-### A. "Discovered – currently not indexed" (22 URLs — 81.5% of Excluded)
-* **Status:** Queued by Google systems.
-* **Exact URLs Identified from GSC Drilldown:**
-  1. `/blog/ai-phone-agents-whatsapp-bots-pakistan/`
-  2. `/blog/ai-tools-for-teachers-pakistan/`
-  3. `/categories/design/`
-  4. `/compare/`
-  5. `/compare/canva-vs-adobe/`
-  6. `/compare/capcut-vs-runway/`
-  7. `/compare/chatgpt-vs-claude/`
-  8. `/compare/chatgpt-vs-gemini/`
-  9. `/compare/claude-vs-gemini/`
-  10. `/compare/elevenlabs-vs-playht/`
-  11. `/compare/grammarly-vs-quillbot-vs-wordai/`
-  12. `/compare/helium10-vs-semrush-vs-vidiq/`
-  13. `/products/capcut-pro/`
-  14. `/products/elevenlabs/`
-  15. `/products/gamma-pro/`
-  16. `/products/leonardo-ai-essential/`
-  17. `/products/linkedin-premium/`
-  18. `/products/netflix-premium-4k/`
-  19. `/products/notion-business/`
-  20. `/products/surfshark-vpn/`
-  21. `/products/youtube-premium/`
-  22. `/use-cases/ai-tools-for-students/`
-* **Root Cause:**
-  - Googlebot discovered these URLs via `sitemap.xml`, but postponed crawling them because of new-domain crawl budget constraints.
-  - Prior to the 2 November codebase update, these comparison routes and products were not linked prominently from the homepage body or footer, leaving them deep in the crawl hierarchy (depth 3+).
-* **Fix Applied:**
-  - Injected **271 contextual internal links** across homepage discovery strips, category hubs, and global footers pointing directly to these 22 queued URLs (Commits `89a4336` and `3eecf91`).
+## Prioritized actions
 
----
+1. **High, owner configuration:** resolve www routing and validate its robots URL with an apex redirect. Follow [owner actions](SEARCH-CONSOLE-OWNER-ACTIONS.md). No DNS or account settings changed here.
+2. **High, implemented in code:** align structured data with supported facts. Preserve Product/Offer identity, brand, seller SKU, price, currency, plan terms and canonical URLs. Optional fields must not contain invented facts merely to silence warnings.
+3. **Medium, owner evidence:** inspect excluded URLs individually. Their statuses do not identify duplication, crawl budget or content quality as the exact cause. Compare the reported canonical, crawl and rendered-page evidence before selecting a fix.
+4. **Medium, content maintenance:** improve existing commercial and payment guides using verified terms. Avoid overlapping pages and arbitrary word targets.
+5. **Measurement:** current Search Console status, manual actions, performance, Core Web Vitals, backlink metrics and completed orders remain unverified here.
 
-### D. Google Search Console Internal Links Analysis (Direct UI Evidence)
-* **Authenticated Data (GSC Links Report):**
-  - **Total Internal Links Observed by Google:** **320**
-  - **Top Internally-Linked Pages in Google's Graph:**
-    1. `https://aitoolszone.tech/` — **50 links**
-    2. `https://aitoolszone.tech/guides/` — **34 links**
-    3. `https://aitoolszone.tech/privacy/` — **33 links**
-    4. `https://aitoolszone.tech/products/` — **28 links**
-* **Strategic Diagnostic Insight:**
-  - In Google's link graph prior to 2 November, utility and policy routes (`/privacy/`, `/guides/`) had *more* internal link weight than high-intent commercial comparison pages (`/compare/chatgpt-vs-gemini/`, `/compare/canva-vs-adobe/`) and category hubs (`/categories/design/`).
-  - Because comparison routes had near-zero direct links from the homepage body, Googlebot classified them as deep/orphan tier during crawl budgeting, keeping 8 of them trapped in *"Discovered - currently not indexed"*.
-  - With Commit `89a4336`, **+271 new direct contextual links** were injected into the homepage, header navigation, and category hubs. Once Googlebot recrawls, Google's reported internal links will jump from **320 to 591+**, elevating the priority of all 22 discovered URLs and triggering automatic indexation.
-
----
-
-### B. "Crawled – currently not indexed" (2 URLs — 7.4% of Excluded)
-* **Status:** Validation *Started*.
-* **Root Cause:**
-  - Googlebot fetched and rendered the HTML, but elected not to index them due to perceived content duplication, template thinness, or lack of differentiated regional search value.
-* **Prescription:**
-  - Check the exact 2 URLs in GSC.
-  - Add 350+ words of unique Pakistan-specific analysis, local payment guidance (JazzCash/Easypaisa), and unique comparative tables to prevent soft-thin classification.
-
----
-
-### C. "Page with redirect" (3 URLs — 11.1% of Excluded)
-* **Root Cause:**
-  - Non-trailing slash requests (`/about`, `/products`) and HTTP requests.
-* **Fix Applied:**
-  - Created [`_redirects`](_redirects) for Cloudflare Pages to return permanent **HTTP 301** instead of temporary 307 redirects.
-
----
-
-## 3. Confirmed Live Technical Findings (2 November 2026)
-
-| Test Target | Live Observation | Verdict & Action |
-|:---|:---|:---|
-| `https://aitoolszone.tech/` | HTTP 200, fast response (~14KB), self-canonical correct | 🟢 Healthy apex |
-| `http://aitoolszone.tech/` | HTTP 301 Redirect to `https://aitoolszone.tech/` | 🟢 Protocol redirect working cleanly |
-| `https://www.aitoolszone.tech/` | **Cloudflare Error 522 (Connection Timed Out)** | 🔴 **Critical Defect:** Subdomain times out. Owner must configure Cloudflare CNAME and 301 Redirect Rule to apex. |
-| `https://aitoolszone.tech/robots.txt` | HTTP 200; Allows `*`, `OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`; Disallows `GPTBot` | 🟢 Valid and AI-ready |
-| `https://aitoolszone.tech/sitemap.xml` | HTTP 200; 70 clean canonical URLs with ISO `<lastmod>` | 🟢 Valid XML sitemap |
-| Image Accessibility | 0 empty `alt=""` attributes across all 72 HTML files | 🟢 All images have descriptive alt text |
-| Schema Markup | Valid JSON-LD graphs (`Organization`, `WebSite`, `WebPage`, `BreadcrumbList`, `Article`, `Product`/`Offer`) | 🟢 Verified compliant with repository audit rules |
-
----
-
-## 4. Priority Owner Action Plan
-
-1. **Cloudflare DNS & Redirect:**
-   - Add DNS `CNAME` for `www` pointing to `aitoolszone.tech` (Proxied 🟧).
-   - In Cloudflare Rules ➔ Redirect Rules, create a rule: `Hostname equals www.aitoolszone.tech` ➔ 301 Redirect to `https://aitoolszone.tech`.
-2. **Search Console Priority Pings:**
-   - Resubmit `https://aitoolszone.tech/sitemap.xml`.
-   - Inspect `https://aitoolszone.tech/` and click **Request Indexing**.
-   - Inspect top comparison pages (`/compare/chatgpt-vs-gemini/`, `/compare/canva-vs-adobe/`) and click **Request Indexing**.
+References: [Google structured-data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies), [recrawl requests](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl), [Cloudflare bot false positives](https://developers.cloudflare.com/bots/troubleshooting/false-positives/).

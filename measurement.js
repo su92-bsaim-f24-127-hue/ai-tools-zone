@@ -1,5 +1,5 @@
-/* Local, bounded integration hooks. Cloudflare Web Analytics records page visits,
-   not these events. No event collector is configured. Never emit query/message text. */
+/* Bounded integration hooks forward to the existing Google tag when available.
+   Cloudflare Web Analytics records visits separately. Never emit query/message text. */
 (() => {
   'use strict';
   const sections=new Set(['home','products','categories','compare','alternatives','use-cases','guides','pricing','about','privacy','terms']);

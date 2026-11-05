@@ -1,20 +1,47 @@
-> **14 October 2026 update:** Keep the 53-page structure stable and improve qualified discovery from observed queries, buyer questions and verified offer facts. Cloudflare Web Analytics is installed for aggregate visits; the site measurement hooks still do not collect conversions. Search Console and Bing Webmaster ownership/data remain owner actions. See [SEO-CONTENT-STRATEGY.md](SEO-CONTENT-STRATEGY.md), [SEO-PLAN.md](SEO-PLAN.md) and [AI-VISIBILITY-MONITORING.md](AI-VISIBILITY-MONITORING.md).
+> **6 November 2026 review:** Reviewed the supplied `Desktop/gemini/SEO-STRATEGY.md` against repository `4187477`, local Search Console exports and live HTTP evidence. The supplied file is unchanged. Current inventory: 71 canonical pages and 20 products. See [diagnosis](SEO-INDEXING-DIAGNOSIS.md), [owner actions](SEARCH-CONSOLE-OWNER-ACTIONS.md) and [validation](SEO-TEST-RESULTS.md).
 
 # Search, answer and entity strategy
+
+## Decisions from the supplied strategy
+
+| Recommendation or claim | Evidence and action |
+|---|---|
+| Cloudflare blocked Googlebot on November 1 | The saved **www** host export reports 100% robots fetch failures that day and 0% November 2-4. It identifies no WAF rule or cause. Current www requests return 522. Investigate hostname routing and Security Events. |
+| Bypass a user agent containing Googlebot | A user agent is self-declared. Use verified-bot evidence and narrow exceptions only after identifying the blocking service. WAF custom rules cannot skip Bot Fight Mode; Super Bot Fight Mode differs. [Cloudflare guidance](https://developers.cloudflare.com/bots/troubleshooting/false-positives/). |
+| Excellent Core Web Vitals from static hosting | No current LCP, INP or CLS measurements establish this. Measure field data and lab performance separately. |
+| 15-25 indexed pages, DA below 5 and precise growth targets | Unverified as current baselines. The coverage export's latest observation is October 23: 42 indexed and 27 excluded. Current rank, backlink, sales and AI-citation metrics need evidence. |
+| Minimum 400-800 words per page | Improve missing answers and original usefulness. Google has no preferred word count. [Helpful-content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content). |
+| Product/return schema means Merchant Center readiness | Unsupported postal returns, refund windows, shipping, manufacturer IDs, stock and offer dates were found in the generator and corrected. Eligibility and actual rich-result display need separate validation. [Structured-data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies). |
+| Google Indexing API for products/blogs | This API supports JobPosting or BroadcastEvent inside VideoObject. Use Search Console and the sitemap for this catalog. [API limits](https://developers.google.com/search/apis/indexing-api/v3/using-api). |
+| Add IndexNow, sitemap and canonicals | Already implemented. Preserve stable apex HTTPS URLs and semantic-change notifications. Submission does not prove indexing. |
+| Add payment/comparison guides | These intent groups already have pages. Improve existing targets before creating overlapping URLs. Raast acceptance, tax rates and bank-decline explanations require verification. |
+| Add testimonials, founder details and 24-hour refunds | Publish only real identity, consented customer proof and owner-confirmed policies. Existing conditional refunds and replacement support remain authoritative. |
+| Guaranteed citation uplift and traffic forecasts | The supplied percentages lack matching site/engine/locale evidence. Treat research as context; establish a baseline before setting numeric growth goals. |
+| Add pricing.md and AI files | Crawlable `/pricing/`, `llms.txt` and `llms-full.txt` already exist. Avoid another manually maintained price copy. Google requires no special AI file or markup. [AI guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide). |
+| Enable HTTP/3 and 0-RTT | The apex already advertises HTTP/3. No measured issue justifies a transport-setting change in this review. |
+
+## Priorities for the next 30 days
+
+1. Repair the verified www 522 response and validate redirects, paths and query strings using the owner guide.
+2. Inspect the homepage, ChatGPT Plus, Canva Pro, CapCut Pro, design category and ChatGPT/Gemini comparison in Search Console. Record canonical, crawl and indexing evidence before requesting indexing.
+3. Review those commercial offers with the owner for actual entitlements, account eligibility, renewal, availability and support. Update catalog facts while preserving slugs.
+4. Improve `/blog/how-to-pay-for-chatgpt-plus-pakistan/` and `/blog/jazzcash-easypaisa-ai-tools-pakistan/` using verified payment information. Avoid unsupported bank/tax claims.
+5. Improve the existing `/compare/chatgpt-vs-gemini/` with sourced differences and seller-plan limitations. Review overlap with the similarly named blog comparison before adding pages.
+6. Export a 28-day Search Console baseline filtered to Pakistan; compare equal periods by query and landing page. Verify GA4 receipt of events and reconcile qualified inquiries with actual orders.
 
 AI Tools Zone is an independent Pakistan-focused marketplace. Its useful search proposition is a readable catalog of seller-listed PKR offers, with explicit duration, access, limitations and WhatsApp confirmation. It is not an official reseller or a benchmark laboratory unless evidence establishes that separately.
 
 ## Architecture and intent ownership
 
-Keep `/` for the business and overall discovery. `/products/` lists all offers; existing product URLs own brand + Pakistan + price + buy queries. `/categories/` groups ten actual catalog categories. `/use-cases/` contains four audience workflows. `/compare/` has three selected comparisons. `/alternatives/` has two task-oriented shortlists. `/guides/` explains choosing a subscription and access types. `/pricing/` owns catalog-wide PKR and budget comparisons using section anchors instead of duplicate pages.
+Keep `/` for the business and overall discovery. `/products/` lists all offers; existing product URLs own brand + Pakistan + price + buy queries. `/categories/` groups ten actual catalog categories. `/use-cases/` contains four audience workflows. `/compare/` has ten selected comparisons. `/alternatives/` has two task-oriented shortlists. `/guides/` explains choosing a subscription and access types. `/pricing/` owns catalog-wide PKR and budget comparisons using section anchors instead of duplicate pages.
 
-The implementation creates 28 pages, taking the canonical sitemap from 24 to 52. This is not a target page count to keep increasing. New pages require a distinct decision, actual supporting catalog data, original useful content, relevant internal links and an owner able to keep them current.
+The current sitemap has 71 canonical URLs, including 20 product pages, 10 category pages, 10 comparisons, 10 blog articles, four use cases, two alternatives, three guides, their hubs, pricing and information pages. New pages require a distinct decision, supporting facts, original useful content and relevant internal links.
 
 [SEO-KEYWORD-MAP.csv](SEO-KEYWORD-MAP.csv) records intent, competitor evidence, baseline coverage, destination, priority, content type, links, schema, direct-answer opportunity and entity context. Priority reflects purchase relevance, usefulness and maintainability, not invented search volume.
 
 ## Linking and entity model
 
-Home links to all hubs, categories and product detail pages in initial HTML. Categories link to their products and selected workflows/comparisons. Products link back to their category and relevant editorial pages. Editorial tables link to products. Breadcrumbs connect every non-home canonical page with a useful parent. The audited maximum link distance from home is two clicks.
+Home links to all hubs, categories and product detail pages in initial HTML. Categories link to their products and selected workflows/comparisons. Products link back to their category and relevant editorial pages. Editorial tables link to products. Breadcrumbs connect every non-home canonical page with a useful parent. The 6 November local audit found a maximum link distance of three clicks.
 
 One Organization ID and one WebSite ID identify AI Tools Zone consistently. WebPage nodes describe documents; Product/Offer nodes describe the seller offers; ItemList nodes describe collections, not fabricated ratings. BreadcrumbList mirrors visible navigation. Official vendor links identify product references without `sameAs` assertions about marketplace ownership. No invented social profiles, addresses, certifications or affiliation.
 
@@ -30,9 +57,9 @@ For Pakistan intent, use PKR, actual ordering methods and the correct contact nu
 
 ## Crawl policy and hosting
 
-Googlebot and Bingbot inherit public wildcard access. OAI-SearchBot is explicitly allowed for discovery. GPTBot is separately disallowed as a conservative training opt-out; no training permission is granted to achieve search access. ChatGPT-User is not blocked, but user-triggered access has different behavior and is not promised by robots alone. Unknown bot-specific allowances were not added. Actual crawler identities require provider-published verification, not trusting a spoofable user-agent.
+Googlebot and Bingbot inherit wildcard access. OAI-SearchBot, PerplexityBot and Claude-SearchBot are explicitly allowed for discovery. GPTBot remains disallowed. ClaudeBot is a training crawler; its pre-existing allowance is preserved separately. User-triggered retrieval has different behavior and is not guaranteed by robots alone. Verify crawler identities with provider guidance rather than a user-agent string.
 
-Production packaging is an allowlist. It excludes `.git`, source catalog, templates, scripts, diagnostics, private environment files and reports. A public GitHub repository still exposes committed source: robots is not access control. Never commit secrets. `_headers` remains a portable host configuration example; GitHub Pages does not enforce it. Stronger custom HTTP headers need a compatible host or edge proxy, not fictitious application of this file.
+Production packaging is an allowlist excluding source catalog, templates, scripts, private files and diagnostics. A public repository still exposes committed source. `_headers` is packaged for the Cloudflare Worker static-assets deployment; the apex currently returns its CSP and HSTS headers. GitHub Pages does not enforce this file. Hostname-level redirects require the appropriate edge configuration.
 
 ## Freshness and catalog maintenance
 
@@ -44,15 +71,15 @@ Edit original guidance in `data/seo-content.json`; update it when vendor policie
 
 ## Measurement without invented results
 
-Cloudflare Web Analytics is installed for aggregate visits. `measurement.js` dispatches local `aitz:measure` events for page views, WhatsApp clicks, finder opens and comparison opens; those custom events send no network data and store nothing. Payloads omit query strings, order-message text, phone/customer details and search terms. These hooks are not recorded conversion counts. A WhatsApp click is only a lead-intent event, not a sale.
+Cloudflare Web Analytics records aggregate visits. The existing Google tag receives bounded events forwarded by `measurement.js` when available. Custom payloads omit query strings, order-message text, phone/customer details and search terms. Dashboard delivery and key-event configuration still need account verification; source code alone does not establish recorded counts. A WhatsApp click is not a completed sale.
 
-If the owner later chooses a privacy-appropriate analytics provider, attach a listener before the deferred measurement script, review consent/privacy obligations for the selected setup and update the privacy policy. Measure organic landing-page visits and lead intent; reconcile actual sales separately with order records.
+Review GA4 automatic/enhanced measurement and privacy settings separately. Measure organic landing-page activity and lead intent; reconcile actual sales with order records.
 
 | Source | Weekly measurement | Required manual setup |
 |---|---|---|
 | Google Search Console | Impressions, clicks, CTR, position, queries, landing pages, indexed/excluded pages, CWV reports | Verify DNS domain property, submit sitemap, inspect representative templates |
 | Bing Webmaster Tools | Crawl/index status, query/page performance; AI Performance if exposed for the account | Verify/import property, submit sitemap, inspect URLs; do not claim unavailable reports exist |
-| Installed aggregate analytics | Cloudflare visits/page views; dashboard is owner-accessible | Use the Cloudflare dashboard; custom conversion events are not collected |
+| Installed analytics | Cloudflare visits/page views and the existing Google tag/event forwarding | Verify GA4 delivery, attribution and key-event configuration in the owner account |
 | Manual AI/search sample | Citation URL, prompt, model/search mode, date, locale and whether site is actually cited | Repeat a small fixed sample without treating one result as rank or market share |
 | Actual order records | Confirmed inquiries and completed orders | Owner records outcomes; no message content captured by this website |
 

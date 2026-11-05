@@ -1,3 +1,31 @@
+# SEO technical implementation report — 6 November 2026
+
+Reviewed the supplied `Desktop/gemini/SEO-STRATEGY.md` against the existing repository, public responses, official documentation and locally available Search Console exports. The supplied file was left unchanged. Its unsupported traffic forecasts, WAF attribution and invented business-policy suggestions were not implemented.
+
+## Confirmed changes
+
+- `build_site.py`: removed fabricated manufacturer part numbers, stock claims, offer dates, full-refund windows and physical shipping metadata. A replacement warranty is not a returns policy. Kept truthful listed prices, PKR currency, seller, brand, SKU, access and duration. Product descriptions now ask buyers to confirm availability instead of claiming fast delivery.
+- `audit_seo.py`: added regression guards against those unsupported claims while retaining price, identity, canonical, content and link validation.
+- `seo_pages.py` and generated `robots.txt`: identify Claude-SearchBot separately from training crawler ClaudeBot. Existing ClaudeBot allowance and GPTBot restriction are preserved.
+- `measurement.js` comment and `README.md`: corrected documentation of existing Google-tag forwarding. No analytics runtime change or new tracker.
+- Rebuilt all 72 HTML files (71 canonical pages plus the 404), `sitemap.xml` and `data/page-state.json`. Global schema changes legitimately refreshed content fingerprints; repeated builds preserve unchanged dates.
+- Updated `SEO-STRATEGY.md`, `SEO-INDEXING-DIAGNOSIS.md`, `SEARCH-CONSOLE-OWNER-ACTIONS.md`, this report and `SEO-TEST-RESULTS.md`.
+
+Routes, product records/prices, layout, ordering and verification tokens are preserved. No DNS, Cloudflare settings or Google account changes were made.
+
+## Validation and limitations
+
+The build and local checks documented in [test results](SEO-TEST-RESULTS.md) passed, including 7,071 SEO checks and 3,302 growth checks. All 72 generated HTML files retain their visible text, headings and anchor attributes. Live baseline testing passed all 71 sitemap page checks but returned HTTP 522 for the www hostname. That account-level routing issue remains unresolved; apex resources are accessible. Current Google indexing, penalties, rankings, field Core Web Vitals and conversion counts are unknown.
+
+Removed properties may produce optional merchant rich-result warnings. Unsupported metadata must not be invented to clear warnings; eligibility for merchant experiences is not established. Google's [structured data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) require accurate markup. Schema.org defines [MPN](https://schema.org/mpn) as a manufacturer identifier; [validFrom](https://schema.org/validFrom) and [priceValidUntil](https://schema.org/priceValidUntil) describe actual offer dates, not page-edit timestamps.
+
+No first-position, traffic, citation or indexing guarantee is made. See [owner actions](SEARCH-CONSOLE-OWNER-ACTIONS.md) for the www redirect and Search Console inspections, and [strategy](SEO-STRATEGY.md) for the prioritized content and measurement work.
+
+## Historical implementation record — superseded where noted
+
+The earlier record below is retained as history, not current validation. Corrections: static assets now use a Cloudflare Worker; current product no-slash probes return 307; alternate text alone does not establish WCAG conformance; crawl exclusion cannot be attributed to weak links from the available evidence; invented offer dates have now been removed.
+
+
 # SEO Technical Implementation Report — 2 November 2026
 
 **Domain:** <https://aitoolszone.tech/>  

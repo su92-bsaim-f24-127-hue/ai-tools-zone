@@ -1,5 +1,27 @@
 # SEO, website and conversion test results
 
+## Current run: 6 November 2026 (Asia/Karachi)
+
+| Command | Actual result |
+|---|---|
+| `python build_site.py` | PASS: 71 canonical URLs and 20 active product pages generated. |
+| `python test_seo_build.py` | PASS: semantic freshness, unchanged-date preservation, deterministic rebuilds, verification tags and production packaging. |
+| `python audit_seo.py` | PASS: 7,071 checks; zero errors/warnings; 71 unique main-content pages; maximum crawl depth 3; 109 resources. |
+| `python audit_growth.py` | PASS: 3,302 checks; zero errors; 71 indexable/72 inventoried pages; 20 offers; 2,140 incoming links. |
+| `python test_growth.py` | PASS: seven regression assertions. |
+| `python audit_seo_live.py` | FAIL (before deployment): 77 requests, 74 final HTTP 200, two www HTTP 522 responses and one expected missing-route 404. All 71 sitemap pages passed their response/canonical/heading/entity checks. |
+| Additional resource probes | Apex robots, sitemap, llms.txt and llms-full.txt HTTP 200; www robots HTTP 522. |
+| `git diff --check` | PASS. |
+| Generated-page comparison against baseline | PASS: all 72 HTML files retain visible text, headings and anchor attributes. |
+
+Raw local evidence: `verification/strategy-live-before.json` and `verification/strategy-resources.json` (ignored, unpublished files). These workstation requests do not establish Googlebot access or Google indexing. No current browser, Lighthouse, CrUX, Rich Results Test or authenticated GA4/Search Console checks were run. Earlier browser/performance results below are historical, not reruns.
+
+The downloaded coverage archive's latest chart row is **23 October**, with 42 indexed and 27 excluded pages; the archive filename date is not the measurement date. The current number of indexed pages remains unknown. Local checks passed; the live hostname failure remains open. See [current diagnosis](SEO-INDEXING-DIAGNOSIS.md).
+
+## Historical records (not current verification)
+
+The following earlier records are retained for comparison. Historical causal statements and counts are superseded by the current diagnosis; internal-link totals do not establish why Google excluded a page.
+
 **Run:** 2 November 2026 (Asia/Karachi)<br>
 **Target:** Local rebuilt static site in the repository (`su92-bsaim-f24-127-hue/ai-tools-zone`).<br>
 **Coverage Status:** 70 canonical pages in `sitemap.xml`; GSC confirmed 42 indexed pages and 22 discovered URLs queued.

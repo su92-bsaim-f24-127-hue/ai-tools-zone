@@ -9,10 +9,14 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
 Allow: /
 
 # Model-training policy is independent of search discovery.
+# Preserve the existing ClaudeBot allowance; it is a training crawler.
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: GPTBot
 Disallow: /
 
