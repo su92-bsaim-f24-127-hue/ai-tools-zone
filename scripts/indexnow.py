@@ -23,7 +23,9 @@ def main():
         # Pages may take a short time to reach the edge after deploy-pages succeeds.
         for attempt in range(3):
             try:
-                with urlopen(payload['keyLocation'],timeout=20) as r:assert r.read().decode().strip()==key,'Live proof mismatch'
+                proof_req = Request(payload['keyLocation'], headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+                with urlopen(proof_req, timeout=20) as r:
+                    assert r.read().decode().strip() == key, 'Live proof mismatch'
                 break
             except (OSError,AssertionError):
                 if attempt==2:raise
