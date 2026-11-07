@@ -134,7 +134,8 @@ def build_pages(products, origin, shell, write):
         if listed:
             graph.append({'@type':'ItemList','@id':origin+path+'#plans','name':title,'itemListElement':[{'@type':'ListItem','position':i+1,'name':p['name'],'url':origin+product_path(p)} for i,p in enumerate(listed)]})
         graph.extend(extra_schema)
-        body = '<main id="main" class="wrap editorial-page">' + breadcrumbs(items) + f'<h1>{e(title)}</h1>' + content + '</main>'
+        h1_tag = '' if path == '/guides/' else f'<h1>{e(title)}</h1>'
+        body = '<main id="main" class="wrap editorial-page">' + breadcrumbs(items) + h1_tag + content + '</main>'
         write(path.strip('/')+'/index.html',shell(title+' | AI Tools Zone', description, path, body, {'@context':'https://schema.org','@graph':graph}, '/'))
         paths.append(path)
 
@@ -238,117 +239,104 @@ def build_pages(products, origin, shell, write):
             publish('/blog/', title, intro, content, selected, extra_schema=extra)
             continue
         elif hub == 'guides':
-            guide_items = []
-            hero_guides = f'''<div class="guide-hero">
-<p class="eyebrow">AI TOOLS ZONE EDITORIAL DESK &amp; GUIDES</p>
-<p class="lead">Practical Pakistan-focused guides on AI subscriptions: features, PKR prices, access models, and buying advice. Use verified marketplace data and official vendor documentation to choose the right AI tool before ordering.</p>
-<div class="byline"><span>Reviewed by AI Tools Zone Editorial Team</span><span>Updated November 2026</span><a href="/guides/catalog-methodology/">Our review method</a></div>
-</div>
-<nav class="guide-nav" aria-label="Guide topics">
-<a href="#tool-guides">Tool Guides ({len(products)})</a>
-<a href="#comparisons">Comparisons (10)</a>
-<a href="#workflows">Workflows &amp; Roles (4)</a>
-<a href="#buying-advice">Payment &amp; Safety</a>
-<a href="/pricing/">PKR Price Guide ↗</a>
-</nav>'''
-            content = hero_guides
-
-            # 1. Tool Spotlights (20 Tools)
-            tool_entries = []
-            for p in products:
-                tool_title = f"{p['name']} in Pakistan: Features, Pricing & Guide (2026)"
-                tool_summary = f"Complete guide to {p['name']} in Pakistan. Listed at PKR {p['price']:,} for {p['duration']} with {p['access'].lower()} access. Verify features and order via JazzCash or Easypaisa."
-                tool_path = f"/products/{p['slug']}/"
-                tool_entries.append((tool_path, tool_title, tool_summary, 'EDITORIAL GUIDE', f"Read {p['name'].split()[0]} guide →"))
-                guide_items.append((tool_title, tool_path))
-            content += '<section class="content-block" id="tool-guides"><h2>Tool guides and PKR price reviews</h2><p>Comprehensive guides for every verified AI tool and digital subscription in our Pakistani catalog. Review features, access models, and listed PKR prices via JazzCash and Easypaisa.</p>' + tiles(tool_entries) + '</section>'
-
-            # 2. Head-to-Head Comparisons (10 Comparisons)
-            comp_ctas = {
-                '/compare/chatgpt-vs-claude/': 'Compare ChatGPT & Claude →',
-                '/compare/chatgpt-vs-gemini/': 'Compare ChatGPT & Gemini →',
-                '/compare/canva-vs-adobe/': 'Compare Canva & Adobe →',
-                '/compare/capcut-vs-runway/': 'Compare CapCut & Runway →',
-                '/compare/capcut-vs-canva/': 'Compare CapCut & Canva →',
-                '/compare/claude-vs-gemini/': 'Compare Claude & Gemini →',
-                '/compare/replit-vs-lovable/': 'Compare Replit & Lovable →',
-                '/compare/grammarly-vs-quillbot-vs-wordai/': 'Compare Writing Tools →',
-                '/compare/elevenlabs-vs-playht/': 'Compare Voice Tools →',
-                '/compare/helium10-vs-semrush-vs-vidiq/': 'Compare Growth Tools →',
-            }
-            comp_tags = {
-                '/compare/chatgpt-vs-claude/': 'HEAD-TO-HEAD COMPARISON',
-                '/compare/chatgpt-vs-gemini/': 'HEAD-TO-HEAD COMPARISON',
-                '/compare/canva-vs-adobe/': 'DESIGN COMPARISON',
-                '/compare/capcut-vs-runway/': 'CREATOR COMPARISON',
-                '/compare/capcut-vs-canva/': 'CREATOR COMPARISON',
-                '/compare/claude-vs-gemini/': 'ASSISTANT COMPARISON',
-                '/compare/replit-vs-lovable/': 'DEVELOPER COMPARISON',
-                '/compare/grammarly-vs-quillbot-vs-wordai/': 'WRITING COMPARISON',
-                '/compare/elevenlabs-vs-playht/': 'VOICE COMPARISON',
-                '/compare/helium10-vs-semrush-vs-vidiq/': 'GROWTH COMPARISON',
-            }
-            comp_pages = [p for p in CONTENT['pages'] if p['type'] == 'compare']
-            comp_entries = []
-            for cp in comp_pages:
-                cta = comp_ctas.get(cp['path'], 'Compare tools →')
-                tag = comp_tags.get(cp['path'], 'HEAD-TO-HEAD COMPARISON')
-                comp_entries.append((cp['path'], cp['title'], cp['answer'], tag, cta))
-                guide_items.append((cp['title'], cp['path']))
-            content += '<section class="content-block" id="comparisons"><h2>Head-to-head AI tool comparisons</h2><p>Direct comparisons between competing AI models, video editors, design suites, and developer platforms. Compare coding benchmarks, multimodal capabilities, context windows, and Pakistan buyer terms side by side.</p>' + tiles(comp_entries) + '</section>'
-
-            # 3. Audience & Workflow Guides (4 Use-Cases)
-            wf_pages = [p for p in CONTENT['pages'] if p['type'] == 'use-cases']
-            wf_entries = []
-            for wp in wf_pages:
-                wf_entries.append((wp['path'], wp['title'], wp['answer'], 'AUDIENCE GUIDE', 'View workflow guide →'))
-                guide_items.append((wp['title'], wp['path']))
-            content += '<section class="content-block" id="workflows"><h2>AI guides by audience and workflow</h2><p>Role-specific guidance for students, content creators, freelance developers, and Pakistani business teams. Match your routine tasks with the most cost-effective tools.</p>' + tiles(wf_entries) + '</section>'
-
-            # 4. Buying Advice, Local Payments & Security
-            buying_guides = [
-                ('/guides/choose-ai-subscription/', 'How to Choose an AI Subscription in Pakistan', 'Choose a subscription by the task you need to complete, then confirm the exact offer: total PKR price, duration, access type, limits, and replacement terms.', 'BUYING ADVICE', 'Read buying guide →'),
-                ('/guides/private-vs-shared-access/', 'Private vs Shared AI Access: Invitations & Keys', 'Access type describes how an offer is supplied. Private refers to personal accounts, Shared involves shared access, and Invitation joins a workspace.', 'ACCESS GUIDE', 'Understand access types →'),
-                ('/blog/jazzcash-easypaisa-ai-tools-pakistan/', 'How to Buy AI Subscriptions with JazzCash & Easypaisa in Pakistan', 'Complete walkthrough for paying for international AI tools in Pakistani Rupees using local mobile wallets and Raast IBFT.', 'LOCAL PAYMENTS', 'Read payment guide →'),
-                ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to Pay for ChatGPT Plus in Pakistan: Official Options & Checks', 'Official card options, virtual card workarounds, and buyer verification steps for Pakistani ChatGPT Plus subscribers.', 'PAYMENT GUIDE', 'Read payment walkthrough →'),
-                ('/blog/avoiding-account-bans-shared-ai-tools-pakistan/', 'How to Avoid Account Bans on Shared AI Tools in Pakistan', 'Crucial guidelines on IP stability, browser session discipline, and simultaneous logins to protect your access.', 'ACCOUNT SAFETY', 'Read safety rules →'),
-                ('/blog/ai-subscription-vs-api-credits-pakistan/', 'AI Subscription vs API Credits in Pakistan: Cost Breakdown', 'Subscriptions give you predictable monthly access while API credits charge per token. Understand which pricing model suits your workload.', 'COST ANALYSIS', 'Compare costs →'),
-                ('/blog/chatgpt-plus-vs-gemini-pro-pakistan/', 'ChatGPT Plus vs Gemini Pro for Pakistan (2026)', 'Compare GPT-4o with Gemini 1.5 Pro on reasoning, context windows, and value in PKR before buying.', 'MODEL COMPARISON', 'Read comparison →'),
-                ('/pricing/', 'AI Tools Price Guide for Pakistan: All 20 Tools in PKR', 'Compare all 20 catalog listings in PKR, including options under PKR 1,000 and PKR 2,000, with durations and access terms.', 'PRICE GUIDE', 'View full price guide →')
+            all_guides = [
+                ('EDITORIAL GUIDE', 'Canva Pro Edu in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Canva Pro Edu in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/canva-pro-edu/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'ElevenLabs in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to ElevenLabs in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/elevenlabs/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Leonardo AI Essential in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Leonardo AI Essential in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/leonardo-ai-essential/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Veo 3 Ultra in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Veo 3 Ultra in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/veo-3-ultra/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Gemini Pro in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Gemini Pro in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/gemini-pro/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'ChatGPT Plus in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to ChatGPT Plus in Pakistan. Review features, access types, and flat PKR pricing via EasyPaisa and JazzCash.', '/products/chatgpt-plus/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Canva Pro in Pakistan: Features, Team Invites & Pricing Guide (2026)', 'Complete guide to Canva Pro in Pakistan. Review Brand Kits, Magic Studio AI, Invitation vs Lifetime options in PKR, and local payment verification.', '/products/canva-pro-edu/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'NordVPN vs Surfshark in Pakistan: Best VPN for Freelancers (2026)', 'Compare NordVPN vs Surfshark in Pakistan for remote work security, banking access, and streaming. Review local PKR rates with EasyPaisa and JazzCash.', '/products/nordvpn/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Gamma App in Pakistan: AI Presentations & Pitch Decks Guide (2026)', 'How Pakistani professionals and agencies use Gamma App for AI presentations and pitch decks. Review Plus/Pro credits, exports, and PKR payment methods.', '/products/gamma-pro/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Grok 2 AI in Pakistan: Features, X Premium & Local Access (2026)', 'How to use Grok 2 AI and Aurora image generation in Pakistan. Review real-time search capabilities, access options, and PKR rates via EasyPaisa.', '/blog/chatgpt-plus-vs-gemini-pro-pakistan/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Semrush Pro in Pakistan: SEO Agency Pricing & Local Guide (2026)', 'Complete guide to Semrush Pro in Pakistan for freelance SEOs and agencies. Review keyword research, backlink audits, and PKR pricing without bank forex tax.', '/compare/helium10-vs-semrush-vs-vidiq/', 'Read guide →'),
+                ('HEAD-TO-HEAD COMPARISON', 'ChatGPT Plus vs Claude Pro in Pakistan (2026)', 'Compare GPT-4o with Claude 3.5 Sonnet on coding, SWE-bench, context windows, PKR pricing, and EasyPaisa payment.', '/compare/chatgpt-vs-claude/', 'Compare ChatGPT & Claude →'),
+                ('CREATOR COMPARISON', 'CapCut Pro vs Runway ML in Pakistan (2026)', 'Timeline editing vs generative text-to-video AI. Compare CapCut Pro VIP (Rs. 950) with Runway Gen-3 in PKR with local payment.', '/compare/capcut-vs-runway/', 'Compare CapCut & Runway →'),
+                ('EDITORIAL GUIDE', 'Grammarly vs QuillBot in Pakistan: Best AI Writing Tools (2026)', 'Compare Grammarly Premium vs QuillBot in Pakistan. Review grammar checks, paraphrasing, thesis writing workflows, and PKR pricing via EasyPaisa.', '/compare/grammarly-vs-quillbot-vs-wordai/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Runway Gen-3 Alpha in Pakistan: AI Video Generator Guide (2026)', 'Explore Runway Gen-3 Alpha in Pakistan for high-definition AI cinematography. Compare monthly credits in PKR, camera controls, and local payment methods.', '/compare/capcut-vs-runway/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'HeyGen AI Video in Pakistan: Avatar Creation & Pricing Guide (2026)', 'Complete guide to HeyGen AI video avatars in Pakistan. Review video translation, digital twin generation, and flat PKR pricing via local wallets.', '/categories/ai-video/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'DeepSeek AI in Pakistan: Pricing, Local Access & Guide (2026)', 'How to access DeepSeek V3 and R1 reasoning models in Pakistan. Compare open-weights coding, local PKR pricing, and payment via EasyPaisa and JazzCash.', '/blog/ai-subscription-vs-api-credits-pakistan/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Perplexity AI Pro in Pakistan: Pricing, Search Features & Guide (2026)', 'Complete guide to Perplexity AI Pro in Pakistan. Compare Pro Search, Claude 3.5 & GPT-4o models in PKR with EasyPaisa, JazzCash, and SadaPay payment.', '/categories/ai-assistants/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'n8n Workflow Automation in Pakistan: Small Business Guide (2026)', 'How Pakistani digital agencies and businesses use n8n for workflow automation. Compare cloud pricing in PKR and replace expensive Zapier accounts.', '/products/n8n-starter/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Lovable vs Replit in Pakistan: Best AI App Builder (2026)', 'Compare Lovable Pro vs Replit Core in Pakistan. Review full-stack AI coding workflows, cloud deployment, and PKR pricing with local payment.', '/compare/replit-vs-lovable/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'ElevenLabs Voice AI in Pakistan: Pricing, Urdu Support & Guide', 'Complete guide to ElevenLabs Voice AI in Pakistan. Review character plans in PKR, Urdu voice cloning, and payment via EasyPaisa and JazzCash.', '/products/elevenlabs/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Top AI Video Generators in Pakistan: CapCut, Veo & Runway (2026)', 'Best AI video generators in Pakistan compared for 2026. Explore CapCut Pro VIP, Google Veo 3 Ultra & ElevenLabs with PKR pricing and verified WhatsApp delivery.', '/categories/ai-video/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Best Midjourney Alternatives in Pakistan: Free & Paid (2026)', 'Compare top Midjourney alternatives in Pakistan with PKR pricing. Review Leonardo AI, Adobe Firefly & DALL-E with EasyPaisa and JazzCash payment.', '/products/leonardo-ai-essential/', 'Read guide →'),
+                ('PRICE GUIDE', 'AI Tools Price Guide for Pakistan', 'Compare all 20 current listings in PKR, including duration, access type and the checks to make before payment.', '/pricing/', 'Read the price guide →'),
+                ('ASSISTANT COMPARISON', 'ChatGPT Plus vs Gemini Pro', 'Choose between two general-purpose AI assistants using tasks, access terms and current Pakistan marketplace listings.', '/compare/chatgpt-vs-gemini/', 'Compare ChatGPT and Gemini →'),
+                ('DESIGN COMPARISON', 'Canva Pro vs Figma Pro', 'Understand which design workflow fits content creators, teams, students and product designers.', '/products/figma-pro-private/', 'Compare Canva and Figma →'),
+                ('ALTERNATIVES', 'ChatGPT Alternatives in Pakistan', 'Explore high-performance alternatives including Claude Pro, Google Gemini, and specialized coding models.', '/alternatives/chatgpt/', 'Explore ChatGPT alternatives →'),
+                ('AUDIENCE GUIDE', 'AI Tools for Pakistani Students', 'Top budget-friendly tools for research, thesis editing, presentations and study productivity with PKR pricing.', '/use-cases/ai-tools-for-students/', 'View student guide →'),
+                ('BUSINESS GUIDE', 'AI Tools for Pakistani Businesses', 'Scale marketing, customer communication, and workflow automation for agencies and local businesses.', '/use-cases/ai-tools-for-business/', 'View business guide →'),
+                ('CREATOR GUIDE', 'AI Tools for Pakistani Creators', 'Produce viral YouTube shorts, TikToks, Reels, and high-CTR thumbnails using CapCut, Leonardo and Canva.', '/use-cases/ai-tools-for-creators/', 'View creator guide →'),
+                ('DEVELOPER GUIDE', 'AI Tools for Pakistani Developers', 'Accelerate coding, API integrations, and app generation using Replit Core, n8n, and Lovable Pro.', '/use-cases/ai-tools-for-developers/', 'View developer guide →'),
+                ('PRODUCTIVITY', 'AI Productivity Tools in Pakistan', 'Organize workspaces, automate repetitive tasks, and streamline documentation with Notion Plus and AI workflows.', '/categories/productivity/', 'View productivity guide →'),
+                ('PAKISTAN DIRECTORY', 'AI Tools in Pakistan (2026 Directory)', 'Complete directory of verified tools available with local payment options (EasyPaisa, JazzCash, Bank IBFT).', '/products/', 'Browse directory →'),
+                ('SUBSCRIPTION GUIDE', 'AI Subscriptions Pakistan Guide', 'Understand private vs shared workspaces, invitation seats, warranties, and safe subscription activation.', '/guides/private-vs-shared-access/', 'Read subscription guide →'),
+                ('PRICING ANALYSIS', 'AI Tools Pricing in PKR', 'Detailed cost breakdown, billing cycles, and value ratings across 20 tools in the Pakistani market.', '/pricing/', 'View pricing breakdown →'),
+                ('TOOL SPOTLIGHT', 'Google Gemini Pro Pakistan Guide', '18-month invitation seats, multimodal capabilities, 2M token context, and Google Workspace integration.', '/products/gemini-pro/', 'Read Gemini guide →'),
+                ('TOOL SPOTLIGHT', 'Canva Pro Pakistan Guide', 'Everything you need to know about Canva Pro Edu, brand kits, AI magic studio, and invitation access.', '/products/canva-pro-edu/', 'Read Canva guide →'),
+                ('TOOL SPOTLIGHT', 'CapCut Pro Pakistan Guide', 'Unlock pro video filters, auto-captions, remove background, and export in 4K 60fps for Pakistani editors.', '/products/capcut-pro/', 'Read CapCut guide →'),
+                ('MODEL SPOTLIGHT', 'Claude 3.5 Sonnet Pakistan Guide', 'Complete guide to Claude 3.5 Sonnet & Claude Pro in Pakistan. Pricing in PKR, payment workarounds, and coding benchmarks.', '/compare/chatgpt-vs-claude/', 'Read Claude guide →'),
+                ('DEVELOPER SPOTLIGHT', 'Cursor AI Pakistan Guide', 'Complete Cursor AI guide for Pakistani developers. Pro pricing in PKR, EasyPaisa payment, and Replit vs Copilot comparison.', '/use-cases/ai-tools-for-developers/', 'Read Cursor guide →'),
+                ('TOOL SPOTLIGHT', 'Adobe Creative Cloud in Pakistan: Apps, Firefly & Pricing (2026)', 'Complete guide to Adobe Creative Cloud in Pakistan. Full desktop apps, Firefly generative credits, and genuine replacement warranty.', '/products/adobe-creative-cloud/', 'Read Adobe guide →'),
+                ('TOOL SPOTLIGHT', 'Netflix Premium in Pakistan: 4K Ultra HD Profiles & Pricing (2026)', 'Complete guide to Netflix Premium 4K Ultra HD in Pakistan. Private profiles, zero screen-limit issues, and EasyPaisa renewal.', '/products/netflix-premium-4k/', 'Read Netflix guide →'),
+                ('TOOL SPOTLIGHT', 'YouTube Premium in Pakistan: Ad-Free Music & Video Guide (2026)', 'Complete guide to YouTube Premium in Pakistan. Ad-free videos, background audio, YouTube Music, and instant activation.', '/products/youtube-premium/', 'Read YouTube guide →'),
+                ('TOOL SPOTLIGHT', 'LinkedIn Premium in Pakistan: InMail Credits & Career Guide (2026)', 'Complete guide to LinkedIn Premium Business in Pakistan. InMail message credits, applicant insights, and competitive salary data.', '/products/linkedin-premium/', 'Read LinkedIn guide →'),
+                ('TOOL SPOTLIGHT', 'Windows 11 Pro in Pakistan: Lifetime License Key & Setup Guide (2026)', 'Complete guide to Windows 11 Pro original activation keys in Pakistan. BitLocker encryption, Hyper-V, and instant key delivery.', '/products/windows-11-pro-key/', 'Read Windows guide →'),
+                ('TOOL SPOTLIGHT', 'Notion Business in Pakistan: Team Workspace & Notion AI Guide (2026)', 'Complete guide to Notion Business with Notion AI. Team wikis, project boards, unlimited blocks, and PKR subscription plans.', '/products/notion-business/', 'Read Notion guide →')
             ]
-            content += '<section class="content-block" id="buying-advice"><h2>Buying advice, local payments and safety</h2><p>Crucial buyer protection advice for Pakistani users. Learn how to verify seller access types, pay safely via JazzCash or Easypaisa, and prevent account bans on shared plans.</p>' + tiles(buying_guides) + '</section>'
-            for bg in buying_guides:
-                guide_items.append((bg[1], bg[0]))
 
-            # 5. Editorial Standards & Trust Framework (The Methodology Section)
-            content += f'''<section class="content-block editorial-methodology" id="methodology">
-<h2>What makes these Pakistan AI tool guides useful?</h2>
-<p class="direct-answer">Each guide combines the marketplace details a buyer can verify—PKR price, duration, access type, delivery estimate, and warranty—with links to the vendor's official product documentation. That keeps decisions clear without presenting an independent marketplace offer as an official vendor subscription.</p>
-<p>AI subscriptions are difficult to compare when prices, billing periods, and access arrangements are mixed together. A low price does not automatically mean better value. A one-month private plan, a shared workspace, an invitation-based seat, and a lifetime license key are completely different products with different risks. Our guides put those facts side by side and explain what questions to ask before sending payment.</p>
-<h3>How we research and verify our guides</h3>
-<p>AI Tools Zone records its own listed marketplace prices and fulfillment terms as first-party information. Features are checked against official sources such as OpenAI, Google, Canva, Anthropic, and Figma. We show a review date, link to the relevant product pages, and avoid inventing customer ratings. If a vendor changes its product, the vendor page is authoritative for features; the WhatsApp support team confirms current marketplace availability and exact access conditions before payment.</p>
-<h3>Start with the right question</h3>
-<ul class="checklist">
-<li>What outcome do you need: writing, video, images, voice, coding, design, or productivity?</li>
-<li>Do you require private access, or are invitation/shared terms acceptable for your workflow?</li>
-<li>How long do you need the plan, and what is the effective monthly cost in PKR?</li>
-<li>Does the listed replacement warranty cover your intended use?</li>
-<li>Have current availability, payment route, and delivery time been confirmed on WhatsApp before payment?</li>
-</ul>
-<div class="cta-row">
-<a class="button button-lime" href="/products/">Browse all 20 tools ↗</a>
-<a class="button button-outline" href="/pricing/">Compare PKR prices ↗</a>
-<a class="button button-outline" href="/guides/catalog-methodology/">Read our review methodology ↗</a>
-</div>
+            hero_guides = f'''<section class="hero guide-hero-clean">
+<p class="eyebrow">AI TOOLS ZONE EDITORIAL DESK &amp; BLOG</p>
+<h1>Practical AI tool guides &amp; blog for Pakistan.</h1>
+<p class="lead">Use current marketplace data, direct comparisons and official product sources to choose the right tool before you order. Every guide separates vendor features from AI Tools Zone marketplace terms.</p>
+<div class="byline"><span>Reviewed by AI Tools Zone Editorial Team</span><span>Updated November 2026</span><a href="/guides/catalog-methodology/">Our review method</a></div>
 </section>'''
+
+            grid_cards = []
+            for tag, g_title, g_desc, g_href, g_cta in all_guides:
+                grid_cards.append(f'<article class="guide-card"><p class="eyebrow">{e(tag)}</p><h2><a href="{g_href}">{e(g_title)}</a></h2><p>{e(g_desc)}</p><a class="guide-cta" href="{g_href}">{e(g_cta)}</a></article>')
+            grid_html = '<section class="guide-grid">' + ''.join(grid_cards) + '</section>'
+
+            layout_html = f'''<section class="layout">
+<article class="article">
+<h2 id="what-makes-these-guides-useful">What makes these Pakistan AI tool guides useful?</h2>
+<div class="answer"><strong>Short answer:</strong> each guide combines the marketplace details a buyer can verify—PKR price, duration, access type, delivery estimate and warranty—with links to the vendor’s official product information. That keeps the decision clear without presenting a marketplace offer as an official vendor plan.</div>
+<p>AI subscriptions are difficult to compare when prices, billing periods and access arrangements are mixed together. A low price does not automatically mean better value. A one-month private plan, a shared workspace, an invitation-based seat and a lifetime license key are different products with different risks. Our guides put those facts next to each other and explain what questions to ask before sending payment.</p>
+<h2 id="how-we-research-and-update-the-guides">How we research and update the guides</h2>
+<p>AI Tools Zone records its own listed marketplace price and fulfillment terms as first-party information. Features are checked against official sources such as OpenAI, Google, Canva and Figma. We show a review date, link to the relevant product pages and avoid inventing customer ratings. If a vendor changes its product, the vendor page is authoritative for features; the WhatsApp team confirms current marketplace availability and exact access conditions before payment.</p>
+<p>Comparisons are organized by real tasks: writing, research, coding, image creation, presentations, social content, interface design and team collaboration. This is more useful than declaring one tool universally “best.” A creator preparing daily social posts may need a different workflow from a product designer maintaining a component library.</p>
+<h2 id="start-with-the-right-question">Start with the right question</h2>
+<ul class="checklist">
+<li>What outcome do you need: writing, video, images, voice, coding, design or productivity?</li>
+<li>Do you require private access, or are invitation/shared terms acceptable?</li>
+<li>How long do you need the plan, and what is the effective monthly cost?</li>
+<li>Does the listed warranty cover your intended use?</li>
+<li>Have current availability, payment route and delivery time been confirmed before payment?</li>
+</ul>
+<div class="cta"><a class="button button-lime" href="/products/">Browse all 20 tools</a><a class="button button-outline" href="/guides/private-vs-shared-access/">Understand access types</a></div>
+</article>
+<aside class="toc">
+<strong>ON THIS PAGE</strong>
+<a href="#what-makes-these-guides-useful">Why guides are useful</a>
+<a href="#how-we-research-and-update-the-guides">How we research</a>
+<a href="#start-with-the-right-question">Key questions</a>
+<a href="/guides/private-vs-shared-access/">Understand access types</a>
+<a href="/pricing/">Compare PKR pricing</a>
+</aside>
+</section>'''
+
+            content = hero_guides + grid_html + layout_html
 
             extra = [{
                 '@type': 'ItemList',
                 '@id': origin + '/guides/#all-guides',
                 'name': 'AI Tools Zone Pakistan Guides & Comparisons Directory',
                 'itemListElement': [
-                    {'@type': 'ListItem', 'position': i + 1, 'name': item[0], 'url': origin + item[1]}
-                    for i, item in enumerate(guide_items)
+                    {'@type': 'ListItem', 'position': i + 1, 'name': item[1], 'url': origin + item[3]}
+                    for i, item in enumerate(all_guides)
                 ]
             }]
             publish('/guides/', title, intro, content, selected, extra_schema=extra)
