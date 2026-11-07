@@ -221,6 +221,7 @@ def build_pages(products, origin, shell, write):
                 '/blog/jazzcash-easypaisa-ai-tools-pakistan/': ('LOCAL WALLET GUIDE', 'Read wallet guide →'),
                 '/blog/avoiding-account-bans-shared-ai-tools-pakistan/': ('ACCOUNT SAFETY', 'Read safety guide →'),
                 '/blog/chatgpt-plus-vs-gemini-pro-pakistan/': ('MODEL COMPARISON', 'Read comparison →'),
+                '/blog/cheap-ai-subscriptions-pakistan/': ('PRICE GUIDE', 'Read cheap AI guide →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
@@ -264,6 +265,7 @@ def build_pages(products, origin, shell, write):
                 ('EDITORIAL GUIDE', 'Top AI Video Generators in Pakistan: CapCut, Veo & Runway (2026)', 'Best AI video generators in Pakistan compared for 2026. Explore CapCut Pro VIP, Google Veo 3 Ultra & ElevenLabs with PKR pricing and verified WhatsApp delivery.', '/categories/ai-video/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Best Midjourney Alternatives in Pakistan: Free & Paid (2026)', 'Compare top Midjourney alternatives in Pakistan with PKR pricing. Review Leonardo AI, Adobe Firefly & DALL-E with EasyPaisa and JazzCash payment.', '/products/leonardo-ai-essential/', 'Read guide →'),
                 ('PRICE GUIDE', 'AI Tools Price Guide for Pakistan', 'Compare all 20 current listings in PKR, including duration, access type and the checks to make before payment.', '/pricing/', 'Read the price guide →'),
+                ('PRICE GUIDE', 'Cheap AI Subscriptions in Pakistan: PKR Prices & Buying Tips (2026)', 'Find cheap AI subscriptions in Pakistan starting under PKR 1,000. Compare real PKR prices for Gemini Pro, CapCut Pro, Canva, and ChatGPT with safe buying advice.', '/blog/cheap-ai-subscriptions-pakistan/', 'Read cheap AI guide →'),
                 ('ASSISTANT COMPARISON', 'ChatGPT Plus vs Gemini Pro', 'Choose between two general-purpose AI assistants using tasks, access terms and current Pakistan marketplace listings.', '/compare/chatgpt-vs-gemini/', 'Compare ChatGPT and Gemini →'),
                 ('DESIGN COMPARISON', 'Canva Pro vs Figma Pro', 'Understand which design workflow fits content creators, teams, students and product designers.', '/products/figma-pro-private/', 'Compare Canva and Figma →'),
                 ('ALTERNATIVES', 'ChatGPT Alternatives in Pakistan', 'Explore high-performance alternatives including Claude Pro, Google Gemini, and specialized coding models.', '/alternatives/chatgpt/', 'Explore ChatGPT alternatives →'),

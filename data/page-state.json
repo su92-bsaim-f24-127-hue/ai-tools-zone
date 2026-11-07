@@ -251,6 +251,10 @@
     "sha256": "b82ce9ed077d6e070b8aebdd5c7580f84a66c8f4f3a9736046922e8ab910fe4b",
     "lastmod": "2026-11-06"
   },
+  "/blog/cheap-ai-subscriptions-pakistan/": {
+    "sha256": "18a53d76c55e555b5a726604db23f0808efd602e7686e52dccd3ba16e2195957",
+    "lastmod": "2026-11-07"
+  },
   "/products/": {
     "sha256": "85638dbb87515ba9cbb3ff605a327b2e260c7f8350da063613ac26b7245eb84a",
     "lastmod": "2026-11-06"
@@ -272,7 +276,7 @@
     "lastmod": "2026-11-07"
   },
   "/guides/": {
-    "sha256": "380745f9831a2668225cb3939ba3d6f36274237b2f8e6b3b87efab120801773e",
+    "sha256": "04dff30a9b623814a774eb9614963cd8ab1d5d3b62a858799587dee84896acaa",
     "lastmod": "2026-11-07"
   },
   "/pricing/": {
@@ -280,7 +284,7 @@
     "lastmod": "2026-11-06"
   },
   "/blog/": {
-    "sha256": "20859e336219a54c9728b0fa50119729efbc9752651d452868fd352d1a0dc9e6",
+    "sha256": "cf0654f37ed5b21f9d508a341b7aae4be91c4617378e30a818f481600c493123",
     "lastmod": "2026-11-07"
   }
 }
