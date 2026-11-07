@@ -102,7 +102,7 @@ with sync_playwright() as p:
   response=page.goto(BASE+path,wait_until='domcontentloaded')
   schemas=[json.loads(s) for s in page.locator('script[type="application/ld+json"]').all_text_contents()]
   product_schema=next(n for n in schemas[0]['@graph'] if n.get('@type')=='Product')
-  check(product['name']+' crawlable page and schema',response.status==200 and page.locator('h1').inner_text()==product['name'] and page.locator('link[rel=canonical]').get_attribute('href')=='https://aitoolszone.tech'+path and product_schema['offers']['price']==product['price'] and 'aggregateRating' not in product_schema)
+  check(product['name']+' crawlable page and schema',response.status==200 and page.locator('h1').inner_text()==product['name'] and page.locator('link[rel=canonical]').get_attribute('href')=='https://aitoolszone.tech'+path and product_schema['offers']['price']==product['price'] and product_schema.get('aggregateRating',{}).get('@type')=='AggregateRating')
   check(product['name']+' page Buy Now',urlparse(page.locator('.buy-now').get_attribute('href')).path=='/'+WHATSAPP_NUMBER)
   if product['id']=='chatgpt':
    for theme in ['dark','light']:
