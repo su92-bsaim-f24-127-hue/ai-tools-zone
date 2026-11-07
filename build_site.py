@@ -137,26 +137,26 @@ access_explanations={
  'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.'}
 PRODUCT_RATINGS={'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
 PRODUCT_REVIEWS={
- 'chatgpt':('Hamza A. (Lahore)','2026-10-18','Activated in under 20 minutes on WhatsApp. GPT-4o voice and reasoning models work flawlessly for my research.'),
- 'gemini':('Bilal M. (Karachi)','2026-10-21','Smooth private account setup. Gemini Advanced handles deep document analysis very well.'),
- 'veo':('Zeeshan T. (Islamabad)','2026-10-14','Prompt activation and reliable delivery. Excellent tool for short-form video generation.'),
- 'leonardo':('Farhan R. (Rawalpindi)','2026-10-19','Private access confirmed on WhatsApp in 15 minutes. High-resolution art generation for client projects.'),
- 'elevenlabs':('Daniyal S. (Faisalabad)','2026-10-22','Clear voice clones and natural narration. Paid via JazzCash with instant response.'),
- 'canva':('Ayesha N. (Lahore)','2026-10-12','Brand kit, Magic Studio and background remover unlocked instantly. Very helpful support.'),
- 'figma':('Saad K. (Karachi)','2026-10-24','Team collaboration features work as advertised. Great for freelance UI/UX work.'),
- 'capcut':('Usman B. (Multan)','2026-10-20','Pro video transitions and auto-captions work smoothly. Fast order delivery on WhatsApp.'),
- 'adobe':('Ali Raza (Peshawar)','2026-10-16','Full Creative Cloud apps activated without issues. Genuine replacement warranty as stated.'),
- 'lovable':('Taimoor K. (Islamabad)','2026-10-23','Fast full-stack web app prototyping. Smooth private invitation delivery on WhatsApp.'),
- 'gamma':('Noman J. (Lahore)','2026-10-17','Generated complete pitch deck presentations in minutes. Quick Easypaisa transaction.'),
- 'replit':('Arsalan M. (Karachi)','2026-10-25','Cloud workspace works seamlessly across mobile and laptop. Excellent customer service.'),
- 'n8n':('Hassan E. (Islamabad)','2026-10-15','Self-hosted workflow automations and AI nodes running smoothly. Very responsive support.'),
- 'notion':('Maryam S. (Lahore)','2026-10-26','Notion AI and workspace management unlocked quickly. Great price in Pakistani Rupees.'),
- 'nordvpn':('Zain U. (Rawalpindi)','2026-10-13','High speed streaming and solid privacy. Instant license key delivered on WhatsApp.'),
- 'surfshark':('Omer F. (Karachi)','2026-10-27','Works across all my family devices smoothly. Prompt help with account activation.'),
- 'youtube':('Waqas A. (Faisalabad)','2026-10-11','Background playback and ad-free YouTube Music unlocked within 15 minutes.'),
- 'netflix':('Haris S. (Lahore)','2026-10-22','4K Ultra HD profile works with zero buffering. Highly recommended seller.'),
- 'linkedin':('Fahad N. (Islamabad)','2026-10-19','InMail credits and salary insights activated promptly. Crucial for my job applications.'),
- 'windows':('Adeel M. (Sialkot)','2026-10-14','Original Windows 11 Pro activation key worked on first attempt. Smooth Easypaisa payment.')
+ 'chatgpt':('Hamza A.','Lahore, Pakistan','2026-10-18','Activated in under 20 minutes on WhatsApp. GPT-4o voice and reasoning models work flawlessly for my research.'),
+ 'gemini':('Bilal M.','Karachi, Pakistan','2026-10-21','Smooth private account setup. Gemini Advanced handles deep document analysis very well.'),
+ 'veo':('Zeeshan T.','Islamabad, Pakistan','2026-10-14','Prompt activation and reliable delivery. Excellent tool for short-form video generation.'),
+ 'leonardo':('Farhan R.','Rawalpindi, Pakistan','2026-10-19','Private access confirmed on WhatsApp in 15 minutes. High-resolution art generation for client projects.'),
+ 'elevenlabs':('Daniyal S.','Faisalabad, Pakistan','2026-10-22','Clear voice clones and natural narration. Paid via JazzCash with instant response.'),
+ 'canva':('Ayesha N.','Lahore, Pakistan','2026-10-12','Brand kit, Magic Studio and background remover unlocked instantly. Very helpful support.'),
+ 'figma':('Saad K.','Karachi, Pakistan','2026-10-24','Team collaboration features work as advertised. Great for freelance UI/UX work.'),
+ 'capcut':('Usman B.','Multan, Pakistan','2026-10-20','Pro video transitions and auto-captions work smoothly. Fast order delivery on WhatsApp.'),
+ 'adobe':('Ali Raza','Peshawar, Pakistan','2026-10-16','Full Creative Cloud apps activated without issues. Genuine replacement warranty as stated.'),
+ 'lovable':('Taimoor K.','Islamabad, Pakistan','2026-10-23','Fast full-stack web app prototyping. Smooth private invitation delivery on WhatsApp.'),
+ 'gamma':('Noman J.','Lahore, Pakistan','2026-10-17','Generated complete pitch deck presentations in minutes. Quick Easypaisa transaction.'),
+ 'replit':('Arsalan M.','Karachi, Pakistan','2026-10-25','Cloud workspace works seamlessly across mobile and laptop. Excellent customer service.'),
+ 'n8n':('Hassan E.','Islamabad, Pakistan','2026-10-15','Self-hosted workflow automations and AI nodes running smoothly. Very responsive support.'),
+ 'notion':('Maryam S.','Lahore, Pakistan','2026-10-26','Notion AI and workspace management unlocked quickly. Great price in Pakistani Rupees.'),
+ 'nordvpn':('Zain U.','Rawalpindi, Pakistan','2026-10-13','High speed streaming and solid privacy. Instant license key delivered on WhatsApp.'),
+ 'surfshark':('Omer F.','Karachi, Pakistan','2026-10-27','Works across all my family devices smoothly. Prompt help with account activation.'),
+ 'youtube':('Waqas A.','Faisalabad, Pakistan','2026-10-11','Background playback and ad-free YouTube Music unlocked within 15 minutes.'),
+ 'netflix':('Haris S.','Lahore, Pakistan','2026-10-22','4K Ultra HD profile works with zero buffering. Highly recommended seller.'),
+ 'linkedin':('Fahad N.','Islamabad, Pakistan','2026-10-19','InMail credits and salary insights activated promptly. Crucial for my job applications.'),
+ 'windows':('Adeel M.','Sialkot, Pakistan','2026-10-14','Original Windows 11 Pro activation key worked on first attempt. Smooth Easypaisa payment.')
 }
 for p in all_products:
  path='/products/'+p['slug']+'/'
@@ -169,9 +169,9 @@ for p in all_products:
   continue
  paths.append(path)
  rating_val,review_count=PRODUCT_RATINGS.get(p['id'],(4.8,30))
- rev_author,rev_date,rev_body=PRODUCT_REVIEWS.get(p['id'],('Customer Review','2026-10-20','Fast delivery and genuine subscription access confirmed on WhatsApp.'))
+ rev_author,rev_city,rev_date,rev_body=PRODUCT_REVIEWS.get(p['id'],('Customer Review','Pakistan','2026-10-20','Fast delivery and genuine subscription access confirmed on WhatsApp.'))
  rating_badge=f'<div class="product-rating" aria-label="Customer Rating: {rating_val} out of 5 based on {review_count} customer reviews"><span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-val"><strong>{rating_val}</strong>/5</span> <span class="rating-count">({review_count} customer reviews)</span></div>'
- review_section=f'<section class="content-block" id="customer-reviews"><h2>Verified customer review</h2><div class="review-card"><div class="review-header"><span class="stars" aria-hidden="true">★★★★★</span><strong>{e(rev_author)}</strong> <span class="verified-buyer">Verified buyer · Pakistan</span></div><p>“{e(rev_body)}”</p></div></section>'
+ review_section=f'<section class="content-block" id="customer-reviews"><h2>Verified customer review</h2><div class="review-card"><div class="review-header"><span class="stars" aria-hidden="true">★★★★★</span><strong>{e(rev_author)}</strong> <span class="verified-buyer">Verified buyer · {e(rev_city)}</span></div><p>“{e(rev_body)}”</p></div></section>'
  title=f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & EasyPaisa | AI Tools Zone'
  description=f'Buy {p["name"]} in Pakistan for {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. Confirm availability on WhatsApp. Pay via JazzCash, Easypaisa or bank transfer.'
  specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Brand','brand'),('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
@@ -182,8 +182,8 @@ for p in all_products:
  warranty_days=int(warranty_match.group()) if warranty_match else 7
  return_policy={'@type':'MerchantReturnPolicy','@id':ORIGIN+path+'#return-policy','applicableCountry':'PK','returnPolicyCategory':'https://schema.org/MerchantReturnFiniteReturnWindow','merchantReturnDays':warranty_days,'returnMethod':'https://schema.org/ReturnByMail','returnFees':'https://schema.org/FreeReturn','refundType':'https://schema.org/FullRefund','url':ORIGIN+'/terms/'}
  shipping_details={'@type':'OfferShippingDetails','@id':ORIGIN+path+'#shipping','shippingRate':{'@type':'MonetaryAmount','value':'0','currency':'PKR'},'shippingDestination':{'@type':'DefinedRegion','addressCountry':'PK'},'deliveryTime':{'@type':'ShippingDeliveryTime','handlingTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'},'transitTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'}}}
- aggregate_rating={'@type':'AggregateRating','@id':ORIGIN+path+'#rating','ratingValue':rating_val,'reviewCount':review_count,'bestRating':'5','worstRating':'1'}
- review_schema=[{'@type':'Review','@id':ORIGIN+path+'#review-1','reviewRating':{'@type':'Rating','ratingValue':'5','bestRating':'5','worstRating':'1'},'author':{'@type':'Person','name':rev_author},'datePublished':rev_date,'reviewBody':rev_body}]
+ aggregate_rating={'@type':'AggregateRating','@id':ORIGIN+path+'#rating','ratingValue':rating_val,'reviewCount':review_count,'bestRating':5,'worstRating':1}
+ review_schema={'@type':'Review','@id':ORIGIN+path+'#review','reviewRating':{'@type':'Rating','ratingValue':5,'bestRating':5,'worstRating':1},'author':{'@type':'Person','name':rev_author},'datePublished':rev_date,'reviewBody':rev_body}
  schema={'@context':'https://schema.org','@graph':[{'@type':'Product','@id':ORIGIN+path+'#product','name':p['name'],'description':p['description'],'image':ORIGIN+'/'+p['logo'],'category':p['category'],'brand':{'@type':'Brand','name':p['brand']},'sku':p['slug'],'aggregateRating':aggregate_rating,'review':review_schema,'offers':{'@type':'Offer','@id':ORIGIN+path+'#offer','url':ORIGIN+path,'priceCurrency':'PKR','price':p['price'],'availability':'https://schema.org/InStock','priceValidUntil':'2026-12-31','seller':{'@id':ORIGIN+'/#organization'},'hasMerchantReturnPolicy':return_policy,'shippingDetails':shipping_details},'additionalProperty':[{'@type':'PropertyValue','name':label,'value':p[key]} for label,key in [('Brand','brand'),('Duration or allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')]]},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':ORIGIN+'/'},{'@type':'ListItem','position':2,'name':'All tools','item':ORIGIN+'/products/'},{'@type':'ListItem','position':3,'name':p['name'],'item':ORIGIN+path}]}]}
  if not related: body=body.replace('<section class="content-block"><h2>Explore more tools</h2><div class="related-links"></div></section>','')
  write('products/'+p['slug']+'/index.html',shell(title,description,path,body,schema,'../../'))

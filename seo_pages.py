@@ -222,6 +222,11 @@ def build_pages(products, origin, shell, write):
                 '/blog/avoiding-account-bans-shared-ai-tools-pakistan/': ('ACCOUNT SAFETY', 'Read safety guide →'),
                 '/blog/chatgpt-plus-vs-gemini-pro-pakistan/': ('MODEL COMPARISON', 'Read comparison →'),
                 '/blog/cheap-ai-subscriptions-pakistan/': ('PRICE GUIDE', 'Read cheap AI guide →'),
+                '/blog/how-to-earn-money-with-ai-pakistan/': ('MONETIZATION & INCOME', 'Read earning guide →'),
+                '/blog/where-to-buy-ai-tools-pakistan/': ('BUYER PROTECTION', 'Read safe buying guide →'),
+                '/blog/best-ai-image-generators-pakistan/': ('IMAGE GENERATION', 'Compare image tools →'),
+                '/blog/best-ai-video-generators-pakistan/': ('VIDEO CREATION', 'Compare video tools →'),
+                '/blog/cursor-vs-copilot-pakistan/': ('DEVELOPER TOOLS', 'Compare coding tools →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
@@ -287,7 +292,12 @@ def build_pages(products, origin, shell, write):
                 ('TOOL SPOTLIGHT', 'YouTube Premium in Pakistan: Ad-Free Music & Video Guide (2026)', 'Complete guide to YouTube Premium in Pakistan. Ad-free videos, background audio, YouTube Music, and instant activation.', '/products/youtube-premium/', 'Read YouTube guide →'),
                 ('TOOL SPOTLIGHT', 'LinkedIn Premium in Pakistan: InMail Credits & Career Guide (2026)', 'Complete guide to LinkedIn Premium Business in Pakistan. InMail message credits, applicant insights, and competitive salary data.', '/products/linkedin-premium/', 'Read LinkedIn guide →'),
                 ('TOOL SPOTLIGHT', 'Windows 11 Pro in Pakistan: Lifetime License Key & Setup Guide (2026)', 'Complete guide to Windows 11 Pro original activation keys in Pakistan. BitLocker encryption, Hyper-V, and instant key delivery.', '/products/windows-11-pro-key/', 'Read Windows guide →'),
-                ('TOOL SPOTLIGHT', 'Notion Business in Pakistan: Team Workspace & Notion AI Guide (2026)', 'Complete guide to Notion Business with Notion AI. Team wikis, project boards, unlimited blocks, and PKR subscription plans.', '/products/notion-business/', 'Read Notion guide →')
+                ('TOOL SPOTLIGHT', 'Notion Business in Pakistan: Team Workspace & Notion AI Guide (2026)', 'Complete guide to Notion Business with Notion AI. Team wikis, project boards, unlimited blocks, and PKR subscription plans.', '/products/notion-business/', 'Read Notion guide →'),
+                ('MONETIZATION & INCOME', 'How to Earn Money with AI in Pakistan (2026 Guide)', 'Discover 6 proven freelancing and agency business models to earn PKR with AI tools like ChatGPT, Midjourney, and CapCut.', '/blog/how-to-earn-money-with-ai-pakistan/', 'Read earning guide →'),
+                ('BUYER PROTECTION', 'Where to Buy AI Tools Safely in Pakistan (2026)', 'Avoid WhatsApp scams and account bans. How to identify trusted AI sellers in Pakistan with JazzCash, EasyPaisa, and warranty protection.', '/blog/where-to-buy-ai-tools-pakistan/', 'Read safe buying guide →'),
+                ('IMAGE GENERATION', 'Best AI Image Generators in Pakistan (2026)', 'Compare Leonardo AI, Midjourney, and Adobe Firefly for Pakistani designers, agencies, and e-commerce sellers with PKR pricing.', '/blog/best-ai-image-generators-pakistan/', 'Compare image tools →'),
+                ('VIDEO CREATION', 'Best AI Video Generators in Pakistan (2026)', 'Compare CapCut Pro, Runway Gen-3, Google Veo 3, and HeyGen for Pakistani creators, YouTubers, and TikTokers.', '/blog/best-ai-video-generators-pakistan/', 'Compare video tools →'),
+                ('DEVELOPER TOOLS', 'Cursor AI vs GitHub Copilot in Pakistan (2026)', 'Compare the top 2 AI code editors for Pakistani software engineers, freelancers, and computer science students.', '/blog/cursor-vs-copilot-pakistan/', 'Compare coding tools →')
             ]
 
             hero_guides = f'''<section class="hero guide-hero-clean">

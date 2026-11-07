@@ -1,6 +1,6 @@
 {
-  "expected_pages": 72,
-  "reason": "Add practical buying guide on cheap AI subscriptions in Pakistan: PKR prices, access models, safety checks, and local mobile wallet payment; preserve all existing routes and product slugs.",
+  "expected_pages": 77,
+  "reason": "Add 5 high-impact commercial guides on earning money with AI, safe buying, image/video generators, and coding assistants; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -73,7 +73,12 @@
     "/use-cases/ai-tools-for-developers/",
     "/use-cases/ai-tools-for-students/",
     "/blog/chatgpt-plus-vs-gemini-pro-pakistan/",
-    "/blog/cheap-ai-subscriptions-pakistan/"
+    "/blog/cheap-ai-subscriptions-pakistan/",
+    "/blog/how-to-earn-money-with-ai-pakistan/",
+    "/blog/where-to-buy-ai-tools-pakistan/",
+    "/blog/best-ai-image-generators-pakistan/",
+    "/blog/best-ai-video-generators-pakistan/",
+    "/blog/cursor-vs-copilot-pakistan/"
   ],
   "product_slugs": {
     "chatgpt": "chatgpt-plus",
