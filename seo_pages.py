@@ -98,7 +98,14 @@ def comparison_table(entries, by_id):
     return '<section class="content-block"><h2>Compare by the work you need done</h2><p>Vendor plan details can change and may vary by country or account. This guide gives you a fair test to run; it does not claim a hands-on benchmark or equal plan entitlements.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Tool comparison and official references"><table class="plan-table"><caption>Original workflow comparison with official vendor references</caption><thead><tr><th scope="col">Tool</th><th scope="col">Source</th><th scope="col">AI Tools Zone catalogue</th><th scope="col">A useful side-by-side test</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div></section>'
 
 def tiles(entries):
-    return '<div class="editorial-grid">' + ''.join(f'<article class="editorial-card"><h2><a href="{path}">{e(title)}</a></h2><p>{e(summary)}</p></article>' for path,title,summary in entries) + '</div>'
+    cards = []
+    for item in entries:
+        path, title, summary = item[0], item[1], item[2]
+        tag = item[3] if len(item) > 3 else ''
+        cta = item[4] if len(item) > 4 else 'Read guide →'
+        tag_html = f'<p class="eyebrow">{e(tag)}</p>' if tag else ''
+        cards.append(f'<article class="editorial-card guide-card">{tag_html}<h2><a href="{path}">{e(title)}</a></h2><p>{e(summary)}</p><a class="guide-cta" href="{path}">{e(cta)}</a></article>')
+    return '<div class="editorial-grid guide-grid">' + ''.join(cards) + '</div>'
 
 def product_context(p):
     related = [page['path'] for page in CONTENT['pages'] if p['id'] in page['products']]
@@ -202,12 +209,149 @@ def build_pages(products, origin, shell, write):
         elif hub == 'categories':
             content += tiles([(category_path(c['name']),c['heading'],c['intro'][0]) for c in CONTENT['categories']])
         elif hub == 'blog':
-            entries=[(a['path'],a['title'],a['summary']) for a in BLOG['articles']]
-            content += tiles(entries)
-            content += '<section class="content-block"><h2>More practical guides</h2><p>Use the existing workflow, buying and comparison pages when you are choosing a listed subscription. We keep research linked to the right canonical page instead of cloning the same topic into thin articles or republishing fast-moving news without verification.</p>'+links(['/compare/','/use-cases/ai-tools-for-students/','/use-cases/ai-tools-for-creators/','/use-cases/ai-tools-for-developers/','/use-cases/ai-tools-for-business/','/categories/ai-assistants/','/categories/ai-video/','/categories/design/','/categories/ai-voice/','/categories/development/','/guides/choose-ai-subscription/','/guides/private-vs-shared-access/','/guides/catalog-methodology/','/pricing/'])+'</section>'
+            blog_meta = {
+                '/blog/ai-phone-agents-whatsapp-bots-pakistan/': ('BUSINESS AUTOMATION', 'Read automation guide →'),
+                '/blog/free-ai-tools-pakistan/': ('FREE WORKFLOWS', 'Explore free tools →'),
+                '/blog/ai-tools-for-pakistani-freelancers/': ('FREELANCE DELIVERABLES', 'Read freelancer guide →'),
+                '/blog/ai-tools-for-teachers-pakistan/': ('EDUCATION & CLASSROOM', 'Read teacher guide →'),
+                '/blog/ai-tools-for-content-creators-pakistan/': ('CREATOR STRATEGY', 'Read creator guide →'),
+                '/blog/ai-subscription-vs-api-credits-pakistan/': ('API VS SUBSCRIPTION', 'Compare costs →'),
+                '/blog/how-to-pay-for-chatgpt-plus-pakistan/': ('PAYMENT OPTIONS', 'Read payment guide →'),
+                '/blog/jazzcash-easypaisa-ai-tools-pakistan/': ('LOCAL WALLET GUIDE', 'Read wallet guide →'),
+                '/blog/avoiding-account-bans-shared-ai-tools-pakistan/': ('ACCOUNT SAFETY', 'Read safety guide →'),
+                '/blog/chatgpt-plus-vs-gemini-pro-pakistan/': ('MODEL COMPARISON', 'Read comparison →'),
+            }
+            blog_entries = []
+            for a in BLOG['articles']:
+                tag, cta = blog_meta.get(a['path'], ('EDITORIAL GUIDE', 'Read guide →'))
+                blog_entries.append((a['path'], a['title'], a['summary'], tag, cta))
+
+            hero_blog = f'''<div class="guide-hero">
+<p class="eyebrow">AI TOOLS ZONE EDITORIAL BLOG</p>
+<p class="lead">Practical, source-linked guides on AI subscriptions, local payment methods (JazzCash, Easypaisa), account security, and creator workflows in Pakistan.</p>
+<div class="byline"><span>Reviewed by AI Tools Zone Editorial Team</span><span>Updated November 2026</span><a href="/guides/">Browse all 40+ tool guides &amp; comparisons</a></div>
+</div>'''
+            content = hero_blog + tiles(blog_entries)
+            content += '<section class="content-block"><h2>More practical guides &amp; comparisons</h2><p>Use our dedicated workflow, buying, and comparison hubs to evaluate specific plans. We keep research linked to the right canonical pages instead of cloning duplicate articles.</p>' + links(['/guides/','/compare/','/use-cases/ai-tools-for-students/','/use-cases/ai-tools-for-creators/','/use-cases/ai-tools-for-developers/','/use-cases/ai-tools-for-business/','/categories/ai-assistants/','/categories/ai-video/','/categories/design/','/categories/ai-voice/','/categories/development/','/guides/choose-ai-subscription/','/guides/private-vs-shared-access/','/guides/catalog-methodology/','/pricing/']) + '</section>'
             content += '<p class="offer-note">AI Tools Zone currently lists subscriptions and buying information. Custom bot or phone-agent implementation is not listed as an orderable service.</p>'
-            extra=[{'@type':'ItemList','@id':origin+'/blog/#articles','name':'AI Tools Zone practical guides','itemListElement':[{'@type':'ListItem','position':i+1,'name':a['title'],'url':origin+a['path']} for i,a in enumerate(BLOG['articles'])]}]
-            publish('/blog/',title,intro,content,selected,extra_schema=extra)
+            extra = [{'@type':'ItemList','@id':origin+'/blog/#articles','name':'AI Tools Zone practical guides','itemListElement':[{'@type':'ListItem','position':i+1,'name':a['title'],'url':origin+a['path']} for i,a in enumerate(BLOG['articles'])]}]
+            publish('/blog/', title, intro, content, selected, extra_schema=extra)
+            continue
+        elif hub == 'guides':
+            guide_items = []
+            hero_guides = f'''<div class="guide-hero">
+<p class="eyebrow">AI TOOLS ZONE EDITORIAL DESK &amp; GUIDES</p>
+<p class="lead">Practical Pakistan-focused guides on AI subscriptions: features, PKR prices, access models, and buying advice. Use verified marketplace data and official vendor documentation to choose the right AI tool before ordering.</p>
+<div class="byline"><span>Reviewed by AI Tools Zone Editorial Team</span><span>Updated November 2026</span><a href="/guides/catalog-methodology/">Our review method</a></div>
+</div>
+<nav class="guide-nav" aria-label="Guide topics">
+<a href="#tool-guides">Tool Guides ({len(products)})</a>
+<a href="#comparisons">Comparisons (10)</a>
+<a href="#workflows">Workflows &amp; Roles (4)</a>
+<a href="#buying-advice">Payment &amp; Safety</a>
+<a href="/pricing/">PKR Price Guide ↗</a>
+</nav>'''
+            content = hero_guides
+
+            # 1. Tool Spotlights (20 Tools)
+            tool_entries = []
+            for p in products:
+                tool_title = f"{p['name']} in Pakistan: Features, Pricing & Guide (2026)"
+                tool_summary = f"Complete guide to {p['name']} in Pakistan. Listed at PKR {p['price']:,} for {p['duration']} with {p['access'].lower()} access. Verify features and order via JazzCash or Easypaisa."
+                tool_path = f"/products/{p['slug']}/"
+                tool_entries.append((tool_path, tool_title, tool_summary, 'EDITORIAL GUIDE', f"Read {p['name'].split()[0]} guide →"))
+                guide_items.append((tool_title, tool_path))
+            content += '<section class="content-block" id="tool-guides"><h2>Tool guides and PKR price reviews</h2><p>Comprehensive guides for every verified AI tool and digital subscription in our Pakistani catalog. Review features, access models, and listed PKR prices via JazzCash and Easypaisa.</p>' + tiles(tool_entries) + '</section>'
+
+            # 2. Head-to-Head Comparisons (10 Comparisons)
+            comp_ctas = {
+                '/compare/chatgpt-vs-claude/': 'Compare ChatGPT & Claude →',
+                '/compare/chatgpt-vs-gemini/': 'Compare ChatGPT & Gemini →',
+                '/compare/canva-vs-adobe/': 'Compare Canva & Adobe →',
+                '/compare/capcut-vs-runway/': 'Compare CapCut & Runway →',
+                '/compare/capcut-vs-canva/': 'Compare CapCut & Canva →',
+                '/compare/claude-vs-gemini/': 'Compare Claude & Gemini →',
+                '/compare/replit-vs-lovable/': 'Compare Replit & Lovable →',
+                '/compare/grammarly-vs-quillbot-vs-wordai/': 'Compare Writing Tools →',
+                '/compare/elevenlabs-vs-playht/': 'Compare Voice Tools →',
+                '/compare/helium10-vs-semrush-vs-vidiq/': 'Compare Growth Tools →',
+            }
+            comp_tags = {
+                '/compare/chatgpt-vs-claude/': 'HEAD-TO-HEAD COMPARISON',
+                '/compare/chatgpt-vs-gemini/': 'HEAD-TO-HEAD COMPARISON',
+                '/compare/canva-vs-adobe/': 'DESIGN COMPARISON',
+                '/compare/capcut-vs-runway/': 'CREATOR COMPARISON',
+                '/compare/capcut-vs-canva/': 'CREATOR COMPARISON',
+                '/compare/claude-vs-gemini/': 'ASSISTANT COMPARISON',
+                '/compare/replit-vs-lovable/': 'DEVELOPER COMPARISON',
+                '/compare/grammarly-vs-quillbot-vs-wordai/': 'WRITING COMPARISON',
+                '/compare/elevenlabs-vs-playht/': 'VOICE COMPARISON',
+                '/compare/helium10-vs-semrush-vs-vidiq/': 'GROWTH COMPARISON',
+            }
+            comp_pages = [p for p in CONTENT['pages'] if p['type'] == 'compare']
+            comp_entries = []
+            for cp in comp_pages:
+                cta = comp_ctas.get(cp['path'], 'Compare tools →')
+                tag = comp_tags.get(cp['path'], 'HEAD-TO-HEAD COMPARISON')
+                comp_entries.append((cp['path'], cp['title'], cp['answer'], tag, cta))
+                guide_items.append((cp['title'], cp['path']))
+            content += '<section class="content-block" id="comparisons"><h2>Head-to-head AI tool comparisons</h2><p>Direct comparisons between competing AI models, video editors, design suites, and developer platforms. Compare coding benchmarks, multimodal capabilities, context windows, and Pakistan buyer terms side by side.</p>' + tiles(comp_entries) + '</section>'
+
+            # 3. Audience & Workflow Guides (4 Use-Cases)
+            wf_pages = [p for p in CONTENT['pages'] if p['type'] == 'use-cases']
+            wf_entries = []
+            for wp in wf_pages:
+                wf_entries.append((wp['path'], wp['title'], wp['answer'], 'AUDIENCE GUIDE', 'View workflow guide →'))
+                guide_items.append((wp['title'], wp['path']))
+            content += '<section class="content-block" id="workflows"><h2>AI guides by audience and workflow</h2><p>Role-specific guidance for students, content creators, freelance developers, and Pakistani business teams. Match your routine tasks with the most cost-effective tools.</p>' + tiles(wf_entries) + '</section>'
+
+            # 4. Buying Advice, Local Payments & Security
+            buying_guides = [
+                ('/guides/choose-ai-subscription/', 'How to Choose an AI Subscription in Pakistan', 'Choose a subscription by the task you need to complete, then confirm the exact offer: total PKR price, duration, access type, limits, and replacement terms.', 'BUYING ADVICE', 'Read buying guide →'),
+                ('/guides/private-vs-shared-access/', 'Private vs Shared AI Access: Invitations & Keys', 'Access type describes how an offer is supplied. Private refers to personal accounts, Shared involves shared access, and Invitation joins a workspace.', 'ACCESS GUIDE', 'Understand access types →'),
+                ('/blog/jazzcash-easypaisa-ai-tools-pakistan/', 'How to Buy AI Subscriptions with JazzCash & Easypaisa in Pakistan', 'Complete walkthrough for paying for international AI tools in Pakistani Rupees using local mobile wallets and Raast IBFT.', 'LOCAL PAYMENTS', 'Read payment guide →'),
+                ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to Pay for ChatGPT Plus in Pakistan: Official Options & Checks', 'Official card options, virtual card workarounds, and buyer verification steps for Pakistani ChatGPT Plus subscribers.', 'PAYMENT GUIDE', 'Read payment walkthrough →'),
+                ('/blog/avoiding-account-bans-shared-ai-tools-pakistan/', 'How to Avoid Account Bans on Shared AI Tools in Pakistan', 'Crucial guidelines on IP stability, browser session discipline, and simultaneous logins to protect your access.', 'ACCOUNT SAFETY', 'Read safety rules →'),
+                ('/blog/ai-subscription-vs-api-credits-pakistan/', 'AI Subscription vs API Credits in Pakistan: Cost Breakdown', 'Subscriptions give you predictable monthly access while API credits charge per token. Understand which pricing model suits your workload.', 'COST ANALYSIS', 'Compare costs →'),
+                ('/blog/chatgpt-plus-vs-gemini-pro-pakistan/', 'ChatGPT Plus vs Gemini Pro for Pakistan (2026)', 'Compare GPT-4o with Gemini 1.5 Pro on reasoning, context windows, and value in PKR before buying.', 'MODEL COMPARISON', 'Read comparison →'),
+                ('/pricing/', 'AI Tools Price Guide for Pakistan: All 20 Tools in PKR', 'Compare all 20 catalog listings in PKR, including options under PKR 1,000 and PKR 2,000, with durations and access terms.', 'PRICE GUIDE', 'View full price guide →')
+            ]
+            content += '<section class="content-block" id="buying-advice"><h2>Buying advice, local payments and safety</h2><p>Crucial buyer protection advice for Pakistani users. Learn how to verify seller access types, pay safely via JazzCash or Easypaisa, and prevent account bans on shared plans.</p>' + tiles(buying_guides) + '</section>'
+            for bg in buying_guides:
+                guide_items.append((bg[1], bg[0]))
+
+            # 5. Editorial Standards & Trust Framework (The Methodology Section)
+            content += f'''<section class="content-block editorial-methodology" id="methodology">
+<h2>What makes these Pakistan AI tool guides useful?</h2>
+<p class="direct-answer">Each guide combines the marketplace details a buyer can verify—PKR price, duration, access type, delivery estimate, and warranty—with links to the vendor's official product documentation. That keeps decisions clear without presenting an independent marketplace offer as an official vendor subscription.</p>
+<p>AI subscriptions are difficult to compare when prices, billing periods, and access arrangements are mixed together. A low price does not automatically mean better value. A one-month private plan, a shared workspace, an invitation-based seat, and a lifetime license key are completely different products with different risks. Our guides put those facts side by side and explain what questions to ask before sending payment.</p>
+<h3>How we research and verify our guides</h3>
+<p>AI Tools Zone records its own listed marketplace prices and fulfillment terms as first-party information. Features are checked against official sources such as OpenAI, Google, Canva, Anthropic, and Figma. We show a review date, link to the relevant product pages, and avoid inventing customer ratings. If a vendor changes its product, the vendor page is authoritative for features; the WhatsApp support team confirms current marketplace availability and exact access conditions before payment.</p>
+<h3>Start with the right question</h3>
+<ul class="checklist">
+<li>What outcome do you need: writing, video, images, voice, coding, design, or productivity?</li>
+<li>Do you require private access, or are invitation/shared terms acceptable for your workflow?</li>
+<li>How long do you need the plan, and what is the effective monthly cost in PKR?</li>
+<li>Does the listed replacement warranty cover your intended use?</li>
+<li>Have current availability, payment route, and delivery time been confirmed on WhatsApp before payment?</li>
+</ul>
+<div class="cta-row">
+<a class="button button-lime" href="/products/">Browse all 20 tools ↗</a>
+<a class="button button-outline" href="/pricing/">Compare PKR prices ↗</a>
+<a class="button button-outline" href="/guides/catalog-methodology/">Read our review methodology ↗</a>
+</div>
+</section>'''
+
+            extra = [{
+                '@type': 'ItemList',
+                '@id': origin + '/guides/#all-guides',
+                'name': 'AI Tools Zone Pakistan Guides & Comparisons Directory',
+                'itemListElement': [
+                    {'@type': 'ListItem', 'position': i + 1, 'name': item[0], 'url': origin + item[1]}
+                    for i, item in enumerate(guide_items)
+                ]
+            }]
+            publish('/guides/', title, intro, content, selected, extra_schema=extra)
             continue
         else:
             content += tiles([(p['path'],p['title'],p['answer']) for p in CONTENT['pages'] if p['type']==hub])
