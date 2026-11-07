@@ -69,10 +69,8 @@ def run():
             elif isinstance(value,list):
                 for v in value:yield from nodes(v)
         for n in nodes(schemas):
-            if n.get('@type')=='AggregateRating':
-                check(path.startswith('/products/'),path+' aggregateRating only allowed on products')
-            elif n.get('@type')=='Review' or 'review' in n:
-                check(False,path+' unsupported review')
+            if n.get('@type') in ('AggregateRating','Review'):
+                check(path.startswith('/products/'),path+' review/aggregateRating only allowed on products')
         for node in schemas:
             if node.get('@type')=='BreadcrumbList':check(node.get('@id')==ORIGIN+path+'#breadcrumb',path+' unstable breadcrumb ID')
             if node.get('@type')=='Product':check(node['offers'].get('@id')==ORIGIN+path+'#offer',path+' unstable offer ID')

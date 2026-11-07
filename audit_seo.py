@@ -132,6 +132,7 @@ def run():
                 check(nodes[0].get('sku')==p['slug'],path+' missing product sku')
                 check('mpn' not in nodes[0],path+' seller slug must not become a manufacturer part number')
                 check(nodes[0].get('aggregateRating',{}).get('@type')=='AggregateRating',path+' missing product aggregateRating')
+                check(isinstance(nodes[0].get('review'),list) and len(nodes[0]['review'])>0 and nodes[0]['review'][0].get('@type')=='Review',path+' missing product review')
                 offer=nodes[0].get('offers',{})
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')

@@ -90,6 +90,11 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 .product-rating{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin:6px 0 14px;color:var(--text);background:var(--panel);border:1px solid var(--border);padding:4px 12px;border-radius:20px}
 .product-rating .stars{color:#f59e0b;letter-spacing:1px}
 .product-rating .rating-count{color:var(--muted);font-size:13px}
+.review-card{border:1px solid var(--border);border-radius:16px;background:var(--panel);padding:20px;margin-top:14px}
+.review-header{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;font-size:14px}
+.review-header .stars{color:#f59e0b;letter-spacing:1px}
+.verified-buyer{font-size:12px;color:var(--muted);background:var(--border);padding:2px 8px;border-radius:12px}
+.review-card p{margin:0;font-size:15px;line-height:1.6;color:var(--text);font-style:italic}
 .compare-table .inline-link{display:block;margin-top:12px}
 .card-actions{flex-wrap:wrap}
 .order-alternatives{display:flex;flex-wrap:wrap;gap:8px 16px;flex-basis:100%;order:3;margin:8px 0;font-size:13px;line-height:1.6}
