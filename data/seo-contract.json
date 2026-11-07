@@ -1,6 +1,6 @@
 {
-  "expected_pages": 77,
-  "reason": "Add 5 high-impact commercial guides on earning money with AI, safe buying, image/video generators, and coding assistants; preserve all existing routes and product slugs.",
+  "expected_pages": 81,
+  "reason": "Add 4 expansion commercial guides on student research/thesis, agency automation with n8n/WhatsApp, Canva vs Adobe freelancer ROI, and faceless YouTube automation; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -78,7 +78,11 @@
     "/blog/where-to-buy-ai-tools-pakistan/",
     "/blog/best-ai-image-generators-pakistan/",
     "/blog/best-ai-video-generators-pakistan/",
-    "/blog/cursor-vs-copilot-pakistan/"
+    "/blog/cursor-vs-copilot-pakistan/",
+    "/blog/ai-tools-for-pakistani-students-research-thesis/",
+    "/blog/ai-agency-automation-pakistan-n8n-make/",
+    "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/",
+    "/blog/faceless-youtube-automation-ai-tools-pakistan/"
   ],
   "product_slugs": {
     "chatgpt": "chatgpt-plus",

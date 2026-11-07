@@ -275,6 +275,22 @@
     "sha256": "55229061073e602109cb0447bf5166c29344611d432838cf4cb8b6d299b3d649",
     "lastmod": "2026-11-07"
   },
+  "/blog/ai-tools-for-pakistani-students-research-thesis/": {
+    "sha256": "915aaf9b19042d0afd8c9de80f68bfec7a2dd1d7cc86104df571f2fb9a3f8858",
+    "lastmod": "2026-11-07"
+  },
+  "/blog/ai-agency-automation-pakistan-n8n-make/": {
+    "sha256": "2ee39f7518fa13867d70207bd2afab08817802e1433041480a95cbf2106776d2",
+    "lastmod": "2026-11-07"
+  },
+  "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/": {
+    "sha256": "8ba2d53181f994f51a696af9458d6962baa51c97d9199e9c7e61e9bfa62f6f58",
+    "lastmod": "2026-11-07"
+  },
+  "/blog/faceless-youtube-automation-ai-tools-pakistan/": {
+    "sha256": "1bbd983cda916149237c92e796a1da9dd1463bce87645aedb1207e062a76cae6",
+    "lastmod": "2026-11-07"
+  },
   "/products/": {
     "sha256": "85638dbb87515ba9cbb3ff605a327b2e260c7f8350da063613ac26b7245eb84a",
     "lastmod": "2026-11-06"
@@ -296,7 +312,7 @@
     "lastmod": "2026-11-07"
   },
   "/guides/": {
-    "sha256": "1771bfa9ceac83cc8e9ca879a887ebf970097a9083a0852963abc35ad312b8ee",
+    "sha256": "0b461673a6778e3d2b105cbda4ff8a4f653756901e63bfb20ba399d5f481116f",
     "lastmod": "2026-11-07"
   },
   "/pricing/": {
@@ -304,7 +320,7 @@
     "lastmod": "2026-11-06"
   },
   "/blog/": {
-    "sha256": "632655b4e406208b915fc2b284298397b8f9d4ec6f99f69bdf8357aa2010aacd",
+    "sha256": "10489f77bdbe639b9aef9239fdaaf89eca192eaadd04a28510b83a794a585199",
     "lastmod": "2026-11-07"
   }
 }

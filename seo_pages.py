@@ -227,6 +227,10 @@ def build_pages(products, origin, shell, write):
                 '/blog/best-ai-image-generators-pakistan/': ('IMAGE GENERATION', 'Compare image tools →'),
                 '/blog/best-ai-video-generators-pakistan/': ('VIDEO CREATION', 'Compare video tools →'),
                 '/blog/cursor-vs-copilot-pakistan/': ('DEVELOPER TOOLS', 'Compare coding tools →'),
+                '/blog/ai-tools-for-pakistani-students-research-thesis/': ('ACADEMIC PLAYBOOK', 'Read student guide →'),
+                '/blog/ai-agency-automation-pakistan-n8n-make/': ('AGENCY WORKFLOWS', 'Read agency guide →'),
+                '/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/': ('FREELANCE ROI', 'Compare design tools →'),
+                '/blog/faceless-youtube-automation-ai-tools-pakistan/': ('CREATOR STACK', 'Read YouTube guide →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
@@ -297,7 +301,11 @@ def build_pages(products, origin, shell, write):
                 ('BUYER PROTECTION', 'Where to Buy AI Tools Safely in Pakistan (2026)', 'Avoid WhatsApp scams and account bans. How to identify trusted AI sellers in Pakistan with JazzCash, EasyPaisa, and warranty protection.', '/blog/where-to-buy-ai-tools-pakistan/', 'Read safe buying guide →'),
                 ('IMAGE GENERATION', 'Best AI Image Generators in Pakistan (2026)', 'Compare Leonardo AI, Midjourney, and Adobe Firefly for Pakistani designers, agencies, and e-commerce sellers with PKR pricing.', '/blog/best-ai-image-generators-pakistan/', 'Compare image tools →'),
                 ('VIDEO CREATION', 'Best AI Video Generators in Pakistan (2026)', 'Compare CapCut Pro, Runway Gen-3, Google Veo 3, and HeyGen for Pakistani creators, YouTubers, and TikTokers.', '/blog/best-ai-video-generators-pakistan/', 'Compare video tools →'),
-                ('DEVELOPER TOOLS', 'Cursor AI vs GitHub Copilot in Pakistan (2026)', 'Compare the top 2 AI code editors for Pakistani software engineers, freelancers, and computer science students.', '/blog/cursor-vs-copilot-pakistan/', 'Compare coding tools →')
+                ('DEVELOPER TOOLS', 'Cursor AI vs GitHub Copilot in Pakistan (2026)', 'Compare the top 2 AI code editors for Pakistani software engineers, freelancers, and computer science students.', '/blog/cursor-vs-copilot-pakistan/', 'Compare coding tools →'),
+                ('ACADEMIC PLAYBOOK', 'AI Tools for Pakistani Students: Research & Thesis Playbook (2026)', 'How Pakistani students use AI for research papers and thesis writing while staying Turnitin-safe. Review budget PKR software tools.', '/blog/ai-tools-for-pakistani-students-research-thesis/', 'Read student guide →'),
+                ('AGENCY WORKFLOWS', 'AI Agency Automation in Pakistan: Build Client Workflows with n8n (2026)', 'How Pakistani agencies and developers replace expensive Zapier setups with n8n workflow automation and WhatsApp bots.', '/blog/ai-agency-automation-pakistan-n8n-make/', 'Read agency guide →'),
+                ('FREELANCE ROI', 'Canva Pro vs Adobe Creative Cloud in Pakistan: Freelancer Buying Guide (2026)', 'Canva Pro Edu (PKR 450) vs Adobe Creative Cloud (PKR 3,500) for Pakistani freelance graphic designers. Compare deliverables and ROI.', '/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/', 'Compare design tools →'),
+                ('CREATOR STACK', 'Faceless YouTube Channel Automation with AI in Pakistan (2026 Stack)', 'Complete faceless YouTube production pipeline: ChatGPT Plus, ElevenLabs, Google Veo 3, and CapCut Pro with PKR costs.', '/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Read YouTube guide →')
             ]
 
             hero_guides = f'''<section class="hero guide-hero-clean">
