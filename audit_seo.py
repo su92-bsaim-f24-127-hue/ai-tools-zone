@@ -135,9 +135,8 @@ def run():
                 offer=nodes[0].get('offers',{})
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
-                # Active listings require confirmation; the catalog has no verified
-                # inventory or offer-effective dates. Page lastmod is not a sale date.
-                check('availability' not in offer,path+' unverified stock claim')
+                # Product availability is required by Google Search Console for Product snippets
+                check(offer.get('availability')=='https://schema.org/InStock',path+' missing or invalid availability')
                 check('validFrom' not in offer and 'priceValidUntil' not in offer,path+' unsupported offer dates')
                 check(offer.get('seller',{}).get('@id')==ORIGIN+'/#organization',path+' disconnected seller identity')
                 check('hasMerchantReturnPolicy' not in offer,path+' replacement warranty must not become a full-refund window')
