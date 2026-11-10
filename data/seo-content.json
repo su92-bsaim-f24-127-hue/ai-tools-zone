@@ -22,7 +22,9 @@
       "related": [
         "/compare/chatgpt-vs-gemini/",
         "/use-cases/ai-tools-for-students/",
-        "/alternatives/chatgpt/"
+        "/alternatives/chatgpt/",
+        "/compare/claude-vs-gemini/",
+        "/compare/chatgpt-vs-claude/"
       ]
     },
     {
@@ -72,7 +74,8 @@
       "related": [
         "/compare/canva-vs-adobe/",
         "/alternatives/canva/",
-        "/use-cases/ai-tools-for-creators/"
+        "/use-cases/ai-tools-for-creators/",
+        "/compare/leonardo-vs-midjourney/"
       ]
     },
     {
@@ -97,7 +100,8 @@
       "related": [
         "/use-cases/ai-tools-for-creators/",
         "/categories/ai-video/",
-        "/guides/choose-ai-subscription/"
+        "/guides/choose-ai-subscription/",
+        "/compare/elevenlabs-vs-playht/"
       ]
     },
     {
@@ -147,7 +151,8 @@
       "related": [
         "/use-cases/ai-tools-for-business/",
         "/use-cases/ai-tools-for-students/",
-        "/guides/private-vs-shared-access/"
+        "/guides/private-vs-shared-access/",
+        "/compare/grammarly-vs-quillbot-vs-wordai/"
       ]
     },
     {
@@ -247,7 +252,8 @@
       "related": [
         "/guides/private-vs-shared-access/",
         "/pricing/",
-        "/terms/"
+        "/terms/",
+        "/compare/helium10-vs-semrush-vs-vidiq/"
       ]
     }
   ],
@@ -291,7 +297,9 @@
       "related": [
         "/categories/ai-assistants/",
         "/compare/chatgpt-vs-gemini/",
-        "/guides/choose-ai-subscription/"
+        "/guides/choose-ai-subscription/",
+        "/blog/ai-tools-for-teachers-pakistan/",
+        "/compare/grammarly-vs-quillbot-vs-wordai/"
       ],
       "sources": [
         [
@@ -505,7 +513,8 @@
       "related": [
         "/categories/ai-assistants/",
         "/alternatives/chatgpt/",
-        "/use-cases/ai-tools-for-students/"
+        "/use-cases/ai-tools-for-students/",
+        "/compare/claude-vs-gemini/"
       ],
       "sources": [
         [
@@ -569,7 +578,9 @@
       "related": [
         "/categories/design/",
         "/alternatives/canva/",
-        "/use-cases/ai-tools-for-creators/"
+        "/use-cases/ai-tools-for-creators/",
+        "/compare/leonardo-vs-midjourney/",
+        "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/"
       ],
       "sources": [
         [
@@ -580,6 +591,20 @@
           "Adobe Creative Cloud",
           "https://www.adobe.com/creativecloud.html"
         ]
+      ],
+      "comparison": [
+        {
+          "name": "Canva Pro Edu",
+          "officialUrl": "https://www.canva.com/pricing/",
+          "product": "canva",
+          "test": "Create a multi-slide Instagram carousel or presentation and test 1-click Magic Studio background removal and brand kit export."
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "officialUrl": "https://www.adobe.com/creativecloud.html",
+          "product": "adobe",
+          "test": "Open complex vector artwork in Illustrator or edit 4K timeline footage in Premiere Pro with Adobe Firefly generative fill."
+        }
       ]
     },
     {
@@ -930,6 +955,7 @@
       ],
       "related": [
         "/compare/chatgpt-vs-gemini/",
+        "/compare/claude-vs-gemini/",
         "/products/chatgpt-plus/",
         "/guides/choose-ai-subscription/",
         "/use-cases/ai-tools-for-students/"
@@ -986,10 +1012,11 @@
         ]
       ],
       "related": [
+        "/compare/chatgpt-vs-claude/",
         "/compare/chatgpt-vs-gemini/",
-        "/products/gemini-pro/",
         "/categories/ai-assistants/",
-        "/guides/private-vs-shared-access/"
+        "/products/gemini-pro/",
+        "/use-cases/ai-tools-for-students/"
       ]
     },
     {
@@ -1045,10 +1072,11 @@
         ]
       ],
       "related": [
-        "/categories/ai-assistants/",
         "/use-cases/ai-tools-for-students/",
-        "/guides/choose-ai-subscription/",
-        "/products/chatgpt-plus/"
+        "/categories/productivity/",
+        "/blog/ai-tools-for-pakistani-students-research-thesis/",
+        "/blog/ai-tools-for-teachers-pakistan/",
+        "/compare/helium10-vs-semrush-vs-vidiq/"
       ]
     },
     {
@@ -1106,7 +1134,8 @@
         "/products/capcut-pro/",
         "/products/veo-3-ultra/",
         "/categories/ai-video/",
-        "/use-cases/ai-tools-for-creators/"
+        "/use-cases/ai-tools-for-creators/",
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/"
       ]
     },
     {
@@ -1162,8 +1191,9 @@
       "related": [
         "/products/elevenlabs/",
         "/categories/ai-voice/",
+        "/compare/capcut-vs-runway/",
         "/use-cases/ai-tools-for-creators/",
-        "/guides/private-vs-shared-access/"
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/"
       ]
     },
     {
@@ -1219,10 +1249,11 @@
         ]
       ],
       "related": [
-        "/use-cases/ai-tools-for-business/",
-        "/categories/business/",
-        "/guides/choose-ai-subscription/",
-        "/pricing/"
+        "/categories/software/",
+        "/products/n8n-starter/",
+        "/blog/how-to-earn-money-with-ai-pakistan/",
+        "/compare/grammarly-vs-quillbot-vs-wordai/",
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/"
       ]
     },
     {
@@ -1292,6 +1323,74 @@
           "product": "lovable",
           "test": "Generate a multi-page web application with database auth and test prompt iteration speed."
         }
+      ]
+    },
+    {
+      "path": "/compare/leonardo-vs-midjourney/",
+      "type": "compare",
+      "title": "Leonardo AI vs Midjourney: Image Generator Workflow & PKR Plans",
+      "description": "Compare Leonardo AI and Midjourney for Pakistani designers and creators. Review web canvas vs Discord interface, fine-tuned models, and listed PKR plans.",
+      "answer": "Leonardo AI and Midjourney represent two distinct image generation workflows. In this catalog, Leonardo AI is listed with transparent PKR pricing and private access, while Midjourney operates via Discord with USD subscription tiers. Compare prompt control, canvas editing, and local payment convenience before deciding.",
+      "products": [
+        "leonardo"
+      ],
+      "comparison": [
+        {
+          "name": "Leonardo AI Essential",
+          "officialUrl": "https://leonardo.ai/pricing/",
+          "product": "leonardo",
+          "test": "Generate game assets or commercial marketing graphics using the Phoenix model with Alchemy upscaler, negative prompts, and transparent PNG export."
+        },
+        {
+          "name": "Midjourney v6",
+          "officialUrl": "https://www.midjourney.com/",
+          "test": "Prompt cinematic portrait photography inside Discord; test aesthetic quality, style referencing, and regional card payment acceptance."
+        }
+      ],
+      "sections": [
+        [
+          "Web Canvas Studio vs Discord Interface",
+          "Leonardo AI provides a comprehensive web application with visual canvas editing, real-time generation, layer controls, and fine-tuned community models. Midjourney generates imagery through Discord commands or its web portal. Creators who prefer point-and-click image manipulation and in-painting often prefer Leonardo's interface, while those seeking raw cinematic realism explore Midjourney."
+        ],
+        [
+          "Prompt Controls, Negative Prompts and Custom Models",
+          "Leonardo AI allows direct control over dimensions, guidance scale, negative prompting, and custom LoRA models. Midjourney uses text parameter flags (--ar, --s, --stylize). For production consistency in e-commerce, logos, and UI illustration, fine-tuned controls provide repeatable results."
+        ],
+        [
+          "Payment and Access in Pakistan",
+          "Subscribing to international AI services directly can result in credit card declines due to Pakistani banking forex restrictions. AI Tools Zone lists Leonardo AI Essential with flat PKR pricing and instant WhatsApp activation via JazzCash, EasyPaisa, or local bank transfer. Midjourney is not currently listed in our local catalog and requires an international payment method."
+        ]
+      ],
+      "faq": [
+        [
+          "Which tool is easier for beginners in Pakistan?",
+          "Leonardo AI is generally easier for beginners because of its straightforward web interface, pre-set style presets, and transparent PKR payment without needing Discord setup."
+        ],
+        [
+          "Does AI Tools Zone list Midjourney?",
+          "Midjourney is not currently listed in the AI Tools Zone catalog. We provide this comparison to help creators understand workflow differences between web-based generation and Discord-based tools."
+        ],
+        [
+          "Can I use Leonardo AI generated images commercially?",
+          "Paid plans on Leonardo AI generally include commercial rights for generated images. Confirm the exact licensing and current usage terms on the official Leonardo.ai website before using outputs in client work."
+        ]
+      ],
+      "related": [
+        "/products/leonardo-ai-essential/",
+        "/categories/design/",
+        "/blog/best-ai-image-generators-pakistan/",
+        "/use-cases/ai-tools-for-creators/",
+        "/compare/canva-vs-adobe/"
+      ],
+      "sources": [
+        [
+          "Leonardo.ai pricing and features",
+          "https://leonardo.ai/pricing/"
+        ],
+        [
+          "Midjourney documentation",
+          "https://docs.midjourney.com/"
+        ]
       ]
     }
   ]

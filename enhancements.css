@@ -179,3 +179,15 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 
 @media(max-width:820px){.layout{grid-template-columns:minmax(0,1fr)}.toc{position:static;order:-1}}
 @media(max-width:640px){.guide-grid{grid-template-columns:1fr}.guide-hero{padding:20px}.guide-hero-clean{padding:24px 20px}}
+
+/* Mobile Sticky WhatsApp Order Bar */
+.mobile-sticky-bar{display:none}
+@media(max-width:640px){
+  .mobile-sticky-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:1000;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--panel,#181916);border-top:1px solid var(--border,#2a2c27);box-shadow:0 -4px 20px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  .mobile-sticky-bar .bar-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .mobile-sticky-bar .bar-title{font-size:.88rem;font-weight:700;color:var(--text,#f0f2eb);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
+  .mobile-sticky-bar .bar-price{font-size:.82rem;font-weight:700;color:var(--lime,#b8ff33)}
+  .mobile-sticky-bar .bar-price small{font-size:.72rem;color:var(--muted,#9a9b95);font-weight:400}
+  .mobile-sticky-bar .sticky-buy-btn{padding:9px 15px;font-size:.86rem;font-weight:700;margin:0;white-space:nowrap;flex-shrink:0}
+  .product-page{padding-bottom:76px !important}
+}
