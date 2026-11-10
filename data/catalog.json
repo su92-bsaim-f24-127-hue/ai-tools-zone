@@ -42,23 +42,23 @@
     "name": "Gemini Pro",
     "brand": "Google",
     "category": "AI Assistants",
-    "description": "Google’s multimodal AI for deep research, documents, code and everyday workflow.",
-    "price": 800,
-    "duration": "18 Months",
-    "access": "Invitation",
-    "delivery": "30–60 min",
+    "description": "Google’s advanced multimodal AI with 2M token context for deep research, coding, documents, and Google Workspace integration.",
+    "price": 2000,
+    "duration": "1 Year",
+    "access": "Private",
+    "delivery": "15–30 min",
     "warranty": "30 Days",
     "badge": "Best Value",
     "bestFor": [
       "Research",
       "Study",
-      "Google"
+      "Coding"
     ],
     "features": [
       "2M token context window",
-      "Google Workspace integration",
-      "Multimodal reasoning",
-      "Deep research mode"
+      "Google Workspace integration (Docs & Gmail)",
+      "Deep multimodal reasoning & code execution",
+      "100% Private personal account (1 Year)"
     ],
     "intent": [
       "writing",

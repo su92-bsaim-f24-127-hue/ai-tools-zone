@@ -17,7 +17,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 ## Current listings
 
 - [ChatGPT Plus](https://aitoolszone.tech/products/chatgpt-plus/): AI Assistants; PKR 2,300; 1 Month; Private access. Confirm current terms before ordering.
-- [Gemini Pro](https://aitoolszone.tech/products/gemini-pro/): AI Assistants; PKR 800; 18 Months; Invitation access. Confirm current terms before ordering.
+- [Gemini Pro](https://aitoolszone.tech/products/gemini-pro/): AI Assistants; PKR 2,000; 1 Year; Private access. Confirm current terms before ordering.
 - [Veo 3 Ultra](https://aitoolszone.tech/products/veo-3-ultra/): AI Video; PKR 2,100; Confirm before ordering; Shared access. Confirm current terms before ordering.
 - [Leonardo AI Essential](https://aitoolszone.tech/products/leonardo-ai-essential/): Design; PKR 1,900; 8,500 Credits; Private access. Confirm current terms before ordering.
 - [ElevenLabs](https://aitoolszone.tech/products/elevenlabs/): AI Voice; PKR 3,300; 1 Month; Private access. Confirm current terms before ordering.

@@ -23,14 +23,14 @@
 ### Gemini Pro
 - **URL**: https://aitoolszone.tech/products/gemini-pro/
 - **Category**: AI Assistants
-- **Current seller-listed price**: PKR 800
-- **Duration / Allowance**: 18 Months
-- **Access Type**: Invitation
-- **Delivery Estimate**: 30–60 min
+- **Current seller-listed price**: PKR 2,000
+- **Duration / Allowance**: 1 Year
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: 30 Days
-- **Best For**: Research, Study, Google
-- **Description**: Google’s multimodal AI for deep research, documents, code and everyday workflow.
-- **Included Features**: 2M token context window; Google Workspace integration; Multimodal reasoning; Deep research mode
+- **Best For**: Research, Study, Coding
+- **Description**: Google’s advanced multimodal AI with 2M token context for deep research, coding, documents, and Google Workspace integration.
+- **Included Features**: 2M token context window; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; 100% Private personal account (1 Year)
 - **Official Vendor**: https://gemini.google.com/
 
 ### Veo 3 Ultra
