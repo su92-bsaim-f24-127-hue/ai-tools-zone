@@ -4,7 +4,7 @@
   function enhance(root) {
     const links=[...(root.matches?.('a[data-product-id]')?[root]:[]),...root.querySelectorAll('a[data-product-id]')];
     for(const link of links){
-      if(!link.dataset.productId||link.dataset.webEnhanced)continue;
+      if(!link.dataset.productId||link.dataset.webEnhanced||link.closest('.mobile-sticky-bar'))continue;
       const original=new URL(link.href,location.href);
       if(original.hostname!=='wa.me'||!/^\/\d{8,15}$/.test(original.pathname))continue;
       link.dataset.webEnhanced='true';
