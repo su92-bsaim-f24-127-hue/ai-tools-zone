@@ -4,83 +4,83 @@
     "lastmod": "2026-11-10"
   },
   "/products/chatgpt-plus/": {
-    "sha256": "c4743b21476fc33d75c290bbe6b74cfd6ba9a5a00a194c4b2ce0f24fb33a8669",
+    "sha256": "f86c694168badc5f1494a0095ef6130ce0b2fa25ad018bf551324ada410b993c",
     "lastmod": "2026-11-10"
   },
   "/products/gemini-pro/": {
-    "sha256": "2fa82b36664e61c2610a0e7cc89a2359b63fc452e0c02929b43ac88725658e32",
+    "sha256": "39fd1438b66016c7f623705583a55c4990f37ab9024daec1ef7b673ffa40df3a",
     "lastmod": "2026-11-10"
   },
   "/products/veo-3-ultra/": {
-    "sha256": "ad3485d4f5e8fc4e7cd6ead96fdf7cfb0311e460344addc92de76ef47e447faa",
+    "sha256": "ad18317652402c0ed9550a06943e578816b56d8e767de3a36156f727360de79e",
     "lastmod": "2026-11-10"
   },
   "/products/leonardo-ai-essential/": {
-    "sha256": "6dd4aaf656196c02f123838ecc2317b8446fd8218d787de712792748826842cf",
+    "sha256": "7fab773bf40881cb071456c4eaa83d291e3ce98d33c6a174be7d52827f856561",
     "lastmod": "2026-11-10"
   },
   "/products/elevenlabs/": {
-    "sha256": "02a28cd5b5bbf11cd16bff96d4f18b279e36eb85cd5ba94014331b6da7766a47",
+    "sha256": "e6a33e23d85c64b7d73b474d9e33103988a640149b25674bedcc1c1cc214fbc4",
     "lastmod": "2026-11-10"
   },
   "/products/canva-pro-edu/": {
-    "sha256": "091a7a83d45c26da13c06c2044a5e20ea8b07e7a74ab70d0818cd87059421cc6",
+    "sha256": "96c9f6be5b9c73cb8efd478e43beca530765c68f4376455d4ec48a74ab1fdc7e",
     "lastmod": "2026-11-10"
   },
   "/products/figma-pro-private/": {
-    "sha256": "773b6517ec68c29d0529f2b34ee90782cb7d2c47dd864b806a60a7ea9e1ecb84",
+    "sha256": "c41c5329c26bc6cb8f2a99bd656a69237b1dea5433a6ab3d18c0bb2a2d373817",
     "lastmod": "2026-11-10"
   },
   "/products/capcut-pro/": {
-    "sha256": "8e523d42a32b0cadcb848f87051cf6829811f81e8a3a885a6d2a434857f5ca27",
+    "sha256": "9d5c1c78dc68b266bb3d617fed9ec19535aede7f5405d39f2b53e1b3a46d6ded",
     "lastmod": "2026-11-10"
   },
   "/products/adobe-creative-cloud/": {
-    "sha256": "0da65a5dc1d18af8fe4683a12614932167dc3f3b9c1185621fbe092df661a94b",
+    "sha256": "fa15561ab0390c037c91a0ffcf84e422af116263a4177541fd96d7eb245e6e5b",
     "lastmod": "2026-11-10"
   },
   "/products/lovable-pro/": {
-    "sha256": "0d6adec7933ac5507e09ef76713f71f77445487ac9d6418e520270c10812c102",
+    "sha256": "8965c1066d73f689427a0d2848dcfe85e7b1340fc6615a0696828bae12a47e37",
     "lastmod": "2026-11-10"
   },
   "/products/gamma-pro/": {
-    "sha256": "dad1b8b5b71156a82920f9cd750516e05cf88b07cb048e72160b5823fbaef4de",
+    "sha256": "8629bdf5a09209d6c90ca0f3156f74d3e1644191c934a3299e2f1dc35b408b22",
     "lastmod": "2026-11-10"
   },
   "/products/replit-core/": {
-    "sha256": "e639a7121f5b83fe6f2c336de5c4ec42004b7e139d9edd213c885199c3fa0ab7",
+    "sha256": "7578febab9e8a35d045e29cb8c69063f83150f9c69c0d1c9111febc4ab8e7683",
     "lastmod": "2026-11-10"
   },
   "/products/n8n-starter/": {
-    "sha256": "f8cca13231b90579454b3b9af0971769271b4456af6a29e540adae14ebd50ba6",
+    "sha256": "e1ace6e581bd899c60e752090fbba3ab6530403cf0ac5129aa4fea0d0625f6e9",
     "lastmod": "2026-11-10"
   },
   "/products/notion-business/": {
-    "sha256": "aed80fdd42f264b62840ddb01b82885f188d5e703720993f1083ca9a7639f972",
+    "sha256": "b24dfec02c4e493eeb016946c4faac3d1ede99caf690e4fb442343a03eed3f14",
     "lastmod": "2026-11-10"
   },
   "/products/nordvpn/": {
-    "sha256": "11fa793b1f80d8e1e7f76c7c33a1ab7254bd1c9cb43153c96876611f7f826200",
+    "sha256": "d41ae0e78690e12c0911370c53deee17995abf9c5c41dff35fd109aa39699a72",
     "lastmod": "2026-11-10"
   },
   "/products/surfshark-vpn/": {
-    "sha256": "2b868e023f04e304cf1668a44d65136894482bfd73b93669dd7371053131a702",
+    "sha256": "2a5731b22990f37a8ac7d123c75238ae644958adeb856d9c24ba83c19df96ed2",
     "lastmod": "2026-11-10"
   },
   "/products/youtube-premium/": {
-    "sha256": "18ef3d9be1f8bc00858b256ef1edc8fcbdb773323a120bd24ab66f890dc004e9",
+    "sha256": "0c5c211418c0f17149085d060c647f90f694f05f398502355dea507eeaea28fe",
     "lastmod": "2026-11-10"
   },
   "/products/netflix-premium-4k/": {
-    "sha256": "842378096426cfaf904c6a8b082a701b7f244989c36e5d50f6e7f644055dd28f",
+    "sha256": "2ed5a8670c738969361499a9cfe060aaa76505446e2975d5cc177bed11b31f71",
     "lastmod": "2026-11-10"
   },
   "/products/linkedin-premium/": {
-    "sha256": "95b79522df880c9e778dd90e9279ec91858c7524bfc667bc704558d5c00e5ce9",
+    "sha256": "ce1119617b5214f53a20ef3a9a77ba202ee319b78a1413123795fa40997c71d2",
     "lastmod": "2026-11-10"
   },
   "/products/windows-11-pro-key/": {
-    "sha256": "05737d9182f1f4e20673efbb59860f96e6bc4aff310b8d597405993bb3d0f41d",
+    "sha256": "4d224e0ab15a5975dd7033e07a8a2caeefe0bae574dcfb17bd3f1860f668ff80",
     "lastmod": "2026-11-10"
   },
   "/about/": {

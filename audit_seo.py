@@ -140,7 +140,9 @@ def run():
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
                 # Product availability is required by Google Search Console for Product snippets
                 check(offer.get('availability')=='https://schema.org/InStock',path+' missing or invalid availability')
-                check(offer.get('validFrom')=='2026-01-01',path+' missing validFrom')
+                check(offer.get('itemCondition')=='https://schema.org/NewCondition',path+' missing or invalid itemCondition')
+                check(offer.get('validFrom') in ('2026-01-01', '2026-01-01T00:00:00+05:00'),path+' missing validFrom')
+                check(offer.get('validThrough') in ('2026-12-31', '2026-12-31T23:59:59+05:00'),path+' missing validThrough')
                 check(offer.get('priceValidUntil')=='2026-12-31',path+' missing priceValidUntil')
                 check(offer.get('seller',{}).get('@id')==ORIGIN+'/#organization',path+' disconnected seller identity')
                 check(offer.get('hasMerchantReturnPolicy',{}).get('@type')=='MerchantReturnPolicy',path+' missing hasMerchantReturnPolicy')

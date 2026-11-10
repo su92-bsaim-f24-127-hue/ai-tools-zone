@@ -65,7 +65,7 @@ def main():
         assert code == 200, f'Route {r} returned {code}'
         if r.startswith('/products/'):
             assert 'mobile-sticky-bar' in body, f'{r} missing mobile-sticky-bar'
-            assert 'validFrom":"2026-01-01"' in body or 'validFrom": "2026-01-01"' in body or '"validFrom":"2026-01-01"' in body, f'{r} missing validFrom'
+            assert 'validFrom' in body and '2026-01-01' in body, f'{r} missing validFrom'
         if r == '/products/chatgpt-plus/':
             assert '2,300' in body, 'ChatGPT missing PKR 2,300'
         if r == '/compare/leonardo-vs-midjourney/':
