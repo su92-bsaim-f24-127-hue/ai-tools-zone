@@ -15,7 +15,7 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const categories = [...new Set(products.map(p => p.category))];
   const selected = new Set();
-  let category = 'All tools', expanded = false, toastTimer, lastFocus;
+  let category = 'All tools', toastTimer, lastFocus;
   const modalHistory = [];
   let finderChoices = {intent:'writing', budget:'3000', access:'all'};
   const modal = $('#modal'), content = $('#modal-content');
@@ -63,9 +63,8 @@
     if(sort === 'price-low') results.sort((a,b)=>a.price-b.price);
     if(sort === 'price-high') results.sort((a,b)=>b.price-a.price);
     if(sort === 'name') results.sort((a,b)=>a.name.localeCompare(b.name));
-    const filtered = intent !== 'all' || duration !== 'all' || query || category !== 'All tools' || access !== 'all' || budget !== Infinity || sort !== 'featured';
-    const visible = expanded || filtered ? results : results.slice(0,8);
-    $('#result-count').textContent = `Showing ${visible.length} of ${results.length} tools`;
+    const visible = results;
+    $('#result-count').textContent = results.length === products.length ? `Showing all ${products.length} tools` : `Showing ${results.length} of ${products.length} tools`;
     const hasCatalogMatch = Boolean(query) && products.some(p => CatalogSearch.matches(p,query,{intent:'all',duration:'all'}));
     const requestedTool = rawQuery && !hasCatalogMatch ? Array.from(rawQuery).slice(0,120).join('') : '';
     const requestMessage = `Assalam-o-Alaikum AI Tools Zone!\nI couldn't find a matching listing for: ${requestedTool}\nCan you check whether you can offer it? Please confirm the current price, duration, access type, availability and terms before payment.`;
@@ -74,10 +73,10 @@
       ? `<div class="empty-state"><div class="empty-icon">⌕</div><h3>No matching listing yet.</h3><p>We couldn't find a match for <strong>${escape(requestedTool)}</strong> with the current search and filters.</p><p>Ask us to check it. We will confirm the offer details with you before payment.</p>${requestLink}<p><button class="button button-outline" data-reset>Reset all filters ↺</button></p></div>`
       : `<div class="empty-state"><div class="empty-icon">⌕</div><h3>No tools found. New possibilities await.</h3><p>Try another search or reset your filters.</p><button class="button button-outline" data-reset>Reset all filters ↺</button></div>`;
     $('#product-grid').innerHTML = visible.length ? visible.map(card).join('') : emptyState;
-    $('#show-more').hidden = filtered || results.length <= 8;
-    $('#show-more').innerHTML = expanded ? 'Show featured tools <span>↑</span>' : 'Explore all 20 tools <span>↗</span>';
+    const showMore = $('#show-more');
+    if (showMore) showMore.hidden = true;
   }
-  function resetFilters() {category='All tools';$('#search').value='';$('#sort').value='featured';$('#access-filter').value='all';$('#budget-filter').value='';$('#intent-filter').value='all';$('#duration-filter').value='all';expanded=false;renderTabs();renderProducts();}
+  function resetFilters() {category='All tools';$('#search').value='';$('#sort').value='featured';$('#access-filter').value='all';$('#budget-filter').value='';$('#intent-filter').value='all';$('#duration-filter').value='all';renderTabs();renderProducts();}
   function chooseCategory(c) {category=c;renderTabs();renderProducts();}
   function details(id) {
     window.aitzMeasure?.('product_view',{product:id});
@@ -85,7 +84,7 @@
     openModal(`<div class="detail-heading">${mark(p)}<div><div class="eyebrow">${escape(p.category)}</div><h2 id="modal-title">${escape(p.name)}</h2></div></div><p>${escape(p.description)}</p><div class="detail-price">${priceMarkup(p)} <small>for ${escape(p.duration)}</small></div><div class="detail-specs"><div><small>ACCESS TYPE</small><b>${escape(p.access)}</b></div><div><small>DURATION / ALLOWANCE</small><b>${escape(p.duration)}</b></div><div><small>DELIVERY ESTIMATE</small><b>${escape(p.delivery)}</b></div><div><small>REPLACEMENT WARRANTY</small><b>${escape(p.warranty)}</b></div></div><h3>What’s in your toolkit</h3><ul class="feature-list">${p.features.map(f=>`<li>${escape(f)}</li>`).join('')}</ul><p class="modal-note">Plan features and usage limits are subject to the selected offer. Confirm the current limits, eligibility and availability with us before payment.</p><div class="modal-actions">${waLink(singleMessage(p),'Order on WhatsApp','button button-lime',p.id)}<a class="button button-outline" href="products/${p.slug}/">Full plan details ↗</a></div>`, '', modal.open);
   }
   function exploreAll() {
-    resetFilters();expanded=true;renderProducts();
+    resetFilters();renderProducts();
     const go=()=>{$('#marketplace').scrollIntoView();$('#search').focus({preventScroll:true});};
     if(modal.open){modal.addEventListener('close',go,{once:true});closeModal();}else go();
   }
@@ -144,7 +143,7 @@
   $('#duration-filter').addEventListener('change',renderProducts);
   $('#reset-filters').addEventListener('click',resetFilters);
   $('#filter-toggle').addEventListener('click',()=>{const open=$('#advanced-filters').hidden;$('#advanced-filters').hidden=!open;$('#filter-toggle').setAttribute('aria-expanded',open);});
-  $('#show-more').addEventListener('click',()=>{expanded=!expanded;renderProducts();if(!expanded)$('#marketplace').scrollIntoView();});
+  $('#show-more')?.addEventListener('click',()=>{renderProducts();});
   $('#clear-compare').addEventListener('click',()=>{selected.clear();updateCompare();});
   function setMenu(open) {$('#main-nav').classList.toggle('open',open);$('#menu-toggle').setAttribute('aria-expanded',String(open));$('#menu-toggle').setAttribute('aria-label',open?'Close menu':'Open menu');$('#menu-toggle').textContent=open?'×':'☰';}
   $('#menu-toggle').addEventListener('click',()=>setMenu(!$('#main-nav').classList.contains('open')));

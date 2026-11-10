@@ -11,7 +11,8 @@ with sync_playwright() as p:
     browser=p.chromium.launch(executable_path=r'C:\Program Files\Google\Chrome\Application\chrome.exe',headless=True)
     context=browser.new_context(reduced_motion='reduce',viewport={'width':1440,'height':1000})
     context.route('https://web.whatsapp.com/**',lambda r:r.fulfill(status=200,body='Web navigation intercepted, no message sent.'))
-    page=context.new_page();page.goto('http://127.0.0.1:8080/',wait_until='networkidle');page.locator('#show-more').click()
+    page=context.new_page();page.goto('http://127.0.0.1:8080/',wait_until='networkidle')
+    if page.locator('#show-more').is_visible(): page.locator('#show-more').click()
     page.wait_for_function("document.querySelectorAll('.product-card .whatsapp-web-link').length===window.PRODUCTS.length")
     for card in page.locator('.product-card').all():
         app=parse_qs(urlparse(card.locator('.buy-now').get_attribute('href')).query)

@@ -36,7 +36,8 @@ with sync_playwright() as p:
  check('Logo animation can be paused',page.locator('.logo-float').evaluate('el=>getComputedStyle(el).animationPlayState')=='paused')
  page.emulate_media(reduced_motion='reduce')
  products=page.evaluate('PRODUCTS')
- page.locator('#show-more').click()
+ if page.locator('#show-more').is_visible():
+  page.locator('#show-more').click()
  check('All active catalog listings expand',page.locator('.product-card').count()==ACTIVE_COUNT)
  page.locator('#product-grid').screenshot(path=str(OUT/'updated-all-products.png'))
  for product in products:
