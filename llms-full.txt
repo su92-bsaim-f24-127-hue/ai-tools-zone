@@ -27,7 +27,7 @@
 - **Duration / Allowance**: 1 Year
 - **Access Type**: Private
 - **Delivery Estimate**: 15–30 min
-- **Replacement Warranty**: 30 Days
+- **Replacement Warranty**: No Warranty
 - **Best For**: Research, Study, Coding
 - **Description**: Google’s advanced multimodal AI with 2M token context for deep research, coding, documents, and Google Workspace integration.
 - **Included Features**: 2M token context window; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; 100% Private personal account (1 Year)

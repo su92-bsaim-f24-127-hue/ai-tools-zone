@@ -59,7 +59,7 @@ To overcome buyer hesitations, each page now explicitly presents five trust pill
 | Product Name | Price (PKR) | Access Model | Delivery Time | Replacement Warranty | Primary Trust Hook |
 |---|---|---|---|---|---|
 | **ChatGPT Plus** | PKR 2,300 | Private | 15–30 min | 7 Days | 100% Dedicated Private Environment / Personal Credentials |
-| **Gemini Pro** | PKR 2,000 | Private | 15–30 min | 30 Days | 100% Dedicated Private Environment / Personal Credentials |
+| **Gemini Pro** | PKR 2,000 | Private | 15–30 min | No Warranty | 100% Dedicated Private Environment / Personal Credentials |
 | **Veo 3 Ultra** | PKR 2,100 | Shared | 15–30 min | 7 Days | Managed Shared Access with Strict Profile Isolation |
 | **Leonardo AI Essential** | PKR 1,900 | Private | 30–60 min | 7 Days | 100% Dedicated Private Environment / Personal Credentials |
 | **ElevenLabs** | PKR 3,300 | Private | 30–60 min | 7 Days | 100% Dedicated Private Environment / Personal Credentials |

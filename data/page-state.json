@@ -1,14 +1,14 @@
 {
   "/": {
-    "sha256": "94eed36947e33a6ac13e5f5101e861eebaefa22abfb469ab71900809bb6b823c",
-    "lastmod": "2026-11-10"
+    "sha256": "c3a633e65478470ce60a5794a539ef61970ceed96d751c15bd2f15ee4e9a64e3",
+    "lastmod": "2026-11-11"
   },
   "/products/chatgpt-plus/": {
     "sha256": "433a9114c1e02acc6b875df9b25942e004a270c857156bb3b5bf0c518599ea63",
     "lastmod": "2026-11-11"
   },
   "/products/gemini-pro/": {
-    "sha256": "c18ecfcd6f2892e1aa468c4997918f98734196adbf07017063ec471f6f55c2ae",
+    "sha256": "331b92708c3ba2ed3fd6c7babb5337fdb69d0c94687d16da0c91c91179dfd5eb",
     "lastmod": "2026-11-11"
   },
   "/products/veo-3-ultra/": {
@@ -96,8 +96,8 @@
     "lastmod": "2026-11-10"
   },
   "/categories/ai-assistants/": {
-    "sha256": "e249199443c09432893ea2eb976f076761c8ea37ca94552dc6d29b7b64162fd5",
-    "lastmod": "2026-11-10"
+    "sha256": "0f8c9c0043370be2ea6a2216714938b8f3dbf5cbabdcbbf765b90a49de06dba9",
+    "lastmod": "2026-11-11"
   },
   "/categories/ai-video/": {
     "sha256": "e2bf52472ad328157aae1ca53e37cf2b019a7bfd268665e7aba0d10b5eac8e17",
@@ -136,8 +136,8 @@
     "lastmod": "2026-11-10"
   },
   "/use-cases/ai-tools-for-students/": {
-    "sha256": "71d25e958c59308db5daa35176de7a1d01a29afaa45298f3c52d48c5c9adc0e2",
-    "lastmod": "2026-11-10"
+    "sha256": "bc97206c0f06e47ad97d96885b43d116c3d217108cf38f06eb62e6a592832a57",
+    "lastmod": "2026-11-11"
   },
   "/use-cases/ai-tools-for-creators/": {
     "sha256": "f1f977bbab28dea59b0554438a9d62f42bedbfd9b79aed3686271b8a6168d23d",
@@ -152,8 +152,8 @@
     "lastmod": "2026-11-10"
   },
   "/compare/chatgpt-vs-gemini/": {
-    "sha256": "2e716e537028293197fc97242667892e8554df7e3085342f93ef1e0b08f5b006",
-    "lastmod": "2026-11-10"
+    "sha256": "0879a3fd15a8e87e54517ba1d8c22cd5144f1ec8981630449a46c1671accc70e",
+    "lastmod": "2026-11-11"
   },
   "/compare/canva-vs-adobe/": {
     "sha256": "f4441d76e8db39acc83cea25a818d787af0b6e71b557145ff2803c53fb940da0",
@@ -164,8 +164,8 @@
     "lastmod": "2026-11-10"
   },
   "/alternatives/chatgpt/": {
-    "sha256": "c5be5eabcf13d6243a270e128ea63b3a8e8ada447a00c92c06c817597e014699",
-    "lastmod": "2026-11-10"
+    "sha256": "0346e7e11d2c8bda9bb6105737f52a6b74622a7570a54744dcacc005b9cb028c",
+    "lastmod": "2026-11-11"
   },
   "/alternatives/canva/": {
     "sha256": "b2b8abe1a85b69191ffd0be0448312009c23faf3e99820e612e029e5e8403d8e",
@@ -188,8 +188,8 @@
     "lastmod": "2026-11-10"
   },
   "/compare/claude-vs-gemini/": {
-    "sha256": "94241da2b079b1d6e10ae5b16007e9c96edae1f43aa49423ce56332506ce9ed5",
-    "lastmod": "2026-11-10"
+    "sha256": "85150453e42499e15cf5a09b968e0835c82e8b395a8aedbeadb5ddae6d14028f",
+    "lastmod": "2026-11-11"
   },
   "/compare/grammarly-vs-quillbot-vs-wordai/": {
     "sha256": "4db577ad2af83d596e94b8455d1f59edd72b5cd02177ca7af79b720b7f603b6b",
@@ -296,8 +296,8 @@
     "lastmod": "2026-11-10"
   },
   "/products/": {
-    "sha256": "5036d7524ecff640e1318812461d82e39507208f82bb1a068907b81db896f5d3",
-    "lastmod": "2026-11-10"
+    "sha256": "3b2147c065db9d5acef1438b797a68ef07b354c6e21320f60ba4a8a49e875550",
+    "lastmod": "2026-11-11"
   },
   "/categories/": {
     "sha256": "f8a5d9d561bee0f5b7602086240cd5b19a9a3c3170a0d76c305f3522aec53cba",
@@ -320,8 +320,8 @@
     "lastmod": "2026-11-10"
   },
   "/pricing/": {
-    "sha256": "d2a8077385a2254f24e59389310662ae18f8d952105385d06895b5ce6ffa99f7",
-    "lastmod": "2026-11-10"
+    "sha256": "ca5b2e5a830cd489f59fe96785d137d757311d3ceb744a4b85e545a4fd9e6c41",
+    "lastmod": "2026-11-11"
   },
   "/blog/": {
     "sha256": "5f3b3e7228f72b7b3ae6f1dd672122190916c471c4a60d5e053cfdf4ae090081",
