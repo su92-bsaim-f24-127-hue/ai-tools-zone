@@ -31,7 +31,7 @@ Sellers (Design/Voice) & TikTok Editors       & Tech Agencies        & Academic 
 * **Secondary Keywords:** `claude 3.5 sonnet price in pakistan`, `best ai for coding pakistan`, `buy claude pro with jazzcash`
 * **Search Intent:** Commercial Investigation / Transactional
 * **Suggested URL Slug:** `/compare/chatgpt-vs-claude/`
-* **Meta Description:** `Compare ChatGPT Plus (PKR 2,400) and Claude Pro in Pakistan. Benchmark coding benchmarks, reasoning limits, local PKR pricing, and instant JazzCash ordering.`
+* **Meta Description:** `Compare ChatGPT Plus (PKR 2,300) and Claude Pro in Pakistan. Benchmark coding benchmarks, reasoning limits, local PKR pricing, and instant JazzCash ordering.`
 * **H1:** `ChatGPT Plus vs Claude Pro in Pakistan: Which AI Subscription is Right for You?`
 * **H2/H3 Outline:**
   - H2: Head-to-Head Comparison: ChatGPT Plus vs Claude Pro
@@ -45,7 +45,7 @@ Sellers (Design/Voice) & TikTok Editors       & Tech Agencies        & Academic 
 * **Internal Linking Targets:**
   - Inbound links from: `/products/chatgpt-plus/`, `/blog/cursor-vs-copilot-pakistan/`, `/categories/ai-assistants/`
   - Outbound links to: `/products/chatgpt-plus/`, `/products/lovable-pro/`, `/pricing/`
-* **Primary CTA:** "Order ChatGPT Plus on WhatsApp (PKR 2,400 - Private Access) →"
+* **Primary CTA:** "Order ChatGPT Plus on WhatsApp (PKR 2,300 - Private Access) →"
 * **Target Audience:** Pakistani developers, tech freelancers, agency prompt engineers.
 
 ---

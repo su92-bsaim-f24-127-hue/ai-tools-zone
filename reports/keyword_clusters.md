@@ -30,11 +30,11 @@ Assistants      Motion Suite     Creative Cloud  Fullstack Apps   Automations   
 ### Cluster Profile
 * **Pillar URL:** `https://aitoolszone.tech/categories/ai-assistants/`
 * **Cluster Role:** Top revenue generator and highest search volume category in Pakistan.
-* **Core Conversion Objective:** Drive instant WhatsApp orders for ChatGPT Plus (PKR 2,400) and Gemini Pro (PKR 1,800).
+* **Core Conversion Objective:** Drive instant WhatsApp orders for ChatGPT Plus (PKR 2,300) and Gemini Pro (PKR 1,800).
 
 | Spoke Type | Target Page / Slug | Primary Keyword | Secondary Keywords | Dominant Intent | Template | Internal Linking Direction | Conversion Target |
 |:---|:---|:---|:---|:---:|:---:|:---|:---|
-| **Commercial Product Spoke** | `/products/chatgpt-plus/` | buy chatgpt plus in pakistan | chatgpt plus price in pakistan, chatgpt 4o subscription pakistan, buy chatgpt jazzcash | Transactional | `landing-page` | Mandatory Spoke ↔ Pillar; links to `/compare/chatgpt-vs-gemini/` | Direct WhatsApp Order (PKR 2,400) |
+| **Commercial Product Spoke** | `/products/chatgpt-plus/` | buy chatgpt plus in pakistan | chatgpt plus price in pakistan, chatgpt 4o subscription pakistan, buy chatgpt jazzcash | Transactional | `landing-page` | Mandatory Spoke ↔ Pillar; links to `/compare/chatgpt-vs-gemini/` | Direct WhatsApp Order (PKR 2,300) |
 | **Commercial Product Spoke** | `/products/gemini-pro/` | buy gemini advanced pakistan | gemini pro price pakistan, google one ai premium pakistan, gemini 1.5 pro access | Transactional | `landing-page` | Spoke ↔ Pillar; cross-link to `/products/chatgpt-plus/` | WhatsApp Order (PKR 1,800) |
 | **Comparison Spoke** | `/compare/chatgpt-vs-gemini/` | chatgpt vs gemini pakistan | gemini advanced vs chatgpt plus, compare ai assistants pakistan price | Commercial | `comparison` | Links to `/products/chatgpt-plus/` & `/products/gemini-pro/` | Decision helper → Dual CTA |
 | **Comparison Spoke** | `/compare/chatgpt-vs-claude/` | chatgpt vs claude pakistan | claude 3.5 sonnet vs gpt 4o pakistan, buy claude pro pakistan | Commercial | `comparison` | Links to `/products/chatgpt-plus/` | Upsell best model for coding/writing |
