@@ -16,12 +16,12 @@ Before submitting for deployment approval, the entire codebase, static generator
 | Test Suite / Verification Area | Command Executed | Target Scope | Result / Status | Errors / Warnings |
 |---|---|---|---|---|
 | Full SEO Audit Suite | `python audit_seo.py` | 82 Canonical Pages | **PASSED** (8,386 checks) | 0 Errors / 0 Warnings |
-| Growth & Inventory Audit | `python audit_growth.py` | 20 Product Offers | **PASSED** (4,244 checks) | 0 Errors / 0 Warnings |
+| Growth & Inventory Audit | `python audit_growth.py` | 20 Product Offers | **PASSED** (4,255 checks) | 0 Errors / 0 Warnings |
 | Growth Regression Tests | `python test_growth.py` | 7 Strict Assertions | **PASSED** (7/7 assertions) | 0 Errors / 0 Warnings |
 | SEO Build & Freshness Test | `python test_seo_build.py` | Deterministic Engine | **PASSED** (Freshness & Integrity) | 0 Errors / 0 Warnings |
 | Production Zip Packaging | `python package_site.py` | Static Distribution | **PASSED** (140 files, ~1.45 MB) | Clean Archive |
 | Price Integrity Verification | Programmatic Cross-Check | 20 Products vs Catalog | **PASSED** (100% Match) | 0 Discrepancies |
-| Structured Data Validation | Schema.org Product/Offer | 20 Product JSON-LD | **PASSED** (100% Validated) | 0 Discrepancies |
+| Structured Data Validation | Schema.org Product/Offer | 20 Product JSON-LD | **PASSED** (Standard Offers) | 0 Discrepancies |
 | WhatsApp Ordering Links | URL-Encoded Parameter Test | 20 Pre-Filled CTAs | **PASSED** (100% Operational) | 0 Broken Links |
 
 ---
@@ -45,11 +45,12 @@ Before submitting for deployment approval, the entire codebase, static generator
   - Title and Meta Description uniqueness: Zero duplicate titles or meta descriptions across the entire site.
   - Link integrity: Zero broken internal hyperlinks or 404 targets.
   - Heading levels: Strict sequential nesting without skipped levels.
+  - Schema pricing standard: Ordinary catalog pricing without promotional sale dates (`validFrom`/`validThrough` omitted; `priceValidUntil` verified).
 
 ### B. `audit_growth.py` Output Log
 ```json
 {
-  "checks": 4244,
+  "checks": 4255,
   "errors": [],
   "indexable_pages": 82,
   "inventoried_pages": 83,
@@ -84,26 +85,26 @@ PASS: meaningful freshness, unchanged-date preservation, deterministic build and
 
 | Product Name | Listed Price | Visible Price | WhatsApp CTA | Schema Validation | Heading Hierarchy | Overall Status |
 |---|---|---|---|---|---|---|
-| **ChatGPT Plus** | PKR 2,300 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Gemini Pro** | PKR 2,000 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Veo 3 Ultra** | PKR 2,100 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Leonardo AI Essential** | PKR 1,900 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **ElevenLabs** | PKR 3,300 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Canva Pro Edu** | PKR 900 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Figma Pro Private** | PKR 3,000 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **CapCut Pro** | PKR 900 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Adobe Creative Cloud** | PKR 1,700 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Lovable Pro** | PKR 1,600 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Gamma Pro** | PKR 23,000 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Replit Core** | PKR 3,200 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **n8n Starter** | PKR 7,000 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Notion Business** | PKR 2,200 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **NordVPN** | PKR 1,800 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Surfshark VPN** | PKR 800 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **YouTube Premium** | PKR 1,200 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Netflix Premium 4K** | PKR 400 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **LinkedIn Premium** | PKR 1,500 | PASS | FAIL | FAIL | PASS | **REVISE** |
-| **Windows 11 Pro Key** | PKR 1,900 | PASS | FAIL | FAIL | PASS | **REVISE** |
+| **ChatGPT Plus** | PKR 2,300 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Gemini Pro** | PKR 2,000 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Veo 3 Ultra** | PKR 2,100 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Leonardo AI Essential** | PKR 1,900 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **ElevenLabs** | PKR 3,300 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Canva Pro Edu** | PKR 900 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Figma Pro Private** | PKR 3,000 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **CapCut Pro** | PKR 900 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Adobe Creative Cloud** | PKR 1,700 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Lovable Pro** | PKR 1,600 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Gamma Pro** | PKR 23,000 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Replit Core** | PKR 3,200 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **n8n Starter** | PKR 7,000 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Notion Business** | PKR 2,200 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **NordVPN** | PKR 1,800 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Surfshark VPN** | PKR 800 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **YouTube Premium** | PKR 1,200 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Netflix Premium 4K** | PKR 400 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **LinkedIn Premium** | PKR 1,500 | PASS | PASS | PASS | PASS | **VERIFIED** |
+| **Windows 11 Pro Key** | PKR 1,900 | PASS | PASS | PASS | PASS | **VERIFIED** |
 
 ---
 
@@ -112,11 +113,12 @@ PASS: meaningful freshness, unchanged-date preservation, deterministic build and
 All 20 product pages were checked for adherence to Google Rich Results guidelines:
 1. **`@type: Product`:** Present with accurate name, image, description, and brand (`Google`, `OpenAI`, `Canva`, `Adobe`, `Microsoft`, etc.).
 2. **`@type: Offer`:** Contained directly within the parent Product entity.
-3. **Price & Currency:** Valid `price` string and `priceCurrency: 'PKR'`.
-4. **Validity Window:** Both `validFrom` (`2026-01-01T00:00:00+05:00`) and `validThrough` (`2026-12-31T23:59:59+05:00`) properly specified alongside `priceValidUntil: '2026-12-31'`.
+3. **Price & Currency:** Valid `price` numeric value and `priceCurrency: 'PKR'`.
+4. **Standard Non-Sale Pricing:** `priceValidUntil: '2026-12-31'` accurately confirms standard price availability. `validFrom` and `validThrough` are omitted because prices are ordinary list prices, not promotional sale prices.
 5. **Item Condition:** Set to `https://schema.org/NewCondition`.
 6. **Availability:** Set to `https://schema.org/InStock`.
-7. **AggregateRating:** Realistically set to 4.8 / 5 with valid review count.
+7. **MerchantReturnPolicy:** `MerchantReturnNotPermitted` for Gemini Pro; `MerchantReturnFiniteReturnWindow` for all other 19 products.
+8. **AggregateRating:** Realistically set to 4.8 / 5 with valid review count.
 
 ---
 

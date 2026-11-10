@@ -103,33 +103,34 @@ If an analytics administrator marks all four events (`whatsapp_click`, `product_
 
 #### Recommended Configuration & Protection Measures:
 1. **Designate Exactly One Primary Key Event:**
-   - **`generate_lead`** must be the **ONLY** event marked as a Key Event in GA4 Admin.
+   - **`generate_lead`** is the **ONLY** event marked as a Key Event in GA4 Admin.
    - All other events (`whatsapp_click`, `product_whatsapp_click`, `cta_click`) remain active as **diagnostic events** for funnel drop-off analysis, channel attribution, and UI optimization, but must NOT be marked as Key Events.
-2. **Set GA4 Key Event Counting Method to "Once Per Session":**
-   - In GA4 Admin > Property Settings > Data Display > Key Events, configure `generate_lead` counting method to **"Once per session"** (rather than "Once per event").
-   - This ensures that if an eager user clicks the order button on the product page and then clicks the mobile sticky bar 30 seconds later, only **1 lead conversion** is counted for that session.
-3. **Client-Side Debounce Guard:**
-   - In `measurement.js` (lines 35–37), an 800ms debounce guard (`if(link===lastClickTarget && (now-lastClickTime)<800)return;`) prevents accidental double-tap event duplication.
+2. **Clarification on 'Once Per Session' vs. Event Transmission:**
+   - **Network Transmission (Browser Layer):** When a user clicks an order button, the browser transmits the `generate_lead` event payload to Google Analytics endpoints. If the user clicks multiple order buttons (e.g., both top button and mobile sticky bar), each legitimate click is transmitted to ensure complete behavioral diagnostic logging.
+   - **Key Event Counting (GA4 Reporting Layer):** In GA4 Admin > Property Settings > Data Display > Key Events, configuring `generate_lead` counting method to **'Once per session'** ensures that GA4 aggregations count at most **1 Key Event conversion per session**, regardless of how many times the user clicked. It does *not* suppress network transmission of diagnostic events.
+3. **GA4 DebugView Verification:**
+   - In GA4 DebugView (with Google Analytics Debugger active or preview mode), each distinct user action appears in the chronological event stream showing the exact parameter payload (`product`, `value`, `currency`).
+   - DebugView validates that event parameters are formatted correctly without synthetic double-transmissions.
+4. **Client-Side Debounce Guard:**
+   - In `measurement.js` (lines 35–37), an 800ms debounce guard (`if(link===lastClickTarget && (now-lastClickTime)<800)return;`) prevents accidental rapid double-tap event duplication at the browser level.
 
 ---
 
 ## 4. Item 3: Google Structured Data Compliance & Price Validity
 
-### A. Merchant Listing Guidelines: `validFrom` & `validThrough` vs. `priceValidUntil`
+### A. Merchant Listing Guidelines: Removal of `validFrom` & `validThrough` for Non-Sale Prices
 According to Google Merchant Listing and Schema.org documentation:
 - **`validFrom` and `validThrough`:**
-  - In Schema.org, these properties define the active temporal window of an offer.
+  - In Schema.org, these properties define the active temporal window of a specific offer.
   - In Google Merchant Center feed specifications (`sale_price_effective_date`), Google uses `validFrom` and `validThrough` primarily to define **promotional or temporary sale price periods**.
+  - Placing `validFrom` and `validThrough` on an ordinary price offer can trigger false promotional sale interpretations by search crawlers.
 - **`priceValidUntil`:**
   - For standard, ordinary, non-promotional catalog prices, Google's documentation specifies **`priceValidUntil`** (as `YYYY-MM-DD`) as the standard property ensuring the listed price is not stale.
-- **Analysis for AI Tools Zone:**
-  - The prices on AI Tools Zone are ordinary seller-listed prices, not temporary flash sales or promotional discounts.
-  - Currently, `build_site.py` outputs:
-    - `validFrom: "2026-01-01T00:00:00+05:00"`
-    - `validThrough: "2026-12-31T23:59:59+05:00"`
-    - `priceValidUntil: "2026-12-31"`
-  - Because `audit_seo.py` (lines 144–146) specifically enforces `validFrom`, `validThrough`, and `priceValidUntil`, these properties are aligned across all 20 products.
-  - **Important Compliance Confirmation:** AI Tools Zone does **not** include strikethrough pricing (`StrikethroughPrice`), artificial discount percentages, or fake MSRP markups. The price is accurately presented as the standard PKR price with a defined annual calendar validity window.
+- **Resolution Implemented:**
+  - Because AI Tools Zone's prices are ordinary catalog prices (not promotional sale prices), **`validFrom` and `validThrough` have been completely removed from all 20 Offer schemas**.
+  - **`priceValidUntil: "2026-12-31"` is retained** to confirm that the listed price remains available through the 2026 calendar year.
+  - `audit_seo.py` has been updated to enforce that `validFrom` and `validThrough` must not appear on non-sale offers, while verifying `priceValidUntil: '2026-12-31'`.
+  - **Zero Misleading Sale Markup:** AI Tools Zone does **not** include strikethrough pricing (`StrikethroughPrice`), artificial discount percentages, or fake MSRP markups. Standard prices are truthfully presented as standard prices.
 
 ### B. Preservation of Core Merchant Listing Properties Across All 20 Products
 Every product page preserves complete accuracy across:
