@@ -191,3 +191,22 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
   .mobile-sticky-bar .sticky-buy-btn{padding:9px 15px;font-size:.86rem;font-weight:700;margin:0;white-space:nowrap;flex-shrink:0}
   .product-page{padding-bottom:76px !important}
 }
+
+/* Accessible FAQ Hub and Accordion Controls */
+.faq-category-nav{display:flex;flex-wrap:wrap;gap:8px;margin-block:18px 32px}
+.faq-category-nav a{padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:var(--panel);font-size:13px;font-weight:600;color:var(--text);text-decoration:none;transition:border-color .15s,color .15s}
+.faq-category-nav a:hover{border-color:var(--lime);color:var(--lime)}
+.faq-accordion{border-bottom:1px solid var(--border);padding-block:12px}
+.faq-summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;cursor:pointer;padding-block:6px}
+.faq-summary::-webkit-details-marker{display:none}
+.faq-summary h3{font-size:17px;font-weight:650;margin:0;color:var(--text);letter-spacing:-.3px}
+.faq-accordion[open] .faq-summary h3{color:var(--lime)}
+.faq-icon{font-size:22px;line-height:1;color:var(--lime);font-weight:400;flex-shrink:0;transition:transform .2s ease}
+.faq-accordion[open] .faq-icon{transform:rotate(45deg)}
+.faq-body{padding-block:10px 14px}
+.faq-body p{font-size:15px;line-height:1.75;color:var(--muted);margin:0 0 10px 0}
+.faq-body a{color:var(--lime);text-decoration:underline;text-underline-offset:4px}
+.faq-body a:hover{color:var(--text)}
+.help-strip{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:32px;margin-top:40px}
+.help-strip h2{font-size:26px;letter-spacing:-.5px;margin-bottom:12px}
+

@@ -1,6 +1,6 @@
 {
-  "expected_pages": 82,
-  "reason": "Add Leonardo AI vs Midjourney comparison page for commercial AI image generator search queries in Pakistan; preserve all existing routes and product slugs.",
+  "expected_pages": 83,
+  "reason": "Add dedicated /faq/ hub with 34 comprehensive questions across 10 categories, expand product and comparison FAQs, and strengthen internal linking; preserve all existing routes and product slugs.",
   "routes": [
     "/",
     "/about/",
@@ -51,6 +51,7 @@
     "/compare/helium10-vs-semrush-vs-vidiq/",
     "/compare/leonardo-vs-midjourney/",
     "/compare/replit-vs-lovable/",
+    "/faq/",
     "/guides/",
     "/guides/catalog-methodology/",
     "/guides/choose-ai-subscription/",

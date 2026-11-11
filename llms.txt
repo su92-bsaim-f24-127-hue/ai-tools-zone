@@ -11,6 +11,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 - [Compare tools](https://aitoolszone.tech/compare/): Read workflow comparisons and selection notes.
 - [Categories](https://aitoolszone.tech/categories/): Browse offers by category.
 - [Buying guides](https://aitoolszone.tech/guides/): Review access and buying questions.
+- [Frequently Asked Questions (FAQs)](https://aitoolszone.tech/faq/): Storewide ordering, payment methods, activation and warranties.
 - [About and WhatsApp support](https://aitoolszone.tech/about/): Contact and ordering information.
 - [Terms and warranty](https://aitoolszone.tech/terms/): Read ordering and support terms.
 

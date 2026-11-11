@@ -7,7 +7,7 @@ production=['index.html','404.html','styles.css','enhancements.css','catalog.js'
 production += ['admin/index.html','admin/admin.js','admin/admin.css']
 production += ['CNAME', '.nojekyll']
 production += [json.loads((root/'data/indexnow.json').read_text())['key']+'.txt']
-production += [p.relative_to(root).as_posix() for folder in ['products','about','privacy','terms','categories','use-cases','compare','alternatives','guides','pricing','blog'] for p in (root/folder).rglob('*.html')]
+production += [p.relative_to(root).as_posix() for folder in ['products','about','privacy','terms','faq','categories','use-cases','compare','alternatives','guides','pricing','blog'] for p in (root/folder).rglob('*.html')]
 production += ['assets/'+name for name in ['brand-emblem.webp','brand-icon.webp','brand-wordmark.webp','hero-logo-3d.webp','hero-logo-3d-mobile.webp','icon-32.png','icon-48.png','icon-180.png','icon-192.png','icon-512.png','social-card.jpg','product-logo-sources.json']]
 logos=json.loads((root/'assets/product-logo-sources.json').read_text(encoding='utf-8'))
 production += [item['path'] for item in logos.values()]

@@ -51,7 +51,7 @@ def label_for(path):
     for article in BLOG['articles']:
         if article['path'] == path:
             return article['title']
-    return {'/terms/':'Ordering, refunds and warranty', '/about/':'About AI Tools Zone and contact'}.get(path, path)
+    return {'/terms/':'Ordering, refunds and warranty', '/about/':'About AI Tools Zone and contact', '/faq/':'Frequently Asked Questions (FAQs)'}.get(path, path)
 
 def links(paths):
     return '<ul class="reading-links">' + ''.join(f'<li><a href="{p}">{e(label_for(p))}</a></li>' for p in paths) + '</ul>'
@@ -403,6 +403,7 @@ def build_llms_txt(origin, products):
         f"- [Compare tools]({origin}/compare/): Read workflow comparisons and selection notes.\n",
         f"- [Categories]({origin}/categories/): Browse offers by category.\n",
         f"- [Buying guides]({origin}/guides/): Review access and buying questions.\n",
+        f"- [Frequently Asked Questions (FAQs)]({origin}/faq/): Storewide ordering, payment methods, activation and warranties.\n",
         f"- [About and WhatsApp support]({origin}/about/): Contact and ordering information.\n",
         f"- [Terms and warranty]({origin}/terms/): Read ordering and support terms.\n\n",
         "## Current listings\n\n",

@@ -5,6 +5,7 @@ from urllib.parse import quote
 from datetime import date
 import hashlib, json, re
 from seo_pages import category_path, breadcrumbs, breadcrumb_schema, product_context, home_discovery, build_pages, finalize
+from scripts.faq_data import build_faq_html
 
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
@@ -84,7 +85,7 @@ theme_button='''<button id="theme-toggle" class="icon-button theme-toggle" type=
 def header(prefix):
  return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="AI Tools Zone logo" width="64" height="64"></span><span>AI TOOLS<span class="brand-bottom">ZONE</span></span></a><nav class="page-nav" aria-label="Main navigation"><a href="{prefix}compare/">Compare</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}categories/">Categories</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/" aria-label="AI phone agents and WhatsApp bots for Pakistani businesses">AI for Business</a></nav><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
 def footer(prefix):
- return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}categories/">Categories</a><a href="{prefix}compare/">Compare AI tools</a><a href="{prefix}compare/chatgpt-vs-gemini/">ChatGPT vs Gemini</a><a href="{prefix}compare/chatgpt-vs-claude/">ChatGPT vs Claude</a><a href="{prefix}compare/canva-vs-adobe/">Canva vs Adobe</a><a href="{prefix}compare/capcut-vs-runway/">CapCut vs Runway</a><a href="{prefix}compare/leonardo-vs-midjourney/">Leonardo vs Midjourney</a><a href="{prefix}use-cases/ai-tools-for-students/">AI for Students</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/free-ai-tools-pakistan/">Free AI Tools PK</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/">AI for Business</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Ordering & warranty</a><a href="https://wa.me/{WA}">+92 343 0173923</a></footer>'''
+ return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}categories/">Categories</a><a href="{prefix}compare/">Compare AI tools</a><a href="{prefix}compare/chatgpt-vs-gemini/">ChatGPT vs Gemini</a><a href="{prefix}compare/chatgpt-vs-claude/">ChatGPT vs Claude</a><a href="{prefix}compare/canva-vs-adobe/">Canva vs Adobe</a><a href="{prefix}compare/capcut-vs-runway/">CapCut vs Runway</a><a href="{prefix}compare/leonardo-vs-midjourney/">Leonardo vs Midjourney</a><a href="{prefix}use-cases/ai-tools-for-students/">AI for Students</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/free-ai-tools-pakistan/">Free AI Tools PK</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/">AI for Business</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}faq/">FAQs</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Ordering & warranty</a><a href="https://wa.me/{WA}">+92 343 0173923</a></footer>'''
 def shell(title,description,path,body,schema=None,prefix='../'):
  graph = list(schema.get('@graph',[]) if schema else [])
  if path != '/404.html' and not any(n.get('@type')=='BreadcrumbList' for n in graph):
@@ -230,6 +231,12 @@ pages={
 for slug,(title,description,body) in pages.items():
  path='/'+slug+'/'; paths.append(path)
  write(slug+'/index.html',shell(title,description,path,'<main id="main" class="wrap page-copy">'+body+'</main>'))
+faq_title='Frequently Asked Questions (FAQs) | AI Tools Zone'
+faq_description='Complete FAQ hub for AI tools and digital subscriptions in Pakistan. Clear answers on JazzCash and Easypaisa payment, activation, warranties, and access types.'
+faq_body=build_faq_html()
+faq_path='/faq/'
+paths.append(faq_path)
+write('faq/index.html',shell(faq_title,faq_description,faq_path,'<main id="main" class="wrap editorial-page"><h1>Frequently Asked Questions (FAQs)</h1>'+faq_body+'</main>'))
 notfound=shell('Page not found | AI Tools Zone','Return to the AI Tools Zone marketplace.','/404.html','<main id="main" class="wrap page-copy"><h1>This page has moved out of the zone.</h1><p>Explore the available tools or contact us for help.</p><a class="button button-lime" href="/">Back to the marketplace ↗</a></main>',prefix='/').replace('content="index,follow,max-image-preview:large"','content="noindex,follow"')
 write('404.html',notfound)
 paths += build_pages(products,ORIGIN,shell,write)
