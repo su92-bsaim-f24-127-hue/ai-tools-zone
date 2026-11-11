@@ -542,25 +542,27 @@
         {
           "heading": "Why local bank cards decline and how to troubleshoot",
           "paragraphs": [
-            "When attempting to upgrade to ChatGPT Plus from Pakistan, debit and credit cards frequently decline at web checkout. This does not indicate an account ban; rather, it reflects standard banking controls enforced by Pakistani financial institutions (such as Meezan Bank, HBL, Bank Alfalah, MCB, UBL, and Standard Chartered) on foreign recurring subscriptions.",
-            "Three primary factors trigger transaction failures: first, international e-commerce sessions are disabled by default on many local cards until manually toggled in mobile banking apps; second, 3D Secure SMS one-time password (OTP) delivery often experiences telecom routing timeouts; and third, State Bank of Pakistan (SBP) advance withholding tax regulations (10% for active tax filers, up to 16% for non-filers) combined with 3%–5% bank foreign exchange conversion markups can cause the charge to exceed your account balance."
+            "When attempting to upgrade to ChatGPT Plus from Pakistan, debit and credit cards frequently decline at web checkout. This does not indicate an account ban; rather, it typically reflects banking controls, card permissions, or settlement requirements applied by Pakistani financial institutions (such as Meezan Bank, HBL, Bank Alfalah, MCB, UBL, or Standard Chartered) on foreign recurring subscriptions. Cardholders should confirm international online transaction permissions directly with their issuing bank.",
+            "Three common factors trigger transaction failures at web checkout: first, international e-commerce sessions are disabled by default on many local payment cards until explicitly activated via mobile banking or phone helpline; second, 3D Secure SMS one-time password (OTP) delivery can experience cross-border telecom routing delays or timeouts; and third, unexpected fee buffers. Under [Section 236Y of the Income Tax Ordinance](https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf), commercial banks collect an advance income tax on qualifying foreign payments remitted abroad via credit, debit, or prepaid cards on behalf of the Federal Board of Revenue (FBR). According to the official FBR Tax Year 2027 Withholding Tax Rate Card (page 17, updated to June 30, 2026 under the Finance Act 2026), the advance tax rate under Section 236Y is 0.5% for individuals on the Active Taxpayers List (ATL) and 1.0% for non-ATL persons. This is an FBR advance withholding tax collected by commercial banks at remittance, not a State Bank of Pakistan tax.",
+            "Separately from government advance withholding tax, commercial banks and card networks apply their own foreign exchange conversion markups (typically 3%–5%, though spreads vary across banks, card networks, and interbank conditions) plus standard international transaction processing fees. If an account does not hold a sufficient buffer to cover both the base USD subscription price, bank conversion charges, and the statutory Section 236Y advance tax, the checkout transaction will decline.",
+            "Tax laws, withholding rates, and bank fee schedules are subject to change by regulators and financial institutions. Readers should verify current rates directly with the FBR and their card-issuing bank. This guide is provided for educational purposes only and does not constitute personal tax, legal, or financial advice."
           ],
           "bullets": [
-            "Open your mobile banking app or call your bank's helpline to confirm that international e-commerce is active on your debit or credit card.",
-            "Ensure your account maintains sufficient funds to cover the base USD price plus bank conversion fees and advance withholding taxes (budgeting at least 15%–20% above the spot exchange rate).",
-            "Confirm whether your card requires temporary session activation before each international online purchase."
+            "Open your mobile banking app or call your bank's helpline to verify whether international e-commerce permissions are enabled on your card.",
+            "Maintain a sufficient balance buffer above the spot exchange rate (budgeting approximately 5%–8% extra depending on your issuing bank's FX conversion spread, card network assessment, and the 0.5% ATL or 1.0% non-ATL advance withholding tax under Section 236Y).",
+            "Confirm whether your bank requires a temporary session activation window before you initiate an international online transaction."
           ]
         },
         {
           "heading": "Official payment options: Web checkout and mobile app stores",
           "paragraphs": [
-            "OpenAI supports two primary direct payment channels: web checkout via Stripe (accepting Visa and Mastercard credit/debit cards) and in-app billing through the official ChatGPT mobile applications on the Apple App Store (iOS) and Google Play Store (Android).",
-            "Many Pakistani users whose debit cards fail on web checkout successfully subscribe through the mobile app. When using the mobile app, Google Play or Apple processes the payment, which frequently succeeds with local cards that restrict direct web Stripe transactions."
+            "OpenAI supports two primary direct payment channels: web checkout via Stripe (accepting Visa and Mastercard credit and debit cards) and in-app billing through official ChatGPT mobile applications on the Apple App Store (iOS) and Google Play Store (Android).",
+            "When web checkout declines due to direct merchant gateway restrictions, some Pakistani subscribers report success upgrading through the mobile app stores. Because Google Play and Apple process payment settlement through their platform merchant infrastructure, certain local cards that restrict recurring web Stripe transactions may process in-app charges. However, acceptance remains dependent on individual bank policies, card tiers, and account region settings—not all Pakistani financial institutions support recurring in-app mobile subscriptions."
           ],
           "bullets": [
-            "Try upgrading directly inside the official ChatGPT mobile app on iOS or Android using a linked local card.",
-            "Confirm which Google or Apple account manages the subscription to track monthly renewals and receipts.",
-            "Never retry a failing web card transaction multiple times in rapid succession, as payment gateways may temporarily flag your IP or card for fraud prevention."
+            "Check whether your debit or credit card can be linked to your Google Play or Apple App Store account to attempt an in-app upgrade.",
+            "Confirm which Apple ID or Google account manages the subscription to track monthly renewals, cancellations, and receipts.",
+            "Avoid repeatedly resubmitting a declined web transaction, as rapid successive attempts may cause payment gateways or card issuers to place temporary fraud prevention holds on your card."
           ]
         },
         {
@@ -598,6 +600,10 @@
         {
           "name": "OpenAI Help Center: ChatGPT and API billing are separate",
           "url": "https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform"
+        },
+        {
+          "name": "FBR Withholding Tax Rates Card (Tax Year 2027 — Section 236Y)",
+          "url": "https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf"
         }
       ],
       "faq": [
