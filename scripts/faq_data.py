@@ -35,7 +35,7 @@ CATEGORIES = [
             ),
             (
                 "Why do local Pakistani debit cards get declined on official AI platforms?",
-                'Most Pakistani commercial bank cards decline international software subscriptions (such as OpenAI, Adobe, Midjourney, or Claude) due to State Bank of Pakistan (SBP) foreign exchange regulations, mandatory 3D-Secure OTP mismatches on recurring subscriptions, international transaction withholding taxes (often adding 10%–16% extra charges), or default international eCommerce restrictions on standard debit cards. AI Tools Zone solves this payment friction by accepting domestic PKR payments without international card requirements. Read our <a href="/blog/how-to-pay-for-chatgpt-plus-pakistan/">ChatGPT Plus Pakistan payment guide</a>.'
+                'Most Pakistani commercial bank cards decline international software subscriptions (such as OpenAI, Adobe, Midjourney, or Claude) due to default international eCommerce restrictions on debit cards, 3D-Secure OTP delivery mismatches on recurring subscriptions, or insufficient balance buffers to cover commercial bank foreign exchange conversion spreads, card network assessments, and statutory FBR advance withholding tax under Section 236Y (0.5% for ATL filers and 1.0% for non-ATL persons under the Finance Act 2026). AI Tools Zone solves this payment friction by accepting domestic PKR payments without international card requirements. Read our <a href="/blog/how-to-pay-for-chatgpt-plus-pakistan/">ChatGPT Plus Pakistan payment guide</a>.'
             ),
             (
                 "Can I pay using SadaPay or NayaPay?",

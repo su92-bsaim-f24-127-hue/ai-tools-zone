@@ -544,12 +544,12 @@
           "paragraphs": [
             "When attempting to upgrade to ChatGPT Plus from Pakistan, debit and credit cards frequently decline at web checkout. This does not indicate an account ban; rather, it typically reflects banking controls, card permissions, or settlement requirements applied by Pakistani financial institutions (such as Meezan Bank, HBL, Bank Alfalah, MCB, UBL, or Standard Chartered) on foreign recurring subscriptions. Cardholders should confirm international online transaction permissions directly with their issuing bank.",
             "Three common factors trigger transaction failures at web checkout: first, international e-commerce sessions are disabled by default on many local payment cards until explicitly activated via mobile banking or phone helpline; second, 3D Secure SMS one-time password (OTP) delivery can experience cross-border telecom routing delays or timeouts; and third, unexpected fee buffers. Under [Section 236Y of the Income Tax Ordinance](https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf), commercial banks collect an advance income tax on qualifying foreign payments remitted abroad via credit, debit, or prepaid cards on behalf of the Federal Board of Revenue (FBR). According to the official FBR Tax Year 2027 Withholding Tax Rate Card (page 17, updated to June 30, 2026 under the Finance Act 2026), the advance tax rate under Section 236Y is 0.5% for individuals on the Active Taxpayers List (ATL) and 1.0% for non-ATL persons. This is an FBR advance withholding tax collected by commercial banks at remittance, not a State Bank of Pakistan tax.",
-            "Separately from government advance withholding tax, commercial banks and card networks apply their own foreign exchange conversion markups (typically 3%–5%, though spreads vary across banks, card networks, and interbank conditions) plus standard international transaction processing fees. If an account does not hold a sufficient buffer to cover both the base USD subscription price, bank conversion charges, and the statutory Section 236Y advance tax, the checkout transaction will decline.",
+            "Separately from government advance withholding tax, commercial banks and card networks apply their own foreign exchange conversion spreads and cross-border processing charges (which vary across issuing banks, card networks, and interbank market conditions). If an account does not hold a sufficient buffer to cover the base USD subscription price, applicable bank conversion charges, and the statutory Section 236Y advance tax, the checkout transaction will decline.",
             "Tax laws, withholding rates, and bank fee schedules are subject to change by regulators and financial institutions. Readers should verify current rates directly with the FBR and their card-issuing bank. This guide is provided for educational purposes only and does not constitute personal tax, legal, or financial advice."
           ],
           "bullets": [
             "Open your mobile banking app or call your bank's helpline to verify whether international e-commerce permissions are enabled on your card.",
-            "Maintain a sufficient balance buffer above the spot exchange rate (budgeting approximately 5%–8% extra depending on your issuing bank's FX conversion spread, card network assessment, and the 0.5% ATL or 1.0% non-ATL advance withholding tax under Section 236Y).",
+            "Maintain an adequate balance buffer above the spot exchange rate to cover your issuing bank's foreign exchange conversion spread, card network assessment, and the statutory advance withholding tax under Section 236Y (0.5% for ATL filers / 1.0% for non-ATL persons).",
             "Confirm whether your bank requires a temporary session activation window before you initiate an international online transaction."
           ]
         },
@@ -657,7 +657,7 @@
           ],
           "bullets": [
             "Direct mobile wallet numbers (JazzCash/Easypaisa) cannot be typed into international Stripe or Silicon Valley checkout pages.",
-            "Commercial bank cards often incur 5% to 10% withholding tax and foreign exchange conversion charges on USD transactions.",
+            "Commercial bank cards incur foreign exchange conversion spreads and cross-border processing fees (which vary by issuing institution) plus statutory FBR advance tax under Section 236Y (0.5% for ATL filers, 1.0% for non-ATL persons) on qualifying foreign card payments.",
             "Recurring subscriptions frequently get declined on month two when banks flag repeated cross-border merchant debits."
           ]
         },
@@ -669,7 +669,7 @@
           ],
           "bullets": [
             "Verify your biometric identity in the EMI app to unlock full international spending tiers.",
-            "Keep an extra 10% to 15% buffer in your wallet balance to prevent subscription cancellation due to exchange rate shifts.",
+            "Keep an extra balance buffer in your wallet balance to prevent subscription cancellation due to exchange rate shifts and bank processing charges.",
             "Remember that cancelling a direct subscription must be done through the vendor billing settings before the next renewal date."
           ]
         },
@@ -1750,7 +1750,7 @@
           "heading": "Direct answer: Which design software should Pakistani freelancers buy first?",
           "paragraphs": [
             "If you are a beginner or intermediate freelancer offering social media graphics, YouTube thumbnails, carousel posts, restaurant menus, or pitch deck presentations, buy Canva Pro Edu (PKR 450, lifetime invitation). It runs in any web browser without demanding heavy computer hardware, provides 100M+ stock assets and Magic Studio AI tools, and pays for itself with a single $5 Fiverr gig.",
-            "If you are an established professional graphic designer, vector artist, UI/UX designer, or branding specialist offering print packaging, typography, logo vectorization, or complex multi-layer photo composites, you must invest in Adobe Creative Cloud (PKR 3,500/mo). International agency clients expect native `.AI` (Adobe Illustrator) and `.PSD` (Adobe Photoshop) source vector files that Canva cannot export natively."
+            "If you are an established professional graphic designer, vector artist, UI/UX designer, or branding specialist offering print packaging, typography, logo vectorization, or complex multi-layer photo composites, you can access Adobe Creative Cloud on AI Tools Zone (PKR 1,700 for 2 months). International agency clients expect native `.AI` (Adobe Illustrator) and `.PSD` (Adobe Photoshop) source vector files that Canva cannot export natively."
           ],
           "bullets": [
             "Buy Canva Pro Edu (PKR 450) if: You focus on rapid turnaround social media graphics, client templates, content creation, and work on a mid-range laptop.",
@@ -1777,7 +1777,7 @@
           "paragraphs": [
             "Consider the break-even math for a freelancer operating from Lahore, Karachi, or Peshawar:",
             "Canva Pro Edu costs PKR 450 (one-time education lifetime invitation on AI Tools Zone). Selling a single batch of 5 social media graphics on Facebook or Fiverr for PKR 3,000 yields an immediate 6x return on investment on day one.",
-            "Adobe Creative Cloud costs PKR 3,500 per month (PKR 42,000 annually). To justify this overhead, a freelancer must secure ongoing monthly client retainers billing at least PKR 40,000 to PKR 100,000. Both tools can be purchased on AI Tools Zone with flat PKR pricing via JazzCash or EasyPaisa, avoiding bank foreign exchange taxes."
+            "Adobe Creative Cloud is listed on AI Tools Zone at PKR 1,700 for 2 months. To justify professional design software overhead, a freelancer should secure ongoing client retainers billing at least PKR 40,000 to PKR 100,000. Both Canva Pro and Adobe CC can be purchased on AI Tools Zone with flat PKR pricing via JazzCash or EasyPaisa, avoiding bank card foreign transaction friction."
           ]
         }
       ],
