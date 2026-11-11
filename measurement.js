@@ -2,7 +2,7 @@
    Cloudflare Web Analytics records visits separately. Never emit query/message text. */
 (() => {
   'use strict';
-  const sections=new Set(['home','products','categories','compare','alternatives','use-cases','guides','pricing','about','privacy','terms']);
+  const sections=new Set(['home','products','categories','compare','alternatives','use-cases','guides','pricing','about','privacy','terms','faq']);
   const events=new Set(['page_view','product_view','product_page_view','category_view','comparison_view','alternative_view','guide_view','pricing_view','tool_search','filter_use','compare_add','tool_finder_start','tool_finder_complete','whatsapp_click','product_whatsapp_click','outbound_vendor_click','generate_lead','cta_click']);
   const validProductId=value=>typeof value==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
   const canonical=document.querySelector('link[rel="canonical"]');
