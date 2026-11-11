@@ -175,7 +175,7 @@ for p in all_products:
  rating_badge=f'<div class="product-rating" aria-label="Customer Rating: {rating_val} out of 5 based on {review_count} customer reviews"><span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-val"><strong>{rating_val}</strong>/5</span> <span class="rating-count">({review_count} customer reviews)</span></div>'
  review_section=f'<section class="content-block" id="customer-reviews"><h2>Verified customer review</h2><div class="review-card"><div class="review-header"><span class="stars" aria-hidden="true">★★★★★</span><strong>{e(rev_author)}</strong> <span class="verified-buyer">Verified buyer · {e(rev_city)}</span></div><p>“{e(rev_body)}”</p></div></section>'
  pc=product_content.get(p['id'],{})
- title=f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & EasyPaisa | AI Tools Zone'
+ title=pc.get('title') or f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & EasyPaisa | AI Tools Zone'
  description=pc.get('meta_description') or f'Buy {p["name"]} in Pakistan for {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. Confirm availability on WhatsApp. Pay via JazzCash, Easypaisa or bank transfer.'
  specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Brand','brand'),('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
  related=[q for q in products if q['category']==p['category'] and q['id']!=p['id']][:3]

@@ -4,11 +4,11 @@
     "lastmod": "2026-11-11"
   },
   "/products/chatgpt-plus/": {
-    "sha256": "d997c6c2bad384d3dbcefc49c100856c8dd13346848e5110934fb0a382f2b06e",
+    "sha256": "83b7babc2c4ae657c90da5042f2e65f1ad5af1b8e05bb0438104749faaf19aa2",
     "lastmod": "2026-11-11"
   },
   "/products/gemini-pro/": {
-    "sha256": "a03d7f8869b6f3ef1e1e92012e5f6a96941c4e689dcfaabe56188c51a8754a74",
+    "sha256": "a49784e1918dd6a2bb19ca6d3ffe4a3f55940315862d372289f0e8a34ed23b33",
     "lastmod": "2026-11-11"
   },
   "/products/veo-3-ultra/": {
@@ -24,7 +24,7 @@
     "lastmod": "2026-11-11"
   },
   "/products/canva-pro-edu/": {
-    "sha256": "81e35edc4ba17d02c26737fd2dd97a1f62e07df17b544f13b6224968683fe901",
+    "sha256": "67250147ebb32168067d716f6c90005fda00b7b73f4f37b394b9feff98aa056b",
     "lastmod": "2026-11-11"
   },
   "/products/figma-pro-private/": {
@@ -32,11 +32,11 @@
     "lastmod": "2026-11-11"
   },
   "/products/capcut-pro/": {
-    "sha256": "4a818c8f50a9f69706517599c3a23cf41450e1d2aa07af0abe233fee6fd6909d",
+    "sha256": "82a4c8ca083a01f900733d74ec9f089df48f2c38a71e0a0cb4a16c23a5c1bcc8",
     "lastmod": "2026-11-11"
   },
   "/products/adobe-creative-cloud/": {
-    "sha256": "ee0794fdd72ca26356879de1119381467c0dc4c36c0126b9831f3a415306fa04",
+    "sha256": "26569189b105e996baaa6f4a0769fa663d526aab6ea30e17e323e5ddc329195d",
     "lastmod": "2026-11-11"
   },
   "/products/lovable-pro/": {
@@ -104,11 +104,11 @@
     "lastmod": "2026-11-11"
   },
   "/categories/ai-video/": {
-    "sha256": "314a4a8f58183348846e1dfa6d82259cf2d4e4ba8cd8106025069e3ac67c4f7f",
+    "sha256": "64d1a998a501c38ed9c07e4e36d1f0af38c272ab6bdcf66cd9a6c79dc481077c",
     "lastmod": "2026-11-11"
   },
   "/categories/design/": {
-    "sha256": "efa20baa567383f4d2017476505d0ff7ec6ab0adeda1323dabf091dbaa74b5cc",
+    "sha256": "4398c6d0e4ebf14d8bf4ca1b0e8d4191be686c255ce8f313409b23f352c3bdc0",
     "lastmod": "2026-11-11"
   },
   "/categories/ai-voice/": {
@@ -244,11 +244,11 @@
     "lastmod": "2026-11-11"
   },
   "/blog/how-to-pay-for-chatgpt-plus-pakistan/": {
-    "sha256": "3e7d0656a8a5ffc1719fdfe0fc847e9253437fe7ca865ea119e13b96e06210b6",
+    "sha256": "abe19c8368c6a628e048f1b535b96226eb96808d8379a2d4342cc7c431464e7a",
     "lastmod": "2026-11-11"
   },
   "/blog/jazzcash-easypaisa-ai-tools-pakistan/": {
-    "sha256": "e0f0d42aaab62ca30d22918fa927b7696d5d2a82978c7c9027814592a7093473",
+    "sha256": "3cf66d1c772e9d75eea2e97dc31d7aa2bf0ae1f81e1a04c34a85fa1a20d7a35a",
     "lastmod": "2026-11-11"
   },
   "/blog/avoiding-account-bans-shared-ai-tools-pakistan/": {
@@ -328,7 +328,7 @@
     "lastmod": "2026-11-11"
   },
   "/blog/": {
-    "sha256": "b67a3f03f02474cd80ba5e7c17c872b9889a2be6a0904f37a12bb272f68d20a9",
+    "sha256": "ee8055d59ed495b11dce18bb51d585712b749d7658cb43bf53e4c013a23cd5f4",
     "lastmod": "2026-11-11"
   }
 }

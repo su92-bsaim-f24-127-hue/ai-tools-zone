@@ -33,6 +33,10 @@ HUBS = {
 }
 e = lambda value: escape(str(value), quote=True)
 
+def render_text(value):
+    escaped = e(value)
+    return re.sub(r'\[([^\]]+)\]\((https?://[^\)]+|/[^\)]*)\)', r'<a href="\2">\1</a>', escaped)
+
 def category_path(name):
     return '/categories/' + CATEGORIES[name]['slug'] + '/'
 
@@ -148,7 +152,7 @@ def build_pages(products, origin, shell, write):
         content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+e(c['choose'])+'</p></section>'
         content += faq_html(c['faq']) + '<section class="content-block"><h2>Related decisions</h2>'+links(c['related'])+'</section>'
         content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} official website</a></li>' for p in selected)+'</ul></section>'
-        publish(category_path(c['name']),c['heading'],f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
+        publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
 
     for page in CONTENT['pages']:
         selected=[by_id[id] for id in page['products'] if id in by_id]
@@ -174,9 +178,9 @@ def build_pages(products, origin, shell, write):
         content += '<p class="article-date">'+date_line+' '+separator+' Research and planning guide</p>'
         for section in article['sections']:
             content += '<section class="content-block"><h2>'+e(section['heading'])+'</h2>'
-            content += ''.join('<p>'+e(paragraph)+'</p>' for paragraph in section.get('paragraphs',[]))
+            content += ''.join('<p>'+render_text(paragraph)+'</p>' for paragraph in section.get('paragraphs',[]))
             if section.get('bullets'):
-                content += '<ul>'+''.join('<li>'+e(item)+'</li>' for item in section['bullets'])+'</ul>'
+                content += '<ul>'+''.join('<li>'+render_text(item)+'</li>' for item in section['bullets'])+'</ul>'
             content += '</section>'
         content += '<section class="content-block"><h2>Official references</h2><ul>'+''.join('<li><a href="'+e(ref['url'])+'" target="_blank" rel="noopener noreferrer">'+e(ref['name'])+'</a></li>' for ref in article['references'])+'</ul><p>Provider documentation describes its own product and policies; verify current availability and requirements before choosing a service.</p></section>'
         content += faq_html(article['faq'])
