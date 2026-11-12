@@ -1,0 +1,24 @@
+Financial Metric / Cost Component,Tier 1 (Guided Setup - 20m),Tier 2: Alternative A (45m @ PKR 450),Tier 2: Alternative B (40m @ PKR 400),Accounting Definition & Evidence Status
+Provisional Service Fee (Gross Revenue),PKR 500.00,"PKR 1,000.00","PKR 1,000.00",Planning Price (Requires explicit Owner Approval)
+Planned Direct Session Duration,20 Minutes,45 Minutes,40 Minutes,Planned duration based on technician SOP
+Direct Technician Labor Cost (@ PKR 10.00/min),PKR 200.00,PKR 450.00,PKR 400.00,Reconciled labor cost (PKR 600/hr = PKR 10.00/min)
+Post-Delivery Support Labor (Chat Follow-Up),PKR 50.00 (5m),PKR 75.00 (7.5m),PKR 75.00 (7.5m),Variable support labor buffer (Planning assumption)
+Customer Acquisition Cost (CAC Allocation),PKR 50.00 (10%),PKR 100.00 (10%),PKR 100.00 (10%),Inbound WhatsApp marketing cost allocation
+Domestic Payment Collection Buffer (2.0%),PKR 10.00,PKR 20.00,PKR 20.00,Conservative fee buffer (Actual Raast P2P is PKR 0.00)
+Refund & Rework Provision (5.0%),PKR 25.00,PKR 50.00,PKR 50.00,Contingency provision for customer dissatisfaction
+TOTAL VARIABLE COST PER SESSION,PKR 335.00,PKR 695.00,PKR 645.00,"Sum of Direct Labor, Support, CAC, Collection, Rework"
+GROSS CONTRIBUTION (Before Overhead),PKR 165.00,PKR 305.00,PKR 355.00,Gross Fee minus Total Variable Cost
+Gross Contribution Margin %,33.00%,30.50%,35.50%,Gross Contribution / Gross Fee
+Allocated G&A Fixed Overhead,PKR 35.00 (7.0%),PKR 55.00 (5.5%),PKR 55.00 (5.5%),"Allocated hosting, telecom, domain, and tooling"
+OPERATING CONTRIBUTION AFTER OVERHEAD,PKR 130.00,PKR 250.00,PKR 300.00,Operating Contribution before Income Taxes
+Operating Contribution Margin %,26.00%,25.00%,30.00%,Operating Contribution / Gross Fee
+Actual Net Profit,UNVERIFIED,UNVERIFIED,UNVERIFIED,Cannot be established without real pilot tax & expense records
+--- SENSITIVITY 1: 50% TIME OVERRUN (+50% Labor) ---,---,---,---,---
+Labor Cost under 50% Overrun,PKR 300.00 (30m),PKR 675.00 (67.5m),PKR 600.00 (60m),Technician takes 1.5x planned time
+Operating Contribution under 50% Overrun,PKR 30.00 (6.00%),PKR 25.00 (2.50%),PKR 100.00 (10.00%),Service remains in positive contribution across all variants
+--- SENSITIVITY 2: 15% REFUND / REWORK PROVISION ---,---,---,---,---
+Refund Provision @ 15% of Fee,PKR 75.00,PKR 150.00,PKR 150.00,High churn / dispute stress test
+Operating Contribution under 15% Refund Provision,PKR 80.00 (16.00%),PKR 150.00 (15.00%),PKR 200.00 (20.00%),Demonstrates financial resilience against elevated refunds
+--- SENSITIVITY 3: ZERO-FEE RAAST P2P COLLECTION ---,---,---,---,---
+Collection Fee Savings (Fee = PKR 0.00),+PKR 10.00,+PKR 20.00,+PKR 20.00,100% adoption of direct Raast P2P transfers
+Operating Contribution under Zero-Fee Collection,PKR 140.00 (28.00%),PKR 270.00 (27.00%),PKR 320.00 (32.00%),Direct margin expansion when gateway fees are avoided

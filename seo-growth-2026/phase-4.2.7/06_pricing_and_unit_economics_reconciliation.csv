@@ -1,0 +1,22 @@
+Financial Metric / Cost Component,Tier 1: Guided Setup Assistance,Tier 2: Advanced Setup & Prompt Pack,Evidence Status & Accounting Classification
+Provisional Customer Service Fee (Gross Revenue),PKR 500.00,"PKR 1,000.00",PROVISIONAL PLANNING ASSUMPTION (Requires Owner Approval)
+Estimated Direct Session Duration,20 Minutes (Max 30m),45 Minutes (Max 60m),Internal operational estimate based on pilot SOP
+Direct Technician Labor Cost (@ PKR 600/hr base rate),PKR 200.00 (20 mins),PKR 400.00 (40-45 mins),Variable Direct Labor Cost (Internal planning assumption)
+Post-Delivery Support & Follow-Up Labor,PKR 50.00 (5 mins chat),PKR 75.00 (7-8 mins chat),Variable Support Labor Provision (Planning assumption)
+Customer Acquisition Cost (CAC Allocation),PKR 50.00 (10% of rev),PKR 100.00 (10% of rev),Variable Marketing Allocation (WhatsApp organic/referral target)
+Domestic Payment Collection Fee (Raast / IBFT / Gateway),PKR 10.00 (2.0% buffer),PKR 20.00 (2.0% buffer),Conservative Planning Buffer (Actual Raast cost is PKR 0.00)
+Refund & Rework Provision (5.0% of fee),PKR 25.00,PKR 50.00,Contingency Provision for session rework or payment reversal
+TOTAL VARIABLE COST PER SESSION,PKR 335.00,PKR 645.00,"Sum of Direct Labor, Support, CAC, Collection & Rework"
+CONTRIBUTION BEFORE OVERHEAD,PKR 165.00,PKR 355.00,Gross Service Contribution (Revenue - Total Variable Cost)
+Contribution Margin % (Before Overhead),33.00%,35.50%,Calculated: Contribution / Gross Revenue
+Allocated General & Administrative (G&A) Overhead,PKR 35.00 (7% of rev),PKR 55.00 (5.5% of rev),"Allocated fixed costs: hosting, telecom, domain, software tools"
+OPERATING CONTRIBUTION AFTER ALLOCATED OVERHEAD,PKR 130.00,PKR 300.00,Contribution before overhead minus allocated G&A overhead
+Operating Contribution Margin %,26.00%,30.00%,Calculated: Operating Contribution / Gross Revenue
+ACTUAL NET PROFIT,UNVERIFIED,UNVERIFIED,CANNOT BE ESTABLISHED WITHOUT REAL PILOT TAX & EXPENSE RECORDS
+--- SENSITIVITY SCENARIO A: TIME OVERRUN (+50% Labor) ---,---,---,---
+Labor Cost under 50% Time Overrun,PKR 300.00 (30 mins),PKR 600.00 (60 mins),Technician takes 30m for Tier 1; 60m for Tier 2
+Operating Contribution under 50% Time Overrun,PKR 30.00 (6.00% margin),PKR 100.00 (10.00% margin),Demonstrates service remains profitable even with time overruns
+--- SENSITIVITY SCENARIO B: ZERO-COST RAAST COLLECTION ---,---,---,---
+Operating Contribution under 100% Raast Payments (PKR 0 Fee),PKR 140.00 (28.00% margin),PKR 320.00 (32.00% margin),Eliminating gateway fees adds PKR 10-20 directly to bottom line
+--- SENSITIVITY SCENARIO C: HIGH REFUND RATE (15% Provision) ---,---,---,---
+Operating Contribution under 15% Refund/Rework Buffer,PKR 80.00 (16.00% margin),PKR 200.00 (20.00% margin),Demonstrates financial resilience against high initial churn

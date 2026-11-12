@@ -1,5 +1,5 @@
 """Static editorial pages and freshness records; no browser or third-party build dependency."""
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
@@ -31,11 +31,55 @@ HUBS = {
     'pricing': ('AI Tools Pricing in Pakistan: Compare PKR Plans', 'Seller-listed PKR prices, including offers under PKR 1,000 and PKR 2,000. Each offer has its own duration and allowances.'),
     'blog': ('AI Tools Zone Blog', 'Practical, source-linked guides for comparing AI subscriptions and planning AI workflows for people and businesses in Pakistan.')
 }
-e = lambda value: escape(str(value), quote=True)
+e = lambda value: escape(str(value if value is not None else ''), quote=True)
+
+def is_safe_url(url: str) -> bool:
+    if not url:
+        return False
+    if any(ord(c) <= 32 or ord(c) == 127 for c in url):
+        return False
+    if any(c in url for c in '<>"\'\\'):
+        return False
+    if url.startswith('//'):
+        return False
+    if url.startswith('/'):
+        after_slash = url[1:].lstrip().lower()
+        if any(after_slash.startswith(scheme) for scheme in ['javascript:', 'data:', 'vbscript:', 'file:', 'about:']):
+            return False
+        return True
+    if url.startswith('https://'):
+        try:
+            parsed = urlparse(url)
+            if parsed.scheme == 'https' and parsed.netloc and not parsed.netloc.startswith('.'):
+                return True
+        except Exception:
+            return False
+        return False
+    return False
 
 def render_text(value):
-    escaped = e(value)
-    return re.sub(r'\[([^\]]+)\]\((https?://[^\)]+|/[^\)]*)\)', r'<a href="\2">\1</a>', escaped)
+    if value is None:
+        return ''
+    text = str(value)
+    def link_replacer(match):
+        anchor_text = match.group(1)
+        url = match.group(2).strip()
+        if is_safe_url(url):
+            safe_text = escape(anchor_text, quote=True)
+            safe_href = escape(url, quote=True)
+            return f'<a href="{safe_href}">{safe_text}</a>'
+        return escape(match.group(0), quote=True)
+
+    pattern = r'\[([^\]]+)\]\(([^)\s]+)\)'
+    result = []
+    last_idx = 0
+    for m in re.finditer(pattern, text):
+        start, end = m.span()
+        result.append(escape(text[last_idx:start], quote=True))
+        result.append(link_replacer(m))
+        last_idx = end
+    result.append(escape(text[last_idx:], quote=True))
+    return ''.join(result)
 
 def category_path(name):
     return '/categories/' + CATEGORIES[name]['slug'] + '/'

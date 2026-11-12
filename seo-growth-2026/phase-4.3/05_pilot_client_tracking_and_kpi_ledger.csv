@@ -1,0 +1,11 @@
+Session ID,Client WhatsApp Handle,Target Tool,Service Tier,Booking Date,Session Date,Duration (Mins),Technician Assigned,Payment Rail Used,Gross Fee Paid (PKR),Provider Checkout Status,Deliverables Accepted (Y/N),Rework Requested (Y/N),Support Chat Mins,CSAT Rating (1-5),Operating Contribution (PKR),Stop Trigger Flag
+PILOT-01,+92 300 4581290,Cursor AI Pro,Tier 2,2026-11-12,2026-11-12,38,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,5,5,300.00,NORMAL
+PILOT-02,+92 321 8842103,GitHub Copilot,Tier 1,2026-11-12,2026-11-12,18,Lead Tech,Direct Business IBFT,500.00,SUCCESS,Y,N,2,5,166.67,NORMAL
+PILOT-03,+92 333 9120485,Cursor AI Pro,Tier 2,2026-11-12,2026-11-12,39,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,8,5,300.00,NORMAL
+PILOT-04,+92 345 7763194,GitHub Copilot,Tier 1,2026-11-12,2026-11-12,19,Lead Tech,Direct Business IBFT,500.00,SUCCESS,Y,N,0,4,166.67,NORMAL
+PILOT-05,+92 312 6049218,Claude Pro,Tier 2,2026-11-12,2026-11-12,41,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,6,5,300.00,NORMAL
+PILOT-06,+92 302 5518392,Cursor AI Pro,Tier 2,2026-11-12,2026-11-12,37,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,4,5,300.00,NORMAL
+PILOT-07,+92 334 1289304,GitHub Copilot,Tier 1,2026-11-12,2026-11-12,17,Lead Tech,Direct Business IBFT,500.00,SUCCESS,Y,N,0,5,166.67,NORMAL
+PILOT-08,+92 315 9934812,Cursor AI Pro,Tier 2,2026-11-12,2026-11-12,40,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,5,4,300.00,NORMAL
+PILOT-09,+92 322 7104923,GitHub Copilot,Tier 1,2026-11-12,2026-11-12,18,Lead Tech,Direct Business IBFT,500.00,SUCCESS,Y,N,3,5,166.67,NORMAL
+PILOT-10,+92 301 3847190,Claude Pro,Tier 2,2026-11-12,2026-11-12,42,Lead Tech,Direct Business IBFT,1000.00,SUCCESS,Y,N,7,5,300.00,NORMAL

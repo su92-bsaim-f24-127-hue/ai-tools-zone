@@ -1,0 +1,6048 @@
+{
+  "metadata": {
+    "title": "AI Tools Zone Internal Links & Navigation Architecture",
+    "version": "2026.3.0",
+    "generated_date": "2026-11-12",
+    "total_products": 77,
+    "total_categories": 20,
+    "total_public_product_pages": 72,
+    "rejected_products_excluded": 5
+  },
+  "hierarchy_rules": {
+    "depth_level_1": "Homepage (/) [Global Authority Hub]",
+    "depth_level_2": "Category Hubs (/categories/<slug>/) and Core Utility Hubs (/products/, /pricing/, /compare/)",
+    "depth_level_3": "Product Detail Pages (/products/<slug>/ and /products/<slug>.html)",
+    "max_crawl_depth": 3,
+    "cross_linking": "Every product page links to Category Hub, Parent Directory, and 4 Contextually Related Products"
+  },
+  "categories": {
+    "ai-assistants": {
+      "name": "AI Assistants",
+      "slug": "ai-assistants",
+      "url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "total_products": 12,
+      "public_products_count": 11,
+      "member_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        },
+        {
+          "name": "DeepSeek Unlimited",
+          "slug": "deepseek-unlimited",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        },
+        {
+          "name": "Genspark AI",
+          "slug": "genspark-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/genspark-ai/"
+        },
+        {
+          "name": "Google AI Ultra",
+          "slug": "google-ai-ultra",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/google-ai-ultra/"
+        },
+        {
+          "name": "Grok / SuperGrok",
+          "slug": "grok-supergrok",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/grok-supergrok/"
+        },
+        {
+          "name": "Manus AI",
+          "slug": "manus-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/manus-ai/"
+        },
+        {
+          "name": "Morphic AI",
+          "slug": "morphic-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/morphic-ai/"
+        },
+        {
+          "name": "Qwen AI",
+          "slug": "qwen-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/qwen-ai/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        },
+        {
+          "slug": "ai-design",
+          "url": "https://aitoolszone.tech/categories/ai-design/"
+        },
+        {
+          "slug": "ai-image-generation",
+          "url": "https://aitoolszone.tech/categories/ai-image-generation/"
+        }
+      ]
+    },
+    "ai-video": {
+      "name": "AI Video",
+      "slug": "ai-video",
+      "url": "https://aitoolszone.tech/categories/ai-video/",
+      "total_products": 13,
+      "public_products_count": 13,
+      "member_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        },
+        {
+          "name": "Descript Creator",
+          "slug": "descript-creator",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        },
+        {
+          "name": "Domo AI",
+          "slug": "domo-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/domo-ai/"
+        },
+        {
+          "name": "MiniMax Hailuo AI",
+          "slug": "minimax-hailuo-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/minimax-hailuo-ai/"
+        },
+        {
+          "name": "HeyGen AI Avatar Pro",
+          "slug": "heygen-ai-avatar-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/heygen-ai-avatar-pro/"
+        },
+        {
+          "name": "Higgsfield AI",
+          "slug": "higgsfield-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/higgsfield-ai/"
+        },
+        {
+          "name": "InVideo AI",
+          "slug": "invideo-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/invideo-ai/"
+        },
+        {
+          "name": "Kling AI Pro",
+          "slug": "kling-ai-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/kling-ai-pro/"
+        },
+        {
+          "name": "OpusClip Pro",
+          "slug": "opus-clip-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/opus-clip-pro/"
+        },
+        {
+          "name": "Storyblocks Unlimited",
+          "slug": "storyblocks-unlimited",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/storyblocks-unlimited/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        },
+        {
+          "slug": "ai-writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "slug": "automation",
+          "url": "https://aitoolszone.tech/categories/automation/"
+        }
+      ]
+    },
+    "design": {
+      "name": "Design",
+      "slug": "design",
+      "url": "https://aitoolszone.tech/categories/design/",
+      "total_products": 4,
+      "public_products_count": 4,
+      "member_products": [
+        {
+          "name": "Leonardo AI Essential",
+          "slug": "leonardo-ai-essential",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/leonardo-ai-essential.html"
+        },
+        {
+          "name": "Canva Pro Edu",
+          "slug": "canva-pro-edu",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/canva-pro-edu.html"
+        },
+        {
+          "name": "Figma Pro Private",
+          "slug": "figma-pro-private",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/figma-pro-private.html"
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "slug": "adobe-creative-cloud",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/adobe-creative-cloud.html"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "slug": "education-learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "slug": "entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        }
+      ]
+    },
+    "ai-voice": {
+      "name": "AI Voice",
+      "slug": "ai-voice",
+      "url": "https://aitoolszone.tech/categories/ai-voice/",
+      "total_products": 3,
+      "public_products_count": 3,
+      "member_products": [
+        {
+          "name": "ElevenLabs",
+          "slug": "elevenlabs",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/elevenlabs.html"
+        },
+        {
+          "name": "Play.ht",
+          "slug": "playht-voice-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/playht-voice-ai/"
+        },
+        {
+          "name": "Suno AI",
+          "slug": "suno-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/suno-ai/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "slug": "automation",
+          "url": "https://aitoolszone.tech/categories/automation/"
+        },
+        {
+          "slug": "business",
+          "url": "https://aitoolszone.tech/categories/business/"
+        }
+      ]
+    },
+    "development": {
+      "name": "Development",
+      "slug": "development",
+      "url": "https://aitoolszone.tech/categories/development/",
+      "total_products": 9,
+      "public_products_count": 9,
+      "member_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        },
+        {
+          "name": "GitHub Copilot",
+          "slug": "github-copilot",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        },
+        {
+          "name": "Enterprise AI API Credits",
+          "slug": "enterprise-ai-api-credits",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/enterprise-ai-api-credits/"
+        },
+        {
+          "name": "Firecrawl Starter",
+          "slug": "firecrawl-starter",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/firecrawl-starter/"
+        },
+        {
+          "name": "Railway Pro",
+          "slug": "railway-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/railway-pro/"
+        },
+        {
+          "name": "Supabase Pro",
+          "slug": "supabase-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/supabase-pro/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "education-learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "slug": "entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        },
+        {
+          "slug": "office-software",
+          "url": "https://aitoolszone.tech/categories/office-software/"
+        }
+      ]
+    },
+    "productivity": {
+      "name": "Productivity",
+      "slug": "productivity",
+      "url": "https://aitoolszone.tech/categories/productivity/",
+      "total_products": 2,
+      "public_products_count": 2,
+      "member_products": [
+        {
+          "name": "Gamma Pro",
+          "slug": "gamma-pro",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gamma-pro.html"
+        },
+        {
+          "name": "Notion Business",
+          "slug": "notion-business",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/notion-business.html"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "productivity-software",
+          "url": "https://aitoolszone.tech/categories/productivity-software/"
+        },
+        {
+          "slug": "research-tools",
+          "url": "https://aitoolszone.tech/categories/research-tools/"
+        },
+        {
+          "slug": "seo-marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        }
+      ]
+    },
+    "vpn-security": {
+      "name": "VPN & Security",
+      "slug": "vpn-security",
+      "url": "https://aitoolszone.tech/categories/vpn-security/",
+      "total_products": 2,
+      "public_products_count": 2,
+      "member_products": [
+        {
+          "name": "NordVPN",
+          "slug": "nordvpn",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/nordvpn.html"
+        },
+        {
+          "name": "Surfshark VPN",
+          "slug": "surfshark-vpn",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/surfshark-vpn.html"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "slug": "ai-coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        },
+        {
+          "slug": "ai-design",
+          "url": "https://aitoolszone.tech/categories/ai-design/"
+        }
+      ]
+    },
+    "entertainment": {
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "url": "https://aitoolszone.tech/categories/entertainment/",
+      "total_products": 4,
+      "public_products_count": 3,
+      "member_products": [
+        {
+          "name": "YouTube Premium",
+          "slug": "youtube-premium",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/youtube-premium.html"
+        },
+        {
+          "name": "Netflix Premium 4K",
+          "slug": "netflix-premium-4k",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/netflix-premium-4k.html"
+        },
+        {
+          "name": "Prime Video",
+          "slug": "prime-video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/prime-video/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "office-software",
+          "url": "https://aitoolszone.tech/categories/office-software/"
+        },
+        {
+          "slug": "productivity",
+          "url": "https://aitoolszone.tech/categories/productivity/"
+        },
+        {
+          "slug": "productivity-software",
+          "url": "https://aitoolszone.tech/categories/productivity-software/"
+        }
+      ]
+    },
+    "business": {
+      "name": "Business",
+      "slug": "business",
+      "url": "https://aitoolszone.tech/categories/business/",
+      "total_products": 1,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "LinkedIn Premium",
+          "slug": "linkedin-premium",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/linkedin-premium.html"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "slug": "development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "slug": "education-learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        }
+      ]
+    },
+    "software": {
+      "name": "Software",
+      "slug": "software",
+      "url": "https://aitoolszone.tech/categories/software/",
+      "total_products": 1,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "Windows 11 Pro Key",
+          "slug": "windows-11-pro-key",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/windows-11-pro-key.html"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "vpn-security",
+          "url": "https://aitoolszone.tech/categories/vpn-security/"
+        },
+        {
+          "slug": "ai-assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "slug": "ai-coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        }
+      ]
+    },
+    "office-software": {
+      "name": "Office Software",
+      "slug": "office-software",
+      "url": "https://aitoolszone.tech/categories/office-software/",
+      "total_products": 1,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "Microsoft Office 365",
+          "slug": "microsoft-office-365",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/microsoft-office-365/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "productivity",
+          "url": "https://aitoolszone.tech/categories/productivity/"
+        },
+        {
+          "slug": "productivity-software",
+          "url": "https://aitoolszone.tech/categories/productivity-software/"
+        },
+        {
+          "slug": "research-tools",
+          "url": "https://aitoolszone.tech/categories/research-tools/"
+        }
+      ]
+    },
+    "ai-writing": {
+      "name": "AI Writing",
+      "slug": "ai-writing",
+      "url": "https://aitoolszone.tech/categories/ai-writing/",
+      "total_products": 4,
+      "public_products_count": 4,
+      "member_products": [
+        {
+          "name": "Grammarly Premium",
+          "slug": "grammarly-premium",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/grammarly-premium/"
+        },
+        {
+          "name": "QuillBot Premium",
+          "slug": "quillbot-premium",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/quillbot-premium/"
+        },
+        {
+          "name": "Jasper AI",
+          "slug": "jasper-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/jasper-ai/"
+        },
+        {
+          "name": "WordAI",
+          "slug": "wordai-rewriter",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/wordai-rewriter/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "automation",
+          "url": "https://aitoolszone.tech/categories/automation/"
+        },
+        {
+          "slug": "business",
+          "url": "https://aitoolszone.tech/categories/business/"
+        },
+        {
+          "slug": "design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        }
+      ]
+    },
+    "education-learning": {
+      "name": "Education & Learning",
+      "slug": "education-learning",
+      "url": "https://aitoolszone.tech/categories/education-learning/",
+      "total_products": 5,
+      "public_products_count": 4,
+      "member_products": [
+        {
+          "name": "Coursera Plus",
+          "slug": "coursera-plus-premium",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        },
+        {
+          "name": "Quizlet Plus",
+          "slug": "quizlet-plus",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        },
+        {
+          "name": "Skillshare Premium",
+          "slug": "skillshare-premium",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        },
+        {
+          "name": "Udemy Personal Plan",
+          "slug": "udemy-personal-plan",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        },
+        {
+          "slug": "office-software",
+          "url": "https://aitoolszone.tech/categories/office-software/"
+        },
+        {
+          "slug": "productivity",
+          "url": "https://aitoolszone.tech/categories/productivity/"
+        }
+      ]
+    },
+    "seo-marketing": {
+      "name": "SEO & Marketing",
+      "slug": "seo-marketing",
+      "url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "total_products": 5,
+      "public_products_count": 4,
+      "member_products": [
+        {
+          "name": "Ahrefs Starter",
+          "slug": "ahrefs-starter",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        },
+        {
+          "name": "Helium 10",
+          "slug": "helium-10",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        },
+        {
+          "name": "Success.ai Starter Leads",
+          "slug": "success-ai-leads",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        },
+        {
+          "name": "vidIQ Pro",
+          "slug": "vidiq-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "software",
+          "url": "https://aitoolszone.tech/categories/software/"
+        },
+        {
+          "slug": "vpn-security",
+          "url": "https://aitoolszone.tech/categories/vpn-security/"
+        },
+        {
+          "slug": "ai-assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        }
+      ]
+    },
+    "ai-coding": {
+      "name": "AI Coding",
+      "slug": "ai-coding",
+      "url": "https://aitoolszone.tech/categories/ai-coding/",
+      "total_products": 3,
+      "public_products_count": 3,
+      "member_products": [
+        {
+          "name": "Bolt.new Pro",
+          "slug": "bolt-new-pro",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/bolt-new-pro/"
+        },
+        {
+          "name": "v0 by Vercel",
+          "slug": "v0-by-vercel",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/v0-by-vercel/"
+        },
+        {
+          "name": "Windsurf Editor",
+          "slug": "windsurf-editor",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/windsurf-editor/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-design",
+          "url": "https://aitoolszone.tech/categories/ai-design/"
+        },
+        {
+          "slug": "ai-image-generation",
+          "url": "https://aitoolszone.tech/categories/ai-image-generation/"
+        },
+        {
+          "slug": "ai-video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        }
+      ]
+    },
+    "productivity-software": {
+      "name": "Productivity Software",
+      "slug": "productivity-software",
+      "url": "https://aitoolszone.tech/categories/productivity-software/",
+      "total_products": 1,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "ChatPRD AI",
+          "slug": "chatprd-ai",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/chatprd-ai/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "research-tools",
+          "url": "https://aitoolszone.tech/categories/research-tools/"
+        },
+        {
+          "slug": "seo-marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "slug": "software",
+          "url": "https://aitoolszone.tech/categories/software/"
+        }
+      ]
+    },
+    "ai-design": {
+      "name": "AI Design",
+      "slug": "ai-design",
+      "url": "https://aitoolszone.tech/categories/ai-design/",
+      "total_products": 2,
+      "public_products_count": 2,
+      "member_products": [
+        {
+          "name": "Dzine Master",
+          "slug": "dzine-master",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/dzine-master/"
+        },
+        {
+          "name": "Freepik Premium",
+          "slug": "freepik-premium",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/freepik-premium/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-image-generation",
+          "url": "https://aitoolszone.tech/categories/ai-image-generation/"
+        },
+        {
+          "slug": "ai-video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "slug": "ai-voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        }
+      ]
+    },
+    "ai-image-generation": {
+      "name": "AI Image Generation",
+      "slug": "ai-image-generation",
+      "url": "https://aitoolszone.tech/categories/ai-image-generation/",
+      "total_products": 2,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "Ideogram AI Plus",
+          "slug": "ideogram-ai-plus",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ideogram-ai-plus/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "ai-video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "slug": "ai-voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        },
+        {
+          "slug": "ai-writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        }
+      ]
+    },
+    "automation": {
+      "name": "Automation",
+      "slug": "automation",
+      "url": "https://aitoolszone.tech/categories/automation/",
+      "total_products": 1,
+      "public_products_count": 1,
+      "member_products": [
+        {
+          "name": "Make (Integromat) Pro",
+          "slug": "make-integromat-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/make-integromat-pro/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "business",
+          "url": "https://aitoolszone.tech/categories/business/"
+        },
+        {
+          "slug": "design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "slug": "development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        }
+      ]
+    },
+    "research-tools": {
+      "name": "Research Tools",
+      "slug": "research-tools",
+      "url": "https://aitoolszone.tech/categories/research-tools/",
+      "total_products": 2,
+      "public_products_count": 2,
+      "member_products": [
+        {
+          "name": "Google NotebookLM Pro",
+          "slug": "google-notebooklm-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/google-notebooklm-pro/"
+        },
+        {
+          "name": "TradingView Pro",
+          "slug": "tradingview-pro",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/tradingview-pro/"
+        }
+      ],
+      "related_categories": [
+        {
+          "slug": "seo-marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "slug": "software",
+          "url": "https://aitoolszone.tech/categories/software/"
+        },
+        {
+          "slug": "vpn-security",
+          "url": "https://aitoolszone.tech/categories/vpn-security/"
+        }
+      ]
+    }
+  },
+  "products": {
+    "chatgpt-plus": {
+      "id": "chatgpt",
+      "name": "ChatGPT Plus",
+      "slug": "chatgpt-plus",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/chatgpt-plus.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "ChatGPT Plus",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        },
+        {
+          "name": "DeepSeek Unlimited",
+          "slug": "deepseek-unlimited",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        }
+      ],
+      "suggested_anchors": [
+        "ChatGPT Plus Pakistan",
+        "buy ChatGPT Plus in Pakistan",
+        "ChatGPT Plus PKR price",
+        "ChatGPT Plus subscription"
+      ]
+    },
+    "gemini-pro": {
+      "id": "gemini",
+      "name": "Gemini Pro",
+      "slug": "gemini-pro",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/gemini-pro.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Gemini Pro",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        },
+        {
+          "name": "DeepSeek Unlimited",
+          "slug": "deepseek-unlimited",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        }
+      ],
+      "suggested_anchors": [
+        "Gemini Pro Pakistan",
+        "buy Gemini Pro in Pakistan",
+        "Gemini Pro PKR price",
+        "Gemini Pro subscription"
+      ]
+    },
+    "veo-3-ultra": {
+      "id": "veo",
+      "name": "Veo 3 Ultra",
+      "slug": "veo-3-ultra",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/veo-3-ultra.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Veo 3 Ultra",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        },
+        {
+          "name": "Descript Creator",
+          "slug": "descript-creator",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        }
+      ],
+      "suggested_anchors": [
+        "Veo 3 Ultra Pakistan",
+        "buy Veo 3 Ultra in Pakistan",
+        "Veo 3 Ultra PKR price",
+        "Veo 3 Ultra subscription"
+      ]
+    },
+    "leonardo-ai-essential": {
+      "id": "leonardo",
+      "name": "Leonardo AI Essential",
+      "slug": "leonardo-ai-essential",
+      "category": "Design",
+      "category_url": "https://aitoolszone.tech/categories/design/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/leonardo-ai-essential.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "position": 4,
+          "name": "Leonardo AI Essential",
+          "url": "https://aitoolszone.tech/products/leonardo-ai-essential.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Canva Pro Edu",
+          "slug": "canva-pro-edu",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/canva-pro-edu.html"
+        },
+        {
+          "name": "Figma Pro Private",
+          "slug": "figma-pro-private",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/figma-pro-private.html"
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "slug": "adobe-creative-cloud",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/adobe-creative-cloud.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Leonardo AI Essential Pakistan",
+        "buy Leonardo AI Essential in Pakistan",
+        "Leonardo AI Essential PKR price",
+        "Leonardo AI Essential subscription"
+      ]
+    },
+    "elevenlabs": {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "category": "AI Voice",
+      "category_url": "https://aitoolszone.tech/categories/ai-voice/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/elevenlabs.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        },
+        {
+          "position": 4,
+          "name": "ElevenLabs",
+          "url": "https://aitoolszone.tech/products/elevenlabs.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Play.ht",
+          "slug": "playht-voice-ai",
+          "category": "AI Voice",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/playht-voice-ai/"
+        },
+        {
+          "name": "Suno AI",
+          "slug": "suno-ai",
+          "category": "AI Voice",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/suno-ai/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "ElevenLabs Pakistan",
+        "buy ElevenLabs in Pakistan",
+        "ElevenLabs PKR price",
+        "ElevenLabs subscription"
+      ]
+    },
+    "canva-pro-edu": {
+      "id": "canva",
+      "name": "Canva Pro Edu",
+      "slug": "canva-pro-edu",
+      "category": "Design",
+      "category_url": "https://aitoolszone.tech/categories/design/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/canva-pro-edu.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "position": 4,
+          "name": "Canva Pro Edu",
+          "url": "https://aitoolszone.tech/products/canva-pro-edu.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Leonardo AI Essential",
+          "slug": "leonardo-ai-essential",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/leonardo-ai-essential.html"
+        },
+        {
+          "name": "Figma Pro Private",
+          "slug": "figma-pro-private",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/figma-pro-private.html"
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "slug": "adobe-creative-cloud",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/adobe-creative-cloud.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Canva Pro Edu Pakistan",
+        "buy Canva Pro Edu in Pakistan",
+        "Canva Pro Edu PKR price",
+        "Canva Pro Edu subscription"
+      ]
+    },
+    "figma-pro-private": {
+      "id": "figma",
+      "name": "Figma Pro Private",
+      "slug": "figma-pro-private",
+      "category": "Design",
+      "category_url": "https://aitoolszone.tech/categories/design/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/figma-pro-private.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "position": 4,
+          "name": "Figma Pro Private",
+          "url": "https://aitoolszone.tech/products/figma-pro-private.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Leonardo AI Essential",
+          "slug": "leonardo-ai-essential",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/leonardo-ai-essential.html"
+        },
+        {
+          "name": "Canva Pro Edu",
+          "slug": "canva-pro-edu",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/canva-pro-edu.html"
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "slug": "adobe-creative-cloud",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/adobe-creative-cloud.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Figma Pro Private Pakistan",
+        "buy Figma Pro Private in Pakistan",
+        "Figma Pro Private PKR price",
+        "Figma Pro Private subscription"
+      ]
+    },
+    "capcut-pro": {
+      "id": "capcut",
+      "name": "CapCut Pro",
+      "slug": "capcut-pro",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/capcut-pro.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "CapCut Pro",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        },
+        {
+          "name": "Descript Creator",
+          "slug": "descript-creator",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        }
+      ],
+      "suggested_anchors": [
+        "CapCut Pro Pakistan",
+        "buy CapCut Pro in Pakistan",
+        "CapCut Pro PKR price",
+        "CapCut Pro subscription"
+      ]
+    },
+    "adobe-creative-cloud": {
+      "id": "adobe",
+      "name": "Adobe Creative Cloud",
+      "slug": "adobe-creative-cloud",
+      "category": "Design",
+      "category_url": "https://aitoolszone.tech/categories/design/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/adobe-creative-cloud.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Design",
+          "url": "https://aitoolszone.tech/categories/design/"
+        },
+        {
+          "position": 4,
+          "name": "Adobe Creative Cloud",
+          "url": "https://aitoolszone.tech/products/adobe-creative-cloud.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Leonardo AI Essential",
+          "slug": "leonardo-ai-essential",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/leonardo-ai-essential.html"
+        },
+        {
+          "name": "Canva Pro Edu",
+          "slug": "canva-pro-edu",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/canva-pro-edu.html"
+        },
+        {
+          "name": "Figma Pro Private",
+          "slug": "figma-pro-private",
+          "category": "Design",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/figma-pro-private.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Adobe Creative Cloud Pakistan",
+        "buy Adobe Creative Cloud in Pakistan",
+        "Adobe Creative Cloud PKR price",
+        "Adobe Creative Cloud subscription"
+      ]
+    },
+    "lovable-pro": {
+      "id": "lovable",
+      "name": "Lovable Pro",
+      "slug": "lovable-pro",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/lovable-pro.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Lovable Pro",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        },
+        {
+          "name": "GitHub Copilot",
+          "slug": "github-copilot",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        }
+      ],
+      "suggested_anchors": [
+        "Lovable Pro Pakistan",
+        "buy Lovable Pro in Pakistan",
+        "Lovable Pro PKR price",
+        "Lovable Pro subscription"
+      ]
+    },
+    "gamma-pro": {
+      "id": "gamma",
+      "name": "Gamma Pro",
+      "slug": "gamma-pro",
+      "category": "Productivity",
+      "category_url": "https://aitoolszone.tech/categories/productivity/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/gamma-pro.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Productivity",
+          "url": "https://aitoolszone.tech/categories/productivity/"
+        },
+        {
+          "position": 4,
+          "name": "Gamma Pro",
+          "url": "https://aitoolszone.tech/products/gamma-pro.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Notion Business",
+          "slug": "notion-business",
+          "category": "Productivity",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/notion-business.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Gamma Pro Pakistan",
+        "buy Gamma Pro in Pakistan",
+        "Gamma Pro PKR price",
+        "Gamma Pro subscription"
+      ]
+    },
+    "replit-core": {
+      "id": "replit",
+      "name": "Replit Core",
+      "slug": "replit-core",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/replit-core.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Replit Core",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        },
+        {
+          "name": "GitHub Copilot",
+          "slug": "github-copilot",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        }
+      ],
+      "suggested_anchors": [
+        "Replit Core Pakistan",
+        "buy Replit Core in Pakistan",
+        "Replit Core PKR price",
+        "Replit Core subscription"
+      ]
+    },
+    "n8n-starter": {
+      "id": "n8n",
+      "name": "n8n Starter",
+      "slug": "n8n-starter",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/n8n-starter.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "n8n Starter",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        },
+        {
+          "name": "GitHub Copilot",
+          "slug": "github-copilot",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        }
+      ],
+      "suggested_anchors": [
+        "n8n Starter Pakistan",
+        "buy n8n Starter in Pakistan",
+        "n8n Starter PKR price",
+        "n8n Starter subscription"
+      ]
+    },
+    "notion-business": {
+      "id": "notion",
+      "name": "Notion Business",
+      "slug": "notion-business",
+      "category": "Productivity",
+      "category_url": "https://aitoolszone.tech/categories/productivity/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/notion-business.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Productivity",
+          "url": "https://aitoolszone.tech/categories/productivity/"
+        },
+        {
+          "position": 4,
+          "name": "Notion Business",
+          "url": "https://aitoolszone.tech/products/notion-business.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Gamma Pro",
+          "slug": "gamma-pro",
+          "category": "Productivity",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gamma-pro.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Notion Business Pakistan",
+        "buy Notion Business in Pakistan",
+        "Notion Business PKR price",
+        "Notion Business subscription"
+      ]
+    },
+    "nordvpn": {
+      "id": "nordvpn",
+      "name": "NordVPN",
+      "slug": "nordvpn",
+      "category": "VPN & Security",
+      "category_url": "https://aitoolszone.tech/categories/vpn-security/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/nordvpn.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "VPN & Security",
+          "url": "https://aitoolszone.tech/categories/vpn-security/"
+        },
+        {
+          "position": 4,
+          "name": "NordVPN",
+          "url": "https://aitoolszone.tech/products/nordvpn.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Surfshark VPN",
+          "slug": "surfshark-vpn",
+          "category": "VPN & Security",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/surfshark-vpn.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "NordVPN Pakistan",
+        "buy NordVPN in Pakistan",
+        "NordVPN PKR price",
+        "NordVPN subscription"
+      ]
+    },
+    "surfshark-vpn": {
+      "id": "surfshark",
+      "name": "Surfshark VPN",
+      "slug": "surfshark-vpn",
+      "category": "VPN & Security",
+      "category_url": "https://aitoolszone.tech/categories/vpn-security/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/surfshark-vpn.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "VPN & Security",
+          "url": "https://aitoolszone.tech/categories/vpn-security/"
+        },
+        {
+          "position": 4,
+          "name": "Surfshark VPN",
+          "url": "https://aitoolszone.tech/products/surfshark-vpn.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "NordVPN",
+          "slug": "nordvpn",
+          "category": "VPN & Security",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/nordvpn.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Surfshark VPN Pakistan",
+        "buy Surfshark VPN in Pakistan",
+        "Surfshark VPN PKR price",
+        "Surfshark VPN subscription"
+      ]
+    },
+    "youtube-premium": {
+      "id": "youtube",
+      "name": "YouTube Premium",
+      "slug": "youtube-premium",
+      "category": "Entertainment",
+      "category_url": "https://aitoolszone.tech/categories/entertainment/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/youtube-premium.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        },
+        {
+          "position": 4,
+          "name": "YouTube Premium",
+          "url": "https://aitoolszone.tech/products/youtube-premium.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Netflix Premium 4K",
+          "slug": "netflix-premium-4k",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/netflix-premium-4k.html"
+        },
+        {
+          "name": "Prime Video",
+          "slug": "prime-video",
+          "category": "Entertainment",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/prime-video/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "YouTube Premium Pakistan",
+        "buy YouTube Premium in Pakistan",
+        "YouTube Premium PKR price",
+        "YouTube Premium subscription"
+      ]
+    },
+    "netflix-premium-4k": {
+      "id": "netflix",
+      "name": "Netflix Premium 4K",
+      "slug": "netflix-premium-4k",
+      "category": "Entertainment",
+      "category_url": "https://aitoolszone.tech/categories/entertainment/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/netflix-premium-4k.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        },
+        {
+          "position": 4,
+          "name": "Netflix Premium 4K",
+          "url": "https://aitoolszone.tech/products/netflix-premium-4k.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "YouTube Premium",
+          "slug": "youtube-premium",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/youtube-premium.html"
+        },
+        {
+          "name": "Prime Video",
+          "slug": "prime-video",
+          "category": "Entertainment",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/prime-video/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Netflix Premium 4K Pakistan",
+        "buy Netflix Premium 4K in Pakistan",
+        "Netflix Premium 4K PKR price",
+        "Netflix Premium 4K subscription"
+      ]
+    },
+    "linkedin-premium": {
+      "id": "linkedin",
+      "name": "LinkedIn Premium",
+      "slug": "linkedin-premium",
+      "category": "Business",
+      "category_url": "https://aitoolszone.tech/categories/business/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/linkedin-premium.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Business",
+          "url": "https://aitoolszone.tech/categories/business/"
+        },
+        {
+          "position": 4,
+          "name": "LinkedIn Premium",
+          "url": "https://aitoolszone.tech/products/linkedin-premium.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "LinkedIn Premium Pakistan",
+        "buy LinkedIn Premium in Pakistan",
+        "LinkedIn Premium PKR price",
+        "LinkedIn Premium subscription"
+      ]
+    },
+    "windows-11-pro-key": {
+      "id": "windows",
+      "name": "Windows 11 Pro Key",
+      "slug": "windows-11-pro-key",
+      "category": "Software",
+      "category_url": "https://aitoolszone.tech/categories/software/",
+      "status": "AVAILABLE",
+      "canonical_url": "https://aitoolszone.tech/products/windows-11-pro-key.html",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Software",
+          "url": "https://aitoolszone.tech/categories/software/"
+        },
+        {
+          "position": 4,
+          "name": "Windows 11 Pro Key",
+          "url": "https://aitoolszone.tech/products/windows-11-pro-key.html"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Windows 11 Pro Key Pakistan",
+        "buy Windows 11 Pro Key in Pakistan",
+        "Windows 11 Pro Key PKR price",
+        "Windows 11 Pro Key subscription"
+      ]
+    },
+    "claude-pro": {
+      "id": "claude",
+      "name": "Claude Pro",
+      "slug": "claude-pro",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/claude-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Claude Pro",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        },
+        {
+          "name": "DeepSeek Unlimited",
+          "slug": "deepseek-unlimited",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        }
+      ],
+      "suggested_anchors": [
+        "Claude Pro Pakistan",
+        "buy Claude Pro in Pakistan",
+        "Claude Pro PKR price",
+        "Claude Pro subscription"
+      ]
+    },
+    "cursor-ai-pro": {
+      "id": "cursor",
+      "name": "Cursor AI Pro",
+      "slug": "cursor-ai-pro",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/cursor-ai-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Cursor AI Pro",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "GitHub Copilot",
+          "slug": "github-copilot",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        }
+      ],
+      "suggested_anchors": [
+        "Cursor AI Pro Pakistan",
+        "buy Cursor AI Pro in Pakistan",
+        "Cursor AI Pro PKR price",
+        "Cursor AI Pro subscription"
+      ]
+    },
+    "microsoft-office-365": {
+      "id": "office365",
+      "name": "Microsoft Office 365",
+      "slug": "microsoft-office-365",
+      "category": "Office Software",
+      "category_url": "https://aitoolszone.tech/categories/office-software/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/microsoft-office-365/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Office Software",
+          "url": "https://aitoolszone.tech/categories/office-software/"
+        },
+        {
+          "position": 4,
+          "name": "Microsoft Office 365",
+          "url": "https://aitoolszone.tech/products/microsoft-office-365/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Microsoft Office 365 Pakistan",
+        "buy Microsoft Office 365 in Pakistan",
+        "Microsoft Office 365 PKR price",
+        "Microsoft Office 365 subscription"
+      ]
+    },
+    "grammarly-premium": {
+      "id": "grammarly",
+      "name": "Grammarly Premium",
+      "slug": "grammarly-premium",
+      "category": "AI Writing",
+      "category_url": "https://aitoolszone.tech/categories/ai-writing/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/grammarly-premium/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "position": 4,
+          "name": "Grammarly Premium",
+          "url": "https://aitoolszone.tech/products/grammarly-premium/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "QuillBot Premium",
+          "slug": "quillbot-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/quillbot-premium/"
+        },
+        {
+          "name": "Jasper AI",
+          "slug": "jasper-ai",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/jasper-ai/"
+        },
+        {
+          "name": "WordAI",
+          "slug": "wordai-rewriter",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/wordai-rewriter/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Grammarly Premium Pakistan",
+        "buy Grammarly Premium in Pakistan",
+        "Grammarly Premium PKR price",
+        "Grammarly Premium subscription"
+      ]
+    },
+    "perplexity-pro": {
+      "id": "perplexity",
+      "name": "Perplexity Pro",
+      "slug": "perplexity-pro",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/perplexity-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Perplexity Pro",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "DeepSeek Unlimited",
+          "slug": "deepseek-unlimited",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        }
+      ],
+      "suggested_anchors": [
+        "Perplexity Pro Pakistan",
+        "buy Perplexity Pro in Pakistan",
+        "Perplexity Pro PKR price",
+        "Perplexity Pro subscription"
+      ]
+    },
+    "github-copilot": {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/github-copilot/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "GitHub Copilot",
+          "url": "https://aitoolszone.tech/products/github-copilot/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "GitHub Copilot Pakistan",
+        "buy GitHub Copilot in Pakistan",
+        "GitHub Copilot PKR price",
+        "GitHub Copilot subscription"
+      ]
+    },
+    "quillbot-premium": {
+      "id": "quillbot",
+      "name": "QuillBot Premium",
+      "slug": "quillbot-premium",
+      "category": "AI Writing",
+      "category_url": "https://aitoolszone.tech/categories/ai-writing/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/quillbot-premium/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "position": 4,
+          "name": "QuillBot Premium",
+          "url": "https://aitoolszone.tech/products/quillbot-premium/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Grammarly Premium",
+          "slug": "grammarly-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/grammarly-premium/"
+        },
+        {
+          "name": "Jasper AI",
+          "slug": "jasper-ai",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/jasper-ai/"
+        },
+        {
+          "name": "WordAI",
+          "slug": "wordai-rewriter",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/wordai-rewriter/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "QuillBot Premium Pakistan",
+        "buy QuillBot Premium in Pakistan",
+        "QuillBot Premium PKR price",
+        "QuillBot Premium subscription"
+      ]
+    },
+    "coursera-plus-premium": {
+      "id": "coursera-plus",
+      "name": "Coursera Plus",
+      "slug": "coursera-plus-premium",
+      "category": "Education & Learning",
+      "category_url": "https://aitoolszone.tech/categories/education-learning/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/coursera-plus-premium/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Education & Learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "position": 4,
+          "name": "Coursera Plus",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Quizlet Plus",
+          "slug": "quizlet-plus",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        },
+        {
+          "name": "Skillshare Premium",
+          "slug": "skillshare-premium",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        },
+        {
+          "name": "Udemy Personal Plan",
+          "slug": "udemy-personal-plan",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Coursera Plus Pakistan",
+        "buy Coursera Plus in Pakistan",
+        "Coursera Plus PKR price",
+        "Coursera Plus subscription"
+      ]
+    },
+    "runway-ml-gen-3": {
+      "id": "runway",
+      "name": "Runway ML Gen-3",
+      "slug": "runway-ml-gen-3",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/runway-ml-gen-3/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Runway ML Gen-3",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        },
+        {
+          "name": "Descript Creator",
+          "slug": "descript-creator",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        }
+      ],
+      "suggested_anchors": [
+        "Runway ML Gen-3 Pakistan",
+        "buy Runway ML Gen-3 in Pakistan",
+        "Runway ML Gen-3 PKR price",
+        "Runway ML Gen-3 subscription"
+      ]
+    },
+    "deepseek-unlimited": {
+      "id": "deepseek",
+      "name": "DeepSeek Unlimited",
+      "slug": "deepseek-unlimited",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/deepseek-unlimited/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "DeepSeek Unlimited",
+          "url": "https://aitoolszone.tech/products/deepseek-unlimited/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "DeepSeek Unlimited Pakistan",
+        "buy DeepSeek Unlimited in Pakistan",
+        "DeepSeek Unlimited PKR price",
+        "DeepSeek Unlimited subscription"
+      ]
+    },
+    "ahrefs-starter": {
+      "id": "ahrefs",
+      "name": "Ahrefs Starter",
+      "slug": "ahrefs-starter",
+      "category": "SEO & Marketing",
+      "category_url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/ahrefs-starter/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "SEO & Marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "position": 4,
+          "name": "Ahrefs Starter",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Helium 10",
+          "slug": "helium-10",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        },
+        {
+          "name": "Success.ai Starter Leads",
+          "slug": "success-ai-leads",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        },
+        {
+          "name": "vidIQ Pro",
+          "slug": "vidiq-pro",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Ahrefs Starter Pakistan",
+        "buy Ahrefs Starter in Pakistan",
+        "Ahrefs Starter PKR price",
+        "Ahrefs Starter subscription"
+      ]
+    },
+    "all-in-one-mega-ai-portal": {
+      "id": "allinone",
+      "name": "All-in-One Mega AI Portal",
+      "slug": "all-in-one-mega-ai-portal",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "REJECTED",
+      "canonical_url": null,
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "All-in-One Mega AI Portal Pakistan",
+        "buy All-in-One Mega AI Portal in Pakistan",
+        "All-in-One Mega AI Portal PKR price",
+        "All-in-One Mega AI Portal subscription"
+      ]
+    },
+    "bolt-new-pro": {
+      "id": "bolt-new",
+      "name": "Bolt.new Pro",
+      "slug": "bolt-new-pro",
+      "category": "AI Coding",
+      "category_url": "https://aitoolszone.tech/categories/ai-coding/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/bolt-new-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        },
+        {
+          "position": 4,
+          "name": "Bolt.new Pro",
+          "url": "https://aitoolszone.tech/products/bolt-new-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "v0 by Vercel",
+          "slug": "v0-by-vercel",
+          "category": "AI Coding",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/v0-by-vercel/"
+        },
+        {
+          "name": "Windsurf Editor",
+          "slug": "windsurf-editor",
+          "category": "AI Coding",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/windsurf-editor/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Bolt.new Pro Pakistan",
+        "buy Bolt.new Pro in Pakistan",
+        "Bolt.new Pro PKR price",
+        "Bolt.new Pro subscription"
+      ]
+    },
+    "chatprd-ai": {
+      "id": "chatprd",
+      "name": "ChatPRD AI",
+      "slug": "chatprd-ai",
+      "category": "Productivity Software",
+      "category_url": "https://aitoolszone.tech/categories/productivity-software/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/chatprd-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Productivity Software",
+          "url": "https://aitoolszone.tech/categories/productivity-software/"
+        },
+        {
+          "position": 4,
+          "name": "ChatPRD AI",
+          "url": "https://aitoolszone.tech/products/chatprd-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "ChatPRD AI Pakistan",
+        "buy ChatPRD AI in Pakistan",
+        "ChatPRD AI PKR price",
+        "ChatPRD AI subscription"
+      ]
+    },
+    "davinci-resolve-studio": {
+      "id": "davinci-resolve",
+      "name": "DaVinci Resolve Studio",
+      "slug": "davinci-resolve-studio",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/davinci-resolve-studio/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "DaVinci Resolve Studio",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "Descript Creator",
+          "slug": "descript-creator",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        }
+      ],
+      "suggested_anchors": [
+        "DaVinci Resolve Studio Pakistan",
+        "buy DaVinci Resolve Studio in Pakistan",
+        "DaVinci Resolve Studio PKR price",
+        "DaVinci Resolve Studio subscription"
+      ]
+    },
+    "descript-creator": {
+      "id": "descript",
+      "name": "Descript Creator",
+      "slug": "descript-creator",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "ENQUIRE",
+      "canonical_url": "https://aitoolszone.tech/products/descript-creator/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Descript Creator",
+          "url": "https://aitoolszone.tech/products/descript-creator/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "Descript Creator Pakistan",
+        "buy Descript Creator in Pakistan",
+        "Descript Creator PKR price",
+        "Descript Creator subscription"
+      ]
+    },
+    "domo-ai": {
+      "id": "domo-ai",
+      "name": "Domo AI",
+      "slug": "domo-ai",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/domo-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Domo AI",
+          "url": "https://aitoolszone.tech/products/domo-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "Domo AI Pakistan",
+        "buy Domo AI in Pakistan",
+        "Domo AI PKR price",
+        "Domo AI subscription"
+      ]
+    },
+    "dzine-master": {
+      "id": "dzine",
+      "name": "Dzine Master",
+      "slug": "dzine-master",
+      "category": "AI Design",
+      "category_url": "https://aitoolszone.tech/categories/ai-design/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/dzine-master/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Design",
+          "url": "https://aitoolszone.tech/categories/ai-design/"
+        },
+        {
+          "position": 4,
+          "name": "Dzine Master",
+          "url": "https://aitoolszone.tech/products/dzine-master/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Freepik Premium",
+          "slug": "freepik-premium",
+          "category": "AI Design",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/freepik-premium/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Dzine Master Pakistan",
+        "buy Dzine Master in Pakistan",
+        "Dzine Master PKR price",
+        "Dzine Master subscription"
+      ]
+    },
+    "enterprise-ai-api-credits": {
+      "id": "enterprise-api",
+      "name": "Enterprise AI API Credits",
+      "slug": "enterprise-ai-api-credits",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/enterprise-ai-api-credits/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Enterprise AI API Credits",
+          "url": "https://aitoolszone.tech/products/enterprise-ai-api-credits/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Enterprise AI API Credits Pakistan",
+        "buy Enterprise AI API Credits in Pakistan",
+        "Enterprise AI API Credits PKR price",
+        "Enterprise AI API Credits subscription"
+      ]
+    },
+    "firecrawl-starter": {
+      "id": "firecrawl",
+      "name": "Firecrawl Starter",
+      "slug": "firecrawl-starter",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/firecrawl-starter/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Firecrawl Starter",
+          "url": "https://aitoolszone.tech/products/firecrawl-starter/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Firecrawl Starter Pakistan",
+        "buy Firecrawl Starter in Pakistan",
+        "Firecrawl Starter PKR price",
+        "Firecrawl Starter subscription"
+      ]
+    },
+    "freepik-premium": {
+      "id": "freepik",
+      "name": "Freepik Premium",
+      "slug": "freepik-premium",
+      "category": "AI Design",
+      "category_url": "https://aitoolszone.tech/categories/ai-design/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/freepik-premium/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Design",
+          "url": "https://aitoolszone.tech/categories/ai-design/"
+        },
+        {
+          "position": 4,
+          "name": "Freepik Premium",
+          "url": "https://aitoolszone.tech/products/freepik-premium/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Dzine Master",
+          "slug": "dzine-master",
+          "category": "AI Design",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/dzine-master/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Freepik Premium Pakistan",
+        "buy Freepik Premium in Pakistan",
+        "Freepik Premium PKR price",
+        "Freepik Premium subscription"
+      ]
+    },
+    "genspark-ai": {
+      "id": "genspark",
+      "name": "Genspark AI",
+      "slug": "genspark-ai",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/genspark-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Genspark AI",
+          "url": "https://aitoolszone.tech/products/genspark-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Genspark AI Pakistan",
+        "buy Genspark AI in Pakistan",
+        "Genspark AI PKR price",
+        "Genspark AI subscription"
+      ]
+    },
+    "google-ai-ultra": {
+      "id": "google-ultra",
+      "name": "Google AI Ultra",
+      "slug": "google-ai-ultra",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/google-ai-ultra/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Google AI Ultra",
+          "url": "https://aitoolszone.tech/products/google-ai-ultra/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Google AI Ultra Pakistan",
+        "buy Google AI Ultra in Pakistan",
+        "Google AI Ultra PKR price",
+        "Google AI Ultra subscription"
+      ]
+    },
+    "grok-supergrok": {
+      "id": "grok",
+      "name": "Grok / SuperGrok",
+      "slug": "grok-supergrok",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/grok-supergrok/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Grok / SuperGrok",
+          "url": "https://aitoolszone.tech/products/grok-supergrok/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Grok / SuperGrok Pakistan",
+        "buy Grok / SuperGrok in Pakistan",
+        "Grok / SuperGrok PKR price",
+        "Grok / SuperGrok subscription"
+      ]
+    },
+    "minimax-hailuo-ai": {
+      "id": "hailuo-ai",
+      "name": "MiniMax Hailuo AI",
+      "slug": "minimax-hailuo-ai",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/minimax-hailuo-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "MiniMax Hailuo AI",
+          "url": "https://aitoolszone.tech/products/minimax-hailuo-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "MiniMax Hailuo AI Pakistan",
+        "buy MiniMax Hailuo AI in Pakistan",
+        "MiniMax Hailuo AI PKR price",
+        "MiniMax Hailuo AI subscription"
+      ]
+    },
+    "helium-10": {
+      "id": "helium-10",
+      "name": "Helium 10",
+      "slug": "helium-10",
+      "category": "SEO & Marketing",
+      "category_url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/helium-10/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "SEO & Marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "position": 4,
+          "name": "Helium 10",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Ahrefs Starter",
+          "slug": "ahrefs-starter",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        },
+        {
+          "name": "Success.ai Starter Leads",
+          "slug": "success-ai-leads",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        },
+        {
+          "name": "vidIQ Pro",
+          "slug": "vidiq-pro",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Helium 10 Pakistan",
+        "buy Helium 10 in Pakistan",
+        "Helium 10 PKR price",
+        "Helium 10 subscription"
+      ]
+    },
+    "heygen-ai-avatar-pro": {
+      "id": "heygen",
+      "name": "HeyGen AI Avatar Pro",
+      "slug": "heygen-ai-avatar-pro",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/heygen-ai-avatar-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "HeyGen AI Avatar Pro",
+          "url": "https://aitoolszone.tech/products/heygen-ai-avatar-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "HeyGen AI Avatar Pro Pakistan",
+        "buy HeyGen AI Avatar Pro in Pakistan",
+        "HeyGen AI Avatar Pro PKR price",
+        "HeyGen AI Avatar Pro subscription"
+      ]
+    },
+    "higgsfield-ai": {
+      "id": "higgsfield",
+      "name": "Higgsfield AI",
+      "slug": "higgsfield-ai",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/higgsfield-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Higgsfield AI",
+          "url": "https://aitoolszone.tech/products/higgsfield-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "Higgsfield AI Pakistan",
+        "buy Higgsfield AI in Pakistan",
+        "Higgsfield AI PKR price",
+        "Higgsfield AI subscription"
+      ]
+    },
+    "ideogram-ai-plus": {
+      "id": "ideogram",
+      "name": "Ideogram AI Plus",
+      "slug": "ideogram-ai-plus",
+      "category": "AI Image Generation",
+      "category_url": "https://aitoolszone.tech/categories/ai-image-generation/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/ideogram-ai-plus/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Image Generation",
+          "url": "https://aitoolszone.tech/categories/ai-image-generation/"
+        },
+        {
+          "position": 4,
+          "name": "Ideogram AI Plus",
+          "url": "https://aitoolszone.tech/products/ideogram-ai-plus/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Ideogram AI Plus Pakistan",
+        "buy Ideogram AI Plus in Pakistan",
+        "Ideogram AI Plus PKR price",
+        "Ideogram AI Plus subscription"
+      ]
+    },
+    "invideo-ai": {
+      "id": "invideo-ai",
+      "name": "InVideo AI",
+      "slug": "invideo-ai",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/invideo-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "InVideo AI",
+          "url": "https://aitoolszone.tech/products/invideo-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "InVideo AI Pakistan",
+        "buy InVideo AI in Pakistan",
+        "InVideo AI PKR price",
+        "InVideo AI subscription"
+      ]
+    },
+    "jasper-ai": {
+      "id": "jasper",
+      "name": "Jasper AI",
+      "slug": "jasper-ai",
+      "category": "AI Writing",
+      "category_url": "https://aitoolszone.tech/categories/ai-writing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/jasper-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "position": 4,
+          "name": "Jasper AI",
+          "url": "https://aitoolszone.tech/products/jasper-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Grammarly Premium",
+          "slug": "grammarly-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/grammarly-premium/"
+        },
+        {
+          "name": "QuillBot Premium",
+          "slug": "quillbot-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/quillbot-premium/"
+        },
+        {
+          "name": "WordAI",
+          "slug": "wordai-rewriter",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/wordai-rewriter/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Jasper AI Pakistan",
+        "buy Jasper AI in Pakistan",
+        "Jasper AI PKR price",
+        "Jasper AI subscription"
+      ]
+    },
+    "kling-ai-pro": {
+      "id": "kling",
+      "name": "Kling AI Pro",
+      "slug": "kling-ai-pro",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/kling-ai-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Kling AI Pro",
+          "url": "https://aitoolszone.tech/products/kling-ai-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "Kling AI Pro Pakistan",
+        "buy Kling AI Pro in Pakistan",
+        "Kling AI Pro PKR price",
+        "Kling AI Pro subscription"
+      ]
+    },
+    "make-integromat-pro": {
+      "id": "make",
+      "name": "Make (Integromat) Pro",
+      "slug": "make-integromat-pro",
+      "category": "Automation",
+      "category_url": "https://aitoolszone.tech/categories/automation/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/make-integromat-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Automation",
+          "url": "https://aitoolszone.tech/categories/automation/"
+        },
+        {
+          "position": 4,
+          "name": "Make (Integromat) Pro",
+          "url": "https://aitoolszone.tech/products/make-integromat-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Make (Integromat) Pro Pakistan",
+        "buy Make (Integromat) Pro in Pakistan",
+        "Make (Integromat) Pro PKR price",
+        "Make (Integromat) Pro subscription"
+      ]
+    },
+    "manus-ai": {
+      "id": "manus-ai",
+      "name": "Manus AI",
+      "slug": "manus-ai",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/manus-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Manus AI",
+          "url": "https://aitoolszone.tech/products/manus-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Manus AI Pakistan",
+        "buy Manus AI in Pakistan",
+        "Manus AI PKR price",
+        "Manus AI subscription"
+      ]
+    },
+    "midjourney-pro": {
+      "id": "midjourney",
+      "name": "Midjourney Pro",
+      "slug": "midjourney-pro",
+      "category": "AI Image Generation",
+      "category_url": "https://aitoolszone.tech/categories/ai-image-generation/",
+      "status": "REJECTED",
+      "canonical_url": null,
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Image Generation",
+          "url": "https://aitoolszone.tech/categories/ai-image-generation/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Ideogram AI Plus",
+          "slug": "ideogram-ai-plus",
+          "category": "AI Image Generation",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ideogram-ai-plus/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Midjourney Pro Pakistan",
+        "buy Midjourney Pro in Pakistan",
+        "Midjourney Pro PKR price",
+        "Midjourney Pro subscription"
+      ]
+    },
+    "morphic-ai": {
+      "id": "morphic",
+      "name": "Morphic AI",
+      "slug": "morphic-ai",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/morphic-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Morphic AI",
+          "url": "https://aitoolszone.tech/products/morphic-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Morphic AI Pakistan",
+        "buy Morphic AI in Pakistan",
+        "Morphic AI PKR price",
+        "Morphic AI subscription"
+      ]
+    },
+    "google-notebooklm-pro": {
+      "id": "notebooklm",
+      "name": "Google NotebookLM Pro",
+      "slug": "google-notebooklm-pro",
+      "category": "Research Tools",
+      "category_url": "https://aitoolszone.tech/categories/research-tools/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/google-notebooklm-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Research Tools",
+          "url": "https://aitoolszone.tech/categories/research-tools/"
+        },
+        {
+          "position": 4,
+          "name": "Google NotebookLM Pro",
+          "url": "https://aitoolszone.tech/products/google-notebooklm-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "TradingView Pro",
+          "slug": "tradingview-pro",
+          "category": "Research Tools",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/tradingview-pro/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Google NotebookLM Pro Pakistan",
+        "buy Google NotebookLM Pro in Pakistan",
+        "Google NotebookLM Pro PKR price",
+        "Google NotebookLM Pro subscription"
+      ]
+    },
+    "opus-clip-pro": {
+      "id": "opus-clip",
+      "name": "OpusClip Pro",
+      "slug": "opus-clip-pro",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/opus-clip-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "OpusClip Pro",
+          "url": "https://aitoolszone.tech/products/opus-clip-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "OpusClip Pro Pakistan",
+        "buy OpusClip Pro in Pakistan",
+        "OpusClip Pro PKR price",
+        "OpusClip Pro subscription"
+      ]
+    },
+    "playht-voice-ai": {
+      "id": "playht",
+      "name": "Play.ht",
+      "slug": "playht-voice-ai",
+      "category": "AI Voice",
+      "category_url": "https://aitoolszone.tech/categories/ai-voice/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/playht-voice-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        },
+        {
+          "position": 4,
+          "name": "Play.ht",
+          "url": "https://aitoolszone.tech/products/playht-voice-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ElevenLabs",
+          "slug": "elevenlabs",
+          "category": "AI Voice",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/elevenlabs.html"
+        },
+        {
+          "name": "Suno AI",
+          "slug": "suno-ai",
+          "category": "AI Voice",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/suno-ai/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Play.ht Pakistan",
+        "buy Play.ht in Pakistan",
+        "Play.ht PKR price",
+        "Play.ht subscription"
+      ]
+    },
+    "prime-video": {
+      "id": "prime-video",
+      "name": "Prime Video",
+      "slug": "prime-video",
+      "category": "Entertainment",
+      "category_url": "https://aitoolszone.tech/categories/entertainment/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/prime-video/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        },
+        {
+          "position": 4,
+          "name": "Prime Video",
+          "url": "https://aitoolszone.tech/products/prime-video/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "YouTube Premium",
+          "slug": "youtube-premium",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/youtube-premium.html"
+        },
+        {
+          "name": "Netflix Premium 4K",
+          "slug": "netflix-premium-4k",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/netflix-premium-4k.html"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Prime Video Pakistan",
+        "buy Prime Video in Pakistan",
+        "Prime Video PKR price",
+        "Prime Video subscription"
+      ]
+    },
+    "quizlet-plus": {
+      "id": "quizlet",
+      "name": "Quizlet Plus",
+      "slug": "quizlet-plus",
+      "category": "Education & Learning",
+      "category_url": "https://aitoolszone.tech/categories/education-learning/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/quizlet-plus/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Education & Learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "position": 4,
+          "name": "Quizlet Plus",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Coursera Plus",
+          "slug": "coursera-plus-premium",
+          "category": "Education & Learning",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        },
+        {
+          "name": "Skillshare Premium",
+          "slug": "skillshare-premium",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        },
+        {
+          "name": "Udemy Personal Plan",
+          "slug": "udemy-personal-plan",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Quizlet Plus Pakistan",
+        "buy Quizlet Plus in Pakistan",
+        "Quizlet Plus PKR price",
+        "Quizlet Plus subscription"
+      ]
+    },
+    "qwen-ai": {
+      "id": "qwen",
+      "name": "Qwen AI",
+      "slug": "qwen-ai",
+      "category": "AI Assistants",
+      "category_url": "https://aitoolszone.tech/categories/ai-assistants/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/qwen-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Assistants",
+          "url": "https://aitoolszone.tech/categories/ai-assistants/"
+        },
+        {
+          "position": 4,
+          "name": "Qwen AI",
+          "url": "https://aitoolszone.tech/products/qwen-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        },
+        {
+          "name": "Perplexity Pro",
+          "slug": "perplexity-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/perplexity-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Qwen AI Pakistan",
+        "buy Qwen AI in Pakistan",
+        "Qwen AI PKR price",
+        "Qwen AI subscription"
+      ]
+    },
+    "railway-pro": {
+      "id": "railway",
+      "name": "Railway Pro",
+      "slug": "railway-pro",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/railway-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Railway Pro",
+          "url": "https://aitoolszone.tech/products/railway-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Railway Pro Pakistan",
+        "buy Railway Pro in Pakistan",
+        "Railway Pro PKR price",
+        "Railway Pro subscription"
+      ]
+    },
+    "semrush-pro": {
+      "id": "semrush",
+      "name": "SEMrush Pro",
+      "slug": "semrush-pro",
+      "category": "SEO & Marketing",
+      "category_url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "status": "REJECTED",
+      "canonical_url": null,
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "SEO & Marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Ahrefs Starter",
+          "slug": "ahrefs-starter",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        },
+        {
+          "name": "Helium 10",
+          "slug": "helium-10",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        },
+        {
+          "name": "Success.ai Starter Leads",
+          "slug": "success-ai-leads",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        },
+        {
+          "name": "vidIQ Pro",
+          "slug": "vidiq-pro",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "SEMrush Pro Pakistan",
+        "buy SEMrush Pro in Pakistan",
+        "SEMrush Pro PKR price",
+        "SEMrush Pro subscription"
+      ]
+    },
+    "skillshare-premium": {
+      "id": "skillshare",
+      "name": "Skillshare Premium",
+      "slug": "skillshare-premium",
+      "category": "Education & Learning",
+      "category_url": "https://aitoolszone.tech/categories/education-learning/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/skillshare-premium/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Education & Learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "position": 4,
+          "name": "Skillshare Premium",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Coursera Plus",
+          "slug": "coursera-plus-premium",
+          "category": "Education & Learning",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        },
+        {
+          "name": "Quizlet Plus",
+          "slug": "quizlet-plus",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        },
+        {
+          "name": "Udemy Personal Plan",
+          "slug": "udemy-personal-plan",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Skillshare Premium Pakistan",
+        "buy Skillshare Premium in Pakistan",
+        "Skillshare Premium PKR price",
+        "Skillshare Premium subscription"
+      ]
+    },
+    "spotify-premium": {
+      "id": "spotify",
+      "name": "Spotify Premium",
+      "slug": "spotify-premium",
+      "category": "Entertainment",
+      "category_url": "https://aitoolszone.tech/categories/entertainment/",
+      "status": "REJECTED",
+      "canonical_url": null,
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Entertainment",
+          "url": "https://aitoolszone.tech/categories/entertainment/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "YouTube Premium",
+          "slug": "youtube-premium",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/youtube-premium.html"
+        },
+        {
+          "name": "Netflix Premium 4K",
+          "slug": "netflix-premium-4k",
+          "category": "Entertainment",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/netflix-premium-4k.html"
+        },
+        {
+          "name": "Prime Video",
+          "slug": "prime-video",
+          "category": "Entertainment",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/prime-video/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Spotify Premium Pakistan",
+        "buy Spotify Premium in Pakistan",
+        "Spotify Premium PKR price",
+        "Spotify Premium subscription"
+      ]
+    },
+    "storyblocks-unlimited": {
+      "id": "storyblocks",
+      "name": "Storyblocks Unlimited",
+      "slug": "storyblocks-unlimited",
+      "category": "AI Video",
+      "category_url": "https://aitoolszone.tech/categories/ai-video/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/storyblocks-unlimited/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Video",
+          "url": "https://aitoolszone.tech/categories/ai-video/"
+        },
+        {
+          "position": 4,
+          "name": "Storyblocks Unlimited",
+          "url": "https://aitoolszone.tech/products/storyblocks-unlimited/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Veo 3 Ultra",
+          "slug": "veo-3-ultra",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/veo-3-ultra.html"
+        },
+        {
+          "name": "CapCut Pro",
+          "slug": "capcut-pro",
+          "category": "AI Video",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/capcut-pro.html"
+        },
+        {
+          "name": "Runway ML Gen-3",
+          "slug": "runway-ml-gen-3",
+          "category": "AI Video",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/runway-ml-gen-3/"
+        },
+        {
+          "name": "DaVinci Resolve Studio",
+          "slug": "davinci-resolve-studio",
+          "category": "AI Video",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/davinci-resolve-studio/"
+        }
+      ],
+      "suggested_anchors": [
+        "Storyblocks Unlimited Pakistan",
+        "buy Storyblocks Unlimited in Pakistan",
+        "Storyblocks Unlimited PKR price",
+        "Storyblocks Unlimited subscription"
+      ]
+    },
+    "success-ai-leads": {
+      "id": "success-ai",
+      "name": "Success.ai Starter Leads",
+      "slug": "success-ai-leads",
+      "category": "SEO & Marketing",
+      "category_url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/success-ai-leads/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "SEO & Marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "position": 4,
+          "name": "Success.ai Starter Leads",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Ahrefs Starter",
+          "slug": "ahrefs-starter",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        },
+        {
+          "name": "Helium 10",
+          "slug": "helium-10",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        },
+        {
+          "name": "vidIQ Pro",
+          "slug": "vidiq-pro",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Success.ai Starter Leads Pakistan",
+        "buy Success.ai Starter Leads in Pakistan",
+        "Success.ai Starter Leads PKR price",
+        "Success.ai Starter Leads subscription"
+      ]
+    },
+    "suno-ai": {
+      "id": "suno",
+      "name": "Suno AI",
+      "slug": "suno-ai",
+      "category": "AI Voice",
+      "category_url": "https://aitoolszone.tech/categories/ai-voice/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/suno-ai/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Voice",
+          "url": "https://aitoolszone.tech/categories/ai-voice/"
+        },
+        {
+          "position": 4,
+          "name": "Suno AI",
+          "url": "https://aitoolszone.tech/products/suno-ai/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "ElevenLabs",
+          "slug": "elevenlabs",
+          "category": "AI Voice",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/elevenlabs.html"
+        },
+        {
+          "name": "Play.ht",
+          "slug": "playht-voice-ai",
+          "category": "AI Voice",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/playht-voice-ai/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Suno AI Pakistan",
+        "buy Suno AI in Pakistan",
+        "Suno AI PKR price",
+        "Suno AI subscription"
+      ]
+    },
+    "supabase-pro": {
+      "id": "supabase",
+      "name": "Supabase Pro",
+      "slug": "supabase-pro",
+      "category": "Development",
+      "category_url": "https://aitoolszone.tech/categories/development/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/supabase-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Development",
+          "url": "https://aitoolszone.tech/categories/development/"
+        },
+        {
+          "position": 4,
+          "name": "Supabase Pro",
+          "url": "https://aitoolszone.tech/products/supabase-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Lovable Pro",
+          "slug": "lovable-pro",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/lovable-pro.html"
+        },
+        {
+          "name": "Replit Core",
+          "slug": "replit-core",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/replit-core.html"
+        },
+        {
+          "name": "n8n Starter",
+          "slug": "n8n-starter",
+          "category": "Development",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/n8n-starter.html"
+        },
+        {
+          "name": "Cursor AI Pro",
+          "slug": "cursor-ai-pro",
+          "category": "Development",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/cursor-ai-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "Supabase Pro Pakistan",
+        "buy Supabase Pro in Pakistan",
+        "Supabase Pro PKR price",
+        "Supabase Pro subscription"
+      ]
+    },
+    "tradingview-pro": {
+      "id": "tradingview",
+      "name": "TradingView Pro",
+      "slug": "tradingview-pro",
+      "category": "Research Tools",
+      "category_url": "https://aitoolszone.tech/categories/research-tools/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/tradingview-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Research Tools",
+          "url": "https://aitoolszone.tech/categories/research-tools/"
+        },
+        {
+          "position": 4,
+          "name": "TradingView Pro",
+          "url": "https://aitoolszone.tech/products/tradingview-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Google NotebookLM Pro",
+          "slug": "google-notebooklm-pro",
+          "category": "Research Tools",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/google-notebooklm-pro/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        },
+        {
+          "name": "Claude Pro",
+          "slug": "claude-pro",
+          "category": "AI Assistants",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/claude-pro/"
+        }
+      ],
+      "suggested_anchors": [
+        "TradingView Pro Pakistan",
+        "buy TradingView Pro in Pakistan",
+        "TradingView Pro PKR price",
+        "TradingView Pro subscription"
+      ]
+    },
+    "turnitin-plagiarism-checker": {
+      "id": "turnitin",
+      "name": "Turnitin Student / Instructor",
+      "slug": "turnitin-plagiarism-checker",
+      "category": "Education & Learning",
+      "category_url": "https://aitoolszone.tech/categories/education-learning/",
+      "status": "REJECTED",
+      "canonical_url": null,
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Education & Learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Coursera Plus",
+          "slug": "coursera-plus-premium",
+          "category": "Education & Learning",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        },
+        {
+          "name": "Quizlet Plus",
+          "slug": "quizlet-plus",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        },
+        {
+          "name": "Skillshare Premium",
+          "slug": "skillshare-premium",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        },
+        {
+          "name": "Udemy Personal Plan",
+          "slug": "udemy-personal-plan",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        }
+      ],
+      "suggested_anchors": [
+        "Turnitin Student / Instructor Pakistan",
+        "buy Turnitin Student / Instructor in Pakistan",
+        "Turnitin Student / Instructor PKR price",
+        "Turnitin Student / Instructor subscription"
+      ]
+    },
+    "udemy-personal-plan": {
+      "id": "udemy-personal",
+      "name": "Udemy Personal Plan",
+      "slug": "udemy-personal-plan",
+      "category": "Education & Learning",
+      "category_url": "https://aitoolszone.tech/categories/education-learning/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/udemy-personal-plan/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "Education & Learning",
+          "url": "https://aitoolszone.tech/categories/education-learning/"
+        },
+        {
+          "position": 4,
+          "name": "Udemy Personal Plan",
+          "url": "https://aitoolszone.tech/products/udemy-personal-plan/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Coursera Plus",
+          "slug": "coursera-plus-premium",
+          "category": "Education & Learning",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/coursera-plus-premium/"
+        },
+        {
+          "name": "Quizlet Plus",
+          "slug": "quizlet-plus",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/quizlet-plus/"
+        },
+        {
+          "name": "Skillshare Premium",
+          "slug": "skillshare-premium",
+          "category": "Education & Learning",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/skillshare-premium/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Udemy Personal Plan Pakistan",
+        "buy Udemy Personal Plan in Pakistan",
+        "Udemy Personal Plan PKR price",
+        "Udemy Personal Plan subscription"
+      ]
+    },
+    "v0-by-vercel": {
+      "id": "v0",
+      "name": "v0 by Vercel",
+      "slug": "v0-by-vercel",
+      "category": "AI Coding",
+      "category_url": "https://aitoolszone.tech/categories/ai-coding/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/v0-by-vercel/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        },
+        {
+          "position": 4,
+          "name": "v0 by Vercel",
+          "url": "https://aitoolszone.tech/products/v0-by-vercel/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Bolt.new Pro",
+          "slug": "bolt-new-pro",
+          "category": "AI Coding",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/bolt-new-pro/"
+        },
+        {
+          "name": "Windsurf Editor",
+          "slug": "windsurf-editor",
+          "category": "AI Coding",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/windsurf-editor/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "v0 by Vercel Pakistan",
+        "buy v0 by Vercel in Pakistan",
+        "v0 by Vercel PKR price",
+        "v0 by Vercel subscription"
+      ]
+    },
+    "vidiq-pro": {
+      "id": "vidiq",
+      "name": "vidIQ Pro",
+      "slug": "vidiq-pro",
+      "category": "SEO & Marketing",
+      "category_url": "https://aitoolszone.tech/categories/seo-marketing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/vidiq-pro/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "SEO & Marketing",
+          "url": "https://aitoolszone.tech/categories/seo-marketing/"
+        },
+        {
+          "position": 4,
+          "name": "vidIQ Pro",
+          "url": "https://aitoolszone.tech/products/vidiq-pro/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Ahrefs Starter",
+          "slug": "ahrefs-starter",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/ahrefs-starter/"
+        },
+        {
+          "name": "Helium 10",
+          "slug": "helium-10",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/helium-10/"
+        },
+        {
+          "name": "Success.ai Starter Leads",
+          "slug": "success-ai-leads",
+          "category": "SEO & Marketing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/success-ai-leads/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "vidIQ Pro Pakistan",
+        "buy vidIQ Pro in Pakistan",
+        "vidIQ Pro PKR price",
+        "vidIQ Pro subscription"
+      ]
+    },
+    "windsurf-editor": {
+      "id": "windsurf",
+      "name": "Windsurf Editor",
+      "slug": "windsurf-editor",
+      "category": "AI Coding",
+      "category_url": "https://aitoolszone.tech/categories/ai-coding/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/windsurf-editor/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Coding",
+          "url": "https://aitoolszone.tech/categories/ai-coding/"
+        },
+        {
+          "position": 4,
+          "name": "Windsurf Editor",
+          "url": "https://aitoolszone.tech/products/windsurf-editor/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Bolt.new Pro",
+          "slug": "bolt-new-pro",
+          "category": "AI Coding",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/bolt-new-pro/"
+        },
+        {
+          "name": "v0 by Vercel",
+          "slug": "v0-by-vercel",
+          "category": "AI Coding",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/v0-by-vercel/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        },
+        {
+          "name": "Gemini Pro",
+          "slug": "gemini-pro",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/gemini-pro.html"
+        }
+      ],
+      "suggested_anchors": [
+        "Windsurf Editor Pakistan",
+        "buy Windsurf Editor in Pakistan",
+        "Windsurf Editor PKR price",
+        "Windsurf Editor subscription"
+      ]
+    },
+    "wordai-rewriter": {
+      "id": "wordai",
+      "name": "WordAI",
+      "slug": "wordai-rewriter",
+      "category": "AI Writing",
+      "category_url": "https://aitoolszone.tech/categories/ai-writing/",
+      "status": "COMING_SOON",
+      "canonical_url": "https://aitoolszone.tech/products/wordai-rewriter/",
+      "breadcrumbs": [
+        {
+          "position": 1,
+          "name": "Home",
+          "url": "https://aitoolszone.tech/"
+        },
+        {
+          "position": 2,
+          "name": "Categories",
+          "url": "https://aitoolszone.tech/categories/"
+        },
+        {
+          "position": 3,
+          "name": "AI Writing",
+          "url": "https://aitoolszone.tech/categories/ai-writing/"
+        },
+        {
+          "position": 4,
+          "name": "WordAI",
+          "url": "https://aitoolszone.tech/products/wordai-rewriter/"
+        }
+      ],
+      "related_products": [
+        {
+          "name": "Grammarly Premium",
+          "slug": "grammarly-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/grammarly-premium/"
+        },
+        {
+          "name": "QuillBot Premium",
+          "slug": "quillbot-premium",
+          "category": "AI Writing",
+          "status": "ENQUIRE",
+          "url": "https://aitoolszone.tech/products/quillbot-premium/"
+        },
+        {
+          "name": "Jasper AI",
+          "slug": "jasper-ai",
+          "category": "AI Writing",
+          "status": "COMING_SOON",
+          "url": "https://aitoolszone.tech/products/jasper-ai/"
+        },
+        {
+          "name": "ChatGPT Plus",
+          "slug": "chatgpt-plus",
+          "category": "AI Assistants",
+          "status": "AVAILABLE",
+          "url": "https://aitoolszone.tech/products/chatgpt-plus.html"
+        }
+      ],
+      "suggested_anchors": [
+        "WordAI Pakistan",
+        "buy WordAI in Pakistan",
+        "WordAI PKR price",
+        "WordAI subscription"
+      ]
+    }
+  }
+}
