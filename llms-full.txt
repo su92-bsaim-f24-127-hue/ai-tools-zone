@@ -44,7 +44,7 @@
 - **Best For**: Video, Ads, Creators
 - **Description**: Seller-listed access to Google's Veo video-generation service. Confirm the available plan, model, resolution, audio features and account terms before ordering.
 - **Included Features**: Confirm the available model and access tier before payment; Generation uses the current plan's credit and usage limits; Confirm resolution and audio features for this offer; Ask the seller to confirm the included allowance
-- **Official Vendor**: https://deepmind.google/models/veo/
+- **Official Vendor**: https://deepmind.google/technologies/veo/
 
 ### Leonardo AI Essential
 - **URL**: https://aitoolszone.tech/products/leonardo-ai-essential/
@@ -187,7 +187,7 @@
 - **Best For**: Docs, Projects, Teams
 - **Description**: All-in-one connected workspace for team knowledge, project boards, and AI summaries.
 - **Included Features**: Unlimited team blocks; Integrated Notion AI assistant; Advanced team permissions; Custom database views
-- **Official Vendor**: https://www.notion.com/
+- **Official Vendor**: https://www.notion.so/
 
 ### NordVPN
 - **URL**: https://aitoolszone.tech/products/nordvpn/
@@ -265,7 +265,7 @@
 - **Best For**: PC, Work, Security
 - **Description**: Official retail digital license key for permanent Windows 11 Pro activation.
 - **Included Features**: 100% genuine retail key; BitLocker drive encryption; Remote Desktop Host; Direct Microsoft online activation
-- **Official Vendor**: https://www.microsoft.com/en-us/windows/
+- **Official Vendor**: https://www.microsoft.com/windows
 
 ### Cursor AI Pro
 - **URL**: https://aitoolszone.tech/products/cursor-ai-pro/
