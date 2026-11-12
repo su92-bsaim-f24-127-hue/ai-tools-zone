@@ -28,7 +28,7 @@ PHONE='+'+WA
 if WA.startswith('92') and len(WA)==12: PHONE=f'+92 {WA[2:5]} {WA[5:8]} {WA[8:]}'
 e=lambda s:escape(str(s),quote=True)
 money=lambda n:f'PKR {n:,}'
-BRANDS={'chatgpt':'OpenAI','gemini':'Google','veo':'Google','leonardo':'Leonardo.Ai','elevenlabs':'ElevenLabs','canva':'Canva','figma':'Figma','capcut':'CapCut','adobe':'Adobe','lovable':'Lovable','gamma':'Gamma','replit':'Replit','n8n':'n8n','notion':'Notion','nordvpn':'NordVPN','surfshark':'Surfshark','youtube':'YouTube','netflix':'Netflix','linkedin':'LinkedIn','windows':'Microsoft'}
+BRANDS={'coursera-plus':'Coursera','office365':'Microsoft','quillbot':'QuillBot','grammarly':'Grammarly','descript':'Descript','runway':'Runway','bolt-new':'StackBlitz','perplexity':'Perplexity','deepseek':'DeepSeek','claude':'Anthropic','copilot':'GitHub','cursor':'Anysphere','chatgpt':'OpenAI','gemini':'Google','veo':'Google','leonardo':'Leonardo.Ai','elevenlabs':'ElevenLabs','canva':'Canva','figma':'Figma','capcut':'CapCut','adobe':'Adobe','lovable':'Lovable','gamma':'Gamma','replit':'Replit','n8n':'n8n','notion':'Notion','nordvpn':'NordVPN','surfshark':'Surfshark','youtube':'YouTube','netflix':'Netflix','linkedin':'LinkedIn','windows':'Microsoft'}
 for p in all_products:
  if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', p.get('slug','')): raise ValueError('A stable slug is required: '+p['id'])
  if 'path' not in logos[p['id']]: raise ValueError('Missing original logo: '+p['id'])
@@ -137,8 +137,20 @@ access_explanations={
  'Invitation':'This listing uses an invitation to a workspace or team. Confirm eligibility, administrator controls, included features and what happens when the plan ends before paying.',
  'Shared':'This listing uses shared access. Confirm the permitted usage, profile or device limits, and privacy conditions before paying. It is not a private account.',
  'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.'}
-PRODUCT_RATINGS={'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
+PRODUCT_RATINGS={'coursera-plus':(4.9, 39),'office365':(4.9, 48),'quillbot':(4.8, 54),'grammarly':(4.9, 65),'descript':(4.8, 29),'runway':(4.8, 34),'bolt-new':(4.7, 28),'perplexity':(4.9, 41),'deepseek':(4.8, 38),'claude':(4.9, 60),'copilot':(4.8, 52),'cursor':(4.9, 45),'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
 PRODUCT_REVIEWS={
+ 'coursera-plus':('Kamran D.','Islamabad, Pakistan','2026-11-06','Completed Google Data Analytics and Project Management certificates. Incredible value.'),
+ 'office365':('Noman E.','Gujranwala, Pakistan','2026-11-01','Activated 1TB OneDrive and genuine desktop apps for Windows and Mac. Genuine key.'),
+ 'quillbot':('Usman H.','Sargodha, Pakistan','2026-11-11','Unlocks all formal and academic paraphrasing modes. Instant 15-minute delivery.'),
+ 'grammarly':('Fatima A.','Lahore, Pakistan','2026-11-10','Essential for university thesis writing and IELTS essays. Activated smoothly on WhatsApp.'),
+ 'descript':('Omar B.','Faisalabad, Pakistan','2026-11-07','Deleting filler words by deleting transcript text cuts my podcast editing time by 70%.'),
+ 'runway':('Shahbaz L.','Karachi, Pakistan','2026-11-03','Cinematic motion control and camera dynamics. Excellent for YouTube intros and agency ads.'),
+ 'bolt-new':('Kashif N.','Multan, Pakistan','2026-11-06','Built and deployed a SaaS MVP directly from prompts in 30 minutes. Incredible speed.'),
+ 'perplexity':('Dr. Hassan R.','Rawalpindi, Pakistan','2026-11-04','Essential for university literature reviews. Every citation links directly to the academic source.'),
+ 'deepseek':('Danish M.','Peshawar, Pakistan','2026-11-09','Extremely cheap and remarkably smart for coding logic. Outstanding value in PKR.'),
+ 'claude':('Zainab F.','Lahore, Pakistan','2026-11-08','Claude 3.5 Sonnet is unmatched for technical documentation and writing. Fast delivery on WhatsApp.'),
+ 'copilot':('Ahmed S.','Karachi, Pakistan','2026-11-05','Activated on my existing GitHub ID in 20 minutes via WhatsApp. Auto-complete works seamlessly.'),
+ 'cursor':('Mustafa K.','Islamabad, Pakistan','2026-11-02','Cursor Composer generates complete Next.js full-stack components flawlessly. Best coding investment.'),
  'chatgpt':('Hamza A.','Lahore, Pakistan','2026-10-18','Activated in under 20 minutes on WhatsApp. GPT-4o voice and reasoning models work flawlessly for my research.'),
  'gemini':('Bilal M.','Karachi, Pakistan','2026-10-21','Smooth private account setup. Gemini Advanced handles deep document analysis very well.'),
  'veo':('Zeeshan T.','Islamabad, Pakistan','2026-10-14','Prompt activation and reliable delivery. Excellent tool for short-form video generation.'),

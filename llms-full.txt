@@ -5,7 +5,7 @@
 > Customer Support: WhatsApp +923430173923
 > Accepted Payment Methods: JazzCash, Easypaisa, Bank Transfer (arranged in chat)
 
-## Product Catalog (20 Seller-Listed Offers in PKR)
+## Product Catalog (32 Seller-Listed Offers in PKR)
 
 ### ChatGPT Plus
 - **URL**: https://aitoolszone.tech/products/chatgpt-plus/
@@ -266,4 +266,160 @@
 - **Description**: Official retail digital license key for permanent Windows 11 Pro activation.
 - **Included Features**: 100% genuine retail key; BitLocker drive encryption; Remote Desktop Host; Direct Microsoft online activation
 - **Official Vendor**: https://www.microsoft.com/en-us/windows/
+
+### Cursor AI Pro
+- **URL**: https://aitoolszone.tech/products/cursor-ai-pro/
+- **Category**: Development
+- **Current seller-listed price**: PKR 2,800
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Coding, Development, Software
+- **Description**: AI-native code editor with Claude 3.5 Sonnet, multi-file codebase indexing, and Composer agentic coding.
+- **Included Features**: Claude 3.5 Sonnet & GPT-4o; Multi-file codebase indexing; Composer agentic workflow; Terminal debugging
+- **Official Vendor**: https://cursor.com/
+
+### GitHub Copilot
+- **URL**: https://aitoolszone.tech/products/github-copilot/
+- **Category**: Development
+- **Current seller-listed price**: PKR 2,500
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Coding, VS Code, Developers
+- **Description**: AI pair programmer directly in VS Code, JetBrains, and Visual Studio with real-time autocompletions and chat.
+- **Included Features**: Ghost text autocomplete; Copilot Chat in editor; Unit test generation; Multi-language support
+- **Official Vendor**: https://github.com/features/copilot
+
+### Claude Pro
+- **URL**: https://aitoolszone.tech/products/claude-pro/
+- **Category**: AI Assistants
+- **Current seller-listed price**: PKR 2,200
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Writing, Coding, Research
+- **Description**: Anthropic's premier AI assistant powered by Claude 3.5 Sonnet and Haiku with Projects, Artifacts, and 200k context.
+- **Included Features**: Claude 3.5 Sonnet & Opus; 200k context window; Artifacts live preview; Claude Projects workspace
+- **Official Vendor**: https://claude.ai/
+
+### DeepSeek Unlimited
+- **URL**: https://aitoolszone.tech/products/deepseek-unlimited/
+- **Category**: AI Assistants
+- **Current seller-listed price**: PKR 1,100
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Coding, Math, Reasoning
+- **Description**: High-speed reasoning and mathematical coding engine powered by DeepSeek-V3 and R1 architectures.
+- **Included Features**: DeepSeek-V3 & R1 models; Unlimited chat sessions; Advanced logic & reasoning; Fast API throughput
+- **Official Vendor**: https://deepseek.com/
+
+### Perplexity Pro
+- **URL**: https://aitoolszone.tech/products/perplexity-pro/
+- **Category**: AI Assistants
+- **Current seller-listed price**: PKR 1,400
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Research, Search, Citations
+- **Description**: Conversational AI answer engine delivering real-time web citations, multi-model selection, and file uploads.
+- **Included Features**: Live web search citations; Claude 3.5 Sonnet & GPT-4o choice; Unlimited Pro searches; File analysis & Pages
+- **Official Vendor**: https://perplexity.ai/
+
+### Bolt.new Pro
+- **URL**: https://aitoolszone.tech/products/bolt-new-pro/
+- **Category**: Development
+- **Current seller-listed price**: PKR 5,600
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: App Building, Frontend, Prototyping
+- **Description**: In-browser AI full-stack development environment capable of building, running, and deploying web applications.
+- **Included Features**: Full-stack container in browser; One-click Netlify deployment; Real-time Node.js execution; Prompt-to-app generator
+- **Official Vendor**: https://bolt.new/
+
+### Runway ML Gen-3
+- **URL**: https://aitoolszone.tech/products/runway-ml-gen-3/
+- **Category**: AI Video
+- **Current seller-listed price**: PKR 3,500
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Video Generation, VFX, Filmmakers
+- **Description**: Next-generation generative video platform for filmmakers, creators, and VFX artists powered by Gen-3 Alpha.
+- **Included Features**: Gen-3 Alpha photorealistic video; Motion Brush control; Camera motion director; High-res 4K upscaling
+- **Official Vendor**: https://runwayml.com/
+
+### Descript Creator
+- **URL**: https://aitoolszone.tech/products/descript-creator/
+- **Category**: AI Video
+- **Current seller-listed price**: PKR 5,320
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Podcasting, Transcription, Video Editing
+- **Description**: All-in-one AI audio and video editor with text-based timeline editing, studio sound removal, and AI voice cloning.
+- **Included Features**: Edit video by editing text; Studio Sound background removal; Automatic filler word removal; AI speech overdub
+- **Official Vendor**: https://descript.com/
+
+### Grammarly Premium
+- **URL**: https://aitoolszone.tech/products/grammarly-premium/
+- **Category**: Productivity
+- **Current seller-listed price**: PKR 750
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Grammar, Academic Writing, Proofreading
+- **Description**: Comprehensive writing assistant providing real-time grammar checking, clarity rewrites, tone adjustments, and plagiarism scanning.
+- **Included Features**: Advanced sentence rewrites; Plagiarism checker; Tone adjustment; Vocabulary enhancement
+- **Official Vendor**: https://grammarly.com/
+
+### QuillBot Premium
+- **URL**: https://aitoolszone.tech/products/quillbot-premium/
+- **Category**: Productivity
+- **Current seller-listed price**: PKR 450
+- **Duration / Allowance**: 1 Month
+- **Access Type**: Private
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Paraphrasing, Summarizing, Students
+- **Description**: AI-powered paraphrasing tool, summarizer, grammar checker, and citation generator tailored for researchers.
+- **Included Features**: Unlimited paraphrasing modes; Freeze words technology; Instant article summarizer; Citation generator
+- **Official Vendor**: https://quillbot.com/
+
+### Microsoft Office 365
+- **URL**: https://aitoolszone.tech/products/microsoft-office-365/
+- **Category**: Software
+- **Current seller-listed price**: PKR 2,200
+- **Duration / Allowance**: 1 Year
+- **Access Type**: License Key
+- **Delivery Estimate**: 15–30 min
+- **Replacement Warranty**: 7 Days
+- **Best For**: Word, Excel, Productivity
+- **Description**: Complete Microsoft productivity suite including Word, Excel, PowerPoint, Outlook, and 1TB OneDrive cloud storage.
+- **Included Features**: Word, Excel, PowerPoint, Outlook; 1TB OneDrive cloud storage; Install on up to 5 devices; Always latest updates
+- **Official Vendor**: https://microsoft.com/microsoft-365
+
+### Coursera Plus
+- **URL**: https://aitoolszone.tech/products/coursera-plus-premium/
+- **Category**: Business
+- **Current seller-listed price**: PKR 7,000
+- **Duration / Allowance**: 1 Year
+- **Access Type**: Invitation
+- **Delivery Estimate**: 30–60 min
+- **Replacement Warranty**: 30 Days
+- **Best For**: Certification, Online Learning, Students
+- **Description**: Unlimited access to over 7,000 online courses, professional certificates, and degrees from Google, IBM, and top universities.
+- **Included Features**: Unlimited verified certificates; Courses from Google, IBM, Meta; Applied hands-on projects; Earn shareable LinkedIn credentials
+- **Official Vendor**: https://coursera.org/
 

@@ -6,7 +6,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 
 ## Key Store Sections
 
-- [Current offers](https://aitoolszone.tech/products/): 20 currently active catalog listings.
+- [Current offers](https://aitoolszone.tech/products/): 32 currently active catalog listings.
 - [PKR pricing](https://aitoolszone.tech/pricing/): Compare listed offers and plan terms.
 - [Compare tools](https://aitoolszone.tech/compare/): Read workflow comparisons and selection notes.
 - [Categories](https://aitoolszone.tech/categories/): Browse offers by category.
@@ -37,7 +37,19 @@ Compare current listings by price, duration and access type. Confirm availabilit
 - [Netflix Premium 4K](https://aitoolszone.tech/products/netflix-premium-4k/): Entertainment; PKR 400; 1 Month; Shared access. Confirm current terms before ordering.
 - [LinkedIn Premium](https://aitoolszone.tech/products/linkedin-premium/): Business; PKR 1,500; 2 Months; Invitation access. Confirm current terms before ordering.
 - [Windows 11 Pro Key](https://aitoolszone.tech/products/windows-11-pro-key/): Software; PKR 1,900; Lifetime; License Key access. Confirm current terms before ordering.
+- [Cursor AI Pro](https://aitoolszone.tech/products/cursor-ai-pro/): Development; PKR 2,800; 1 Month; Private access. Confirm current terms before ordering.
+- [GitHub Copilot](https://aitoolszone.tech/products/github-copilot/): Development; PKR 2,500; 1 Month; Private access. Confirm current terms before ordering.
+- [Claude Pro](https://aitoolszone.tech/products/claude-pro/): AI Assistants; PKR 2,200; 1 Month; Private access. Confirm current terms before ordering.
+- [DeepSeek Unlimited](https://aitoolszone.tech/products/deepseek-unlimited/): AI Assistants; PKR 1,100; 1 Month; Private access. Confirm current terms before ordering.
+- [Perplexity Pro](https://aitoolszone.tech/products/perplexity-pro/): AI Assistants; PKR 1,400; 1 Month; Private access. Confirm current terms before ordering.
+- [Bolt.new Pro](https://aitoolszone.tech/products/bolt-new-pro/): Development; PKR 5,600; 1 Month; Private access. Confirm current terms before ordering.
+- [Runway ML Gen-3](https://aitoolszone.tech/products/runway-ml-gen-3/): AI Video; PKR 3,500; 1 Month; Private access. Confirm current terms before ordering.
+- [Descript Creator](https://aitoolszone.tech/products/descript-creator/): AI Video; PKR 5,320; 1 Month; Private access. Confirm current terms before ordering.
+- [Grammarly Premium](https://aitoolszone.tech/products/grammarly-premium/): Productivity; PKR 750; 1 Month; Private access. Confirm current terms before ordering.
+- [QuillBot Premium](https://aitoolszone.tech/products/quillbot-premium/): Productivity; PKR 450; 1 Month; Private access. Confirm current terms before ordering.
+- [Microsoft Office 365](https://aitoolszone.tech/products/microsoft-office-365/): Software; PKR 2,200; 1 Year; License Key access. Confirm current terms before ordering.
+- [Coursera Plus](https://aitoolszone.tech/products/coursera-plus-premium/): Business; PKR 7,000; 1 Year; Invitation access. Confirm current terms before ordering.
 
 ## Full catalog manifest
 
-- [Full catalog and offer specifications](https://aitoolszone.tech/llms-full.txt): details for 20 current listings.
+- [Full catalog and offer specifications](https://aitoolszone.tech/llms-full.txt): details for 32 current listings.

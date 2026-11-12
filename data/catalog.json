@@ -651,5 +651,409 @@
       "business"
     ],
     "slug": "windows-11-pro-key"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor AI Pro",
+    "brand": "Anysphere",
+    "category": "Development",
+    "description": "AI-native code editor with Claude 3.5 Sonnet, multi-file codebase indexing, and Composer agentic coding.",
+    "price": 2800,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Top Developer Pick",
+    "bestFor": [
+      "Coding",
+      "Development",
+      "Software"
+    ],
+    "features": [
+      "Claude 3.5 Sonnet & GPT-4o",
+      "Multi-file codebase indexing",
+      "Composer agentic workflow",
+      "Terminal debugging"
+    ],
+    "intent": [
+      "cursor",
+      "cursor ai",
+      "coding",
+      "code editor",
+      "developer",
+      "ide",
+      "vscode"
+    ],
+    "slug": "cursor-ai-pro"
+  },
+  {
+    "id": "copilot",
+    "name": "GitHub Copilot",
+    "brand": "GitHub",
+    "category": "Development",
+    "description": "AI pair programmer directly in VS Code, JetBrains, and Visual Studio with real-time autocompletions and chat.",
+    "price": 2500,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Industry Standard",
+    "bestFor": [
+      "Coding",
+      "VS Code",
+      "Developers"
+    ],
+    "features": [
+      "Ghost text autocomplete",
+      "Copilot Chat in editor",
+      "Unit test generation",
+      "Multi-language support"
+    ],
+    "intent": [
+      "github copilot",
+      "copilot",
+      "vscode",
+      "coding",
+      "developer",
+      "pair programmer"
+    ],
+    "slug": "github-copilot"
+  },
+  {
+    "id": "claude",
+    "name": "Claude Pro",
+    "brand": "Anthropic",
+    "category": "AI Assistants",
+    "description": "Anthropic's premier AI assistant powered by Claude 3.5 Sonnet and Haiku with Projects, Artifacts, and 200k context.",
+    "price": 2200,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Top Writing & Code",
+    "bestFor": [
+      "Writing",
+      "Coding",
+      "Research"
+    ],
+    "features": [
+      "Claude 3.5 Sonnet & Opus",
+      "200k context window",
+      "Artifacts live preview",
+      "Claude Projects workspace"
+    ],
+    "intent": [
+      "claude",
+      "claude pro",
+      "anthropic",
+      "sonnet",
+      "ai assistant",
+      "writing",
+      "coding"
+    ],
+    "slug": "claude-pro"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek Unlimited",
+    "brand": "DeepSeek",
+    "category": "AI Assistants",
+    "description": "High-speed reasoning and mathematical coding engine powered by DeepSeek-V3 and R1 architectures.",
+    "price": 1100,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Value Pick",
+    "bestFor": [
+      "Coding",
+      "Math",
+      "Reasoning"
+    ],
+    "features": [
+      "DeepSeek-V3 & R1 models",
+      "Unlimited chat sessions",
+      "Advanced logic & reasoning",
+      "Fast API throughput"
+    ],
+    "intent": [
+      "deepseek",
+      "deepseek r1",
+      "deepseek v3",
+      "math",
+      "reasoning",
+      "coding",
+      "cheap ai"
+    ],
+    "slug": "deepseek-unlimited"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity Pro",
+    "brand": "Perplexity",
+    "category": "AI Assistants",
+    "description": "Conversational AI answer engine delivering real-time web citations, multi-model selection, and file uploads.",
+    "price": 1400,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Best for Research",
+    "bestFor": [
+      "Research",
+      "Search",
+      "Citations"
+    ],
+    "features": [
+      "Live web search citations",
+      "Claude 3.5 Sonnet & GPT-4o choice",
+      "Unlimited Pro searches",
+      "File analysis & Pages"
+    ],
+    "intent": [
+      "perplexity",
+      "perplexity pro",
+      "research",
+      "search",
+      "citations",
+      "academic",
+      "study"
+    ],
+    "slug": "perplexity-pro"
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new Pro",
+    "brand": "StackBlitz",
+    "category": "Development",
+    "description": "In-browser AI full-stack development environment capable of building, running, and deploying web applications.",
+    "price": 5600,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Full-Stack AI",
+    "bestFor": [
+      "App Building",
+      "Frontend",
+      "Prototyping"
+    ],
+    "features": [
+      "Full-stack container in browser",
+      "One-click Netlify deployment",
+      "Real-time Node.js execution",
+      "Prompt-to-app generator"
+    ],
+    "intent": [
+      "bolt",
+      "bolt.new",
+      "app builder",
+      "full stack",
+      "prototyping",
+      "web dev"
+    ],
+    "slug": "bolt-new-pro"
+  },
+  {
+    "id": "runway",
+    "name": "Runway ML Gen-3",
+    "brand": "Runway",
+    "category": "AI Video",
+    "description": "Next-generation generative video platform for filmmakers, creators, and VFX artists powered by Gen-3 Alpha.",
+    "price": 3500,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Cinematic Video",
+    "bestFor": [
+      "Video Generation",
+      "VFX",
+      "Filmmakers"
+    ],
+    "features": [
+      "Gen-3 Alpha photorealistic video",
+      "Motion Brush control",
+      "Camera motion director",
+      "High-res 4K upscaling"
+    ],
+    "intent": [
+      "runway",
+      "gen-3",
+      "runway ml",
+      "video generator",
+      "vfx",
+      "ai video",
+      "cinematic"
+    ],
+    "slug": "runway-ml-gen-3"
+  },
+  {
+    "id": "descript",
+    "name": "Descript Creator",
+    "brand": "Descript",
+    "category": "AI Video",
+    "description": "All-in-one AI audio and video editor with text-based timeline editing, studio sound removal, and AI voice cloning.",
+    "price": 5320,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Podcasters Choice",
+    "bestFor": [
+      "Podcasting",
+      "Transcription",
+      "Video Editing"
+    ],
+    "features": [
+      "Edit video by editing text",
+      "Studio Sound background removal",
+      "Automatic filler word removal",
+      "AI speech overdub"
+    ],
+    "intent": [
+      "descript",
+      "video editor",
+      "podcasting",
+      "transcription",
+      "studio sound",
+      "audio editing"
+    ],
+    "slug": "descript-creator"
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly Premium",
+    "brand": "Grammarly",
+    "category": "Productivity",
+    "description": "Comprehensive writing assistant providing real-time grammar checking, clarity rewrites, tone adjustments, and plagiarism scanning.",
+    "price": 750,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Student Essential",
+    "bestFor": [
+      "Grammar",
+      "Academic Writing",
+      "Proofreading"
+    ],
+    "features": [
+      "Advanced sentence rewrites",
+      "Plagiarism checker",
+      "Tone adjustment",
+      "Vocabulary enhancement"
+    ],
+    "intent": [
+      "grammarly",
+      "grammarly premium",
+      "grammar",
+      "plagiarism",
+      "writing",
+      "thesis",
+      "ielts"
+    ],
+    "slug": "grammarly-premium"
+  },
+  {
+    "id": "quillbot",
+    "name": "QuillBot Premium",
+    "brand": "QuillBot",
+    "category": "Productivity",
+    "description": "AI-powered paraphrasing tool, summarizer, grammar checker, and citation generator tailored for researchers.",
+    "price": 450,
+    "duration": "1 Month",
+    "access": "Private",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Thesis Helper",
+    "bestFor": [
+      "Paraphrasing",
+      "Summarizing",
+      "Students"
+    ],
+    "features": [
+      "Unlimited paraphrasing modes",
+      "Freeze words technology",
+      "Instant article summarizer",
+      "Citation generator"
+    ],
+    "intent": [
+      "quillbot",
+      "quillbot premium",
+      "paraphrase",
+      "rephrase",
+      "summarizer",
+      "thesis",
+      "students"
+    ],
+    "slug": "quillbot-premium"
+  },
+  {
+    "id": "office365",
+    "name": "Microsoft Office 365",
+    "brand": "Microsoft",
+    "category": "Software",
+    "description": "Complete Microsoft productivity suite including Word, Excel, PowerPoint, Outlook, and 1TB OneDrive cloud storage.",
+    "price": 2200,
+    "duration": "1 Year",
+    "access": "License Key",
+    "delivery": "15–30 min",
+    "warranty": "7 Days",
+    "badge": "Workplace Essential",
+    "bestFor": [
+      "Word",
+      "Excel",
+      "Productivity"
+    ],
+    "features": [
+      "Word, Excel, PowerPoint, Outlook",
+      "1TB OneDrive cloud storage",
+      "Install on up to 5 devices",
+      "Always latest updates"
+    ],
+    "intent": [
+      "office 365",
+      "microsoft office",
+      "word",
+      "excel",
+      "onedrive",
+      "office key",
+      "license"
+    ],
+    "slug": "microsoft-office-365"
+  },
+  {
+    "id": "coursera-plus",
+    "name": "Coursera Plus",
+    "brand": "Coursera",
+    "category": "Business",
+    "description": "Unlimited access to over 7,000 online courses, professional certificates, and degrees from Google, IBM, and top universities.",
+    "price": 7000,
+    "duration": "1 Year",
+    "access": "Invitation",
+    "delivery": "30–60 min",
+    "warranty": "30 Days",
+    "badge": "Career Accelerator",
+    "bestFor": [
+      "Certification",
+      "Online Learning",
+      "Students"
+    ],
+    "features": [
+      "Unlimited verified certificates",
+      "Courses from Google, IBM, Meta",
+      "Applied hands-on projects",
+      "Earn shareable LinkedIn credentials"
+    ],
+    "intent": [
+      "coursera",
+      "coursera plus",
+      "certifications",
+      "online courses",
+      "learning",
+      "google certificate"
+    ],
+    "slug": "coursera-plus-premium"
   }
 ]

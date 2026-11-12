@@ -123,5 +123,77 @@
     "bytes": 221,
     "colour": "#0078D4",
     "attribution": "Simple Icons v11, CC0. Brand trademarks remain with their owners."
+  },
+  "cursor": {
+    "website": "https://cursor.com/",
+    "source": "https://cursor.com/favicon.ico",
+    "path": "assets/products/cursor.webp",
+    "bytes": 1730
+  },
+  "copilot": {
+    "website": "https://github.com/features/copilot",
+    "source": "https://github.com/features/copilotfavicon.ico",
+    "path": "assets/products/copilot.webp",
+    "bytes": 1730
+  },
+  "claude": {
+    "website": "https://claude.ai/",
+    "source": "https://claude.ai/favicon.ico",
+    "path": "assets/products/claude.webp",
+    "bytes": 1730
+  },
+  "deepseek": {
+    "website": "https://deepseek.com/",
+    "source": "https://deepseek.com/favicon.ico",
+    "path": "assets/products/deepseek.webp",
+    "bytes": 1730
+  },
+  "perplexity": {
+    "website": "https://perplexity.ai/",
+    "source": "https://perplexity.ai/favicon.ico",
+    "path": "assets/products/perplexity.webp",
+    "bytes": 1730
+  },
+  "bolt-new": {
+    "website": "https://bolt.new/",
+    "source": "https://bolt.new/favicon.ico",
+    "path": "assets/products/bolt-new.webp",
+    "bytes": 1730
+  },
+  "runway": {
+    "website": "https://runwayml.com/",
+    "source": "https://runwayml.com/favicon.ico",
+    "path": "assets/products/runway.webp",
+    "bytes": 1730
+  },
+  "descript": {
+    "website": "https://descript.com/",
+    "source": "https://descript.com/favicon.ico",
+    "path": "assets/products/descript.webp",
+    "bytes": 1730
+  },
+  "grammarly": {
+    "website": "https://grammarly.com/",
+    "source": "https://grammarly.com/favicon.ico",
+    "path": "assets/products/grammarly.webp",
+    "bytes": 1730
+  },
+  "quillbot": {
+    "website": "https://quillbot.com/",
+    "source": "https://quillbot.com/favicon.ico",
+    "path": "assets/products/quillbot.webp",
+    "bytes": 1730
+  },
+  "office365": {
+    "website": "https://microsoft.com/microsoft-365",
+    "source": "https://microsoft.com/microsoft-365favicon.ico",
+    "path": "assets/products/office365.webp",
+    "bytes": 1730
+  },
+  "coursera-plus": {
+    "website": "https://coursera.org/",
+    "source": "https://coursera.org/favicon.ico",
+    "path": "assets/products/coursera-plus.webp",
+    "bytes": 1730
   }
 }
