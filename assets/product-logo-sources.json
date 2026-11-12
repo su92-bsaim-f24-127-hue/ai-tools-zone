@@ -126,74 +126,74 @@
   },
   "cursor": {
     "website": "https://cursor.com/",
-    "source": "https://cursor.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cursor.com&size=128",
     "path": "assets/products/cursor.webp",
-    "bytes": 1730
+    "bytes": 1724
   },
   "copilot": {
     "website": "https://github.com/features/copilot",
-    "source": "https://github.com/features/copilotfavicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://github.com/features/copilot&size=128",
     "path": "assets/products/copilot.webp",
-    "bytes": 1730
+    "bytes": 1402
   },
   "claude": {
     "website": "https://claude.ai/",
-    "source": "https://claude.ai/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://claude.ai&size=128",
     "path": "assets/products/claude.webp",
-    "bytes": 1730
+    "bytes": 1686
   },
   "deepseek": {
     "website": "https://deepseek.com/",
-    "source": "https://deepseek.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://deepseek.com&size=128",
     "path": "assets/products/deepseek.webp",
-    "bytes": 1730
+    "bytes": 3204
   },
   "perplexity": {
     "website": "https://perplexity.ai/",
-    "source": "https://perplexity.ai/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://perplexity.ai&size=128",
     "path": "assets/products/perplexity.webp",
-    "bytes": 1730
+    "bytes": 1504
   },
   "bolt-new": {
     "website": "https://bolt.new/",
-    "source": "https://bolt.new/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bolt.new&size=128",
     "path": "assets/products/bolt-new.webp",
-    "bytes": 1730
+    "bytes": 772
   },
   "runway": {
     "website": "https://runwayml.com/",
-    "source": "https://runwayml.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runwayml.com&size=128",
     "path": "assets/products/runway.webp",
-    "bytes": 1730
+    "bytes": 1090
   },
   "descript": {
     "website": "https://descript.com/",
-    "source": "https://descript.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://descript.com&size=128",
     "path": "assets/products/descript.webp",
-    "bytes": 1730
+    "bytes": 1158
   },
   "grammarly": {
     "website": "https://grammarly.com/",
-    "source": "https://grammarly.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://grammarly.com&size=128",
     "path": "assets/products/grammarly.webp",
-    "bytes": 1730
+    "bytes": 2336
   },
   "quillbot": {
     "website": "https://quillbot.com/",
-    "source": "https://quillbot.com/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://quillbot.com&size=128",
     "path": "assets/products/quillbot.webp",
-    "bytes": 1730
+    "bytes": 1512
   },
   "office365": {
     "website": "https://microsoft.com/microsoft-365",
-    "source": "https://microsoft.com/microsoft-365favicon.ico",
-    "path": "assets/products/office365.webp",
-    "bytes": 1730
+    "source": "https://res.cdn.office.net/files/fabric-cdn-prod_20221209.001/assets/brand-icons/product/svg/office_48x1.svg",
+    "path": "assets/products/office365.svg",
+    "bytes": 2419
   },
   "coursera-plus": {
     "website": "https://coursera.org/",
-    "source": "https://coursera.org/favicon.ico",
+    "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://coursera.org&size=128",
     "path": "assets/products/coursera-plus.webp",
-    "bytes": 1730
+    "bytes": 2386
   }
 }
