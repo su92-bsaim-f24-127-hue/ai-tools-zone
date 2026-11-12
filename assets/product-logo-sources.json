@@ -2,213 +2,213 @@
   "chatgpt": {
     "website": "https://chatgpt.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://chatgpt.com&size=128",
-    "path": "assets/products/chatgpt.webp",
+    "path": "assets/products/chatgpt-brand.webp",
     "bytes": 1644,
     "original_resolution": "128x128"
   },
   "gemini": {
     "website": "https://gemini.google.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://gemini.google.com&size=128",
-    "path": "assets/products/gemini.webp",
+    "path": "assets/products/gemini-brand.webp",
     "bytes": 2010,
     "original_resolution": "128x128"
   },
   "veo": {
     "website": "https://deepmind.google/technologies/veo/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://deepmind.google/technologies/veo/&size=128",
-    "path": "assets/products/veo.webp",
+    "path": "assets/products/veo-brand.webp",
     "bytes": 3004,
     "original_resolution": "128x128"
   },
   "leonardo": {
     "website": "https://leonardo.ai/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://leonardo.ai&size=128",
-    "path": "assets/products/leonardo.webp",
+    "path": "assets/products/leonardo-brand.webp",
     "bytes": 1764,
     "original_resolution": "128x128"
   },
   "elevenlabs": {
     "website": "https://elevenlabs.io/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://elevenlabs.io&size=128",
-    "path": "assets/products/elevenlabs.webp",
+    "path": "assets/products/elevenlabs-brand.webp",
     "bytes": 184,
     "original_resolution": "128x128"
   },
   "canva": {
     "website": "https://www.canva.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.canva.com&size=128",
-    "path": "assets/products/canva.webp",
+    "path": "assets/products/canva-brand.webp",
     "bytes": 1106,
     "original_resolution": "128x128"
   },
   "figma": {
     "website": "https://www.figma.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.figma.com&size=128",
-    "path": "assets/products/figma.webp",
+    "path": "assets/products/figma-brand.webp",
     "bytes": 776,
     "original_resolution": "128x128"
   },
   "capcut": {
     "website": "https://www.capcut.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.capcut.com&size=128",
-    "path": "assets/products/capcut.webp",
+    "path": "assets/products/capcut-brand.webp",
     "bytes": 1130,
     "original_resolution": "64x64"
   },
   "adobe": {
     "website": "https://www.adobe.com/creativecloud.html",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.adobe.com&size=128",
-    "path": "assets/products/adobe.webp",
+    "path": "assets/products/adobe-brand.webp",
     "bytes": 1080,
     "original_resolution": "128x128"
   },
   "lovable": {
     "website": "https://lovable.dev/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://lovable.dev&size=128",
-    "path": "assets/products/lovable.webp",
+    "path": "assets/products/lovable-brand.webp",
     "bytes": 858,
     "original_resolution": "128x128"
   },
   "gamma": {
     "website": "https://gamma.app/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://gamma.app&size=128",
-    "path": "assets/products/gamma.webp",
+    "path": "assets/products/gamma-brand.webp",
     "bytes": 1016,
     "original_resolution": "128x128"
   },
   "replit": {
     "website": "https://replit.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://replit.com&size=128",
-    "path": "assets/products/replit.webp",
+    "path": "assets/products/replit-brand.webp",
     "bytes": 1330,
     "original_resolution": "128x128"
   },
   "n8n": {
     "website": "https://n8n.io/",
     "source": "https://n8n.io/apple-touch-icon.png",
-    "path": "assets/products/n8n.webp",
+    "path": "assets/products/n8n-brand.webp",
     "bytes": 732,
     "original_resolution": "180x180"
   },
   "notion": {
     "website": "https://www.notion.so/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.notion.so&size=128",
-    "path": "assets/products/notion.webp",
+    "path": "assets/products/notion-brand.webp",
     "bytes": 1116,
     "original_resolution": "128x128"
   },
   "nordvpn": {
     "website": "https://nordvpn.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nordvpn.com&size=128",
-    "path": "assets/products/nordvpn.webp",
+    "path": "assets/products/nordvpn-brand.webp",
     "bytes": 2138,
     "original_resolution": "128x128"
   },
   "surfshark": {
     "website": "https://surfshark.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://surfshark.com&size=128",
-    "path": "assets/products/surfshark.webp",
+    "path": "assets/products/surfshark-brand.webp",
     "bytes": 2130,
     "original_resolution": "128x128"
   },
   "youtube": {
     "website": "https://www.youtube.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.youtube.com&size=128",
-    "path": "assets/products/youtube.webp",
+    "path": "assets/products/youtube-brand.webp",
     "bytes": 1200,
     "original_resolution": "128x128"
   },
   "netflix": {
     "website": "https://www.netflix.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.netflix.com&size=128",
-    "path": "assets/products/netflix.webp",
+    "path": "assets/products/netflix-brand.webp",
     "bytes": 838,
     "original_resolution": "64x64"
   },
   "linkedin": {
     "website": "https://www.linkedin.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.linkedin.com&size=128",
-    "path": "assets/products/linkedin.webp",
+    "path": "assets/products/linkedin-brand.webp",
     "bytes": 898,
     "original_resolution": "64x64"
   },
   "windows": {
     "website": "https://www.microsoft.com/windows",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.microsoft.com/windows&size=128",
-    "path": "assets/products/windows.webp",
+    "path": "assets/products/windows-brand.webp",
     "bytes": 354,
     "original_resolution": "128x128"
   },
   "cursor": {
     "website": "https://cursor.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cursor.com&size=128",
-    "path": "assets/products/cursor.webp",
+    "path": "assets/products/cursor-brand.webp",
     "bytes": 1724
   },
   "copilot": {
     "website": "https://github.com/features/copilot",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://github.com/features/copilot&size=128",
-    "path": "assets/products/copilot.webp",
+    "path": "assets/products/copilot-brand.webp",
     "bytes": 1402
   },
   "claude": {
     "website": "https://claude.ai/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://claude.ai&size=128",
-    "path": "assets/products/claude.webp",
+    "path": "assets/products/claude-brand.webp",
     "bytes": 1686
   },
   "deepseek": {
     "website": "https://deepseek.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://deepseek.com&size=128",
-    "path": "assets/products/deepseek.webp",
+    "path": "assets/products/deepseek-brand.webp",
     "bytes": 3204
   },
   "perplexity": {
     "website": "https://perplexity.ai/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://perplexity.ai&size=128",
-    "path": "assets/products/perplexity.webp",
+    "path": "assets/products/perplexity-brand.webp",
     "bytes": 1504
   },
   "bolt-new": {
     "website": "https://bolt.new/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bolt.new&size=128",
-    "path": "assets/products/bolt-new.webp",
+    "path": "assets/products/bolt-new-brand.webp",
     "bytes": 772
   },
   "runway": {
     "website": "https://runwayml.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runwayml.com&size=128",
-    "path": "assets/products/runway.webp",
+    "path": "assets/products/runway-brand.webp",
     "bytes": 1090
   },
   "descript": {
     "website": "https://descript.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://descript.com&size=128",
-    "path": "assets/products/descript.webp",
+    "path": "assets/products/descript-brand.webp",
     "bytes": 1158
   },
   "grammarly": {
     "website": "https://grammarly.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://grammarly.com&size=128",
-    "path": "assets/products/grammarly.webp",
+    "path": "assets/products/grammarly-brand.webp",
     "bytes": 2336
   },
   "quillbot": {
     "website": "https://quillbot.com/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://quillbot.com&size=128",
-    "path": "assets/products/quillbot.webp",
+    "path": "assets/products/quillbot-brand.webp",
     "bytes": 1512
   },
   "office365": {
     "website": "https://microsoft.com/microsoft-365",
     "source": "https://res.cdn.office.net/files/fabric-cdn-prod_20221209.001/assets/brand-icons/product/svg/office_48x1.svg",
-    "path": "assets/products/office365.svg",
+    "path": "assets/products/office365-brand.svg",
     "bytes": 2419
   },
   "coursera-plus": {
     "website": "https://coursera.org/",
     "source": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://coursera.org&size=128",
-    "path": "assets/products/coursera-plus.webp",
+    "path": "assets/products/coursera-plus-brand.webp",
     "bytes": 2386
   }
 }
