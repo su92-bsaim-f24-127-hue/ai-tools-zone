@@ -169,7 +169,7 @@ def product_context(p):
     return note + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
 def home_discovery():
-    return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Choose with a clearer picture.</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy.</p>' + links(['/products/','/categories/','/categories/design/','/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/','/blog/free-ai-tools-pakistan/','/blog/ai-tools-for-pakistani-freelancers/','/pricing/']) + '</section>'
+    return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Choose with a clearer picture.</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy.</p>' + links(['/products/','/pricing/','/categories/','/categories/ai-video/','/categories/design/','/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/','/blog/where-to-buy-ai-tools-pakistan/','/blog/how-to-pay-for-chatgpt-plus-pakistan/','/blog/free-ai-tools-pakistan/','/blog/ai-tools-for-pakistani-freelancers/']) + '</section>'
 
 def build_pages(products, origin, shell, write):
     paths = []
@@ -191,9 +191,9 @@ def build_pages(products, origin, shell, write):
         selected = [p for p in products if p['category']==c['name']]
         if not selected:
             raise ValueError('Empty category: '+c['name'])
-        intro = ''.join('<p>'+e(text)+'</p>' for text in c['intro'])
+        intro = ''.join('<p>'+render_text(text)+'</p>' for text in c['intro'])
         content = intro + '<section class="content-block"><h2>Available listings and PKR prices</h2>' + plan_table(selected) + disclaimer + '</section>'
-        content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+e(c['choose'])+'</p></section>'
+        content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+render_text(c['choose'])+'</p></section>'
         content += faq_html(c['faq']) + '<section class="content-block"><h2>Related decisions</h2>'+links(c['related'])+'</section>'
         content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} official website</a></li>' for p in selected)+'</ul></section>'
         publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
@@ -206,7 +206,7 @@ def build_pages(products, origin, shell, write):
         if page.get('comparison'):
             content += comparison_table(page['comparison'], by_id)
         for heading,body in page['sections']:
-            content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{e(body)}</p></section>'
+            content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{render_text(body)}</p></section>'
         content += faq_html(page['faq']) + '<section class="content-block"><h2>Continue your comparison</h2>'+links(page['related'])+'</section>'
         if page.get('sources'):
             content += '<section class="content-block"><h2>Official product references</h2><ul>'+''.join(f'<li><a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(name)}</a></li>' for name,url in page['sources'])+'</ul><p>These references describe the vendors. They do not establish authorization or the entitlements of an independently supplied offer.</p></section>'
@@ -245,10 +245,13 @@ def build_pages(products, origin, shell, write):
         selected=[]
         if hub == 'products':
             selected=products
+            content += '<p class="lead-text">Browse our verified catalog of premium AI accounts and digital tools in Pakistan. Compare seller-listed PKR prices, subscription durations, and access types before ordering on WhatsApp. For budget breakdowns, <a href="/pricing/">compare AI subscription prices in PKR</a> across all categories. Students can explore our curated <a href="/use-cases/ai-tools-for-students/">student-friendly AI tools and thesis software</a>, video creators can browse dedicated <a href="/categories/ai-video/">AI video editing tools and generators</a>, and designers can view <a href="/categories/design/">AI image generator subscriptions and design tools</a>. Before ordering, read our comprehensive guide on <a href="/blog/where-to-buy-ai-tools-pakistan/">where to buy AI tools in Pakistan</a>.</p>'
             content += plan_table(products)+disclaimer+'<h2>Browse by category</h2>'+links([category_path(c['name']) for c in CONTENT['categories']])
-            content += '<h2>Find the right starting point</h2>'+links(['/use-cases/','/compare/','/pricing/'])
+            content += '<h2>Popular tool comparisons</h2>'+links(['/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/'])
+            content += '<h2>Find the right starting point</h2>'+links(['/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/pricing/','/blog/where-to-buy-ai-tools-pakistan/'])
         elif hub == 'pricing':
             selected=products
+            content += '<p class="lead-text">Find affordable AI subscriptions in Pakistan with listed PKR prices and local payment methods via JazzCash, Easypaisa, or bank transfer. If you want to explore the complete catalog, visit the <a href="/products/">all tools directory</a>. Looking for academic and thesis discounts? Explore <a href="/use-cases/ai-tools-for-students/">budget-friendly AI tools for students</a>. For specialized creator workflows, check our <a href="/categories/ai-video/">AI video editing subscriptions</a> and <a href="/categories/design/">AI image generation software</a>.</p>'
             content += '<nav aria-label="Price ranges">'+links(['/pricing/#under-1000','/pricing/#under-2000','/pricing/#all-prices']).replace('/pricing/#under-1000</a>','Under PKR 1,000</a>').replace('/pricing/#under-2000</a>','Under PKR 2,000</a>').replace('/pricing/#all-prices</a>','All listed prices</a>')+'</nav>'
             ai_categories={'AI Assistants','AI Video','Design','AI Voice','Development','Productivity'}
             for budget in (1000,2000):

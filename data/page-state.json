@@ -1,10 +1,10 @@
 {
   "/": {
-    "sha256": "8d3fef353c58c924808fe1a3bc91c8665ea0ac1c6e5201a81041d62af2bbcecd",
-    "lastmod": "2026-11-12"
+    "sha256": "2550dccff831ab515a09a16523e3ba3e6370b5434d73e197572a1eadafc886a7",
+    "lastmod": "2026-11-13"
   },
   "/products/chatgpt-plus/": {
-    "sha256": "d66759c8c91d69ac2b17a84e521d3dcb8453f8e72e6620f75cfb90de868d001e",
+    "sha256": "5dce9dd26b7175ea71cde66e7b8e345f64b1432f2f50fe416b31aee0fb0e59da",
     "lastmod": "2026-11-13"
   },
   "/products/gemini-pro/": {
@@ -16,7 +16,7 @@
     "lastmod": "2026-11-13"
   },
   "/products/leonardo-ai-essential/": {
-    "sha256": "fad2587284b2f137895c14368147a512b4d4577ce590847ebd428d4994bc1a18",
+    "sha256": "e4e961aa6b78e9d42229f6d128fc2b60dce15d0946be7cac242ce0bf7dc9872c",
     "lastmod": "2026-11-13"
   },
   "/products/elevenlabs/": {
@@ -32,7 +32,7 @@
     "lastmod": "2026-11-13"
   },
   "/products/capcut-pro/": {
-    "sha256": "5571159eaed53e1b3e9139668e40f69a2921357fe3b1c8d7e5b745a1f28cf0a8",
+    "sha256": "66449040ca8919a32663869dc0491e519f8abbd32ed23f9500e40d7dae79105d",
     "lastmod": "2026-11-13"
   },
   "/products/adobe-creative-cloud/": {
@@ -100,7 +100,7 @@
     "lastmod": "2026-11-13"
   },
   "/products/perplexity-pro/": {
-    "sha256": "cf9496838595185a241eaec2060f9e75858ae2755ae6015c94513eac7afbb014",
+    "sha256": "da9f3273d3584a45dd6a455a2ecc60d54810816998b2c81e5c25fd10431f5a8f",
     "lastmod": "2026-11-13"
   },
   "/products/bolt-new-pro/": {
@@ -108,7 +108,7 @@
     "lastmod": "2026-11-13"
   },
   "/products/runway-ml-gen-3/": {
-    "sha256": "b9b7f4a263dc5f8b19f55bbadf2c176c8d126812bd60573994a8a89d92f002c8",
+    "sha256": "f870373a254841ff2da0a28630997cc1ed9383a58e905d8ea3eee321b8ff5073",
     "lastmod": "2026-11-13"
   },
   "/products/descript-creator/": {
@@ -116,11 +116,11 @@
     "lastmod": "2026-11-13"
   },
   "/products/grammarly-premium/": {
-    "sha256": "abc4c80f2a052134a86ad76e5bdfbb879e817c241c4b5c26910ad7484d0d42d0",
+    "sha256": "aa2e7e3f40cda3a390bf882a0ae73af38d513ed57a1bb0c4e226c7025cf060e3",
     "lastmod": "2026-11-13"
   },
   "/products/quillbot-premium/": {
-    "sha256": "c99a2aed473def0cee4c8effc6d9c7899479f29b3986d95314b42a04e78896f8",
+    "sha256": "f2fc322fe49b4c973ae3ca0589fb7a93877366bb5307a890aa34172637af2825",
     "lastmod": "2026-11-13"
   },
   "/products/microsoft-office-365/": {
@@ -128,7 +128,7 @@
     "lastmod": "2026-11-13"
   },
   "/products/coursera-plus-premium/": {
-    "sha256": "c316e30319ed9d1bf46664200fc9f8677929f89927407cf6cdeb9485a6582114",
+    "sha256": "652e53b74f4930bf1bfe6279c29914c377c11bdfac6f40e0e6f478c76d76bd42",
     "lastmod": "2026-11-13"
   },
   "/about/": {
@@ -152,12 +152,12 @@
     "lastmod": "2026-11-12"
   },
   "/categories/ai-video/": {
-    "sha256": "44e5305b72d583ba649043f78e3a5e57d234f495980cb65f210587d1f6621995",
-    "lastmod": "2026-11-12"
+    "sha256": "566de05c77d667f4264cafcd5cad2e92ad74b1b41e4720e86723c4ed675f579b",
+    "lastmod": "2026-11-13"
   },
   "/categories/design/": {
-    "sha256": "4398c6d0e4ebf14d8bf4ca1b0e8d4191be686c255ce8f313409b23f352c3bdc0",
-    "lastmod": "2026-11-11"
+    "sha256": "ece6a036c1cb4ab60955e10a51206268c9bec85e0d001249380ca11b9c8a4e4e",
+    "lastmod": "2026-11-13"
   },
   "/categories/ai-voice/": {
     "sha256": "e94014eb0af11c6d29e04a6432f9bd39c8695bfdf36e9253d37012bc432993fb",
@@ -188,8 +188,8 @@
     "lastmod": "2026-11-12"
   },
   "/use-cases/ai-tools-for-students/": {
-    "sha256": "8879f10dc7e5850a16ac8f2836f0c9b23c26a1f606b8fcf5dadc092375ccb566",
-    "lastmod": "2026-11-11"
+    "sha256": "f5bfd30ebe4592f4111bf743c087c8a97b3f6ef1885700bee08ba00925d7df22",
+    "lastmod": "2026-11-13"
   },
   "/use-cases/ai-tools-for-creators/": {
     "sha256": "532c971fd6960b9e29f783fc75a388393c27a3eaaf7dab8ea872c16d02c5ddf5",
@@ -248,8 +248,8 @@
     "lastmod": "2026-11-11"
   },
   "/compare/capcut-vs-runway/": {
-    "sha256": "99e61e1dc68d9f591ceca914fb1cec7f3b8a84449217b505aba61817cf177e83",
-    "lastmod": "2026-11-11"
+    "sha256": "ccde7c5f1c1ccaad038f303a52e661ad9755e02cce98cc33b4a52eb426ff22c6",
+    "lastmod": "2026-11-13"
   },
   "/compare/elevenlabs-vs-playht/": {
     "sha256": "673a157700bb102c13395c27a7be6420e731a101ab55d9a02520cfc6a64a8ab1",
@@ -264,8 +264,8 @@
     "lastmod": "2026-11-11"
   },
   "/compare/leonardo-vs-midjourney/": {
-    "sha256": "6f43d1c26f76dea0a81ca929069d243210c58f079f867644cff8a36c48db9b53",
-    "lastmod": "2026-11-11"
+    "sha256": "2519cd683a38fd263e3e6ad67990e39b82d145177cf7b9e7be5a89ac79ecdaac",
+    "lastmod": "2026-11-13"
   },
   "/blog/ai-phone-agents-whatsapp-bots-pakistan/": {
     "sha256": "ba6bf023c1f7df6f39d0eaf20c428a81fc759afbc3dfee900403dce7f7c923a0",
@@ -292,8 +292,8 @@
     "lastmod": "2026-11-11"
   },
   "/blog/how-to-pay-for-chatgpt-plus-pakistan/": {
-    "sha256": "ed28491b1addad2be5273d140b2dd116289b4e9004c4734bb504ea4f8413b7a0",
-    "lastmod": "2026-11-12"
+    "sha256": "3cae1e69d0f9a86b6b8ffad4103515240c3aea8b41f01becbe22ec690a5cc61d",
+    "lastmod": "2026-11-13"
   },
   "/blog/jazzcash-easypaisa-ai-tools-pakistan/": {
     "sha256": "a1af6583f4f79f2fc5ed73a0283af43a5d1aa71ac74957b8ed3703a1ba1714b3",
@@ -316,8 +316,8 @@
     "lastmod": "2026-11-11"
   },
   "/blog/where-to-buy-ai-tools-pakistan/": {
-    "sha256": "026998c9cc2b7432445d4edda1fa464da123bd3dac2a3de20434c88112728bbc",
-    "lastmod": "2026-11-11"
+    "sha256": "17afc3e897701e147ce0db341d2124c3e456f0fcc971d55d08bd3687f65b84da",
+    "lastmod": "2026-11-13"
   },
   "/blog/best-ai-image-generators-pakistan/": {
     "sha256": "7df5d5498c24a108885c8b7f5b7c411cdbd0564cea51fdefc987bf585467cf50",
@@ -332,8 +332,8 @@
     "lastmod": "2026-11-11"
   },
   "/blog/ai-tools-for-pakistani-students-research-thesis/": {
-    "sha256": "66e3faaffd58f4c42ae882231345ddd7f6c4344cdd9903cc6318b106cf2e2853",
-    "lastmod": "2026-11-11"
+    "sha256": "347c21144ecd27aa1cadc71426a6edab0a05140ebd91cdd0a9475885a08355db",
+    "lastmod": "2026-11-13"
   },
   "/blog/ai-agency-automation-pakistan-n8n-make/": {
     "sha256": "c609d9cdfb4d9b4ab0600291de620a161341bad6ff1f7c5c47cddbe41424e2de",
@@ -348,12 +348,12 @@
     "lastmod": "2026-11-11"
   },
   "/products/": {
-    "sha256": "5d0a510d329feb9e10d114d8ee7b53e4c3fdea04e6b1ded3edfdbb16ae647e64",
-    "lastmod": "2026-11-12"
+    "sha256": "7c6ff1e0dcbec073bb1ce63ddf657ad520ca1f64e56039ff4b9ec9c99799f198",
+    "lastmod": "2026-11-13"
   },
   "/categories/": {
-    "sha256": "582c4f601c849495dea71a39e5104cb7f278666de39936ff42cea8740c07face",
-    "lastmod": "2026-11-11"
+    "sha256": "ca6c3fcc465a04445840578664e0f027a7e0f52638a83664182651dfa1a90937",
+    "lastmod": "2026-11-13"
   },
   "/use-cases/": {
     "sha256": "9c4d13dc211527391a4f9a70f909e65fc01d0b1bc53a72095c0bfade2e334ef7",
@@ -372,8 +372,8 @@
     "lastmod": "2026-11-11"
   },
   "/pricing/": {
-    "sha256": "7bb0a92f3c543f8b3105e2514795669c55027593069a6c879ac117ffb64fa487",
-    "lastmod": "2026-11-12"
+    "sha256": "6f90c4e26e1ed5440464299a9aee71c941f23d74ec6bc00a182a3014ce91753c",
+    "lastmod": "2026-11-13"
   },
   "/blog/": {
     "sha256": "ee8055d59ed495b11dce18bb51d585712b749d7658cb43bf53e4c013a23cd5f4",
