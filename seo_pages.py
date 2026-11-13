@@ -19,6 +19,9 @@ def content_date(now=None):
 CONTENT = json.loads((ROOT / 'data/seo-content.json').read_text(encoding='utf-8'))
 BLOG = json.loads((ROOT / 'data/blog-content.json').read_text(encoding='utf-8'))
 SETTINGS = json.loads((ROOT / 'data/site-settings.json').read_text(encoding='utf-8'))
+CATALOG_FILE = ROOT / 'data/catalog.json'
+CATALOG = json.loads(CATALOG_FILE.read_text(encoding='utf-8')) if CATALOG_FILE.is_file() else []
+PRODUCTS_BY_PATH = {'/products/' + p['slug'] + '/': p['name'] for p in CATALOG if 'slug' in p and 'name' in p}
 WHATSAPP_NUMBER = ''.join(ch for ch in str(SETTINGS.get('whatsappNumber','')) if ch.isdigit())
 CATEGORIES = {c['name']: c for c in CONTENT['categories']}
 HUBS = {
@@ -88,17 +91,24 @@ def product_path(product):
     return '/products/' + product['slug'] + '/'
 
 def label_for(path):
+    if not path:
+        return ''
+    normalized = '/' + path.strip('/') + '/' if path.strip('/') else '/'
     if path.strip('/') in HUBS:
         return HUBS[path.strip('/')][0]
     for category in CONTENT['categories']:
-        if category_path(category['name']) == path:
+        if category_path(category['name']) in (path, normalized):
             return category['heading']
     for page in CONTENT['pages']:
-        if page['path'] == path:
+        if page['path'] in (path, normalized):
             return page['title']
     for article in BLOG['articles']:
-        if article['path'] == path:
+        if article['path'] in (path, normalized):
             return article['title']
+    if normalized in PRODUCTS_BY_PATH:
+        return PRODUCTS_BY_PATH[normalized]
+    if path in PRODUCTS_BY_PATH:
+        return PRODUCTS_BY_PATH[path]
     return {'/terms/':'Ordering, refunds and warranty', '/about/':'About AI Tools Zone and contact', '/faq/':'Frequently Asked Questions (FAQs)'}.get(path, path)
 
 def links(paths):
@@ -169,7 +179,7 @@ def product_context(p):
     return note + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
 def home_discovery():
-    return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Choose with a clearer picture.</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy.</p>' + links(['/products/','/pricing/','/categories/','/categories/ai-video/','/categories/design/','/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/','/blog/where-to-buy-ai-tools-pakistan/','/blog/how-to-pay-for-chatgpt-plus-pakistan/','/blog/free-ai-tools-pakistan/','/blog/ai-tools-for-pakistani-freelancers/']) + '</section>'
+    return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Compare Popular AI Tools and Workflows</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy. Review head-to-head comparisons like ChatGPT vs Claude, Gemini vs ChatGPT, and Cursor vs GitHub Copilot.</p>' + links(['/products/','/pricing/','/categories/','/categories/ai-video/','/categories/design/','/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/','/blog/where-to-buy-ai-tools-pakistan/','/blog/how-to-pay-for-chatgpt-plus-pakistan/','/blog/free-ai-tools-pakistan/','/blog/ai-tools-for-pakistani-freelancers/']) + '</section>'
 
 def build_pages(products, origin, shell, write):
     paths = []
@@ -223,6 +233,17 @@ def build_pages(products, origin, shell, write):
         for section in article['sections']:
             content += '<section class="content-block"><h2>'+e(section['heading'])+'</h2>'
             content += ''.join('<p>'+render_text(paragraph)+'</p>' for paragraph in section.get('paragraphs',[]))
+            if section.get('table'):
+                t = section['table']
+                caption = t.get('caption', section['heading'])
+                headers = t.get('headers', [])
+                rows = t.get('rows', [])
+                thead = ''.join(f'<th scope="col">{e(h)}</th>' for h in headers)
+                tbody_rows = []
+                for row in rows:
+                    cells = ''.join(f'<td>{render_text(c)}</td>' if idx > 0 else f'<th scope="row">{render_text(c)}</th>' for idx, c in enumerate(row))
+                    tbody_rows.append(f'<tr>{cells}</tr>')
+                content += f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr>{thead}</tr></thead><tbody>{"".join(tbody_rows)}</tbody></table></div>'
             if section.get('bullets'):
                 content += '<ul>'+''.join('<li>'+render_text(item)+'</li>' for item in section['bullets'])+'</ul>'
             content += '</section>'
@@ -282,6 +303,8 @@ def build_pages(products, origin, shell, write):
                 '/blog/ai-agency-automation-pakistan-n8n-make/': ('AGENCY WORKFLOWS', 'Read agency guide →'),
                 '/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/': ('FREELANCE ROI', 'Compare design tools →'),
                 '/blog/faceless-youtube-automation-ai-tools-pakistan/': ('CREATOR STACK', 'Read YouTube guide →'),
+                '/blog/ai-subscription-prices-pakistan/': ('PKR PRICING 2026', 'Read pricing guide →'),
+                '/blog/best-ai-tools-for-students-pakistan/': ('STUDENT & RESEARCH', 'Read student guide →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
@@ -451,6 +474,8 @@ def build_llms_txt(origin, products):
         "## Key Store Sections\n\n",
         f"- [Current offers]({origin}/products/): {len(products)} currently active catalog listings.\n",
         f"- [PKR pricing]({origin}/pricing/): Compare listed offers and plan terms.\n",
+        f"- [AI Subscription Prices in Pakistan]({origin}/blog/ai-subscription-prices-pakistan/): 2026 PKR price guide, access tiers and payment methods.\n",
+        f"- [Best AI Tools for Students in Pakistan]({origin}/blog/best-ai-tools-for-students-pakistan/): Academic research workflows and HEC ethical compliance guide.\n",
         f"- [Compare tools]({origin}/compare/): Read workflow comparisons and selection notes.\n",
         f"- [Categories]({origin}/categories/): Browse offers by category.\n",
         f"- [Buying guides]({origin}/guides/): Review access and buying questions.\n",
