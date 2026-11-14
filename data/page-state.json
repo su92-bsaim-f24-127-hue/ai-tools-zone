@@ -308,7 +308,7 @@
     "lastmod": "2026-11-15"
   },
   "/blog/cheap-ai-subscriptions-pakistan/": {
-    "sha256": "16b928277b5f5091fdcbf8e807796b297ad2d247c1052ab610941f3947056e05",
+    "sha256": "5fe0e31ddf1292cfa7de616f6b8842104f02786477b4b8ff0840689e9af9dad1",
     "lastmod": "2026-11-15"
   },
   "/blog/how-to-earn-money-with-ai-pakistan/": {
@@ -332,7 +332,7 @@
     "lastmod": "2026-11-13"
   },
   "/blog/ai-tools-for-pakistani-students-research-thesis/": {
-    "sha256": "f69732ea63765cc1eceaf1c6a1298afeb15e889d45d98d1a19f25d84cb1add0b",
+    "sha256": "66594cd11a1b156f8eb7d93b1e2cb31f9301593d80904bd9678bc01106fedca6",
     "lastmod": "2026-11-15"
   },
   "/blog/ai-agency-automation-pakistan-n8n-make/": {
@@ -352,7 +352,11 @@
     "lastmod": "2026-11-15"
   },
   "/blog/best-ai-tools-for-students-pakistan/": {
-    "sha256": "837f570ac0fece94816ad7ba7761060338d6f58e1a7edd21a69df3c90f01c717",
+    "sha256": "ab3d388a6fe5fae2a3d7eaef573191511a25cea92bd293a92bacef10d3504df6",
+    "lastmod": "2026-11-15"
+  },
+  "/blog/cheap-ai-tools-for-students-pakistan/": {
+    "sha256": "ea672b9b5fdf717885a9b5e972357b0fce19bda1823536c06d9534359fbe88c3",
     "lastmod": "2026-11-15"
   },
   "/products/": {
@@ -384,7 +388,7 @@
     "lastmod": "2026-11-15"
   },
   "/blog/": {
-    "sha256": "77cace53328aef002a7d265bf723c94048489891ce9e1a5373d2a1a8513ce52d",
+    "sha256": "3856638b8a08f928416ddc566cf9af364de5f4f8ba62ef08cf4f4553d2456330",
     "lastmod": "2026-11-15"
   }
 }

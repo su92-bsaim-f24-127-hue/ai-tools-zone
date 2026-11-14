@@ -510,6 +510,7 @@ def build_llms_txt(origin, products):
         f"- [PKR pricing]({origin}/pricing/): Compare listed offers and plan terms.\n",
         f"- [AI Subscription Prices in Pakistan]({origin}/blog/ai-subscription-prices-pakistan/): 2026 PKR price guide, access tiers and payment methods.\n",
         f"- [Best AI Tools for Students in Pakistan]({origin}/blog/best-ai-tools-for-students-pakistan/): Academic research workflows and HEC ethical compliance guide.\n",
+        f"- [Cheap AI Tools for Students in Pakistan]({origin}/blog/cheap-ai-tools-for-students-pakistan/): 2026 student guide comparing affordable AI tools, free tiers, and PKR subscription prices.\n",
         f"- [Compare tools]({origin}/compare/): Read workflow comparisons and selection notes.\n",
         f"- [Categories]({origin}/categories/): Browse offers by category.\n",
         f"- [Buying guides]({origin}/guides/): Review access and buying questions.\n",

@@ -1,6 +1,6 @@
 {
-  "expected_pages": 97,
-  "reason": "Expand public educational and commercial guidance with AI subscription prices in Pakistan guide and best AI tools for university students guide, increasing verified public routes from 95 to 97.",
+  "expected_pages": 98,
+  "reason": "Added /blog/cheap-ai-tools-for-students-pakistan/ for student budget AI tool search discovery",
   "routes": [
     "/",
     "/about/",
@@ -23,6 +23,7 @@
     "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/",
     "/blog/chatgpt-plus-vs-gemini-pro-pakistan/",
     "/blog/cheap-ai-subscriptions-pakistan/",
+    "/blog/cheap-ai-tools-for-students-pakistan/",
     "/blog/cursor-vs-copilot-pakistan/",
     "/blog/faceless-youtube-automation-ai-tools-pakistan/",
     "/blog/free-ai-tools-pakistan/",
