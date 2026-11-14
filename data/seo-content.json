@@ -320,6 +320,7 @@
         "/pricing/",
         "/products/",
         "/blog/ai-tools-for-pakistani-students-research-thesis/",
+        "/blog/ai-tools-for-teachers-pakistan/",
         "/compare/grammarly-vs-quillbot-vs-wordai/",
         "/compare/chatgpt-vs-gemini/",
         "/guides/choose-ai-subscription/"
@@ -376,7 +377,8 @@
         "/categories/design/",
         "/categories/ai-video/",
         "/categories/ai-voice/",
-        "/compare/capcut-vs-canva/"
+        "/compare/capcut-vs-canva/",
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/"
       ],
       "sources": [
         [
@@ -428,7 +430,8 @@
       "related": [
         "/categories/development/",
         "/use-cases/ai-tools-for-business/",
-        "/guides/private-vs-shared-access/"
+        "/guides/private-vs-shared-access/",
+        "/blog/cursor-vs-copilot-pakistan/"
       ],
       "sources": [
         [
@@ -486,7 +489,8 @@
         "/categories/productivity/",
         "/categories/development/",
         "/categories/business/",
-        "/guides/choose-ai-subscription/"
+        "/guides/choose-ai-subscription/",
+        "/blog/ai-agency-automation-pakistan-n8n-make/"
       ],
       "sources": [
         [
@@ -741,6 +745,7 @@
         ]
       ],
       "related": [
+        "/alternatives/",
         "/compare/chatgpt-vs-gemini/",
         "/categories/ai-assistants/",
         "/categories/design/",
@@ -794,6 +799,7 @@
         ]
       ],
       "related": [
+        "/alternatives/",
         "/categories/design/",
         "/compare/canva-vs-adobe/",
         "/use-cases/ai-tools-for-creators/"
@@ -853,6 +859,7 @@
         ]
       ],
       "related": [
+        "/guides/",
         "/pricing/",
         "/guides/private-vs-shared-access/",
         "/terms/",
@@ -900,6 +907,7 @@
         ]
       ],
       "related": [
+        "/guides/",
         "/guides/choose-ai-subscription/",
         "/pricing/",
         "/terms/",
@@ -951,6 +959,7 @@
         ]
       ],
       "related": [
+        "/guides/",
         "/pricing/",
         "/guides/choose-ai-subscription/",
         "/guides/private-vs-shared-access/",
