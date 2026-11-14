@@ -1,0 +1,144 @@
+name: Weekly SEO Telemetry & Reporting
+
+'on':
+  schedule:
+    # Execute every Monday at 02:00 UTC
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+    inputs:
+      skip_inspection:
+        description: 'Skip live URL inspection sweep (faster run reusing latest snapshot inspections)'
+        required: false
+        type: boolean
+        default: false
+      days:
+        description: 'Trailing reporting period duration in days (default: 7)'
+        required: false
+        type: string
+        default: '7'
+
+# Least-privilege permissions: id-token for WIF OIDC token exchange, contents for repository checkout
+permissions:
+  contents: read
+  id-token: write
+
+# Prevent overlapping telemetry collection and reporting runs
+concurrency:
+  group: seo-telemetry
+  cancel-in-progress: false
+
+jobs:
+  telemetry:
+    name: SEO Telemetry Pipeline
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'scripts/telemetry/requirements.txt'
+
+      - name: Install telemetry dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/telemetry/requirements.txt
+
+      - name: Run telemetry regression test suite
+        run: |
+          python -m unittest discover -s scripts/telemetry -v
+
+      - name: Verify branch eligibility for Google Cloud WIF
+        env:
+          BRANCH_REF: ${{ github.ref }}
+        run: |
+          if [ "$BRANCH_REF" != "refs/heads/main" ]; then
+            echo "ERROR: Google Cloud WIF token exchange is strictly restricted to refs/heads/main."
+            echo "Current ref: $BRANCH_REF"
+            exit 1
+          fi
+
+      - name: Authenticate to Google Cloud via Workload Identity Federation
+        id: google-auth
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT_ID || 'ai-tools-zone-seo' }}
+          workload_identity_provider: ${{ vars.WIF_PROVIDER || 'projects/933351118185/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider' }}
+          service_account: ${{ vars.WIF_SERVICE_ACCOUNT || 'ai-tools-zone-seo-reader@ai-tools-zone-seo.iam.gserviceaccount.com' }}
+
+      - name: Verify ADC authentication and read-only connectivity
+        run: |
+          python scripts/telemetry/auth.py
+
+      - name: Execute SEO telemetry pipeline
+        id: run-pipeline
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SKIP_INSP: ${{ github.event.inputs.skip_inspection }}
+          INPUT_DAYS: ${{ github.event.inputs.days }}
+        run: |
+          # Remove destination files to guarantee no reliance on stale artifacts
+          rm -f reports/seo-telemetry/weekly_seo_performance.md \
+                reports/seo-telemetry/route_indexation_matrix.csv \
+                reports/seo-telemetry/seo_alerts.md
+
+          ARGS=()
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            if [ "$SKIP_INSP" = "true" ]; then
+              ARGS+=("--skip-inspection")
+            fi
+            if [ -n "$INPUT_DAYS" ]; then
+              if ! [[ "$INPUT_DAYS" =~ ^([1-9]|[1-8][0-9]|90)$ ]]; then
+                echo "ERROR: 'days' parameter must be an integer between 1 and 90. Got: '$INPUT_DAYS'"
+                exit 1
+              fi
+              ARGS+=("--days" "$INPUT_DAYS")
+            fi
+          fi
+          python -m scripts.telemetry.run_pipeline "${ARGS[@]}"
+
+      - name: Verify secret hygiene before artifact upload
+        run: |
+          python -c "
+          import os, re, sys
+          from scripts.telemetry.normalizer import scan_for_secrets
+          expected_reports = [
+              'reports/seo-telemetry/weekly_seo_performance.md',
+              'reports/seo-telemetry/route_indexation_matrix.csv',
+              'reports/seo-telemetry/seo_alerts.md',
+          ]
+          for fpath in expected_reports:
+              if not os.path.exists(fpath):
+                  print(f'CRITICAL: Expected fresh report missing: {fpath}', file=sys.stderr)
+                  sys.exit(1)
+              if os.path.getsize(fpath) == 0:
+                  print(f'CRITICAL: Expected fresh report is empty: {fpath}', file=sys.stderr)
+                  sys.exit(1)
+              with open(fpath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              try:
+                  scan_for_secrets(content)
+              except Exception as exc:
+                  print(f'CRITICAL: Secret scan failed on {fpath}: {exc}', file=sys.stderr)
+                  sys.exit(1)
+          print('Report secret hygiene verification: PASSED (All 3 current-run reports verified clean)')
+          "
+
+      - name: Upload SEO telemetry reports and artifacts
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: seo-telemetry-reports-${{ github.run_number }}
+          path: |
+            reports/seo-telemetry/weekly_seo_performance.md
+            reports/seo-telemetry/route_indexation_matrix.csv
+            reports/seo-telemetry/seo_alerts.md
+          retention-days: 90
+          if-no-files-found: error
