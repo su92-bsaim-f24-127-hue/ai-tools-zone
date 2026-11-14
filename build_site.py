@@ -26,13 +26,13 @@ def bundle_css():
     base_file = ROOT / "styles.base.css"
     enhancements_file = ROOT / "enhancements.css"
     output_file = ROOT / "styles.css"
-    
+
     parts = []
     if base_file.is_file():
         parts.append(base_file.read_text(encoding="utf-8").strip())
     if enhancements_file.is_file():
         parts.append(enhancements_file.read_text(encoding="utf-8").strip())
-    
+
     bundled = "\n/* === BUNDLED FOR PHASE 7C DELIVERY OPTIMIZATION === */\n".join(parts)
     output_file.write_text(bundled, encoding="utf-8")
 
@@ -88,14 +88,32 @@ def analytics_tag(path):
 window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GOOGLE_ANALYTICS_ID}',{{send_page_view:false,page_location:location.origin+location.pathname}});
 (function(){{var d=false;function l(){{if(d)return;d=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}';document.head.appendChild(s);}}if('requestIdleCallback' in window){{requestIdleCallback(function(){{setTimeout(l,1000);}});}}else{{window.addEventListener('load',function(){{setTimeout(l,1000);}});}}['scroll','click','touchstart'].forEach(function(e){{window.addEventListener(e,l,{{once:true,passive:true}});}});}})();
 </script>'''
-def metadata(title,description,path,kind='website'):
+def brand_mark(p):
+ return f'<span class="tool-mark mark-{p["id"]}"><img src="{p["logo"]}" alt="{e(p["name"])} brand mark" width="64" height="64" loading="lazy" decoding="async"></span>'
+def metadata(title,description,path,kind='website',og_title=None,og_description=None,og_image=None,twitter_title=None,twitter_description=None,twitter_image=None):
  url=ORIGIN+path
+ og_t = og_title or title
+ og_d = og_description or description
+ og_img = og_image or (ORIGIN+'/assets/og-image.webp')
+ tw_t = twitter_title or og_t
+ tw_d = twitter_description or og_d
+ tw_img = twitter_image or og_img
  return f'''<link rel="canonical" href="{url}">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}">
-<meta property="og:type" content="{kind}"><meta property="og:site_name" content="AI Tools Zone"><meta property="og:locale" content="en_PK">
-<meta property="og:url" content="{url}"><meta property="og:image" content="{ORIGIN}/assets/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Tools Zone logo — digital subscriptions in Pakistan">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{ORIGIN}/assets/social-card.jpg">'''
+<meta property="og:type" content="{kind}">
+<meta property="og:title" content="{e(og_t)}">
+<meta property="og:description" content="{e(og_d)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Tools Zone logo — digital subscriptions in Pakistan">
+<meta property="og:site_name" content="AI Tools Zone">
+<meta property="og:locale" content="en_PK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(tw_t)}">
+<meta name="twitter:description" content="{e(tw_d)}">
+<meta name="twitter:image" content="{tw_img}">'''
 
 organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','knowsAbout':['Artificial Intelligence Subscriptions','SaaS Pricing in Pakistan','Creative Software Licensing','AI Productivity Tools'],'currenciesAccepted':'PKR','paymentAccepted':'JazzCash, Easypaisa, Bank Transfer','contactPoint':{'@type':'ContactPoint','telephone':'+'+WA,'contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
 theme_button='''<button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Light theme" aria-pressed="false"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>'''
@@ -124,16 +142,22 @@ home=(ROOT/'templates/home.html').read_text(encoding='utf-8')
 home=home.replace('__ASSET_VERSION__',VERSION)
 home=home.replace('lang="en"','lang="en-PK"')
 home=home.replace('class="wrap brand-band-inner"','class="wrap brand-band-inner" tabindex="0" role="region" aria-label="Featured product brands"')
-title='AI Tools Zone Pakistan | AI Subscriptions & PKR Prices'
-description='Compare AI tools and digital subscriptions in Pakistan. Transparent PKR prices, plan details, and WhatsApp ordering.'
+title='AI Subscriptions Pakistan | PKR Prices – AI Tools Zone'
+description='Compare AI subscriptions and digital tools in Pakistan. Check plan details, access types and prices in PKR, then contact AI Tools Zone on WhatsApp.'
+og_title='AI Subscriptions in Pakistan | AI Tools Zone'
+og_description='Compare AI subscriptions, digital tools, access options and transparent PKR pricing in Pakistan.'
+twitter_title='AI Subscriptions in Pakistan | AI Tools Zone'
+twitter_description='Explore AI tools and digital subscriptions with PKR pricing in Pakistan.'
+og_image=f'{ORIGIN}/assets/og-image.webp'
 schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','name':'AI tools and digital subscriptions','itemListElement':[{'@type':'ListItem','position':i+1,'url':ORIGIN+'/products/'+p['slug']+'/','name':p['name']} for i,p in enumerate(products)]}]}
 schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'}})
 home=home.replace('<!-- GOOGLE_TAG -->',analytics_tag('/'))
-home=home.replace('<!-- SEO_HEAD -->',metadata(title,description,'/')+'\n'+structured(schema))
+home=home.replace('<!-- SEO_HEAD -->',metadata(title,description,'/',kind='website',og_title=og_title,og_description=og_description,og_image=og_image,twitter_title=twitter_title,twitter_description=twitter_description,twitter_image=og_image)+'\n'+structured(schema))
 home=re.sub(r'<!-- CATALOG_START -->.*?<!-- CATALOG_END -->','<div id="product-grid" class="product-grid">'+''.join(map(card,products))+'</div>',home,flags=re.S)
 categories=list(dict.fromkeys(p['category'] for p in products))
 cats=''.join(f'<a class="category-card" href="{category_path(c)}"><span class="category-icon"><img src="assets/brand-icon.webp" alt="{e(c)} category icon" width="40" height="40" loading="lazy"></span><h3>{e(c)}</h3><small>{sum(p["category"]==c for p in products)} tools</small><span aria-hidden="true">↗</span></a>' for c in categories)
 home=re.sub(r'<!-- CATEGORIES_START -->.*?<!-- CATEGORIES_END -->','<div id="category-grid" class="category-grid">'+cats+'</div>',home,flags=re.S)
+home=re.sub(r'<span class="tool-mark(?: mark-[^"]+)?" data-brand-logo="([^"]+)"></span>',lambda m:brand_mark(next(p for p in products if p['id']==m[1])),home)
 home=re.sub(r'<span class="tool-mark(?: mark-[^"]+)?" data-logo="([^"]+)"></span>',lambda m:mark(next(p for p in products if p['id']==m[1])),home)
 home=re.sub(r'<a([^>]*?) data-wa="([^"]*)"([^>]*)>',lambda m:'<a'+m[1]+' href="'+e(wa(__import__('html').unescape(m[2])))+'" target="_blank" rel="noopener noreferrer"'+m[3]+'>',home)
 bundle=[p for p in products if p['id'] in ['chatgpt','canva','capcut','elevenlabs']]
@@ -141,7 +165,7 @@ total=sum(p['price'] for p in bundle)
 bundle_message='I would like the AI Tools Zone creator stack:\n'+'\n'.join(f'{p["name"]}: {money(p["price"])} | {p["duration"]} | {p["access"]}' for p in bundle)+f'\nCombined listed price: {money(total)}. Please confirm availability, limits and payment details.'
 home=home.replace('id="buy-stack" href="https://wa.me/'+WA+'"','id="buy-stack" href="'+e(wa(bundle_message))+'" target="_blank" rel="noopener noreferrer"')
 home=home.replace('PKR 7,400 <small>',money(total)+' <small>')
-home=home.replace('    <section id="categories"','    <section class="answer-strip wrap" aria-labelledby="about-store"><h2 id="about-store">AI subscriptions in Pakistan, with a person to help.</h2><p>AI Tools Zone is an independent digital marketplace for creators, students and businesses in Pakistan. Compare seller-listed prices in PKR, read each plan’s access type and duration, and select Order on WhatsApp to discuss your order on WhatsApp. Availability and plan limits are confirmed before payment.</p><a class="inline-link" href="about/">About AI Tools Zone & contact ↗</a></section>\n    <section id="categories"')
+home=home.replace('    <section id="categories"','    <section class="answer-strip wrap" aria-labelledby="pricing-overview"><h2 id="pricing-overview">AI Subscription Prices in Pakistan</h2><p>AI Tools Zone is an independent digital marketplace for creators, students and businesses in Pakistan. Whether you need <a href="products/">premium AI accounts in Pakistan</a> for engineering, <a href="pricing/">affordable AI subscriptions</a> for startups, <a href="use-cases/ai-tools-for-students/">AI tools for students</a> and academic research, <a href="categories/ai-video/">AI video editing tools</a>, or <a href="categories/design/">AI image generation tools</a>, compare seller-listed prices in PKR, read each plan’s access type and duration, and select Order on WhatsApp to discuss your order on WhatsApp. Availability and plan limits are confirmed before payment. Read our guide on <a href="blog/where-to-buy-ai-tools-pakistan/">where to buy AI tools in Pakistan</a>.</p><p><strong>Subscription durations & prices:</strong> Monthly plans range from PKR 450 (QuillBot) to PKR 5,600 (Bolt.new Pro), while annual options range from PKR 900 (Canva Pro Edu) to PKR 23,000 (Gamma Pro). Subscriptions are listed in clear PKR with no foreign exchange markups. <strong>Account access types:</strong> <em>Private</em> accounts provide dedicated individual credentials. <em>Invitation</em> plans link your personal email to a workspace seat. <em>Shared</em> profiles offer budget communal access with fair-use guidelines. <em>License Key</em> products provide genuine digital activation keys. <strong>Included features & restrictions:</strong> Every active listing specifies seller-confirmed capabilities and replacement warranty periods (7 to 30 days). Official vendor usage limits remain governed by respective platforms.</p><a class="inline-link" href="about/">About AI Tools Zone & contact ↗</a></section>\n    <section id="categories"')
 home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Privacy</a><a href="terms/">Ordering & warranty</a>')
 home=home.replace('<h3>Here to help</h3>','<h3>Here to help</h3><a href="about/">About & contact</a>')
 home=home.replace('<section class="finder-section wrap"',home_discovery()+'<section class="finder-section wrap"')

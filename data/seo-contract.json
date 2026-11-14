@@ -1,6 +1,6 @@
 {
-  "expected_pages": 83,
-  "reason": "Expand production catalog from 20 to 32 products adding Group A high-demand AI developer, video, academic, and productivity tools with full Pakistani buyer-intent optimization.",
+  "expected_pages": 97,
+  "reason": "Expand public educational and commercial guidance with AI subscription prices in Pakistan guide and best AI tools for university students guide, increasing verified public routes from 95 to 97.",
   "routes": [
     "/",
     "/about/",
@@ -10,6 +10,7 @@
     "/blog/",
     "/blog/ai-agency-automation-pakistan-n8n-make/",
     "/blog/ai-phone-agents-whatsapp-bots-pakistan/",
+    "/blog/ai-subscription-prices-pakistan/",
     "/blog/ai-subscription-vs-api-credits-pakistan/",
     "/blog/ai-tools-for-content-creators-pakistan/",
     "/blog/ai-tools-for-pakistani-freelancers/",
@@ -17,6 +18,7 @@
     "/blog/ai-tools-for-teachers-pakistan/",
     "/blog/avoiding-account-bans-shared-ai-tools-pakistan/",
     "/blog/best-ai-image-generators-pakistan/",
+    "/blog/best-ai-tools-for-students-pakistan/",
     "/blog/best-ai-video-generators-pakistan/",
     "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/",
     "/blog/chatgpt-plus-vs-gemini-pro-pakistan/",

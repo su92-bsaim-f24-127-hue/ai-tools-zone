@@ -8,6 +8,8 @@ Compare current listings by price, duration and access type. Confirm availabilit
 
 - [Current offers](https://aitoolszone.tech/products/): 32 currently active catalog listings.
 - [PKR pricing](https://aitoolszone.tech/pricing/): Compare listed offers and plan terms.
+- [AI Subscription Prices in Pakistan](https://aitoolszone.tech/blog/ai-subscription-prices-pakistan/): 2026 PKR price guide, access tiers and payment methods.
+- [Best AI Tools for Students in Pakistan](https://aitoolszone.tech/blog/best-ai-tools-for-students-pakistan/): Academic research workflows and HEC ethical compliance guide.
 - [Compare tools](https://aitoolszone.tech/compare/): Read workflow comparisons and selection notes.
 - [Categories](https://aitoolszone.tech/categories/): Browse offers by category.
 - [Buying guides](https://aitoolszone.tech/guides/): Review access and buying questions.
