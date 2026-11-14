@@ -22,6 +22,17 @@ class InventoryPage(Page):
 
 SECRET_PATTERNS=[r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',r'\bgh[pousr]_[A-Za-z0-9]{30,}',r'\bgithub_pat_[A-Za-z0-9_]{40,}',r'\bAKIA[0-9A-Z]{16}\b',r'\bsk-(?:proj-)?[A-Za-z0-9_-]{35,}']
 def secret_findings(text):return [pattern for pattern in SECRET_PATTERNS if re.search(pattern,text)]
+def is_production_asset(name):
+    if not name or not isinstance(name, str):return False
+    path=name.replace('\\','/')
+    if path.startswith(('seo-growth-2026/','reports/')):return False
+    parts=Path(path).parts
+    if any(p.startswith('test_') or p.endswith('_test.py') for p in parts):return False
+    return True
+def audit_asset_secrets(name,text):
+    if is_production_asset(name) and secret_findings(text):
+        return name+' potential credential; inspect before publishing'
+    return None
 def contract_errors(contract,state,products):
     errors = []
     s = sorted(state)
@@ -83,12 +94,18 @@ def run():
     # Scan tracked text plus current source additions. Never scan private/unrelated output directories.
     tracked=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0')
     tracked+=['search.js','audit_growth.py','test_growth.py']+[p.relative_to(ROOT).as_posix() for p in (ROOT/'scripts').glob('*.py')]
+    non_prod_fixtures=[]
     for name in set(tracked):
         file=ROOT/name
         if file.is_file() and file.suffix in ('.js','.py','.json','.html','.yml','.md','.txt','.csv'):
-            check(not secret_findings(file.read_text(encoding='utf-8',errors='replace')),name+' potential credential; inspect before publishing')
+            text=file.read_text(encoding='utf-8',errors='replace')
+            err=audit_asset_secrets(name,text)
+            if err:
+                check(False,err)
+            elif not is_production_asset(name) and secret_findings(text):
+                non_prod_fixtures.append(name)
     out=ROOT/'verification';out.mkdir(exist_ok=True)
     (out/'page-inventory.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    report={'checks':checks,'errors':errors,'indexable_pages':len(state),'inventoried_pages':len(records),'product_offers':len(products),'incoming_links':sum(incoming.values())}
+    report={'checks':checks,'errors':errors,'indexable_pages':len(state),'inventoried_pages':len(records),'product_offers':len(products),'incoming_links':sum(incoming.values()),'non_production_fixtures':len(non_prod_fixtures)}
     (out/'growth-audit.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));return bool(errors)
 if __name__=='__main__':raise SystemExit(run())

@@ -73,7 +73,7 @@ def get_adc_credentials(scopes: List[str]) -> Credentials:
     # Check if creds are already impersonated to target principal
     current_target = getattr(creds, "service_account_email", None) or getattr(creds, "_target_principal", None)
 
-    if current_target == SERVICE_ACCOUNT_EMAIL and getattr(creds, "valid", True):
+    if current_target == SERVICE_ACCOUNT_EMAIL:
         return creds
 
     # If creds is already an ImpersonatedCredentials instance targeting the service account
@@ -180,8 +180,8 @@ def verify_connectivity() -> Dict[str, Any]:
         print(f"  - Permission Level     : {permission_level}")
         print(f"  - Total Managed Sites  : {len(known_sites)}")
     except Exception as exc:
-        results["gsc"] = {"authenticated": False, "error": type(exc).__name__}
-        print(f"Search Console API       : Connection check failed: {type(exc).__name__} [FAIL]")
+        results["gsc"] = {"authenticated": False, "error": f"{type(exc).__name__}: {exc}"}
+        print(f"Search Console API       : Connection check failed: {type(exc).__name__}: {exc} [FAIL]")
 
     # 3. Verify GA4 Data API Connectivity (Read-Only)
     try:
@@ -201,8 +201,8 @@ def verify_connectivity() -> Dict[str, Any]:
         print(f"  - Available Dimensions : {dims_count}")
         print(f"  - Available Metrics    : {metrics_count}")
     except Exception as exc:
-        results["ga4"] = {"authenticated": False, "error": type(exc).__name__}
-        print(f"GA4 Data API v1beta      : Connection check failed: {type(exc).__name__} [FAIL]")
+        results["ga4"] = {"authenticated": False, "error": f"{type(exc).__name__}: {exc}"}
+        print(f"GA4 Data API v1beta      : Connection check failed: {type(exc).__name__}: {exc} [FAIL]")
 
     # Overall Verdict
     all_passed = (
