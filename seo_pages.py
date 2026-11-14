@@ -101,8 +101,15 @@ def label_for(path):
             return article['title']
     return {'/terms/':'Ordering, refunds and warranty', '/about/':'About AI Tools Zone and contact', '/faq/':'Frequently Asked Questions (FAQs)'}.get(path, path)
 
-def links(paths):
-    return '<ul class="reading-links">' + ''.join(f'<li><a href="{p}">{e(label_for(p))}</a></li>' for p in paths) + '</ul>'
+def links(entries):
+    items = []
+    for item in entries:
+        if isinstance(item, tuple):
+            path, text = item
+        else:
+            path, text = item, label_for(item)
+        items.append(f'<li><a href="{path}">{e(text)}</a></li>')
+    return '<ul class="reading-links">' + ''.join(items) + '</ul>'
 
 def breadcrumbs(items):
     return '<nav aria-label="Breadcrumb"><ol class="breadcrumb">' + ''.join(
@@ -169,7 +176,34 @@ def product_context(p):
     return note + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
 def home_discovery():
-    return '<section class="answer-strip wrap" aria-labelledby="buying-guides"><h2 id="buying-guides">Choose with a clearer picture.</h2><p>Compare complete plans, explore tools for your work, and understand access before you buy.</p>' + links(['/products/','/categories/','/categories/design/','/use-cases/','/use-cases/ai-tools-for-students/','/compare/','/compare/chatgpt-vs-gemini/','/compare/chatgpt-vs-claude/','/compare/canva-vs-adobe/','/compare/capcut-vs-runway/','/compare/leonardo-vs-midjourney/','/blog/free-ai-tools-pakistan/','/blog/ai-tools-for-pakistani-freelancers/','/pricing/']) + '</section>'
+    return ('<section class="answer-strip wrap" aria-labelledby="buying-guides">'
+            '<h2 id="buying-guides">Choose with a clearer picture: explore hubs, use cases, and guides.</h2>'
+            '<p>Compare complete subscription plans, evaluate workflow options for your career or business, and review verified access terms before you buy.</p>'
+            + links([
+                ('/products/', 'All 32 AI tools & digital subscriptions in Pakistan'),
+                ('/pricing/', 'Compare AI tool subscription prices in PKR'),
+                ('/categories/', 'Browse AI tools across 10 workflow categories'),
+                ('/alternatives/', 'Cost-effective alternatives to popular AI tools'),
+                ('/use-cases/ai-tools-for-students/', 'Best AI tools for Pakistani students & thesis research'),
+                ('/use-cases/ai-tools-for-creators/', 'AI tools for creators, freelancers & YouTube video editors'),
+                ('/use-cases/ai-tools-for-developers/', 'AI coding assistants & app builders for developers'),
+                ('/use-cases/ai-tools-for-business/', 'AI tools for business teams & agency automation'),
+                ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro (reasoning & context limits)'),
+                ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro (coding & technical writing)'),
+                ('/compare/canva-vs-adobe/', 'Canva Pro vs Adobe Creative Cloud (design workflow & ROI)'),
+                ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 (timeline editing vs generative video)'),
+                ('/compare/leonardo-vs-midjourney/', 'Leonardo AI vs Midjourney (image generation & token plans)'),
+                ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro (cloud IDE vs full-stack AI builder)'),
+                ('/guides/', 'AI subscription buying guides & review directory'),
+                ('/guides/choose-ai-subscription/', 'How to choose an AI subscription in Pakistan'),
+                ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
+                ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
+                ('/blog/cheap-ai-subscriptions-pakistan/', 'Cheap AI subscriptions in Pakistan under PKR 1,000'),
+                ('/blog/where-to-buy-ai-tools-pakistan/', 'Where to buy verified AI tools safely in Pakistan'),
+                ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
+                ('/blog/free-ai-tools-pakistan/', 'Best free AI tools in Pakistan: practical starting guide'),
+                ('/blog/ai-tools-for-pakistani-freelancers/', 'Top AI tools for Pakistani freelancers on Upwork & Fiverr'),
+            ]) + '</section>')
 
 def build_pages(products, origin, shell, write):
     paths = []

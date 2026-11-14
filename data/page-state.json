@@ -1,7 +1,7 @@
 {
   "/": {
-    "sha256": "8d3fef353c58c924808fe1a3bc91c8665ea0ac1c6e5201a81041d62af2bbcecd",
-    "lastmod": "2026-11-12"
+    "sha256": "0aa2de1a4a042a0f3aeba5455365086ba34bcac3b80bd4909ed463d76a715bcc",
+    "lastmod": "2026-11-14"
   },
   "/products/chatgpt-plus/": {
     "sha256": "d66759c8c91d69ac2b17a84e521d3dcb8453f8e72e6620f75cfb90de868d001e",
@@ -188,20 +188,20 @@
     "lastmod": "2026-11-12"
   },
   "/use-cases/ai-tools-for-students/": {
-    "sha256": "8879f10dc7e5850a16ac8f2836f0c9b23c26a1f606b8fcf5dadc092375ccb566",
-    "lastmod": "2026-11-11"
+    "sha256": "71e15cb37ce2b7771118e36e11435fe57ebdee9c41f770be67e3113857d0848f",
+    "lastmod": "2026-11-14"
   },
   "/use-cases/ai-tools-for-creators/": {
-    "sha256": "532c971fd6960b9e29f783fc75a388393c27a3eaaf7dab8ea872c16d02c5ddf5",
-    "lastmod": "2026-11-11"
+    "sha256": "de29e6b00d0abfe6dc0b0b5f10844b835331de6c44bcf365bd4fd0f043deb0e6",
+    "lastmod": "2026-11-14"
   },
   "/use-cases/ai-tools-for-developers/": {
-    "sha256": "c442820141719f8dc2c953d8c164799409333982127a3ff57d19b076f87309a1",
-    "lastmod": "2026-11-11"
+    "sha256": "4c2e25a96a3e32f9f63b7d214122044f8ee1eae6eebf59dfa412240c88eeb339",
+    "lastmod": "2026-11-14"
   },
   "/use-cases/ai-tools-for-business/": {
-    "sha256": "69021519d0b4cbac8478fa5f8b4189d38ecd1e402af7fcf0149499886c36de00",
-    "lastmod": "2026-11-11"
+    "sha256": "9658cbdbb3db4e82c29a1f1d1b9148a69f2ed18123dac9927f082ec50691ff19",
+    "lastmod": "2026-11-14"
   },
   "/compare/chatgpt-vs-gemini/": {
     "sha256": "a14f43c56a6822151a96e1c870257e8cb0b98d8e9e76382bbf418d024a2b763b",
@@ -216,24 +216,24 @@
     "lastmod": "2026-11-11"
   },
   "/alternatives/chatgpt/": {
-    "sha256": "7efc7228b73edc51234edf13a4fe36e9fb716505e667722c0df971973af0f006",
-    "lastmod": "2026-11-11"
+    "sha256": "ed2897ff7bdc0f97405b29fdcf8ddeca5ceb9c1fddb062f71c065025100afe41",
+    "lastmod": "2026-11-14"
   },
   "/alternatives/canva/": {
-    "sha256": "c740b22ccff84fb7c15e8376622351b3e4535519beda97d6351b91d411172106",
-    "lastmod": "2026-11-11"
+    "sha256": "9ef2969e603cbd85a7f510477b6c1b21b884b7431869b6b869e6603e7d564837",
+    "lastmod": "2026-11-14"
   },
   "/guides/choose-ai-subscription/": {
-    "sha256": "1031471285e4a101a5ec8af323a4bd45604ff680b27c13f8c357216d20e97cd9",
-    "lastmod": "2026-11-11"
+    "sha256": "1356f259b0a96adb9fd8f939f91c75ed537734e35a76ef754287b9819d5a4263",
+    "lastmod": "2026-11-14"
   },
   "/guides/private-vs-shared-access/": {
-    "sha256": "94d3be525266f69f5e5baae49a7371ecc8ec0bed6029e166f2f33bb3af642c90",
-    "lastmod": "2026-11-11"
+    "sha256": "afde7f5f195fb990456d89d283518056f394dba70bf241241206b9094a700f7f",
+    "lastmod": "2026-11-14"
   },
   "/guides/catalog-methodology/": {
-    "sha256": "51e5ed801d3c924749985a5ee26e76a422f42b4e9ac498e58cbc835e756780d5",
-    "lastmod": "2026-11-11"
+    "sha256": "15cab1562fbe3723be5530467412bd7a4996b11cbfb3b7883f393bc163293135",
+    "lastmod": "2026-11-14"
   },
   "/compare/chatgpt-vs-claude/": {
     "sha256": "dc7c0c0834a39e39db01a288e4b11daed9e89c092b09e75615f0aee202daf72a",
