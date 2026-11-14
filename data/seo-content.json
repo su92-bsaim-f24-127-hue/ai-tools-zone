@@ -25,7 +25,9 @@
         "/alternatives/chatgpt/",
         "/compare/claude-vs-gemini/",
         "/compare/chatgpt-vs-claude/"
-      ]
+      ],
+      "meta_title": "AI Assistants & Writing Tools in Pakistan | AI Tools Zone",
+      "meta_description": "Compare top AI writing assistants in Pakistan. Review verified PKR prices and plan details for ChatGPT Plus, Gemini Pro, Claude Pro, and Perplexity."
     },
     {
       "name": "AI Video",
@@ -57,7 +59,9 @@
         "/pricing/"
       ],
       "title": "AI Video Generation & Editing Tools in Pakistan",
-      "description": "Compare AI video tools in Pakistan starting from PKR 900. Explore CapCut Pro for editing and Veo 3 Ultra for generation with verified PKR pricing and local payments."
+      "description": "Compare AI video tools in Pakistan starting from PKR 900. Explore CapCut Pro for editing and Veo 3 Ultra for generation with verified PKR pricing and local payments.",
+      "meta_title": "AI Video Generation & Editing in Pakistan | AI Tools Zone",
+      "meta_description": "Compare AI video generators and editing software in Pakistan. Explore CapCut Pro, Veo 3 Ultra, Runway, and Descript with verified PKR pricing."
     },
     {
       "name": "Design",
@@ -71,7 +75,7 @@
       "faq": [
         [
           "Is Canva Pro Edu the same as a regular Canva Pro subscription?",
-          "Canva says Canva Education is free for eligible K\u201312 teachers and schools; eligibility is not universal and higher-education institutions are excluded. This marketplace's Pro Edu invitation is a seller-listed offer, not proof of Canva Education eligibility or an official Canva entitlement. Ask who controls the account, what role qualifies, and what happens if access is declined; check Canva's current rules before paying."
+          "Canva says Canva Education is free for eligible K–12 teachers and schools; eligibility is not universal and higher-education institutions are excluded. This marketplace's Pro Edu invitation is a seller-listed offer, not proof of Canva Education eligibility or an official Canva entitlement. Ask who controls the account, what role qualifies, and what happens if access is declined; check Canva's current rules before paying."
         ],
         [
           "Can I use generated images in client work?",
@@ -89,7 +93,9 @@
         "/pricing/"
       ],
       "title": "Graphic Design & AI Image Tools in Pakistan",
-      "description": "Compare graphic design and AI art tools in Pakistan starting from PKR 900. Browse Canva Pro, Adobe Creative Cloud, Leonardo AI, and Figma Pro with transparent PKR pricing."
+      "description": "Compare graphic design and AI art tools in Pakistan starting from PKR 900. Browse Canva Pro, Adobe Creative Cloud, Leonardo AI, and Figma Pro with transparent PKR pricing.",
+      "meta_title": "Graphic Design & AI Image Tools in Pakistan | AI Tools Zone",
+      "meta_description": "Compare graphic design and AI art subscriptions in Pakistan. Browse Canva Pro, Adobe Creative Cloud, Leonardo AI, and Figma with transparent PKR plans."
     },
     {
       "name": "AI Voice",
@@ -115,7 +121,9 @@
         "/categories/ai-video/",
         "/guides/choose-ai-subscription/",
         "/compare/elevenlabs-vs-playht/"
-      ]
+      ],
+      "meta_title": "AI Voice & Audio Narration in Pakistan | AI Tools Zone",
+      "meta_description": "Explore AI voice generation and speech cloning tools in Pakistan. Compare ElevenLabs voiceover plans and pricing in PKR with WhatsApp support."
     },
     {
       "name": "Development",
@@ -140,7 +148,9 @@
         "/use-cases/ai-tools-for-developers/",
         "/use-cases/ai-tools-for-business/",
         "/guides/private-vs-shared-access/"
-      ]
+      ],
+      "meta_title": "AI Coding & App Development in Pakistan | AI Tools Zone",
+      "meta_description": "Accelerate coding and app building in Pakistan with AI developer tools. Compare Cursor AI, GitHub Copilot, Replit Core, and Lovable Pro in PKR."
     },
     {
       "name": "Productivity",
@@ -166,7 +176,9 @@
         "/use-cases/ai-tools-for-students/",
         "/guides/private-vs-shared-access/",
         "/compare/grammarly-vs-quillbot-vs-wordai/"
-      ]
+      ],
+      "meta_title": "AI Productivity & Workspace in Pakistan | AI Tools Zone",
+      "meta_description": "Boost personal and team efficiency in Pakistan with AI productivity tools. Review Notion Business, Gamma Pro, Grammarly, and QuillBot in PKR."
     },
     {
       "name": "VPN & Security",
@@ -191,7 +203,9 @@
         "/guides/private-vs-shared-access/",
         "/pricing/",
         "/terms/"
-      ]
+      ],
+      "meta_title": "VPN & Online Security in Pakistan | AI Tools Zone",
+      "meta_description": "Compare fast, reliable VPN subscriptions in Pakistan for privacy and remote work. Review NordVPN and Surfshark VPN with verified PKR pricing."
     },
     {
       "name": "Entertainment",
@@ -216,7 +230,9 @@
         "/guides/private-vs-shared-access/",
         "/pricing/",
         "/terms/"
-      ]
+      ],
+      "meta_title": "Entertainment Subscriptions in Pakistan | AI Tools Zone",
+      "meta_description": "Stream movies, series, and ad-free music in Pakistan. Compare Netflix Premium 4K and YouTube Premium with transparent PKR prices and WhatsApp ordering."
     },
     {
       "name": "Business",
@@ -241,7 +257,9 @@
         "/use-cases/ai-tools-for-business/",
         "/categories/productivity/",
         "/guides/choose-ai-subscription/"
-      ]
+      ],
+      "meta_title": "Business & Professional Plans in Pakistan | AI Tools Zone",
+      "meta_description": "Advance career and corporate growth in Pakistan with business subscriptions. Explore LinkedIn Premium and Coursera Plus with verified PKR pricing."
     },
     {
       "name": "Software",
@@ -267,7 +285,9 @@
         "/pricing/",
         "/terms/",
         "/compare/helium10-vs-semrush-vs-vidiq/"
-      ]
+      ],
+      "meta_title": "Genuine Software Licenses in Pakistan | AI Tools Zone",
+      "meta_description": "Buy authentic software licenses in Pakistan with reliable activation support. Compare Windows 11 Pro retail keys and Office 365 in verified PKR plans."
     }
   ],
   "pages": [
@@ -334,7 +354,9 @@
           "ChatGPT overview",
           "https://chatgpt.com/overview/"
         ]
-      ]
+      ],
+      "meta_title": "AI Tools for Students in Pakistan | AI Tools Zone",
+      "meta_description": "Discover budget-friendly AI tools for Pakistani students. Compare ChatGPT, Gemini, Notion, and Canva for research, essays, and presentations in PKR."
     },
     {
       "path": "/use-cases/ai-tools-for-creators/",
@@ -389,7 +411,9 @@
           "ElevenLabs product information",
           "https://elevenlabs.io/"
         ]
-      ]
+      ],
+      "meta_title": "AI Tools for Creators & Freelancers in Pakistan | AI Tools Zone",
+      "meta_description": "Plan an efficient creator workflow in Pakistan for scripts, voiceovers, video edits, and thumbnails. Compare CapCut, Leonardo, and ElevenLabs in PKR."
     },
     {
       "path": "/use-cases/ai-tools-for-developers/",
@@ -446,7 +470,9 @@
           "Lovable",
           "https://lovable.dev/"
         ]
-      ]
+      ],
+      "meta_title": "AI Tools for Developers in Pakistan | AI Tools Zone",
+      "meta_description": "Compare modern AI coding assistants and cloud development tools for Pakistani software engineers. Evaluate Cursor, Copilot, Replit, and n8n in PKR."
     },
     {
       "path": "/use-cases/ai-tools-for-business/",
@@ -501,7 +527,9 @@
           "n8n",
           "https://n8n.io/"
         ]
-      ]
+      ],
+      "meta_title": "AI Tools for Business & Agencies in Pakistan | AI Tools Zone",
+      "meta_description": "Streamline agency operations, client communication, and workflow automation in Pakistan. Compare business-grade AI tools with verified PKR pricing."
     },
     {
       "path": "/compare/chatgpt-vs-gemini/",
@@ -574,7 +602,9 @@
           "product": "gemini",
           "test": "Repeat the same task; check the exact Google account, region and app integration you rely on."
         }
-      ]
+      ],
+      "meta_title": "ChatGPT Plus vs Gemini Pro in Pakistan | AI Tools Zone",
+      "meta_description": "Compare ChatGPT Plus and Gemini Pro for Pakistani users. Evaluate reasoning, multimodal features, context limits, and verified PKR pricing side by side."
     },
     {
       "path": "/compare/canva-vs-adobe/",
@@ -648,7 +678,9 @@
           "product": "adobe",
           "test": "Open complex vector artwork in Illustrator or edit 4K timeline footage in Premiere Pro with Adobe Firefly generative fill."
         }
-      ]
+      ],
+      "meta_title": "Canva Pro vs Adobe Creative Cloud in Pakistan | AI Tools Zone",
+      "meta_description": "Compare Canva Pro and Adobe Creative Cloud for Pakistani designers and freelancers. Review template speed, pro tool depth, and verified PKR costs."
     },
     {
       "path": "/compare/capcut-vs-canva/",
@@ -706,7 +738,9 @@
           "Canva",
           "https://www.canva.com/"
         ]
-      ]
+      ],
+      "meta_title": "CapCut Pro vs Canva Pro in Pakistan | AI Tools Zone",
+      "meta_description": "Compare CapCut Pro and Canva Pro for social media content creation in Pakistan. Evaluate mobile video editing, templates, and verified PKR pricing."
     },
     {
       "path": "/alternatives/chatgpt/",
@@ -760,7 +794,9 @@
           "ChatGPT",
           "https://chatgpt.com/overview/"
         ]
-      ]
+      ],
+      "meta_title": "Top ChatGPT Alternatives in Pakistan | AI Tools Zone",
+      "meta_description": "Explore the best ChatGPT alternatives in Pakistan. Compare Claude 3.5 Sonnet, Google Gemini Pro, and DeepSeek for coding and research with PKR prices."
     },
     {
       "path": "/alternatives/canva/",
@@ -817,7 +853,9 @@
           "Leonardo",
           "https://leonardo.ai/"
         ]
-      ]
+      ],
+      "meta_title": "Top Canva Alternatives in Pakistan | AI Tools Zone",
+      "meta_description": "Discover high-performance Canva alternatives in Pakistan. Compare Adobe Creative Cloud, Figma Pro, and Leonardo AI for graphic design and UI workflows."
     },
     {
       "path": "/guides/choose-ai-subscription/",
@@ -865,7 +903,9 @@
         "/terms/",
         "/about/"
       ],
-      "sources": []
+      "sources": [],
+      "meta_title": "How to Choose an AI Subscription in Pakistan | AI Tools Zone",
+      "meta_description": "A practical checklist for choosing AI subscriptions in Pakistan. Match tools to real tasks, avoid duplicate software, and verify PKR costs before buying."
     },
     {
       "path": "/guides/private-vs-shared-access/",
@@ -913,7 +953,9 @@
         "/terms/",
         "/categories/ai-assistants/"
       ],
-      "sources": []
+      "sources": [],
+      "meta_title": "Private vs Shared AI Access in Pakistan | AI Tools Zone",
+      "meta_description": "Understand the differences between private accounts, shared logins, and team invitations for AI tools in Pakistan. Protect data privacy and access."
     },
     {
       "path": "/guides/catalog-methodology/",
@@ -965,7 +1007,9 @@
         "/guides/private-vs-shared-access/",
         "/about/"
       ],
-      "sources": []
+      "sources": [],
+      "meta_title": "Catalog & Comparison Methodology | AI Tools Zone",
+      "meta_description": "Learn how AI Tools Zone benchmarks software, validates seller PKR prices, and verifies digital subscription access conditions for Pakistani buyers."
     },
     {
       "path": "/compare/chatgpt-vs-claude/",
@@ -1027,7 +1071,9 @@
         "/products/chatgpt-plus/",
         "/guides/choose-ai-subscription/",
         "/use-cases/ai-tools-for-students/"
-      ]
+      ],
+      "meta_title": "ChatGPT Plus vs Claude Pro in Pakistan | AI Tools Zone",
+      "meta_description": "Compare ChatGPT Plus and Claude Pro for coding, technical writing, and workflow automation in Pakistan. Review verified PKR rates and plan limits."
     },
     {
       "path": "/compare/claude-vs-gemini/",
@@ -1089,7 +1135,9 @@
         "/categories/ai-assistants/",
         "/products/gemini-pro/",
         "/use-cases/ai-tools-for-students/"
-      ]
+      ],
+      "meta_title": "Claude Pro vs Gemini Pro in Pakistan | AI Tools Zone",
+      "meta_description": "Compare Claude Pro and Gemini Pro for Pakistani professionals. Analyze large-context analysis, coding accuracy, and verified PKR subscription prices."
     },
     {
       "path": "/compare/grammarly-vs-quillbot-vs-wordai/",
@@ -1153,7 +1201,9 @@
         "/blog/ai-tools-for-pakistani-students-research-thesis/",
         "/blog/ai-tools-for-teachers-pakistan/",
         "/compare/helium10-vs-semrush-vs-vidiq/"
-      ]
+      ],
+      "meta_title": "Grammarly vs QuillBot vs WordAI in Pakistan | AI Tools Zone",
+      "meta_description": "Compare Grammarly, QuillBot, and WordAI for academic and freelance writing in Pakistan. Review grammar checks, paraphrasing modes, and PKR pricing."
     },
     {
       "path": "/compare/capcut-vs-runway/",
@@ -1219,7 +1269,9 @@
         "/compare/capcut-vs-canva/",
         "/blog/best-ai-video-generators-pakistan/",
         "/pricing/"
-      ]
+      ],
+      "meta_title": "CapCut Pro vs Runway Gen-3 in Pakistan | AI Tools Zone",
+      "meta_description": "Compare CapCut Pro and Runway Gen-3 for Pakistani video creators. Contrast fast timeline editing with generative cinematic AI video in verified PKR."
     },
     {
       "path": "/compare/elevenlabs-vs-playht/",
@@ -1272,7 +1324,7 @@
         ],
         [
           "What is the cost per minute of generated voiceover for YouTube?",
-          "A 1,000-character script roughly equals 1 minute of spoken audio. The 30,000-character allowance on our ElevenLabs plan (PKR 3,300) yields approximately 30 minutes of high-grade generated voiceover audio\u2014sufficient for 3\u20135 long-form YouTube videos or 30+ short-form TikTok voice tracks."
+          "A 1,000-character script roughly equals 1 minute of spoken audio. The 30,000-character allowance on our ElevenLabs plan (PKR 3,300) yields approximately 30 minutes of high-grade generated voiceover audio—sufficient for 3–5 long-form YouTube videos or 30+ short-form TikTok voice tracks."
         ]
       ],
       "related": [
@@ -1281,7 +1333,9 @@
         "/compare/capcut-vs-runway/",
         "/use-cases/ai-tools-for-creators/",
         "/blog/faceless-youtube-automation-ai-tools-pakistan/"
-      ]
+      ],
+      "meta_title": "ElevenLabs vs PlayHT in Pakistan | AI Tools Zone",
+      "meta_description": "Compare ElevenLabs and PlayHT for AI voice generation in Pakistan. Review voice cloning quality, Urdu support, and commercial subscription terms in PKR."
     },
     {
       "path": "/compare/helium10-vs-semrush-vs-vidiq/",
@@ -1341,7 +1395,9 @@
         "/blog/how-to-earn-money-with-ai-pakistan/",
         "/compare/grammarly-vs-quillbot-vs-wordai/",
         "/blog/faceless-youtube-automation-ai-tools-pakistan/"
-      ]
+      ],
+      "meta_title": "Helium 10 vs Semrush vs VidIQ in Pakistan | AI Tools Zone",
+      "meta_description": "Compare specialized marketing tools in Pakistan: Helium 10 for Amazon, Semrush for search SEO, and VidIQ for YouTube growth with PKR pricing insights."
     },
     {
       "path": "/compare/replit-vs-lovable/",
@@ -1414,7 +1470,9 @@
           "product": "lovable",
           "test": "Generate a multi-page web application with database auth and test prompt iteration speed."
         }
-      ]
+      ],
+      "meta_title": "Replit Core vs Lovable Pro in Pakistan | AI Tools Zone",
+      "meta_description": "Compare Replit Core and Lovable Pro for full-stack software prototyping in Pakistan. Review cloud compute, AI agents, and verified PKR subscription rates."
     },
     {
       "path": "/compare/leonardo-vs-midjourney/",
@@ -1487,7 +1545,9 @@
           "Midjourney documentation",
           "https://docs.midjourney.com/"
         ]
-      ]
+      ],
+      "meta_title": "Leonardo AI vs Midjourney in Pakistan | AI Tools Zone",
+      "meta_description": "Compare Leonardo AI and Midjourney for Pakistani digital artists. Evaluate canvas controls, prompt steering, and verified PKR subscription pricing."
     }
   ]
 }

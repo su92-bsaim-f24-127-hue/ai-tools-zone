@@ -25,14 +25,14 @@ PRODUCTS_BY_PATH = {'/products/' + p['slug'] + '/': p['name'] for p in CATALOG i
 WHATSAPP_NUMBER = ''.join(ch for ch in str(SETTINGS.get('whatsappNumber','')) if ch.isdigit())
 CATEGORIES = {c['name']: c for c in CONTENT['categories']}
 HUBS = {
-    'products': ('All AI Tools & Digital Subscriptions in Pakistan', 'Compare the complete catalog by total PKR price, duration and access. AI and non-AI subscriptions are labeled by category so you can find the right kind of offer.'),
-    'categories': ('Browse AI Tools & Subscription Categories', 'Start with the work you need to do. Explore assistants, video, design, voice, development and productivity, or browse the separate digital subscription categories.'),
-    'use-cases': ('Choose AI Tools by Your Workflow', 'Find a practical starting point for study, creative projects, development or business work. Each guide connects tasks with catalog offers and the questions to ask before buying.'),
-    'compare': ('Compare AI Tools in Pakistan', 'Compare AI tools side by side. Our pages explain use-case fit, price, duration and access differences for Pakistan buyers.'),
-    'alternatives': ('AI Tool Alternatives for Specific Tasks', 'Explore another way to complete your task. These shortlists distinguish general assistants from specialized tools and explain where an alternative will not replace your whole workflow.'),
-    'guides': ('AI Subscription Buying Guides for Pakistan', 'Understand the offer before paying. Use these guides to check access, total cost, delivery and support, then confirm the actual plan with AI Tools Zone on WhatsApp.'),
-    'pricing': ('AI Tools Pricing in Pakistan: Compare PKR Plans', 'Seller-listed PKR prices, including offers under PKR 1,000 and PKR 2,000. Each offer has its own duration and allowances.'),
-    'blog': ('AI Tools Zone Blog', 'Practical, source-linked guides for comparing AI subscriptions and planning AI workflows for people and businesses in Pakistan.')
+    'products': ('All AI Tools & Subscriptions in Pakistan', 'Explore all 32 AI tools and digital software subscriptions in Pakistan. Compare verified PKR plans, duration, and access types with WhatsApp ordering.'),
+    'categories': ('Browse AI Tools & Software Categories', 'Browse AI tools and digital subscriptions in Pakistan by workflow category: AI assistants, video, voice, graphic design, development, and productivity.'),
+    'use-cases': ('AI Tools by Use Case & Workflow', 'Find practical AI tools tailored for students, content creators, developers, and businesses in Pakistan. Compare PKR pricing and access requirements.'),
+    'compare': ('Compare AI Tools & Subscriptions', 'Compare top AI tools side by side for Pakistani users. Evaluate feature differences, workflow fit, and verified PKR pricing before purchasing.'),
+    'alternatives': ('AI Tool Alternatives in Pakistan', 'Explore budget-friendly AI tool alternatives in Pakistan. Compare features, access types, and listed PKR prices to find the right software fit.'),
+    'guides': ('AI Subscription Buying Guides Pakistan', 'Practical buying guides for AI tools in Pakistan. Learn how to verify account access types, compare PKR prices, and avoid common subscription risks.'),
+    'pricing': ('AI Tools Pricing in Pakistan (PKR Plans)', 'Compare all AI tool subscription prices in Pakistan. Find budget plans under PKR 1,000 and PKR 2,000 with local payment options and WhatsApp ordering.'),
+    'blog': ('AI Tools Guides & News in Pakistan', 'Read practical guides, tutorials, and price comparisons for AI tools in Pakistan. Expert advice on local payments, freelancing, and creative workflows.')
 }
 e = lambda value: escape(str(value if value is not None else ''), quote=True)
 

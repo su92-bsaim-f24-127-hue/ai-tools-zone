@@ -142,8 +142,8 @@ home=(ROOT/'templates/home.html').read_text(encoding='utf-8')
 home=home.replace('__ASSET_VERSION__',VERSION)
 home=home.replace('lang="en"','lang="en-PK"')
 home=home.replace('class="wrap brand-band-inner"','class="wrap brand-band-inner" tabindex="0" role="region" aria-label="Featured product brands"')
-title='AI Subscriptions Pakistan | PKR Prices – AI Tools Zone'
-description='Compare AI subscriptions and digital tools in Pakistan. Check plan details, access types and prices in PKR, then contact AI Tools Zone on WhatsApp.'
+title='AI Subscriptions & Software Prices in Pakistan | AI Tools Zone'
+description='Compare top AI tools and software subscriptions in Pakistan. View verified PKR prices for ChatGPT, Canva, Gemini, and order securely via WhatsApp support.'
 og_title='AI Subscriptions in Pakistan | AI Tools Zone'
 og_description='Compare AI subscriptions, digital tools, access options and transparent PKR pricing in Pakistan.'
 twitter_title='AI Subscriptions in Pakistan | AI Tools Zone'
