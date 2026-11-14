@@ -20,7 +20,24 @@ products=[p for p in all_products if p.get('active',True)]
 logos=json.loads((ROOT/'assets/product-logo-sources.json').read_text(encoding='utf-8'))
 settings=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))
 product_content=json.loads((ROOT/'data/product-content.json').read_text(encoding='utf-8'))
-VERSION_INPUTS=('data/catalog.json','data/product-content.json','data/site-settings.json','assets/product-logo-sources.json','styles.css','enhancements.css','app.js','search.js','whatsapp.js','measurement.js','theme.js','scene.js')
+
+def bundle_css():
+    """Bundle styles.base.css and enhancements.css into production styles.css."""
+    base_file = ROOT / "styles.base.css"
+    enhancements_file = ROOT / "enhancements.css"
+    output_file = ROOT / "styles.css"
+
+    parts = []
+    if base_file.is_file():
+        parts.append(base_file.read_text(encoding="utf-8").strip())
+    if enhancements_file.is_file():
+        parts.append(enhancements_file.read_text(encoding="utf-8").strip())
+
+    bundled = "\n/* === BUNDLED FOR PHASE 7C DELIVERY OPTIMIZATION === */\n".join(parts)
+    output_file.write_text(bundled, encoding="utf-8")
+
+bundle_css()
+VERSION_INPUTS=('styles.base.css','data/catalog.json','data/product-content.json','data/site-settings.json','assets/product-logo-sources.json','styles.css','enhancements.css','app.js','search.js','whatsapp.js','measurement.js','theme.js','scene.js')
 VERSION=hashlib.sha256(b'\0'.join((ROOT/name).read_bytes() for name in VERSION_INPUTS)).hexdigest()[:12]
 WA=re.sub(r'\D','',str(settings.get('whatsappNumber','')))
 if not 8 <= len(WA) <= 15: raise ValueError('data/site-settings.json needs an international WhatsApp number with 8–15 digits')
@@ -119,7 +136,7 @@ def shell(title,description,path,body,schema=None,prefix='../'):
    graph[2]['breadcrumb']={'@id':node['@id']}
   if node.get('@type')=='ItemList': graph[2]['mainEntity']={'@id':node['@id']}
  schema={'@context':'https://schema.org','@graph':graph}
- return f'''<!doctype html><html lang="en-PK"><head>{analytics_tag(path)}<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10110f"><script>try{{var t=localStorage.getItem('atz-theme-v1')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='light'?'#f7f8f2':'#10110f')}}catch(e){{}}</script><script src="{prefix}theme.js?v={VERSION}" defer></script><title>{e(title)}</title><meta name="description" content="{e(description)}">{metadata(title,description,path)}<link rel="icon" href="{prefix}assets/icon-48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="{prefix}assets/icon-180.png"><link rel="manifest" href="{prefix}site.webmanifest"><script src="{prefix}measurement.js?v={VERSION}" defer></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap"></noscript><link rel="preload" as="style" href="{prefix}styles.css?v={VERSION}"><link rel="stylesheet" href="{prefix}styles.css?v={VERSION}"><link rel="stylesheet" href="{prefix}enhancements.css?v={VERSION}">{structured(schema) if schema else ''}</head><body>{header(prefix)}{body}{footer(prefix)}<noscript><style>#theme-toggle{{display:none}}</style></noscript></body></html>'''
+ return f'''<!doctype html><html lang="en-PK"><head>{analytics_tag(path)}<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10110f"><script>try{{var t=localStorage.getItem('atz-theme-v1')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='light'?'#f7f8f2':'#10110f')}}catch(e){{}}</script><script src="{prefix}theme.js?v={VERSION}" defer></script><title>{e(title)}</title><meta name="description" content="{e(description)}">{metadata(title,description,path)}<link rel="icon" href="{prefix}assets/icon-48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="{prefix}assets/icon-180.png"><link rel="manifest" href="{prefix}site.webmanifest"><script src="{prefix}measurement.js?v={VERSION}" defer></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap"></noscript><link rel="preload" as="style" href="{prefix}styles.css?v={VERSION}"><link rel="stylesheet" href="{prefix}styles.css?v={VERSION}">{structured(schema) if schema else ''}</head><body>{header(prefix)}{body}{footer(prefix)}<noscript><style>#theme-toggle{{display:none}}</style></noscript></body></html>'''
 
 home=(ROOT/'templates/home.html').read_text(encoding='utf-8')
 home=home.replace('__ASSET_VERSION__',VERSION)
