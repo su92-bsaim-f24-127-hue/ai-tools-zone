@@ -161,7 +161,7 @@ A comprehensive regex analysis across all 31,925 insertions in commit `4202670` 
 - Google API keys (`AIza...`)
 - OpenAI / LLM API keys (`sk-...`)
 - GitHub Personal Access Tokens (`ghp_...`)
-- Private RSA/EC keys (`-----BEGIN PRIVATE KEY-----`)
+- Private RSA/EC keys (`[REDACTED_RSA_HEADER]`)
 - Bearer tokens, secrets, or hardcoded passwords
 
 **Result:** Zero secrets, zero credentials, and zero private keys detected.
