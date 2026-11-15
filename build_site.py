@@ -145,8 +145,8 @@ home=(ROOT/'templates/home.html').read_text(encoding='utf-8')
 home=home.replace('__ASSET_VERSION__',VERSION)
 home=home.replace('lang="en"','lang="en-PK"')
 home=home.replace('class="wrap brand-band-inner"','class="wrap brand-band-inner" tabindex="0" role="region" aria-label="Featured product brands"')
-title='Buy AI Tools in Pakistan | Premium AI Subscriptions in PKR | AI Tools Zone'
-description='Buy AI tools and software subscriptions in Pakistan. Compare verified PKR prices for ChatGPT Plus, Claude, Canva, and Cursor. Fast delivery via JazzCash & Easypaisa.'
+title='Buy AI Tools & Subscriptions in Pakistan | AI Tools Zone'
+description='Buy AI tools and subscriptions in Pakistan. Compare verified PKR prices for ChatGPT Plus, Claude, Canva, and Cursor. Fast delivery via JazzCash & Easypaisa.'
 og_title='Buy AI Tools in Pakistan | AI Tools Zone'
 og_description='Explore premium AI accounts and affordable software subscriptions in Pakistan with transparent PKR pricing.'
 twitter_title='Buy AI Tools in Pakistan | AI Tools Zone'
