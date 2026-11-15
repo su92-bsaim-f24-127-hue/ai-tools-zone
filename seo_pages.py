@@ -172,6 +172,126 @@ def tiles(entries):
         cards.append(f'<article class="editorial-card guide-card">{tag_html}<h2><a href="{path}">{e(title)}</a></h2><p>{e(summary)}</p><a class="guide-cta" href="{path}">{e(cta)}</a></article>')
     return '<div class="editorial-grid guide-grid">' + ''.join(cards) + '</div>'
 
+PRODUCT_GUIDES = {
+    'chatgpt': [
+        ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
+        ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
+        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude 3.5 Sonnet comparison'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus benchmark & cost comparison'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'gemini': [
+        ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
+        ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for thesis & research in Pakistan'),
+        ('/use-cases/ai-tools-for-students/', 'AI tools guide for Pakistani students'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'claude': [
+        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude 3.5 Sonnet comparison'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus & Claude coding benchmark'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'cursor': [
+        ('/blog/cursor-vs-copilot-pakistan/', 'Cursor AI vs GitHub Copilot in Pakistan'),
+        ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro AI app builder'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'copilot': [
+        ('/blog/cursor-vs-copilot-pakistan/', 'Cursor AI vs GitHub Copilot in Pakistan'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'deepseek': [
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus benchmark & cost comparison'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'perplexity': [
+        ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for thesis & research in Pakistan'),
+        ('/use-cases/ai-tools-for-students/', 'AI tools guide for Pakistani students'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'canva': [
+        ('/compare/canva-vs-adobe/', 'Canva Pro vs Adobe Creative Cloud comparison'),
+        ('/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/', 'Canva Pro vs Adobe CC for Pakistani freelancers'),
+        ('/blog/ai-tools-for-pakistani-freelancers/', 'AI tools guide for Pakistani freelancers'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'adobe': [
+        ('/compare/canva-vs-adobe/', 'Canva Pro vs Adobe Creative Cloud comparison'),
+        ('/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/', 'Canva Pro vs Adobe CC for Pakistani freelancers'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'capcut': [
+        ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
+        ('/blog/best-ai-video-generators-pakistan/', 'Best AI video generators in Pakistan (2026)'),
+        ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'runway': [
+        ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
+        ('/blog/best-ai-video-generators-pakistan/', 'Best AI video generators in Pakistan (2026)'),
+        ('/use-cases/ai-tools-for-creators/', 'AI tools for creators & video editors in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'veo': [
+        ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
+        ('/blog/best-ai-video-generators-pakistan/', 'Best AI video generators in Pakistan (2026)'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'leonardo': [
+        ('/compare/leonardo-vs-midjourney/', 'Leonardo AI vs Midjourney comparison'),
+        ('/blog/best-ai-image-generators-pakistan/', 'Best AI image generators in Pakistan (2026)'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'elevenlabs': [
+        ('/compare/elevenlabs-vs-playht/', 'ElevenLabs vs PlayHT comparison'),
+        ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
+        ('/use-cases/ai-tools-for-creators/', 'AI tools for creators & voiceover workflows'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'replit': [
+        ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro comparison'),
+        ('/blog/cursor-vs-copilot-pakistan/', 'Cursor AI vs GitHub Copilot in Pakistan'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'lovable': [
+        ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro comparison'),
+        ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'n8n': [
+        ('/blog/ai-agency-automation-pakistan-n8n-make/', 'AI agency automation with n8n & Make in Pakistan'),
+        ('/blog/ai-phone-agents-whatsapp-bots-pakistan/', 'AI phone agents & WhatsApp bots for Pakistani businesses'),
+        ('/use-cases/ai-tools-for-business/', 'AI tools for business teams & automation'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'quillbot': [
+        ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
+        ('/blog/best-ai-tools-for-students-pakistan/', 'Best AI tools for Pakistani students (Free & Paid)'),
+        ('/blog/cheap-ai-tools-for-students-pakistan/', '10 Best cheap AI tools for students in Pakistan'),
+        ('/use-cases/ai-tools-for-students/', 'AI tools guide for Pakistani students'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'grammarly': [
+        ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
+        ('/blog/ai-tools-for-pakistani-freelancers/', 'Top AI tools for Pakistani freelancers on Upwork & Fiverr'),
+        ('/use-cases/ai-tools-for-students/', 'AI tools guide for Pakistani students'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'nordvpn': [
+        ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
+    'surfshark': [
+        ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ]
+}
+
 def product_context(p):
     related = [page['path'] for page in CONTENT['pages'] if p['id'] in page['products']]
     note = ''
@@ -183,7 +303,11 @@ def product_context(p):
         note = ('<section class="content-block"><h2>Check the Canva Education eligibility</h2>'
                 '<p>This seller-listed Pro Edu invitation is not proof of an official Canva Education entitlement. Canva Education is free for eligible K–12 teachers and schools; higher-education institutions are not currently eligible for that program. Check the current eligibility rules and ask the seller who controls the workspace and what happens if access is declined.</p>'
                 '<p><a href="https://www.canva.com/education/eligibility-guidelines/" target="_blank" rel="noopener noreferrer">Check Canva Education eligibility</a>.</p></section>')
-    return note + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
+    guides = PRODUCT_GUIDES.get(p['id'], [])
+    guides_html = ''
+    if guides:
+        guides_html = '<section class="content-block"><h2>Helpful guides & tutorials</h2>' + links(guides) + '</section>'
+    return note + guides_html + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
 def home_discovery():
     return ('<section class="answer-strip wrap" aria-labelledby="buying-guides">'
@@ -207,6 +331,7 @@ def home_discovery():
                 ('/guides/', 'AI subscription buying guides & review directory'),
                 ('/guides/choose-ai-subscription/', 'How to choose an AI subscription in Pakistan'),
                 ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
+                ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus in Pakistan (coding benchmarks & PKR cost)'),
                 ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
                 ('/blog/cheap-ai-subscriptions-pakistan/', 'Cheap AI subscriptions in Pakistan under PKR 1,000'),
                 ('/blog/where-to-buy-ai-tools-pakistan/', 'Where to buy verified AI tools safely in Pakistan'),
@@ -339,6 +464,8 @@ def build_pages(products, origin, shell, write):
                 '/blog/faceless-youtube-automation-ai-tools-pakistan/': ('CREATOR STACK', 'Read YouTube guide →'),
                 '/blog/ai-subscription-prices-pakistan/': ('PKR PRICING 2026', 'Read pricing guide →'),
                 '/blog/best-ai-tools-for-students-pakistan/': ('STUDENT & RESEARCH', 'Read student guide →'),
+                '/blog/cheap-ai-tools-for-students-pakistan/': ('STUDENT & BUDGET', 'Read student guide →'),
+                '/blog/deepseek-vs-chatgpt-plus-pakistan/': ('MODEL COMPARISON', 'Compare DeepSeek & ChatGPT →'),
             }
             blog_entries = []
             for a in BLOG['articles']:

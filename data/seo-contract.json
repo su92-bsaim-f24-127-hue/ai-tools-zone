@@ -1,6 +1,6 @@
 {
-  "expected_pages": 98,
-  "reason": "Added /blog/cheap-ai-tools-for-students-pakistan/ for student budget AI tool search discovery",
+  "expected_pages": 99,
+  "reason": "Phase 9 release: Published Article 1 /blog/deepseek-vs-chatgpt-plus-pakistan/ to capture low-competition Pakistani search queries and provide internal link equity to chatgpt product and comparison pages.",
   "routes": [
     "/",
     "/about/",
@@ -25,6 +25,7 @@
     "/blog/cheap-ai-subscriptions-pakistan/",
     "/blog/cheap-ai-tools-for-students-pakistan/",
     "/blog/cursor-vs-copilot-pakistan/",
+    "/blog/deepseek-vs-chatgpt-plus-pakistan/",
     "/blog/faceless-youtube-automation-ai-tools-pakistan/",
     "/blog/free-ai-tools-pakistan/",
     "/blog/how-to-earn-money-with-ai-pakistan/",

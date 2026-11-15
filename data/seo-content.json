@@ -20,11 +20,16 @@
         ]
       ],
       "related": [
+        "/products/chatgpt-plus/",
+        "/products/gemini-pro/",
+        "/products/claude-pro/",
+        "/products/perplexity-pro/",
         "/compare/chatgpt-vs-gemini/",
+        "/compare/chatgpt-vs-claude/",
+        "/blog/deepseek-vs-chatgpt-plus-pakistan/",
+        "/blog/how-to-pay-for-chatgpt-plus-pakistan/",
         "/use-cases/ai-tools-for-students/",
-        "/alternatives/chatgpt/",
-        "/compare/claude-vs-gemini/",
-        "/compare/chatgpt-vs-claude/"
+        "/pricing/"
       ],
       "meta_title": "AI Assistants & Writing Tools in Pakistan | AI Tools Zone",
       "meta_description": "Compare top AI writing assistants in Pakistan. Review verified PKR prices and plan details for ChatGPT Plus, Gemini Pro, Claude Pro, and Perplexity."
@@ -55,6 +60,7 @@
         "/products/veo-3-ultra/",
         "/compare/capcut-vs-runway/",
         "/blog/best-ai-video-generators-pakistan/",
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/",
         "/use-cases/ai-tools-for-creators/",
         "/pricing/"
       ],
@@ -75,7 +81,7 @@
       "faq": [
         [
           "Is Canva Pro Edu the same as a regular Canva Pro subscription?",
-          "Canva says Canva Education is free for eligible K\u201312 teachers and schools; eligibility is not universal and higher-education institutions are excluded. This marketplace's Pro Edu invitation is a seller-listed offer, not proof of Canva Education eligibility or an official Canva entitlement. Ask who controls the account, what role qualifies, and what happens if access is declined; check Canva's current rules before paying."
+          "Canva says Canva Education is free for eligible K–12 teachers and schools; eligibility is not universal and higher-education institutions are excluded. This marketplace's Pro Edu invitation is a seller-listed offer, not proof of Canva Education eligibility or an official Canva entitlement. Ask who controls the account, what role qualifies, and what happens if access is declined; check Canva's current rules before paying."
         ],
         [
           "Can I use generated images in client work?",
@@ -90,6 +96,7 @@
         "/compare/leonardo-vs-midjourney/",
         "/compare/canva-vs-adobe/",
         "/blog/best-ai-image-generators-pakistan/",
+        "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/",
         "/pricing/"
       ],
       "title": "Graphic Design & AI Image Tools in Pakistan",
@@ -117,10 +124,12 @@
         ]
       ],
       "related": [
+        "/products/elevenlabs/",
+        "/compare/elevenlabs-vs-playht/",
+        "/blog/faceless-youtube-automation-ai-tools-pakistan/",
         "/use-cases/ai-tools-for-creators/",
         "/categories/ai-video/",
-        "/guides/choose-ai-subscription/",
-        "/compare/elevenlabs-vs-playht/"
+        "/pricing/"
       ],
       "meta_title": "AI Voice & Audio Narration in Pakistan | AI Tools Zone",
       "meta_description": "Explore AI voice generation and speech cloning tools in Pakistan. Compare ElevenLabs voiceover plans and pricing in PKR with WhatsApp support."
@@ -145,9 +154,13 @@
         ]
       ],
       "related": [
+        "/products/cursor-pro/",
+        "/products/github-copilot-pro/",
+        "/compare/replit-vs-lovable/",
+        "/blog/cursor-vs-copilot-pakistan/",
+        "/blog/deepseek-vs-chatgpt-plus-pakistan/",
         "/use-cases/ai-tools-for-developers/",
-        "/use-cases/ai-tools-for-business/",
-        "/guides/private-vs-shared-access/"
+        "/pricing/"
       ],
       "meta_title": "AI Coding & App Development in Pakistan | AI Tools Zone",
       "meta_description": "Accelerate coding and app building in Pakistan with AI developer tools. Compare Cursor AI, GitHub Copilot, Replit Core, and Lovable Pro in PKR."
@@ -172,10 +185,15 @@
         ]
       ],
       "related": [
-        "/use-cases/ai-tools-for-business/",
+        "/products/notion-plus/",
+        "/products/gamma-pro/",
+        "/products/quillbot-premium/",
+        "/products/grammarly-premium/",
+        "/compare/grammarly-vs-quillbot-vs-wordai/",
+        "/blog/ai-tools-for-pakistani-students-research-thesis/",
+        "/blog/cheap-ai-tools-for-students-pakistan/",
         "/use-cases/ai-tools-for-students/",
-        "/guides/private-vs-shared-access/",
-        "/compare/grammarly-vs-quillbot-vs-wordai/"
+        "/pricing/"
       ],
       "meta_title": "AI Productivity & Workspace in Pakistan | AI Tools Zone",
       "meta_description": "Boost personal and team efficiency in Pakistan with AI productivity tools. Review Notion Business, Gamma Pro, Grammarly, and QuillBot in PKR."
@@ -227,7 +245,8 @@
         ]
       ],
       "related": [
-        "/guides/private-vs-shared-access/",
+        "/products/netflix-premium/",
+        "/products/youtube-premium/",
         "/pricing/",
         "/terms/"
       ],
@@ -254,9 +273,12 @@
         ]
       ],
       "related": [
+        "/products/n8n-starter/",
+        "/blog/ai-agency-automation-pakistan-n8n-make/",
+        "/blog/ai-phone-agents-whatsapp-bots-pakistan/",
         "/use-cases/ai-tools-for-business/",
         "/categories/productivity/",
-        "/guides/choose-ai-subscription/"
+        "/pricing/"
       ],
       "meta_title": "Business & Professional Plans in Pakistan | AI Tools Zone",
       "meta_description": "Advance career and corporate growth in Pakistan with business subscriptions. Explore LinkedIn Premium and Coursera Plus with verified PKR pricing."
@@ -281,10 +303,12 @@
         ]
       ],
       "related": [
-        "/guides/private-vs-shared-access/",
+        "/products/nordvpn/",
+        "/products/surfshark-vpn/",
+        "/products/windows-11-pro/",
+        "/compare/helium10-vs-semrush-vs-vidiq/",
         "/pricing/",
-        "/terms/",
-        "/compare/helium10-vs-semrush-vs-vidiq/"
+        "/terms/"
       ],
       "meta_title": "Genuine Software Licenses in Pakistan | AI Tools Zone",
       "meta_description": "Buy authentic software licenses in Pakistan with reliable activation support. Compare Windows 11 Pro retail keys and Office 365 in verified PKR plans."
@@ -1324,7 +1348,7 @@
         ],
         [
           "What is the cost per minute of generated voiceover for YouTube?",
-          "A 1,000-character script roughly equals 1 minute of spoken audio. The 30,000-character allowance on our ElevenLabs plan (PKR 3,300) yields approximately 30 minutes of high-grade generated voiceover audio\u2014sufficient for 3\u20135 long-form YouTube videos or 30+ short-form TikTok voice tracks."
+          "A 1,000-character script roughly equals 1 minute of spoken audio. The 30,000-character allowance on our ElevenLabs plan (PKR 3,300) yields approximately 30 minutes of high-grade generated voiceover audio—sufficient for 3–5 long-form YouTube videos or 30+ short-form TikTok voice tracks."
         ]
       ],
       "related": [
