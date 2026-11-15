@@ -408,6 +408,18 @@ def build_pages(products, origin, shell, write):
             content += '</section>'
         content += '<section class="content-block"><h2>Official references</h2><ul>'+''.join('<li><a href="'+e(ref['url'])+'" target="_blank" rel="noopener noreferrer">'+e(ref['name'])+'</a></li>' for ref in article['references'])+'</ul><p>Provider documentation describes its own product and policies; verify current availability and requirements before choosing a service.</p></section>'
         content += faq_html(article['faq'])
+        prod_links = [r for r in article.get('related', []) if r.startswith('/products/')]
+        if prod_links:
+            primary_product = prod_links[0]
+            prod_name = label_for(primary_product)
+            content += (
+                f'<section class="content-block">'
+                f'<h2>Need verified AI tools in Pakistan without bank card declines?</h2>'
+                f'<p>Avoid international transaction blocks, exchange rate markups, and account suspension risks. AI Tools Zone provides verified private accounts and subscriptions with instant delivery (15–30 min) and local wallet settlement via JazzCash, EasyPaisa, or Pakistani bank transfer.</p>'
+                f'<p><a class="button button-lime" href="{primary_product}">View {e(prod_name)} plan &amp; PKR price ↗</a> '
+                f'<a class="button button-outline" href="https://wa.me/923430173923?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20am%20inquiring%20about%20a%20subscription%20after%20reading%20your%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
+                f'</section>'
+            )
         content += '<section class="content-block"><h2>Explore related AI Tools Zone pages</h2>'+links(article['related'])+'</section>'
         article_schema={
             '@type':'Article','@id':origin+path+'#article','headline':article['title'],
