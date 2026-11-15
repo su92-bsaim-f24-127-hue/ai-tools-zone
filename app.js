@@ -19,7 +19,7 @@
   const modalHistory = [];
   let finderChoices = {intent:'writing', budget:'3000', access:'all'};
   const modal = $('#modal'), content = $('#modal-content');
-  const mark = p => `<span class="tool-mark mark-${p.id}"><img src="${escape(p.logo)}" alt="" width="64" height="64" loading="lazy" decoding="async"></span>`;
+  const mark = p => `<span class="tool-mark mark-${p.id}"><img src="${escape(p.logo)}" alt="${escape(p.name)} logo" width="64" height="64" loading="lazy" decoding="async"></span>`;
   const waUrl = text => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
   const singleMessage = p => p.orderMessage || `Assalam-o-Alaikum AI Tools Zone!\nI would like to order:\n\n${p.name}\nListed price: ${money(p.price)}\nDuration: ${p.duration}\nAccess: ${p.access}\nDelivery estimate: ${p.delivery}\nReplacement warranty: ${p.warranty}\n\nPlease confirm availability, plan limits, final price and payment details.`;
   const waLink = (message, text, classes = 'button button-lime', product = '') => `<a data-product-id="${escape(product)}" class="${classes}" href="${escape(waUrl(message))}" target="_blank" rel="noopener noreferrer">${text} <span>↗</span></a>`;
@@ -54,7 +54,7 @@
   $('.close-modal').addEventListener('click', closeModal);
   modal.addEventListener('click', e => {if(e.target === modal){const r = modal.getBoundingClientRect();if(e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeModal();}});
   function renderTabs() {const focused=document.activeElement?.dataset.category;$('#category-tabs').innerHTML = ['All tools',...categories].map(c => `<button data-category="${escape(c)}" class="${category === c ? 'active' : ''}" aria-pressed="${category === c}">${escape(c)}</button>`).join('');if(focused)$$('[data-category]').find(el=>el.dataset.category===focused)?.focus({preventScroll:true});}
-  function card(p) {return `<article class="product-card" data-product="${p.id}"><div class="product-card-top">${mark(p)}<span class="badge">${escape(p.badge || p.access)}</span></div><div class="product-category">${escape(p.category)}</div><h3><a href="products/${p.slug}/">${escape(p.name)}</a></h3><p>${escape(p.description)}</p><div class="plan-meta"><span>${escape(p.duration)}</span><span>${escape(p.access)}</span></div><div class="card-price">${priceMarkup(p)}</div><div class="card-actions"><a class="button buy-now" data-product-id="${p.id}" href="${escape(waUrl(singleMessage(p)))}" target="_blank" rel="noopener noreferrer" aria-label="Order ${escape(p.name)}">Order Plan <span>↗</span></a><button class="details-button" data-detail="${p.id}" aria-label="Quick view ${escape(p.name)}">ⓘ</button></div><label class="card-compare"><input type="checkbox" data-compare="${p.id}" ${selected.has(p.id)?'checked':''}> Compare tool</label></article>`;}
+  function card(p) {return `<article class="product-card" data-product="${p.id}"><div class="product-card-top">${mark(p)}<span class="badge">${escape(p.badge || p.access)}</span></div><div class="product-category">${escape(p.category)}</div><h3><a href="products/${p.slug}/">${escape(p.name)}</a></h3><p>${escape(p.description)}</p><div class="plan-meta"><span>${escape(p.duration)}</span><span>${escape(p.access)}</span></div><div class="card-price">${priceMarkup(p)}</div><div class="card-actions"><a class="button buy-now" href="${escape(waUrl(singleMessage(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="${p.id}" aria-label="Order ${escape(p.name)}">Order Plan <span>↗</span></a><a class="details-button" href="products/${p.slug}/" data-detail="${p.id}" aria-label="View ${escape(p.name)} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="${p.id}" ${selected.has(p.id)?'checked':''}> Compare tool</label></article>`;}
   function renderProducts() {
     const rawQuery = $('#search').value.trim(), query = rawQuery.toLowerCase(), intent=$('#intent-filter').value, duration=$('#duration-filter').value, access = $('#access-filter').value;
     const budget = $('#budget-filter').value === '' ? Infinity : Math.max(0, Number($('#budget-filter').value));
@@ -118,7 +118,7 @@
   });
   document.addEventListener('click',e=>{
     const target=e.target.closest('button,a');if(!target)return;
-    if(target.hasAttribute('data-detail'))details(target.dataset.detail);
+    if(target.hasAttribute('data-detail')){e.preventDefault();details(target.dataset.detail);}
     if(target.hasAttribute('data-finder')){finder();Object.entries(finderChoices).forEach(([name,value])=>{$(`[name="${name}"]`,content).value=value;});}
     if(target.hasAttribute('data-open-compare'))renderCompare();
     if(target.hasAttribute('data-edit-compare'))comparePicker();
