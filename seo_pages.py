@@ -179,6 +179,7 @@ def tiles(entries):
 
 PRODUCT_GUIDES = {
     'chatgpt': [
+        ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to buy ChatGPT Plus in Pakistan: price, access & setup'),
         ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
         ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
         ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude 3.5 Sonnet comparison'),
@@ -230,6 +231,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'capcut': [
+        ('/ai-video-editing-tools-pakistan/', 'Best AI video editing tools in Pakistan (CapCut, Descript & Runway)'),
         ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
         ('/blog/best-ai-video-generators-pakistan/', 'Best AI video generators in Pakistan (2026)'),
         ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
@@ -247,6 +249,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'leonardo': [
+        ('/ai-image-generator-subscriptions-pakistan/', 'Best AI image generator subscriptions in Pakistan (Canva, Leonardo & Midjourney)'),
         ('/compare/leonardo-vs-midjourney/', 'Leonardo AI vs Midjourney comparison'),
         ('/blog/best-ai-image-generators-pakistan/', 'Best AI image generators in Pakistan (2026)'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
