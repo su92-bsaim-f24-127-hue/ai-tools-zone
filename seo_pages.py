@@ -33,7 +33,7 @@ HUBS = {
     'compare': ('Compare AI Tools & Subscriptions', 'Compare top AI tools side by side for Pakistani users. Evaluate feature differences, workflow fit, and verified PKR pricing before purchasing.'),
     'alternatives': ('AI Tool Alternatives in Pakistan', 'Explore budget-friendly AI tool alternatives in Pakistan. Compare features, access types, and listed PKR prices to find the right software fit.'),
     'guides': ('AI Subscription Buying Guides Pakistan', 'Practical buying guides for AI tools in Pakistan. Learn how to verify account access types, compare PKR prices, and avoid common subscription risks.'),
-    'pricing': ('AI Tools Pricing in Pakistan (PKR Plans)', 'Compare all AI tool subscription prices in Pakistan. Find budget plans under PKR 1,000 and PKR 2,000 with local payment options and WhatsApp ordering.'),
+    'pricing': ('AI Tool Prices in Pakistan — ChatGPT Plus PKR 2,300/mo', 'Compare all 32 AI subscription prices in Pakistan: ChatGPT Plus PKR 2,300/mo, plans from PKR 450. Pay via JazzCash, Easypaisa or bank — order on WhatsApp.'),
     'blog': ('AI Tools Guides & News in Pakistan', 'Read practical guides, tutorials, and price comparisons for AI tools in Pakistan. Expert advice on local payments, freelancing, and creative workflows.')
 }
 e = lambda value: escape(str(value if value is not None else ''), quote=True)
