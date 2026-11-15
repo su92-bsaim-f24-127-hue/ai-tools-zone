@@ -358,7 +358,7 @@ def build_pages(products, origin, shell, write):
     by_id = {p['id']:p for p in products}
     disclaimer = '<p class="offer-note">Prices describe AI Tools Zone offers, not official vendor pricing. Availability, included features, eligibility and the final price are confirmed before payment. <a href="/guides/choose-ai-subscription/">See the buying checklist</a> and <a href="/guides/catalog-methodology/">how we compare offers</a>.</p>'
 
-    def publish(path, title, description, content, listed=(), crumbs=None, extra_schema=()):
+    def publish(path, title, description, content, listed=(), crumbs=None, extra_schema=(), seo_title=None, seo_description=None):
         items = crumbs or [('Home','/'), (title,path)]
         graph = [breadcrumb_schema(origin,items)]
         if listed:
@@ -366,7 +366,17 @@ def build_pages(products, origin, shell, write):
         graph.extend(extra_schema)
         h1_tag = '' if path == '/guides/' else f'<h1>{e(title)}</h1>'
         body = '<main id="main" class="wrap editorial-page">' + breadcrumbs(items) + h1_tag + content + '</main>'
-        write(path.strip('/')+'/index.html',shell(title+' | AI Tools Zone', description, path, body, {'@context':'https://schema.org','@graph':graph}, '/'))
+        # SERP-only display fields: seo_title/seo_description change only what
+        # search results and social shares show (<title>, meta description and
+        # the OG/Twitter/WebPage values shell() derives from them). H1,
+        # breadcrumbs and schema headlines keep using title/description.
+        # seo_title values in the data already carry the brand suffix; only
+        # append it when missing so it is never doubled.
+        display_title = seo_title if seo_title else title+' | AI Tools Zone'
+        if seo_title and not seo_title.endswith(' | AI Tools Zone'):
+            display_title = seo_title+' | AI Tools Zone'
+        display_description = seo_description if seo_description else description
+        write(path.strip('/')+'/index.html',shell(display_title, display_description, path, body, {'@context':'https://schema.org','@graph':graph}, '/'))
         paths.append(path)
 
     for c in CONTENT['categories']:
@@ -443,7 +453,8 @@ def build_pages(products, origin, shell, write):
         if article.get('dateModified'):
             article_schema['dateModified'] = article['dateModified']
         publish(path,article['title'],article['description'],content,(),
-                [('Home','/'),('Blog','/blog/'),(article['title'],path)],(article_schema,))
+                [('Home','/'),('Blog','/blog/'),(article['title'],path)],(article_schema,),
+                seo_title=article.get('meta_title'),seo_description=article.get('meta_description'))
 
     for guide in GROWTH_GUIDES:
         path = guide['path']
