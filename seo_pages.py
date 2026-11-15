@@ -24,6 +24,8 @@ CATALOG = json.loads(CATALOG_FILE.read_text(encoding='utf-8')) if CATALOG_FILE.i
 PRODUCTS_BY_PATH = {'/products/' + p['slug'] + '/': p['name'] for p in CATALOG if 'slug' in p and 'name' in p}
 WHATSAPP_NUMBER = ''.join(ch for ch in str(SETTINGS.get('whatsappNumber','')) if ch.isdigit())
 CATEGORIES = {c['name']: c for c in CONTENT['categories']}
+GROWTH_GUIDES_FILE = ROOT / 'data/growth-guides.json'
+GROWTH_GUIDES = json.loads(GROWTH_GUIDES_FILE.read_text(encoding='utf-8'))['guides'] if GROWTH_GUIDES_FILE.is_file() else []
 HUBS = {
     'products': ('All AI Tools & Subscriptions in Pakistan', 'Explore all 32 AI tools and digital software subscriptions in Pakistan. Compare verified PKR plans, duration, and access types with WhatsApp ordering.'),
     'categories': ('Browse AI Tools & Software Categories', 'Browse AI tools and digital subscriptions in Pakistan by workflow category: AI assistants, video, voice, graphic design, development, and productivity.'),
@@ -105,6 +107,9 @@ def label_for(path):
     for article in BLOG['articles']:
         if article['path'] in (path, normalized):
             return article['title']
+    for guide in GROWTH_GUIDES:
+        if guide['path'] in (path, normalized):
+            return guide['title']
     if normalized in PRODUCTS_BY_PATH:
         return PRODUCTS_BY_PATH[normalized]
     if path in PRODUCTS_BY_PATH:
@@ -314,6 +319,11 @@ def home_discovery():
             '<h2 id="buying-guides">Choose with a clearer picture: explore hubs, use cases, and guides.</h2>'
             '<p>Compare complete subscription plans, evaluate workflow options for your career or business, and review verified access terms before you buy.</p>'
             + links([
+                ('/buy-ai-tools-in-pakistan/', 'Buy AI Tools in Pakistan: Master Buying Guide & PKR Pricing'),
+                ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to Buy ChatGPT Plus in Pakistan: Price, Access & Setup'),
+                ('/best-ai-tools-for-students-pakistan/', 'Best Affordable AI Tools for Students in Pakistan'),
+                ('/ai-video-editing-tools-pakistan/', 'Best AI Video Editing Tools in Pakistan (CapCut, Descript & Runway)'),
+                ('/ai-image-generator-subscriptions-pakistan/', 'Best AI Image Generator Subscriptions in Pakistan (Canva, Leonardo & Midjourney)'),
                 ('/products/', 'All 32 AI tools & digital subscriptions in Pakistan'),
                 ('/pricing/', 'Compare AI tool subscription prices in PKR'),
                 ('/categories/', 'Browse AI tools across 10 workflow categories'),
@@ -431,6 +441,63 @@ def build_pages(products, origin, shell, write):
             article_schema['dateModified'] = article['dateModified']
         publish(path,article['title'],article['description'],content,(),
                 [('Home','/'),('Blog','/blog/'),(article['title'],path)],(article_schema,))
+
+    for guide in GROWTH_GUIDES:
+        path = guide['path']
+        selected = [by_id[id] for id in guide.get('products', []) if id in by_id]
+        content = '<p class="direct-answer">' + e(guide['summary']) + '</p>'
+        separator = chr(183)
+        date_line = 'Published <time datetime="' + e(guide['datePublished']) + '">November 15, 2026</time>'
+        if guide.get('dateModified'):
+            date_line += ' ' + separator + ' Updated <time datetime="' + e(guide['dateModified']) + '">November 15, 2026</time>'
+        content += '<p class="article-date">' + date_line + ' ' + separator + ' Verified Buyer Guide</p>'
+        if selected:
+            content += '<section class="content-block"><h2>Featured verified plans &amp; PKR prices</h2>' + plan_table(selected, 'Verified Pakistani plans &amp; pricing') + disclaimer + '</section>'
+        for section in guide['sections']:
+            content += '<section class="content-block"><h2>' + e(section['heading']) + '</h2>'
+            content += ''.join('<p>' + render_text(paragraph) + '</p>' for paragraph in section.get('paragraphs', []))
+            if section.get('table'):
+                t = section['table']
+                caption = t.get('caption', section['heading'])
+                headers = t.get('headers', [])
+                rows = t.get('rows', [])
+                thead = ''.join(f'<th scope="col">{e(h)}</th>' for h in headers)
+                tbody_rows = []
+                for row in rows:
+                    cells = ''.join(f'<td>{render_text(c)}</td>' if idx > 0 else f'<th scope="row">{render_text(c)}</th>' for idx, c in enumerate(row))
+                    tbody_rows.append(f'<tr>{cells}</tr>')
+                content += f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr>{thead}</tr></thead><tbody>{"".join(tbody_rows)}</tbody></table></div>'
+            if section.get('bullets'):
+                content += '<ul>' + ''.join('<li>' + render_text(item) + '</li>' for item in section['bullets']) + '</ul>'
+            content += '</section>'
+        if guide.get('references'):
+            content += '<section class="content-block"><h2>Official product sources &amp; vendor links</h2><ul>' + ''.join('<li><a href="' + e(ref['url']) + '" target="_blank" rel="noopener noreferrer">' + e(ref['name']) + ' ↗</a></li>' for ref in guide['references']) + '</ul><p>Official vendor websites govern global terms, direct USD pricing, and native capabilities. AI Tools Zone provides independent domestic procurement and PKR settlement in Pakistan.</p></section>'
+        if guide.get('faq'):
+            content += faq_html(guide['faq'])
+        content += (
+            f'<section class="content-block">'
+            f'<h2>Ready to order verified AI tools in Pakistan?</h2>'
+            f'<p>Avoid international bank card declines and foreign currency exchange markups. AI Tools Zone provides verified premium subscriptions with fast 15–30 minute delivery and local payment via JazzCash, Easypaisa, or bank transfer (IBFT).</p>'
+            f'<p><a class="button button-lime" href="/products/">Browse all 32 tools &amp; PKR prices ↗</a> '
+            f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20would%20like%20to%20inquire%20about%20a%20subscription%20after%20reading%20your%20buying%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
+            f'</section>'
+        )
+        if guide.get('related'):
+            content += '<section class="content-block"><h2>Explore related AI tools &amp; guides</h2>' + links(guide['related']) + '</section>'
+        article_schema = {
+            '@type': 'Article',
+            '@id': origin + path + '#article',
+            'headline': guide['title'],
+            'description': guide['description'],
+            'datePublished': guide['datePublished'],
+            'dateModified': guide.get('dateModified', guide['datePublished']),
+            'inLanguage': 'en-PK',
+            'mainEntityOfPage': origin + path,
+            'author': {'@id': origin + '/#organization'},
+            'publisher': {'@id': origin + '/#organization'}
+        }
+        publish(path, guide['title'], guide['description'], content, selected,
+                [('Home', '/'), (guide['title'], path)], (article_schema,))
 
     for hub,(title,intro) in HUBS.items():
         content='<p class="direct-answer">'+e(intro)+'</p>'
@@ -647,6 +714,11 @@ def build_llms_txt(origin, products):
         "## Key Store Sections\n\n",
         f"- [Current offers]({origin}/products/): {len(products)} currently active catalog listings.\n",
         f"- [PKR pricing]({origin}/pricing/): Compare listed offers and plan terms.\n",
+        f"- [Buy AI Tools in Pakistan]({origin}/buy-ai-tools-in-pakistan/): Comprehensive buying guide for premium AI accounts, access models, and PKR payments.\n",
+        f"- [How to Buy ChatGPT Plus in Pakistan]({origin}/how-to-buy-chatgpt-plus-in-pakistan/): Complete purchasing guide for ChatGPT Plus subscriptions in PKR.\n",
+        f"- [Best AI Tools for Students in Pakistan]({origin}/best-ai-tools-for-students-pakistan/): Guide to affordable AI tools for students across 9 academic workflows.\n",
+        f"- [AI Video Editing Tools in Pakistan]({origin}/ai-video-editing-tools-pakistan/): Review of top AI video editors with PKR prices.\n",
+        f"- [AI Image Generator Subscriptions in Pakistan]({origin}/ai-image-generator-subscriptions-pakistan/): Commercial image generation subscriptions and licensing.\n",
         f"- [AI Subscription Prices in Pakistan]({origin}/blog/ai-subscription-prices-pakistan/): 2026 PKR price guide, access tiers and payment methods.\n",
         f"- [Best AI Tools for Students in Pakistan]({origin}/blog/best-ai-tools-for-students-pakistan/): Academic research workflows and HEC ethical compliance guide.\n",
         f"- [Cheap AI Tools for Students in Pakistan]({origin}/blog/cheap-ai-tools-for-students-pakistan/): 2026 student guide comparing affordable AI tools, free tiers, and PKR subscription prices.\n",

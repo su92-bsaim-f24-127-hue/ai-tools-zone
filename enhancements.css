@@ -214,3 +214,30 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 .article-featured-image{margin:24px 0 32px;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:var(--panel);max-width:100%}
 .article-featured-image img{width:100%;height:auto;max-width:100%;display:block;object-fit:cover;aspect-ratio:1200/630}
 
+/* Best Seller AI Assistants Section */
+.bestsellers-section{border-top:1px solid var(--border);padding-top:70px}
+.bestsellers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-block:20px 32px}
+.bestseller-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
+.bestseller-card:hover{border-color:var(--lime);transform:translateY(-2px)}
+.bestseller-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.bestseller-card-top .badge{background:#ffffff10;border:1px solid var(--border);border-radius:6px;padding:3px 9px;font-size:11px;font-weight:600;color:var(--lime)}
+.bestseller-card h3{font-size:18px;margin:0 0 8px;font-weight:700}
+.bestseller-card h3 a:hover{color:var(--lime)}
+.bestseller-card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 14px}
+.bestseller-specs{list-style:none;padding:0;margin:0 0 16px;font-size:12px;color:var(--muted);line-height:1.7}
+.bestseller-specs li{display:flex;justify-content:space-between;border-bottom:1px solid #ffffff0a;padding-block:4px}
+.bestseller-specs strong{color:var(--text)}
+.bestseller-card-bottom{margin-top:auto}
+.bestseller-card-bottom .card-price{margin-bottom:12px}
+
+/* Homepage FAQ Semantic Accordion Tweaks */
+.faq-section .faq-item{border-bottom:1px solid var(--border)}
+.faq-section .faq-accordion{border-bottom:none;padding-block:6px}
+.faq-section .faq-summary{padding-block:16px 12px}
+.faq-section .faq-summary h3{font-size:14px;font-weight:600;color:var(--text);margin:0;letter-spacing:-.2px;display:inline}
+.faq-section .faq-accordion[open] .faq-summary h3{color:var(--lime)}
+.faq-section .faq-body{padding-block:4px 14px}
+.faq-section .faq-body p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 6px 0}
+.faq-section .faq-body a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
+
+

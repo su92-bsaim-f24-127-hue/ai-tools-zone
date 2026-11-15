@@ -15,7 +15,7 @@ from seo_pages import content_date
 ROOT=Path(__file__).parent
 ORIGIN='https://aitoolszone.tech'
 WHATSAPP_NUMBER=''.join(ch for ch in json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))['whatsappNumber'] if ch.isdigit())
-FOLDERS=('products','categories','use-cases','compare','alternatives','guides','pricing','blog','about','privacy','terms','faq')
+FOLDERS=('products','categories','use-cases','compare','alternatives','guides','pricing','blog','about','privacy','terms','faq','buy-ai-tools-in-pakistan','how-to-buy-chatgpt-plus-in-pakistan','best-ai-tools-for-students-pakistan','ai-video-editing-tools-pakistan','ai-image-generator-subscriptions-pakistan')
 
 class Page(HTMLParser):
     def __init__(self, text):
