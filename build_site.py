@@ -78,7 +78,7 @@ for product in all_products: product['orderMessage']=message(product)
 def mark(p,prefix=''):
  return f'<span class="tool-mark mark-{p["id"]}"><img src="{prefix}{p["logo"]}" alt="{e(p['name'])} logo" width="64" height="64" loading="lazy" decoding="async"></span>'
 def card(p):
- return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p.get('badge') or p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price">{price_markup(p)}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><a class="details-button" href="products/{p['slug']}/" aria-label="View {e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare tool</label></article>'''
+ return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p.get('badge') or p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price">{price_markup(p)}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Order {e(p['name'])}">Order Plan <span>↗</span></a><a class="details-button" href="products/{p['slug']}/" aria-label="View {e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare tool</label></article>'''
 def structured(data):
  return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+'</script>'
 def analytics_tag(path):
@@ -94,10 +94,11 @@ def metadata(title,description,path,kind='website',og_title=None,og_description=
  url=ORIGIN+path
  og_t = og_title or title
  og_d = og_description or description
- og_img = og_image or (ORIGIN+'/assets/og-image.webp')
+ og_img = og_image or (ORIGIN+'/assets/og-image.jpg')
  tw_t = twitter_title or og_t
  tw_d = twitter_description or og_d
  tw_img = twitter_image or og_img
+ mime_type = "image/png" if og_img.endswith(".png") else "image/jpeg" if og_img.endswith((".jpg",".jpeg")) else "image/webp"
  return f'''<link rel="canonical" href="{url}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="{kind}">
@@ -105,9 +106,11 @@ def metadata(title,description,path,kind='website',og_title=None,og_description=
 <meta property="og:description" content="{e(og_d)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{og_img}">
+<meta property="og:image:secure_url" content="{og_img}">
+<meta property="og:image:type" content="{mime_type}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AI Tools Zone logo — digital subscriptions in Pakistan">
+<meta property="og:image:alt" content="AI Tools Zone — digital subscriptions in Pakistan">
 <meta property="og:site_name" content="AI Tools Zone">
 <meta property="og:locale" content="en_PK">
 <meta name="twitter:card" content="summary_large_image">
@@ -148,9 +151,9 @@ og_title='AI Subscriptions in Pakistan | AI Tools Zone'
 og_description='Compare AI subscriptions, digital tools, access options and transparent PKR pricing in Pakistan.'
 twitter_title='AI Subscriptions in Pakistan | AI Tools Zone'
 twitter_description='Explore AI tools and digital subscriptions with PKR pricing in Pakistan.'
-og_image=f'{ORIGIN}/assets/og-image.webp'
+og_image=f'{ORIGIN}/assets/og-image.jpg'
 schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','name':'AI tools and digital subscriptions','itemListElement':[{'@type':'ListItem','position':i+1,'url':ORIGIN+'/products/'+p['slug']+'/','name':p['name']} for i,p in enumerate(products)]}]}
-schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'}})
+schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'},'datePublished':'2026-10-26T00:00:00+05:00','dateModified':'2026-11-15T08:00:00+05:00'})
 home=home.replace('<!-- GOOGLE_TAG -->',analytics_tag('/'))
 home=home.replace('<!-- SEO_HEAD -->',metadata(title,description,'/',kind='website',og_title=og_title,og_description=og_description,og_image=og_image,twitter_title=twitter_title,twitter_description=twitter_description,twitter_image=og_image)+'\n'+structured(schema))
 home=re.sub(r'<!-- CATALOG_START -->.*?<!-- CATALOG_END -->','<div id="product-grid" class="product-grid">'+''.join(map(card,products))+'</div>',home,flags=re.S)
@@ -165,7 +168,7 @@ total=sum(p['price'] for p in bundle)
 bundle_message='I would like the AI Tools Zone creator stack:\n'+'\n'.join(f'{p["name"]}: {money(p["price"])} | {p["duration"]} | {p["access"]}' for p in bundle)+f'\nCombined listed price: {money(total)}. Please confirm availability, limits and payment details.'
 home=home.replace('id="buy-stack" href="https://wa.me/'+WA+'"','id="buy-stack" href="'+e(wa(bundle_message))+'" target="_blank" rel="noopener noreferrer"')
 home=home.replace('PKR 7,400 <small>',money(total)+' <small>')
-home=home.replace('    <section id="categories"','    <section class="answer-strip wrap" aria-labelledby="pricing-overview"><h2 id="pricing-overview">AI Subscription Prices in Pakistan</h2><p>AI Tools Zone is an independent digital marketplace for creators, students and businesses in Pakistan. Whether you need <a href="products/">premium AI accounts in Pakistan</a> for engineering, <a href="pricing/">affordable AI subscriptions</a> for startups, <a href="use-cases/ai-tools-for-students/">AI tools for students</a> and academic research, <a href="categories/ai-video/">AI video editing tools</a>, or <a href="categories/design/">AI image generation tools</a>, compare seller-listed prices in PKR, read each plan’s access type and duration, and select Order on WhatsApp to discuss your order on WhatsApp. Availability and plan limits are confirmed before payment. Read our guide on <a href="blog/where-to-buy-ai-tools-pakistan/">where to buy AI tools in Pakistan</a>.</p><p><strong>Subscription durations & prices:</strong> Monthly plans range from PKR 450 (QuillBot) to PKR 5,600 (Bolt.new Pro), while annual options range from PKR 900 (Canva Pro Edu) to PKR 23,000 (Gamma Pro). Subscriptions are listed in clear PKR with no foreign exchange markups. <strong>Account access types:</strong> <em>Private</em> accounts provide dedicated individual credentials. <em>Invitation</em> plans link your personal email to a workspace seat. <em>Shared</em> profiles offer budget communal access with fair-use guidelines. <em>License Key</em> products provide genuine digital activation keys. <strong>Included features & restrictions:</strong> Every active listing specifies seller-confirmed capabilities and replacement warranty periods (7 to 30 days). Official vendor usage limits remain governed by respective platforms.</p><a class="inline-link" href="about/">About AI Tools Zone & contact ↗</a></section>\n    <section id="categories"')
+home=home.replace('    <section id="categories"','    <section class="answer-strip wrap" aria-labelledby="pricing-overview"><h2 id="pricing-overview">AI Subscription Prices in Pakistan</h2><p>AI Tools Zone is an independent digital marketplace for creators, students and businesses in Pakistan. Whether you need <a href="products/">premium AI accounts in Pakistan</a> for engineering, <a href="pricing/">affordable AI subscriptions</a> for startups, <a href="use-cases/ai-tools-for-students/">AI tools for students</a> and academic research, <a href="categories/ai-video/">AI video editing tools</a>, or <a href="categories/design/">AI image generation tools</a>, compare seller-listed prices in PKR, review verified access types and durations, and select any plan to confirm live availability, delivery turnaround, and domestic payment options directly with our team. Availability and plan limits are confirmed before payment. Read our guide on <a href="blog/where-to-buy-ai-tools-pakistan/">where to buy AI tools in Pakistan</a>.</p><p><strong>Subscription durations & prices:</strong> Monthly plans range from PKR 450 (QuillBot) to PKR 5,600 (Bolt.new Pro), while annual options range from PKR 900 (Canva Pro Edu) to PKR 23,000 (Gamma Pro). Subscriptions are listed in clear PKR with no foreign exchange markups. <strong>Account access types:</strong> <em>Private</em> accounts provide dedicated individual credentials. <em>Invitation</em> plans link your personal email to a workspace seat. <em>Shared</em> profiles offer budget communal access with fair-use guidelines. <em>License Key</em> products provide genuine digital activation keys. <strong>Included features & restrictions:</strong> Every active listing specifies seller-confirmed capabilities and replacement warranty periods (7 to 30 days). Official vendor usage limits remain governed by respective platforms.</p><a class="inline-link" href="about/">About AI Tools Zone & contact ↗</a></section>\n    <section id="categories"')
 home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Privacy</a><a href="terms/">Ordering & warranty</a>')
 home=home.replace('<h3>Here to help</h3>','<h3>Here to help</h3><a href="about/">About & contact</a>')
 home=home.replace('<section class="finder-section wrap"',home_discovery()+'<section class="finder-section wrap"')
