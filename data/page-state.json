@@ -367,6 +367,10 @@
     "sha256": "bd98231d84defd230e70787ab8339e6071860ed266740c8b8a65a900ac1d4a0f",
     "lastmod": "2026-11-16"
   },
+  "/blog/why-website-not-ranking-seo-audit/": {
+    "sha256": "f5f9b72a193f35aee21223d8ec2703e9e42ec70138123c4ddd9c2768dfdda86e",
+    "lastmod": "2026-11-16"
+  },
   "/buy-ai-tools-in-pakistan/": {
     "sha256": "5a6dc86ab214ed52320ecb1290f459795e4ea65b6a22c87a240190631491e67c",
     "lastmod": "2026-11-16"
@@ -416,7 +420,7 @@
     "lastmod": "2026-11-16"
   },
   "/blog/": {
-    "sha256": "1c479b2b59423c3cf090a883d35101e4b357335e17b7072ee13eba06abbf43f4",
+    "sha256": "11e3f2b8326fd6c2f94a47bb4924c2a06e534e239241b23570cf8647c6737d78",
     "lastmod": "2026-11-16"
   }
 }

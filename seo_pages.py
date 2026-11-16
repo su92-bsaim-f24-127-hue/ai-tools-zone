@@ -572,6 +572,7 @@ def build_pages(products, origin, shell, write):
                 '/blog/cheap-ai-tools-for-students-pakistan/': ('STUDENT & BUDGET', 'Read student guide →'),
                 '/blog/deepseek-vs-chatgpt-plus-pakistan/': ('MODEL COMPARISON', 'Compare DeepSeek & ChatGPT →'),
                 '/blog/claude-pro-price-in-pakistan/': ('PRICING & BUYING', 'Read Claude price guide →'),
+                '/blog/why-website-not-ranking-seo-audit/': ('SEO AUDIT GUIDE', 'Read SEO audit guide →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
