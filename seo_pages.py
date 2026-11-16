@@ -383,8 +383,11 @@ def build_pages(products, origin, shell, write):
         selected = [p for p in products if p['category']==c['name']]
         if not selected:
             raise ValueError('Empty category: '+c['name'])
+        c_slug = c['slug']
+        c_name = c['name']
+        cat_logo = f'<div class="category-header-badge"><span class="category-icon"><img src="/assets/categories/{c_slug}.svg" alt="{e(c_name)} category logo" width="40" height="40" loading="lazy"></span></div>'
         intro = ''.join('<p>'+render_text(text)+'</p>' for text in c['intro'])
-        content = intro + '<section class="content-block"><h2>Available listings and PKR prices</h2>' + plan_table(selected) + disclaimer + '</section>'
+        content = cat_logo + intro + '<section class="content-block"><h2>Available listings and PKR prices</h2>' + plan_table(selected) + disclaimer + '</section>'
         content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+render_text(c['choose'])+'</p></section>'
         content += faq_html(c['faq']) + '<section class="content-block"><h2>Related decisions</h2>'+links(c['related'])+'</section>'
         content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} official website</a></li>' for p in selected)+'</ul></section>'
@@ -544,7 +547,15 @@ def build_pages(products, origin, shell, write):
             content += '<section class="content-block" id="all-prices"><h2>All digital subscription prices</h2>'+plan_table(sorted(products,key=lambda p:p['price']))+disclaimer+'</section>'
             content += faq_html([('Are these official vendor prices?','No. These are AI Tools Zone seller-listed offers in PKR. Confirm the specific access, eligibility, allowance and final price before payment.'),('Are budget offers automatically equivalent to a full-price subscription?','No. Access type and allowances can differ. Compare the complete offer and check official vendor options before choosing.'),('How are PKR prices kept current?','The marketplace maintains its own catalog. A page update is not a stock check; ask support to reconfirm the offer before paying.')]) + links(['/guides/choose-ai-subscription/','/guides/private-vs-shared-access/'])
         elif hub == 'categories':
-            content += tiles([(category_path(c['name']),c['heading'],c['intro'][0]) for c in CONTENT['categories']])
+            cat_cards = []
+            for c in CONTENT['categories']:
+                c_path = category_path(c['name'])
+                c_slug = c['slug']
+                c_heading = c['heading']
+                c_intro = c['intro'][0]
+                c_name = c['name']
+                cat_cards.append(f'<article class="editorial-card guide-card"><span class="category-icon"><img src="/assets/categories/{c_slug}.svg" alt="{e(c_name)} category logo" width="40" height="40" loading="lazy"></span><h2><a href="{c_path}">{e(c_heading)}</a></h2><p>{e(c_intro)}</p><a class="guide-cta" href="{c_path}">Browse {e(c_name)} →</a></article>')
+            content += '<div class="editorial-grid guide-grid">' + ''.join(cat_cards) + '</div>'
         elif hub == 'blog':
             blog_meta = {
                 '/blog/ai-phone-agents-whatsapp-bots-pakistan/': ('BUSINESS AUTOMATION', 'Read automation guide →'),

@@ -1,7 +1,7 @@
 {
   "/": {
-    "sha256": "dc41a848bd6511a2526d2c94b23c4ba16a06939454636dee7e00c43944ed159e",
-    "lastmod": "2026-11-15"
+    "sha256": "b7ed76750ee9394b7665ccede530ba4778c246b06966c36c293236d58f2acd7b",
+    "lastmod": "2026-11-16"
   },
   "/products/chatgpt-plus/": {
     "sha256": "a19ca4a24298bbb2712da9f552a4b3fdca628c00eacacf054c49033b6f7adb8c",
@@ -148,43 +148,43 @@
     "lastmod": "2026-11-15"
   },
   "/categories/ai-assistants/": {
-    "sha256": "33e2ea0321b96f32a61fd5a097add984a63196eed45739996dfd733dc7b42554",
+    "sha256": "41e94093bfd82b1c86fa392b19ecdd1996ae69989ecffcb212efa1f6d68ea795",
     "lastmod": "2026-11-16"
   },
   "/categories/ai-video/": {
-    "sha256": "a6fefd0f9d00e8656c3174805141a73095eb608e2a89336b7811adb610e50764",
+    "sha256": "23358ceff9907e01ab98622fb7a1baaa5f861ed429d637aaf2fa9bc3ad9870b2",
     "lastmod": "2026-11-16"
   },
   "/categories/design/": {
-    "sha256": "a8b87fa1c570775df49385e8cefcadb4af8f71a55f9b388694c27ece9b7c30e1",
+    "sha256": "b1c9fd4467179883fa1b1917038414922b15d710bc7e5be76d11bf6aabca484d",
     "lastmod": "2026-11-16"
   },
   "/categories/ai-voice/": {
-    "sha256": "c83fc3ace7061b1561423b56038bce86d9e82aa5ae160631d601483230f97c68",
+    "sha256": "b19b7d06a8881a54f4a4a3eeafe6d341f8340ea49066db705aa308b3fa5ccd52",
     "lastmod": "2026-11-16"
   },
   "/categories/development/": {
-    "sha256": "7fd9906c2b79c58c2ba32e45386f76e10d97c41df747aad380e31ca17abf151c",
+    "sha256": "2e0d962f72ed8bbbfc81122702e604ddf02ca09274cef8a50e3881df7f95a520",
     "lastmod": "2026-11-16"
   },
   "/categories/productivity/": {
-    "sha256": "ac4de4a914868072a44f1b13968552906aaf82fb5b0825ecc52e84a09b3ef6f5",
+    "sha256": "75d7e1e464d41082a5c4a38b369e35c8bc72b8d779917a753d7fc39c03492159",
     "lastmod": "2026-11-16"
   },
   "/categories/vpn-security/": {
-    "sha256": "038fcf2265e496d684c4266651f6d08009867ed6e42c14e95b931df2057718c9",
+    "sha256": "8b8563963b543b29e6a65ebf735f53e13f98a701f43a8fac3dee0204e13dfd7a",
     "lastmod": "2026-11-16"
   },
   "/categories/entertainment/": {
-    "sha256": "eda2e0dd08f3c8c9017b1b3928770c72022e26e4389939ba9541c7fcd0984e63",
+    "sha256": "bad2f2b3ab5e76ad99621cf7640c1fe0ade8d9d6e3cb971f3381afd4dc32ef7f",
     "lastmod": "2026-11-16"
   },
   "/categories/business/": {
-    "sha256": "3e77e6cfa3149f20b64625dd01d49ed2b731643edbb0fa7c88128266c74a75fd",
+    "sha256": "20632f36fe063444c535c896f4497141a623869a7a031c36417341d21c10aa47",
     "lastmod": "2026-11-16"
   },
   "/categories/software/": {
-    "sha256": "f71e53f87136a7a7c4a951a08e286959d84cc57f20fa1dc982110536625c8257",
+    "sha256": "9eed6c161f2c42553360d981046a7d087b510e6c467cd9732a35b161601b430a",
     "lastmod": "2026-11-16"
   },
   "/use-cases/ai-tools-for-students/": {
@@ -392,8 +392,8 @@
     "lastmod": "2026-11-16"
   },
   "/categories/": {
-    "sha256": "9192a7564bb15925d10543b4c9f7ccfacf3f86728aee90398341ebad5e412f07",
-    "lastmod": "2026-11-15"
+    "sha256": "ac80e814b3915fa13cb47f74366018581c20e8097d8bb3313f3c5f675f8a1771",
+    "lastmod": "2026-11-16"
   },
   "/use-cases/": {
     "sha256": "ecf67370e1a6dcbeb73ee3f6d9d6f019bb358df57afcc3371aecbc2914fad366",

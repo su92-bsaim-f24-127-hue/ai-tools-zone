@@ -4,7 +4,7 @@ from html import escape
 from urllib.parse import quote
 from datetime import date
 import hashlib, json, re
-from seo_pages import category_path, breadcrumbs, breadcrumb_schema, product_context, home_discovery, build_pages, finalize, render_text
+from seo_pages import category_path, CATEGORIES, breadcrumbs, breadcrumb_schema, product_context, home_discovery, build_pages, finalize, render_text
 from scripts.faq_data import build_faq_html
 
 ROOT=Path(__file__).parent
@@ -178,7 +178,7 @@ for c in categories:
 tabs_html=''.join(tab_buttons)
 home=home.replace('<div id="category-tabs" class="category-tabs" role="group" aria-label="Filter by category"></div>',f'<div id="category-tabs" class="category-tabs" role="group" aria-label="Filter by category">{tabs_html}</div>')
 home=home.replace('<span id="result-count" role="status" aria-live="polite"></span>',f'<span id="result-count" role="status" aria-live="polite">Showing all {len(products)} tools</span>')
-cats=''.join(f'<a class="category-card" href="{category_path(c)}"><span class="category-icon"><img src="assets/brand-icon.webp" alt="{e(c)} category icon" width="40" height="40" loading="lazy"></span><h3>{e(c)}</h3><small>{sum(p["category"]==c for p in products)} tools</small><span aria-hidden="true">↗</span></a>' for c in categories)
+cats=''.join(f'''<a class="category-card" href="{category_path(c)}"><span class="category-icon"><img src="assets/categories/{CATEGORIES[c]['slug']}.svg" alt="{e(c)} category logo" width="40" height="40" loading="lazy"></span><h3>{e(c)}</h3><small>{sum(p['category']==c for p in products)} tools</small><span aria-hidden="true">↗</span></a>''' for c in categories)
 home=re.sub(r'<!-- CATEGORIES_START -->.*?<!-- CATEGORIES_END -->','<div id="category-grid" class="category-grid">'+cats+'</div>',home,flags=re.S)
 home=re.sub(r'<span class="tool-mark(?: mark-[^"]+)?" data-brand-logo="([^"]+)"></span>',lambda m:brand_mark(next(p for p in products if p['id']==m[1])),home)
 home=re.sub(r'<span class="tool-mark(?: mark-[^"]+)?" data-logo="([^"]+)"></span>',lambda m:mark(next(p for p in products if p['id']==m[1])),home)
