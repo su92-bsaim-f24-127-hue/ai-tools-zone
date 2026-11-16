@@ -1,6 +1,6 @@
 {
-  "expected_pages": 104,
-  "reason": "Phase 12 release: Added 5 keyword-driven buying and productivity guides (/buy-ai-tools-in-pakistan/, /how-to-buy-chatgpt-plus-in-pakistan/, /best-ai-tools-for-students-pakistan/, /ai-video-editing-tools-pakistan/, /ai-image-generator-subscriptions-pakistan/) to capture high-intent Pakistani search queries.",
+  "expected_pages": 105,
+  "reason": "Expand public educational and commercial guidance with Claude Pro price in Pakistan guide, increasing verified public routes from 104 to 105.",
   "routes": [
     "/",
     "/about/",
@@ -27,6 +27,7 @@
     "/blog/chatgpt-plus-vs-gemini-pro-pakistan/",
     "/blog/cheap-ai-subscriptions-pakistan/",
     "/blog/cheap-ai-tools-for-students-pakistan/",
+    "/blog/claude-pro-price-in-pakistan/",
     "/blog/cursor-vs-copilot-pakistan/",
     "/blog/deepseek-vs-chatgpt-plus-pakistan/",
     "/blog/faceless-youtube-automation-ai-tools-pakistan/",

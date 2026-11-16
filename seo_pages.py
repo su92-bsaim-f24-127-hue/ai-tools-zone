@@ -452,8 +452,19 @@ def build_pages(products, origin, shell, write):
         }
         if article.get('dateModified'):
             article_schema['dateModified'] = article['dateModified']
+        extra = [article_schema]
+        if article.get('include_faq_schema') and article.get('faq'):
+            extra.append({
+                '@type': 'FAQPage',
+                '@id': origin + path + '#faq',
+                'mainEntity': [{
+                    '@type': 'Question',
+                    'name': q,
+                    'acceptedAnswer': {'@type': 'Answer', 'text': a}
+                } for q, a in article['faq']]
+            })
         publish(path,article['title'],article['description'],content,(),
-                [('Home','/'),('Blog','/blog/'),(article['title'],path)],(article_schema,),
+                [('Home','/'),('Blog','/blog/'),(article['title'],path)],tuple(extra),
                 seo_title=article.get('meta_title'),seo_description=article.get('meta_description'))
 
     for guide in GROWTH_GUIDES:
@@ -560,6 +571,7 @@ def build_pages(products, origin, shell, write):
                 '/blog/best-ai-tools-for-students-pakistan/': ('STUDENT & RESEARCH', 'Read student guide →'),
                 '/blog/cheap-ai-tools-for-students-pakistan/': ('STUDENT & BUDGET', 'Read student guide →'),
                 '/blog/deepseek-vs-chatgpt-plus-pakistan/': ('MODEL COMPARISON', 'Compare DeepSeek & ChatGPT →'),
+                '/blog/claude-pro-price-in-pakistan/': ('PRICING & BUYING', 'Read Claude price guide →'),
             }
             blog_entries = []
             for a in BLOG['articles']:
