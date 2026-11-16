@@ -1,25 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="prd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2b1805"/>
-      <stop offset="100%" stop-color="#140a01"/>
-    </linearGradient>
-    <linearGradient id="prd-card" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4a2608"/>
-      <stop offset="100%" stop-color="#291302"/>
-    </linearGradient>
-    <linearGradient id="prd-bolt" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fef08a"/>
-      <stop offset="60%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#d97706"/>
-    </linearGradient>
+    <clipPath id="cat-clip-productivity">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#prd-bg)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#f59e0b" fill-opacity="0.12"/>
-  <rect x="15" y="11" width="22" height="24" rx="4" fill="#3a1c04" stroke="#b45309" stroke-width="1.2" stroke-opacity="0.7"/>
-  <rect x="11" y="15" width="22" height="24" rx="4" fill="url(#prd-card)" stroke="#f59e0b" stroke-width="1.4"/>
-  <line x1="16" y1="21" x2="27" y2="21" stroke="#fde68a" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="16" y1="26" x2="25" y2="26" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.8"/>
-  <line x1="16" y1="31" x2="22" y2="31" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
-  <polygon points="32,13 26,23 30,23 28,33 36,21 31,21" fill="url(#prd-bolt)" stroke="#fff" stroke-width="0.8"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-productivity)" href="data:image/webp;base64,UklGRlQEAABXRUJQVlA4IEgEAADQFwCdASpAAEAAPikSh0MhoQiCzAwBQlpABPhv0noLO9PtT+4GgJ+oP4n8m/yZ4QDyFf0j8fvy5zjj5F/Xfys/vn7d7CN/deNhmP/0z/Y/bd8P/9z+W/9m9yX5H/Xv9t/hP3O+gv+H/zj/N/3H91P7/////n5Fv1u9jv9aFuMVT1cRA6rlyzuqkEQwO56ODr11icF/iH9EoOAq8g4YsiQ8K1OJw0oppjNEeILjZhC/8OsmoAMdUCFL4Fw9y9FWImRkHVABBnYAAP7//pQnDwOVOJZG0iw2BD3/zsiI9vIi0e7rQYO7p3//72RZDgdjrDK9UgcMVBedcg6+hCK/Cuw2r/Z9O8wbbsnTVRJYCyQcIkikzo3ezVPCefQyxxnuhN+Nmbq4xDuAp4lCe2+4Px5UhAdeHooj+H3zvJ8U4yin/aLoPRu4sWSQ2P078j0xznJCErOgTl2ExeumlxUO6XLZLKAtz5t2owGVXiJHMQkGjz7Ppyvpm7cMIH2lbl1yse9YKcT7T6ZPE+xqi3n8dplX7bpW0lHkv9VNdUYh3KnQGn9rIA5SEnve0csP7eyHi31H/5MDhAcNXWlUnNpusX4h9X0YV7fqtmOLin13tPxNQD3UZgIgBeoS1rgafRIWXUW8MWl3ns5wLXpMWffh8O/3iT34W0K//Kv8EhRmm9+Lg6c955AFxMryqrvHHYvTi0CarqA/Q2gTFbboRAKMzXa0lG/GI7bc4PZzowjNnyvA9ABO7ONuGU4HAQPxOlh9EnkvC6t//U6pUoLJEDv2rJJ0Mvxl4DMUflcv/4Xi3lOvMeEb5D902csGlK/cKwXXDcMp0o//mv6zNtWTAFce0tnGo1mZoxML86jm8nPOBuWKteFHKkb6qkn34+MCBhq36SqsMzWHx8Lb4EesHzk3pZtB97+6Mo1euXegtWfP1o6zLKw0IEfeqOVw2WwXDv7N9w1eTOBWHtCfEUZ/4Eon17nSfRWGxC3IVKK5RVKc3JcvzbtHcSy6QOPQ6u3WEi68rQxoY233Ps93Ym+PFqj5Z8hNUlDnCTSyD9qp83Mokyx6E1l9OsSrWE9iy48EoJP+4lhbpKCUL+LnoiBz4HnQqYrKVpUJZBqj2cSfzVam3wJX2DR8uK06idzgv+j3VH2bzRWR8XR5mhsvNEH7WHC5HjjWYS34OoziCyr8Douf9ADgDhlJxcm31H1JozsVURdoLFFToP2Lszti8LaCW0DSY8N/a8HUIc+jIqi7o2Lwy1K8QuUUfj3a15rnRR1mcjTWE0Q/Q+ZVtJhN9s1tptv1QkPAcD8gsXLUU98537yE0I1a7xjoJ816JU0kugC/NxxcVItO99ChYKNph/TLpVAFV2M3G43VTu3f65/2htBR7duAI79Tw0Ar9x99/zUoktr+oh0aVJOaEBbl//+YRVQvqVT//roA2S0PlC4KtKqwZyZMskbpz5b2AAAA"/>
 </svg>

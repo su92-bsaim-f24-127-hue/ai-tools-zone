@@ -1,28 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="voc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f153b"/>
-      <stop offset="100%" stop-color="#070a20"/>
-    </linearGradient>
-    <linearGradient id="voc-mic" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2a3582"/>
-      <stop offset="100%" stop-color="#161c52"/>
-    </linearGradient>
-    <linearGradient id="voc-wave" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#818cf8"/>
-    </linearGradient>
+    <clipPath id="cat-clip-ai-voice">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#voc-bg)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#6366f1" fill-opacity="0.12"/>
-  <rect x="20" y="12" width="8" height="15" rx="4" fill="url(#voc-mic)" stroke="#818cf8" stroke-width="1.4"/>
-  <line x1="22.5" y1="16" x2="25.5" y2="16" stroke="#c7d2fe" stroke-width="1.3" stroke-linecap="round"/>
-  <line x1="22.5" y1="19" x2="25.5" y2="19" stroke="#c7d2fe" stroke-width="1.3" stroke-linecap="round"/>
-  <path d="M16 22C16 26.4 19.6 30 24 30C28.4 30 32 26.4 32 22" stroke="#818cf8" stroke-width="1.6" stroke-linecap="round"/>
-  <line x1="24" y1="30" x2="24" y2="35" stroke="#818cf8" stroke-width="1.6" stroke-linecap="round"/>
-  <line x1="19" y1="35" x2="29" y2="35" stroke="#818cf8" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M12 18C10.5 20.5 10.5 23.5 12 26" stroke="url(#voc-wave)" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M36 18C37.5 20.5 37.5 23.5 36 26" stroke="url(#voc-wave)" stroke-width="1.6" stroke-linecap="round"/>
-  <circle cx="7.5" cy="22" r="1.3" fill="#38bdf8"/>
-  <circle cx="40.5" cy="22" r="1.3" fill="#38bdf8"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-ai-voice)" href="data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASpAAEAAPikSh0KhoQqCAAwBQlpAABNckd6q27BQfTJ0TPlIyT86cSE9m4YAAP7+tCJBMTmCMC5w/9NM//6oz/o3fovzf2+QF+Oi+Aiaf4OWJOk1/Zj+rvI+5/n/+4z+uY3f0kqonT8VWW6mvoMLO/QjQ/5Tsy0eiP//1J//Ru+2dzVAZlfkVqjLP5Fiqd2reaR/KDxzWrg7nIZ9nAAAAA=="/>
 </svg>

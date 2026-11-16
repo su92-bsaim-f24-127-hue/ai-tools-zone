@@ -1,23 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="ent-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2d080c"/>
-      <stop offset="100%" stop-color="#140204"/>
-    </linearGradient>
-    <linearGradient id="ent-scr" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#550f16"/>
-      <stop offset="100%" stop-color="#2e050a"/>
-    </linearGradient>
-    <linearGradient id="ent-play" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#fca5a5"/>
-    </linearGradient>
+    <clipPath id="cat-clip-entertainment">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#ent-bg)" stroke="#ef4444" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#ef4444" fill-opacity="0.12"/>
-  <path d="M10 16C18 14.5 30 14.5 38 16V30C30 31.5 18 31.5 10 30V16Z" fill="url(#ent-scr)" stroke="#f87171" stroke-width="1.4" stroke-linejoin="round"/>
-  <polygon points="22,19.5 22,26.5 28,23" fill="url(#ent-play)"/>
-  <polygon points="34,12 34.6,13.6 36,14 34.6,14.4 34,16 33.4,14.4 32,14 33.4,13.6" fill="#facc15"/>
-  <circle cx="14" cy="23" r="1.4" fill="#f87171"/>
-  <circle cx="34" cy="23" r="1.4" fill="#f87171"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-entertainment)" href="data:image/webp;base64,UklGRj4DAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSNoAAAABkHNb27FHT2xVVm+2dtLZtm2jc1LayS+w0drpnZLjmacKTzVdREyAeOeLfOsPffG6fLv4VPn2DNw27p8VTdbhLnDSFdeHu1emyWDcDO6bDk0m41Zxf01psgJ3hJP2uA7ctSJN+uLGcU+aNBmLm8f9MaTJItwu7r3/0XZwhTjDPzQxh4vGaT7RxCjOB6d4TRPtODucOMKV40z/0sQKLhGn80IT07hAnPI9TfTgXHDiHFeLs/xHE1uQlzek/Pw6Dyfzg225YZ725nqK4s0qBhbWbiFZTf2zl4/vAVZQOCA+AgAAcA4AnQEqQABAAD4pEIZCoaELBK8yDAFCWoAzbftj++x/jByvG9/gfGAvar8R+Ku+Ac4DxAP2A9nf1I/qB6M3oAexv6AH689aX+23qFf0MDPnwr71zKgmdAzDe1ss4bQdqgJIUeM1PgUJ5MzrNDooMRS45FQE/A27dj/5AAD+//6Ds5s9anRNuFCF+XMoSYTjQDJb0nZjbrttqOsW3XL+amdS03XgTBjDxssxPoVxr6tZbAfw5JnqLjuCDvM+Bguy9tVA8YTIGipe5ka5kf8aEI0yTQDda43sn83ypLL0Bpz7M8v6kZ4fTD9N6dPIBj4/TQ+eG//6s7J5iAHkR98j1yFt1PwR1iNuphB//Ud5Po30lJ9wJpD4bjEnYGIyf2h8hkNgt8uuSbNTxcnlaKiyu5ZCsFkvakFtZjQtUpA47fRkoZeHfHl1NEsn/Ov1Fs/uqvL/YrHZzZqv714LkO9nhHtsSdyWV6mM///Pto3/b+pXIb/ILAqtOuZH13FQF55l+KbOJ02Xfbna44JjIKKcEMXAXA7Ri1Q1j6SkaPQfOuePzzmxHb+ovm2wGKfnQujA4JlKXb+1DOtv2ZyL3t7ncIBrws3sdWZ/kBcpVq19PFPzjI3oDW83NDCkyc8zxco+Z5i48PB+S1z25/G8xfDP9vfWbv0ZpluWi7/XRh8i5M/A6t6URasgtvm2atCsa6t7XeoPz7gwNeIFOAGQbPN0hCRYXwltKEUA2IEQx3D8N/vp+8S5S9+FJrpVwAAAAA=="/>
 </svg>

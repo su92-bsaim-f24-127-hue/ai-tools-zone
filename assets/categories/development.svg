@@ -1,23 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="dev-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06222b"/>
-      <stop offset="100%" stop-color="#031015"/>
-    </linearGradient>
-    <linearGradient id="dev-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-    <linearGradient id="dev-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2dd4bf"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
+    <clipPath id="cat-clip-development">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#dev-bg)" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#06b6d4" fill-opacity="0.12"/>
-  <path d="M17 16L10 24L17 32" stroke="url(#dev-cyan)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M31 16L38 24L31 32" stroke="url(#dev-cyan)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="27" y1="13" x2="21" y2="35" stroke="url(#dev-teal)" stroke-width="2.3" stroke-linecap="round"/>
-  <circle cx="24" cy="24" r="1.8" fill="#a7f3d0"/>
-  <polygon points="35,13 35.5,14.5 37,15 35.5,15.5 35,17 34.5,15.5 33,15 34.5,14.5" fill="#a3e635"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-development)" href="data:image/webp;base64,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"/>
 </svg>

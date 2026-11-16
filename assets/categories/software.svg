@@ -1,32 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="sft-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#081e36"/>
-      <stop offset="100%" stop-color="#030e1a"/>
-    </linearGradient>
-    <linearGradient id="sft-t1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#0369a1"/>
-    </linearGradient>
-    <linearGradient id="sft-t2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
-    </linearGradient>
-    <linearGradient id="sft-t3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1"/>
-      <stop offset="100%" stop-color="#075985"/>
-    </linearGradient>
-    <linearGradient id="sft-t4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7dd3fc"/>
-      <stop offset="100%" stop-color="#0284c7"/>
-    </linearGradient>
+    <clipPath id="cat-clip-software">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#sft-bg)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#0284c7" fill-opacity="0.12"/>
-  <rect x="12" y="13" width="10.5" height="9" rx="2" fill="url(#sft-t1)" stroke="#38bdf8" stroke-width="1.1"/>
-  <rect x="25.5" y="13" width="10.5" height="9" rx="2" fill="url(#sft-t2)" stroke="#7dd3fc" stroke-width="1.1"/>
-  <rect x="12" y="25" width="10.5" height="9" rx="2" fill="url(#sft-t3)" stroke="#0284c7" stroke-width="1.1"/>
-  <rect x="25.5" y="25" width="10.5" height="9" rx="2" fill="url(#sft-t4)" stroke="#38bdf8" stroke-width="1.1"/>
-  <circle cx="30" cy="29" r="2.2" fill="#facc15" stroke="#fef08a" stroke-width="0.8"/>
-  <path d="M32 29H36M34.5 29V31" stroke="#facc15" stroke-width="1.4" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-software)" href="data:image/webp;base64,UklGRloBAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSEcAAAABYNs2kqPp7CpbTHwFvzcTrwsPiAi1bdsw4ZS65Qm53CJA3XJZv+J22W4D7N5uFzlNYMqJLsYBDBpd0F5+EjNS+1D+3y5fIQBWUDgg7AAAAHAJAJ0BKkAAQAA+KRKHQiGhCoZmjAwBQlAGE8WCVXxv8Hv0i42jtR+l/NX//v/7bs3XWd3SVjS/IpFZDIjRpzwVf09xJ4bhH4z/NeNB4/IE4srwAAD+4uC//kZ94I5nf/79wc1HvRqW2aet8gMKwXLeX+Xq/rhl6UBQt2c6Y//AaNDXRviwILMb/AMhzOv8gYGduhQzaNHdXmG2Hl/yTk2R/YKZkwFo9q/iqMR7CUNtt1WcO2QeTSz/X3/nYy2bxirhpX6zahmj8ibyUq4r5UkLjOkawnHmJ1pYaKqAbiyGQNK5g+bGJBEBAAAA"/>
 </svg>

@@ -1,20 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
   <defs>
-    <linearGradient id="biz-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#220b33"/>
-      <stop offset="100%" stop-color="#0f0317"/>
-    </linearGradient>
-    <linearGradient id="biz-case" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#421660"/>
-      <stop offset="100%" stop-color="#240a36"/>
-    </linearGradient>
+    <clipPath id="cat-clip-business">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#biz-bg)" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.5"/>
-  <circle cx="24" cy="24" r="13" fill="#a855f7" fill-opacity="0.12"/>
-  <rect x="11" y="19" width="26" height="18" rx="4" fill="url(#biz-case)" stroke="#c084fc" stroke-width="1.4"/>
-  <path d="M19 19V15C19 13.9 19.9 13 21 13H27C28.1 13 29 13.9 29 15V19" stroke="#c084fc" stroke-width="1.4" stroke-linecap="round"/>
-  <rect x="22" y="21.5" width="4" height="4" rx="1" fill="#facc15"/>
-  <path d="M15 31L21 25L26 28L33 20" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="29,20 33,20 33,24" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <polygon points="36,12 36.6,13.6 38,14 36.6,14.4 36,16 35.4,14.4 34,14 35.4,13.6" fill="#facc15"/>
+  <rect width="64" height="64" rx="14" fill="#141710" stroke="#ffffff1a" stroke-width="1.5"/>
+  <image width="64" height="64" clip-path="url(#cat-clip-business)" href="data:image/webp;base64,UklGRnoDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSDsAAAABUNS2kTQQBnIhDpQymNex9+5rFRETII8Q9OEJTaj5lJaAT4qIszDyaf/xOAsjzIJIbA6TpILjEfIIAQBWUDggGAMAADAXAJ0BKkAAQAA+JQ6FQiGHfpMABgCRLYAYdS2fwD8YOz8xBw38J/y06NPfLt16gP6BpQ3Ff8t+7f3S/wD2AeYB+i39Q3QH2ge+X0gH+Z/wHqq/wD2AP0A9gD9VfRf/6n+v+EX9vv0596P+Pf//2AP//wVfgD+S9jf9L/FWv4YzNmE46H9cvYA/gv9B3wAOjW7Txz/461giYM9NDMIo5NgB1K7R9ZQ9AerK1nl+Jsojg8NTiybEqO8IzNONNn1K/CSAAP67jfEdx3f/dqcoJAZq9G73rRO1ZKrRQx+WzUw2sizzC+C1kMQ1r+EavCGprbEGMPYjL5AlMAJaD/4AikRyZsNxuc+nPNb/KvedCCe0jt6se7349zMovNyJmxBtd2HqYNyDerPlHFOidWF3MqPwWAAeRknAWPwFCvQFySgHQMGapFF4Y96LWNNkPht9iiQJ0IxN6nCkvfE4ZPL+SINZwlexyfGfh0rjXd7gsXKguRAS+zsePgwrW1vSvITk4aff53qPmS32Uq3JA2XWYJ/HBLV8/o173z9IXF9c0s+3cJHy82ta19rBK//tN0ruAkP7/xHz9diUrr95FQRJZFsxF0iHMgU6Bs3ZHtP4AiiwtEPwXWYP4y5srUOFRMF5BiuJ+99UbXvxEyar9ryKZRgzqU+SV5uf+1mTLKT+CcGBZ/qtiYKWI3waX+vbhCtVQpOwTZv9JdI8MBO0iTUlTcl3jVUvNOHqd13/HCCVcpwWW4HlVx7afdmykJtIJad7/6q/9iHv46nkn8itsztg7/T//znGv/5FdEBv+eVhRWlePMAH5ciu71zXaDal9AvyVb63fYZfitPXiNgHHtKuAQTwh0Mdz15GyU+RIQp3Fb39TjDgleh1YZ8HAFdnbjcoLc8MNq1aWtzuknv/fTOEa7GEJnLH7/xk7FH7ets7x2pdqkkTxxXxMcT884flnSoHvHGuB47+JHAZg4CXjuGrmy8HwOTpeTRCPTxNA5LVHdEBmynHNt8s+rbb3XG614htH9MZwoosNkL7V3//jF4PaBRfga0PeNAAAA=="/>
 </svg>
