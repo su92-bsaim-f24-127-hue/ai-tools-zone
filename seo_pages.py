@@ -388,7 +388,7 @@ def build_pages(products, origin, shell, write):
         content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+render_text(c['choose'])+'</p></section>'
         content += faq_html(c['faq']) + '<section class="content-block"><h2>Related decisions</h2>'+links(c['related'])+'</section>'
         content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} official website</a></li>' for p in selected)+'</ul></section>'
-        publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
+        publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))],seo_title=c.get('meta_title'),seo_description=c.get('meta_description'))
 
     for page in CONTENT['pages']:
         selected=[by_id[id] for id in page['products'] if id in by_id]
@@ -402,7 +402,7 @@ def build_pages(products, origin, shell, write):
         content += faq_html(page['faq']) + '<section class="content-block"><h2>Continue your comparison</h2>'+links(page['related'])+'</section>'
         if page.get('sources'):
             content += '<section class="content-block"><h2>Official product references</h2><ul>'+''.join(f'<li><a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(name)}</a></li>' for name,url in page['sources'])+'</ul><p>These references describe the vendors. They do not establish authorization or the entitlements of an independently supplied offer.</p></section>'
-        publish(page['path'],page['title'],page['description'],content,selected,[('Home','/'),(HUBS[page['type']][0],'/'+page['type']+'/'),(page['title'],page['path'])])
+        publish(page['path'],page['title'],page['description'],content,selected,[('Home','/'),(HUBS[page['type']][0],'/'+page['type']+'/'),(page['title'],page['path'])],seo_title=page.get('meta_title'),seo_description=page.get('meta_description'))
 
     for article in BLOG['articles']:
         path=article['path']
@@ -511,7 +511,8 @@ def build_pages(products, origin, shell, write):
             'publisher': {'@id': origin + '/#organization'}
         }
         publish(path, guide['title'], guide['description'], content, selected,
-                [('Home', '/'), (guide['title'], path)], (article_schema,))
+                [('Home', '/'), (guide['title'], path)], (article_schema,),
+                seo_title=guide.get('meta_title'),seo_description=guide.get('meta_description'))
 
     for hub,(title,intro) in HUBS.items():
         content='<p class="direct-answer">'+e(intro)+'</p>'
