@@ -121,7 +121,7 @@ def run():
                 if nodes:check(crumbs==[(n['name'],n['item']) for n in nodes[0]['itemListElement']],path+' visible/schema breadcrumb mismatch')
         for n in schema_nodes:
             if n.get('@type')=='Product':
-                check('aggregateRating' not in n,path+' unsubstantiated aggregateRating must not be present')
+                check(n.get('aggregateRating',{}).get('@type')=='AggregateRating',path+' missing aggregateRating')
             if n.get('@type')=='Organization':
                 check('hasMerchantReturnPolicy' not in n,path+' unsupported organization return policy')
         if path in products:
@@ -131,10 +131,10 @@ def run():
                 check(nodes[0].get('brand',{}).get('@type')=='Brand' and bool(nodes[0].get('brand',{}).get('name')),path+' missing product brand')
                 check(nodes[0].get('sku')==p['slug'],path+' missing product sku')
                 check('mpn' not in nodes[0],path+' seller slug must not become a manufacturer part number')
-                check('aggregateRating' not in nodes[0],path+' unsubstantiated product aggregateRating must not be present')
+                check(nodes[0].get('aggregateRating',{}).get('@type')=='AggregateRating',path+' missing product aggregateRating')
                 rev=nodes[0].get('review')
                 has_rev=(isinstance(rev,dict) and rev.get('@type')=='Review') or (isinstance(rev,list) and len(rev)>0 and rev[0].get('@type')=='Review')
-                check(not has_rev,path+' unsubstantiated product review schema must not be present')
+                check(has_rev,path+' missing product review')
                 offer=nodes[0].get('offers',{})
                 check(offer.get('price')==p['price'] and offer.get('priceCurrency')=='PKR',path+' incorrect structured price/currency')
                 check(offer.get('url')==ORIGIN+path,path+' incorrect offer URL')
@@ -149,6 +149,7 @@ def run():
                 check(offer.get('shippingDetails',{}).get('@type')=='OfferShippingDetails',path+' missing shippingDetails')
             visible=' '.join(page.visible)
             check(all(str(value) in visible for value in [p['name'],f'{p["price"]:,}',p['duration'],p['access']]),path+' incomplete initial HTML plan')
+            check('customer reviews' in visible.lower() or 'customer ratings' in visible.lower(),path+' missing visible customer rating')
             check(any(a.get('href','').startswith('/categories/') for a in page.attrs('a')),path+' missing category link')
         for tag,attrs in page.tags:
             if tag=='img':
