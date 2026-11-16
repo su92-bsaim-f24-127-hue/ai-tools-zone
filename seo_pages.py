@@ -27,13 +27,13 @@ CATEGORIES = {c['name']: c for c in CONTENT['categories']}
 GROWTH_GUIDES_FILE = ROOT / 'data/growth-guides.json'
 GROWTH_GUIDES = json.loads(GROWTH_GUIDES_FILE.read_text(encoding='utf-8'))['guides'] if GROWTH_GUIDES_FILE.is_file() else []
 HUBS = {
-    'products': ('All AI Tools & Subscriptions in Pakistan', 'Explore all 32 AI tools and digital software subscriptions in Pakistan. Compare verified PKR plans, duration, and access types with WhatsApp ordering.'),
+    'products': ('All 32 AI Tools in Pakistan (PKR 400+)', 'Explore all 32 AI tools and digital software subscriptions in Pakistan. Compare verified PKR plans, duration, and access types with WhatsApp ordering.'),
     'categories': ('Browse AI Tools & Software Categories', 'Browse AI tools and digital subscriptions in Pakistan by workflow category: AI assistants, video, voice, graphic design, development, and productivity.'),
     'use-cases': ('AI Tools by Use Case & Workflow', 'Find practical AI tools tailored for students, content creators, developers, and businesses in Pakistan. Compare PKR pricing and access requirements.'),
     'compare': ('Compare AI Tools & Subscriptions', 'Compare top AI tools side by side for Pakistani users. Evaluate feature differences, workflow fit, and verified PKR pricing before purchasing.'),
     'alternatives': ('AI Tool Alternatives in Pakistan', 'Explore budget-friendly AI tool alternatives in Pakistan. Compare features, access types, and listed PKR prices to find the right software fit.'),
     'guides': ('AI Subscription Buying Guides Pakistan', 'Practical buying guides for AI tools in Pakistan. Learn how to verify account access types, compare PKR prices, and avoid common subscription risks.'),
-    'pricing': ('AI Tool Prices in Pakistan — ChatGPT Plus PKR 2,300/mo', 'Compare all 32 AI subscription prices in Pakistan: ChatGPT Plus PKR 2,300/mo, plans from PKR 450. Pay via JazzCash, Easypaisa or bank — order on WhatsApp.'),
+    'pricing': ('AI Tool Prices in Pakistan (From PKR 450)', 'Compare all 32 AI subscription prices in Pakistan: ChatGPT Plus PKR 2,300/mo, plans from PKR 450. Pay via JazzCash, Easypaisa or bank — order on WhatsApp.'),
     'blog': ('AI Tools Guides & News in Pakistan', 'Read practical guides, tutorials, and price comparisons for AI tools in Pakistan. Expert advice on local payments, freelancing, and creative workflows.')
 }
 e = lambda value: escape(str(value if value is not None else ''), quote=True)
