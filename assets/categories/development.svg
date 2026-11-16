@@ -1,6 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
-  <rect width="48" height="48" rx="12" fill="#141810" stroke="#2c3c1e" stroke-width="1.5"/>
-  <path d="M17 17L11 24L17 31" stroke="#c5f66b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M31 17L37 24L31 31" stroke="#c5f66b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="26" y1="14" x2="22" y2="34" stroke="#48692c" stroke-width="1.8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="dev-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06222b"/>
+      <stop offset="100%" stop-color="#031015"/>
+    </linearGradient>
+    <linearGradient id="dev-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="dev-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#dev-bg)" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="13" fill="#06b6d4" fill-opacity="0.12"/>
+  <path d="M17 16L10 24L17 32" stroke="url(#dev-cyan)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 16L38 24L31 32" stroke="url(#dev-cyan)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="27" y1="13" x2="21" y2="35" stroke="url(#dev-teal)" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="24" cy="24" r="1.8" fill="#a7f3d0"/>
+  <polygon points="35,13 35.5,14.5 37,15 35.5,15.5 35,17 34.5,15.5 33,15 34.5,14.5" fill="#a3e635"/>
 </svg>
