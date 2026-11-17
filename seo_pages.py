@@ -199,6 +199,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'cursor': [
+        ('/blog/cursor-ai-pro-price-pakistan/', 'Cursor AI Pro price in Pakistan'),
         ('/blog/cursor-vs-copilot-pakistan/', 'Cursor AI vs GitHub Copilot in Pakistan'),
         ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro AI app builder'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
