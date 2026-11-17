@@ -416,6 +416,11 @@ def build_pages(products, origin, shell, write):
         for section in article['sections']:
             content += '<section class="content-block"><h2>'+e(section['heading'])+'</h2>'
             content += ''.join('<p>'+render_text(paragraph)+'</p>' for paragraph in section.get('paragraphs',[]))
+            for sub in section.get('subsections',[]):
+                content += '<h3>'+e(sub['heading'])+'</h3>'
+                content += ''.join('<p>'+render_text(paragraph)+'</p>' for paragraph in sub.get('paragraphs',[]))
+                if sub.get('bullets'):
+                    content += '<ul>'+''.join('<li>'+render_text(item)+'</li>' for item in sub['bullets'])+'</ul>'
             if section.get('table'):
                 t = section['table']
                 caption = t.get('caption', section['heading'])
