@@ -826,6 +826,7 @@ def finalize(paths, origin, write, products=None):
     robots_txt = (
         "# Public search discovery; this file is not access control.\n"
         "User-agent: *\n"
+        "Content-Signal: search=yes, ai-input=yes, ai-train=no\n"
         "Allow: /\n\n"
         "# Dedicated AI search engines (for live search citations and answers)\n"
         "User-agent: OAI-SearchBot\n"
