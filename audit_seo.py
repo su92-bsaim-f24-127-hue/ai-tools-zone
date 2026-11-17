@@ -82,6 +82,22 @@ def run():
             previous=main_content_fingerprints.get(fingerprint)
             check(previous is None,path+' duplicates visible main content from '+str(previous))
             if previous is None:main_content_fingerprints[fingerprint]=path
+        # Guardrail: check for outdated model-name patterns in editorial/product copy (excluding reviews)
+        clean_page_html = re.sub(r'<section\b[^>]*\bid=["\']customer-reviews["\'][^>]*>.*?</section>', '', page_html, flags=re.S|re.I)
+        clean_page_html = re.sub(r'"reviewBody":\s*"[^"]*"', '', clean_page_html)
+        outdated_model_patterns = [
+            (r'\bGPT-4o\b', 'GPT-4o'),
+            (r'\bGPT-4\b(?!\w)', 'GPT-4'),
+            (r'\bo1-(?:preview|mini)\b', 'o1-preview/mini'),
+            (r'\bDALL[- ]?E(?: 3)?\b', 'DALL-E 3'),
+            (r'\bClaude 3\.[57]\b', 'Claude 3.x'),
+            (r'\bGemini 1\.5\b', 'Gemini 1.5'),
+            (r'\bLlama [23]\b', 'Llama 2/3'),
+            (r'\bSWE-bench\b', 'SWE-bench'),
+            (r'\b200k context\b', '200k context'),
+        ]
+        for pat, pat_name in outdated_model_patterns:
+            check(not re.search(pat, clean_page_html, re.I), f"{path} contains outdated model pattern '{pat_name}'")
         titles+=page.titles
         description=page.attrs('meta',name='description')
         check(len(description)==1 and bool(description[0].get('content')),path+' missing description')

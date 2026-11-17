@@ -29,8 +29,8 @@
 - **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: No Warranty
 - **Best For**: Research, Study, Coding
-- **Description**: Google’s advanced multimodal AI with 2M token context for deep research, coding, documents, and Google Workspace integration.
-- **Included Features**: 2M token context window; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; 100% Private personal account (1 Year)
+- **Description**: Google's multimodal AI models for deep research, coding, documents, and Google Workspace integration.
+- **Included Features**: Large context window for deep analysis; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; 100% Private personal account (1 Year)
 - **Official Vendor**: https://gemini.google.com/
 
 ### Veo 3 Ultra
@@ -276,8 +276,8 @@
 - **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: 7 Days
 - **Best For**: Coding, Development, Software
-- **Description**: AI-native code editor with Claude 3.5 Sonnet, multi-file codebase indexing, and Composer agentic coding.
-- **Included Features**: Claude 3.5 Sonnet & GPT-4o; Multi-file codebase indexing; Composer agentic workflow; Terminal debugging
+- **Description**: AI-native code editor with leading AI models, multi-file codebase indexing, and Composer agentic coding.
+- **Included Features**: Access to leading Claude & OpenAI models; Multi-file codebase indexing; Composer agentic workflow; Terminal debugging
 - **Official Vendor**: https://cursor.com/
 
 ### GitHub Copilot
@@ -329,7 +329,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Research, Search, Citations
 - **Description**: Conversational AI answer engine delivering real-time web citations, multi-model selection, and file uploads.
-- **Included Features**: Live web search citations; Claude 3.5 Sonnet & GPT-4o choice; Unlimited Pro searches; File analysis & Pages
+- **Included Features**: Live web search citations; Choice of leading AI models; Unlimited Pro searches; File analysis & Pages
 - **Official Vendor**: https://perplexity.ai/
 
 ### Bolt.new Pro

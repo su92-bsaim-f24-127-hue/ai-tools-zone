@@ -42,7 +42,7 @@
     "name": "Gemini Pro",
     "brand": "Google",
     "category": "AI Assistants",
-    "description": "Google’s advanced multimodal AI with 2M token context for deep research, coding, documents, and Google Workspace integration.",
+    "description": "Google's multimodal AI models for deep research, coding, documents, and Google Workspace integration.",
     "price": 2000,
     "duration": "1 Year",
     "access": "Private",
@@ -55,7 +55,7 @@
       "Coding"
     ],
     "features": [
-      "2M token context window",
+      "Large context window for deep analysis",
       "Google Workspace integration (Docs & Gmail)",
       "Deep multimodal reasoning & code execution",
       "100% Private personal account (1 Year)"
@@ -657,7 +657,7 @@
     "name": "Cursor AI Pro",
     "brand": "Anysphere",
     "category": "Development",
-    "description": "AI-native code editor with Claude 3.5 Sonnet, multi-file codebase indexing, and Composer agentic coding.",
+    "description": "AI-native code editor with leading AI models, multi-file codebase indexing, and Composer agentic coding.",
     "price": 2800,
     "duration": "1 Month",
     "access": "Private",
@@ -670,7 +670,7 @@
       "Software"
     ],
     "features": [
-      "Claude 3.5 Sonnet & GPT-4o",
+      "Access to leading Claude & OpenAI models",
       "Multi-file codebase indexing",
       "Composer agentic workflow",
       "Terminal debugging"
@@ -807,7 +807,7 @@
     ],
     "features": [
       "Live web search citations",
-      "Claude 3.5 Sonnet & GPT-4o choice",
+      "Choice of leading AI models",
       "Unlimited Pro searches",
       "File analysis & Pages"
     ],
