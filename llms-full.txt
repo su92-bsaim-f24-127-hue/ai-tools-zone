@@ -302,8 +302,8 @@
 - **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: 7 Days
 - **Best For**: Writing, Coding, Research
-- **Description**: Anthropic's premier AI assistant powered by Claude 3.5 Sonnet and Haiku with Projects, Artifacts, and 200k context.
-- **Included Features**: Claude 3.5 Sonnet & Opus; 200k context window; Artifacts live preview; Claude Projects workspace
+- **Description**: Anthropic's AI assistant with higher usage limits, access to Claude's Opus, Sonnet and Haiku models, Projects, Artifacts, Research and Claude Code. Pay via JazzCash, Easypaisa or bank transfer (IBFT) with verified WhatsApp delivery.
+- **Included Features**: Access to Claude's Opus, Sonnet and Haiku models; Higher usage limits than the free plan; Artifacts live preview; Claude Projects workspace; Claude Code included
 - **Official Vendor**: https://claude.ai/
 
 ### DeepSeek Unlimited

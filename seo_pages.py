@@ -182,7 +182,7 @@ PRODUCT_GUIDES = {
         ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to buy ChatGPT Plus in Pakistan: price, access & setup'),
         ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
         ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
-        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude 3.5 Sonnet comparison'),
+        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro comparison'),
         ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus benchmark & cost comparison'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
@@ -193,7 +193,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'claude': [
-        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude 3.5 Sonnet comparison'),
+        ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro comparison'),
         ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus & Claude coding benchmark'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
@@ -370,11 +370,9 @@ def build_pages(products, origin, shell, write):
         # search results and social shares show (<title>, meta description and
         # the OG/Twitter/WebPage values shell() derives from them). H1,
         # breadcrumbs and schema headlines keep using title/description.
-        # seo_title values in the data already carry the brand suffix; only
-        # append it when missing so it is never doubled.
-        display_title = seo_title if seo_title else title+' | AI Tools Zone'
-        if seo_title and not seo_title.endswith(' | AI Tools Zone'):
-            display_title = seo_title+' | AI Tools Zone'
+        # seo_title values in the data are used directly for concise SERP titles;
+        # only append default brand suffix when seo_title is missing.
+        display_title = seo_title if seo_title else (title + ' | AI Tools Zone')
         display_description = seo_description if seo_description else description
         write(path.strip('/')+'/index.html',shell(display_title, display_description, path, body, {'@context':'https://schema.org','@graph':graph}, '/'))
         paths.append(path)

@@ -724,7 +724,7 @@
     "name": "Claude Pro",
     "brand": "Anthropic",
     "category": "AI Assistants",
-    "description": "Anthropic's premier AI assistant powered by Claude 3.5 Sonnet and Haiku with Projects, Artifacts, and 200k context.",
+    "description": "Anthropic's AI assistant with higher usage limits, access to Claude's Opus, Sonnet and Haiku models, Projects, Artifacts, Research and Claude Code. Pay via JazzCash, Easypaisa or bank transfer (IBFT) with verified WhatsApp delivery.",
     "price": 2200,
     "duration": "1 Month",
     "access": "Private",
@@ -737,10 +737,11 @@
       "Research"
     ],
     "features": [
-      "Claude 3.5 Sonnet & Opus",
-      "200k context window",
+      "Access to Claude's Opus, Sonnet and Haiku models",
+      "Higher usage limits than the free plan",
       "Artifacts live preview",
-      "Claude Projects workspace"
+      "Claude Projects workspace",
+      "Claude Code included"
     ],
     "intent": [
       "claude",
