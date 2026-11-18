@@ -1,6 +1,6 @@
 {
   "/": {
-    "sha256": "fd51c4c706dc461c688471392ffbd44f54d4833e6ad191e7cf95c16108c4f0f6",
+    "sha256": "ac1b0eafc3d0c8988ac8f5496b77373500c5ff8d7ad46fb6952884485ace8e10",
     "lastmod": "2026-11-19"
   },
   "/products/chatgpt-plus/": {
@@ -336,8 +336,8 @@
     "lastmod": "2026-11-18"
   },
   "/blog/ai-agency-automation-pakistan-n8n-make/": {
-    "sha256": "003ff2b7bf216aba1e60a2162cf8dfe76af5f39fe320d7a7e1561efb8eac6251",
-    "lastmod": "2026-11-18"
+    "sha256": "78940d98e2d0413c95e54553b087fa7a639ba2b9ea60b01855842904db1d228a",
+    "lastmod": "2026-11-19"
   },
   "/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/": {
     "sha256": "cb76ec48fbbecb85453f7d8a0394cf33184fc3ac5c3a2b438aff6de8b7b99a0f",
@@ -404,15 +404,15 @@
     "lastmod": "2026-11-17"
   },
   "/guides/": {
-    "sha256": "97cfddc22dbf6513cf23d0310f3736af780147c2046a8c7579d67d74d444b785",
-    "lastmod": "2026-11-18"
+    "sha256": "caae087ac841f3b882d0edf5c5084790e117c75d82c9eba172d0141e24f83966",
+    "lastmod": "2026-11-19"
   },
   "/pricing/": {
     "sha256": "9e199c0dc4ec5c77132dd8c227e5241362435878eed4075e95b734b982fb0f93",
     "lastmod": "2026-11-18"
   },
   "/blog/": {
-    "sha256": "059de06cb8008bfbadd2aea9d7c959a1a98074e6d467d1f1d17a92b2cf435e56",
-    "lastmod": "2026-11-18"
+    "sha256": "3481a626d9a0487e9a9db1c6531e46f4439b8bd71f0a7973b5f427a6a2493ebc",
+    "lastmod": "2026-11-19"
   }
 }

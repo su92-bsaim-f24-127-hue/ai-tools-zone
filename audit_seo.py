@@ -109,62 +109,111 @@ def run():
         check(lastmod is not None and date.fromisoformat(lastmod.text)<=content_date(),path+' invalid lastmod')
         check(lastmod is not None and lastmod.text==states.get(path,{}).get('lastmod'),path+' lastmod differs from source record')
     catalog=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+    products_checked = 0
+    badge_conflicts = 0
+    desc_conflicts = 0
     for p in catalog:
+        products_checked += 1
+        badge = p.get('badge', '')
+        dur = p.get('duration', '')
+        acc = p.get('access', '')
+        
+        # Badge checks: "N-Year Plan", "N-Month Plan", "Shared Access", "Private", "Invitation"
+        m_year = re.search(r'(\d+)-Year Plan', badge, re.I)
+        if m_year:
+            n_years = m_year.group(1)
+            expected_dur = f"{n_years} Year" if n_years == '1' else f"{n_years} Years"
+            if dur != expected_dur:
+                badge_conflicts += 1
+                check(False, f"Badge duration mismatch for {p['id']}: badge has '{badge}', duration is '{dur}'")
+                
+        m_month = re.search(r'(\d+)-Month Plan', badge, re.I)
+        if m_month:
+            n_months = m_month.group(1)
+            expected_dur = f"{n_months} Month" if n_months == '1' else f"{n_months} Months"
+            if dur != expected_dur:
+                badge_conflicts += 1
+                check(False, f"Badge duration mismatch for {p['id']}: badge has '{badge}', duration is '{dur}'")
+                
+        if re.search(r'Shared Access', badge, re.I) and acc != 'Shared':
+            badge_conflicts += 1
+            check(False, f"Badge access mismatch for {p['id']}: badge has '{badge}', access is '{acc}'")
+            
+        if re.search(r'\bPrivate\b', badge, re.I) and acc != 'Private':
+            badge_conflicts += 1
+            check(False, f"Badge access mismatch for {p['id']}: badge has '{badge}', access is '{acc}'")
+            
+        if re.search(r'\bInvitation\b', badge, re.I) and acc != 'Invitation':
+            badge_conflicts += 1
+            check(False, f"Badge access mismatch for {p['id']}: badge has '{badge}', access is '{acc}'")
+
+        # Description check on catalog description: check PKR amounts, "for N months", "per month", "per year", "N-year", "N-month", access types, delivery ranges, warranty days
         desc = p.get('description', '')
-        if not desc:
-            continue
+        dl = desc.lower()
         m_price = re.search(r'PKR\s+([\d,]+)', desc)
         if m_price:
             desc_price = int(m_price.group(1).replace(',', ''))
-            check(desc_price == p['price'], f"Catalog description price mismatch for {p['id']}: description has PKR {desc_price}, field has PKR {p['price']}")
-        desc_dur = None
-        desc_lower = desc.lower()
-        if 'per month' in desc_lower or 'for 1 month' in desc_lower:
-            desc_dur = '1 Month'
-        elif 'per year' in desc_lower or 'for 1 year' in desc_lower:
-            desc_dur = '1 Year'
-        elif 'per 2 years' in desc_lower or 'for 2 years' in desc_lower:
-            desc_dur = '2 Years'
-        elif 'for 2 months' in desc_lower or 'per 2 months' in desc_lower:
-            desc_dur = '2 Months'
-        elif 'for 3 months' in desc_lower or 'per 3 months' in desc_lower:
-            desc_dur = '3 Months'
-        elif 'for 6 months' in desc_lower or 'per 6 months' in desc_lower:
-            desc_dur = '6 Months'
-        elif 'per 8,500 credits' in desc_lower:
-            desc_dur = '8,500 Credits'
-        if desc_dur:
-            check(desc_dur.lower() == p['duration'].lower(), f"Catalog description duration mismatch for {p['id']}: description has '{desc_dur}', field has '{p['duration']}'")
-        desc_access = None
-        if 'private access' in desc_lower:
-            desc_access = 'Private'
-        elif 'shared access' in desc_lower:
-            desc_access = 'Shared'
-        elif 'invitation access' in desc_lower:
-            desc_access = 'Invitation'
-        elif 'license key' in desc_lower:
-            desc_access = 'License Key'
-        if desc_access:
-            check(desc_access.lower() == p['access'].lower(), f"Catalog description access mismatch for {p['id']}: description has '{desc_access}', field has '{p['access']}'")
-        desc_deliv = None
-        if '15 to 30 minutes' in desc_lower:
-            desc_deliv = '15–30 min'
-        elif '30 to 60 minutes' in desc_lower:
-            desc_deliv = '30–60 min'
-        elif '1 to 2 hours' in desc_lower:
-            desc_deliv = '1–2 hours'
-        if desc_deliv:
-            norm_field = p['delivery'].replace('-', '–')
-            check(desc_deliv == norm_field, f"Catalog description delivery mismatch for {p['id']}: description has '{desc_deliv}', field has '{p['delivery']}'")
-        desc_warr = None
-        if 'no replacement warranty' in desc_lower:
-            desc_warr = 'No Warranty'
-        elif '30 days' in desc_lower:
-            desc_warr = '30 Days'
-        elif '7 days' in desc_lower:
-            desc_warr = '7 Days'
-        if desc_warr:
-            check(desc_warr.lower() == p['warranty'].lower(), f"Catalog description warranty mismatch for {p['id']}: description has '{desc_warr}', field has '{p['warranty']}'")
+            if desc_price != p['price']:
+                desc_conflicts += 1
+                check(False, f"Catalog description price mismatch for {p['id']}: description has PKR {desc_price}, field has PKR {p['price']}")
+                
+        m_m = re.search(r'(\d+)-month|for (\d+) months?', dl)
+        if m_m:
+            n = m_m.group(1) or m_m.group(2)
+            exp = f"{n} Month" if n == '1' else f"{n} Months"
+            if dur != exp:
+                desc_conflicts += 1
+                check(False, f"Catalog description duration mismatch for {p['id']}: description has '{exp}', field has '{dur}'")
+        if 'per month' in dl and dur != '1 Month':
+            desc_conflicts += 1
+            check(False, f"Catalog description duration mismatch for {p['id']}: description has 'per month', field has '{dur}'")
+        if 'per year' in dl and dur != '1 Year':
+            desc_conflicts += 1
+            check(False, f"Catalog description duration mismatch for {p['id']}: description has 'per year', field has '{dur}'")
+        m_y = re.search(r'(\d+)-year|for (\d+) years?', dl)
+        if m_y:
+            n = m_y.group(1) or m_y.group(2)
+            exp = f"{n} Year" if n == '1' else f"{n} Years"
+            if dur != exp:
+                desc_conflicts += 1
+                check(False, f"Catalog description duration mismatch for {p['id']}: description has '{exp}', field has '{dur}'")
+
+        if 'private access' in dl and acc != 'Private':
+            desc_conflicts += 1
+            check(False, f"Catalog description access mismatch for {p['id']}: description has 'Private', field has '{acc}'")
+        if 'shared access' in dl and acc != 'Shared':
+            desc_conflicts += 1
+            check(False, f"Catalog description access mismatch for {p['id']}: description has 'Shared', field has '{acc}'")
+        if 'invitation access' in dl and acc != 'Invitation':
+            desc_conflicts += 1
+            check(False, f"Catalog description access mismatch for {p['id']}: description has 'Invitation', field has '{acc}'")
+        if 'license key' in dl and acc != 'License Key':
+            desc_conflicts += 1
+            check(False, f"Catalog description access mismatch for {p['id']}: description has 'License Key', field has '{acc}'")
+
+        deliv = p['delivery'].replace('-', '–')
+        if '15 to 30 minutes' in dl and deliv != '15–30 min':
+            desc_conflicts += 1
+            check(False, f"Catalog description delivery mismatch for {p['id']}: description has '15 to 30 minutes', field has '{deliv}'")
+        if '30 to 60 minutes' in dl and deliv != '30–60 min':
+            desc_conflicts += 1
+            check(False, f"Catalog description delivery mismatch for {p['id']}: description has '30 to 60 minutes', field has '{deliv}'")
+        if '1 to 2 hours' in dl and deliv != '1–2 hours':
+            desc_conflicts += 1
+            check(False, f"Catalog description delivery mismatch for {p['id']}: description has '1 to 2 hours', field has '{deliv}'")
+
+        warr = p['warranty']
+        if '7 days' in dl and warr != '7 Days':
+            desc_conflicts += 1
+            check(False, f"Catalog description warranty mismatch for {p['id']}: description has '7 days', field has '{warr}'")
+        if '30 days' in dl and warr != '30 Days':
+            desc_conflicts += 1
+            check(False, f"Catalog description warranty mismatch for {p['id']}: description has '30 days', field has '{warr}'")
+        if 'no replacement warranty' in dl and warr != 'No Warranty':
+            desc_conflicts += 1
+            check(False, f"Catalog description warranty mismatch for {p['id']}: description has 'No Warranty', field has '{warr}'")
+
+    print(f"Description & badge audit: {products_checked} products checked, {desc_conflicts + badge_conflicts} conflicts (must be 0)")
 
     PLAN_WORDS = ['Pro', 'Plus', 'Premium', 'Essential', 'Edu', 'Starter', 'Business', 'Creator', 'Unlimited', 'Core', 'Private', 'Key', '4K']
     plan_regex = re.compile(rf'\b(?:{"|".join(PLAN_WORDS)})\b', re.I)

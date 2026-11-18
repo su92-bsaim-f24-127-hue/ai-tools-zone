@@ -25,26 +25,64 @@ all_products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
 
 def normalize_desc(p):
     dur = p['duration']
-    acc = p['access'].lower()
-    deliv = p['delivery'].replace('–', ' to ')
-    warr = p['warranty'].lower()
+    acc = p['access']
+    deliv = p['delivery'].replace('–', ' to ').replace('-', ' to ')
+    if 'min' in deliv and 'minute' not in deliv:
+        deliv = deliv.replace('min', 'minutes')
+    warr = p['warranty']
     price = f"{p['price']:,}"
-    base = p.get('description', '')
-    if "AI Tools Zone sells it for" in base:
-        prefix = base.split("AI Tools Zone sells it for")[0].strip()
-    else:
-        prefix = base.strip()
+    base = p.get('description', '').strip()
+    for marker in ['AI Tools Zone sells', 'Delivery takes', 'Warranty:']:
+        if marker in base:
+            base = base.split(marker)[0].strip()
+    prefix = base.strip()
     if prefix and not prefix.endswith('.'):
         prefix += '.'
-    if dur == "Lifetime":
-        period_str = "with lifetime validity"
+    
+    if dur == "1 Month":
+        dur_str = "per month"
+    elif dur == "1 Year":
+        dur_str = "per year"
+    elif dur == "2 Years":
+        dur_str = "for 2 years"
+    elif dur == "2 Months":
+        dur_str = "for 2 months"
+    elif dur == "3 Months":
+        dur_str = "for 3 months"
+    elif dur == "6 Months":
+        dur_str = "for 6 months"
+    elif dur == "Lifetime":
+        dur_str = "with lifetime validity"
     elif "Credits" in dur:
-        period_str = f"with {dur}"
+        dur_str = f"for {dur}"
     elif dur == "Confirm before ordering":
-        period_str = "with duration confirmed before ordering"
+        dur_str = "with duration confirmed before ordering"
     else:
-        period_str = f"for {dur}"
-    return f"{prefix} AI Tools Zone sells it for PKR {price} {period_str} with {acc} access. Delivery takes {deliv}. Warranty: {warr}."
+        dur_str = f"for {dur}"
+
+    acc_map = {
+        'Private': 'private access',
+        'Shared': 'shared access',
+        'Invitation': 'invitation access',
+        'License Key': 'license key access'
+    }
+    acc_str = acc_map.get(acc, f"{acc.lower()} access")
+
+    if warr == "No Warranty":
+        warr_str = "The listing carries no replacement warranty."
+    elif warr == "7 Days":
+        warr_str = "Warranty: 7 days."
+    elif warr == "30 Days":
+        warr_str = "Warranty: 30 days."
+    else:
+        warr_str = f"Warranty: {warr.lower()}."
+
+    if dur == "Confirm before ordering":
+        commercial = f"AI Tools Zone sells it for PKR {price} with {acc_str} and duration confirmed before ordering. Delivery takes {deliv}. {warr_str}"
+    else:
+        commercial = f"AI Tools Zone sells it for PKR {price} {dur_str} with {acc_str}. Delivery takes {deliv}. {warr_str}"
+
+    return f"{prefix} {commercial}" if prefix else commercial
 
 for p in all_products:
     p['description'] = normalize_desc(p)

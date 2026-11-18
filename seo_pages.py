@@ -586,7 +586,7 @@ def build_pages(products, origin, shell, write):
                 ('EDITORIAL GUIDE', 'HeyGen AI Video in Pakistan: Avatar Creation & Pricing Guide (2026)', 'Complete guide to HeyGen AI video avatars in Pakistan. Review video translation, digital twin generation, and flat PKR pricing via local wallets.', '/categories/ai-video/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'DeepSeek AI in Pakistan: Pricing, Local Access & Guide (2026)', 'How to access DeepSeek V3 and R1 reasoning models in Pakistan. Compare open-weights coding, local PKR pricing, and payment via Easypaisa and JazzCash.', '/blog/ai-subscription-vs-api-credits-pakistan/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Perplexity AI Pro in Pakistan: Pricing, Search Features & Guide (2026)', 'Complete guide to Perplexity AI Pro in Pakistan. Compare Pro Search, current models in PKR with Easypaisa, JazzCash, and bank transfer.', '/categories/ai-assistants/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'n8n Workflow Automation in Pakistan: Small Business Guide (2026)', 'How Pakistani digital agencies and businesses use n8n for workflow automation. Compare cloud pricing in PKR and replace expensive Zapier accounts.', '/products/n8n-starter/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'n8n Workflow Automation in Pakistan: Small Business Guide (2026)', 'How Pakistani digital agencies and businesses use n8n for workflow automation. Review visual canvas features, app integrations, and listed PKR plans.', '/products/n8n-starter/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Lovable vs Replit in Pakistan: Best AI App Builder (2026)', 'Compare Lovable Pro vs Replit Core in Pakistan. Review full-stack AI coding workflows, cloud deployment, and PKR pricing with local payment.', '/compare/replit-vs-lovable/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'ElevenLabs Voice AI in Pakistan: Pricing, Urdu Support & Guide', 'Complete guide to ElevenLabs Voice AI in Pakistan. Review character plans in PKR, Urdu voice cloning, and payment via Easypaisa and JazzCash.', '/products/elevenlabs/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Top AI Video Generators in Pakistan: CapCut, Veo & Runway (2026)', 'Best AI video generators in Pakistan compared for 2026. Explore CapCut Pro VIP, Google Veo 3 Ultra & ElevenLabs with PKR pricing and WhatsApp delivery.', '/categories/ai-video/', 'Read guide →'),
@@ -615,14 +615,14 @@ def build_pages(products, origin, shell, write):
                 ('TOOL SPOTLIGHT', 'YouTube Premium in Pakistan: Ad-Free Music & Video Guide (2026)', 'Complete guide to YouTube Premium in Pakistan. Ad-free videos, background audio, YouTube Music, and instant activation.', '/products/youtube-premium/', 'Read YouTube guide →'),
                 ('TOOL SPOTLIGHT', 'LinkedIn Premium in Pakistan: InMail Credits & Career Guide (2026)', 'Complete guide to LinkedIn Premium Business in Pakistan. InMail message credits, applicant insights, and competitive salary data.', '/products/linkedin-premium/', 'Read LinkedIn guide →'),
                 ('TOOL SPOTLIGHT', 'Windows 11 Pro in Pakistan: Lifetime License Key & Setup Guide (2026)', 'Complete guide to Windows 11 Pro original activation keys in Pakistan. BitLocker encryption, Hyper-V, and instant key delivery.', '/products/windows-11-pro-key/', 'Read Windows guide →'),
-                ('TOOL SPOTLIGHT', 'Notion Business in Pakistan: Team Workspace & Notion AI Guide (2026)', 'Complete guide to Notion Business with Notion AI. Team wikis, project boards, unlimited blocks, and PKR subscription plans.', '/products/notion-business/', 'Read Notion guide →'),
+                ('TOOL SPOTLIGHT', 'Notion Business in Pakistan: Team Workspace & Notion AI Guide (2026)', 'Complete guide to Notion Business with Notion AI. Team wikis, project boards, databases, and PKR subscription plans.', '/products/notion-business/', 'Read Notion guide →'),
                 ('FREELANCING', 'How to Earn Money with AI in Pakistan (2026 Guide)', 'Discover 6 freelancing and agency workflows with AI tools like ChatGPT, Leonardo AI, and CapCut.', '/blog/how-to-earn-money-with-ai-pakistan/', 'Read freelancing guide →'),
                 ('BUYER PROTECTION', 'Where to Buy AI Tools Safely in Pakistan (2026)', 'Avoid WhatsApp scams and account bans. How to identify trusted AI sellers in Pakistan with JazzCash, Easypaisa, and warranty protection.', '/blog/where-to-buy-ai-tools-pakistan/', 'Read safe buying guide →'),
                 ('IMAGE GENERATION', 'Best AI Image Generators in Pakistan (2026)', 'Compare Leonardo AI, Midjourney, and Adobe Firefly for Pakistani designers, agencies, and e-commerce sellers with PKR pricing.', '/blog/best-ai-image-generators-pakistan/', 'Compare image tools →'),
                 ('VIDEO CREATION', 'Best AI Video Generators in Pakistan (2026)', 'Compare CapCut Pro, Runway Gen-3, Google Veo 3, and HeyGen for Pakistani creators, YouTubers, and TikTokers.', '/blog/best-ai-video-generators-pakistan/', 'Compare video tools →'),
                 ('DEVELOPER TOOLS', 'Cursor AI vs GitHub Copilot in Pakistan (2026)', 'Compare the top 2 AI code editors for Pakistani software engineers, freelancers, and computer science students.', '/blog/cursor-vs-copilot-pakistan/', 'Compare coding tools →'),
                 ('ACADEMIC PLAYBOOK', 'AI Tools for Pakistani Students: Research & Thesis Playbook (2026)', 'How Pakistani students use AI for research papers and thesis writing while staying Turnitin-safe. Review budget PKR software tools.', '/blog/ai-tools-for-pakistani-students-research-thesis/', 'Read student guide →'),
-                ('AGENCY WORKFLOWS', 'AI Agency Automation in Pakistan: Build Client Workflows with n8n (2026)', 'How Pakistani agencies and developers replace expensive Zapier setups with n8n workflow automation and WhatsApp bots.', '/blog/ai-agency-automation-pakistan-n8n-make/', 'Read agency guide →'),
+                ('AGENCY WORKFLOWS', 'AI Agency Automation in Pakistan: Build Client Workflows with n8n (2026)', 'How Pakistani agencies and developers use n8n workflow automation and WhatsApp bots for client projects.', '/blog/ai-agency-automation-pakistan-n8n-make/', 'Read agency guide →'),
                 ('FREELANCERS', 'Canva Pro vs Adobe Creative Cloud in Pakistan: Freelancer Buying Guide (2026)', 'Canva Pro Edu (PKR 900 for 1 Year) vs Adobe Creative Cloud (PKR 1,700 for 2 Months) for Pakistani freelance graphic designers. Compare plans, periods and prices.', '/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/', 'Compare design tools →'),
                 ('CREATOR STACK', 'Faceless YouTube Channel Automation with AI in Pakistan (2026 Stack)', 'Complete faceless YouTube production pipeline: ChatGPT Plus, ElevenLabs, Google Veo 3, and CapCut Pro with PKR costs.', '/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Read YouTube guide →')
             ]
@@ -816,26 +816,59 @@ def finalize(paths, origin, write, products=None):
     if products:
         def normalize_desc(p):
             dur = p['duration']
-            acc = p['access'].lower()
-            deliv = p['delivery'].replace('–', ' to ')
-            warr = p['warranty'].lower()
+            acc = p['access']
+            deliv = p['delivery'].replace('–', ' to ').replace('-', ' to ')
+            if 'min' in deliv and 'minute' not in deliv:
+                deliv = deliv.replace('min', 'minutes')
+            warr = p['warranty']
             price = f"{p['price']:,}"
-            base = p.get('description', '')
-            if "AI Tools Zone sells it for" in base:
-                prefix = base.split("AI Tools Zone sells it for")[0].strip()
-            else:
-                prefix = base.strip()
+            base = p.get('description', '').strip()
+            for marker in ['AI Tools Zone sells', 'Delivery takes', 'Warranty:']:
+                if marker in base:
+                    base = base.split(marker)[0].strip()
+            prefix = base.strip()
             if prefix and not prefix.endswith('.'):
                 prefix += '.'
-            if dur == "Lifetime":
-                period_str = "with lifetime validity"
+            if dur == "1 Month":
+                dur_str = "per month"
+            elif dur == "1 Year":
+                dur_str = "per year"
+            elif dur == "2 Years":
+                dur_str = "for 2 years"
+            elif dur == "2 Months":
+                dur_str = "for 2 months"
+            elif dur == "3 Months":
+                dur_str = "for 3 months"
+            elif dur == "6 Months":
+                dur_str = "for 6 months"
+            elif dur == "Lifetime":
+                dur_str = "with lifetime validity"
             elif "Credits" in dur:
-                period_str = f"with {dur}"
+                dur_str = f"for {dur}"
             elif dur == "Confirm before ordering":
-                period_str = "with duration confirmed before ordering"
+                dur_str = "with duration confirmed before ordering"
             else:
-                period_str = f"for {dur}"
-            return f"{prefix} AI Tools Zone sells it for PKR {price} {period_str} with {acc} access. Delivery takes {deliv}. Warranty: {warr}."
+                dur_str = f"for {dur}"
+            acc_map = {
+                'Private': 'private access',
+                'Shared': 'shared access',
+                'Invitation': 'invitation access',
+                'License Key': 'license key access'
+            }
+            acc_str = acc_map.get(acc, f"{acc.lower()} access")
+            if warr == "No Warranty":
+                warr_str = "The listing carries no replacement warranty."
+            elif warr == "7 Days":
+                warr_str = "Warranty: 7 days."
+            elif warr == "30 Days":
+                warr_str = "Warranty: 30 days."
+            else:
+                warr_str = f"Warranty: {warr.lower()}."
+            if dur == "Confirm before ordering":
+                commercial = f"AI Tools Zone sells it for PKR {price} with {acc_str} and duration confirmed before ordering. Delivery takes {deliv}. {warr_str}"
+            else:
+                commercial = f"AI Tools Zone sells it for PKR {price} {dur_str} with {acc_str}. Delivery takes {deliv}. {warr_str}"
+            return f"{prefix} {commercial}" if prefix else commercial
         for p in products:
             p['description'] = normalize_desc(p)
         write('llms-full.txt', build_llms_full_txt(products, origin))
