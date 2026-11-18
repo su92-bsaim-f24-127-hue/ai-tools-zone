@@ -277,7 +277,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Coding, Development, Software
 - **Description**: Cursor AI Pro is Anysphere's AI-native code editor. Included features cover codebase indexing, Composer agentic coding and multi-file editing. AI Tools Zone sells it for PKR 2,800 for 1 Month with private access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: The vendor's current models; Multi-file codebase indexing; Composer agentic workflow; Terminal debugging
+- **Included Features**: Model access set by Cursor; Multi-file codebase indexing; Composer agentic workflow; Terminal debugging
 - **Official Vendor**: https://cursor.com/
 
 ### GitHub Copilot
@@ -303,7 +303,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Writing, Coding, Research
 - **Description**: Claude Pro is Anthropic's paid plan for Claude. Included features cover higher usage limits, Projects, Artifacts, Research and Claude Code. AI Tools Zone sells it for PKR 2,200 for 1 Month with private access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: The vendor's current models; 200k context window; Artifacts live preview; Claude Projects workspace
+- **Included Features**: Anthropic's current Claude models; Large context window; Artifacts live preview; Claude Projects workspace
 - **Official Vendor**: https://claude.ai/
 
 ### DeepSeek Unlimited

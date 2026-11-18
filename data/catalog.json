@@ -749,7 +749,7 @@
       "Software"
     ],
     "features": [
-      "The vendor's current models",
+      "Model access set by Cursor",
       "Multi-file codebase indexing",
       "Composer agentic workflow",
       "Terminal debugging"
@@ -824,8 +824,8 @@
       "Research"
     ],
     "features": [
-      "The vendor's current models",
-      "200k context window",
+      "Anthropic's current Claude models",
+      "Large context window",
       "Artifacts live preview",
       "Claude Projects workspace"
     ],
