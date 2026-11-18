@@ -1541,7 +1541,7 @@
         {
           "heading": "Pricing in Pakistan and local payment workarounds",
           "paragraphs": [
-            "Official subscriptions for both tools require international payment cards (Cursor Pro is $20/month, GitHub Copilot is $10/month). For Pakistani developers without international credit cards or those affected by heavy withholding taxes on foreign transactions, alternative developer stacks provide full functionality.",
+            "Official subscriptions for both tools require international payment cards (GitHub Copilot Pro is $10/month; Cursor's paid plans now start at Plus $8/month, with Premium at $30/month — the old $20 Pro plan is legacy, closed to new buyers since 12 October 2026, and third-party models like Claude and GPT now bill separately from prepaid credit; see the [Cursor AI Pro price guide](/blog/cursor-ai-pro-price-pakistan/) for the full breakdown). For Pakistani developers without international credit cards or those affected by heavy withholding taxes on foreign transactions, alternative developer stacks provide full functionality.",
             "Pakistani developers often pair cloud development tools like Replit Core (PKR 3,200 on AI Tools Zone) or Lovable Pro (PKR 1,600) with private ChatGPT Plus accounts (PKR 2,300) to achieve complete developer velocity while paying in flat Pakistani Rupees via JazzCash or Easypaisa."
           ],
           "bullets": [
@@ -1604,7 +1604,9 @@
         "ai code editor for pakistani developers"
       ],
       "meta_title": "Cursor vs Copilot in Pakistan (2026) | AI Tools Zone",
-      "meta_description": "Compare Cursor AI and GitHub Copilot for Pakistani developers. Analyze leading AI model integration, codebase indexing, and verified PKR subscription costs."
+      "meta_description": "Compare Cursor AI and GitHub Copilot for Pakistani developers. Analyze leading AI model integration, codebase indexing, and verified PKR subscription costs.",
+      "dateModified": "2026-11-18",
+      "dateModifiedLabel": "18 November 2026"
     },
     {
       "path": "/blog/ai-tools-for-pakistani-students-research-thesis/",
