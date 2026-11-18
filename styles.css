@@ -341,3 +341,11 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 .faq-section .faq-body{padding-block:4px 14px}
 .faq-section .faq-body p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 6px 0}
 .faq-section .faq-body a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
+
+
+
+.before-you-pay{margin:18px 0;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;font-size:12.5px;line-height:1.55}
+.before-you-pay h2{margin:0 0 8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text)}
+.before-you-pay ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:6px}
+.before-you-pay li{color:var(--muted)}
+.before-you-pay strong{color:var(--text)}

@@ -79,9 +79,18 @@ def run():
                 for v in value.values():yield from nodes(v)
             elif isinstance(value,list):
                 for v in value:yield from nodes(v)
+        reviews_file = ROOT / 'data/reviews.json'
+        reviews_data = json.loads(reviews_file.read_text(encoding='utf-8')) if reviews_file.exists() else {}
         for n in nodes(schemas):
             if n.get('@type') in ('AggregateRating','Review'):
-                check(path.startswith('/products/'),path+' review/aggregateRating only allowed on products')
+                p_slug = path.strip('/').split('/')[-1]
+                p_revs = reviews_data.get(p_slug, []) if isinstance(reviews_data, dict) else [r for r in reviews_data if r.get('product_slug')==p_slug or r.get('product_id')==p_slug]
+                consented = [r for r in p_revs if r.get('consent') is True]
+                if n.get('@type') == 'Review':
+                    check(bool(consented), path+' Review schema present without real consented data in data/reviews.json')
+                if n.get('@type') == 'AggregateRating':
+                    stated_count = n.get('reviewCount', 0)
+                    check(len(consented) >= stated_count and len(consented) > 0, path+' AggregateRating schema present without sufficient real reviews in data/reviews.json')
         for node in schemas:
             if node.get('@type')=='BreadcrumbList':check(node.get('@id')==ORIGIN+path+'#breadcrumb',path+' unstable breadcrumb ID')
             if node.get('@type')=='Product':check(node['offers'].get('@id')==ORIGIN+path+'#offer',path+' unstable offer ID')

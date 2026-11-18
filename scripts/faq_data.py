@@ -8,7 +8,7 @@ CATEGORIES = [
         "faqs": [
             (
                 "How do I place an order for an AI subscription on AI Tools Zone?",
-                'To place an order, browse our <a href="/products/">catalog of 20 digital tools</a>, select the tool you need, and click <strong>Order on WhatsApp</strong>. Your WhatsApp app opens automatically with a pre-formatted message detailing the product name, listed PKR price, duration, and access type. You review and send the message to our support line at <a href="https://wa.me/923430173923">+92 343 0173923</a>. Our team confirms current stock availability, payment details, and fulfillment steps before any payment is transferred. Read our <a href="/terms/">ordering guide and terms</a> for full process details.'
+                'To place an order, browse our <a href="/products/">catalog of 20 digital tools</a>, select the tool you need, and click <strong>Order on WhatsApp</strong>. Your WhatsApp app opens automatically with a pre-formatted message detailing the product name, listed PKR price, duration, and access type. You review and send the message to our support line at <a href="https://wa.me/923430173923">+92 343 017 3923</a>. Our team confirms current stock availability, payment details, and fulfillment steps before any payment is transferred. Read our <a href="/terms/">ordering guide and terms</a> for full process details.'
             ),
             (
                 "Is ordering done through an online shopping cart or directly on WhatsApp?",
@@ -16,7 +16,7 @@ CATEGORIES = [
             ),
             (
                 "What details should I confirm with support before making a payment?",
-                'Before transferring funds, always ask our WhatsApp agent to confirm four key points: 1) Current account availability and stock status; 2) The exact access type (<a href="/guides/private-vs-shared-access/">Private, Shared, Invitation, or License Key</a>); 3) Plan allowances (such as character limits on <a href="/products/elevenlabs/">ElevenLabs</a> or message quotas on <a href="/products/chatgpt-plus/">ChatGPT Plus</a>); and 4) The applicable replacement warranty period (typically 7 or 30 days).'
+                'Before transferring funds, always ask our WhatsApp agent to confirm four key points: 1) Current account availability and stock status; 2) The exact access type (<a href="/guides/private-vs-shared-access/">Private, Shared, Invitation, or License Key</a>); 3) Plan allowances (such as character limits on <a href="/products/elevenlabs/">ElevenLabs</a> or message quotas on <a href="/products/chatgpt-plus/">ChatGPT Plus</a>); and 4) The applicable replacement warranty period (31 of 32 listings include a 7-day or 30-day replacement warranty. Gemini Pro has none).'
             ),
             (
                 "Can I customize or bundle multiple subscriptions in a single order?",
@@ -31,15 +31,15 @@ CATEGORIES = [
         "faqs": [
             (
                 "Which local Pakistani payment methods are accepted?",
-                'We accept standard Pakistani mobile wallets and interbank electronic fund transfers: <strong>JazzCash</strong> direct mobile transfer, <strong>Easypaisa</strong> direct mobile transfer, and <strong>Bank Transfer (IBFT / Raast)</strong> from any Pakistani banking app (HBL, Meezan Bank, Bank Alfalah, Standard Chartered, UBL, MCB, Faysal Bank, etc.), as well as <strong>SadaPay</strong> and <strong>NayaPay</strong>. All payment instructions are shared 1-on-1 on WhatsApp after confirming order availability. See our <a href="/blog/jazzcash-easypaisa-ai-tools-pakistan/">guide to paying for AI tools with JazzCash and Easypaisa</a>.'
+                'We accept standard Pakistani payment methods: <strong>JazzCash</strong>, <strong>Easypaisa</strong>, and <strong>Bank Transfer</strong> from any Pakistani banking app (HBL, Meezan Bank, Bank Alfalah, Standard Chartered, etc.). All payment instructions are shared 1-on-1 on WhatsApp after confirming order availability. See our <a href="/blog/jazzcash-easypaisa-ai-tools-pakistan/">guide to paying for AI tools with JazzCash and Easypaisa</a>.'
             ),
             (
                 "Why do local Pakistani debit cards get declined on official AI platforms?",
                 'Most Pakistani commercial bank cards decline international software subscriptions (such as OpenAI, Adobe, Midjourney, or Claude) due to default international eCommerce restrictions on debit cards, 3D-Secure OTP delivery mismatches on recurring subscriptions, or insufficient balance buffers to cover commercial bank foreign exchange conversion spreads, card network assessments, and statutory FBR advance withholding tax under Section 236Y (0.5% for ATL filers and 1.0% for non-ATL persons under the Finance Act 2026). AI Tools Zone solves this payment friction by accepting domestic PKR payments without international card requirements. Read our <a href="/blog/how-to-pay-for-chatgpt-plus-pakistan/">ChatGPT Plus Pakistan payment guide</a>.'
             ),
             (
-                "Can I pay using SadaPay or NayaPay?",
-                'Yes. SadaPay and NayaPay users can transfer funds seamlessly using Raast instant transfer or regular IBFT directly to our designated business bank account. Simply inform our representative on WhatsApp that you prefer SadaPay or NayaPay, and we will send the matching Raast ID or IBFT account number. Browse our <a href="/pricing/">PKR pricing directory</a>.'
+                "Can I pay using bank transfer?",
+                'Yes. Buyers can transfer funds using bank transfer directly to our designated account. Simply inform our representative on WhatsApp that you prefer bank transfer, and we will send the bank account details. Browse our <a href="/pricing/">PKR pricing directory</a>.'
             ),
             (
                 "Are there any hidden conversion fees, sales taxes, or service charges?",
@@ -50,15 +50,15 @@ CATEGORIES = [
     {
         "id": "activation",
         "title": "C. Subscription Activation",
-        "intro": "What to expect once your payment is verified and confirmed.",
+        "intro": "What to expect once your payment is confirmed.",
         "faqs": [
             (
                 "How does subscription activation work after payment is confirmed?",
-                'Activation depends on the specific access category defined in our <a href="/products/">catalog</a>: For <strong>Private Accounts</strong>, dedicated login credentials (email and password) are sent directly to your WhatsApp. For <strong>Workspace Invitations</strong>, an official team invite link is sent to your personal email address. For <strong>Shared Profiles</strong>, login credentials and your designated profile name/PIN are delivered. For <strong>License Keys</strong>, a genuine 25-character digital product key is delivered with step-by-step instructions (e.g., <a href="/products/windows-11-pro-key/">Windows 11 Pro</a>).'
+                'Activation depends on the specific access category defined in our <a href="/products/">catalog</a>: For <strong>Private Accounts</strong>, dedicated login credentials (email and password) are sent directly to your WhatsApp. For <strong>Workspace Invitations</strong>, a team invite link is sent to your personal email address. For <strong>Shared Profiles</strong>, login credentials and your designated profile name/PIN are delivered. For <strong>License Keys</strong>, a 25-character digital product key is delivered with step-by-step instructions (e.g., <a href="/products/windows-11-pro-key/">Windows 11 Pro</a>).'
             ),
             (
                 "Do I need to share my personal email password to get access?",
-                '<strong>Never.</strong> AI Tools Zone will <strong>never</strong> ask for your personal email password, bank PINs, or confidential security credentials. For invitation plans (such as <a href="/products/canva-pro-edu/">Canva Pro Edu</a> or <a href="/products/notion-business/">Notion Business</a>), you provide only your email address to receive the official invitation link. Read our <a href="/privacy/">privacy policy</a> for full security commitments.'
+                '<strong>Never.</strong> AI Tools Zone will <strong>never</strong> ask for your personal email password, bank PINs, or confidential security credentials. For invitation plans (such as <a href="/products/canva-pro-edu/">Canva Pro Edu</a> or <a href="/products/notion-business/">Notion Business</a>), you provide only your email address to receive the invitation link. Read our <a href="/privacy/">privacy policy</a> for full security commitments.'
             ),
             (
                 "Can activation be completed on my existing email address?",
@@ -66,7 +66,7 @@ CATEGORIES = [
             ),
             (
                 "What should I do if an activation link expires or shows an error?",
-                'Invitation links typically remain valid for 24–48 hours. If a link expires or displays a browser region error, send a screenshot to our WhatsApp customer support team at <a href="https://wa.me/923430173923">+92 343 0173923</a>. Our agents verify your order reference and generate a fresh replacement invitation link promptly. Full support details are in our <a href="/terms/">ordering terms</a>.'
+                'Invitation links remain valid for 24–48 hours. If a link expires or displays a browser region error, send a screenshot to our WhatsApp customer support team at <a href="https://wa.me/923430173923">+92 343 017 3923</a>. Our agents verify your order reference and generate a fresh replacement invitation link promptly. Full support details are in our <a href="/terms/">ordering terms</a>.'
             )
         ]
     },
@@ -77,7 +77,7 @@ CATEGORIES = [
         "faqs": [
             (
                 "What is the difference between Private, Shared, and Invitation access?",
-                '<strong>Private</strong> means you receive dedicated account credentials used exclusively by you. <strong>Invitation</strong> means an official invite is sent to your email to join a managed workspace while keeping your own password. <strong>Shared</strong> means multiple verified users share access to a single master account with dedicated profiles (like <a href="/products/netflix-premium-4k/">Netflix Premium 4K</a> or <a href="/products/surfshark-vpn/">Surfshark VPN</a>). Review our detailed <a href="/guides/private-vs-shared-access/">Private vs Shared Access Guide</a> before purchasing.'
+                '<strong>Private</strong> means you receive dedicated account credentials used exclusively by you. <strong>Invitation</strong> means an invitation is sent to your email to join a managed workspace while keeping your own password. <strong>Shared</strong> means multiple confirmed users share access to a single master account with dedicated profiles (like <a href="/products/netflix-premium-4k/">Netflix Premium 4K</a> or <a href="/products/surfshark-vpn/">Surfshark VPN</a>). Review our detailed <a href="/guides/private-vs-shared-access/">Private vs Shared Access Guide</a> before purchasing.'
             ),
             (
                 "Can other users see my private documents, chats, or projects on a Shared plan?",
@@ -104,7 +104,7 @@ CATEGORIES = [
             ),
             (
                 "What happens if delivery is delayed beyond the estimated timeframe?",
-                'Delivery depends on vendor server provisioning queues and current stock availability. If your delivery exceeds the estimated window, our WhatsApp team will message you with an updated timeline. If a requested plan cannot be activated due to unexpected stock exhaustion, you are entitled to an immediate 100% full refund with zero deductions. Full details are in our <a href="/terms/">terms</a>.'
+                'Delivery depends on vendor server provisioning queues and current stock availability. If your delivery exceeds the estimated window, our WhatsApp team will message you with an updated timeline. If a requested plan cannot be activated due to unexpected stock exhaustion, you are entitled to an immediate full refund with zero deductions. Full details are in our <a href="/terms/">terms</a>.'
             ),
             (
                 "Are digital orders fulfilled 24/7 or during specific business hours?",
@@ -126,8 +126,8 @@ CATEGORIES = [
                 'The following subscriptions in our catalog carry a full <strong>30-Day Replacement Warranty</strong>: <a href="/products/canva-pro-edu/">Canva Pro Edu (1 Year)</a>, <a href="/products/figma-pro-private/">Figma Pro Private (2 Years)</a>, <a href="/products/gamma-pro/">Gamma Pro (1 Year)</a>, <a href="/products/n8n-starter/">n8n Starter (1 Year)</a>, <a href="/products/notion-business/">Notion Business (3 Months)</a>, and <a href="/products/youtube-premium/">YouTube Premium (3 Months)</a>.'
             ),
             (
-                "Why is Gemini Pro listed with No Warranty?",
-                'Our 1-year <a href="/products/gemini-pro/">Gemini Pro</a> subscription is offered at an exceptionally low rate (PKR 2,000 for 12 months) and is marked with <strong>No Warranty</strong> (replacement warranty not applicable). Account credentials and full model access are verified and confirmed functional upon delivery. Once delivered and confirmed, long-term replacements are not provided for this specific listing.'
+                "Does Gemini Pro include a replacement warranty?",
+                'No. AI Tools Zone refunds a confirmed order that it cannot activate within the stated time. 31 of 32 listings include a 7-day or 30-day replacement warranty. Gemini Pro carries none.'
             ),
             (
                 "How do I claim a replacement if my account stops working?",
@@ -142,15 +142,15 @@ CATEGORIES = [
         "faqs": [
             (
                 "Can I get a full refund if my subscription cannot be delivered?",
-                'Yes. If an ordered tool is temporarily unavailable, out of stock, or cannot be successfully activated on your device, you can request an immediate 100% full refund. Refunds are transferred back directly via JazzCash, Easypaisa, or Raast bank transfer. Read our <a href="/terms/">terms of service</a>.'
+                'Yes. If an ordered tool is temporarily unavailable, out of stock, or cannot be successfully activated on your device, you can request an immediate full refund. Refunds are transferred back directly via JazzCash, Easypaisa, or bank transfer. Read our <a href="/terms/">terms of service</a>.'
             ),
             (
-                "Are refunds available after an account has been successfully delivered and verified?",
-                'Because digital credentials, workspace invitations, and software product keys are intangible digital assets that cannot be returned once revealed, fulfilled orders are non-refundable after successful activation. All delivered accounts are covered by the stated replacement warranty rather than monetary refunds. Review our <a href="/terms/">ordering policies</a> before payment.'
+                "Are refunds available after an account has been successfully activated?",
+                'Because digital credentials, workspace invitations, and software product keys are intangible digital assets that cannot be returned once revealed, fulfilled orders are non-refundable after successful activation. Accounts with replacement coverage are supported under their stated warranty. Gemini Pro carries no replacement warranty. Review our <a href="/terms/">ordering policies</a> before payment.'
             ),
             (
                 "What should I do if I ordered the wrong product by mistake?",
-                'If you realize you selected the wrong subscription, contact our WhatsApp agent immediately before credentials or invitations are issued. We can swap your order to the correct tool (adjusting any price difference). If access credentials have already been generated and dispatched, the order cannot be swapped.'
+                'If you realize you selected the wrong subscription, contact our WhatsApp agent promptly before credentials or invitations are issued. We can swap your order to the correct tool (adjusting any price difference). If access credentials have already been generated and dispatched, the order cannot be swapped.'
             )
         ]
     },
@@ -173,7 +173,7 @@ CATEGORIES = [
             ),
             (
                 "Can the Windows 11 Pro product key be used on a clean install?",
-                'Yes. The genuine digital product key for <a href="/products/windows-11-pro-key/">Windows 11 Pro</a> can be used during a clean installation from official Microsoft USB installation media, or entered directly into Windows Settings (<em>Settings &gt; System &gt; Activation &gt; Change Product Key</em>) to upgrade an existing Windows 11 Home installation without formatting your drive.'
+                'Yes. The digital product key for <a href="/products/windows-11-pro-key/">Windows 11 Pro</a> can be used during a clean installation from Windows USB installation media, or entered directly into Windows Settings (<em>Settings &gt; System &gt; Activation &gt; Change Product Key</em>) to upgrade an existing Windows 11 Home installation without formatting your drive.'
             )
         ]
     },
@@ -184,7 +184,7 @@ CATEGORIES = [
         "faqs": [
             (
                 "How can I contact human customer support at AI Tools Zone?",
-                'You can speak directly with a human customer support specialist on WhatsApp at <a href="https://wa.me/923430173923"><strong>+92 343 0173923</strong></a>. We do not use automated chatbot loops that prevent you from reaching real assistance. You can ask technical questions, confirm plan limits, request renewal quotes, or resolve warranty claims directly. Visit our <a href="/about/">about and contact page</a> for details.'
+                'You can speak directly with a human customer support specialist on WhatsApp at <a href="https://wa.me/923430173923"><strong>+92 343 017 3923</strong></a>. We do not use automated chatbot loops that prevent you from reaching real assistance. You can ask technical questions, confirm plan limits, request renewal quotes, or resolve warranty claims directly. Visit our <a href="/about/">about and contact page</a> for details.'
             ),
             (
                 "What information should I provide when asking for support on an existing order?",
@@ -203,7 +203,7 @@ CATEGORIES = [
         "faqs": [
             (
                 "How do I choose between ChatGPT Plus, Gemini Pro, and specialized tools?",
-                'For complex logic, coding, mathematical reasoning, and data analysis, choose <a href="/products/chatgpt-plus/">ChatGPT Plus</a> (read our <a href="/compare/chatgpt-vs-claude/">ChatGPT vs Claude comparison</a>). For ingesting huge academic papers, long textbooks, and 1M+ token research, choose <a href="/products/gemini-pro/">Gemini Pro</a> (read our <a href="/compare/chatgpt-vs-gemini/">ChatGPT vs Gemini comparison</a>). For rapid social media marketing graphics, choose <a href="/products/canva-pro-edu/">Canva Pro Edu</a> (read <a href="/compare/canva-vs-adobe/">Canva vs Adobe</a>). For video creators and TikTok/YouTube Shorts editing, choose <a href="/products/capcut-pro/">CapCut Pro</a> (read <a href="/compare/capcut-vs-runway/">CapCut vs Runway</a>). Browse our targeted guides for <a href="/use-cases/ai-tools-for-students/">Students</a>, <a href="/use-cases/ai-tools-for-creators/">Creators</a>, <a href="/use-cases/ai-tools-for-developers/">Developers</a>, and <a href="/use-cases/ai-tools-for-business/">Businesses</a>.'
+                'For complex logic, coding, mathematical reasoning, and data analysis, choose <a href="/products/chatgpt-plus/">ChatGPT Plus</a> (read our <a href="/compare/chatgpt-vs-claude/">ChatGPT vs Claude comparison</a>). For ingesting huge academic papers, long textbooks, and large context research, choose <a href="/products/gemini-pro/">Gemini Pro</a> (read our <a href="/compare/chatgpt-vs-gemini/">ChatGPT vs Gemini comparison</a>). For rapid social media marketing graphics, choose <a href="/products/canva-pro-edu/">Canva Pro Edu</a> (read <a href="/compare/canva-vs-adobe/">Canva vs Adobe</a>). For video creators and TikTok/YouTube Shorts editing, choose <a href="/products/capcut-pro/">CapCut Pro</a> (read <a href="/compare/capcut-vs-runway/">CapCut vs Runway</a>). Browse our targeted guides for <a href="/use-cases/ai-tools-for-students/">Students</a>, <a href="/use-cases/ai-tools-for-creators/">Creators</a>, <a href="/use-cases/ai-tools-for-developers/">Developers</a>, and <a href="/use-cases/ai-tools-for-business/">Businesses</a>.'
             )
         ]
     }
@@ -257,7 +257,7 @@ def build_faq_html():
     
     lead_paragraph = (
         '<p class="direct-answer">Clear answers to common questions about buying AI tools and digital subscriptions in Pakistan. '
-        'Learn about Pakistani payment methods (JazzCash, Easypaisa, Raast), instant subscription activation, replacement warranties, '
+        'Learn about Pakistani payment methods (JazzCash, Easypaisa, Bank Transfer), instant subscription activation, replacement warranties, '
         'account security, and practical advice on choosing the right tools for your work.</p>'
     )
     
