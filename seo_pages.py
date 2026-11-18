@@ -179,6 +179,7 @@ def tiles(entries):
 
 PRODUCT_GUIDES = {
     'chatgpt': [
+        ('/blog/chatgpt-plus-price-in-pakistan/', 'ChatGPT Plus price in Pakistan'),
         ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to buy ChatGPT Plus in Pakistan: price, access & setup'),
         ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
         ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
