@@ -256,6 +256,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'elevenlabs': [
+        ('/blog/elevenlabs-price-in-pakistan/', 'ElevenLabs price in Pakistan'),
         ('/compare/elevenlabs-vs-playht/', 'ElevenLabs vs PlayHT comparison'),
         ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
         ('/use-cases/ai-tools-for-creators/', 'AI tools for creators & voiceover workflows'),
