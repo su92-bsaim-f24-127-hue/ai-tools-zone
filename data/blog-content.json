@@ -2907,7 +2907,7 @@
       "dateLabel": "16 November 2026",
       "dateModified": "2026-11-16",
       "dateModifiedLabel": "16 November 2026",
-      "summary": "Anthropic Claude Pro costs $20 USD/month (~PKR 6,200–PKR 6,800 after bank and withholding taxes). On AI Tools Zone, verified private accounts are available for PKR 2,200/month payable via JazzCash, Easypaisa, SadaPay, or Raast with 15–30 minute WhatsApp activation and a 7-day replacement warranty.",
+      "summary": "Anthropic Claude Pro costs $20 USD/month (about PKR 5,532 at the interbank rate of USD/PKR 276.61, before bank foreign-exchange margins and fees). On AI Tools Zone, verified private accounts are available for PKR 2,200/month payable via JazzCash, Easypaisa, SadaPay, or Raast with 15–30 minute WhatsApp activation and a 7-day replacement warranty.",
       "include_faq_schema": true,
       "keywords": [
         "Claude Pro price in Pakistan",
@@ -2922,7 +2922,7 @@
         {
           "heading": "How much does Claude Pro cost in Pakistan?",
           "paragraphs": [
-            "Directly through Anthropic, Claude Pro is billed at $20.00 USD per month. When converted via Pakistani commercial bank debit or credit cards, foreign exchange margins and the Federal Board of Revenue (FBR) Advance Withholding Tax under Section 236Y (5% for active tax filers, 10% to 16% for non-filers) inflate the bill to between PKR 6,200 and PKR 6,800 per month.",
+            "Directly through Anthropic, Claude Pro is billed at $20.00 USD per month. Converted at the interbank rate (USD/PKR 276.61, 17 November 2026) that is about PKR 5,532 before your bank's foreign-exchange margin and fees. The Federal Board of Revenue (FBR) Advance Withholding Tax under Section 236Y adds only 0.5% for Active Taxpayers List filers and 1% for non-filers in Tax Year 2027 (from 1 July 2026) — not the 5% / 10%–16% figures quoted in older guides.",
             "Through verified domestic platforms like [AI Tools Zone](/products/claude-pro/), Pakistani professionals can purchase a dedicated Private Claude Pro Account for PKR 2,200 per month payable directly via JazzCash or Easypaisa, backed by a 7-day replacement warranty and zero international banking hurdles."
           ]
         },
@@ -2943,7 +2943,7 @@
               ],
               [
                 "Final PKR Cost (Taxes & Fees)",
-                "~PKR 6,200 – PKR 6,800",
+                "~PKR 5,532 (before bank FX margin/fees)",
                 "PKR 2,200 (Net, Zero Hidden Fees)"
               ],
               [
@@ -2958,7 +2958,7 @@
               ],
               [
                 "FBR 236Y Withholding Tax",
-                "Applicable (Up to 10%–16%)",
+                "0.5% (filers) / 1% (non-filers), Tax Year 2027",
                 "None / Included"
               ],
               [
@@ -3061,7 +3061,7 @@
       "faq": [
         [
           "What is the official Claude Pro price in Pakistan in PKR?",
-          "Directly from Anthropic, Claude Pro is $20 USD/month. With banking conversion margins and FBR 236Y withholding taxes, the total PKR debit comes to approximately PKR 6,200 to PKR 6,800. On AI Tools Zone, a verified private account is available for PKR 2,200 per month."
+          "Directly from Anthropic, Claude Pro is $20 USD/month — about PKR 5,532 at the interbank rate (USD/PKR 276.61), before bank foreign-exchange margins and fees, plus FBR Section 236Y advance tax of 0.5% for filers / 1% for non-filers in Tax Year 2027. On AI Tools Zone, a verified private account is available for PKR 2,200 per month."
         ],
         [
           "Can I buy Claude Pro using JazzCash or Easypaisa?",
