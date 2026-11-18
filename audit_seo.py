@@ -304,9 +304,26 @@ def run():
             (r'completely untouched', 'completely untouched'),
             (r'\bROI\b', 'ROI'),
             (r'return on investment', 'return on investment'),
+            (r'bypassing the 10% withholding tax', 'bypassing 10% withholding tax'),
+            (r'zero\b[^\.]*\bbank withholding taxes', 'zero bank withholding taxes'),
+            (r'without international forex taxes', 'without international forex taxes'),
+            (r'without bank forex tax', 'without bank forex tax'),
+            (r'bank tax withholding', 'bank tax withholding'),
+            (r'advance tax surcharges', 'advance tax surcharges'),
+            (r'tax surcharges', 'tax surcharges'),
+            (r'~PKR\s*5,800', '~PKR 5,800'),
+            (r'PKR\s*6,000\+', 'PKR 6,000+'),
+            (r'17,000\+\s*with taxes', '17,000+ with taxes'),
         ]
         for pat, label in forbidden_terms:
             check(not bool(re.search(pat, clean_html, re.I)), path + f' forbidden term found: {label}')
+        # Tax percentage check: outside site-facts note (0.5%), no percentage next to tax
+        tax_pct_matches = re.finditer(r'(?:(\d+(?:\.\d+)?%)\s*(?:[^\w\n]+\w+){0,3}\s*tax|tax\s*(?:[^\w\n]+\w+){0,3}\s*(\d+(?:\.\d+)?%))', clean_html, re.I)
+        for tpm in tax_pct_matches:
+            pct = tpm.group(1) or tpm.group(2)
+            if pct != '0.5%':
+                check(False, path + f' unauthorized tax percentage found: {tpm.group(0)}')
+
         if path.startswith('/products/'):
             check(not bool(re.search(r'\bofficial\b', clean_html, re.I)), path + ' unauthorized official claim on product page')
         # Check Table Rows for product and price

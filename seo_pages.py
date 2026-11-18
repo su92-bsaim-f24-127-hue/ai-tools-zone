@@ -429,7 +429,7 @@ def build_pages(products, origin, shell, write):
             content += (
                 f'<section class="content-block">'
                 f'<h2>Need AI tools in Pakistan without bank card declines?</h2>'
-                f'<p>Avoid international transaction blocks, exchange rate markups, and account suspension risks. AI Tools Zone provides private accounts and subscriptions with instant delivery (15–30 min) and local wallet settlement via JazzCash, Easypaisa, or Pakistani bank transfer.</p>'
+                f'<p>Avoid international transaction blocks and exchange rate markups. AI Tools Zone provides private accounts and subscriptions with local wallet settlement via JazzCash, Easypaisa, or Pakistani bank transfer. Delivery time is shown on each plan.</p>'
                 f'<p><a class="button button-lime" href="{primary_product}">View {e(prod_name)} plan &amp; PKR price ↗</a> '
                 f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20am%20inquiring%20about%20a%20subscription%20after%20reading%20your%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
                 f'</section>'
@@ -481,7 +481,7 @@ def build_pages(products, origin, shell, write):
         content += (
             f'<section class="content-block">'
             f'<h2>Ready to order AI tools in Pakistan?</h2>'
-            f'<p>Avoid international bank card declines and foreign currency exchange markups. AI Tools Zone provides premium subscriptions with fast 15–30 minute delivery and local payment via JazzCash, Easypaisa, or bank transfer.</p>'
+            f'<p>Avoid international bank card declines and foreign currency exchange markups. AI Tools Zone provides premium subscriptions with local payment via JazzCash, Easypaisa, or bank transfer. Delivery time is shown on each plan.</p>'
             f'<p><a class="button button-lime" href="/products/">Browse all 32 tools &amp; PKR prices ↗</a> '
             f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20would%20like%20to%20inquire%20about%20a%20subscription%20after%20reading%20your%20buying%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
             f'</section>'
@@ -578,7 +578,7 @@ def build_pages(products, origin, shell, write):
                 ('EDITORIAL GUIDE', 'NordVPN vs Surfshark in Pakistan: Best VPN for Freelancers (2026)', 'Compare NordVPN vs Surfshark in Pakistan for remote work security, banking access, and streaming. Review local PKR rates with Easypaisa and JazzCash.', '/products/nordvpn/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Gamma App in Pakistan: AI Presentations & Pitch Decks Guide (2026)', 'How Pakistani professionals and agencies use Gamma App for AI presentations and pitch decks. Review Plus/Pro credits, exports, and PKR payment methods.', '/products/gamma-pro/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Grok 2 AI in Pakistan: Features, X Premium & Local Access (2026)', 'How to use Grok 2 AI and Aurora image generation in Pakistan. Review real-time search capabilities, access options, and PKR rates via Easypaisa.', '/blog/chatgpt-plus-vs-gemini-pro-pakistan/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'Semrush Pro in Pakistan: SEO Agency Pricing & Local Guide (2026)', 'Complete guide to Semrush Pro in Pakistan for freelance SEOs and agencies. Review keyword research, backlink audits, and PKR pricing without bank forex tax.', '/compare/helium10-vs-semrush-vs-vidiq/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Semrush Pro in Pakistan: SEO Agency Pricing & Local Guide (2026)', 'Complete guide to Semrush Pro in Pakistan for freelance SEOs and agencies. Review keyword research, backlink audits, and PKR pricing.', '/compare/helium10-vs-semrush-vs-vidiq/', 'Read guide →'),
                 ('HEAD-TO-HEAD COMPARISON', 'ChatGPT Plus vs Claude Pro in Pakistan (2026)', 'Compare OpenAI and Anthropic current models on coding, context windows, PKR pricing, and Easypaisa payment.', '/compare/chatgpt-vs-claude/', 'Compare ChatGPT & Claude →'),
                 ('CREATOR COMPARISON', 'CapCut Pro vs Runway Gen-3 in Pakistan (2026)', 'Timeline editing vs generative text-to-video AI. Compare CapCut Pro VIP (Rs. 950) with Runway Gen-3 in PKR with local payment.', '/compare/capcut-vs-runway/', 'Compare CapCut & Runway →'),
                 ('EDITORIAL GUIDE', 'Grammarly vs QuillBot in Pakistan: Best AI Writing Tools (2026)', 'Compare Grammarly Premium vs QuillBot in Pakistan. Review grammar checks, paraphrasing, thesis writing workflows, and PKR pricing via Easypaisa.', '/compare/grammarly-vs-quillbot-vs-wordai/', 'Read guide →'),

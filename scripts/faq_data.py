@@ -27,7 +27,7 @@ CATEGORIES = [
     {
         "id": "payment",
         "title": "B. Pakistani Payment Methods",
-        "intro": "Transparent PKR pricing without international forex taxes or credit card barriers.",
+        "intro": "Transparent PKR pricing without international credit card barriers or hidden fees.",
         "faqs": [
             (
                 "Which local Pakistani payment methods are accepted?",
@@ -35,7 +35,7 @@ CATEGORIES = [
             ),
             (
                 "Why do local Pakistani debit cards get declined on official AI platforms?",
-                'Most Pakistani commercial bank cards decline international software subscriptions (such as OpenAI, Adobe, Midjourney, or Claude) due to default international eCommerce restrictions on debit cards, 3D-Secure OTP delivery mismatches on recurring subscriptions, or insufficient balance buffers to cover commercial bank foreign exchange conversion spreads, card network assessments, and statutory FBR advance withholding tax under Section 236Y (0.5% for ATL filers and 1.0% for non-ATL persons under the Finance Act 2026). AI Tools Zone solves this payment friction by accepting domestic PKR payments without international card requirements. Read our <a href="/blog/how-to-pay-for-chatgpt-plus-pakistan/">ChatGPT Plus Pakistan payment guide</a>.'
+                'Most Pakistani commercial bank cards decline international software subscriptions (such as OpenAI, Adobe, Midjourney, or Claude) due to default international eCommerce restrictions on debit cards, 3D-Secure OTP delivery mismatches on recurring subscriptions, or insufficient balance buffers. Pakistan\'s advance tax on card payments abroad (Section 236Y) was reduced to 0.5% under the Finance Act 2026, effective 1 July 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR. AI Tools Zone solves this payment friction by accepting domestic PKR payments without international card requirements. Read our <a href="/blog/how-to-pay-for-chatgpt-plus-pakistan/">ChatGPT Plus Pakistan payment guide</a>.'
             ),
             (
                 "Can I pay using bank transfer?",
@@ -43,7 +43,7 @@ CATEGORIES = [
             ),
             (
                 "Are there any hidden conversion fees, sales taxes, or service charges?",
-                'No. All prices listed on our <a href="/pricing/">PKR pricing page</a> and individual product cards are transparent and flat. You pay the exact amount confirmed in your WhatsApp chat in Pakistani Rupees (PKR), with zero foreign currency conversion fees, bank withholding taxes, or unexpected recurring subscription rebills. Read our <a href="/terms/">ordering policies</a>.'
+                'No. All prices listed on our <a href="/pricing/">PKR pricing page</a> and individual product cards are transparent and flat. You pay the exact amount confirmed in your WhatsApp chat in Pakistani Rupees (PKR), with no hidden foreign transaction charges or unexpected recurring subscription rebills. Read our <a href="/terms/">ordering policies</a>.'
             )
         ]
     },
