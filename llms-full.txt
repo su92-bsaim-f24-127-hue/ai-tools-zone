@@ -95,7 +95,7 @@
 - **Replacement Warranty**: 30 Days
 - **Best For**: UI/UX, Teams, Web
 - **Description**: Figma Pro Private is Figma's collaborative interface design platform. Included features cover unlimited design files, Dev Mode inspection and shared team libraries. AI Tools Zone sells it for PKR 3,000 for 2 Years with private access. Delivery takes 1 to 2 hours. Warranty: 30 days.
-- **Included Features**: Unlimited files & version history; Dev Mode inspection; Shared design libraries; Full prototype viewer
+- **Included Features**: Files & version history; Dev Mode inspection; Shared design libraries; Full prototype viewer
 - **Official Vendor**: https://www.figma.com/
 
 ### CapCut Pro
@@ -147,7 +147,7 @@
 - **Replacement Warranty**: 30 Days
 - **Best For**: Slides, Pitching, Docs
 - **Description**: Gamma Pro is Gamma's presentation and document generator. Included features cover presentation creation, custom fonts and document export to PowerPoint. AI Tools Zone sells it for PKR 23,000 for 1 Year with private access. Delivery takes 1 to 2 hours. Warranty: 30 days.
-- **Included Features**: Unlimited AI generation; Custom fonts & themes; Analytics & tracking; Export to PDF/PowerPoint
+- **Included Features**: AI generation; Custom fonts & themes; Analytics & tracking; Export to PDF/PowerPoint
 - **Official Vendor**: https://gamma.app/
 
 ### Replit Core
@@ -185,8 +185,8 @@
 - **Delivery Estimate**: 30–60 min
 - **Replacement Warranty**: 30 Days
 - **Best For**: Docs, Projects, Teams
-- **Description**: Notion Business is Notion's workspace platform for team collaboration. Included features cover team wikis, project databases and unlimited file uploads. AI Tools Zone sells it for PKR 2,200 for 3 Months with invitation access. Delivery takes 30 to 60 min. Warranty: 30 days.
-- **Included Features**: Unlimited team blocks; Integrated Notion AI assistant; Advanced team permissions; Custom database views
+- **Description**: Notion Business is Notion's workspace platform for team collaboration. Included features cover team wikis, project databases and file uploads. AI Tools Zone sells it for PKR 2,200 for 3 Months with invitation access. Delivery takes 30 to 60 min. Warranty: 30 days.
+- **Included Features**: Team blocks; Integrated Notion AI assistant; Advanced team permissions; Custom database views
 - **Official Vendor**: https://www.notion.so/
 
 ### NordVPN
@@ -212,7 +212,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Privacy, Devices, Travel
 - **Description**: Surfshark VPN is Surfshark's privacy network service. Included features cover CleanWeb ad blocking, private DNS and secure global servers. AI Tools Zone sells it for PKR 800 for 2 Months with shared access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: Unlimited device support; CleanWeb ad & tracker blocker; Global server locations; Bypasser split tunneling
+- **Included Features**: Device limits set by Surfshark; CleanWeb ad & tracker blocker; Global server locations; Bypasser split tunneling
 - **Official Vendor**: https://surfshark.com/
 
 ### YouTube Premium
@@ -316,7 +316,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Coding, Math, Reasoning
 - **Description**: DeepSeek Unlimited is a paid access plan for DeepSeek models. Included features cover DeepSeek-V3 and DeepSeek-R1 architectures for coding, mathematics and reasoning tasks. AI Tools Zone sells it for PKR 1,100 for 1 Month with private access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: DeepSeek-V3 & R1 models; Unlimited chat sessions; Advanced logic & reasoning; Fast API throughput
+- **Included Features**: DeepSeek-V3 & R1 models; Chat sessions; Advanced logic & reasoning
 - **Official Vendor**: https://deepseek.com/
 
 ### Perplexity Pro
@@ -329,7 +329,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Research, Search, Citations
 - **Description**: Perplexity Pro is Perplexity's conversational AI answer engine. Included features cover live web citations, multi-model selection and file analysis. AI Tools Zone sells it for PKR 1,400 for 1 Month with private access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: Live web search citations; The vendor's current models; Unlimited Pro searches; File analysis & Pages
+- **Included Features**: Live web search citations; Model choice set by Perplexity; Pro searches; File analysis & Pages
 - **Official Vendor**: https://perplexity.ai/
 
 ### Bolt.new Pro
@@ -394,7 +394,7 @@
 - **Replacement Warranty**: 7 Days
 - **Best For**: Paraphrasing, Summarizing, Students
 - **Description**: QuillBot Premium is QuillBot's paraphrasing and summarization tool. Included features cover formal paraphrasing modes, thesis grammar checks and citation generation. AI Tools Zone sells it for PKR 450 for 1 Month with private access. Delivery takes 15 to 30 min. Warranty: 7 days.
-- **Included Features**: Unlimited paraphrasing modes; Freeze words technology; Instant article summarizer; Citation generator
+- **Included Features**: Paraphrasing modes; Freeze words technology; Instant article summarizer; Citation generator
 - **Official Vendor**: https://quillbot.com/
 
 ### Microsoft 365
@@ -419,7 +419,7 @@
 - **Delivery Estimate**: 30–60 min
 - **Replacement Warranty**: 30 Days
 - **Best For**: Certification, Online Learning, Students
-- **Description**: Coursera Plus is Coursera's learning subscription. Included features cover unlimited course enrollments, professional certificates from Google and IBM, and shareable credentials. AI Tools Zone sells it for PKR 7,000 for 1 Year with invitation access. Delivery takes 30 to 60 min. Warranty: 30 days.
-- **Included Features**: Unlimited course certificates; Courses from Google, IBM, Meta; Applied hands-on projects; Earn shareable LinkedIn credentials
+- **Description**: Coursera Plus is Coursera's learning subscription. Included features cover course enrollments, professional certificates from Google and IBM, and shareable credentials. AI Tools Zone sells it for PKR 7,000 for 1 Year with invitation access. Delivery takes 30 to 60 min. Warranty: 30 days.
+- **Included Features**: Course certificates; Courses from Google, IBM, Meta; Applied hands-on projects; Earn shareable LinkedIn credentials
 - **Official Vendor**: https://coursera.org/
 

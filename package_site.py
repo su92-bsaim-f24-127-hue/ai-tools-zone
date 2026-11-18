@@ -2,9 +2,11 @@
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 import json
+import os
 root=Path(__file__).parent
 production=['index.html','404.html','styles.css','enhancements.css','catalog.js','app.js','search.js','whatsapp.js','measurement.js','theme.js','scene.js','favicon.ico','site.webmanifest','robots.txt','sitemap.xml','llms.txt','llms-full.txt','_headers','_redirects','googleade07204a5ea7ade.html','google536a56061139b8cf.html']
-production += ['admin/index.html','admin/admin.js','admin/admin.css']
+if os.environ.get('INCLUDE_ADMIN') == '1':
+    production += ['admin/index.html','admin/admin.js','admin/admin.css']
 production += ['CNAME', '.nojekyll']
 production += [json.loads((root/'data/indexnow.json').read_text())['key']+'.txt']
 production += [p.relative_to(root).as_posix() for folder in ['products','about','privacy','terms','faq','categories','use-cases','compare','alternatives','guides','pricing','blog','buy-ai-tools-in-pakistan','how-to-buy-chatgpt-plus-in-pakistan','best-ai-tools-for-students-pakistan','ai-video-editing-tools-pakistan','ai-image-generator-subscriptions-pakistan'] for p in (root/folder).rglob('*.html')]

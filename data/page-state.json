@@ -1,7 +1,7 @@
 {
   "/": {
-    "sha256": "5e6ae1e6c32de08c4ce2007c3b22ba7762b3bf9af3dc4c74a7ebf574b64ffeb3",
-    "lastmod": "2026-11-18"
+    "sha256": "fd51c4c706dc461c688471392ffbd44f54d4833e6ad191e7cf95c16108c4f0f6",
+    "lastmod": "2026-11-19"
   },
   "/products/chatgpt-plus/": {
     "sha256": "d43c9bb8a3933c40a0dbd8f712cc2ce5a867fa8f93213b4de2cb0853c87e50fb",
@@ -28,8 +28,8 @@
     "lastmod": "2026-11-18"
   },
   "/products/figma-pro-private/": {
-    "sha256": "31047bef2e7a790f9bfc8f2ac6bff0fa4979db7acedd3fe10b71aa9768d3ba62",
-    "lastmod": "2026-11-18"
+    "sha256": "e0d58e546d53710efc746747167c04e0d8416f1744649700aa9fc77506dffc18",
+    "lastmod": "2026-11-19"
   },
   "/products/capcut-pro/": {
     "sha256": "ffd460c60151a9c8555cdc068895c3f321973109c73b73dec4e08b2ea1b4e878",
@@ -44,28 +44,28 @@
     "lastmod": "2026-11-18"
   },
   "/products/gamma-pro/": {
-    "sha256": "2384cfa8bc4abfd0e0c82407ae0e64e8f2c238f9e599318bfccae26af5f0aef3",
-    "lastmod": "2026-11-18"
+    "sha256": "1339d6318437e855f774339f745faee0f1cfc9953e0b95d72122daae4f862a39",
+    "lastmod": "2026-11-19"
   },
   "/products/replit-core/": {
     "sha256": "c3a847a5ba9be3e6c4c6a2c6372c47cdf45ee7c862ff58f7e83bd42a5c0fc45f",
     "lastmod": "2026-11-18"
   },
   "/products/n8n-starter/": {
-    "sha256": "5f3d7efd28e0bac0f5227c411aafa6ca0955ca9a3fbbcc1e6096f89c0786feb5",
-    "lastmod": "2026-11-18"
+    "sha256": "61c79d303d2afaba31ec1050a8eb13605f324ed47a4c8a2501060e7092956056",
+    "lastmod": "2026-11-19"
   },
   "/products/notion-business/": {
-    "sha256": "d5439c45ea7ec64551e4d36fb1cd9a417cd393724f03fc93e6b53416c288311e",
-    "lastmod": "2026-11-18"
+    "sha256": "198b0c91ebd75bc0579b4e8dd32f5cb44e6574f209c885a5362c1afbf7102dde",
+    "lastmod": "2026-11-19"
   },
   "/products/nordvpn/": {
-    "sha256": "5152d1bf95c65257edb8b7083c97fee17529bdc20954a9f5c3ec55376c5c99e2",
-    "lastmod": "2026-11-18"
+    "sha256": "83ac1ebfcaf5faecb9fe542dc375a21406e59bd19dc538255ce28561569542d9",
+    "lastmod": "2026-11-19"
   },
   "/products/surfshark-vpn/": {
-    "sha256": "fd2eebd262e29580f82bee3a57b7a85da0a634bb398f7b6a3ed5d9348281c6f3",
-    "lastmod": "2026-11-18"
+    "sha256": "b04d2c92670466b087395d6ed51e6ade0d4cf2d4bda87e12fc284e5e11913684",
+    "lastmod": "2026-11-19"
   },
   "/products/youtube-premium/": {
     "sha256": "e2973eadaba2bbcb05dc6ac3d4e0eb63ab212358064e996edf14496988873658",
@@ -96,12 +96,12 @@
     "lastmod": "2026-11-18"
   },
   "/products/deepseek-unlimited/": {
-    "sha256": "e8a7b0beac209afba76c6063d3a48920985d6e5fd6fbd7fbd7f93d2108eba798",
-    "lastmod": "2026-11-18"
+    "sha256": "0019fda908f7c858c7d2a4e2c307b34e9a8cf057df7fd82f7dedde6b785aaa32",
+    "lastmod": "2026-11-19"
   },
   "/products/perplexity-pro/": {
-    "sha256": "7ce384784d1e7fe789b4acb9e2cdd8b7c2d36827707d5858e269c7c28f5f8dd6",
-    "lastmod": "2026-11-18"
+    "sha256": "e0c60ea20290b63fbe9ef97b14537f03d306bbe23931fe354f87b951cb6813c6",
+    "lastmod": "2026-11-19"
   },
   "/products/bolt-new-pro/": {
     "sha256": "5959c6398083d128f2011096e2ec2887a7c245808a158df3f39dd0eeabd0a64a",
@@ -120,16 +120,16 @@
     "lastmod": "2026-11-18"
   },
   "/products/quillbot-premium/": {
-    "sha256": "45863d6b58bb3af1fce6cb35d8a630f7322c101322127f22bd89ee26d271240a",
-    "lastmod": "2026-11-18"
+    "sha256": "cbe7968c282548ee9c4237936459fc2f966a5792cd05483c3f9f0ef9c88b90ac",
+    "lastmod": "2026-11-19"
   },
   "/products/microsoft-office-365/": {
     "sha256": "6ce7c1eaa628577dd432728639972dd373126adb3f4aa3d24a1f066a9c586e50",
     "lastmod": "2026-11-18"
   },
   "/products/coursera-plus-premium/": {
-    "sha256": "52caa333f9e6a2ae3224e0d61f8699cc35a2f9d293b0d071c5f7653b0126a4cf",
-    "lastmod": "2026-11-18"
+    "sha256": "c0a52060db5d23e0cec09c1c599f03b88cf3749d11dcc9d3b06005829929af37",
+    "lastmod": "2026-11-19"
   },
   "/about/": {
     "sha256": "cdc0bed50eef2e9f5db799c68989663b37901fd70732495f642c7ecc501a0670",

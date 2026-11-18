@@ -2,6 +2,8 @@
   'use strict';
   const products = window.PRODUCTS;
   const WA = String(window.AITZ_WHATSAPP || '923430173923');
+  const formatPhone = digits => digits.startsWith('92') && digits.length === 12 ? `+92 ${digits.slice(2,5)} ${digits.slice(5,8)} ${digits.slice(8)}` : `+${digits}`;
+  const WA_DISPLAY = formatPhone(WA);
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const money = n => 'PKR ' + n.toLocaleString('en-PK');
@@ -132,7 +134,7 @@
     if(target.hasAttribute('data-reset'))resetFilters();
     if(target.hasAttribute('data-category'))chooseCategory(target.dataset.category);
     if(target.hasAttribute('data-browse-category')){e.preventDefault();resetFilters();chooseCategory(target.dataset.browseCategory);$('#marketplace').scrollIntoView();}
-    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>Your selected colour theme is stored only in this browser. We do not collect payment details or passwords on this website.</p><p>Order on WhatsApp opens WhatsApp with the chosen plan details. You review and send the message yourself. WhatsApp handles the conversation under its own privacy policy.</p><p>Information you send is used to discuss and fulfil your request. For questions, contact +92 343 0173923. <a class="inline-link" href="privacy/">Read the privacy policy</a>.</p>`);
+    if(target.hasAttribute('data-privacy'))openModal(`<h2 id="modal-title">Your privacy matters.</h2><p>Your selected colour theme is stored only in this browser. We do not collect payment details or passwords on this website.</p><p>This site uses Cloudflare Web Analytics and Google Analytics 4; see the privacy policy.</p><p>Order on WhatsApp opens WhatsApp with the chosen plan details. You review and send the message yourself. WhatsApp handles the conversation under its own privacy policy.</p><p>Information you send is used to discuss and fulfil your request. For questions, contact ${WA_DISPLAY}. <a class="inline-link" href="privacy/">Read the privacy policy</a>.</p>`);
   });
   document.addEventListener('change',e=>{if(!e.target.matches('[data-compare]'))return;const id=e.target.dataset.compare;if(e.target.checked){if(selected.size>=3){e.target.checked=false;toast('Compare up to 3 tools at a time');return;}selected.add(id);window.aitzMeasure?.('compare_add',{product:id});}else selected.delete(id);updateCompare();});
   $('#search').addEventListener('input',renderProducts);

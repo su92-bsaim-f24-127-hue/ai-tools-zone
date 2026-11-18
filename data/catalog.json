@@ -254,7 +254,7 @@
       "Web"
     ],
     "features": [
-      "Unlimited files & version history",
+      "Files & version history",
       "Dev Mode inspection",
       "Shared design libraries",
       "Full prototype viewer"
@@ -403,7 +403,7 @@
       "Docs"
     ],
     "features": [
-      "Unlimited AI generation",
+      "AI generation",
       "Custom fonts & themes",
       "Analytics & tracking",
       "Export to PDF/PowerPoint"
@@ -497,7 +497,7 @@
     "name": "Notion Business",
     "brand": "Notion",
     "category": "Productivity",
-    "description": "Notion Business is Notion's workspace platform for team collaboration. Included features cover team wikis, project databases and unlimited file uploads. AI Tools Zone sells it for PKR 3,500 per year with private access. Delivery takes 1 to 2 hours. Warranty: 30 days.",
+    "description": "Notion Business is Notion's workspace platform for team collaboration. Included features cover team wikis, project databases and file uploads. AI Tools Zone sells it for PKR 3,500 per year with private access. Delivery takes 1 to 2 hours. Warranty: 30 days.",
     "price": 2200,
     "duration": "3 Months",
     "access": "Invitation",
@@ -510,7 +510,7 @@
       "Teams"
     ],
     "features": [
-      "Unlimited team blocks",
+      "Team blocks",
       "Integrated Notion AI assistant",
       "Advanced team permissions",
       "Custom database views"
@@ -579,7 +579,7 @@
       "Travel"
     ],
     "features": [
-      "Unlimited device support",
+      "Device limits set by Surfshark",
       "CleanWeb ad & tracker blocker",
       "Global server locations",
       "Bypasser split tunneling"
@@ -863,9 +863,8 @@
     ],
     "features": [
       "DeepSeek-V3 & R1 models",
-      "Unlimited chat sessions",
-      "Advanced logic & reasoning",
-      "Fast API throughput"
+      "Chat sessions",
+      "Advanced logic & reasoning"
     ],
     "intent": [
       "deepseek",
@@ -901,8 +900,8 @@
     ],
     "features": [
       "Live web search citations",
-      "The vendor's current models",
-      "Unlimited Pro searches",
+      "Model choice set by Perplexity",
+      "Pro searches",
       "File analysis & Pages"
     ],
     "intent": [
@@ -1088,7 +1087,7 @@
       "Students"
     ],
     "features": [
-      "Unlimited paraphrasing modes",
+      "Paraphrasing modes",
       "Freeze words technology",
       "Instant article summarizer",
       "Citation generator"
@@ -1151,7 +1150,7 @@
     "name": "Coursera Plus",
     "brand": "Coursera",
     "category": "Business",
-    "description": "Coursera Plus is Coursera's learning subscription. Included features cover unlimited course enrollments, professional certificates from Google and IBM, and shareable credentials. AI Tools Zone sells it for PKR 7,000 per year with invitation access. Delivery takes 30 to 60 minutes. Warranty: 30 days.",
+    "description": "Coursera Plus is Coursera's learning subscription. Included features cover course enrollments, professional certificates from Google and IBM, and shareable credentials. AI Tools Zone sells it for PKR 7,000 per year with invitation access. Delivery takes 30 to 60 minutes. Warranty: 30 days.",
     "price": 7000,
     "duration": "1 Year",
     "access": "Invitation",
@@ -1164,7 +1163,7 @@
       "Students"
     ],
     "features": [
-      "Unlimited course certificates",
+      "Course certificates",
       "Courses from Google, IBM, Meta",
       "Applied hands-on projects",
       "Earn shareable LinkedIn credentials"
