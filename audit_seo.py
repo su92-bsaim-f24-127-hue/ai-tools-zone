@@ -337,6 +337,18 @@ def run():
                 is_tax_note = ('0.5%' in v_chunk or '1.0%' in v_chunk) and ('236y' in v_lower or 'active taxpayers list' in v_lower or 'withholding' in v_lower or 'advance tax' in v_lower)
                 check(is_tax_note, path + f' unauthorized % sign found: {v_chunk.strip()[:80]}')
 
+        # Leaked internal text audit: fail if visible text contains internal leak words
+        vis_text = ' '.join(page.visible)
+        leak_words = ['catalog.json', 'site-facts', 'TODO', 'FIXME', 'undefined', 'NaN', '{{', '}}', '[object', 'scratch', 'staging']
+        for lw in leak_words:
+            if lw in ('scratch', 'staging', 'TODO', 'FIXME', 'undefined', 'NaN'):
+                pat = rf'\b{re.escape(lw)}\b'
+            else:
+                pat = re.escape(lw)
+            check(not bool(re.search(pat, vis_text)), path + f' leaked internal text found: {lw}')
+        check(not bool(re.search(r'\.json\b', vis_text)), path + ' leaked internal text found: .json')
+        check(not bool(re.search(r'\bNone\b', vis_text)), path + ' leaked internal text found: None')
+
         # External anchor words audit: fail if anchor contains banned words unless in URL path
         banned_anchor_words = ['official', 'technical', 'specifications', 'standards', 'guidelines', 'framework', 'safeguards', 'licensing', 'compliance']
         for a_match in re.finditer(r'<a\b[^>]*href=["\'](https?://[^"\']+)["\'][^>]*>(.*?)</a>', page_html, re.S|re.I):
@@ -634,6 +646,15 @@ def run():
     notfound=Page((ROOT/'404.html').read_text(encoding='utf-8'))
     check(any('noindex' in a.get('content','') for a in notfound.attrs('meta',name='robots')),'404 missing noindex')
     check('/404.html' not in canonical_paths,'404 included in sitemap')
+    vis_404 = ' '.join(notfound.visible)
+    for lw in leak_words:
+        if lw in ('scratch', 'staging', 'TODO', 'FIXME', 'undefined', 'NaN'):
+            pat = rf'\b{re.escape(lw)}\b'
+        else:
+            pat = re.escape(lw)
+        check(not bool(re.search(pat, vis_404)), f'/404.html leaked internal text found: {lw}')
+    check(not bool(re.search(r'\.json\b', vis_404)), '/404.html leaked internal text found: .json')
+    check(not bool(re.search(r'\bNone\b', vis_404)), '/404.html leaked internal text found: None')
     report={'pages':len(pages),'unique_main_content_pages':len(main_content_fingerprints),'checks':checks,'errors':errors,'warnings':warnings,'max_crawl_depth':max(distances.values()),'external_links':sorted(external),'local_resources_checked':len(assets),'crawl_depth':distances}
     out=ROOT/'verification';out.mkdir(exist_ok=True)
     (out/'seo-audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

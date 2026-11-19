@@ -506,7 +506,7 @@
           "url": "https://docs.anthropic.com/en/docs/about-claude/pricing"
         },
         {
-          "name": "Claude Help Center: What is the pro plan",
+          "name": "Claude Help Center: What is the Pro plan",
           "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan"
         },
         {
@@ -598,19 +598,19 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: What is chatgpt plus",
+          "name": "OpenAI Help Center: What is ChatGPT Plus",
           "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
         },
         {
-          "name": "OpenAI Help Center: Which payment methods are supported for chatgpt",
+          "name": "OpenAI Help Center: Which payment methods are supported for ChatGPT",
           "url": "https://help.openai.com/en/articles/10421635-which-payment-methods-are-supported-for-chatgpt"
         },
         {
-          "name": "OpenAI Help Center: Openai account sharing policy",
+          "name": "OpenAI Help Center: OpenAI account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
-          "name": "OpenAI Help Center: Managing billing for chatgpt and the api platform",
+          "name": "OpenAI Help Center: Managing billing for ChatGPT and the API platform",
           "url": "https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform"
         },
         {
@@ -711,7 +711,7 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: Which payment methods are supported for chatgpt",
+          "name": "OpenAI Help Center: Which payment methods are supported for ChatGPT",
           "url": "https://help.openai.com/en/articles/10421635-which-payment-methods-are-supported-for-chatgpt"
         },
         {
@@ -812,7 +812,7 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: Openai account sharing policy",
+          "name": "OpenAI Help Center: OpenAI account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
@@ -1263,7 +1263,7 @@
           "url": "https://complaint.fia.gov.pk/"
         },
         {
-          "name": "OpenAI Help Center: Openai account sharing policy",
+          "name": "OpenAI Help Center: OpenAI account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
@@ -1595,12 +1595,12 @@
       "description": "How Pakistani university students use AI for research papers, literature reviews, and thesis writing while following academic integrity standards. Review budget PKR software tools.",
       "datePublished": "2026-11-07",
       "dateLabel": "7 November 2026",
-      "summary": "Pakistani university students working on Final Year Projects (FYP), MPhil dissertations, and semester research papers need powerful literature discovery and writing tools without risking plagiarism penalties or paying expensive international card charges. Here is an ethical, study and thesis playbook for 2026.",
+      "summary": "Pakistani university students working on Final Year Projects (FYP), MPhil dissertations, and semester research papers need powerful literature discovery and writing tools without paying expensive international card charges. Here is an ethical, study and thesis playbook for 2026.",
       "sections": [
         {
           "heading": "Direct answer: How should Pakistani students use AI ethically?",
           "paragraphs": [
-            "Under Higher Education Commission (HEC) guidelines, submitting verbatim AI-generated text as your own research constitutes academic misconduct. University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources. For an overview of recommended student stacks and access guidelines, visit our [AI tools for students hub](/use-cases/ai-tools-for-students/).",
+            "Many universities treat submitting AI-generated text as your own work as academic misconduct. Check your institution's policy. For an overview of recommended student stacks and access guidelines, visit our [AI tools for students hub](/use-cases/ai-tools-for-students/).",
             "The correct, high-leverage way to use AI as an academic researcher is as an analytical reading assistant and research accelerator: discovering peer-reviewed papers, summarizing dense 40-page PDFs, organizing methodological frameworks, and refining your academic English syntax without letting the AI write the substantive analysis."
           ],
           "bullets": [
@@ -1612,7 +1612,7 @@
         {
           "heading": "Literature review workflows: Analyzing research papers with Gemini Pro",
           "paragraphs": [
-            "A primary bottleneck for Pakistani graduate students is reading 50 to 100 research papers to build Chapter 2 (Literature Review).",
+            "A primary bottleneck for Pakistani graduate students is building Chapter 2 (Literature Review).",
             "Google Gemini Pro features a large context window. This allows students to upload complete PDF papers at once into a single workspace session and query cross-study methodologies, sample sizes, empirical findings, and identified research gaps in tabular format.",
             "Always verify cited findings against the original PDF page numbers. AI models can occasionally conflate findings from different authors when analyzing multiple documents concurrently."
           ],
@@ -1634,14 +1634,14 @@
           "heading": "FYP defense presentations: Gamma Pro vs Canva Pro Edu",
           "paragraphs": [
             "Thesis defense presentations require clean visual pacing, structured bullet points, and high-resolution diagrams.",
-            "Gamma Pro generates complete 15-slide defense decks from an uploaded thesis executive summary, producing responsive cards, callout boxes, and comparative layouts. Canva Pro Edu offers 1 year education access for PKR 900, providing premium vector icons, scientific charts, and professional presentation templates for print posters and defense slides."
+            "Gamma Pro generates defense decks from an uploaded thesis executive summary, producing responsive cards, callout boxes, and comparative layouts. Canva Pro Edu offers 1 year education access for PKR 900, providing premium vector icons, scientific charts, and professional presentation templates for print posters and defense slides."
           ],
           "bullets": []
         },
         {
           "heading": "A student stack from the catalog",
           "paragraphs": [
-            "A student does not need to spend PKR 10,000+ per month on software. The first-period cost of the three plans is PKR 5,100 (computed from catalog.json). Canva Pro Edu and Gemini Pro are 1-year plans. Notion Business is a 3-month plan.",
+            "The first-period cost of the three plans is PKR 5,100. Canva Pro Edu and Gemini Pro are 1-year plans. Notion Business is a 3-month plan.",
             "1. Canva Pro Edu (PKR 900 for 1 Year, invitation): Academic posters, slide decks, infographics, and project diagrams.",
             "2. Google Gemini Pro (PKR 2,000 for 1 Year): large context window for PDF reading, document queries, and literature synthesis.",
             "3. Notion Business (PKR 2,200 for 3 Months): Research note organization, reference tagging, and project task management.",
@@ -1667,7 +1667,7 @@
       "faq": [
         [
           "What is the policy on using AI for academic research in Pakistan?",
-          "University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources."
+          "See the Responsible use section above."
         ],
         [
           "How can Pakistani students pay for AI subscriptions without a credit card?",
