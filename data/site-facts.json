@@ -1,4 +1,22 @@
 {
-  "card_tax_note": "Pakistan's advance tax on card payments abroad (Section 236Y) was reduced to 0.5% under the Finance Act 2026, effective 1 July 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
-  "card_tax_as_of": "2026-11"
+  "card_tax_note": "Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
+  "card_tax_as_of": "2026-11",
+  "vendor_usd_prices": {
+    "chatgpt-plus": {
+      "vendor": "OpenAI",
+      "product": "ChatGPT Plus",
+      "price_usd": "$20",
+      "period": "month",
+      "source_url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "as_of": "2026-11"
+    },
+    "adobe-creative-cloud": {
+      "vendor": "Adobe",
+      "product": "Creative Cloud All Apps",
+      "price_usd": "$59.99",
+      "period": "month",
+      "source_url": "https://www.adobe.com/creativecloud/plans.html",
+      "as_of": "2026-11"
+    }
+  }
 }

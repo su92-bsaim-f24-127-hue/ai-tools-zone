@@ -24,7 +24,7 @@
           "heading": "The Landscape of Premium AI Subscriptions in Pakistan",
           "paragraphs": [
             "Modern artificial intelligence tools have transitioned from experimental chatbots into essential daily infrastructure for Pakistani professionals. Software engineers in Lahore, freelancers in Rawalpindi, and marketing agencies in Karachi rely on cutting-edge models daily to compete in the global digital economy.",
-            "However, subscribing to international software from Pakistan presents unique logistical hurdles. Pakistan's advance tax on card payments abroad (Section 236Y) was reduced to 0.5% under the Finance Act 2026, effective 1 July 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR. In addition, high card decline rates across commercial banks make recurring international card billing difficult to maintain."
+            "However, subscribing to international software from Pakistan presents unique logistical hurdles. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR. In addition, high card decline rates across commercial banks make recurring international card billing difficult to maintain."
           ]
         },
         {
@@ -264,7 +264,7 @@
           "heading": "Official Purchasing Options & Pakistani Payment Considerations",
           "paragraphs": [
             "When attempting to buy ChatGPT Plus directly from OpenAI at chatgpt.com:",
-            "Official Price in USD: $20.00 USD per month. Pakistan's advance tax on card payments abroad (Section 236Y) was reduced to 0.5% under the Finance Act 2026, effective 1 July 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
+            "Official Price in USD: $20.00 USD per month. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
             "Frequent Card Declines: Most Pakistani debit cards (including standard PayPak cards and many basic Visa/Mastercards) fail on international merchant platforms like Stripe due to bank-side e-commerce restrictions or 3D Secure SMS OTP incompatibility.",
             "For detailed guidance on activating international sessions with local banks, read our companion guide on how to resolve Pakistani bank card declines for ChatGPT Plus."
           ]
@@ -531,7 +531,7 @@
         ],
         [
           "Is using Grammarly or QuillBot allowed by Pakistani universities?",
-          "Yes. Proofreading and grammar refinement tools are standard editorial aids. However, generating entire unedited assignments or bypassing plagiarism detection violates HEC academic integrity guidelines."
+          "University and instructor rules differ. Check your institution's policy before using AI or paraphrasing tools, and submit work you can explain and cite."
         ]
       ],
       "related": [

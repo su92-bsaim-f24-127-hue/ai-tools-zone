@@ -317,12 +317,18 @@ def run():
         ]
         for pat, label in forbidden_terms:
             check(not bool(re.search(pat, clean_html, re.I)), path + f' forbidden term found: {label}')
-        # Tax percentage check: outside site-facts note (0.5%), no percentage next to tax
-        tax_pct_matches = re.finditer(r'(?:(\d+(?:\.\d+)?%)\s*(?:[^\w\n]+\w+){0,3}\s*tax|tax\s*(?:[^\w\n]+\w+){0,3}\s*(\d+(?:\.\d+)?%))', clean_html, re.I)
+        # Tax percentage audit: allow only 0.5% and 1.0%, and only inside card_tax_note
+        tax_pct_matches = list(re.finditer(r'(?:(\d+(?:\.\d+)?%)\s*(?:[^\w\n]+\w+){0,3}\s*tax|tax\s*(?:[^\w\n]+\w+){0,3}\s*(\d+(?:\.\d+)?%))', clean_html, re.I))
         for tpm in tax_pct_matches:
             pct = tpm.group(1) or tpm.group(2)
-            if pct != '0.5%':
+            if pct not in ('0.5%', '1.0%'):
                 check(False, path + f' unauthorized tax percentage found: {tpm.group(0)}')
+            else:
+                m_start = tpm.start()
+                context_snippet = clean_html[max(0, m_start-200):min(len(clean_html), m_start+200)]
+                context_snippet_clean = ' '.join(context_snippet.split())
+                if "Section 236Y" not in context_snippet_clean or "Active Taxpayers List" not in context_snippet_clean:
+                    check(False, path + f' tax percentage {pct} found outside card_tax_note: {tpm.group(0)}')
 
         if path.startswith('/products/'):
             check(not bool(re.search(r'\bofficial\b', clean_html, re.I)), path + ' unauthorized official claim on product page')
@@ -371,9 +377,15 @@ def run():
         clean_no_tables = re.sub(r'<[^>]+>', ' ', clean_no_tables)
         clean_no_tables = __import__('html').unescape(clean_no_tables)
         for line in [l.strip() for l in clean_no_tables.split('\n') if l.strip()]:
+            current_named_product = products.get(path)
             for s in re.split(r'(?<=[.!?])\s+', line):
                 s_clean = ' '.join(s.split())
                 if not s_clean: continue
+                # Update current_named_product if any product is named in this sentence
+                for alias in sorted_aliases:
+                    if re.search(rf'\b{re.escape(alias)}\b', s_clean, re.I):
+                        current_named_product = alias_to_product[alias]
+                        break
                 alias_matches = []
                 for alias in sorted_aliases:
                     p = alias_to_product[alias]
@@ -386,6 +398,11 @@ def run():
                         if any(other_a != alias and len(other_a) > len(alias) and s_clean[start_idx:start_idx+len(other_a)].lower() == other_a.lower() for other_a in sorted_aliases):
                             continue
                         alias_matches.append((start_idx, end_idx, alias, p, m.group(1).replace(',', '')))
+                # Pronoun resolution: "it", "this plan", "AI Tools Zone lists it"
+                if not alias_matches and current_named_product is not None:
+                    m_pronoun = re.search(r'\b(?:AI Tools Zone lists it|this plan|it)\b.{0,60}?PKR\s*([0-9,]+)', s_clean, re.I)
+                    if m_pronoun:
+                        alias_matches.append((m_pronoun.start(), m_pronoun.end(), current_named_product['name'], current_named_product, m_pronoun.group(1).replace(',', '')))
                 # Check stated bundle totals
                 total_matches = [int(m.group(1).replace(',', '')) for m in re.finditer(r'(?:first-period cost.*?(?:is|of)\s*PKR|combined.*?(?:cost|is)\s*PKR|total.*?PKR|cost.*?PKR)\s*([0-9,]+)', s_clean, re.I)]
                 under_matches = [int(m.group(1).replace(',', '')) for m in re.finditer(r'under\s*PKR\s*([0-9,]+)\s*(?:total|combined)', s_clean, re.I)]
