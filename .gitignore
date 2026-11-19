@@ -15,3 +15,7 @@ polish.py
 review_fixes.py
 _site/
 scratch/
+check_links.py
+link-problems.txt
+seo-report-*.html
+seo-report-*

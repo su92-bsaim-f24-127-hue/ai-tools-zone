@@ -614,14 +614,14 @@
           "url": "https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform"
         },
         {
-          "name": "FBR Withholding Tax Rates Card (Tax Year 2027 — Section 236Y)",
+          "name": "FBR withholding tax rates card (updated to 30 June 2026)",
           "url": "https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf"
         }
       ],
       "faq": [
         [
           "How much does ChatGPT Plus cost in Pakistan in PKR?",
-          "OpenAI's Help Center currently lists ChatGPT Plus at $20 per month when billed directly, but availability, checkout currency, tax and provider fees can vary. Check the current amount shown in your own checkout; it is separate from AI Tools Zone's seller-listed PKR offer."
+          "OpenAI's Help Center currently lists ChatGPT Plus directly, but availability, checkout currency, tax and provider fees can vary. Check the current amount shown in your own checkout; it is separate from AI Tools Zone's seller-listed PKR offer."
         ],
         [
           "Can I buy ChatGPT Plus using JazzCash or Easypaisa?",
@@ -710,10 +710,6 @@
         }
       ],
       "references": [
-        {
-          "name": "State Bank of Pakistan FE Circular No. 04 (2019)",
-          "url": "https://www.sbp.org.pk/epd/2019/FEC4.htm"
-        },
         {
           "name": "OpenAI Help Center: Supported payment methods",
           "url": "https://help.openai.com/en/articles/10421635-which-payment-methods-are-supported-for-chatgpt"
@@ -1544,8 +1540,8 @@
       ],
       "references": [
         {
-          "name": "Cursor website",
-          "url": "https://www.cursor.com/"
+          "name": "Cursor documentation",
+          "url": "https://docs.cursor.com"
         },
         {
           "name": "GitHub Copilot plans",
@@ -1604,7 +1600,7 @@
         {
           "heading": "Direct answer: How should Pakistani students use AI ethically?",
           "paragraphs": [
-            "Under Higher Education Commission (HEC) guidelines and standard university plagiarism policies across Pakistan (FAST, NUST, COMSATS, UET, Punjab University), submitting verbatim AI-generated text as your own research constitutes academic misconduct and will trigger Turnitin AI detection scores exceeding permissible thresholds (usually under 15–19% overall similarity and 0% unverified AI text). For an overview of recommended student stacks and access guidelines, visit our [AI tools for students hub](/use-cases/ai-tools-for-students/).",
+            "Under Higher Education Commission (HEC) guidelines, submitting verbatim AI-generated text as your own research constitutes academic misconduct. University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources. For an overview of recommended student stacks and access guidelines, visit our [AI tools for students hub](/use-cases/ai-tools-for-students/).",
             "The correct, high-leverage way to use AI as an academic researcher is as an analytical reading assistant and research accelerator: discovering peer-reviewed papers, summarizing dense 40-page PDFs, organizing methodological frameworks, and refining your academic English syntax without letting the AI write the substantive analysis."
           ],
           "bullets": [
@@ -1627,10 +1623,10 @@
           ]
         },
         {
-          "heading": "Turnitin safeguards: Paraphrasing vs academic integrity",
+          "heading": "Academic integrity and responsible tool use",
           "paragraphs": [
-            "Many students attempt to bypass Turnitin by running copied text through online automated paraphrasers (like QuillBot or basic rephrasers). Modern Turnitin algorithms flag repeated unnatural synonym replacements, erratic syntax, and AI-typical transitional phrases ('delve into', 'testament to', 'furthermore it is crucial to note').",
-            "The safest approach is the 'Read, Close, Explain' method: use AI to explain complex theoretical concepts until you understand them completely, close the AI window, and type your explanation in your own words. Then, run your typed draft through ChatGPT or Gemini with the explicit prompt: 'Proofread this paragraph for academic grammar, clarity, and passive-to-active voice without adding new information or altering my original arguments.'"
+            "University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources.",
+            "The recommended approach is to use AI for conceptual explanations, research outlines, and proofreading, while writing final text in your own words. Keep early drafts, document your workflow, and verify all facts and source citations before submitting coursework."
           ],
           "bullets": []
         },
@@ -1670,8 +1666,8 @@
       ],
       "faq": [
         [
-          "Does Turnitin detect text generated by ChatGPT and Gemini?",
-          "Yes. Turnitin uses specialized statistical language classifiers to detect predictable word patterns and perplexity distributions characteristic of LLMs. Submitting unedited AI text will result in elevated AI detection scores."
+          "What is the policy on using AI for academic research in Pakistan?",
+          "University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources."
         ],
         [
           "How can Pakistani students pay for AI subscriptions without a credit card?",
@@ -1816,13 +1812,10 @@
         {
           "heading": "Direct answer: Which design software should Pakistani freelancers buy first?",
           "paragraphs": [
-            "If you are a beginner or intermediate freelancer offering social media graphics, YouTube thumbnails, carousel posts, restaurant menus, or pitch deck presentations, buy Canva Pro Edu (PKR 900 for 1 Year, invitation). It runs in any web browser without demanding heavy computer hardware, provides 100M+ stock assets and Magic Studio AI tools, and provides an accessible path to client delivery.",
-            "If you are an established professional graphic designer, vector artist, UI/UX designer, or branding specialist offering print packaging, typography, logo vectorization, or complex multi-layer photo composites, you can access Adobe Creative Cloud on AI Tools Zone (PKR 1,700 for 2 Months). International agency clients expect native `.AI` (Adobe Illustrator) and `.PSD` (Adobe Photoshop) source vector files that Canva cannot export natively."
+            "Adobe Creative Cloud is listed on AI Tools Zone at PKR 1,700 for 2 Months. Some clients ask for .AI or .PSD source files that require Adobe Illustrator or Photoshop."
           ],
           "bullets": [
-            "Canva Pro Edu is listed for eligible education use. For client work, check Canva's commercial-use terms and ask AI Tools Zone to confirm the plan.",
-            "Buy Adobe Creative Cloud (PKR 1,700 for 2 Months) if: You work with high-end agency clients, print prepress, custom brand identity guidelines, and have a powerful PC workstation.",
-            "The Professional Hybrid Approach: 80% of successful Pakistani freelance studios maintain both—Canva for lightning-fast client templates and Adobe for master vector assets."
+            "Canva Pro Edu is listed for eligible education use. For client work, check Canva's commercial-use terms and ask AI Tools Zone to confirm the plan."
           ]
         },
         {
@@ -1842,9 +1835,8 @@
         {
           "heading": "Pricing and plan comparison: PKR 900 (1 Year) vs PKR 1,700 (2 Months) investment",
           "paragraphs": [
-            "Consider the break-even math for a freelancer operating from Lahore, Karachi, or Peshawar:",
             "Canva Pro Edu costs PKR 900 for 1 Year (invitation on AI Tools Zone).",
-            "Adobe Creative Cloud is listed on AI Tools Zone at PKR 1,700 for 2 Months. To justify professional design software overhead, a freelancer should secure ongoing client retainers billing at least PKR 40,000 to PKR 100,000. Both Canva Pro and Adobe CC can be purchased on AI Tools Zone with flat PKR pricing via JazzCash or Easypaisa, avoiding bank card foreign transaction friction."
+            "Adobe Creative Cloud is listed on AI Tools Zone at PKR 1,700 for 2 Months. Both Canva Pro and Adobe CC can be purchased on AI Tools Zone with flat PKR pricing via JazzCash or Easypaisa, avoiding bank card foreign transaction friction."
           ]
         }
       ],
@@ -1881,7 +1873,7 @@
         ],
         [
           "What is the price of Adobe Creative Cloud in Pakistan in PKR?",
-          "Adobe lists Creative Cloud at $59.99 per month. AI Tools Zone lists it at PKR 1,700 for 2 Months payable through JazzCash and Easypaisa with a 7-day replacement warranty."
+          "AI Tools Zone lists Adobe Creative Cloud at PKR 1,700 for 2 Months payable through JazzCash and Easypaisa with a 7-day replacement warranty."
         ]
       ],
       "related": [
@@ -2276,7 +2268,8 @@
         {
           "heading": "Academic Integrity and Ethical AI Usage",
           "paragraphs": [
-            "Pakistani universities (including HEC-recognized institutions) adhere to strict plagiarism and academic misconduct guidelines. AI tools should be used for research discovery, grammar refinement, and conceptual explanation—never to ghostwrite entire assignments or fabricate research data.",
+            "University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources.",
+            "Pakistani universities adhere to academic misconduct guidelines. AI tools should be used for research discovery, grammar refinement, and conceptual explanation—never to ghostwrite entire assignments or fabricate research data.",
             "Always verify mathematical calculations and primary citations manually before submitting work to supervisors or peer-reviewed journals."
           ]
         }
@@ -2357,8 +2350,8 @@
         {
           "heading": "Why Students in Pakistan Need Affordable AI Tools",
           "paragraphs": [
-            "Finding reliable and [cheap AI tools for students Pakistan](/blog/cheap-ai-tools-for-students-pakistan/) is important for managing higher education in 2026. Whether studying at FAST-NUCES, NUST, UET Lahore, COMSATS, LUMS, or Punjab University, Pakistani university students face intense workloads. From programming assignments and semester research papers to Final Year Projects (FYP) and MPhil dissertations, AI assistants provide critical support for conceptual clarity and research efficiency.",
-            "However, accessing frontier models poses steep economic obstacles in Pakistan. OpenAI lists ChatGPT Plus at $20 per month. AI Tools Zone lists it at PKR 2,300 per month payable via local payment methods.",
+            "Finding reliable and affordable AI tools is important for students in Pakistan managing higher education coursework, programming assignments, and thesis research.",
+            "However, accessing frontier models poses steep economic obstacles in Pakistan. AI Tools Zone lists it at PKR 2,300 per month payable via local payment methods.",
             "Furthermore, most students lack international credit cards, and local virtual payment cards frequently face merchant declines on overseas billing gateways. To stay competitive without overspending, Pakistani students need practical solutions: leveraging robust free tiers and purchasing [affordable AI subscriptions Pakistan](/pricing/) through trusted domestic marketplaces using JazzCash, Easypaisa, or bank transfer."
           ]
         },
@@ -2630,10 +2623,10 @@
           }
         },
         {
-          "heading": "Responsible AI Usage & HEC Pakistan Compliance",
+          "heading": "Responsible AI Usage & Academic Integrity",
           "paragraphs": [
-            "Pakistani students must navigate academic AI usage ethically. The Higher Education Commission (HEC) of Pakistan enforces clear plagiarism and academic honesty guidelines across all recognized institutions.",
-            "Pakistani universities routinely check submissions through Turnitin, which flags machine-generated writing patterns. Using 'AI humanizers' is risky and frequently results in disciplinary inquiries or thesis rejection. Follow these three rules for safe academic use:",
+            "University and instructor rules differ. Check your institution's policy on AI and paraphrasing tools. Use tools to improve your own work, keep your drafts and cite your sources.",
+            "Pakistani students must navigate academic AI usage ethically. The Higher Education Commission (HEC) of Pakistan enforces clear guidelines regarding academic honesty across recognized institutions.",
             "First, treat AI as an intellectual sparring partner and tutor rather than a ghostwriter—brainstorm ideas and outlines with AI, but always compose final drafts in your own words. Second, manually verify every citation on Google Scholar, PubMed, or IEEE Xplore to eliminate hallucinations. Third, transparently declare AI usage whenever required by your course instructor or thesis committee."
           ]
         },
