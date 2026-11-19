@@ -263,8 +263,7 @@
         {
           "heading": "Official Purchasing Options & Pakistani Payment Considerations",
           "paragraphs": [
-            "When attempting to buy ChatGPT Plus directly from OpenAI at chatgpt.com:",
-            "Official Price in USD: Confirmed directly on OpenAI's website. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
+            "When attempting to buy ChatGPT Plus directly from OpenAI at chatgpt.com, cardholders pay in foreign currency subject to Pakistani banking rules. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
             "Frequent Card Declines: Most Pakistani debit cards (including standard PayPak cards and many basic Visa/Mastercards) fail on international merchant platforms like Stripe due to bank-side e-commerce restrictions or 3D Secure SMS OTP incompatibility.",
             "For detailed guidance on activating international sessions with local banks, read our companion guide on how to resolve Pakistani bank card declines for ChatGPT Plus."
           ]
@@ -478,7 +477,7 @@
               [
                 "ChatGPT Plus",
                 "Free tier with strict limits",
-                "advanced reasoning, Canvas, Voice mode, no queues",
+                "Advanced reasoning, Canvas, Voice mode, no queues",
                 "PKR 2,300 / month"
               ],
               [
@@ -531,7 +530,7 @@
         ],
         [
           "Is using Grammarly or QuillBot allowed by Pakistani universities?",
-          "See the Responsible use section above."
+          "Policies differ by university and instructor. Check yours before using AI or paraphrasing tools."
         ]
       ],
       "related": [

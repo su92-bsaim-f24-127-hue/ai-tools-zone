@@ -420,6 +420,28 @@ def build_pages(products, origin, shell, write):
         publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
 
     for page in CONTENT['pages']:
+        if page['path'] == '/alternatives/chatgpt/':
+            ai_assistants = [p for p in products if p['category'] == 'AI Assistants']
+            n_assistants = len(ai_assistants)
+            names_str = ', '.join(p['name'] for p in ai_assistants)
+            page['answer'] = f"AI Tools Zone lists {n_assistants} AI assistants: {names_str}. For a finished video, design or coding workflow, a task-specific tool may fit better than another general assistant."
+            other_assistants = [p for p in ai_assistants if p['id'] != 'chatgpt']
+            task_specific = [by_id[tid] for tid in ['capcut', 'canva', 'replit'] if tid in by_id]
+            selected = other_assistants + task_specific
+
+            content = '<p class="direct-answer">' + e(page['answer']) + '</p>'
+            content += '<section class="content-block"><h2>Listed plans at a glance</h2>' + plan_table(other_assistants) + disclaimer + '</section>'
+            content += '<section class="content-block"><h2>Task-specific tools</h2>' + plan_table(task_specific) + disclaimer + '</section>'
+            if page.get('comparison'):
+                content += comparison_table(page['comparison'], products, by_id)
+            for heading, body in page['sections']:
+                content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{render_text(body)}</p></section>'
+            content += faq_html(page['faq']) + '<section class="content-block"><h2>Continue your comparison</h2>' + links(page['related']) + '</section>'
+            if page.get('sources'):
+                content += '<section class="content-block"><h2>Official product references</h2><ul>' + ''.join(f'<li><a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(name)}</a></li>' for name, url in page['sources']) + '</ul><p>These references describe the vendors. They do not establish authorization or the entitlements of an independently supplied offer.</p></section>'
+            publish(page['path'], page['title'], page['description'], content, selected, [('Home', '/'), (HUBS[page['type']][0], '/' + page['type'] + '/'), (page['title'], page['path'])])
+            continue
+
         selected=[by_id[id] for id in page['products'] if id in by_id]
         content='<p class="direct-answer">'+e(page['answer'])+'</p>'
         if selected:

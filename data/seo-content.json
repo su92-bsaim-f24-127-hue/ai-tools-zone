@@ -771,9 +771,12 @@
       "type": "alternatives",
       "title": "ChatGPT Alternatives: Choose by Task in Pakistan",
       "description": "Consider Gemini or a task-specific tool instead of ChatGPT. Compare listed PKR offers without assuming equivalent features or a universal winner.",
-      "answer": "Gemini is the other general assistant currently listed by AI Tools Zone. If you need a finished video, design or application workflow, a specialized tool may solve the task more directly than switching between general assistants.",
+      "answer": "AI Tools Zone lists 5 AI assistants: ChatGPT Plus, Gemini Pro, Claude Pro, DeepSeek Unlimited, Perplexity Pro. For a finished video, design or coding workflow, a task-specific tool may fit better than another general assistant.",
       "products": [
         "gemini",
+        "claude",
+        "deepseek",
+        "perplexity",
         "capcut",
         "canva",
         "replit"
@@ -785,7 +788,7 @@
         ],
         [
           "For people comparing Gemini alternatives too",
-          "The same decision works in reverse: ChatGPT is the other assistant in this catalog. Use the ChatGPT versus Gemini comparison for the two offers. This page is not an exhaustive directory and does not claim that all alternatives have equivalent capabilities."
+          "The same decision works in reverse: ChatGPT is one of several AI assistants in this catalog. Use the ChatGPT versus Gemini comparison for those two offers. This page is not an exhaustive directory and does not claim that all alternatives have equivalent capabilities."
         ],
         [
           "When changing tools is unnecessary",
@@ -1220,7 +1223,7 @@
         ],
         [
           "What is the responsible way to use writing assistants?",
-          "See the Responsible use section above."
+          "Policies differ by university and instructor. Check yours before using AI or paraphrasing tools."
         ]
       ],
       "related": [
