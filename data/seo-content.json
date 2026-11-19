@@ -371,7 +371,7 @@
       ],
       "sources": [
         [
-          "Canva education information",
+          "Canva education",
           "https://www.canva.com/education/"
         ],
         [
@@ -428,11 +428,11 @@
       ],
       "sources": [
         [
-          "CapCut product information",
+          "CapCut website",
           "https://www.capcut.com/"
         ],
         [
-          "ElevenLabs product information",
+          "ElevenLabs website",
           "https://elevenlabs.io/"
         ]
       ],
@@ -483,15 +483,15 @@
       ],
       "sources": [
         [
-          "Replit",
+          "Replit website",
           "https://replit.com/"
         ],
         [
-          "n8n",
+          "n8n website",
           "https://n8n.io/"
         ],
         [
-          "Lovable",
+          "Lovable website",
           "https://lovable.dev/"
         ]
       ],
@@ -544,11 +544,11 @@
       ],
       "sources": [
         [
-          "Notion",
+          "Notion website",
           "https://www.notion.com/"
         ],
         [
-          "n8n",
+          "n8n website",
           "https://n8n.io/"
         ]
       ],
@@ -755,11 +755,11 @@
       ],
       "sources": [
         [
-          "CapCut",
+          "CapCut website",
           "https://www.capcut.com/"
         ],
         [
-          "Canva",
+          "Canva website",
           "https://www.canva.com/"
         ]
       ],
@@ -811,11 +811,11 @@
       ],
       "sources": [
         [
-          "Gemini",
+          "Gemini overview",
           "https://gemini.google/about/"
         ],
         [
-          "ChatGPT",
+          "ChatGPT overview",
           "https://chatgpt.com/overview/"
         ]
       ],
@@ -866,15 +866,15 @@
       ],
       "sources": [
         [
-          "Adobe",
+          "Adobe Creative Cloud",
           "https://www.adobe.com/creativecloud.html"
         ],
         [
-          "Figma",
+          "Figma website",
           "https://www.figma.com/"
         ],
         [
-          "Leonardo",
+          "Leonardo.Ai website",
           "https://leonardo.ai/"
         ]
       ],
@@ -1167,7 +1167,7 @@
       "path": "/compare/grammarly-vs-quillbot-vs-wordai/",
       "type": "compare",
       "title": "Grammarly vs QuillBot vs WordAI: choose a writing workflow",
-      "description": "Compare writing assistants through editing, rewriting, review and privacy checks. Verify current features and plans with each vendor; none is currently listed here.",
+      "description": "Compare writing assistants through editing, rewriting, review and privacy checks. Grammarly Premium and QuillBot Premium are listed; WordAI is not.",
       "answer": "Grammarly, QuillBot and WordAI are separate writing products. Choose by the writing step you need, test whether edits preserve meaning, and review the vendor's current terms before sharing unpublished work.",
       "products": [],
       "comparison": [
@@ -1198,7 +1198,7 @@
         ],
         [
           "Check plan, rights and privacy",
-          "Plan features and limits can change. Review the current vendor terms for data retention, commercial use and cancellation. None of these three products is currently listed in AI Tools Zone, so this page does not publish a local PKR price or seller offer."
+          "Plan features and limits can change. Review the current vendor terms for data retention, commercial use and cancellation. Grammarly Premium and QuillBot Premium are listed on AI Tools Zone, while WordAI is not listed."
         ],
         [
           "Responsible use",
@@ -1216,7 +1216,7 @@
         ],
         [
           "Can I order these tools from AI Tools Zone?",
-          "They are not currently listed in our catalogue. Use each vendor's official plan page to check current features and availability."
+          "Grammarly Premium and QuillBot Premium are listed in our catalogue with PKR pricing. WordAI is not listed; use each vendor's official plan page to check current features and availability."
         ],
         [
           "What is the responsible way to use writing assistants?",
@@ -1477,11 +1477,11 @@
       ],
       "sources": [
         [
-          "Replit official website",
+          "Replit website",
           "https://replit.com/"
         ],
         [
-          "Lovable official website",
+          "Lovable website",
           "https://lovable.dev/"
         ]
       ],
@@ -1566,7 +1566,7 @@
       ],
       "sources": [
         [
-          "Leonardo.ai pricing and features",
+          "Leonardo.Ai pricing",
           "https://leonardo.ai/pricing/"
         ],
         [

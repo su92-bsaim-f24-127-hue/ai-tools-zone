@@ -330,6 +330,25 @@ def run():
                 if "Section 236Y" not in context_snippet_clean or "Active Taxpayers List" not in context_snippet_clean:
                     check(False, path + f' tax percentage {pct} found outside card_tax_note: {tpm.group(0)}')
 
+        # Universal % sign audit: any % sign outside the tax note fails the build
+        for v_chunk in page.visible:
+            if '%' in v_chunk:
+                v_lower = v_chunk.lower()
+                is_tax_note = ('0.5%' in v_chunk or '1.0%' in v_chunk) and ('236y' in v_lower or 'active taxpayers list' in v_lower or 'withholding' in v_lower or 'advance tax' in v_lower)
+                check(is_tax_note, path + f' unauthorized % sign found: {v_chunk.strip()[:80]}')
+
+        # External anchor words audit: fail if anchor contains banned words unless in URL path
+        banned_anchor_words = ['official', 'technical', 'specifications', 'standards', 'guidelines', 'framework', 'safeguards', 'licensing', 'compliance']
+        for a_match in re.finditer(r'<a\b[^>]*href=["\'](https?://[^"\']+)["\'][^>]*>(.*?)</a>', page_html, re.S|re.I):
+            href = a_match.group(1)
+            if 'aitoolszone.tech' in href or 'wa.me' in href:
+                continue
+            anchor_text = re.sub(r'<[^>]+>', ' ', a_match.group(2)).strip()
+            u_path = urlparse(href).path.lower()
+            for bw in banned_anchor_words:
+                if re.search(rf'\b{re.escape(bw)}\b', anchor_text, re.I):
+                    check(bw in u_path, path + f' banned word "{bw}" in external anchor "{anchor_text}" for {href}')
+
         if path.startswith('/products/'):
             check(not bool(re.search(r'\bofficial\b', clean_html, re.I)), path + ' unauthorized official claim on product page')
         # Check Table Rows for product and price

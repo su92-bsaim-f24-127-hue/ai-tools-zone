@@ -63,23 +63,23 @@
       ],
       "references": [
         {
-          "name": "WhatsApp Business Messaging Policy (Meta)",
+          "name": "WhatsApp Business messaging policy",
           "url": "https://whatsappbusiness.com/policy/"
         },
         {
-          "name": "WhatsApp Business Platform pricing (Meta)",
+          "name": "WhatsApp Business Platform pricing",
           "url": "https://whatsappbusiness.com/products/platform-pricing/"
         },
         {
-          "name": "WhatsApp Business Platform developer documentation (Meta)",
+          "name": "WhatsApp Business Platform developer documentation",
           "url": "https://developers.facebook.com/docs/whatsapp/"
         },
         {
-          "name": "Twilio Virtual Agent and voice integration guide",
+          "name": "Twilio Virtual Agent documentation",
           "url": "https://www.twilio.com/docs/voice/virtual-agent"
         },
         {
-          "name": "Twilio human handoff guide",
+          "name": "Twilio human handoff documentation",
           "url": "https://www.twilio.com/docs/conversations/agent-connect/escalate-to-human-agent"
         }
       ],
@@ -157,7 +157,7 @@
       ],
       "references": [
         {
-          "name": "ChatGPT plans and features",
+          "name": "ChatGPT pricing",
           "url": "https://chatgpt.com/pricing/"
         },
         {
@@ -169,7 +169,7 @@
           "url": "https://www.canva.com/pricing/"
         },
         {
-          "name": "NotebookLM",
+          "name": "NotebookLM website",
           "url": "https://notebooklm.google/"
         }
       ],
@@ -241,7 +241,7 @@
       ],
       "references": [
         {
-          "name": "ChatGPT plans",
+          "name": "ChatGPT pricing",
           "url": "https://chatgpt.com/pricing/"
         },
         {
@@ -253,11 +253,11 @@
           "url": "https://www.capcut.com/"
         },
         {
-          "name": "ElevenLabs plans",
+          "name": "ElevenLabs pricing",
           "url": "https://elevenlabs.io/pricing"
         },
         {
-          "name": "Replit plans",
+          "name": "Replit pricing",
           "url": "https://replit.com/pricing"
         }
       ],
@@ -328,11 +328,11 @@
       ],
       "references": [
         {
-          "name": "UNESCO generative AI education guidance",
+          "name": "UNESCO guidance on generative AI in education",
           "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research"
         },
         {
-          "name": "ChatGPT plans",
+          "name": "ChatGPT pricing",
           "url": "https://chatgpt.com/pricing/"
         },
         {
@@ -340,7 +340,7 @@
           "url": "https://one.google.com/about/google-ai-plans/"
         },
         {
-          "name": "Canva for Education",
+          "name": "Canva education",
           "url": "https://www.canva.com/education/"
         }
       ],
@@ -418,11 +418,11 @@
           "url": "https://www.canva.com/pricing/"
         },
         {
-          "name": "ElevenLabs plans",
+          "name": "ElevenLabs pricing",
           "url": "https://elevenlabs.io/pricing"
         },
         {
-          "name": "Google Veo",
+          "name": "Google DeepMind Veo",
           "url": "https://deepmind.google/models/veo/"
         }
       ],
@@ -498,7 +498,7 @@
           "url": "https://openai.com/api/pricing/"
         },
         {
-          "name": "OpenAI ChatGPT plans",
+          "name": "ChatGPT pricing",
           "url": "https://chatgpt.com/pricing/"
         },
         {
@@ -506,7 +506,7 @@
           "url": "https://docs.anthropic.com/en/docs/about-claude/pricing"
         },
         {
-          "name": "Claude plan details",
+          "name": "Claude Help Center: What is the pro plan",
           "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan"
         },
         {
@@ -598,19 +598,19 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: What is ChatGPT Plus?",
+          "name": "OpenAI Help Center: What is chatgpt plus",
           "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
         },
         {
-          "name": "OpenAI Help Center: Supported payment methods",
+          "name": "OpenAI Help Center: Which payment methods are supported for chatgpt",
           "url": "https://help.openai.com/en/articles/10421635-which-payment-methods-are-supported-for-chatgpt"
         },
         {
-          "name": "OpenAI Help Center: Account sharing policy",
+          "name": "OpenAI Help Center: Openai account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
-          "name": "OpenAI Help Center: ChatGPT and API billing are separate",
+          "name": "OpenAI Help Center: Managing billing for chatgpt and the api platform",
           "url": "https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform"
         },
         {
@@ -711,11 +711,11 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: Supported payment methods",
+          "name": "OpenAI Help Center: Which payment methods are supported for chatgpt",
           "url": "https://help.openai.com/en/articles/10421635-which-payment-methods-are-supported-for-chatgpt"
         },
         {
-          "name": "AI Tools Zone: Ordering & Replacement Warranty Terms",
+          "name": "AI Tools Zone terms",
           "url": "https://aitoolszone.tech/terms/"
         }
       ],
@@ -812,15 +812,15 @@
       ],
       "references": [
         {
-          "name": "OpenAI Help Center: Account sharing and security guidelines",
+          "name": "OpenAI Help Center: Openai account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
-          "name": "Canva Help Center: Team and organization best practices",
+          "name": "Canva Help Center: Manage team members",
           "url": "https://www.canva.com/help/article/manage-team-members/"
         },
         {
-          "name": "AI Tools Zone: Ordering and Replacement Warranty Terms",
+          "name": "AI Tools Zone terms",
           "url": "https://aitoolszone.tech/terms/"
         }
       ],
@@ -913,11 +913,11 @@
       ],
       "references": [
         {
-          "name": "OpenAI ChatGPT",
+          "name": "OpenAI ChatGPT website",
           "url": "https://openai.com/chatgpt"
         },
         {
-          "name": "Google Gemini",
+          "name": "Gemini website",
           "url": "https://gemini.google.com"
         },
         {
@@ -1044,19 +1044,19 @@
       ],
       "references": [
         {
-          "name": "OpenAI ChatGPT Plus Subscription & Pricing Terms",
+          "name": "OpenAI ChatGPT pricing",
           "url": "https://openai.com/chatgpt/pricing/"
         },
         {
-          "name": "Google Gemini Advanced & Workspace Integration Guidelines",
+          "name": "Gemini website",
           "url": "https://gemini.google.com/"
         },
         {
-          "name": "Canva Pro & Education Plan Eligibility Standards",
+          "name": "Canva plans",
           "url": "https://www.canva.com/pricing/"
         },
         {
-          "name": "State Bank of Pakistan Digital Payment Systems & Consumer Protection",
+          "name": "State Bank of Pakistan website",
           "url": "https://www.sbp.org.pk/dfs/index.html"
         }
       ],
@@ -1161,15 +1161,15 @@
       ],
       "references": [
         {
-          "name": "State Bank of Pakistan Freelance Export Proceeds Framework",
+          "name": "State Bank of Pakistan website",
           "url": "https://www.sbp.org.pk/epd/index.htm"
         },
         {
-          "name": "Upwork Freelancer Guidelines on Generative AI Usage",
+          "name": "Upwork support",
           "url": "https://support.upwork.com/"
         },
         {
-          "name": "Fiverr Terms on AI-Generated Deliverables and Quality Standards",
+          "name": "Fiverr community standards",
           "url": "https://www.fiverr.com/community/standards"
         }
       ],
@@ -1259,11 +1259,11 @@
       ],
       "references": [
         {
-          "name": "Federal Investigation Agency (FIA) Cybercrime Consumer Advisory",
+          "name": "FIA complaint portal",
           "url": "https://complaint.fia.gov.pk/"
         },
         {
-          "name": "OpenAI Account Sharing & Subscription Policy",
+          "name": "OpenAI Help Center: Openai account sharing policy",
           "url": "https://help.openai.com/en/articles/10471989-openai-account-sharing-policy"
         },
         {
@@ -1355,11 +1355,11 @@
           "url": "https://leonardo.ai/"
         },
         {
-          "name": "Canva Magic Studio overview",
+          "name": "Canva Magic Studio",
           "url": "https://www.canva.com/magic-studio/"
         },
         {
-          "name": "Adobe Firefly Generative AI Ethics & Commercial Safeguards",
+          "name": "Adobe Firefly overview",
           "url": "https://www.adobe.com/sensei/generative-ai/firefly.html"
         }
       ],
@@ -1415,7 +1415,7 @@
           "heading": "Direct answer: Timeline editing vs generative text-to-video AI",
           "paragraphs": [
             "Choosing the best AI video tool in Pakistan depends on whether you edit existing footage or generate entirely new synthetic video clips from text prompts.",
-            "For 90% of Pakistani creators and agencies, CapCut Pro VIP (PKR 900/month) is the most critical tool. It delivers AI auto-captions with high Urdu/English accuracy, background removal, viral transitions, and 4K 60fps export. For filmmakers and visual artists seeking cinematic synthetic video generation, Google Veo 3 Ultra (PKR 2,100) and Runway Gen-3 lead the generative category."
+            "CapCut Pro (PKR 900/month) delivers AI auto-captions with high Urdu/English accuracy, background removal, viral transitions, and 4K 60fps export. For filmmakers and visual artists seeking cinematic synthetic video generation, Google Veo 3 Ultra (PKR 2,100) and Runway Gen-3 lead the generative category."
           ],
           "bullets": [
             "Best for Content Creators & Editors: CapCut Pro VIP (PKR 900) - Essential timeline editor, auto-subtitles, noise removal, and color grading.",
@@ -1424,7 +1424,7 @@
           ]
         },
         {
-          "heading": "Why CapCut Pro VIP is popular with Pakistani social media editors",
+          "heading": "Why CapCut Pro is popular with Pakistani social media editors",
           "paragraphs": [
             "Pakistani social media agencies and short-form creators rely heavily on CapCut Pro because it removes hours of tedious manual editing. Pro features include automated multi-speaker audio transcription, vocal isolation to remove street noise, optical flow slow-motion, and smart background cutout without a green screen.",
             "Furthermore, CapCut Pro desktop works smoothly on budget laptops and handles 4K exports without watermarks, making it the most cost-effective software for local freelance editors."
@@ -1454,7 +1454,7 @@
           "url": "https://www.capcut.com/"
         },
         {
-          "name": "Google DeepMind Veo research overview",
+          "name": "Google DeepMind Veo overview",
           "url": "https://deepmind.google/technologies/veo/"
         },
         {
@@ -1544,7 +1544,7 @@
           "url": "https://docs.cursor.com"
         },
         {
-          "name": "GitHub Copilot plans",
+          "name": "GitHub Copilot pricing",
           "url": "https://github.com/features/copilot"
         }
       ],
@@ -1612,8 +1612,8 @@
         {
           "heading": "Literature review workflows: Analyzing research papers with Gemini Pro",
           "paragraphs": [
-            "A primary bottleneck for Pakistani graduate students is reading 50 to 100 research papers to build Chapter 2 (Literature Review). Standard free LLMs have small context windows (usually 8,000 to 32,000 tokens) that cannot ingest multiple full-length academic publications simultaneously.",
-            "Google Gemini Pro features a large context window. This allows students to upload 10 to 15 complete PDF papers at once into a single workspace session and query cross-study methodologies, sample sizes, empirical findings, and identified research gaps in tabular format.",
+            "A primary bottleneck for Pakistani graduate students is reading 50 to 100 research papers to build Chapter 2 (Literature Review).",
+            "Google Gemini Pro features a large context window. This allows students to upload complete PDF papers at once into a single workspace session and query cross-study methodologies, sample sizes, empirical findings, and identified research gaps in tabular format.",
             "Always verify cited findings against the original PDF page numbers. AI models can occasionally conflate findings from different authors when analyzing multiple documents concurrently."
           ],
           "bullets": [
@@ -1631,17 +1631,17 @@
           "bullets": []
         },
         {
-          "heading": "FYP defense presentations: Gamma App vs Canva Pro Edu",
+          "heading": "FYP defense presentations: Gamma Pro vs Canva Pro Edu",
           "paragraphs": [
-            "Thesis defense presentations require clean visual pacing, structured bullet points, and high-resolution diagrams. Pakistani students frequently waste days formatting PowerPoint templates.",
-            "Gamma App generates complete 15-slide defense decks from an uploaded thesis executive summary  producing responsive cards, callout boxes, and comparative layouts. Canva Pro Edu offers 1 year education access for PKR 900, providing premium vector icons, scientific charts, and professional presentation templates for print posters and defense slides."
+            "Thesis defense presentations require clean visual pacing, structured bullet points, and high-resolution diagrams.",
+            "Gamma Pro generates complete 15-slide defense decks from an uploaded thesis executive summary, producing responsive cards, callout boxes, and comparative layouts. Canva Pro Edu offers 1 year education access for PKR 900, providing premium vector icons, scientific charts, and professional presentation templates for print posters and defense slides."
           ],
           "bullets": []
         },
         {
-          "heading": "The Pakistani student budget AI stack (under PKR 2,500/month)",
+          "heading": "A student stack from the catalog",
           "paragraphs": [
-            "A student does not need to spend PKR 10,000+ per month on software. A lean, highly effective academic stack can be maintained for combined total PKR 5,100:",
+            "A student does not need to spend PKR 10,000+ per month on software. The first-period cost of the three plans is PKR 5,100 (computed from catalog.json). Canva Pro Edu and Gemini Pro are 1-year plans. Notion Business is a 3-month plan.",
             "1. Canva Pro Edu (PKR 900 for 1 Year, invitation): Academic posters, slide decks, infographics, and project diagrams.",
             "2. Google Gemini Pro (PKR 2,000 for 1 Year): large context window for PDF reading, document queries, and literature synthesis.",
             "3. Notion Business (PKR 2,200 for 3 Months): Research note organization, reference tagging, and project task management.",
@@ -1656,11 +1656,11 @@
           "url": "https://www.hec.gov.pk/"
         },
         {
-          "name": "Google DeepMind Gemini technical overview",
+          "name": "Google DeepMind Gemini overview",
           "url": "https://deepmind.google/technologies/gemini/"
         },
         {
-          "name": "Turnitin AI writing guidance for educators",
+          "name": "Turnitin AI writing overview",
           "url": "https://www.turnitin.com/solutions/ai-writing"
         }
       ],
@@ -1675,7 +1675,7 @@
         ],
         [
           "Can Gemini Pro read full textbook PDFs?",
-          "Yes. Gemini Pro's large context window can ingest academic papers, dissertations, and entire book chapters (up to roughly 1,500 pages of text) in a single prompt session."
+          "Yes. Gemini Pro's large context window can ingest academic papers, dissertations, and entire book chapters in a single prompt session."
         ]
       ],
       "related": [
@@ -1754,7 +1754,7 @@
           "url": "https://docs.n8n.io/"
         },
         {
-          "name": "Meta WhatsApp Cloud API documentation",
+          "name": "WhatsApp Cloud API documentation",
           "url": "https://developers.facebook.com/docs/whatsapp/cloud-api"
         },
         {
@@ -1846,7 +1846,7 @@
           "url": "https://helpx.adobe.com/creative-cloud/system-requirements.html"
         },
         {
-          "name": "Canva Magic Studio overview",
+          "name": "Canva Magic Studio",
           "url": "https://www.canva.com/magic-studio/"
         },
         {
@@ -1919,7 +1919,7 @@
         {
           "heading": "Step 1: High-retention scriptwriting with ChatGPT Plus",
           "paragraphs": [
-            "The number one reason faceless channels fail to gain traction is weak audience retention during the first 30 seconds. Generic AI prompts generate bland introductions ('Hello guys, welcome back to my channel') that cause 70% of viewers to click away.",
+            "The number one reason faceless channels fail to gain traction is weak audience retention during the first 30 seconds. Generic AI prompts generate bland introductions ('Hello guys, welcome back to my channel') that reduce viewer retention.",
             "Using ChatGPT Plus (with current reasoning models), creators craft high-stakes opening hooks based on curiosity gaps, tension, and visual storytelling before introducing the core narrative. Structure prompts with specific pacing directives: 'Write an opening hook under 35 words that opens in the middle of the action, poses a psychological question, and promises an unexpected resolution at the end of the video.'"
           ],
           "bullets": []
@@ -1928,7 +1928,7 @@
           "heading": "Step 2: Natural voice synthesis with ElevenLabs (Avoiding robotic strikes)",
           "paragraphs": [
             "YouTube's automated spam and reused content detection algorithms specifically penalize monotone, robotic text-to-speech (TTS) engines commonly found in free web tools.",
-            "ElevenLabs utilizes deep neural voice cloning and generative emotion modeling to produce natural breathing pauses, subtle pitch inflections, and pacing variations. Using ElevenLabs models (like Eleven Multilingual v2 or Turbo v2.5), Pakistani creators can generate studio-quality native English voiceovers that are indistinguishable from professional voice actors, ensuring 100% compliance with YouTube AdSense Monetization Policies."
+            "ElevenLabs utilizes deep neural voice cloning and generative emotion modeling to produce natural breathing pauses, subtle pitch inflections, and pacing variations. Pakistani creators can generate studio-quality voiceovers for automated YouTube channels."
           ],
           "bullets": []
         },
@@ -1959,7 +1959,7 @@
       ],
       "references": [
         {
-          "name": "YouTube Channel Monetization Policies & Reused Content Guidelines",
+          "name": "YouTube Help Center: Channel monetization policies and reused content",
           "url": "https://support.google.com/youtube/answer/1311392"
         },
         {
@@ -1967,7 +1967,7 @@
           "url": "https://elevenlabs.io/"
         },
         {
-          "name": "Google DeepMind Veo research overview",
+          "name": "Google DeepMind Veo overview",
           "url": "https://deepmind.google/technologies/veo/"
         }
       ],
@@ -2173,11 +2173,11 @@
       ],
       "references": [
         {
-          "name": "OpenAI ChatGPT Plus pricing",
+          "name": "OpenAI ChatGPT pricing",
           "url": "https://openai.com/chatgpt/pricing/"
         },
         {
-          "name": "Anthropic Claude Pro plans",
+          "name": "Anthropic pricing",
           "url": "https://www.anthropic.com/pricing"
         },
         {
@@ -2185,7 +2185,7 @@
           "url": "https://gemini.google/advanced/"
         },
         {
-          "name": "Cursor AI plans",
+          "name": "Cursor pricing",
           "url": "https://www.cursor.com/pricing"
         }
       ],
@@ -2280,11 +2280,11 @@
           "url": "https://www.hec.gov.pk"
         },
         {
-          "name": "Perplexity AI documentation",
+          "name": "Perplexity documentation",
           "url": "https://docs.perplexity.ai"
         },
         {
-          "name": "OpenAI Education guidelines",
+          "name": "OpenAI education",
           "url": "https://openai.com/education"
         }
       ],
@@ -2645,19 +2645,19 @@
           "url": "https://www.hec.gov.pk"
         },
         {
-          "name": "Perplexity AI documentation",
+          "name": "Perplexity documentation",
           "url": "https://docs.perplexity.ai"
         },
         {
-          "name": "GitHub Student Developer Pack Benefits & Verification",
+          "name": "GitHub Student Developer Pack",
           "url": "https://education.github.com/pack"
         },
         {
-          "name": "OpenAI Education guidelines",
+          "name": "OpenAI education",
           "url": "https://openai.com/education"
         },
         {
-          "name": "Anthropic Claude research overview",
+          "name": "Anthropic Claude overview",
           "url": "https://www.anthropic.com/claude"
         }
       ],

@@ -155,14 +155,52 @@ def plan_table(products, caption='Compare seller-listed plans'):
         rows.append(f'<tr><th scope="row"><a href="{product_path(p)}">{e(p["name"])}</a><span class="table-category">{e(p["category"])}</span></th><td>{price_markup(p)}</td><td>{e(p["duration"])}</td><td>{e(p["access"])}</td><td><a class="inline-link" data-product-id="{e(p["id"])}" href="{e(order_url)}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a></td></tr>')
     return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="plan-table"><caption>{e(caption)}</caption><thead><tr><th scope="col">Tool</th><th scope="col">Listed price</th><th scope="col">Duration / allowance</th><th scope="col">Access</th><th scope="col">Next step</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
 
-def comparison_table(entries, by_id):
+PLAN_WORDS = {'pro', 'plus', 'premium', 'essential', 'edu', 'starter', 'business', 'creator', 'unlimited', 'core', 'private', 'key', '4k'}
+
+def strip_plan_words(name):
+    words = re.findall(r'[a-zA-Z0-9\.\-]+', name)
+    filtered = [w for w in words if w.lower() not in PLAN_WORDS]
+    return ' '.join(filtered).strip().lower()
+
+def match_catalog_product(item, products, by_id):
+    prod_id = item.get('product')
+    if prod_id and prod_id in by_id:
+        return by_id[prod_id]
+    name = item.get('name', '')
+    by_full_name = {p['name'].lower(): p for p in products}
+    if name.lower() in by_full_name:
+        return by_full_name[name.lower()]
+    by_stripped = {}
+    for p in products:
+        s = strip_plan_words(p['name'])
+        if s:
+            by_stripped[s] = p
+    s_name = strip_plan_words(name)
+    if s_name and s_name in by_stripped:
+        return by_stripped[s_name]
+    return None
+
+def source_anchor_for_item(item):
+    name = item['name']
+    url = item['officialUrl']
+    u = urlparse(url)
+    p = u.path.strip('/').lower()
+    if not p:
+        return f"{name} website ↗"
+    if 'pricing' in p or 'plans' in p:
+        return f"{name} pricing ↗"
+    if 'doc' in p or 'docs' in u.netloc.lower():
+        return f"{name} documentation ↗"
+    return f"{name} website ↗"
+
+def comparison_table(entries, products, by_id):
     """Show source-backed evaluation routes without inventing equivalent plans."""
     rows=[]
     for item in entries:
-        product=by_id.get(item.get('product',''))
+        product = match_catalog_product(item, products, by_id)
         name=e(item['name'])
-        source=f'<a href="{e(item["officialUrl"])}" target="_blank" rel="noopener noreferrer">Official product information ↗</a>'
-        listing=(f'<a href="{product_path(product)}">Current AI Tools Zone listing</a>' if product
+        source=f'<a href="{e(item["officialUrl"])}" target="_blank" rel="noopener noreferrer">{e(source_anchor_for_item(item))}</a>'
+        listing=(f'<a href="{product_path(product)}">Listed: PKR {product["price"]:,} for {product["duration"]}</a>' if product
                  else '<span>Not listed at AI Tools Zone</span>')
         rows.append(f'<tr><th scope="row">{name}</th><td>{source}</td><td>{listing}</td><td>{e(item["test"])}</td></tr>')
     return '<section class="content-block"><h2>Compare by the work you need done</h2><p>Vendor plan details can change and may vary by country or account. This guide gives you a fair test to run; it does not claim a hands-on benchmark or equal plan entitlements.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Tool comparison and official references"><table class="plan-table"><caption>Original workflow comparison with official vendor references</caption><thead><tr><th scope="col">Tool</th><th scope="col">Source</th><th scope="col">AI Tools Zone catalogue</th><th scope="col">A useful side-by-side test</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div></section>'
@@ -378,7 +416,7 @@ def build_pages(products, origin, shell, write):
         content = intro + '<section class="content-block"><h2>Available listings and PKR prices</h2>' + plan_table(selected) + disclaimer + '</section>'
         content += '<section class="content-block"><h2>How to choose for your work</h2><p>'+render_text(c['choose'])+'</p></section>'
         content += faq_html(c['faq']) + '<section class="content-block"><h2>Related decisions</h2>'+links(c['related'])+'</section>'
-        content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} official website</a></li>' for p in selected)+'</ul></section>'
+        content += '<section class="content-block"><h2>Check the product source</h2><p>For current vendor features and terms, consult the official websites. Marketplace access conditions still need separate confirmation.</p><ul>'+''.join(f'<li><a href="{e(p["vendor"])}" target="_blank" rel="noopener noreferrer">{e(p["name"])} website</a></li>' for p in selected)+'</ul></section>'
         publish(category_path(c['name']),c.get('title') or c['heading'],c.get('description') or f'Compare {c["name"].lower()} listings in Pakistan by PKR price, duration and access. Read practical selection advice and confirm the specific offer before ordering.',content,selected,[('Home','/'),('Categories','/categories/'),(c['name'],category_path(c['name']))])
 
     for page in CONTENT['pages']:
@@ -387,7 +425,7 @@ def build_pages(products, origin, shell, write):
         if selected:
             content += '<section class="content-block"><h2>Listed plans at a glance</h2>'+plan_table(selected)+disclaimer+'</section>'
         if page.get('comparison'):
-            content += comparison_table(page['comparison'], by_id)
+            content += comparison_table(page['comparison'], products, by_id)
         for heading,body in page['sections']:
             content += f'<section class="content-block"><h2>{e(heading)}</h2><p>{render_text(body)}</p></section>'
         content += faq_html(page['faq']) + '<section class="content-block"><h2>Continue your comparison</h2>'+links(page['related'])+'</section>'
