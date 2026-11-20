@@ -317,6 +317,17 @@ def run():
         ]
         for pat, label in forbidden_terms:
             check(not bool(re.search(pat, clean_html, re.I)), path + f' forbidden term found: {label}')
+        # Point 9: 'workaround' and 'benchmark' in visible text fail the build unless the page contains a link to a published benchmark
+        has_benchmark_link = bool(re.search(r'<a\s+[^>]*href=["\'][^"\']*(?:benchmark|swebench)[^"\']*["\'][^>]*>|<a\s+[^>]*>[^<]*(?:benchmark|swebench)[^<]*</a>', page_html, re.I))
+        if not has_benchmark_link:
+            m_bench = re.search(r'\b(workaround|workarounds|benchmark|benchmarks)\b', clean_html, re.I)
+            if m_bench:
+                line_num = 1
+                for idx_raw, raw_line in enumerate(html_lines, 1):
+                    if m_bench.group(0).lower() in raw_line.lower():
+                        line_num = idx_raw
+                        break
+                check(False, f"{path}:{line_num} visible text contains '{m_bench.group(0)}' without a published benchmark link")
         # Tax percentage audit: allow only 0.5% and 1.0%, and only inside card_tax_note
         tax_pct_matches = list(re.finditer(r'(?:(\d+(?:\.\d+)?%)\s*(?:[^\w\n]+\w+){0,3}\s*tax|tax\s*(?:[^\w\n]+\w+){0,3}\s*(\d+(?:\.\d+)?%))', clean_html, re.I))
         for tpm in tax_pct_matches:

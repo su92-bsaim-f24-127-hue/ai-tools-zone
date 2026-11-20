@@ -203,7 +203,7 @@ def comparison_table(entries, products, by_id):
         listing=(f'<a href="{product_path(product)}">Listed: PKR {product["price"]:,} for {product["duration"]}</a>' if product
                  else '<span>Not listed at AI Tools Zone</span>')
         rows.append(f'<tr><th scope="row">{name}</th><td>{source}</td><td>{listing}</td><td>{e(item["test"])}</td></tr>')
-    return '<section class="content-block"><h2>Compare by the work you need done</h2><p>Vendor plan details can change and may vary by country or account. This guide gives you a fair test to run; it does not claim a hands-on benchmark or equal plan entitlements.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Tool comparison and official references"><table class="plan-table"><caption>Original workflow comparison with official vendor references</caption><thead><tr><th scope="col">Tool</th><th scope="col">Source</th><th scope="col">AI Tools Zone catalogue</th><th scope="col">A useful side-by-side test</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div></section>'
+    return '<section class="content-block"><h2>Compare by the work you need done</h2><p>Vendor plan details can change and may vary by country or account. This guide gives you a fair test to run; it does not claim hands-on testing or equal plan entitlements.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Tool comparison and official references"><table class="plan-table"><caption>Original workflow comparison with official vendor references</caption><thead><tr><th scope="col">Tool</th><th scope="col">Source</th><th scope="col">AI Tools Zone catalogue</th><th scope="col">A useful side-by-side test</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div></section>'
 
 def tiles(entries):
     cards = []
@@ -220,7 +220,7 @@ PRODUCT_GUIDES = {
         ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
         ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
         ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro comparison'),
-        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus benchmark & cost comparison'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus comparison'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'gemini': [
@@ -231,7 +231,7 @@ PRODUCT_GUIDES = {
     ],
     'claude': [
         ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro comparison'),
-        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus & Claude coding benchmark'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus comparison'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
@@ -247,7 +247,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'deepseek': [
-        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus benchmark & cost comparison'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus comparison'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
@@ -369,7 +369,7 @@ def home_discovery():
         ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 (timeline editing vs generative video)'),
         ('/compare/leonardo-vs-midjourney/', 'Leonardo AI vs Midjourney (image generation & token plans)'),
         ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro (cloud IDE vs full-stack AI builder)'),
-        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus in Pakistan (coding benchmarks & PKR cost)'),
+        ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus in Pakistan (plan comparison & PKR cost)'),
         ('/compare/', 'Compare popular AI tools side by side'),
     ]
     use_cases = [
@@ -628,12 +628,12 @@ def build_pages(products, origin, shell, write):
             continue
         elif hub == 'guides':
             all_guides = [
-                ('EDITORIAL GUIDE', 'Canva Pro Edu in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Canva Pro Edu in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/canva-pro-edu/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'ElevenLabs in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to ElevenLabs in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/elevenlabs/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'Leonardo AI Essential in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Leonardo AI Essential in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/leonardo-ai-essential/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'Veo 3 Ultra in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Veo 3 Ultra in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/veo-3-ultra/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'Gemini Pro in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to Gemini Pro in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/gemini-pro/', 'Read guide →'),
-                ('EDITORIAL GUIDE', 'ChatGPT Plus in Pakistan: Features, Pricing & Guide (2026)', 'Complete guide to ChatGPT Plus in Pakistan. Review features, access types, and flat PKR pricing via Easypaisa and JazzCash.', '/products/chatgpt-plus/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Canva Pro Edu in Pakistan: Features, Pricing & Guide (2026)', 'Unlock premium templates, Magic Studio AI, and background remover with Canva Pro in Pakistan. Listed PKR 900/yr plan. Contact AI Tools Zone on WhatsApp.', '/products/canva-pro-edu/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'ElevenLabs in Pakistan: Features, Pricing & Guide (2026)', 'Produce realistic voiceovers and voice clones in Pakistan with ElevenLabs. Multi-language text-to-speech for PKR 3,300/mo. Order on WhatsApp via AI Tools Zone.', '/products/elevenlabs/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Leonardo AI Essential in Pakistan: Features, Pricing & Guide (2026)', 'Generate game assets, concept art, and high-res visuals with Leonardo AI in Pakistan. Includes 8,500 tokens for PKR 1,900. Order on WhatsApp with local payment.', '/products/leonardo-ai-essential/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Veo 3 Ultra in Pakistan: Features, Pricing & Guide (2026)', 'Create high-definition AI video clips with Veo 3 Ultra in Pakistan. Realistic physics and cinematic camera control for PKR 2,100. Contact us on WhatsApp.', '/products/veo-3-ultra/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'Gemini Pro in Pakistan: Features, Pricing & Guide (2026)', 'Google Gemini Pro in Pakistan for PKR 2,000 per year with Private access. 2 TB Google One storage and Gemini models. Order on WhatsApp.', '/products/gemini-pro/', 'Read guide →'),
+                ('EDITORIAL GUIDE', 'ChatGPT Plus in Pakistan: Features, Pricing & Guide (2026)', "Subscribe to ChatGPT Plus in Pakistan for OpenAI's current models, image generation, and voice mode. Listed PKR 2,300/mo. Order via WhatsApp on AI Tools Zone.", '/products/chatgpt-plus/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Canva Pro in Pakistan: Features, Team Invites & Pricing Guide (2026)', 'Complete guide to Canva Pro in Pakistan. Review Brand Kits, Magic Studio AI, Invitation vs Lifetime options in PKR, and local payment verification.', '/products/canva-pro-edu/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'NordVPN vs Surfshark in Pakistan: Best VPN for Freelancers (2026)', 'Compare NordVPN vs Surfshark in Pakistan for remote work security, banking access, and streaming. Review local PKR rates with Easypaisa and JazzCash.', '/products/nordvpn/', 'Read guide →'),
                 ('EDITORIAL GUIDE', 'Gamma App in Pakistan: AI Presentations & Pitch Decks Guide (2026)', 'How Pakistani professionals and agencies use Gamma App for AI presentations and pitch decks. Review Plus/Pro credits, exports, and PKR payment methods.', '/products/gamma-pro/', 'Read guide →'),
@@ -668,7 +668,7 @@ def build_pages(products, origin, shell, write):
                 ('TOOL SPOTLIGHT', 'Google Gemini Pro Pakistan Guide', '1-year private access, multimodal capabilities, large context window, and Google Workspace integration.', '/products/gemini-pro/', 'Read Gemini guide →'),
                 ('TOOL SPOTLIGHT', 'Canva Pro Pakistan Guide', 'Everything you need to know about Canva Pro Edu, brand kits, AI magic studio, and invitation access.', '/products/canva-pro-edu/', 'Read Canva guide →'),
                 ('TOOL SPOTLIGHT', 'CapCut Pro Pakistan Guide', 'Unlock pro video filters, auto-captions, remove background, and export in 4K 60fps for Pakistani editors.', '/products/capcut-pro/', 'Read CapCut guide →'),
-                ('MODEL SPOTLIGHT', 'Claude Pro Pakistan Guide', 'Complete guide to Claude Pro in Pakistan. Pricing in PKR, payment workarounds, and coding benchmarks.', '/compare/chatgpt-vs-claude/', 'Read Claude guide →'),
+                ('MODEL SPOTLIGHT', 'Claude Pro Pakistan Guide', 'Complete guide to Claude Pro in Pakistan. Pricing in PKR, payment options and a feature comparison.', '/compare/chatgpt-vs-claude/', 'Read Claude guide →'),
                 ('DEVELOPER SPOTLIGHT', 'Cursor AI Pakistan Guide', 'Complete Cursor AI guide for Pakistani developers. Pro pricing in PKR, Easypaisa payment, and Replit vs Copilot comparison.', '/use-cases/ai-tools-for-developers/', 'Read Cursor guide →'),
                 ('TOOL SPOTLIGHT', 'Adobe Creative Cloud in Pakistan: Apps, Firefly & Pricing (2026)', 'Complete guide to Adobe Creative Cloud in Pakistan. Full desktop apps, Firefly generative credits, and replacement warranty.', '/products/adobe-creative-cloud/', 'Read Adobe guide →'),
                 ('TOOL SPOTLIGHT', 'Netflix Premium in Pakistan: 4K Ultra HD Profiles & Pricing (2026)', 'Complete guide to Netflix Premium 4K Ultra HD in Pakistan. Private profiles, zero screen-limit issues, and Easypaisa renewal.', '/products/netflix-premium-4k/', 'Read Netflix guide →'),
@@ -742,7 +742,7 @@ def build_pages(products, origin, shell, write):
             continue
         else:
             content += tiles([(p['path'],p['title'],p['answer']) for p in CONTENT['pages'] if p['type']==hub])
-            content += '<section class="content-block"><h2>From a shortlist to a confirmed plan</h2><p>Open the product page for the listed price, duration, access, delivery estimate and replacement coverage. Discuss your requirements on WhatsApp before paying. These guides reflect buying considerations, not hands-on benchmarks or vendor endorsements.</p>'+links(['/products/','/pricing/','/guides/choose-ai-subscription/'])+'</section>'
+            content += '<section class="content-block"><h2>From a shortlist to a confirmed plan</h2><p>Open the product page for the listed price, duration, access, delivery estimate and replacement coverage. Discuss your requirements on WhatsApp before paying. These guides reflect buying considerations, not hands-on testing or vendor endorsements.</p>'+links(['/products/','/pricing/','/guides/choose-ai-subscription/'])+'</section>'
         publish('/'+hub+'/',title,intro,content,selected)
     return paths
 

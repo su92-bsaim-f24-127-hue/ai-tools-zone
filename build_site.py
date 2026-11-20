@@ -255,6 +255,13 @@ total=sum(p['price'] for p in bundle)
 bundle_message='I would like the AI Tools Zone creator stack:\n'+'\n'.join(f'{p["name"]}: {money(p["price"])} | {p["duration"]} | {p["access"]}' for p in bundle)+f'\nCombined listed price: {money(total)}. Please confirm availability, limits and payment details.'
 home=home.replace('id="buy-stack" href="https://wa.me/'+WA+'"','id="buy-stack" href="'+e(wa(bundle_message))+'" target="_blank" rel="noopener noreferrer"')
 home=home.replace('PKR 7,400 <small>',money(total)+' <small>')
+_assts = [p for p in products if p.get('category') == 'AI Assistants']
+_m_assts = sorted([p for p in _assts if 'month' in p.get('duration', '').lower()], key=lambda x: x['price'])
+_nm_assts = [p for p in _assts if 'month' not in p.get('duration', '').lower()]
+_g_asst = next(p for p in _nm_assts if p['slug'] == 'gemini-pro')
+_asst_sent = f'Four of the five AI assistants are monthly plans, from {money(_m_assts[0]["price"])} to {money(_m_assts[-1]["price"])} per month ({_m_assts[0]["name"]} to {_m_assts[-1]["name"]}). Gemini Pro is a 1-year plan at {money(_g_asst["price"])}.'
+home=re.sub(r'The five AI assistants listed here start at PKR 1,100 per month\.', _asst_sent, home)
+home=re.sub(r'Four of the five AI assistants are monthly plans, from PKR [0-9,]+ to PKR [0-9,]+ per month \([^)]+\)\. Gemini Pro is a 1-year plan at PKR [0-9,]+\.', _asst_sent, home)
 home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Privacy</a><a href="terms/">Refund & warranty</a>')
 home=home.replace('<p class="footer-heading">Here to help</p>','<p class="footer-heading">Here to help</p><a href="about/">About & contact</a>')
 home=home.replace('<!-- SUPPLEMENTARY_DISCOVERY -->',home_discovery())
