@@ -555,7 +555,7 @@
           "heading": "Why local bank cards decline and how to troubleshoot",
           "paragraphs": [
             "When attempting to upgrade to ChatGPT Plus from Pakistan, debit and credit cards frequently decline at web checkout. This does not indicate an account ban; rather, it reflects banking controls, card permissions, or settlement requirements applied by Pakistani financial institutions (such as Meezan Bank, HBL, Bank Alfalah, MCB, UBL, or Standard Chartered) on foreign recurring subscriptions. Cardholders should confirm international online transaction permissions directly with their issuing bank.",
-            "Three common factors trigger transaction failures at web checkout: first, international e-commerce sessions are disabled by default on many local payment cards until explicitly activated via mobile banking or phone helpline; second, 3D Secure SMS one-time password (OTP) delivery can experience cross-border telecom routing delays or timeouts; and third, unexpected fee buffers. Under [Section 236Y of the Income Tax Ordinance](https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf), commercial banks collect an advance income tax on qualifying foreign payments remitted abroad via credit, debit, or prepaid cards on behalf of the Federal Board of Revenue (FBR). Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
+            "Three common factors trigger transaction failures at web checkout: first, international e-commerce sessions are disabled by default on many local payment cards until explicitly activated via mobile banking or phone helpline; second, 3D Secure SMS one-time password (OTP) delivery can experience cross-border telecom routing delays or timeouts; and third, advance card tax and bank conversion fees can exceed the balance on the card. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
             "Separately from government advance withholding tax, commercial banks and card networks apply their own foreign exchange conversion spreads and cross-border processing charges (which vary across issuing banks, card networks, and interbank market conditions). If an account does not hold a sufficient buffer to cover the base USD subscription price, applicable bank conversion charges, and the statutory Section 236Y advance tax, the checkout transaction will decline.",
             "Tax laws, withholding rates, and bank fee schedules are subject to change by regulators and financial institutions. Readers should verify current rates directly with the FBR and their card-issuing bank. This guide is provided for educational purposes only and does not constitute personal tax, legal, or financial advice."
           ],
@@ -1019,7 +1019,7 @@
           "heading": "How to buy cheap AI subscriptions safely in Pakistan",
           "paragraphs": [
             "Buying budget-friendly AI tools in Pakistan is safe, fast, and convenient when you follow a structured verification process. AI Tools Zone operates with transparent catalog pricing, listed durations, and WhatsApp confirmation before any transaction takes place.",
-            "Follow these five golden rules whenever purchasing digital subscriptions with local Pakistani payment methods:"
+            "Follow these five checks whenever purchasing digital subscriptions with local Pakistani payment methods:"
           ],
           "bullets": [
             "1. Confirm details on WhatsApp before paying: Verify current stock availability, exact plan limits, access method (private vs invite), and delivery turnaround time.",
@@ -1033,7 +1033,7 @@
           "heading": "Recommended budget AI stacks for Pakistani professionals",
           "paragraphs": [
             "Rather than buying individual tools randomly, combining complementary tools into a cost-effective workflow stack yields the highest productivity per Rupee spent.",
-            "Here are three tested budget configurations available through AI Tools Zone for common Pakistani freelance and study workflows:"
+            "Here are three budget configurations available through AI Tools Zone for common Pakistani freelance and study workflows:"
           ],
           "bullets": [
             "The Student Research Stack: Gemini Pro (PKR 2,000 for 1 Year) for long-document PDF analysis and thesis literature reviews, paired with Canva Pro Edu (PKR 900 for 1 Year) for presentation slides and resume formatting. The first-period cost of the plans is PKR 2,900.",
@@ -1812,7 +1812,7 @@
         {
           "heading": "Direct answer: Which design software should Pakistani freelancers buy first?",
           "paragraphs": [
-            "Canva Pro Edu is listed at PKR 900 for 1 Year (invitation access). Adobe Creative Cloud is listed at PKR 1,700 for 2 Months. Canva suits social media graphics and presentation templates, whereas clients requiring .AI or .PSD source files need Adobe Illustrator or Photoshop."
+            "Canva suits social media graphics and presentation templates, whereas clients requiring .AI or .PSD source files need Adobe Illustrator or Photoshop."
           ],
           "bullets": [
             "Canva Pro Edu is listed for eligible education use. For client work, check Canva's commercial-use terms and ask AI Tools Zone to confirm the plan."
@@ -2246,7 +2246,7 @@
         {
           "heading": "Top Recommended AI Tools by Academic Task",
           "paragraphs": [
-            "Different academic workflows require specialized AI models. Here are the most effective options tested for university coursework:"
+            "Different academic workflows require specialized AI models. Here are the most effective options for university coursework:"
           ],
           "bullets": [
             "Academic Literature & Citation Search: [Perplexity Pro](/products/perplexity-pro/) (PKR 1,400/mo) is the gold standard for research synthesis because every claim is paired with direct hyperlinks to peer-reviewed papers and academic journals.",
@@ -2351,7 +2351,7 @@
           "paragraphs": [
             "Finding reliable and affordable AI tools is important for students in Pakistan managing higher education coursework, programming assignments, and thesis research.",
             "However, accessing frontier models poses steep economic obstacles in Pakistan. AI Tools Zone lists it at PKR 2,300 per month payable via local payment methods.",
-            "Furthermore, most students lack international credit cards, and local virtual payment cards frequently face merchant declines on overseas billing gateways. To stay competitive without overspending, Pakistani students need practical solutions: leveraging robust free tiers and purchasing [affordable AI subscriptions Pakistan](/pricing/) through trusted domestic marketplaces using JazzCash, Easypaisa, or bank transfer."
+            "Furthermore, most students lack international credit cards, and local virtual payment cards frequently face merchant declines on overseas billing gateways. To stay competitive without overspending, Pakistani students need practical solutions: leveraging robust free tiers and purchasing [affordable AI subscriptions Pakistan](/pricing/) through domestic marketplaces using JazzCash, Easypaisa, or bank transfer."
           ]
         },
         {
@@ -2490,70 +2490,70 @@
               [
                 "[Perplexity Pro](/products/perplexity-pro/)",
                 "Academic Research",
-                "Standard search only; limited Pro searches",
+                "Limits set by Perplexity",
                 "PKR 1,400 / mo",
                 "Literature review with clickable paper citations"
               ],
               [
                 "[ChatGPT Plus](/products/chatgpt-plus/)",
                 "Multipurpose Reasoning",
-                "Prompt throttling; basic data analysis caps",
+                "Limits set by OpenAI",
                 "PKR 2,300 / mo",
                 "Assignment outlines, math derivations & Python code"
               ],
               [
                 "[Claude Pro](/products/claude-pro/)",
                 "Writing & Code Logic",
-                "15–20 messages per day limit",
+                "Limits set by Anthropic",
                 "PKR 2,200 / mo",
                 "Nuanced academic essays & software architecture"
               ],
               [
                 "[QuillBot Premium](/products/quillbot-premium/)",
                 "Paraphrasing & Citations",
-                "125-word limit; 2 basic modes only",
+                "Limits set by QuillBot",
                 "PKR 450 / mo",
                 "Sentence restructuring & APA/IEEE citations"
               ],
               [
                 "[Grammarly Premium](/products/grammarly-premium/)",
                 "Proofreading & Tone",
-                "Spelling & basic grammar only",
+                "Limits set by Grammarly",
                 "PKR 750 / mo",
                 "Thesis document polish & scholarship SOP editing"
               ],
               [
                 "[Cursor AI Pro](/products/cursor-ai-pro/)",
                 "AI Code Editor",
-                "50 slow requests; limited repo indexing",
+                "Limits set by Cursor",
                 "PKR 2,800 / mo",
                 "Multi-file codebase navigation & FYP software development"
               ],
               [
                 "[GitHub Copilot](/products/github-copilot/)",
                 "IDE Autocomplete",
-                "Free via GitHub Student Developer Pack",
+                "Available free to eligible students through the GitHub Student Developer Pack.",
                 "PKR 2,500 / mo",
                 "Inline syntax autocomplete in VS Code & JetBrains"
               ],
               [
                 "[Canva Pro Edu](/products/canva-pro-edu/)",
                 "Presentation & Design",
-                "Watermarked assets; locked AI Magic Studio",
+                "Limits set by Canva",
                 "PKR 900 / yr",
                 "Semester presentation decks & FYP poster boards"
               ],
               [
                 "[Gemini Pro](/products/gemini-pro/)",
                 "Document Synthesis",
-                "NotebookLM is free; standard Gemini web free",
+                "Limits set by Google",
                 "PKR 2,000 / yr",
                 "Large PDF textbook analysis & study guides"
               ],
               [
                 "[DeepSeek Unlimited](/products/deepseek-unlimited/)",
                 "Reasoning & Algorithms",
-                "Free web tier with peak hour traffic queues",
+                "Limits set by DeepSeek",
                 "PKR 1,100 / mo",
                 "Competitive programming & algorithmic math logic"
               ]
@@ -2611,8 +2611,8 @@
         {
           "heading": "Where to Buy Cheap AI Subscriptions in Pakistan?",
           "paragraphs": [
-            "To [buy AI subscriptions in Pakistan](/products/) without overseas card hurdles or currency markups, AI Tools Zone (https://aitoolszone.tech/) provides a trusted independent marketplace for students and professionals.",
-            "AI Tools Zone eliminates foreign exchange friction by offering clear PKR prices with local payment options including JazzCash, Easypaisa, and bank transfer. Every listing details its access type, delivery timeline (15 to 30 minutes on WhatsApp), and replacement warranty (7 to 30 days). Students can explore [cheap AI tools for university students](/use-cases/ai-tools-for-students/) and confirm details with human support on WhatsApp (+92 343 017 3923) before ordering."
+            "To [buy AI subscriptions in Pakistan](/products/) without overseas card hurdles or currency markups, AI Tools Zone (https://aitoolszone.tech/) provides an independent marketplace for students and professionals.",
+            "AI Tools Zone offers clear PKR prices with local payment options including JazzCash, Easypaisa, and bank transfer. Each listing shows its access type, delivery estimate and warranty. 31 of 32 listings include a 7-day or 30-day replacement warranty; Gemini Pro has none. Students can explore [cheap AI tools for university students](/use-cases/ai-tools-for-students/) and confirm details with human support on WhatsApp (+92 343 017 3923) before ordering."
           ],
           "cta": {
             "headline": "Get Premium AI Tools at Affordable Prices!",

@@ -264,7 +264,7 @@
           "heading": "Official Purchasing Options & Pakistani Payment Considerations",
           "paragraphs": [
             "When attempting to buy ChatGPT Plus directly from OpenAI at chatgpt.com, cardholders pay in foreign currency subject to Pakistani banking rules. Under Section 236Y, the advance tax on card payments abroad is 0.5% for filers on the Active Taxpayers List and 1.0% for non-filers, according to the FBR withholding tax rates card updated to 30 June 2026. Banks also add their own conversion spreads and fees. Check current rates with your bank or the FBR.",
-            "Frequent Card Declines: Most Pakistani debit cards (including standard PayPak cards and many basic Visa/Mastercards) fail on international merchant platforms like Stripe due to bank-side e-commerce restrictions or 3D Secure SMS OTP incompatibility.",
+            "Frequent Card Declines: Some Pakistani debit cards (including standard PayPak cards and many basic Visa/Mastercards) can fail on international merchant platforms like Stripe due to bank-side e-commerce restrictions or 3D Secure SMS OTP incompatibility.",
             "For detailed guidance on activating international sessions with local banks, read our companion guide on how to resolve Pakistani bank card declines for ChatGPT Plus."
           ]
         },
@@ -297,14 +297,14 @@
                 "Dedicated Private Account"
               ],
               [
-                "Chat History Confidentiality",
-                "Private to user",
-                "Private (Single-user credentials)"
+                "Account setup",
+                "Created by you",
+                "Confirmed on WhatsApp before you pay"
               ],
               [
-                "Current models, Voice & Canvas",
-                "Full Access",
-                "Full Access"
+                "Models and features",
+                "Set by OpenAI",
+                "Set by OpenAI"
               ],
               [
                 "Delivery Turnaround",
@@ -317,9 +317,9 @@
                 "7-Day Replacement Warranty"
               ],
               [
-                "Renewal Model",
-                "Automatic credit card charge",
-                "Manual renewal (Zero surprise debits)"
+                "Renewal",
+                "Set by OpenAI",
+                "Confirmed on WhatsApp before you pay"
               ]
             ]
           }
