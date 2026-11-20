@@ -317,6 +317,31 @@ def run():
         ]
         for pat, label in forbidden_terms:
             check(not bool(re.search(pat, clean_html, re.I)), path + f' forbidden term found: {label}')
+        # Round 14 disallowed terms: unlock, premium (outside product names), most popular, leading, top-rated, best-selling, #1, number one, trusted, proven, widely used, industry standard, world-class, state-of-the-art, cutting-edge, powerful, stunning
+        r14_clean_html = re.sub(r'\b(?:ChatGPT\s+Plus|Grammarly\s+Premium|QuillBot\s+Premium|Netflix\s+Premium(?:\s+4K)?|YouTube(?:\s+Music)?\s+Premium|LinkedIn\s+Premium|Coursera\s+Plus(?:\s+Premium)?)\b', '', clean_html, flags=re.I)
+        r14_clean_html = re.sub(r'\b[a-z0-9\-]*premium[a-z0-9\-]*\b', '', r14_clean_html, flags=re.I)
+        r14_clean_html = re.sub(r'/[a-z0-9\-]*premium[a-z0-9\-]*/?', '/', r14_clean_html, flags=re.I)
+        r14_banned_terms = [
+            (r'\bunlock(?:s|ed|ing)?\b', 'unlock'),
+            (r'\bpremium\b', 'premium'),
+            (r'\bmost\s+popular\b', 'most popular'),
+            (r'\bleading\b', 'leading'),
+            (r'\btop[- ]rated\b', 'top-rated'),
+            (r'\bbest[- ]selling\b', 'best-selling'),
+            (r'#1\b', '#1'),
+            (r'\bnumber\s+one\b', 'number one'),
+            (r'\btrusted\b', 'trusted'),
+            (r'\bproven\b', 'proven'),
+            (r'\bwidely\s+used\b', 'widely used'),
+            (r'\bindustry[- ]standard\b', 'industry standard'),
+            (r'\bworld[- ]class\b', 'world-class'),
+            (r'\bstate[- ]of[- ]the[- ]art\b', 'state-of-the-art'),
+            (r'\bcutting[- ]edge\b', 'cutting-edge'),
+            (r'\bpowerful\b', 'powerful'),
+            (r'\bstunning\b', 'stunning'),
+        ]
+        for pat, label in r14_banned_terms:
+            check(not bool(re.search(pat, r14_clean_html, re.I)), path + f' forbidden term found: {label}')
         # Point 9: 'workaround' and 'benchmark' in visible text fail the build unless the page contains a link to a published benchmark
         has_benchmark_link = bool(re.search(r'<a\s+[^>]*href=["\'][^"\']*(?:benchmark|swebench)[^"\']*["\'][^>]*>|<a\s+[^>]*>[^<]*(?:benchmark|swebench)[^<]*</a>', page_html, re.I))
         if not has_benchmark_link:
