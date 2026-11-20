@@ -222,6 +222,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'canva': [
+        ('/blog/canva-pro-price-in-pakistan/', 'Canva Pro price in Pakistan'),
         ('/compare/canva-vs-adobe/', 'Canva Pro vs Adobe Creative Cloud comparison'),
         ('/blog/canva-pro-vs-adobe-creative-cloud-pakistan-freelancers/', 'Canva Pro vs Adobe CC for Pakistani freelancers'),
         ('/blog/ai-tools-for-pakistani-freelancers/', 'AI tools guide for Pakistani freelancers'),
