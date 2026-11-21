@@ -271,6 +271,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'lovable': [
+        ('/compare/lovable-vs-bolt-new-pakistan/', 'Lovable Pro vs Bolt.new Pro comparison'),
         ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro comparison'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
