@@ -251,6 +251,7 @@ def run():
         check(len(page.titles)==1 and bool(page.titles[0]),path+' needs one title')
         check(len(page.h1)==1 and bool(page.h1[0]),path+' needs one H1')
         page_html=file_for(path).read_text(encoding='utf-8')
+        html_lines = page_html.splitlines()
         main_match=re.search(r'<main\b[^>]*>(.*?)</main>',page_html,re.S|re.I)
         main_text=' '.join(' '.join(Page(main_match.group(1) if main_match else '').visible).split()).casefold()
         check(bool(main_text),path+' missing visible main content')
@@ -317,13 +318,9 @@ def run():
         ]
         for pat, label in forbidden_terms:
             check(not bool(re.search(pat, clean_html, re.I)), path + f' forbidden term found: {label}')
-        # Round 14 disallowed terms: unlock, premium (outside product names), most popular, leading, top-rated, best-selling, #1, number one, trusted, proven, widely used, industry standard, world-class, state-of-the-art, cutting-edge, powerful, stunning
-        r14_clean_html = re.sub(r'\b(?:ChatGPT\s+Plus|Grammarly\s+Premium|QuillBot\s+Premium|Netflix\s+Premium(?:\s+4K)?|YouTube(?:\s+Music)?\s+Premium|LinkedIn\s+Premium|Coursera\s+Plus(?:\s+Premium)?)\b', '', clean_html, flags=re.I)
-        r14_clean_html = re.sub(r'\b[a-z0-9\-]*premium[a-z0-9\-]*\b', '', r14_clean_html, flags=re.I)
-        r14_clean_html = re.sub(r'/[a-z0-9\-]*premium[a-z0-9\-]*/?', '/', r14_clean_html, flags=re.I)
-        r14_banned_terms = [
+        # Round 15 Claims and Marketing Terms Audit (21 banned terms across visible text, <title>, metas, JSON-LD)
+        claims_banned_terms = [
             (r'\bunlock(?:s|ed|ing)?\b', 'unlock'),
-            (r'\bpremium\b', 'premium'),
             (r'\bmost\s+popular\b', 'most popular'),
             (r'\bleading\b', 'leading'),
             (r'\btop[- ]rated\b', 'top-rated'),
@@ -333,15 +330,75 @@ def run():
             (r'\btrusted\b', 'trusted'),
             (r'\bproven\b', 'proven'),
             (r'\bwidely\s+used\b', 'widely used'),
-            (r'\bindustry[- ]standard\b', 'industry standard'),
+            (r'\bindustry[- ]standard\b', 'industry-standard'),
+            (r'\bindustry\s+standard\b', 'industry standard'),
             (r'\bworld[- ]class\b', 'world-class'),
             (r'\bstate[- ]of[- ]the[- ]art\b', 'state-of-the-art'),
             (r'\bcutting[- ]edge\b', 'cutting-edge'),
             (r'\bpowerful\b', 'powerful'),
             (r'\bstunning\b', 'stunning'),
+            (r'\bunbeatable\b', 'unbeatable'),
+            (r'\bunmatched\b', 'unmatched'),
+            (r'\bVIP\b', 'VIP'),
         ]
-        for pat, label in r14_banned_terms:
-            check(not bool(re.search(pat, r14_clean_html, re.I)), path + f' forbidden term found: {label}')
+        def mask_allowed_claims(text):
+            text = re.sub(r'\bChatGPT\s+Plus\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'\bGrammarly\s+Premium\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'\bQuillBot\s+Premium\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'\bNetflix\s+Premium(?:\s+4K)?\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'\bYouTube(?:\s+Music)?\s+Premium\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'\bLinkedIn\s+Premium\b', 'ALLOWED_PROD', text, flags=re.I)
+            text = re.sub(r'/(?:grammarly-premium|quillbot-premium|netflix-premium-4k|youtube-premium|linkedin-premium)/?', '/', text, flags=re.I)
+            text = re.sub(r'\b(?:grammarly-premium|quillbot-premium|netflix-premium-4k|youtube-premium|linkedin-premium)\b', 'ALLOWED_SLUG', text, flags=re.I)
+            return text
+
+        def check_claims_text(text, source_label):
+            masked = mask_allowed_claims(text)
+            if re.search(r'\bpremium\b', masked, re.I):
+                lno = 1
+                for idx_raw, raw_line in enumerate(html_lines, 1):
+                    if text[:30] in raw_line:
+                        lno = idx_raw
+                        break
+                check(False, f"{path}:{lno} forbidden claims term 'premium' in {source_label}: '{text[:70]}'")
+            for pat, label in claims_banned_terms:
+                if re.search(pat, text, re.I):
+                    lno = 1
+                    for idx_raw, raw_line in enumerate(html_lines, 1):
+                        if text[:30] in raw_line:
+                            lno = idx_raw
+                            break
+                    check(False, f"{path}:{lno} forbidden claims term '{label}' in {source_label}: '{text[:70]}'")
+
+        for t in page.titles:
+            check_claims_text(t, '<title>')
+        for tag, attrs in page.tags:
+            if tag == 'meta':
+                name = (attrs.get('name') or attrs.get('property') or '').lower()
+                if name in ['description', 'og:description', 'twitter:description', 'og:title', 'twitter:title']:
+                    c = attrs.get('content', '')
+                    if c:
+                        check_claims_text(c, f'meta {name}')
+        for s_str in page.schemas:
+            try:
+                data = json.loads(s_str)
+                def walk_json(obj):
+                    if isinstance(obj, dict):
+                        for k, v in obj.items():
+                            if k.lower() == 'description' and isinstance(v, str):
+                                check_claims_text(v, 'JSON-LD description')
+                            else:
+                                walk_json(v)
+                    elif isinstance(obj, list):
+                        for it in obj:
+                            walk_json(it)
+                walk_json(data)
+            except Exception:
+                pass
+        for vis in page.visible:
+            vis_strip = vis.strip()
+            if vis_strip:
+                check_claims_text(vis_strip, 'visible text')
         # Point 9: 'workaround' and 'benchmark' in visible text fail the build unless the page contains a link to a published benchmark
         has_benchmark_link = bool(re.search(r'<a\s+[^>]*href=["\'][^"\']*(?:benchmark|swebench)[^"\']*["\'][^>]*>|<a\s+[^>]*>[^<]*(?:benchmark|swebench)[^<]*</a>', page_html, re.I))
         if not has_benchmark_link:
