@@ -46,6 +46,6 @@ subprocess.run([sys.executable,str(ROOT/'package_site.py')],cwd=ROOT,check=True,
 with ZipFile(ROOT/'ai-tools-zone.zip') as archive:
     names=set(archive.namelist())
     assert all(f.relative_to(ROOT).as_posix() in names for f in files if f.parent!=ROOT/'data'),'Missing generated production file'
-    assert not any(n.startswith(('data/','templates/','.git/','.tools/','verification/','tmp/','output/')) or n.endswith(('.py','.md','.env')) for n in names),'Development or private file packaged'
+    assert not any(n.startswith(('data/','templates/','.git/','.tools/','verification/','tmp/','output/','admin/')) or n.endswith(('.py','.md','.env')) for n in names),'Development or private file packaged'
     assert 'CNAME' in names and 'measurement.js' in names and 'whatsapp.js' in names and '404.html' in names
 print('PASS: meaningful freshness, unchanged-date preservation, deterministic build and safe production package.')

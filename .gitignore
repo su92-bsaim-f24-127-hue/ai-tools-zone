@@ -66,3 +66,14 @@ scratch/
 /SEO-YOUTUBE-RESEARCH.md
 /SITE-STRUCTURE.md
 /before_after_seo_report.md
+
+# --- Local report/helper files (content-cleanup-2026-11) ---
+check_links.py
+link-problems.txt
+seo-report-*.html
+seo-report-*
+claims-check.txt
+review-bundle.zip
+reports/seo-telemetry/
+phase_*.md
+

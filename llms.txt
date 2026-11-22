@@ -8,7 +8,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 
 - [Current offers](https://aitoolszone.tech/products/): 32 currently active catalog listings.
 - [PKR pricing](https://aitoolszone.tech/pricing/): Compare listed offers and plan terms.
-- [Buy AI Tools in Pakistan](https://aitoolszone.tech/buy-ai-tools-in-pakistan/): Comprehensive buying guide for premium AI accounts, access models, and PKR payments.
+- [Buy AI Tools in Pakistan](https://aitoolszone.tech/buy-ai-tools-in-pakistan/): Buying guide for AI accounts, access models, and PKR payments.
 - [How to Buy ChatGPT Plus in Pakistan](https://aitoolszone.tech/how-to-buy-chatgpt-plus-in-pakistan/): Complete purchasing guide for ChatGPT Plus subscriptions in PKR.
 - [Best AI Tools for Students in Pakistan](https://aitoolszone.tech/best-ai-tools-for-students-pakistan/): Guide to affordable AI tools for students across 9 academic workflows.
 - [AI Video Editing Tools in Pakistan](https://aitoolszone.tech/ai-video-editing-tools-pakistan/): Review of top AI video editors with PKR prices.
@@ -36,7 +36,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 - [Adobe Creative Cloud](https://aitoolszone.tech/products/adobe-creative-cloud/): Design; PKR 1,700; 2 Months; Private access. Confirm current terms before ordering.
 - [Lovable Pro](https://aitoolszone.tech/products/lovable-pro/): Development; PKR 1,600; 1 Month; Private access. Confirm current terms before ordering.
 - [Gamma Pro](https://aitoolszone.tech/products/gamma-pro/): Productivity; PKR 23,000; 1 Year; Private access. Confirm current terms before ordering.
-- [Replit Core](https://aitoolszone.tech/products/replit-core/): Development; PKR 3,200; $40 Credits; Private access. Confirm current terms before ordering.
+- [Replit Core](https://aitoolszone.tech/products/replit-core/): Development; PKR 3,200; 40 USD Credits; Private access. Confirm current terms before ordering.
 - [n8n Starter](https://aitoolszone.tech/products/n8n-starter/): Development; PKR 7,000; 1 Year; Private access. Confirm current terms before ordering.
 - [Notion Business](https://aitoolszone.tech/products/notion-business/): Productivity; PKR 2,200; 3 Months; Invitation access. Confirm current terms before ordering.
 - [NordVPN](https://aitoolszone.tech/products/nordvpn/): VPN & Security; PKR 1,800; 3 Months; Private access. Confirm current terms before ordering.
@@ -51,11 +51,11 @@ Compare current listings by price, duration and access type. Confirm availabilit
 - [DeepSeek Unlimited](https://aitoolszone.tech/products/deepseek-unlimited/): AI Assistants; PKR 1,100; 1 Month; Private access. Confirm current terms before ordering.
 - [Perplexity Pro](https://aitoolszone.tech/products/perplexity-pro/): AI Assistants; PKR 1,400; 1 Month; Private access. Confirm current terms before ordering.
 - [Bolt.new Pro](https://aitoolszone.tech/products/bolt-new-pro/): Development; PKR 5,600; 1 Month; Private access. Confirm current terms before ordering.
-- [Runway ML Gen-3](https://aitoolszone.tech/products/runway-ml-gen-3/): AI Video; PKR 3,500; 1 Month; Private access. Confirm current terms before ordering.
+- [Runway Gen-3](https://aitoolszone.tech/products/runway-ml-gen-3/): AI Video; PKR 3,500; 1 Month; Private access. Confirm current terms before ordering.
 - [Descript Creator](https://aitoolszone.tech/products/descript-creator/): AI Video; PKR 5,320; 1 Month; Private access. Confirm current terms before ordering.
 - [Grammarly Premium](https://aitoolszone.tech/products/grammarly-premium/): Productivity; PKR 750; 1 Month; Private access. Confirm current terms before ordering.
 - [QuillBot Premium](https://aitoolszone.tech/products/quillbot-premium/): Productivity; PKR 450; 1 Month; Private access. Confirm current terms before ordering.
-- [Microsoft Office 365](https://aitoolszone.tech/products/microsoft-office-365/): Software; PKR 2,200; 1 Year; License Key access. Confirm current terms before ordering.
+- [Microsoft 365](https://aitoolszone.tech/products/microsoft-office-365/): Software; PKR 2,200; 1 Year; License Key access. Confirm current terms before ordering.
 - [Coursera Plus](https://aitoolszone.tech/products/coursera-plus-premium/): Business; PKR 7,000; 1 Year; Invitation access. Confirm current terms before ordering.
 
 ## Full catalog manifest
