@@ -8,8 +8,8 @@
       "price_usd": "$20",
       "period": "month",
       "source_url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
-      "as_of": null,
-      "verified": false
+      "as_of": "2026-11-22",
+      "verified": true
     },
     "adobe-creative-cloud": {
       "vendor": "Adobe",
@@ -17,8 +17,8 @@
       "price_usd": "$59.99",
       "period": "month",
       "source_url": "https://www.adobe.com/creativecloud/plans.html",
-      "as_of": null,
-      "verified": false
+      "as_of": "2026-11-22",
+      "verified": true
     }
   }
 }
