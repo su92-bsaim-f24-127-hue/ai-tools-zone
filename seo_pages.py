@@ -279,6 +279,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'runway': [
+        ('/blog/runway-ai-subscription-pakistan/', 'Runway AI subscription in Pakistan — price & how to buy'),
         ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
         ('/blog/best-ai-video-generators-pakistan/', 'Best AI video generators in Pakistan (2026)'),
         ('/use-cases/ai-tools-for-creators/', 'AI tools for creators & video editors in Pakistan'),
