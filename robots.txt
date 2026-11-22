@@ -1,5 +1,6 @@
 # Public search discovery; this file is not access control.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 # Dedicated AI search engines (for live search citations and answers)

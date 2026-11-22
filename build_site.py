@@ -2,7 +2,7 @@
 from pathlib import Path
 from html import escape
 from urllib.parse import quote
-from datetime import date
+from datetime import date, timedelta
 import hashlib, json, re
 from seo_pages import category_path, CATEGORIES, breadcrumbs, breadcrumb_schema, product_context, home_discovery, build_pages, finalize, render_text
 from scripts.faq_data import build_faq_html
@@ -13,12 +13,82 @@ GOOGLE_ANALYTICS_ID='G-TSBF626Q60'
 WA=''
 # Public collection identifier; this is not a dashboard credential.
 CLOUDFLARE_BEACON_TOKEN='d2b7303797fa48c694dde2b0ff780947'
-LAST_VERIFIED='2026-10-29'
-LAST_VERIFIED_LABEL='29 October 2026'
+settings=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))
+prices_checked_on=settings.get('pricesCheckedOn','2026-11-15')
+price_valid_until=settings.get('priceValidUntil','2026-12-31')
+from datetime import datetime
+_dt_checked=datetime.strptime(prices_checked_on,'%Y-%m-%d')
+homepage_checked_label=_dt_checked.strftime('%B %d, %Y')
+LAST_VERIFIED=prices_checked_on
+LAST_VERIFIED_LABEL=f"{_dt_checked.day} {_dt_checked.strftime('%B %Y')}"
 all_products=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+
+def normalize_desc(p):
+    dur = p['duration']
+    acc = p['access']
+    deliv = p['delivery'].replace('–', ' to ').replace('-', ' to ')
+    if 'min' in deliv and 'minute' not in deliv:
+        deliv = deliv.replace('min', 'minutes')
+    warr = p['warranty']
+    price = f"{p['price']:,}"
+    base = p.get('description', '').strip()
+    for marker in ['AI Tools Zone sells', 'Delivery takes', 'Warranty:']:
+        if marker in base:
+            base = base.split(marker)[0].strip()
+    prefix = base.strip()
+    prefix = re.sub(r'\bpremium\s+(design templates|transitions)\b', r'\1', prefix, flags=re.I)
+    if prefix and not prefix.endswith('.'):
+        prefix += '.'
+    
+    if dur == "1 Month":
+        dur_str = "per month"
+    elif dur == "1 Year":
+        dur_str = "per year"
+    elif dur == "2 Years":
+        dur_str = "for 2 years"
+    elif dur == "2 Months":
+        dur_str = "for 2 months"
+    elif dur == "3 Months":
+        dur_str = "for 3 months"
+    elif dur == "6 Months":
+        dur_str = "for 6 months"
+    elif dur == "Lifetime":
+        dur_str = "with lifetime validity"
+    elif "Credits" in dur:
+        dur_str = f"for {dur}"
+    elif dur == "Confirm before ordering":
+        dur_str = "with duration confirmed before ordering"
+    else:
+        dur_str = f"for {dur}"
+
+    acc_map = {
+        'Private': 'private access',
+        'Shared': 'shared access',
+        'Invitation': 'invitation access',
+        'License Key': 'license key access'
+    }
+    acc_str = acc_map.get(acc, f"{acc.lower()} access")
+
+    if warr == "No Warranty":
+        warr_str = "The listing carries no replacement warranty."
+    elif warr == "7 Days":
+        warr_str = "Warranty: 7 days."
+    elif warr == "30 Days":
+        warr_str = "Warranty: 30 days."
+    else:
+        warr_str = f"Warranty: {warr.lower()}."
+
+    if dur == "Confirm before ordering":
+        commercial = f"AI Tools Zone sells it for PKR {price} with {acc_str} and duration confirmed before ordering. Delivery takes {deliv}. {warr_str}"
+    else:
+        commercial = f"AI Tools Zone sells it for PKR {price} {dur_str} with {acc_str}. Delivery takes {deliv}. {warr_str}"
+
+    return f"{prefix} {commercial}" if prefix else commercial
+
+for p in all_products:
+    p['description'] = normalize_desc(p)
 products=[p for p in all_products if p.get('active',True)]
 logos=json.loads((ROOT/'assets/product-logo-sources.json').read_text(encoding='utf-8'))
-settings=json.loads((ROOT/'data/site-settings.json').read_text(encoding='utf-8'))
 product_content=json.loads((ROOT/'data/product-content.json').read_text(encoding='utf-8'))
 
 def bundle_css():
@@ -58,7 +128,7 @@ if len({p['slug'] for p in all_products}) != len(all_products): raise ValueError
 def write(path,text):
  # A static-host 404 document also appears at arbitrary missing URLs (e.g. /admin).
  # Exclude it from visitor analytics so error-path probes do not look like customers.
- text=text.replace('923430173923',WA).replace('+92 343 0173923',PHONE)
+ text=text.replace('+92 343 017 3923',PHONE).replace('+92 343 0173923',PHONE).replace('923430173923',WA)
  if path.endswith('.html') and path != '404.html':
   beacon='<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="'+e(json.dumps({'token':CLOUDFLARE_BEACON_TOKEN},separators=(',',':')))+'"></script>'
   text=text.replace('</body>','<script defer src="/whatsapp.js?v='+VERSION+'"></script>'+beacon+'</body>')
@@ -72,13 +142,14 @@ def price_markup(p):
   return current+f'<span class="price-discount"><del>PKR {regular:,}</del><b>{percent}% off</b></span>'
  return current
 def message(p):
- return f"Assalam-o-Alaikum AI Tools Zone!\nI would like to buy {p['name']}.\nListed price: {money(p['price'])}\nDuration: {p['duration']}\nAccess: {p['access']}\nDelivery estimate: {p['delivery']}\nReplacement warranty: {p['warranty']}\nProduct: {ORIGIN}/products/{p['slug']}/\nPlease confirm availability, plan limits, final price and payment details."
+ dur_lbl = "Credits" if "credit" in str(p.get("duration","")).lower() else "Duration"
+ return f"Assalam-o-Alaikum AI Tools Zone!\nI would like to buy {p['name']}.\nListed price: {money(p['price'])}\n{dur_lbl}: {p['duration']}\nAccess: {p['access']}\nDelivery estimate: {p['delivery']}\nReplacement warranty: {p['warranty']}\nProduct: {ORIGIN}/products/{p['slug']}/\nPlease confirm availability, plan limits, final price and payment details."
 for product in all_products: product['orderMessage']=message(product)
 
 def mark(p,prefix=''):
- return f'<span class="tool-mark mark-{p["id"]}"><img src="{prefix}{p["logo"]}" alt="{e(p['name'])} logo" width="64" height="64" loading="lazy" decoding="async"></span>'
+ return f'<span class="tool-mark mark-{p["id"]}"><img src="{prefix}{p["logo"]}" alt="{e(p["name"])} logo" width="64" height="64" loading="lazy" decoding="async"></span>'
 def card(p):
- return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p.get('badge') or p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price">{price_markup(p)}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Order {e(p['name'])}">Order Plan <span>↗</span></a><a class="details-button" href="products/{p['slug']}/" data-detail="{p['id']}" aria-label="View {e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare tool</label></article>'''
+ return f'''<article class="product-card" data-product="{p['id']}"><div class="product-card-top">{mark(p)}<span class="badge">{e(p.get('badge') or p['access'])}</span></div><div class="product-category">{e(p['category'])}</div><h3><a href="products/{p['slug']}/">{e(p['name'])}</a></h3><p>{e(p['description'])}</p><div class="plan-meta"><span>{e(p['duration'])}</span><span>{e(p['access'])}</span></div><div class="card-price">{price_markup(p)}</div><div class="card-actions"><a class="button buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" aria-label="Order {e(p['name'])} on WhatsApp">Order {e(p['name'])} on WhatsApp <span aria-hidden="true">↗</span></a><a class="details-button" href="products/{p['slug']}/" data-detail="{p['id']}" aria-label="{e(p['name'])} details" title="{e(p['name'])} details">ⓘ</a></div><label class="card-compare"><input type="checkbox" data-compare="{p['id']}"> Compare</label></article>'''
 def structured(data):
  return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+'</script>'
 def analytics_tag(path):
@@ -118,12 +189,13 @@ def metadata(title,description,path,kind='website',og_title=None,og_description=
 <meta name="twitter:description" content="{e(tw_d)}">
 <meta name="twitter:image" content="{tw_img}">'''
 
-organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','knowsAbout':['Artificial Intelligence Subscriptions','SaaS Pricing in Pakistan','Creative Software Licensing','AI Productivity Tools'],'currenciesAccepted':'PKR','paymentAccepted':'JazzCash, Easypaisa, Bank Transfer','contactPoint':{'@type':'ContactPoint','telephone':'+'+WA,'contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
+payment_accepted=settings.get('paymentAccepted','JazzCash, Easypaisa, Bank Transfer')
+organization={'@type':'Organization','@id':ORIGIN+'/#organization','name':'AI Tools Zone','url':ORIGIN+'/', 'logo':ORIGIN+'/assets/icon-512.png','description':'Independent digital marketplace offering AI tools and digital subscriptions in Pakistan, with listed PKR prices and WhatsApp ordering.','knowsAbout':['Artificial Intelligence Subscriptions','SaaS Pricing in Pakistan','Creative Software Licensing','AI Productivity Tools'],'currenciesAccepted':'PKR','paymentAccepted':payment_accepted,'contactPoint':{'@type':'ContactPoint','telephone':'+'+WA,'contactType':'customer support','areaServed':'PK','availableLanguage':['en','ur']}}
 theme_button='''<button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Light theme" aria-pressed="false"><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>'''
 def header(prefix):
- return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="AI Tools Zone logo" width="64" height="64"></span><span>AI TOOLS<span class="brand-bottom">ZONE</span></span></a><nav class="page-nav" aria-label="Main navigation"><a href="{prefix}compare/">Compare</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}categories/">Categories</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/" aria-label="AI phone agents and WhatsApp bots for Pakistani businesses">AI for Business</a></nav><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
+ return f'''<a class="skip-link" href="#main">Skip to content</a><header class="page-header wrap"><a class="brand" href="{prefix}" aria-label="AI Tools Zone home"><span class="brand-emblem"><img src="{prefix}assets/brand-icon.webp" alt="AI Tools Zone logo" width="64" height="64"></span><span>AI TOOLS <span class="brand-bottom">ZONE</span></span></a><nav class="page-nav" aria-label="Main navigation"><a href="{prefix}compare/">Compare</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}categories/">Categories</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/" aria-label="AI phone agents and WhatsApp bots for Pakistani businesses">AI for Business</a></nav><div class="header-actions">{theme_button}<a class="button button-outline" href="{prefix}products/">All tools ↗</a></div></header>'''
 def footer(prefix):
- return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}buy-ai-tools-in-pakistan/">Buy AI Tools PK</a><a href="{prefix}best-ai-tools-for-students-pakistan/">Student AI Tools</a><a href="{prefix}categories/">Categories</a><a href="{prefix}compare/">Compare AI tools</a><a href="{prefix}compare/chatgpt-vs-gemini/">ChatGPT vs Gemini</a><a href="{prefix}compare/chatgpt-vs-claude/">ChatGPT vs Claude</a><a href="{prefix}compare/canva-vs-adobe/">Canva vs Adobe</a><a href="{prefix}compare/capcut-vs-runway/">CapCut vs Runway</a><a href="{prefix}compare/leonardo-vs-midjourney/">Leonardo vs Midjourney</a><a href="{prefix}compare/replit-vs-lovable/">Replit vs Lovable</a><a href="{prefix}use-cases/ai-tools-for-students/">AI for Students</a><a href="{prefix}use-cases/ai-tools-for-developers/">AI for Developers</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/free-ai-tools-pakistan/">Free AI Tools PK</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/">AI for Business</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}faq/">FAQs</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Ordering & warranty</a><a href="https://wa.me/{WA}">+92 343 0173923</a></footer>'''
+ return f'''<footer class="page-footer wrap"><span>© {date.today().year} AI Tools Zone. Independent marketplace.</span><a href="{prefix}buy-ai-tools-in-pakistan/">Buy AI Tools PK</a><a href="{prefix}best-ai-tools-for-students-pakistan/">Student AI Tools</a><a href="{prefix}categories/">Categories</a><a href="{prefix}compare/">Compare AI tools</a><a href="{prefix}compare/chatgpt-vs-gemini/">ChatGPT vs Gemini</a><a href="{prefix}compare/chatgpt-vs-claude/">ChatGPT vs Claude</a><a href="{prefix}compare/canva-vs-adobe/">Canva vs Adobe</a><a href="{prefix}compare/capcut-vs-runway/">CapCut vs Runway</a><a href="{prefix}compare/leonardo-vs-midjourney/">Leonardo vs Midjourney</a><a href="{prefix}compare/replit-vs-lovable/">Replit vs Lovable</a><a href="{prefix}use-cases/ai-tools-for-students/">AI for Students</a><a href="{prefix}use-cases/ai-tools-for-developers/">AI for Developers</a><a href="{prefix}blog/">Blog</a><a href="{prefix}blog/free-ai-tools-pakistan/">Free AI Tools PK</a><a href="{prefix}blog/ai-phone-agents-whatsapp-bots-pakistan/">AI for Business</a><a href="{prefix}guides/">Buying guides</a><a href="{prefix}pricing/">PKR prices</a><a href="{prefix}faq/">FAQs</a><a href="{prefix}about/">About & contact</a><a href="{prefix}privacy/">Privacy</a><a href="{prefix}terms/">Refund & warranty</a><a href="https://wa.me/{WA}">{PHONE}</a></footer>'''
 def shell(title,description,path,body,schema=None,prefix='../'):
  graph = list(schema.get('@graph',[]) if schema else [])
  if path != '/404.html' and not any(n.get('@type')=='BreadcrumbList' for n in graph):
@@ -145,26 +217,22 @@ home=(ROOT/'templates/home.html').read_text(encoding='utf-8')
 home=home.replace('__ASSET_VERSION__',VERSION)
 home=home.replace('lang="en"','lang="en-PK"')
 home=home.replace('class="wrap brand-band-inner"','class="wrap brand-band-inner" tabindex="0" role="region" aria-label="Featured product brands"')
-title='Buy AI Tools & Subscriptions in Pakistan | AI Tools Zone'
-description='Buy AI tools and subscriptions in Pakistan. Compare verified PKR prices for ChatGPT Plus, Claude, Canva, and Cursor. Fast delivery via JazzCash & Easypaisa.'
-og_title='Buy AI Tools in Pakistan | AI Tools Zone'
-og_description='Explore premium AI accounts and affordable software subscriptions in Pakistan with transparent PKR pricing.'
-twitter_title='Buy AI Tools in Pakistan | AI Tools Zone'
-twitter_description='Explore premium AI accounts and affordable software subscriptions in Pakistan with transparent PKR pricing.'
+home=re.sub(r'<span>⚡ Catalog &amp; PKR prices verified: <strong>.*?</strong></span>', f'<span>⚡ Catalog &amp; PKR prices verified: <strong>{homepage_checked_label}</strong></span>', home)
+title='Buy AI Tools in Pakistan: 32 AI Subscriptions at PKR Prices | AI Tools Zone'
+description='Buy ChatGPT Plus, Claude Pro, Gemini Pro, Cursor and 28 more AI subscriptions in Pakistan. See PKR prices and pay with JazzCash or Easypaisa.'
+og_title=title
+og_description=description
+twitter_title=title
+twitter_description=description
 og_image=f'{ORIGIN}/assets/og-image.jpg'
-schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','name':'AI tools and digital subscriptions','itemListElement':[{'@type':'ListItem','position':i+1,'url':ORIGIN+'/products/'+p['slug']+'/','name':p['name']} for i,p in enumerate(products)]}]}
-schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'},'datePublished':'2026-10-26T00:00:00+05:00','dateModified':'2026-11-15T09:30:00+05:00'})
+item_list_elements=[{'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':p['name'],'brand':{'@type':'Brand','name':p['brand']},'category':p['category'],'description':p['description'],'url':f"{ORIGIN}/products/{p['slug']}/",'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':'PKR','url':f"{ORIGIN}/products/{p['slug']}/"}}} for i,p in enumerate(products)]
+schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','@id':ORIGIN+'/#itemlist','name':'AI tools and digital subscriptions in Pakistan','itemListElement':item_list_elements}]}
+schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'},'datePublished':'2026-10-26T00:00:00+05:00','dateModified':'2026-11-17T09:30:00+05:00'})
 home_faqs = [
-    ('What are AI subscriptions and why buy through AI Tools Zone?', 'AI subscriptions provide premium access to advanced generative software like ChatGPT Plus and Claude Pro. AI Tools Zone is an independent digital marketplace enabling Pakistani professionals, students, and businesses to purchase genuine AI tools at transparent PKR prices using local payment methods (JazzCash, Easypaisa, Raast), eliminating the need for foreign debit/credit cards. Read our detailed guide on where to buy AI tools in Pakistan for platform comparisons and verification practices.'),
-    ('Which AI tools and software subscriptions are available in Pakistan?', 'Our catalog features 32 active subscriptions organized across 10 specialized workflow hubs: AI assistants (ChatGPT Plus, Claude Pro, Gemini Pro, Perplexity Pro, DeepSeek Unlimited), creative design (Canva Pro Edu, Adobe Creative Cloud, Leonardo AI), coding and development (Cursor AI Pro, GitHub Copilot, Bolt.new Pro, Replit Core), video editors (CapCut Pro, Runway Gen-3, Veo 3 Ultra), audio synthesis (ElevenLabs), and business productivity (Notion Business, Microsoft Office 365, n8n Starter).'),
-    ('How much do AI subscriptions cost in Pakistan and what durations are available?', 'Subscription durations and prices vary by tool tier. Monthly plans start at PKR 450 for QuillBot Premium and extend to PKR 5,600 for Bolt.new Pro. Flagship AI assistants include DeepSeek Unlimited at PKR 1,100 per month, Claude Pro at PKR 2,200 per month, and ChatGPT Plus at PKR 2,300 per month. Annual subscriptions include Canva Pro Edu at PKR 900 per year and Gemini Pro at PKR 2,000 per year. All plans feature transparent PKR prices with zero international transaction fees or currency exchange surcharges.'),
-    ('Which models and usage limitations are included with flagship AI assistants?', "ChatGPT Plus includes OpenAI's latest models with Advanced Voice mode, advanced reasoning series, and built-in image generation. Claude Pro includes Claude's Opus, Sonnet and Haiku models with Projects, Artifacts, and Claude Code. Gemini Pro incorporates Google's Gemini models with a large context window and Google Workspace integration with 2TB Google One storage. DeepSeek Unlimited provides high-speed reasoning via DeepSeek architectures for coding and mathematics. Official vendor usage limits and fair-use guidelines apply to all accounts."),
-    ('What is the difference between private, shared, and invitation access?', 'Every listing clearly specifies its access tier: Private accounts deliver dedicated individual credentials with full profile privacy. Invitation plans link your personal email directly to a licensed team workspace or educational organization. Shared profiles offer affordable communal access under fair-use guidelines. License Key products deliver authentic digital activation codes for permanent software installation.'),
-    ('How do I order an AI subscription via WhatsApp?', 'Ordering takes 4 simple steps: 1) Browse our catalog and select your desired subscription; 2) Click Order Plan to generate a pre-formatted WhatsApp order inquiry detailing the tool name, PKR price, duration, and warranty terms; 3) Send the message to our human team to confirm real-time availability and receive local payment details; 4) Complete payment and receive your activation credentials or workspace invite within 15 to 30 minutes.'),
-    ('Which local payment methods are accepted in Pakistan?', 'We accept JazzCash, Easypaisa, and direct Raast online bank transfers (IBFT) across all Pakistani banking institutions. Verified payment instructions and account details are shared directly in WhatsApp chat after confirming plan availability. No automatic credit card charges or recurring subscriptions occur on this site.'),
-    ('How quickly is subscription access delivered after payment?', 'Most digital subscriptions are activated within 15 to 30 minutes following payment confirmation during business hours (9:00 AM – 11:00 PM PKT). Specialized team workspace invitations and custom enterprise software licenses are typically completed within 1 to 2 hours. Delivery turnaround is always verified before you pay.'),
-    ('What replacement warranty and refund coverage is provided?', 'Every active product includes a stated replacement warranty ranging from 7 to 30 days. If a confirmed subscription cannot be activated or delivered within the stated timeframe, you receive an immediate 100% full money-back refund. For any access interruptions during the warranty term, our team provides rapid troubleshooting or a replacement account.'),
-    ('Is AI Tools Zone officially affiliated with OpenAI, Anthropic, Google, or Microsoft?', 'No. AI Tools Zone is an independent digital software marketplace. All brand names, trademarks, and logos belong to their respective corporate copyright holders. We provide account setup, workspace onboarding, and subscription procurement assistance in Pakistan without claiming official corporate endorsement or partnership.')
+    ('What is AI Tools Zone?', 'AI Tools Zone is an independent marketplace for AI and digital subscriptions in Pakistan. The marketplace lists 32 plans with PKR prices. Buyers pay with JazzCash, Easypaisa or bank transfer, so no foreign card is needed.'),
+    ('Which models and usage limits come with each AI assistant?', 'ChatGPT Plus, Claude Pro, Gemini Pro and DeepSeek Unlimited follow each vendor\'s plan terms. OpenAI, Anthropic, Google and DeepSeek set model access and usage limits and change them without notice. Each product page lists the features the seller confirmed on the verification date.'),
+    ('What refund does AI Tools Zone give?', 'AI Tools Zone refunds a confirmed order in full when it cannot activate or deliver it within the stated time. During the warranty period, the team troubleshoots or replaces the account. Warranty length is 7 or 30 days and is shown on each listing.'),
+    ('Is AI Tools Zone affiliated with OpenAI, Anthropic, Google or Microsoft?', 'No. AI Tools Zone is an independent marketplace with no partnership or endorsement from these companies. Brand names and logos belong to their respective trademark owners.')
 ]
 schema['@graph'].append({'@type':'FAQPage','@id':ORIGIN+'/#faq','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in home_faqs]})
 home=home.replace('<!-- GOOGLE_TAG -->',analytics_tag('/'))
@@ -188,10 +256,16 @@ total=sum(p['price'] for p in bundle)
 bundle_message='I would like the AI Tools Zone creator stack:\n'+'\n'.join(f'{p["name"]}: {money(p["price"])} | {p["duration"]} | {p["access"]}' for p in bundle)+f'\nCombined listed price: {money(total)}. Please confirm availability, limits and payment details.'
 home=home.replace('id="buy-stack" href="https://wa.me/'+WA+'"','id="buy-stack" href="'+e(wa(bundle_message))+'" target="_blank" rel="noopener noreferrer"')
 home=home.replace('PKR 7,400 <small>',money(total)+' <small>')
-home=home.replace('    <section id="categories"','    <section class="answer-strip wrap" aria-labelledby="pricing-overview"><h2 id="pricing-overview">AI Subscription Prices in Pakistan</h2><p>AI Tools Zone is an independent digital marketplace for creators, students and businesses in Pakistan. Whether you need <a href="products/">premium AI accounts in Pakistan</a>, explore our dedicated <a href="buy-ai-tools-in-pakistan/">guide to buy AI tools in Pakistan</a>, check <a href="how-to-buy-chatgpt-plus-in-pakistan/">how to buy ChatGPT Plus in Pakistan</a>, evaluate <a href="best-ai-tools-for-students-pakistan/">affordable AI tools for students</a>, browse specialized <a href="ai-video-editing-tools-pakistan/">AI video editing tools</a>, or compare <a href="ai-image-generator-subscriptions-pakistan/">AI image generator subscriptions</a>, compare seller-listed prices in PKR, review verified access types and durations, and select any plan to confirm live availability, delivery turnaround, and domestic payment options directly with our team. Availability and plan limits are confirmed before payment. For buyer protection tips, read <a href="blog/where-to-buy-ai-tools-pakistan/">where to buy AI tools in Pakistan</a>.</p><p><strong>Subscription durations & prices:</strong> Monthly plans range from PKR 450 (QuillBot) to PKR 5,600 (Bolt.new Pro), while annual options range from PKR 900 (Canva Pro Edu) to PKR 23,000 (Gamma Pro). Subscriptions are listed in clear PKR with no foreign exchange markups. <strong>Account access types:</strong> <em>Private</em> accounts provide dedicated individual credentials. <em>Invitation</em> plans link your personal email to a workspace seat. <em>Shared</em> profiles offer budget communal access with fair-use guidelines. <em>License Key</em> products provide genuine digital activation keys. <strong>Included features & restrictions:</strong> Every active listing specifies seller-confirmed capabilities and replacement warranty periods (7 to 30 days). Official vendor usage limits remain governed by respective platforms.</p><a class="inline-link" href="about/">About AI Tools Zone & contact ↗</a></section>\n    <section id="categories"')
-home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Privacy</a><a href="terms/">Ordering & warranty</a>')
-home=home.replace('<h3>Here to help</h3>','<h3>Here to help</h3><a href="about/">About & contact</a>')
-home=home.replace('<section class="finder-section wrap"',home_discovery()+'<section class="finder-section wrap"')
+_assts = [p for p in products if p.get('category') == 'AI Assistants']
+_m_assts = sorted([p for p in _assts if 'month' in p.get('duration', '').lower()], key=lambda x: x['price'])
+_nm_assts = [p for p in _assts if 'month' not in p.get('duration', '').lower()]
+_g_asst = next(p for p in _nm_assts if p['slug'] == 'gemini-pro')
+_asst_sent = f'Four of the five AI assistants are monthly plans, from {money(_m_assts[0]["price"])} to {money(_m_assts[-1]["price"])} per month ({_m_assts[0]["name"]} to {_m_assts[-1]["name"]}). Gemini Pro is a 1-year plan at {money(_g_asst["price"])}.'
+home=re.sub(r'The five AI assistants listed here start at PKR 1,100 per month\.', _asst_sent, home)
+home=re.sub(r'Four of the five AI assistants are monthly plans, from PKR [0-9,]+ to PKR [0-9,]+ per month \([^)]+\)\. Gemini Pro is a 1-year plan at PKR [0-9,]+\.', _asst_sent, home)
+home=home.replace('<button data-privacy>Privacy</button>','<a href="privacy/">Privacy</a><a href="terms/">Refund & warranty</a>')
+home=home.replace('<p class="footer-heading">Here to help</p>','<p class="footer-heading">Here to help</p><a href="about/">About & contact</a>')
+home=home.replace('<!-- SUPPLEMENTARY_DISCOVERY -->',home_discovery())
 write('index.html',home)
 write('catalog.js','// Generated by build_site.py from data/catalog.json and site settings.\nwindow.AITZ_WHATSAPP = '+json.dumps(WA)+';\nwindow.PRODUCTS = '+json.dumps(products,ensure_ascii=False,separators=(',',':'))+';\n')
 
@@ -201,6 +275,9 @@ access_explanations={
  'Invitation':'This listing uses an invitation to a workspace or team. Confirm eligibility, administrator controls, included features and what happens when the plan ends before paying.',
  'Shared':'This listing uses shared access. Confirm the permitted usage, profile or device limits, and privacy conditions before paying. It is not a private account.',
  'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.'}
+
+
+
 PRODUCT_RATINGS={'coursera-plus':(4.9, 39),'office365':(4.9, 48),'quillbot':(4.8, 54),'grammarly':(4.9, 65),'descript':(4.8, 29),'runway':(4.8, 34),'bolt-new':(4.7, 28),'perplexity':(4.9, 41),'deepseek':(4.8, 38),'claude':(4.9, 60),'copilot':(4.8, 52),'cursor':(4.9, 45),'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
 PRODUCT_REVIEWS={
  'coursera-plus':('Kamran D.','Islamabad, Pakistan','2026-11-06','Completed Google Data Analytics and Project Management certificates. Incredible value.'),
@@ -236,6 +313,48 @@ PRODUCT_REVIEWS={
  'linkedin':('Fahad N.','Islamabad, Pakistan','2026-10-19','InMail credits and salary insights activated promptly. Crucial for my job applications.'),
  'windows':('Adeel M.','Sialkot, Pakistan','2026-10-14','Original Windows 11 Pro activation key worked on first attempt. Smooth Easypaisa payment.')
 }
+
+def format_best_for(items):
+    formatted = []
+    acronyms = {'pc': 'PC', 'ui/ux': 'UI/UX', 'mvps': 'MVPs', 'vfx': 'VFX', '4k': '4K', 'vs code': 'VS Code', 'ai': 'AI', 'word': 'Word', 'excel': 'Excel'}
+    for item in items:
+        lower = item.lower()
+        if lower in acronyms:
+            formatted.append(acronyms[lower])
+        else:
+            formatted.append(lower)
+    if len(formatted) > 1:
+        return f"{', '.join(formatted[:-1])} and {formatted[-1]}"
+    return formatted[0] if formatted else ''
+
+def render_before_you_pay(p):
+    delivery = (p.get('deliveryMethod') or '').strip()
+    if delivery:
+        receive_main = delivery
+    else:
+        receive_main = "AI Tools Zone confirms how access is delivered on WhatsApp before you pay."
+    
+    extra_receive = ""
+    access_type = p.get('access', '').strip().lower()
+    if access_type == 'invitation' or p.get('id') in ('canva', 'notion', 'youtube', 'linkedin', 'coursera-plus'):
+        extra_receive = ' AI Tools Zone sends an invitation or activation link for your personal email. The vendor can set eligibility conditions for the account.'
+        
+    confirms_text = "availability, plan name, price and any limits."
+    brand_name = p.get('brand', 'Vendor')
+    vendor_terms = f"{brand_name}’s terms apply to the service. AI Tools Zone is an independent seller."
+    
+    extra_vendor = ""
+    if access_type == 'shared' or p.get('id') in ('netflix', 'surfshark', 'veo'):
+        extra_vendor = ' Shared access means other buyers use the same account. The vendor\'s rules on account sharing apply, and the vendor can limit or end access.'
+        
+    warranty_raw = p.get('warranty', '').strip().lower()
+    if warranty_raw in ('no warranty', 'none', 'no replacement warranty') or p.get('id') == 'gemini':
+        warranty_text = "No replacement warranty. AI Tools Zone refunds a confirmed order that it cannot activate within the stated time."
+    else:
+        warranty_text = f"{p['warranty']}. AI Tools Zone refunds a confirmed order that it cannot activate or deliver within the stated time."
+        
+    return f'''<div class="before-you-pay"><h2>Before you pay</h2><ul><li><strong>What you receive:</strong> {e(receive_main)}{e(extra_receive)}</li><li><strong>What AI Tools Zone confirms:</strong> {confirms_text}</li><li><strong>Vendor terms:</strong> {e(vendor_terms)}{e(extra_vendor)}</li><li><strong>Warranty and refund:</strong> {e(warranty_text)}</li></ul></div>'''
+
 for p in all_products:
  path='/products/'+p['slug']+'/'
  if not p.get('active',True):
@@ -250,10 +369,11 @@ for p in all_products:
  rev_author,rev_city,rev_date,rev_body=PRODUCT_REVIEWS.get(p['id'],('Customer Review','Pakistan','2026-10-20','Fast delivery and genuine subscription access confirmed on WhatsApp.'))
  rating_badge=f'<div class="product-rating" aria-label="Customer Rating: {rating_val} out of 5 based on {review_count} customer reviews"><span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-val"><strong>{rating_val}</strong>/5</span> <span class="rating-count">({review_count} customer reviews)</span></div>'
  review_section=f'<section class="content-block" id="customer-reviews"><h2>Verified customer review</h2><div class="review-card"><div class="review-header"><span class="stars" aria-hidden="true">★★★★★</span><strong>{e(rev_author)}</strong> <span class="verified-buyer">Verified buyer · {e(rev_city)}</span></div><p>“{e(rev_body)}”</p></div></section>'
+ before_you_pay=render_before_you_pay(p)
  pc=product_content.get(p['id'],{})
- title=pc.get('title') or f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & EasyPaisa | AI Tools Zone'
+ title=pc.get('title') or f'Buy {p["name"]} in Pakistan ({money(p["price"])}) – JazzCash & Easypaisa | AI Tools Zone'
  description=pc.get('meta_description') or f'Buy {p["name"]} in Pakistan for {money(p["price"])}. {p["duration"]}, {p["access"].lower()} access. Confirm availability on WhatsApp. Pay via JazzCash, Easypaisa or bank transfer.'
- specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Brand','brand'),('Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
+ specs=''.join(f'<div><dt>{label}</dt><dd>{e(p[key])}</dd></div>' for label,key in [('Brand','brand'),('Credits' if 'credit' in str(p.get('duration','')).lower() else 'Duration / allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')])
  related=[q for q in products if q['category']==p['category'] and q['id']!=p['id']][:3]
  # No arbitrary cross-category recommendations for single-product categories.
  sticky_bar=f'''<div class="mobile-sticky-bar" role="region" aria-label="Quick WhatsApp order bar"><div class="bar-info"><span class="bar-title">{e(p['name'])}</span><span class="bar-price">{money(p['price'])} <small>({e(p['duration'])})</small></span></div><a class="button button-lime buy-now sticky-buy-btn" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" data-price="{p['price']}" data-web-enhanced="true" aria-label="Order {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a></div>'''
@@ -261,8 +381,23 @@ for p in all_products:
  overview_text=pc.get('overview','')
  capabilities_section=''
  if pc.get('capabilities'):
-  capabilities_section=f'''<section class="content-block"><h2>What can you do with {e(p['name'])}?</h2><ul>{''.join('<li>'+e(c)+'</li>' for c in pc['capabilities'])}</ul></section>'''
- features_section=f'''<section class="content-block"><h2>What’s listed in this plan?</h2><ul>{''.join('<li>'+e(f)+'</li>' for f in p['features'])}</ul><p>These are the seller-listed features for this offer, not a guarantee of every vendor entitlement. Ask us to confirm the current limits and eligibility for your intended use.</p></section>'''
+  if p['id'] == 'adobe':
+   capabilities_section=f'''<section class="content-block"><h2>What do Adobe Creative Cloud apps do?</h2><ul>{''.join('<li>'+e(c)+'</li>' for c in pc['capabilities'])}</ul></section>'''
+  elif p['id'] != 'office365':
+   capabilities_section=f'''<section class="content-block"><h2>What can you do with {e(p['name'])}?</h2><ul>{''.join('<li>'+e(c)+'</li>' for c in pc['capabilities'])}</ul></section>'''
+ features = p['features']
+ if p['id'] == 'claude':
+  features = [re.sub(r'200k context window', 'Large context window', re.sub(r"The vendor's current models", "Anthropic's current Claude models", f, flags=re.I), flags=re.I) for f in features]
+ elif p['id'] == 'cursor':
+  features = [re.sub(r"The vendor's current models", "Anthropic's Claude and OpenAI's models", f, flags=re.I) for f in features]
+ elif p['id'] == 'perplexity':
+  features = [re.sub(r"The vendor's current models", "Frontier models from OpenAI, Anthropic, and Google", f, flags=re.I) for f in features]
+ elif p['id'] == 'canva':
+  features = [re.sub(r'\bpremium\s+assets\b', 'templates and design assets', f, flags=re.I) for f in features]
+ if p['id'] == 'adobe':
+  features_section=f'''<section class="content-block"><h2>Apps AI Tools Zone lists for this plan (confirmed before payment)</h2><ul>{''.join('<li>'+e(f)+'</li>' for f in features)}</ul><p>These are the seller-listed features for this offer, not a guarantee of every vendor entitlement. Ask us to confirm the current limits and eligibility for your intended use.</p></section>'''
+ else:
+  features_section=f'''<section class="content-block"><h2>What’s listed in this plan?</h2><ul>{''.join('<li>'+e(f)+'</li>' for f in features)}</ul><p>These are the seller-listed features for this offer, not a guarantee of every vendor entitlement. Ask us to confirm the current limits and eligibility for your intended use.</p></section>'''
  benefits_section=''
  if pc.get('benefits'):
   benefits_section=f'''<section class="content-block"><h2>Key benefits for your workflow</h2><ul>{''.join('<li>'+e(b)+'</li>' for b in pc['benefits'])}</ul></section>'''
@@ -272,7 +407,10 @@ for p in all_products:
  why_section=''
  if pc.get('why_buy_local'):
   why_section=f'''<section class="content-block"><h2>Why buy through AI Tools Zone?</h2><p>{render_text(pc['why_buy_local'])}</p></section>'''
- access_section=f'''<section class="content-block"><h2>How does {e(p['access'].lower())} access work?</h2><p>{e(access_explanations[p['access']])}</p></section>'''
+ if p['id'] == 'linkedin':
+  access_section=f'''<section class="content-block"><h2>How does invitation access work?</h2><p>AI Tools Zone delivers access as an activation link. Open it while signed in to your LinkedIn account. Confirm the tier, eligibility and replacement coverage before paying.</p></section>'''
+ else:
+  access_section=f'''<section class="content-block"><h2>How does {e(p['access'].lower())} access work?</h2><p>{e(access_explanations[p['access']])}</p></section>'''
  faq_items=[]
  if pc.get('faqs'):
   for f in pc['faqs']:
@@ -280,6 +418,13 @@ for p in all_products:
  faq_items.append(f'<h3>How much does this plan cost in Pakistan?</h3><p>The listed price is {money(p["price"])} for {e(p["duration"])}. AI Tools Zone confirms the available plan and final price on WhatsApp before you pay.</p>')
  faq_items.append(f'<h3>How do I buy this plan?</h3><p>Select Order on WhatsApp, review the prepared WhatsApp message and send it. We confirm the offer, payment instructions and access delivery. No payment is collected by this website.</p>')
  faq_items.append(f'<h3>When will access be delivered?</h3><p>The seller-listed estimate is {e(p["delivery"])} after payment confirmation, subject to availability. Confirm the timing for your order in chat.</p>')
+ if p.get('warranty', '').strip().lower() in ('no warranty', 'none', 'no replacement warranty'):
+  faq_items.append(f'<h3>What warranty is listed?</h3><p>This offer is listed with No Warranty (replacement warranty not applicable). AI Tools Zone refunds the order if the account cannot be activated. <a href="../../terms/">Read the ordering and warranty information</a> and confirm the terms before paying.</p>')
+ else:
+  faq_items.append(f'<h3>What warranty is listed?</h3><p>This offer lists {e(p["warranty"])} replacement coverage. <a href="../../terms/">Read the ordering and warranty information</a> and confirm the terms before paying.</p>')
+ faq_section=f'''<section class="content-block"><h2>Questions about {e(p['name'])}</h2>{''.join(faq_items)}</section>'''
+ order_cta_section=f'''<section class="content-block order-cta-block"><h2>Order {e(p['name'])} in Pakistan — Contact Us on WhatsApp</h2><p>Get access through AI Tools Zone with local payment options, including JazzCash, Easypaisa, and bank transfer. Contact us on WhatsApp to confirm the available access method, compatibility, and delivery details before ordering.</p><p><a class="button button-lime buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" data-price="{p['price']}" aria-label="Order {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a></p></section>'''
+ body=f'''<main id="main" class="wrap product-page">{breadcrumbs([('Home','/'),('All tools','/products/'),(p['name'],path)])}<section class="product-overview"><div>{mark(p,'../../')}<p class="eyebrow"><a href="{category_path(p['category'])}">{e(p['category'])}</a> · PAKISTAN</p><h1>{e(p['name'])}</h1>{rating_badge}<p class="direct-answer">{e(p['name'])} is listed by AI Tools Zone at {money(p['price'])} for {e(p['duration'])}, with {e(p['access'].lower())} access. This independent marketplace offer is for buyers in Pakistan; availability and the exact plan are confirmed before payment.</p><p>{e(seo_intro)}</p><p>{render_text(overview_text)}</p><p>For {e(format_best_for(p.get('bestFor', [])))}. Compare this seller-listed plan’s price, duration and access conditions before ordering.</p><a class="inline-link" href="{e(p['vendor'])}" target="_blank" rel="noopener noreferrer">Visit the product website ↗</a></div><aside class="offer-panel" aria-label="Plan and ordering details"><span class="eyebrow">LISTED PLAN PRICE</span><div class="price">{price_markup(p)}</div><p>{e(p['duration'])} · {e(p['access'])} access</p><dl class="spec-list">{specs}</dl><p class="verified-date">Offer details last checked on <time datetime="{LAST_VERIFIED}">{LAST_VERIFIED_LABEL}</time>. Confirm the current price, plan and access on WhatsApp before payment.</p>{before_you_pay}<a class="button button-lime buy-now" href="{e(wa(message(p)))}" target="_blank" rel="noopener noreferrer" data-product-id="{p['id']}" data-price="{p['price']}" aria-label="Buy {e(p['name'])} on WhatsApp">Order on WhatsApp <span>↗</span></a><p>Opens WhatsApp to {PHONE}. You review and send the message. On a computer, use WhatsApp Web; if asked to link your account, complete that step and reopen this order. Use Copy order details if the message is missing. Confirm availability, included limits and the final price before payment.</p></aside></section>{capabilities_section}{features_section}{benefits_section}{who_section}{why_section}{access_section}{faq_section}{review_section}<section class="content-block"><h2>Explore more tools</h2><div class="related-links">{''.join(f'<a href="../{q["slug"]}/">{e(q["name"])}</a>' for q in related)}</div></section>{product_context(p)}{order_cta_section}<p class="modal-note">AI Tools Zone is an independent marketplace. Product names and logos belong to their owners. No official affiliation or endorsement is claimed.</p>{sticky_bar}</main>'''
  if p.get('warranty', '').strip().lower() in ('no warranty', 'none', 'no replacement warranty'):
   faq_items.append(f'<h3>What warranty is listed?</h3><p>This offer is listed with No Warranty (replacement warranty not applicable). Account access and login are verified and confirmed working at delivery. <a href="../../terms/">Read the ordering and warranty information</a> and confirm the terms before paying.</p>')
  else:
@@ -296,14 +441,14 @@ for p in all_products:
  shipping_details={'@type':'OfferShippingDetails','@id':ORIGIN+path+'#shipping','shippingRate':{'@type':'MonetaryAmount','value':'0','currency':'PKR'},'shippingDestination':{'@type':'DefinedRegion','addressCountry':'PK'},'deliveryTime':{'@type':'ShippingDeliveryTime','handlingTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'},'transitTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'}}}
  aggregate_rating={'@type':'AggregateRating','@id':ORIGIN+path+'#rating','ratingValue':rating_val,'reviewCount':review_count,'bestRating':5,'worstRating':1}
  review_schema={'@type':'Review','@id':ORIGIN+path+'#review','reviewRating':{'@type':'Rating','ratingValue':5,'bestRating':5,'worstRating':1},'author':{'@type':'Person','name':rev_author},'datePublished':rev_date,'reviewBody':rev_body}
- schema={'@context':'https://schema.org','@graph':[{'@type':'Product','@id':ORIGIN+path+'#product','name':p['name'],'description':seo_intro,'image':ORIGIN+'/'+p['logo'],'category':p['category'],'brand':{'@type':'Brand','name':p['brand']},'sku':p['slug'],'aggregateRating':aggregate_rating,'review':review_schema,'offers':{'@type':'Offer','@id':ORIGIN+path+'#offer','url':ORIGIN+path,'priceCurrency':'PKR','price':p['price'],'availability':'https://schema.org/InStock','itemCondition':'https://schema.org/NewCondition','validFrom':'2026-10-26','priceValidUntil':'2026-12-31','seller':{'@id':ORIGIN+'/#organization'},'hasMerchantReturnPolicy':return_policy,'shippingDetails':shipping_details},'additionalProperty':[{'@type':'PropertyValue','name':label,'value':p[key]} for label,key in [('Brand','brand'),('Duration or allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')]]},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':ORIGIN+'/'},{'@type':'ListItem','position':2,'name':'All tools','item':ORIGIN+'/products/'},{'@type':'ListItem','position':3,'name':p['name'],'item':ORIGIN+path}]}]}
+ schema={'@context':'https://schema.org','@graph':[{'@type':'Product','@id':ORIGIN+path+'#product','name':p['name'],'description':seo_intro,'image':ORIGIN+'/'+p['logo'],'category':p['category'],'brand':{'@type':'Brand','name':p['brand']},'sku':p['slug'],'aggregateRating':aggregate_rating,'review':review_schema,'offers':{'@type':'Offer','@id':ORIGIN+path+'#offer','url':ORIGIN+path,'priceCurrency':'PKR','price':p['price'],'availability':'https://schema.org/InStock','itemCondition':'https://schema.org/NewCondition','validFrom':'2026-10-26','priceValidUntil':price_valid_until,'seller':{'@id':ORIGIN+'/#organization'},'hasMerchantReturnPolicy':return_policy,'shippingDetails':shipping_details},'additionalProperty':[{'@type':'PropertyValue','name':label,'value':p[key]} for label,key in [('Brand','brand'),('Duration or allowance','duration'),('Access type','access'),('Delivery estimate','delivery'),('Replacement warranty','warranty')]]},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':ORIGIN+'/'},{'@type':'ListItem','position':2,'name':'All tools','item':ORIGIN+'/products/'},{'@type':'ListItem','position':3,'name':p['name'],'item':ORIGIN+path}]}]}
  if not related: body=body.replace('<section class="content-block"><h2>Explore more tools</h2><div class="related-links"></div></section>','')
  write('products/'+p['slug']+'/index.html',shell(title,description,path,body,schema,'../../'))
 
 pages={
- 'about':('About & Contact AI Tools Zone','Learn how AI Tools Zone helps customers in Pakistan compare digital subscriptions and order on WhatsApp.', '''<h1>About AI Tools Zone</h1><p>AI Tools Zone is an independent digital marketplace for AI tools and premium subscriptions in Pakistan. We help creators, students, freelancers and businesses compare listed plans, durations, access types and PKR prices.</p><h2>Talk to a person</h2><p>Contact us on <a href="https://wa.me/923430173923">WhatsApp: +92 343 0173923</a>. Tell us which tool you need, your intended use and your budget. We confirm availability, plan limits, delivery and payment instructions before you pay.</p><h2>How we list plans</h2><p><a href="/guides/catalog-methodology/">Read our catalog and comparison methodology</a>: what our prices mean, how we shortlist tools, and what needs confirmation.</p><p>Each product page shows the seller-listed price, duration or allowance, access type, delivery estimate and replacement coverage. Vendor features can change and different access offers can have different limits. Confirm the specific offer before purchasing.</p><h2>Independent marketplace</h2><p>Product names and logos identify the tools offered. They belong to their respective owners. AI Tools Zone does not claim official vendor affiliation or endorsement.</p><p><a href="../#marketplace">Explore the catalog</a> · <a href="../terms/">Ordering and warranty</a> · <a href="../privacy/">Privacy policy</a></p>'''),
- 'privacy':('Privacy Policy | AI Tools Zone','How AI Tools Zone uses analytics, local theme preferences and WhatsApp order information.', '''<h1>Your privacy matters.</h1><h2>Data on this website</h2><p>Your chosen light or dark theme is saved in this browser’s local storage. Search, filters and comparisons run in your browser. This site does not collect passwords, payment-card details or account credentials through a form. We use Cloudflare Web Analytics to measure visits, page views and page performance. Cloudflare describes this service as cookie-free and does not use local storage to track visitors. Analytics reports are accessed through our Cloudflare account and are not displayed publicly on this website. <a href="https://developers.cloudflare.com/web-analytics/about/">Learn about Cloudflare Web Analytics</a>.</p><p>We also use Google Analytics 4 to measure page views and selected site interactions, including product views and order-button clicks. The Google tag is configured to send the page path without query parameters. Google Analytics may use first-party cookies such as <code>_ga</code> to distinguish browsers and sessions and may process the page path, referrer, browser/device information, approximate location and interaction data. Our site events can include a product identifier, but not names, email addresses, phone numbers, WhatsApp message text, on-site search terms or payment details. See <a href="https://support.google.com/analytics/answer/6004245">Google Analytics data and privacy information</a>. You can control or clear cookies in your browser.</p><h2>WhatsApp orders</h2><p>Order on WhatsApp opens a WhatsApp link containing the selected product and plan details. You choose whether to send the message. WhatsApp processes your interaction under its own privacy policy. Information you send to AI Tools Zone is used to discuss and fulfil your request.</p><h2>Fonts and hosting</h2><p>Google Fonts may receive your IP address when font files load. The hosting provider may process standard request logs. Product icons and our logo are served from this website.</p><h2>Your choices</h2><p>Clear this website’s browser storage to remove the saved theme preference. Any shopping-bag data left by an earlier version is no longer used and can be cleared in the same way. Contact <a href="https://wa.me/923430173923">+92 343 0173923 on WhatsApp</a> for questions about information you shared in chat.</p>'''),
- 'terms':('Ordering, Access & Warranty | AI Tools Zone','How to buy AI Tools Zone plans on WhatsApp, confirm access conditions, arrange payment and request support.', '''<h1>Clear plans. Clear next steps.</h1><h2>Ordering and payment</h2><p>Choose a product and select Order on WhatsApp. Review and send the prepared WhatsApp message. We confirm availability, the final price, plan limits and payment instructions before you pay. JazzCash, Easypaisa and bank transfer can be arranged in chat. This website does not collect a payment.</p><h2>Understand the access type</h2><p>Private, Shared, Invitation and License Key offers have different conditions. Confirm account ownership, eligible features, device limits and any workspace restrictions for your selected offer before paying.</p><h2>Delivery estimates</h2><p>Each plan includes a seller-listed delivery estimate after payment confirmation. Timing depends on availability and activation requirements and must be confirmed in chat.</p><h2>Replacement warranty and refunds</h2><p>Each listing states its replacement coverage, typically 7 or 30 days. If the confirmed plan cannot be delivered, you can request a full refund. After activation, replacement coverage follows the stated warranty. Contact us with your order details to discuss support.</p><h2>Product names and offers</h2><p>AI Tools Zone is an independent marketplace. Listed prices and features describe the specific seller offer and may differ from a vendor’s direct subscription. Product names and logos are owned by their respective owners; no official affiliation is claimed.</p><p><a href="https://wa.me/923430173923">Contact support on WhatsApp: +92 343 0173923</a></p>''')}
+ 'about':('About & Contact AI Tools Zone','Learn how AI Tools Zone helps customers in Pakistan compare digital subscriptions and order on WhatsApp.', '''<h1>About AI Tools Zone</h1><p>AI Tools Zone is an independent digital marketplace for AI tools and verified subscriptions in Pakistan. We help creators, students, freelancers and businesses compare listed plans, durations, access types and PKR prices.</p><h2>Talk to a person</h2><p>Contact us on <a href="https://wa.me/923430173923">WhatsApp: +92 343 017 3923</a>. Tell us which tool you need, your intended use and your budget. We confirm availability, plan limits, delivery and payment instructions before you pay.</p><h2>How we list plans</h2><p><a href="/guides/catalog-methodology/">Read our catalog and comparison methodology</a>: what our prices mean, how we shortlist tools, and what needs confirmation.</p><p>Each product page shows the seller-listed price, duration or allowance, access type, delivery estimate and replacement coverage. Vendor features can change and different access offers can have different limits. Confirm the specific offer before purchasing.</p><h2>Independent marketplace</h2><p>Product names and logos identify the tools offered. They belong to their respective owners. AI Tools Zone does not claim official vendor affiliation or endorsement.</p><p><a href="../#marketplace">Explore the catalog</a> · <a href="../terms/">Ordering and warranty</a> · <a href="../privacy/">Privacy policy</a></p>'''),
+ 'privacy':('Privacy Policy | AI Tools Zone','How AI Tools Zone uses analytics, local theme preferences and WhatsApp order information.', '''<h1>Your privacy matters.</h1><h2>Data on this website</h2><p>Your chosen light or dark theme is saved in this browser’s local storage. Search, filters and comparisons run in your browser. This site does not collect passwords, payment-card details or account credentials through a form. We use Cloudflare Web Analytics to measure visits, page views and page performance. Cloudflare describes this service as cookie-free and does not use local storage to track visitors. Analytics reports are accessed through our Cloudflare account and are not displayed publicly on this website. <a href="https://developers.cloudflare.com/web-analytics/about/">Learn about Cloudflare Web Analytics</a>.</p><p>We also use Google Analytics 4 to measure page views and selected site interactions, including product views and order-button clicks. The Google tag is configured to send the page path without query parameters. Google Analytics may use first-party cookies such as <code>_ga</code> to distinguish browsers and sessions and may process the page path, referrer, browser/device information, approximate location and interaction data. Our site events can include a product identifier, but not names, email addresses, phone numbers, WhatsApp message text, on-site search terms or payment details. See <a href="https://support.google.com/analytics/answer/6004245">Google Analytics data and privacy information</a>. You can control or clear cookies in your browser.</p><h2>WhatsApp orders</h2><p>Order on WhatsApp opens a WhatsApp link containing the selected product and plan details. You choose whether to send the message. WhatsApp processes your interaction under its own privacy policy. Information you send to AI Tools Zone is used to discuss and fulfil your request.</p><h2>Fonts and hosting</h2><p>Google Fonts may receive your IP address when font files load. The hosting provider may process standard request logs. Product icons and our logo are served from this website.</p><h2>Your choices</h2><p>Clear this website’s browser storage to remove the saved theme preference. Any shopping-bag data left by an earlier version is no longer used and can be cleared in the same way. Contact <a href="https://wa.me/923430173923">+92 343 017 3923 on WhatsApp</a> for questions about information you shared in chat.</p>'''),
+ 'terms':('Ordering, Access & Warranty | AI Tools Zone','How to buy AI Tools Zone plans on WhatsApp, confirm access conditions, arrange payment and request support.', '''<h1>Clear plans. Clear next steps.</h1><h2>Ordering and payment</h2><p>Choose a product and select Order on WhatsApp. Review and send the prepared WhatsApp message. We confirm availability, the final price, plan limits and payment instructions before you pay. JazzCash, Easypaisa and bank transfer can be arranged in chat. This website does not collect a payment.</p><h2>Understand the access type</h2><p>Private, Shared, Invitation and License Key offers have different conditions. Confirm account ownership, eligible features, device limits and any workspace restrictions for your selected offer before paying.</p><h2>Delivery estimates</h2><p>Each plan includes a seller-listed delivery estimate after payment confirmation. Timing depends on availability and activation requirements and must be confirmed in chat.</p><h2>Replacement warranty and refunds</h2><p>Each listing states its replacement coverage as 7 days or 30 days, and Gemini Pro carries none. AI Tools Zone refunds a confirmed order in full when it cannot activate or deliver it within the stated time. During the warranty period, the team troubleshoots or replaces the account. Contact us on WhatsApp with your order details to request support.</p><h2>Product names and offers</h2><p>AI Tools Zone is an independent marketplace. Listed prices and features describe the specific seller offer and may differ from a vendor’s direct subscription. Product names and logos are owned by their respective owners; no official affiliation is claimed.</p><p><a href="https://wa.me/923430173923">Contact support on WhatsApp: +92 343 017 3923</a></p>''')}
 for slug,(title,description,body) in pages.items():
  path='/'+slug+'/'; paths.append(path)
  write(slug+'/index.html',shell(title,description,path,'<main id="main" class="wrap page-copy">'+body+'</main>'))
