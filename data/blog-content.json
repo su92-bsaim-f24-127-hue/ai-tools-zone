@@ -4198,6 +4198,160 @@
         "/guides/private-vs-shared-access/",
         "/pricing/"
       ]
+    },
+    {
+      "path": "/blog/runway-ai-subscription-pakistan/",
+      "title": "Runway AI Subscription in Pakistan: Price, Plans & How to Buy",
+      "meta_title": "Runway AI Subscription Pakistan (2026) | AI Tools Zone",
+      "description": "Runway AI subscription in Pakistan for PKR 3,500/month — official Runway plans and credits explained, Gen-4.5 covered, and how to pay by JazzCash or Easypaisa.",
+      "meta_description": "Runway AI in Pakistan for PKR 3,500/month at AI Tools Zone — private access, JazzCash & Easypaisa, 7-day warranty. Official plans, credits and Gen-4.5 explained.",
+      "datePublished": "2026-11-23",
+      "dateLabel": "23 November 2026",
+      "dateModified": "2026-11-23",
+      "dateModifiedLabel": "23 November 2026",
+      "summary": "AI Tools Zone sells Runway in Pakistan for PKR 3,500 per month — private access, delivery in 15 to 30 minutes over WhatsApp, and a 7-day replacement warranty, payable by JazzCash, Easypaisa, SadaPay, NayaPay, Raast or bank transfer. Bought directly from Runway, plans run from a free tier to $95/month. This guide gives the real official prices in PKR, explains what the credits actually buy on Runway's current Gen-4.5 model, and notes one important change: Runway retired its Gen-3 models in July 2026.",
+      "include_faq_schema": true,
+      "keywords": [
+        "Runway AI subscription Pakistan",
+        "Runway ML price in Pakistan",
+        "buy Runway subscription Pakistan",
+        "how to pay for Runway AI in Pakistan",
+        "Runway price in Pakistan",
+        "Runway ML price PKR"
+      ],
+      "sections": [
+        {
+          "heading": "Runway AI price in Pakistan: PKR 3,500 a month, or $12–$95 direct",
+          "paragraphs": [
+            "AI Tools Zone lists Runway at [PKR 3,500 per month](/products/runway-ml-gen-3/) — one plan, private access, delivered in 15 to 30 minutes, with a 7-day replacement warranty. There are no separate Standard, Pro or Unlimited tiers on our catalog, whatever older guides claim: the listing is a single monthly plan at a single PKR price, payable by JazzCash, Easypaisa, SadaPay, NayaPay, Raast or bank transfer. The catalog listing does not name an official Runway tier or a credit quota, so before you pay, message us on WhatsApp (+92 343 017 3923) and confirm the plan and monthly credits your access includes — the same confirm-before-ordering step we recommend on our [Veo 3 Ultra](/products/veo-3-ultra/) listing.",
+            "Runway's own prices are below, converted at the State Bank interbank rate of PKR 276.52 to the dollar (19 November 2026). Your bank will charge more than the interbank figure once its exchange margin, foreign-transaction fees and advance tax are added, so treat the PKR column as the floor, not the final debit. Annual billing is cheaper on every tier and is shown in the table."
+          ],
+          "table": {
+            "caption": "Official Runway plans (runwayml.com/pricing, November 2026), converted at PKR 276.52/USD",
+            "headers": [
+              "Plan",
+              "Monthly billing",
+              "Billed annually (per month)",
+              "In PKR (interbank)",
+              "Credits / month"
+            ],
+            "rows": [
+              [
+                "Free",
+                "$0",
+                "—",
+                "PKR 0",
+                "125 credits (one-time)"
+              ],
+              [
+                "Standard",
+                "$15/month",
+                "$12/month",
+                "≈ PKR 4,148 (or ≈ 3,318 annual rate)",
+                "625"
+              ],
+              [
+                "Pro",
+                "$35/month",
+                "$28/month",
+                "≈ PKR 9,678 (or ≈ 7,743 annual rate)",
+                "2,250"
+              ],
+              [
+                "Max",
+                "$95/month",
+                "$76/month",
+                "≈ PKR 26,269 (or ≈ 21,015 annual rate)",
+                "9,500"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Gen-3 is retired: Runway's current model is Gen-4.5",
+          "paragraphs": [
+            "One change matters more than any price. Runway retired Gen-3 Alpha on 8 July 2026 and Gen-3 Alpha Turbo on 30 July 2026 — the models a generation of guides (and older copies of this topic across the web) describe, with their Motion Brush and Gen-3 camera tools, are no longer available on Runway at all. Our own catalog listing still carries the 'Runway Gen-3' name from when Gen-3 was current, which is exactly why we tell buyers to confirm on WhatsApp which models their access includes before ordering.",
+            "Runway's current flagship is Gen-4.5, launched in December 2025: text-to-video and image-to-video in clips of 2 to 10 seconds, at 12 credits per second of generated video. Below it, Gen-4 and Gen-4 Turbo remain available for cheaper draft work, and a paid Runway subscription also opens third-party models inside the same workspace, including Veo 3.1, Kling 4.0 and Seedance 2.5. Paid plans remove watermarks and include 4K upscaling; Pro adds a custom voice clone, and Max adds early access to new models."
+          ]
+        },
+        {
+          "heading": "What the credits actually buy",
+          "paragraphs": [
+            "Runway prices generation in credits, and the honest unit to compare is seconds of finished video on the current model. On Gen-4.5 at 12 credits per second, Runway's own pricing page works out Standard's 625 credits as about 52 seconds of video a month, Pro's 2,250 credits as about 187 seconds, and Max's 9,500 credits as about 791 seconds. The same credits stretch roughly twice as far on Gen-4 Turbo (104, 375 and 1,900 seconds respectively), which is how most working editors use their plan: drafts on Turbo, finals on Gen-4.5.",
+            "Two credit rules catch people out. On Standard and Pro, unused monthly credits do not roll over — they reset each billing cycle; only Max rolls unused credits forward, and only by one month. And if you run dry mid-project, top-up credits are sold in blocks of at least 1,000 and, once bought, never expire. Parallel generation — how many videos and images you can render at once — is 5 on Standard, 15 on Pro and 20 on Max."
+          ]
+        },
+        {
+          "heading": "How to buy Runway in Pakistan via JazzCash and Easypaisa",
+          "paragraphs": [
+            "Runway itself does not accept JazzCash, Easypaisa or any Pakistani mobile wallet — its checkout is card-only, in US dollars. Buying through AI Tools Zone replaces that with a local PKR payment and WhatsApp delivery:",
+            "After delivery, your access is private — not a shared login — and covered by a 7-day replacement warranty: if the access stops working inside the warranty window, we replace it. Shared Runway accounts sold elsewhere are the opposite arrangement: pooled credits that strangers burn through, other people's projects visible in the workspace, and suspension risk when logins appear from several cities at once. For client work on Upwork or Fiverr, that risk lands on your delivery deadlines, not the seller's."
+          ],
+          "bullets": [
+            "Step 1 — Open the [Runway product page](/products/runway-ml-gen-3/) (PKR 3,500/month) and confirm the plan and credits included, on the page or on WhatsApp.",
+            "Step 2 — Message WhatsApp support on +92 343 017 3923 to place the order.",
+            "Step 3 — Pay the PKR amount by JazzCash, Easypaisa, SadaPay or NayaPay (via Raast), or by bank transfer (IBFT/Raast), and send the payment screenshot in the chat.",
+            "Step 4 — Receive your private access within 15 to 30 minutes, covered by the 7-day replacement warranty."
+          ]
+        },
+        {
+          "heading": "Paying Runway directly from Pakistan: the real cost",
+          "paragraphs": [
+            "Subscribing direct is possible with a Pakistani bank card that has international and recurring transactions enabled — but the dollar price is not what leaves your account. On top of the interbank conversion, your bank adds its exchange margin and foreign-transaction charges, plus FBR Section 236Y advance tax: 0.5% if you are on the Active Taxpayers List, 1% if you are not, for Tax Year 2027. Ignore guides quoting 10% or 16% for Section 236Y; those figures are invented. The usual reasons a card still declines are mundane: international or recurring use is not switched on, the bank declines recurring foreign debits, the 3D Secure step does not complete on the foreign checkout, or the balance covers the converted price but not the margin, fees and tax on top. Our [guide to paying for ChatGPT Plus from Pakistan](/blog/how-to-pay-for-chatgpt-plus-pakistan/) walks through the same fixes, including the State Bank's USD 30,000 yearly card cap, and they apply to Runway in the same way.",
+            "That maths is the honest comparison: Standard direct costs at least ≈ PKR 4,148 a month before margin, fees and tax (or ≈ PKR 3,318 at the annual rate, paid a year upfront), against PKR 3,500 flat locally with delivery and warranty included. Which route suits you depends on whether you want a specific official tier and its full credit quota — confirm the local listing's plan and credits with us first, and choose with both numbers in front of you."
+          ]
+        },
+        {
+          "heading": "Runway alternatives we sell for video work",
+          "paragraphs": [
+            "Runway is a generation tool, not an editor — many Pakistani creators pair it with, or choose instead, one of these from our catalog. Our [CapCut Pro vs Runway comparison](/compare/capcut-vs-runway/) puts the timeline editor and the generator side by side, the [AI video editing tools in Pakistan](/ai-video-editing-tools-pakistan/) hub maps the full workflow, and our [best AI video generators guide](/blog/best-ai-video-generators-pakistan/) ranks the generation options. Voice work pairs naturally with [ElevenLabs](/blog/elevenlabs-price-in-pakistan/) for narration over generated footage."
+          ],
+          "bullets": [
+            "[Veo 3 Ultra](/products/veo-3-ultra/) — PKR 2,100, shared access, 15–30 minute delivery, 7-day warranty. Google's video model; confirm the available model and tier before ordering, as the listing itself advises.",
+            "[CapCut Pro](/products/capcut-pro/) — PKR 900/month, private access, 7-day warranty. The editing end of the workflow: captions, background removal and premium transitions for Reels and Shorts.",
+            "[Descript Creator](/products/descript-creator/) — PKR 5,320/month, private access, 7-day warranty. Text-based audio and video editing with transcription and Studio Sound, for podcasters and course creators."
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Runway — Pricing (official)",
+          "url": "https://runwayml.com/pricing"
+        }
+      ],
+      "faq": [
+        [
+          "What is the Runway AI subscription price in Pakistan?",
+          "AI Tools Zone sells Runway for PKR 3,500 per month — private access, delivery in 15 to 30 minutes, 7-day replacement warranty, payable by JazzCash, Easypaisa, SadaPay, NayaPay, Raast or bank transfer. Direct from Runway, plans cost $15/month for Standard, $35 for Pro and $95 for Max on monthly billing (or $12, $28 and $76 per month billed annually) — approximately PKR 4,148, PKR 9,678 and PKR 26,269 at the interbank rate of PKR 276.52 (19 November 2026), before your bank's margin, fees and FBR Section 236Y advance tax of 0.5% (filers) or 1% (non-filers)."
+        ],
+        [
+          "Can I pay for Runway with JazzCash or Easypaisa?",
+          "Not at Runway's own checkout — Runway bills in US dollars by card only, and Pakistani mobile wallets are not accepted there. Through AI Tools Zone you pay the PKR 3,500 monthly price by JazzCash, Easypaisa, SadaPay or NayaPay (via Raast) or bank transfer, order on WhatsApp (+92 343 017 3923), and receive private access within 15 to 30 minutes."
+        ],
+        [
+          "Which Runway plan does the AI Tools Zone listing include?",
+          "The listing is a single monthly plan at PKR 3,500 with private access and a 7-day replacement warranty; the catalog does not name an official Runway tier or a credit quota for it. Message us on WhatsApp before ordering and we will confirm the plan and the monthly credits your access includes, so you can compare it fairly with Runway's official Standard (625 credits), Pro (2,250) and Max (9,500) tiers."
+        ],
+        [
+          "How much video does Runway Standard generate per month?",
+          "Standard includes 625 credits a month. On Runway's current flagship model, Gen-4.5, which costs 12 credits per second, that is about 52 seconds of finished video — Runway's own figure. The same credits produce about 104 seconds on Gen-4 Turbo, so most editors draft on Turbo and render finals on Gen-4.5. Pro (2,250 credits) works out to about 187 seconds on Gen-4.5; Max (9,500 credits) to about 791 seconds."
+        ],
+        [
+          "Is Gen-3 Alpha still available on Runway?",
+          "No. Runway retired Gen-3 Alpha on 8 July 2026 and Gen-3 Alpha Turbo on 30 July 2026. The current models are Gen-4.5 (the flagship), Gen-4 and Gen-4 Turbo, and a subscription also includes third-party models such as Veo 3.1, Kling 4.0 and Seedance 2.5. Guides still describing Gen-3 Alpha, Motion Brush and Gen-3 credit rates are out of date — including, in name only, our own catalog listing, which predates the retirement; confirm the current model access with us on WhatsApp before ordering."
+        ],
+        [
+          "Does AI Tools Zone include a warranty on Runway subscriptions?",
+          "Yes — the Runway listing carries a 7-day replacement warranty, like 31 of our 32 listings (Gemini Pro is the one exception, with none). If your access stops working inside the warranty window, contact us on WhatsApp and we will replace it."
+        ]
+      ],
+      "related": [
+        "/products/runway-ml-gen-3/",
+        "/compare/capcut-vs-runway/",
+        "/ai-video-editing-tools-pakistan/",
+        "/blog/best-ai-video-generators-pakistan/",
+        "/pricing/"
+      ]
     }
   ]
 }
