@@ -558,13 +558,17 @@
           "paragraphs": [
             "When attempting to upgrade to ChatGPT Plus from Pakistan, debit and credit cards frequently decline at web checkout. This does not indicate an account ban; rather, it typically reflects banking controls, card permissions, or settlement requirements applied by Pakistani financial institutions (such as Meezan Bank, HBL, Bank Alfalah, MCB, UBL, or Standard Chartered) on foreign recurring subscriptions. Cardholders should confirm international online transaction permissions directly with their issuing bank.",
             "Three common factors trigger transaction failures at web checkout: first, international e-commerce sessions are disabled by default on many local payment cards until explicitly activated via mobile banking or phone helpline; second, 3D Secure SMS one-time password (OTP) delivery can experience cross-border telecom routing delays or timeouts; and third, unexpected fee buffers. Under [Section 236Y of the Income Tax Ordinance](https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf), commercial banks collect an advance income tax on qualifying foreign payments remitted abroad via credit, debit, or prepaid cards on behalf of the Federal Board of Revenue (FBR). According to the official FBR Tax Year 2027 Withholding Tax Rate Card (page 17, updated to June 30, 2026 under the Finance Act 2026), the advance tax rate under Section 236Y is 0.5% for individuals on the Active Taxpayers List (ATL) and 1.0% for non-ATL persons. This is an FBR advance withholding tax collected by commercial banks at remittance, not a State Bank of Pakistan tax.",
+            "A separate State Bank limit also affects card payments abroad. Under SBP FE Circular No. 07 of 2022, each individual may spend up to USD 30,000 a year on card-based cross-border transactions — counted across all debit, credit and virtual cards at every bank, not per card. The card year runs from 1 November to 31 October, so the current year started on 1 November 2026 and resets on 1 November 2027. Online purchases from foreign websites count toward the limit, and it applies to personal spending only. If international payments stop working on all your cards at once, ask your bank how much of your USD 30,000 remains before assuming the card itself is the problem.",
+            "Check the logo on your card before anything else. PayPak is Pakistan's domestic payment scheme, and a mono-badge PayPak card works only inside Pakistan — it cannot pay a foreign website such as OpenAI. Co-badged PayPak cards (with UnionPay, JCB or Mastercard) can pay abroad, but only through the international co-badge network. If your card carries only the PayPak logo, ask your bank for a Visa or Mastercard debit card on the same account, or use a local PKR option instead.",
             "Separately from government advance withholding tax, commercial banks and card networks apply their own foreign exchange conversion spreads and cross-border processing charges (which vary across issuing banks, card networks, and interbank market conditions). If an account does not hold a sufficient buffer to cover the base USD subscription price, applicable bank conversion charges, and the statutory Section 236Y advance tax, the checkout transaction will decline.",
             "Tax laws, withholding rates, and bank fee schedules are subject to change by regulators and financial institutions. Readers should verify current rates directly with the FBR and their card-issuing bank. This guide is provided for educational purposes only and does not constitute personal tax, legal, or financial advice."
           ],
           "bullets": [
             "Open your mobile banking app or call your bank's helpline to verify whether international e-commerce permissions are enabled on your card.",
             "Maintain an adequate balance buffer above the spot exchange rate to cover your issuing bank's foreign exchange conversion spread, card network assessment, and the statutory advance withholding tax under Section 236Y (0.5% for ATL filers / 1.0% for non-ATL persons).",
-            "Confirm whether your bank requires a temporary session activation window before you initiate an international online transaction."
+            "Confirm whether your bank requires a temporary session activation window before you initiate an international online transaction.",
+            "Check whether your card is PayPak-only: a mono-badge PayPak card cannot pay foreign websites. You need a Visa or Mastercard card (or a co-badged card) for OpenAI checkout.",
+            "Ask your bank how much of your USD 30,000 annual SBP card limit remains if international payments stop on all your cards at once — the limit resets on 1 November each year."
           ]
         },
         {
@@ -619,6 +623,14 @@
         {
           "name": "FBR withholding tax rates card (updated to 30 June 2026)",
           "url": "https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf"
+        },
+        {
+          "name": "NayaPay Help Centre: SBP USD 30,000 annual card limit",
+          "url": "https://help.nayapay.com/article/242-what-is-the-annual-card-based-international-transactions-limit-set-by-the-sbp"
+        },
+        {
+          "name": "PayPak: PayPak Standard (mono-badge cards are domestic use only)",
+          "url": "https://paypak.net.pk/paypak-Standard"
         }
       ],
       "faq": [
@@ -637,6 +649,14 @@
         [
           "Is access on AI Tools Zone private or shared?",
           "The current ChatGPT listing is marked Private by the seller. Before paying, confirm in writing who created and controls the account and whether it is set up for your individual use. OpenAI says accounts are for the individual who created them; a listing label alone cannot verify account ownership or policy compatibility."
+        ],
+        [
+          "Is there a yearly limit on how much I can pay abroad by card?",
+          "Yes. The State Bank of Pakistan limits card-based cross-border payments to USD 30,000 per person per year, counted across all your debit, credit and virtual cards at every bank. The card year runs from 1 November to 31 October. Online purchases from foreign websites count toward it, and the limit is for personal spending only."
+        ],
+        [
+          "Why does my PayPak card not work for ChatGPT Plus?",
+          "PayPak is Pakistan's domestic payment scheme. A mono-badge PayPak card works only inside Pakistan and cannot pay foreign websites. Co-badged PayPak cards (with UnionPay, JCB or Mastercard) can pay abroad through the international network. For OpenAI checkout you need a Visa or Mastercard card, or a local PKR option."
         ]
       ],
       "related": [
@@ -655,8 +675,8 @@
         "ChatGPT subscription account ownership",
         "ChatGPT Plus seller access checks"
       ],
-      "dateModified": "2026-11-11",
-      "dateModifiedLabel": "11 November 2026",
+      "dateModified": "2026-11-22",
+      "dateModifiedLabel": "22 November 2026",
       "meta_title": "How to Pay for ChatGPT Plus in Pakistan Without a Card",
       "meta_description": "Card declined? Get ChatGPT Plus in Pakistan for PKR 2,300/month via JazzCash or Easypaisa — no international card needed, activated in 15–30 minutes."
     },
