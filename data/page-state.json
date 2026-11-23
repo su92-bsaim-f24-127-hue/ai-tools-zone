@@ -1,7 +1,7 @@
 {
   "/": {
-    "sha256": "344837682657dc2f59f5317be42b73089e2639f4bce708df11dc3b5290cd8947",
-    "lastmod": "2026-11-21"
+    "sha256": "bfc18bc6ae488c169a61f8e7f1fd864a9a37786ac10956525e6117b7e9b4b961",
+    "lastmod": "2026-11-23"
   },
   "/products/chatgpt-plus/": {
     "sha256": "68b76713e17b0642d5a7d4af18d0f1b95221ac4f37942f4541c76815b1adca40",
@@ -188,8 +188,8 @@
     "lastmod": "2026-11-21"
   },
   "/use-cases/ai-tools-for-students/": {
-    "sha256": "f61816f3147b35d259e7fb52a198e4083281a2c1c1e33b14e6aafd74870bff15",
-    "lastmod": "2026-11-21"
+    "sha256": "ececdfaf85564bffcb2fa21d49faf6918721c56af46670bcd6fab3a5dd9fe1bb",
+    "lastmod": "2026-11-23"
   },
   "/use-cases/ai-tools-for-creators/": {
     "sha256": "a530ebb224a3ce80363f53faa8b002060ecb4a138aa59febdcc02b7c2ed892fa",
@@ -224,8 +224,8 @@
     "lastmod": "2026-11-21"
   },
   "/guides/choose-ai-subscription/": {
-    "sha256": "02a59fce74340d731ff0ffdaabc14fe602ee85ca18f43160f19571c6fc774f57",
-    "lastmod": "2026-11-21"
+    "sha256": "6f22b0cd5241400f981c1a3b026e0e059447e95b9f22201f758b0dbce77337b9",
+    "lastmod": "2026-11-23"
   },
   "/guides/private-vs-shared-access/": {
     "sha256": "669e240950387555338c292a57556ba24185b0c33638c6db2353db6dd23b2497",
@@ -252,8 +252,8 @@
     "lastmod": "2026-11-21"
   },
   "/compare/elevenlabs-vs-playht/": {
-    "sha256": "d77e76ff8da1c4be57051ec1c6612b007af6eedb8dfd5bf0eec7e5a8b5658323",
-    "lastmod": "2026-11-21"
+    "sha256": "0fe23a5371146c76781c6396c88bf0b5affb40a636003f771209342f00133b73",
+    "lastmod": "2026-11-23"
   },
   "/compare/helium10-vs-semrush-vs-vidiq/": {
     "sha256": "0ab64e9d38bbda9674af732117acfd8ba14d4f223f20cfb1b827fe3a38568d74",
@@ -296,8 +296,8 @@
     "lastmod": "2026-11-21"
   },
   "/blog/how-to-pay-for-chatgpt-plus-pakistan/": {
-    "sha256": "e30a585b46cf0498e619256c656f1831399b6d68ce67dca007354aaf07755557",
-    "lastmod": "2026-11-22"
+    "sha256": "7ac11071479f7b8ff7e387f1b4f10f7de34ef268925cba27cd0df0909a480faf",
+    "lastmod": "2026-11-23"
   },
   "/blog/jazzcash-easypaisa-ai-tools-pakistan/": {
     "sha256": "08830ca2654e82b7b793825026fc416fa9dd21981e8c3626457470e601ace31d",
@@ -380,40 +380,40 @@
     "lastmod": "2026-11-21"
   },
   "/blog/elevenlabs-price-in-pakistan/": {
-    "sha256": "8aab0374393b42e1b0aaaf29d83a857f65c35db3ff430ffd26917ce3838224a8",
-    "lastmod": "2026-11-21"
+    "sha256": "6c7023fa92e4ad878f3601f755ad34f9460b28cb3fc8103b5d3b3ee5ab14f467",
+    "lastmod": "2026-11-23"
   },
   "/blog/google-ai-plus-free-pakistani-students/": {
     "sha256": "26cc92228994081f871ed14150fc4302d514951d887fc792309cedf6cd785bf2",
     "lastmod": "2026-11-21"
   },
   "/blog/chatgpt-plus-price-in-pakistan/": {
-    "sha256": "3c3800490200efd0fb540708b49cfd55bcd592d5ad18f6ea0c0f4a4e383da28a",
-    "lastmod": "2026-11-21"
+    "sha256": "e57f684690a861ff3b5e073c4b335e6d0d8ed2ead9aa92a0ed396a64c02b18c5",
+    "lastmod": "2026-11-23"
   },
   "/blog/canva-pro-price-in-pakistan/": {
-    "sha256": "90f1b8d43c24b4814f960415ba509677ac3deb7c50f319a918d8c186b54b1102",
-    "lastmod": "2026-11-21"
+    "sha256": "ffa963a951f8c7df3fd3a3192867c9d4a464e311a177b62a94e6dc0917051840",
+    "lastmod": "2026-11-23"
   },
   "/buy-ai-tools-in-pakistan/": {
-    "sha256": "780c5833194b5c51bdd325b431ec505f4fccd1b97ac7841fc1f9a51fc9ff58f6",
-    "lastmod": "2026-11-21"
+    "sha256": "cb30b4e466e8347b0ba69ec3ab39b6f5bd57bb134f3deddec042be25b0a026c6",
+    "lastmod": "2026-11-23"
   },
   "/how-to-buy-chatgpt-plus-in-pakistan/": {
-    "sha256": "926868491ed01d0b2f8d381059f4fb8831f2becd803270d8c596fca17fc19762",
-    "lastmod": "2026-11-21"
+    "sha256": "d0e162c441c4e1023870458d42defc78a7f4d37e27a4777ad34923a5baba635a",
+    "lastmod": "2026-11-23"
   },
   "/best-ai-tools-for-students-pakistan/": {
-    "sha256": "8f15e3209797690fad8c8430d3f5a8199fac1cbe6ef9465955d108e9ed76553d",
-    "lastmod": "2026-11-21"
+    "sha256": "412c8e22ca99dd5a4e04b078fbc1b1b01c9e71918451f2200dabc20565e0772a",
+    "lastmod": "2026-11-23"
   },
   "/ai-video-editing-tools-pakistan/": {
     "sha256": "8ac63bfcd9e6a2bb035cd0db99931da0300543f165bf7d6f05f2ea5e7764768e",
     "lastmod": "2026-11-21"
   },
   "/ai-image-generator-subscriptions-pakistan/": {
-    "sha256": "4676dce4cf7beb7b93239424a92a0c516cbef52fc6d527b3c3e7100c3f688f09",
-    "lastmod": "2026-11-21"
+    "sha256": "4fa166437c4089d4dee1816e34c5e545c723eb69228fe2656bc3821d04112b38",
+    "lastmod": "2026-11-23"
   },
   "/products/": {
     "sha256": "0af6ad944b687412b9055fcc4cc9ceb5ab403507680029deef8638bb46f0da23",
