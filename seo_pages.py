@@ -510,7 +510,7 @@ def build_pages(products, origin, shell, write):
             content += (
                 f'<section class="content-block">'
                 f'<h2>Need AI tools in Pakistan without bank card declines?</h2>'
-                f'<p>Avoid international transaction blocks and exchange rate markups. AI Tools Zone provides private accounts and subscriptions with local wallet settlement via JazzCash, Easypaisa, or Pakistani bank transfer. Delivery time is shown on each plan.</p>'
+                f'<p>Avoid international transaction blocks and exchange rate markups. AI Tools Zone provides private accounts and subscriptions with local wallet settlement via JazzCash, Easypaisa, SadaPay, NayaPay, Raast or Pakistani bank transfer. Delivery time is shown on each plan.</p>'
                 f'<p><a class="button button-lime" href="{primary_product}">View {e(prod_name)} plan &amp; PKR price ↗</a> '
                 f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20am%20inquiring%20about%20a%20subscription%20after%20reading%20your%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
                 f'</section>'

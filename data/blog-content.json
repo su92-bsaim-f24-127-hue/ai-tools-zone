@@ -3312,9 +3312,9 @@
       "meta_description": "Black Friday 2026 in Pakistan: compare verified PKR prices for ChatGPT Plus, Claude Pro, Cursor and ElevenLabs, plus the vendor sales — no inflated discounts.",
       "datePublished": "2026-11-17",
       "dateLabel": "17 November 2026",
-      "dateModified": "2026-11-17",
-      "dateModifiedLabel": "17 November 2026",
-      "summary": "Black Friday is on Friday 27 November 2026 (Cyber Monday follows on 30 November), and most deal guides for Pakistan inflate the savings. This one does not. AI Tools Zone is not running a coupon sale — its prices are the same verified PKR prices it charges all year. The honest maths is still striking: ChatGPT Plus costs PKR 2,300/month here, while a rival's Black Friday guide lists the same private ChatGPT Plus at PKR 4,500/month, and buying directly from OpenAI costs $20 — about PKR 5,532 at the interbank rate, before your bank's margin and fees.",
+      "dateModified": "2026-11-23",
+      "dateModifiedLabel": "23 November 2026",
+      "summary": "Black Friday is on Friday 27 November 2026 (Cyber Monday follows on 30 November), and most deal guides for Pakistan inflate the savings. This one does not. AI Tools Zone is not running a coupon sale — its prices are the same verified PKR prices it charges all year. The honest maths is still striking: ChatGPT Plus costs PKR 2,300/month here, while a rival's Black Friday guide lists the same private ChatGPT Plus at PKR 4,500/month, and buying directly from OpenAI costs $20 — about PKR 5,531 at the interbank rate, before your bank's margin and fees.",
       "include_faq_schema": true,
       "keywords": [
         "Black Friday AI tools deals Pakistan",
@@ -3329,7 +3329,7 @@
         {
           "heading": "What are the verified Black Friday prices in Pakistan?",
           "paragraphs": [
-            "Prices checked against the AI Tools Zone catalog on 17 November 2026. Dollar conversions use USD/PKR 276.61 and are estimates before bank foreign-exchange margins and fees. AI Tools Zone confirms the available plan and final price on WhatsApp before you pay:"
+            "Prices checked against the AI Tools Zone catalog on 17 November 2026. Dollar conversions use USD/PKR 276.56 and are estimates before bank foreign-exchange margins and fees. AI Tools Zone confirms the available plan and final price on WhatsApp before you pay:"
           ],
           "table": {
             "caption": "Verified Black Friday AI Tools Prices in Pakistan (November 2026)",
@@ -3345,7 +3345,7 @@
               [
                 "[ChatGPT Plus](/products/chatgpt-plus/)",
                 "$20 / month",
-                "~PKR 5,532",
+                "~PKR 5,531",
                 "PKR 2,300 / month",
                 "Private",
                 "7 days"
@@ -3353,7 +3353,7 @@
               [
                 "[Claude Pro](/products/claude-pro/)",
                 "$20 / month",
-                "~PKR 5,532",
+                "~PKR 5,531",
                 "PKR 2,200 / month",
                 "Private",
                 "7 days"
@@ -3361,7 +3361,7 @@
               [
                 "[Cursor AI Pro](/products/cursor-ai-pro/)",
                 "Premium $30 / month for new buyers",
-                "~PKR 8,298",
+                "~PKR 8,297",
                 "PKR 2,800 / month",
                 "Private",
                 "7 days"
@@ -3369,7 +3369,7 @@
               [
                 "[ElevenLabs](/products/elevenlabs/)",
                 "Creator $22 / month",
-                "~PKR 6,085",
+                "~PKR 6,084",
                 "PKR 3,300 / month",
                 "Private",
                 "7 days"
@@ -3377,7 +3377,7 @@
               [
                 "[Perplexity Pro](/products/perplexity-pro/)",
                 "$20 / month",
-                "~PKR 5,532",
+                "~PKR 5,531",
                 "PKR 1,400 / month",
                 "Private",
                 "7 days"
@@ -3385,7 +3385,7 @@
               [
                 "[Canva Pro Edu](/products/canva-pro-edu/)",
                 "$144 / year",
-                "~PKR 39,832",
+                "~PKR 39,825",
                 "PKR 900 / year",
                 "Invitation",
                 "30 days"
@@ -3393,7 +3393,7 @@
               [
                 "[Gemini Pro](/products/gemini-pro/)",
                 "$199.99 / year",
-                "~PKR 55,317",
+                "~PKR 55,309",
                 "PKR 2,000 / year",
                 "Private",
                 "None — confirm terms before paying"
@@ -3402,10 +3402,22 @@
           }
         },
         {
+          "heading": "ChatGPT Plus on Black Friday: the deal is the PKR price",
+          "paragraphs": [
+            "There is no Black Friday discount on ChatGPT Plus from OpenAI — the official price stays $20/month, about PKR 5,531 at the interbank rate before bank fees. The Black Friday saving in Pakistan is the local price: PKR 2,300/month on AI Tools Zone, private access, 7-day warranty, payable by JazzCash or Easypaisa. That is under half the official cost, and about half the PKR 4,500/month a rival Black Friday guide charges for the same private plan. The [full ChatGPT Plus price breakdown for Pakistan](/blog/chatgpt-plus-price-in-pakistan/), including the 0.5%/1% Section 236Y tax maths, is in our price guide."
+          ]
+        },
+        {
           "heading": "The one big vendor sale that is actually live: ElevenLabs",
           "paragraphs": [
-            "ElevenLabs is running a genuine Black Friday sale from 16 November to 1 December 2026: its Creator plan billed annually drops to $99 for the year, and the Starter plan is $1 for the first month. If you produce voiceovers commercially and can pay internationally, the annual Creator deal is the strongest official discount of this Black Friday on any tool we list. If you would rather pay monthly in rupees with local support, [AI Tools Zone lists ElevenLabs](/products/elevenlabs/) at PKR 3,300/month with a 7-day replacement warranty — no annual lock-in and no foreign card needed.",
+            "ElevenLabs is running the one genuine vendor Black Friday sale we could verify: up to 55% off the first year of Creator and Pro annual plans, 16 November to 1 December 2026, no code needed, on elevenlabs.io only. Creator annual is $99 for the first year (55% off the regular $220); Pro annual is $445.50 for the first year (55% off $990) for new subscribers, or 50% off if you switch from Pro monthly to annual. Both renew at the regular annual price after the first year, so compare the year-two cost before committing to a year. If you can pay in dollars, this is the cheapest route to a year of Creator. If you need PKR payment, AI Tools Zone lists ElevenLabs at PKR 3,300/month — no sale, but no international card needed.",
             "OpenAI and Anthropic, by contrast, had not announced any Black Friday discounts on ChatGPT Plus or Claude Pro as of 17 November 2026 — for those two, the local PKR price is the deal."
+          ]
+        },
+        {
+          "heading": "Cyber Monday: what actually changes on 30 November?",
+          "paragraphs": [
+            "Cyber Monday is Monday 30 November 2026. For Pakistani buyers, almost nothing changes: OpenAI and Anthropic had announced no Black Friday discount on ChatGPT Plus or Claude Pro as of 17 November, so there is no vendor Cyber Monday price to wait for on those two — the saving is still the local PKR price (ChatGPT Plus PKR 2,300/month, Claude Pro PKR 2,200/month, versus about PKR 5,531 for $20 direct). The one deadline that does matter is ElevenLabs: its sale ends 1 December, the day after Cyber Monday — if you want the $99 Creator year, buy before then, not on Cyber Monday itself. Do not wait for a Monday coupon on AI Tools Zone either: there is no coupon sale, and the PKR prices are the same on Cyber Monday as on Black Friday. The only reason to buy on Monday rather than today is if you are still deciding which tool you need — the prices will not move."
           ]
         },
         {
@@ -3415,7 +3427,7 @@
           ],
           "bullets": [
             "International transactions are off or limited by default: many local debit cards need international and online transactions explicitly enabled, and recurring foreign subscriptions are frequently declined even then.",
-            "Bank foreign-exchange margins and fees: your bank converts at its own rate, not the interbank 276.61, and adds foreign-transaction charges, so the final debit is higher than the converted dollar price.",
+            "Bank foreign-exchange margins and fees: your bank converts at its own rate, not the interbank 276.56, and adds foreign-transaction charges, so the final debit is higher than the converted dollar price.",
             "FBR Section 236Y advance tax: for Tax Year 2027 (from 1 July 2026) the [FBR rate](https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf) is 0.5% if you are on the Active Taxpayers List and 1% if you are not, and it is adjustable against your income tax when you file. Ignore guides quoting 10% or 16% — those figures are invented; even last year's rate was 5% / 10%."
           ]
         },
@@ -3478,7 +3490,7 @@
         ],
         [
           "How much can Pakistani buyers actually save?",
-          "On the verified numbers: ChatGPT Plus at PKR 2,300 is under half the official $20 converted at the interbank rate (about PKR 5,532, before bank fees), and roughly half the PKR 4,500/month a rival Black Friday guide charges for the same private plan. Treat any guide promising a flat 70% off everything with suspicion — the real saving depends on the tool."
+          "On the verified numbers: ChatGPT Plus at PKR 2,300 is under half the official $20 converted at the interbank rate (about PKR 5,531, before bank fees), and roughly half the PKR 4,500/month a rival Black Friday guide charges for the same private plan. Treat any guide promising a flat 70% off everything with suspicion — the real saving depends on the tool."
         ],
         [
           "What warranty covers Black Friday purchases on AI Tools Zone?",
