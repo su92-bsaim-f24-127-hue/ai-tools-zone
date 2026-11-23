@@ -928,7 +928,8 @@
         "/pricing/",
         "/guides/private-vs-shared-access/",
         "/terms/",
-        "/about/"
+        "/about/",
+        "/guides/buy-ai-tools-without-credit-card-pakistan/"
       ],
       "sources": [],
       "meta_title": "Choose an AI Subscription in Pakistan | AI Tools Zone",
@@ -1670,6 +1671,85 @@
       ],
       "meta_title": "Lovable vs Bolt.new in Pakistan | AI Tools Zone",
       "meta_description": "Compare Lovable Pro (PKR 1,600/mo) and Bolt.new Pro (PKR 5,600/mo) in Pakistan. Credits vs tokens, Supabase vs WebContainers, $25 pricing, local payment."
+    },
+    {
+      "path": "/guides/buy-ai-tools-without-credit-card-pakistan/",
+      "type": "guides",
+      "title": "Buy AI Tools Without a Credit Card in Pakistan",
+      "description": "No international card? Compare the three working routes in Pakistan: a fintech Visa/Mastercard used correctly, app-store billing, or paying a local seller in PKR via JazzCash, Easypaisa or Raast.",
+      "answer": "You do not need a credit card to buy AI subscriptions in Pakistan. The working routes are: pay the vendor with an internationally enabled debit card (a Visa or Mastercard, not a mono-badge PayPak card), pay through an app store, or pay a local seller in PKR via JazzCash, Easypaisa, SadaPay, NayaPay or bank transfer (IBFT/Raast) and have the subscription arranged for you. AI Tools Zone sells its listed subscriptions for PKR payment on WhatsApp, with prices from PKR 450 a month.",
+      "products": [],
+      "sections": [
+        [
+          "Why most Pakistani cards fail on AI websites",
+          "Most declines are not about credit cards at all. A mono-badge PayPak card is Pakistan's domestic scheme and cannot pay an international merchant at all. A Visa or Mastercard debit card fails when its international or e-commerce session is not activated, when the balance has no buffer for the bank's conversion fee and the Section 236Y advance tax deducted on top of the charge, or when the purchase would breach the State Bank limit of USD 30,000 a year in card-based cross-border spending, counted across all of a person's cards (FE Circular No. 07 of 2022). The step-by-step troubleshooting for each cause is in our guide to [paying for ChatGPT Plus in Pakistan](/blog/how-to-pay-for-chatgpt-plus-pakistan/)."
+        ],
+        [
+          "Route 1: a fintech debit card, used correctly",
+          "You do not need a bank credit card to pay a vendor directly. Fintech accounts such as SadaPay and NayaPay issue internationally enabled Visa or Mastercard debit cards that can pay foreign merchants once the international session is active and the balance covers the charge plus fees and tax. The same applies to an internationally enabled debit card from a conventional bank. This route keeps the account entirely in your own name at the official dollar price: ChatGPT Plus and Claude Pro are $20 a month (about PKR 5,530 at the State Bank rate of PKR 276.52 per dollar on 19 November 2026, before your bank's markup and the 236Y advance tax). Our [JazzCash and Easypaisa guide](/blog/jazzcash-easypaisa-ai-tools-pakistan/) covers the fintech card route in more detail."
+        ],
+        [
+          "Route 2: app-store billing",
+          "Subscribing inside the official iOS or Android app moves billing to Apple or Google, which accept a wider range of local payment methods than the vendor's own web checkout. Prices inside apps can differ from web prices and the subscription is managed in the store, so compare before you commit. This route suits buyers who want the account in their own name but cannot get any card to work on the web checkout."
+        ],
+        [
+          "Route 3: pay a local seller in PKR",
+          "A local seller removes the card from the transaction entirely. On AI Tools Zone you choose a listed plan, confirm the exact offer on WhatsApp, and pay in PKR by JazzCash, Easypaisa, SadaPay or NayaPay, or by bank transfer (IBFT/Raast); the subscription is then provisioned as a private account or an upgrade on your own email. Listed prices include ChatGPT Plus at PKR 2,300 a month, Claude Pro at PKR 2,200 a month, Cursor AI Pro at PKR 2,800 a month and Runway at PKR 3,500 a month, with plans starting at PKR 450 a month — see the full list on the [pricing page](/pricing/). Delivery depends on the product: many plans arrive in 15 to 30 minutes, some take 30 to 60 minutes, and a few take 1 to 2 hours; the estimate is shown on each product page. The complete ordering walkthrough is in the master guide to [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/)."
+        ],
+        [
+          "What Section 236Y actually taxes",
+          "Section 236Y of the Income Tax Ordinance is an advance withholding tax that banks collect on card payments abroad: 0.5% for people on the Active Taxpayers List and 1% for non-filers, per the FBR withholding tax rates card updated to 30 June 2026. It applies to the foreign card payment, so it is one reason a direct dollar subscription costs more than the headline price once bank markup is added. When you pay a Pakistani seller in PKR instead, your payment is a domestic payment, so no 236Y is deducted from it. Guides quoting 10% or 16% for 236Y are using invented figures — the current rates are 0.5% and 1%."
+        ],
+        [
+          "Before you pay anyone: safety checks",
+          "Whichever route you choose, confirm the exact plan, duration, access type and total PKR price in writing before sending money, and keep the chat. Prefer private access or an upgrade on your own email over shared logins — shared accounts expose your work and break when passwords change, as our guide to [private vs shared access](/guides/private-vs-shared-access/) explains. Replacement cover differs by listing: 31 of the 32 listings on AI Tools Zone include a 7-day or 30-day replacement warranty, and Gemini Pro is the one listing with none, so check the product page before ordering. Our [guide to choosing a seller](/blog/where-to-buy-ai-tools-pakistan/) lists the common scams and the verification steps to run first."
+        ]
+      ],
+      "faq": [
+        [
+          "Can I buy ChatGPT Plus and Claude Pro without a credit card in Pakistan?",
+          "Yes. Either pay OpenAI or Anthropic directly with an internationally enabled Visa or Mastercard debit card, subscribe through the app stores, or pay a local seller in PKR. AI Tools Zone lists ChatGPT Plus at PKR 2,300 a month and Claude Pro at PKR 2,200 a month, payable by JazzCash, Easypaisa, SadaPay, NayaPay or bank transfer (IBFT/Raast), ordered on WhatsApp."
+        ],
+        [
+          "Why was my debit card declined on an AI website?",
+          "The usual causes are a mono-badge PayPak card, which cannot pay international merchants at all; an international or e-commerce session that is not switched on; a balance with no room for the bank's conversion fee and the Section 236Y advance tax (0.5% for filers on the Active Taxpayers List, 1% for non-filers) charged on top; or the State Bank's USD 30,000 annual limit on card-based cross-border spending. Our payment guide walks through checking each one."
+        ],
+        [
+          "Do SadaPay and NayaPay cards work for AI subscriptions?",
+          "Yes — SadaPay and NayaPay issue internationally enabled Visa or Mastercard debit cards, and they can pay foreign AI merchants when the international session is active and the balance covers the charge plus bank fees and tax. You can also use either account to pay a local seller in PKR via Raast or IBFT, which avoids the card route entirely."
+        ],
+        [
+          "What is the FBR Section 236Y tax on foreign AI subscriptions?",
+          "Section 236Y is an advance withholding tax banks deduct on card payments abroad: 0.5% for people on the Active Taxpayers List and 1% for non-filers (FBR withholding tax rates card, updated to 30 June 2026). It is charged on foreign card payments, not on domestic PKR payments, so paying a Pakistani seller in rupees carries no 236Y deduction on your payment."
+        ],
+        [
+          "How long does delivery take after I pay in PKR?",
+          "It depends on the product. Many AI Tools Zone plans are delivered in 15 to 30 minutes, some take 30 to 60 minutes, and a few take 1 to 2 hours; each product page shows its own estimate, and support confirms the order on WhatsApp before you pay."
+        ],
+        [
+          "Is there a warranty on subscriptions bought without a card?",
+          "Payment method does not change the cover: 31 of the 32 listings include a 7-day or 30-day replacement warranty, and Gemini Pro is sold with no warranty. The exact cover for each plan is stated on its product page."
+        ]
+      ],
+      "related": [
+        "/buy-ai-tools-in-pakistan/",
+        "/blog/how-to-pay-for-chatgpt-plus-pakistan/",
+        "/blog/jazzcash-easypaisa-ai-tools-pakistan/",
+        "/guides/choose-ai-subscription/",
+        "/pricing/"
+      ],
+      "sources": [
+        [
+          "FBR withholding tax rates card 2027 (PDF)",
+          "https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf"
+        ],
+        [
+          "NayaPay Help Centre: SBP annual card-based international transactions limit (FE Circular No. 07 of 2022)",
+          "https://help.nayapay.com/article/242-what-is-the-annual-card-based-international-transactions-limit-set-by-the-sbp"
+        ]
+      ],
+      "meta_title": "Buy AI Tools Without a Credit Card in Pakistan | AI Tools Zone",
+      "meta_description": "How to buy AI subscriptions in Pakistan without a credit card: fintech debit cards, app-store billing, or paying in PKR via JazzCash, Easypaisa and Raast."
     }
   ]
 }
