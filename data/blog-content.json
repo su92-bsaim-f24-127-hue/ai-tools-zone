@@ -3680,8 +3680,8 @@
       "meta_description": "Google AI Plus free for Pakistani students for 12 months — claim by 31 Dec 2026. Who qualifies, the renewal catch, and when a paid PKR plan is better.",
       "datePublished": "2026-11-18",
       "dateLabel": "18 November 2026",
-      "dateModified": "2026-11-18",
-      "dateModifiedLabel": "18 November 2026",
+      "dateModified": "2026-11-23",
+      "dateModifiedLabel": "23 November 2026",
       "summary": "Google AI Plus is free for 12 months for eligible college and university students in Pakistan — a plan that normally costs about Rs 1,400 per month, roughly Rs 16,800 for the year — if you claim it on Google's official student page by 31 December 2026. This guide covers who qualifies, how to claim it safely, the auto-renewal catch (it converts to about Rs 1,400/month unless you cancel), and when a paid PKR plan is still the better buy: AI Tools Zone lists Gemini Pro at PKR 2,000 for a full year and ChatGPT Plus at PKR 2,300/month.",
       "include_faq_schema": true,
       "keywords": [
@@ -3704,10 +3704,11 @@
         {
           "heading": "Who qualifies for the free student year?",
           "paragraphs": [
-            "Google's conditions are about enrolment, not grades. You need to be currently enrolled at an eligible college or university in Pakistan — school pupils do not qualify — and you claim with a personal Google account. Google verifies your student status during sign-up (verification is handled through SheerID), and the exact requirements for your account, including any age requirement, are confirmed on Google's page during that check. You will need:",
+            "Google's conditions are about enrolment, not grades. You need to be currently enrolled at an eligible college or university in Pakistan — school pupils do not qualify — and you claim with a personal Google account. You must be 18 or older. Google verifies your student status during sign-up (verification is handled through SheerID). You will need:",
             "Being a student does not guarantee approval: if Google cannot verify your enrolment, the claim fails, and no third party can fix that for you. If verification fails, the paid options further down this page are the fallback — starting with the student-tested plans in our guide to [cheap AI tools for students in Pakistan](/blog/cheap-ai-tools-for-students-pakistan/)."
           ],
           "bullets": [
+            "Age 18 or older",
             "Current enrolment at a college or university in Pakistan (higher education — not school)",
             "A personal Google account — a university-issued account may not work for the claim",
             "Student status that passes Google's verification during sign-up",
@@ -3805,7 +3806,7 @@
       "faq": [
         [
           "Is Google AI Plus really free for Pakistani students?",
-          "Yes — for eligible students. If you are currently enrolled at a college or university in Pakistan and pass Google's student verification, you get 12 months of Google AI Plus at no cost when you claim at gemini.google/students by 31 December 2026. A valid payment method is required at sign-up, and the plan renews at about Rs 1,400/month after the free year unless you cancel."
+          "Yes — for eligible students. If you are 18 or older, currently enrolled at a college or university in Pakistan and pass Google's student verification, you get 12 months of Google AI Plus at no cost when you claim at gemini.google/students by 31 December 2026. A valid payment method is required at sign-up, and the plan renews at about Rs 1,400/month after the free year unless you cancel."
         ],
         [
           "Is Google AI Pro free in Pakistan too?",
