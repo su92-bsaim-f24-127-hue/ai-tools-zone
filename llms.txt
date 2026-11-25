@@ -25,12 +25,12 @@ Compare current listings by price, duration and access type. Confirm availabilit
 
 ## Current listings
 
-- [ChatGPT Plus](https://aitoolszone.tech/products/chatgpt-plus/): AI Assistants; PKR 2,300; 1 Month; Private access. Confirm current terms before ordering.
+- [ChatGPT Plus](https://aitoolszone.tech/products/chatgpt-plus/): AI Assistants; PKR 3,000; 1 Month; Private access. Confirm current terms before ordering.
 - [Gemini Pro](https://aitoolszone.tech/products/gemini-pro/): AI Assistants; PKR 2,000; 1 Year; Private access. Confirm current terms before ordering.
 - [Veo 3 Ultra](https://aitoolszone.tech/products/veo-3-ultra/): AI Video; PKR 2,100; Confirm before ordering; Shared access. Confirm current terms before ordering.
 - [Leonardo AI Essential](https://aitoolszone.tech/products/leonardo-ai-essential/): Design; PKR 1,900; 8,500 Credits; Private access. Confirm current terms before ordering.
-- [ElevenLabs](https://aitoolszone.tech/products/elevenlabs/): AI Voice; PKR 3,300; 1 Month; Private access. Confirm current terms before ordering.
-- [Canva Pro Edu](https://aitoolszone.tech/products/canva-pro-edu/): Design; PKR 900; 1 Year; Invitation access. Confirm current terms before ordering.
+- [ElevenLabs](https://aitoolszone.tech/products/elevenlabs/): AI Voice; PKR 3,800; 1 Month; Private access. Confirm current terms before ordering.
+- [Canva Pro Edu](https://aitoolszone.tech/products/canva-pro-edu/): Design; PKR 1,300; 1 Year; Invitation access. Confirm current terms before ordering.
 - [Figma Pro Private](https://aitoolszone.tech/products/figma-pro-private/): Design; PKR 3,000; 2 Years; Private access. Confirm current terms before ordering.
 - [CapCut Pro](https://aitoolszone.tech/products/capcut-pro/): AI Video; PKR 900; 1 Month; Private access. Confirm current terms before ordering.
 - [Adobe Creative Cloud](https://aitoolszone.tech/products/adobe-creative-cloud/): Design; PKR 1,700; 2 Months; Private access. Confirm current terms before ordering.
@@ -42,7 +42,7 @@ Compare current listings by price, duration and access type. Confirm availabilit
 - [NordVPN](https://aitoolszone.tech/products/nordvpn/): VPN & Security; PKR 1,800; 3 Months; Private access. Confirm current terms before ordering.
 - [Surfshark VPN](https://aitoolszone.tech/products/surfshark-vpn/): VPN & Security; PKR 800; 2 Months; Shared access. Confirm current terms before ordering.
 - [YouTube Premium](https://aitoolszone.tech/products/youtube-premium/): Entertainment; PKR 1,200; 3 Months; Invitation access. Confirm current terms before ordering.
-- [Netflix Premium 4K](https://aitoolszone.tech/products/netflix-premium-4k/): Entertainment; PKR 400; 1 Month; Shared access. Confirm current terms before ordering.
+- [Netflix Premium 4K Slot – 1 Month](https://aitoolszone.tech/products/netflix-premium-4k/): Entertainment; PKR 1,000; 1 Month; Shared access. Confirm current terms before ordering.
 - [LinkedIn Premium](https://aitoolszone.tech/products/linkedin-premium/): Business; PKR 1,500; 2 Months; Invitation access. Confirm current terms before ordering.
 - [Windows 11 Pro Key](https://aitoolszone.tech/products/windows-11-pro-key/): Software; PKR 1,900; Lifetime; License Key access. Confirm current terms before ordering.
 - [Cursor AI Pro](https://aitoolszone.tech/products/cursor-ai-pro/): Development; PKR 2,800; 1 Month; Private access. Confirm current terms before ordering.
