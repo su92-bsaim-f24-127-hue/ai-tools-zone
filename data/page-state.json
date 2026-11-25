@@ -1,6 +1,6 @@
 {
   "/": {
-    "sha256": "3a9388dfb21f8c5c2315e2a04a29b7e46a30c657631cbfc43398c16f54da0a78",
+    "sha256": "760b0a69cdc273ce4288f7b21ff61d1c6ace1fc55ca3cbf105457170d51b5275",
     "lastmod": "2026-11-25"
   },
   "/products/chatgpt-plus/": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-25"
   },
   "/products/gemini-pro/": {
-    "sha256": "682270b897ffe9139ca2413b7a1bc7102d6e3ac9809cb4002464eec73943a20f",
+    "sha256": "2725773da5fda36aaecd994d16251643d6beac73d6dde1656e226c9cb8f61bb3",
     "lastmod": "2026-11-25"
   },
   "/products/veo-3-ultra/": {
@@ -148,7 +148,7 @@
     "lastmod": "2026-11-21"
   },
   "/categories/ai-assistants/": {
-    "sha256": "d80b64ed61bde28ff15c70121dbd7327da05d61e060cc5c36c64e5c336d79f6c",
+    "sha256": "32e6e292aa866165f1bb0f3ee37ab3a555ad210a282a44b696b6160e242937b0",
     "lastmod": "2026-11-25"
   },
   "/categories/ai-video/": {
@@ -188,7 +188,7 @@
     "lastmod": "2026-11-21"
   },
   "/use-cases/ai-tools-for-students/": {
-    "sha256": "e1c615a0ce34dd8b4c53a72eda3e2ba88fc71432d69a5a1fa832514a73b26f00",
+    "sha256": "042fa85d04205bacd3dd5c8d60ff9726962e9ff254de44edcaac34c86f8a99c3",
     "lastmod": "2026-11-25"
   },
   "/use-cases/ai-tools-for-creators/": {
@@ -204,7 +204,7 @@
     "lastmod": "2026-11-25"
   },
   "/compare/chatgpt-vs-gemini/": {
-    "sha256": "99caf1bf7d92eb7f9f657634dc5f74e87a163e45daaac45e8c17b4ceb2c14c59",
+    "sha256": "c368568eee530f397a7e7ed41de1e5331b4b5802c5e80c02469d7137cd2d1000",
     "lastmod": "2026-11-25"
   },
   "/compare/canva-vs-adobe/": {
@@ -216,7 +216,7 @@
     "lastmod": "2026-11-25"
   },
   "/alternatives/chatgpt/": {
-    "sha256": "d0f902db3edba2f3c32cdaa06b7c00f37ddfdaec50d8a4bc1f816c40d1ba6285",
+    "sha256": "101d86894bb457ec19732eaee1104eb10ddbbd3b72bfafa3b55ed260fa6554c9",
     "lastmod": "2026-11-25"
   },
   "/alternatives/canva/": {
@@ -240,8 +240,8 @@
     "lastmod": "2026-11-25"
   },
   "/compare/claude-vs-gemini/": {
-    "sha256": "888325a4fea36751890be702569f5440c3d46784d775645218b7568f5d98c789",
-    "lastmod": "2026-11-21"
+    "sha256": "bfb1e9dc5920b48cd3a562327555be502bda50559341f43adff4987fb0f8cb3c",
+    "lastmod": "2026-11-25"
   },
   "/compare/grammarly-vs-quillbot-vs-wordai/": {
     "sha256": "5e48c5f8e12801d9e27df50410b5475cee687c1f3bf08521b4608cf90fece869",
@@ -404,15 +404,15 @@
     "lastmod": "2026-11-25"
   },
   "/buy-ai-tools-in-pakistan/": {
-    "sha256": "987bfcfb1563f11012d5354b9e8d36b9e5d28c25fffd8b775e86197345ed080d",
+    "sha256": "a3d5740db1936adf4e91e1639f89aa521e3a0ea979cb08fe66df007936deb13f",
     "lastmod": "2026-11-25"
   },
   "/how-to-buy-chatgpt-plus-in-pakistan/": {
-    "sha256": "f5b29f777b93319a38bdc14022f8aebf791905ed09b87fbcac9cf7006a3026af",
+    "sha256": "4ece0b59c96458252c01a8491050a4f576ba3e1e731b6bcb71add1cf308f574f",
     "lastmod": "2026-11-25"
   },
   "/best-ai-tools-for-students-pakistan/": {
-    "sha256": "e4f6aad663c8955c20b6e833c1a5da136f55507cbb6025acde6b639db6bfc1c5",
+    "sha256": "29c1cefb6d0e62533ed3ae0cb54d9e802f5cb38f046a3239ea5e4edf2dcbfb35",
     "lastmod": "2026-11-25"
   },
   "/ai-video-editing-tools-pakistan/": {
@@ -424,7 +424,7 @@
     "lastmod": "2026-11-25"
   },
   "/products/": {
-    "sha256": "e0e8a0168834127728791f416602f8634ea3cec941ebef2cffc462c3b0d4bcd0",
+    "sha256": "0439345f76d3aece248c415333fda6a7d885ce4a74f1223860db19c58d42b0f6",
     "lastmod": "2026-11-25"
   },
   "/categories/": {
@@ -448,7 +448,7 @@
     "lastmod": "2026-11-25"
   },
   "/pricing/": {
-    "sha256": "3f7729fbe4ce968699a72d34be82d4a01bc6b474ac7286b7639185d594040354",
+    "sha256": "42198cb7ddeda8a800c20d5f5178c6e0a6b6b8ef94908fab9de135953a34c278",
     "lastmod": "2026-11-25"
   },
   "/blog/": {

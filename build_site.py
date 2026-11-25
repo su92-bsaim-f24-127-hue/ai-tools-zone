@@ -274,7 +274,8 @@ access_explanations={
  'Private':'This listing is marked Private. Confirm whether access is issued to your existing account or a separate account, along with device limits, before paying.',
  'Invitation':'This listing uses an invitation to a workspace or team. Confirm eligibility, administrator controls, included features and what happens when the plan ends before paying.',
  'Shared':'This listing uses shared access. Confirm the permitted usage, profile or device limits, and privacy conditions before paying. It is not a private account.',
- 'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.'}
+ 'License Key':'This listing provides a license key. Confirm the edition, device count, activation conditions and replacement coverage before paying.',
+ 'Slot':'This listing provides access through an allocated slot. Confirm how the slot is assigned, the permitted usage, device limits and privacy conditions before paying.'}
 
 
 
@@ -349,7 +350,7 @@ def render_before_you_pay(p):
         
     warranty_raw = p.get('warranty', '').strip().lower()
     if warranty_raw in ('no warranty', 'none', 'no replacement warranty') or p.get('id') == 'gemini':
-        warranty_text = "No replacement warranty. AI Tools Zone refunds a confirmed order that it cannot activate within the stated time."
+        warranty_text = p['warranty']
     else:
         warranty_text = f"{p['warranty']}. AI Tools Zone refunds a confirmed order that it cannot activate or deliver within the stated time."
         
