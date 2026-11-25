@@ -10,13 +10,13 @@
 ### ChatGPT Plus
 - **URL**: https://aitoolszone.tech/products/chatgpt-plus/
 - **Category**: AI Assistants
-- **Current seller-listed price**: PKR 2,300
+- **Current seller-listed price**: PKR 3,000
 - **Duration / Allowance**: 1 Month
 - **Access Type**: Private
 - **Delivery Estimate**: 15–30 min
-- **Replacement Warranty**: 7 Days
+- **Replacement Warranty**: 30 Days
 - **Best For**: Writing, Coding, Study
-- **Description**: ChatGPT Plus is OpenAI's paid assistant plan. Included features cover Advanced Voice mode, reasoning models, image generation and custom GPTs. AI Tools Zone sells it for PKR 2,300 per month with private access. Delivery takes 15 to 30 minutes. Warranty: 7 days.
+- **Description**: ChatGPT Plus is OpenAI's paid assistant plan. Included features cover Advanced Voice mode, reasoning models, image generation and custom GPTs. AI Tools Zone sells it for PKR 3,000 per month with private access. Delivery takes 15 to 30 minutes. Warranty: 30 days.
 - **Included Features**: Advanced AI models; Image generation; File analysis; Voice conversations
 - **Official Vendor**: https://chatgpt.com/
 
@@ -62,26 +62,26 @@
 ### ElevenLabs
 - **URL**: https://aitoolszone.tech/products/elevenlabs/
 - **Category**: AI Voice
-- **Current seller-listed price**: PKR 3,300
+- **Current seller-listed price**: PKR 3,800
 - **Duration / Allowance**: 1 Month
 - **Access Type**: Private
 - **Delivery Estimate**: 30–60 min
-- **Replacement Warranty**: 7 Days
+- **Replacement Warranty**: 30 Days
 - **Best For**: Voice, Dubbing, Audio
-- **Description**: ElevenLabs is ElevenLabs' speech synthesis and voice cloning platform. Included features cover multilingual speech generation, custom voice cloning and monthly voice credits. AI Tools Zone sells it for PKR 3,300 per month with private access. Delivery takes 30 to 60 minutes. Warranty: 7 days.
+- **Description**: ElevenLabs is ElevenLabs' speech synthesis and voice cloning platform. Included features cover multilingual speech generation, custom voice cloning and monthly voice credits. AI Tools Zone sells it for PKR 3,800 per month with private access. Delivery takes 30 to 60 minutes. Warranty: 30 days.
 - **Included Features**: 130,000 credits/mo; Voice cloning library; Multilingual speech; Low latency API
 - **Official Vendor**: https://elevenlabs.io/
 
 ### Canva Pro Edu
 - **URL**: https://aitoolszone.tech/products/canva-pro-edu/
 - **Category**: Design
-- **Current seller-listed price**: PKR 900
+- **Current seller-listed price**: PKR 1,300
 - **Duration / Allowance**: 1 Year
 - **Access Type**: Invitation
 - **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: 30 Days
 - **Best For**: Design, Social, Students
-- **Description**: Canva Pro Edu is Canva's graphic design workspace. Included features cover design templates, brand kits and Magic Studio editing tools. AI Tools Zone sells it for PKR 900 per year with invitation access. Delivery takes 15 to 30 minutes. Warranty: 30 days.
+- **Description**: Canva Pro Edu is Canva's graphic design workspace. Included features cover design templates, brand kits and Magic Studio editing tools. AI Tools Zone sells it for PKR 1,300 per year with invitation access. Delivery takes 15 to 30 minutes. Warranty: 30 days.
 - **Included Features**: 100M+ premium assets; 1-click background remover; Magic Studio AI tools; Cloud brand kit
 - **Official Vendor**: https://www.canva.com/
 
@@ -228,16 +228,16 @@
 - **Included Features**: Zero video ads; Background & picture-in-picture; Offline smart downloads; Full YouTube Music access
 - **Official Vendor**: https://www.youtube.com/
 
-### Netflix Premium 4K
+### Netflix Premium 4K Slot – 1 Month
 - **URL**: https://aitoolszone.tech/products/netflix-premium-4k/
 - **Category**: Entertainment
-- **Current seller-listed price**: PKR 400
+- **Current seller-listed price**: PKR 1,000
 - **Duration / Allowance**: 1 Month
 - **Access Type**: Shared
 - **Delivery Estimate**: 15–30 min
-- **Replacement Warranty**: 7 Days
+- **Replacement Warranty**: 30 Days
 - **Best For**: Movies, Series, 4K
-- **Description**: Netflix Premium 4K is Netflix's streaming plan. Included features cover Ultra HD 4K video resolution, HDR streaming and spatial audio playback. AI Tools Zone sells it for PKR 400 per month with shared access. Delivery takes 15 to 30 minutes. Warranty: 7 days.
+- **Description**: Netflix Premium 4K is Netflix's streaming plan. Included features cover Ultra HD 4K video resolution, HDR streaming and spatial audio playback. AI Tools Zone sells it for PKR 1,000 per month with shared access. Delivery takes 15 to 30 minutes. Warranty: 30 days.
 - **Included Features**: 4K Ultra HD & HDR resolution; Spatial audio support; Smart TV & laptop compatibility; Dedicated profile access
 - **Official Vendor**: https://www.netflix.com/
 
