@@ -349,3 +349,13 @@ dialog p,.feature-list{font-size:14px}.detail-specs small{font-size:10px}.detail
 .before-you-pay ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:6px}
 .before-you-pay li{color:var(--muted)}
 .before-you-pay strong{color:var(--text)}
+
+/* Fix brief 2026-11-26: confirm notes, bestseller best-for, grouped discovery links, footer groups */
+.confirm-note{font-size:12.5px;line-height:1.5;color:var(--muted);margin:8px 0 0}
+.confirm-note strong{color:var(--text)}
+.bestseller-bestfor{font-size:14px;line-height:1.55;color:var(--muted)}
+.bestseller-bestfor strong{color:var(--text)}
+.discovery-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;text-align:left;margin-top:14px}
+.discovery-group h3{font-size:15px;margin:0 0 8px}
+.discovery-more summary{cursor:pointer;font-size:13px;color:var(--muted);margin-top:6px}
+.footer-subheading{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:12px 0 4px}
