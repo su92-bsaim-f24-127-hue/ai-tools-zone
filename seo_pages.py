@@ -219,7 +219,7 @@ PRODUCT_GUIDES = {
     'chatgpt': [
         ('/blog/chatgpt-plus-price-in-pakistan/', 'ChatGPT Plus price in Pakistan'),
         ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to buy ChatGPT Plus in Pakistan: price, access & setup'),
-        ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
+        ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus (declines & solutions)'),
         ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro comparison'),
         ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro comparison'),
         ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus comparison'),
@@ -361,41 +361,56 @@ def product_context(p):
         guides_html = '<section class="content-block"><h2>Helpful guides & tutorials</h2>' + links(guides) + '</section>'
     return note + guides_html + '<section class="content-block"><h2>Choose this plan with context</h2>' + links([category_path(p['category'])] + related[:3] + ['/guides/private-vs-shared-access/']) + '</section>'
 
+def _discovery_group(heading, entries):
+    first, rest = entries[:5], entries[5:]
+    html = f'<div class="discovery-group"><h3>{e(heading)}</h3>' + links(first)
+    if rest:
+        html += '<details class="discovery-more"><summary>Show more</summary>' + links(rest) + '</details>'
+    return html + '</div>'
+
 def home_discovery():
     return ('<section class="answer-strip wrap" aria-labelledby="buying-guides">'
             '<h2 id="buying-guides">Choose with a clearer picture: explore hubs, use cases, and guides.</h2>'
-            '<p>Compare complete subscription plans, evaluate workflow options for your career or business, and review verified access terms before you buy.</p>'
-            + links([
+            '<p>Compare complete subscription plans, evaluate workflow options for your career or business, and compare access types and delivery terms before you buy.</p>'
+            '<div class="discovery-groups">'
+            + _discovery_group('Buying guides', [
                 ('/buy-ai-tools-in-pakistan/', 'Buy AI Tools in Pakistan: Master Buying Guide & PKR Pricing'),
                 ('/how-to-buy-chatgpt-plus-in-pakistan/', 'How to Buy ChatGPT Plus in Pakistan: Price, Access & Setup'),
                 ('/best-ai-tools-for-students-pakistan/', 'Best Affordable AI Tools for Students in Pakistan'),
-                ('/ai-video-editing-tools-pakistan/', 'Best AI Video Editing Tools in Pakistan (CapCut, Descript & Runway)'),
-                ('/ai-image-generator-subscriptions-pakistan/', 'Best AI Image Generator Subscriptions in Pakistan (Canva, Leonardo & Midjourney)'),
-                ('/products/', 'All 32 AI tools & digital subscriptions in Pakistan'),
-                ('/pricing/', 'Compare AI tool subscription prices in PKR'),
-                ('/categories/', 'Browse AI tools across 10 workflow categories'),
-                ('/alternatives/', 'Cost-effective alternatives to popular AI tools'),
+                ('/guides/choose-ai-subscription/', 'How to choose an AI subscription in Pakistan'),
+                ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
+                ('/blog/where-to-buy-ai-tools-pakistan/', 'Where to buy AI tools safely in Pakistan'),
+                ('/guides/', 'AI subscription buying guides & review directory'),
+            ])
+            + _discovery_group('Use cases', [
                 ('/use-cases/ai-tools-for-students/', 'Best AI tools for Pakistani students & thesis research'),
                 ('/use-cases/ai-tools-for-creators/', 'AI tools for creators, freelancers & YouTube video editors'),
                 ('/use-cases/ai-tools-for-developers/', 'AI coding assistants & app builders for developers'),
                 ('/use-cases/ai-tools-for-business/', 'AI tools for business teams & agency automation'),
+                ('/blog/free-ai-tools-pakistan/', 'Best free AI tools: practical starting guide'),
+                ('/blog/ai-tools-for-pakistani-freelancers/', 'Top AI tools for Pakistani freelancers on Upwork & Fiverr'),
+            ])
+            + _discovery_group('Comparisons', [
+                ('/products/', 'All 32 AI tools & digital subscriptions'),
+                ('/pricing/', 'Compare AI tool subscription prices in PKR'),
+                ('/categories/', 'Browse AI tools across 10 workflow categories'),
+                ('/alternatives/', 'Cost-effective alternatives to popular AI tools'),
                 ('/compare/chatgpt-vs-gemini/', 'ChatGPT Plus vs Gemini Pro (reasoning & context limits)'),
                 ('/compare/chatgpt-vs-claude/', 'ChatGPT Plus vs Claude Pro (coding & technical writing)'),
                 ('/compare/canva-vs-adobe/', 'Canva Pro vs Adobe Creative Cloud (design workflow & ROI)'),
                 ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 (timeline editing vs generative video)'),
                 ('/compare/leonardo-vs-midjourney/', 'Leonardo AI vs Midjourney (image generation & token plans)'),
                 ('/compare/replit-vs-lovable/', 'Replit Core vs Lovable Pro (cloud IDE vs full-stack AI builder)'),
-                ('/guides/', 'AI subscription buying guides & review directory'),
-                ('/guides/choose-ai-subscription/', 'How to choose an AI subscription in Pakistan'),
-                ('/guides/private-vs-shared-access/', 'Private vs shared account access: security & limits'),
-                ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus in Pakistan (coding benchmarks & PKR cost)'),
-                ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus in Pakistan (declines & solutions)'),
-                ('/blog/cheap-ai-subscriptions-pakistan/', 'Cheap AI subscriptions in Pakistan under PKR 1,000'),
-                ('/blog/where-to-buy-ai-tools-pakistan/', 'Where to buy verified AI tools safely in Pakistan'),
+            ])
+            + _discovery_group('Articles', [
+                ('/ai-video-editing-tools-pakistan/', 'Best AI Video Editing Tools (CapCut, Descript & Runway)'),
+                ('/ai-image-generator-subscriptions-pakistan/', 'Best AI Image Generator Subscriptions (Canva, Leonardo & Midjourney)'),
+                ('/blog/deepseek-vs-chatgpt-plus-pakistan/', 'DeepSeek vs ChatGPT Plus (coding benchmarks & PKR cost)'),
+                ('/blog/how-to-pay-for-chatgpt-plus-pakistan/', 'How to pay for ChatGPT Plus (declines & solutions)'),
+                ('/blog/cheap-ai-subscriptions-pakistan/', 'Cheap AI subscriptions under PKR 1,000'),
                 ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
-                ('/blog/free-ai-tools-pakistan/', 'Best free AI tools in Pakistan: practical starting guide'),
-                ('/blog/ai-tools-for-pakistani-freelancers/', 'Top AI tools for Pakistani freelancers on Upwork & Fiverr'),
-            ]) + '</section>')
+            ])
+            + '</div></section>')
 
 def build_pages(products, origin, shell, write):
     paths = []
@@ -511,7 +526,7 @@ def build_pages(products, origin, shell, write):
                 f'<section class="content-block">'
                 f'<h2>Need AI tools in Pakistan without bank card declines?</h2>'
                 f'<p>Avoid international transaction blocks and exchange rate markups. AI Tools Zone provides private accounts and subscriptions with local wallet settlement via JazzCash, Easypaisa, SadaPay, NayaPay, Raast or Pakistani bank transfer. Delivery time is shown on each plan.</p>'
-                f'<p><a class="button button-lime" href="{primary_product}">View {e(prod_name)} plan &amp; PKR price ↗</a> '
+                f'<p><a class="button button-lime" href="{primary_product}">View {e(prod_name)} plan &amp; PKR price →</a> '
                 f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20am%20inquiring%20about%20a%20subscription%20after%20reading%20your%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
                 f'</section>'
             )
@@ -574,8 +589,8 @@ def build_pages(products, origin, shell, write):
         content += (
             f'<section class="content-block">'
             f'<h2>Ready to order AI tools in Pakistan?</h2>'
-            f'<p>Avoid international bank card declines and foreign currency exchange markups. AI Tools Zone provides verified subscriptions with local payment via JazzCash, Easypaisa, or bank transfer. Delivery time is shown on each plan.</p>'
-            f'<p><a class="button button-lime" href="/products/">Browse all 32 tools &amp; PKR prices ↗</a> '
+            f'<p>Avoid international bank card declines and foreign currency exchange markups. AI Tools Zone provides subscriptions with local payment via JazzCash, Easypaisa, or bank transfer. Delivery time is shown on each plan.</p>'
+            f'<p><a class="button button-lime" href="/products/">Browse all 32 tools &amp; PKR prices →</a> '
             f'<a class="button button-outline" href="https://wa.me/{WHATSAPP_NUMBER}?text=Assalam-o-Alaikum%20AI%20Tools%20Zone%2C%20I%20would%20like%20to%20inquire%20about%20a%20subscription%20after%20reading%20your%20buying%20guide." target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></p>'
             f'</section>'
         )
