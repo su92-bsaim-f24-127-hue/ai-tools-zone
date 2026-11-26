@@ -245,6 +245,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'copilot': [
+        ('/blog/github-copilot-price-in-pakistan/', 'GitHub Copilot price in Pakistan'),
         ('/blog/cursor-vs-copilot-pakistan/', 'Cursor AI vs GitHub Copilot in Pakistan'),
         ('/use-cases/ai-tools-for-developers/', 'AI coding assistants for developers in Pakistan'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
