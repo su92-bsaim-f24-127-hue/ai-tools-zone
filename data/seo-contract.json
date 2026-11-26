@@ -1,6 +1,6 @@
 {
-  "expected_pages": 114,
-  "reason": "Expand public educational and commercial guidance with the Buy AI tools without credit card Pakistan guide, increasing verified public routes from 113 to 114.",
+  "expected_pages": 115,
+  "reason": "Add the Descript price in Pakistan guide (PKR 5,320 Creator vs official $35/$24), increasing verified routes from 114 to 115.",
   "routes": [
     "/",
     "/about/",
@@ -115,7 +115,8 @@
     "/use-cases/ai-tools-for-business/",
     "/use-cases/ai-tools-for-creators/",
     "/use-cases/ai-tools-for-developers/",
-    "/use-cases/ai-tools-for-students/"
+    "/use-cases/ai-tools-for-students/",
+    "/blog/descript-price-in-pakistan/"
   ],
   "product_slugs": {
     "chatgpt": "chatgpt-plus",

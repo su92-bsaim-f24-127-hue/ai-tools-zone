@@ -278,6 +278,12 @@ PRODUCT_GUIDES = {
         ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
+    'descript': [
+        ('/blog/descript-price-in-pakistan/', 'Descript price in Pakistan'),
+        ('/ai-video-editing-tools-pakistan/', 'Best AI video editing tools in Pakistan (CapCut, Descript & Runway)'),
+        ('/blog/faceless-youtube-automation-ai-tools-pakistan/', 'Faceless YouTube channel automation with AI'),
+        ('/pricing/', 'Compare AI subscription prices in PKR')
+    ],
     'runway': [
         ('/blog/runway-ai-subscription-pakistan/', 'Runway AI subscription in Pakistan — price & how to buy'),
         ('/compare/capcut-vs-runway/', 'CapCut Pro vs Runway Gen-3 comparison'),
