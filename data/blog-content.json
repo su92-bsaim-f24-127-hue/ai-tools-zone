@@ -899,7 +899,7 @@
           "heading": "What each plan is listed for",
           "paragraphs": [
             "ChatGPT Plus is listed as a private-access plan with advanced AI models, image generation, file analysis and voice conversations. The seller-listed price is PKR 3,000 for one month. It is marked as the best-seller offer in the AI Assistants category.",
-            "Gemini Pro is listed as a private-access plan featuring Google's Gemini models with a large context window, Google Workspace integration, multimodal reasoning and deep research mode. The seller-listed price is PKR 2,000 for one year. It is marked as the best-value offer in the same category."
+            "Gemini Pro is listed as a slot-access plan featuring Google's Gemini models with a large context window, Google Workspace integration, multimodal reasoning and deep research mode. The seller-listed price is PKR 2,000 for one year. It is marked as the best-value offer in the same category."
           ]
         },
         {
@@ -910,7 +910,7 @@
           ],
           "bullets": [
             "ChatGPT Plus: PKR 3,000 — 1 Month — Private access — 15–30 min delivery — 30 Days warranty",
-            "Gemini Pro: PKR 2,000 — 1 Year — Private access — 15–30 min delivery — No warranty",
+            "Gemini Pro: PKR 2,000 — 1 Year — Slot access — 15–30 min delivery — No warranty",
             "Prices and durations are seller-listed. Confirm the current price, plan limits and access conditions on WhatsApp before payment."
           ]
         },
@@ -2105,7 +2105,7 @@
                 "[Gemini Pro](/products/gemini-pro/)",
                 "PKR 2,000",
                 "1 Year",
-                "Private",
+                "Slot",
                 "No Warranty"
               ],
               [
@@ -2498,7 +2498,7 @@
               "heading": "9. Google Gemini & NotebookLM — Best for PDF Document Synthesis & Study Guides",
               "paragraphs": [
                 "Google provides a powerful duo for students. Google NotebookLM is a free research tool where students upload textbook PDFs and lecture slides to generate grounded study notes, practice quizzes, and audio summaries.",
-                "Paired with [Gemini Pro](/products/gemini-pro/), students get deep Google Drive integration and expansive context windows for multi-document analysis. AI Tools Zone provides 1-year private [Gemini Pro](/products/gemini-pro/) accounts for PKR 2,000."
+                "Paired with [Gemini Pro](/products/gemini-pro/), students get deep Google Drive integration and expansive context windows for multi-document analysis. AI Tools Zone provides 1-year slot-access [Gemini Pro](/products/gemini-pro/) accounts for PKR 2,000."
               ],
               "bullets": [
                 "Best Academic Use: Textbook chapter summarization and grounded syllabus study notes.",
@@ -3396,7 +3396,7 @@
                 "$199.99 / year",
                 "~PKR 55,309",
                 "PKR 2,000 / year",
-                "Private",
+                "Slot",
                 "None — confirm terms before paying"
               ]
             ]
@@ -3773,7 +3773,7 @@
               [
                 "[Gemini Pro on AI Tools Zone](/products/gemini-pro/)",
                 "PKR 2,000 / 1 year",
-                "Private access, JazzCash / Easypaisa, WhatsApp ordering",
+                "Slot access, JazzCash / Easypaisa, WhatsApp ordering",
                 "Non-students, and students after the free year — a full year costs less than two months of Google's renewal price"
               ],
               [
