@@ -25,12 +25,12 @@
 - **Category**: AI Assistants
 - **Current seller-listed price**: PKR 2,000
 - **Duration / Allowance**: 1 Year
-- **Access Type**: Private
+- **Access Type**: Slot
 - **Delivery Estimate**: 15–30 min
 - **Replacement Warranty**: No Warranty
 - **Best For**: Research, Study, Coding
-- **Description**: Google's multimodal AI models for deep research, coding, documents, and Google Workspace integration. AI Tools Zone sells it for PKR 2,000 per year with private access. Delivery takes 15 to 30 minutes. The listing carries no replacement warranty.
-- **Included Features**: Large context window for deep analysis; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; 100% Private personal account (1 Year)
+- **Description**: Google's multimodal AI models for deep research, coding, documents, and Google Workspace integration. AI Tools Zone sells it for PKR 2,000 per year with slot access. Delivery takes 15 to 30 minutes. The listing carries no replacement warranty.
+- **Included Features**: Large context window for deep analysis; Google Workspace integration (Docs & Gmail); Deep multimodal reasoning & code execution; Slot access to a personal account (1 Year)
 - **Official Vendor**: https://gemini.google.com/
 
 ### Veo 3 Ultra

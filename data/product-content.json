@@ -74,8 +74,8 @@
         "a": "Google's Gemini models feature a large context window, allowing you to ingest and analyze entire textbooks, multi-page academic PDFs, and long video lectures in a single prompt."
       },
       {
-        "q": "What does 1-year private access mean for Gemini Pro?",
-        "a": "You receive dedicated personal account access valid for 1 full year. Your queries, search history, document uploads, and saved chats remain private to your session."
+        "q": "What does 1-year slot access mean for Gemini Pro?",
+        "a": "You receive slot-based personal account access valid for 1 full year. Your queries, search history, document uploads, and saved chats remain private to your session."
       },
       {
         "q": "Can Gemini Pro read and summarize 1,000-page PDF textbooks?",
