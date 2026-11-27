@@ -775,7 +775,7 @@
     "name": "GitHub Copilot",
     "brand": "GitHub",
     "category": "Development",
-    "description": "GitHub Copilot is GitHub's AI pair programmer for code editors. Included features cover code autocompletions, Copilot Chat and unit test generation.",
+    "description": "GitHub Copilot is GitHub's AI pair programmer for code editors. Included features cover code autocompletions, Copilot Chat and unit test generation. Since June 2026 GitHub meters Copilot Chat and agent usage in AI Credits — code completions stay unlimited. The credit allowance depends on the plan, so confirm which plan and allowance before paying.",
     "price": 2500,
     "duration": "1 Month",
     "access": "Private",
