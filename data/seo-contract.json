@@ -1,6 +1,6 @@
 {
-  "expected_pages": 115,
-  "reason": "Expand public educational and commercial guidance with the GitHub Copilot price in Pakistan article, increasing verified public routes from 114 to 115.",
+  "expected_pages": 116,
+  "reason": "Expand public educational and commercial guidance with the Grammarly Premium price in Pakistan article, increasing verified public routes from 115 to 116.",
   "routes": [
     "/",
     "/about/",
@@ -39,6 +39,7 @@
     "/blog/free-ai-tools-pakistan/",
     "/blog/github-copilot-price-in-pakistan/",
     "/blog/google-ai-plus-free-pakistani-students/",
+    "/blog/grammarly-premium-price-in-pakistan/",
     "/blog/how-to-earn-money-with-ai-pakistan/",
     "/blog/how-to-pay-for-chatgpt-plus-pakistan/",
     "/blog/jazzcash-easypaisa-ai-tools-pakistan/",

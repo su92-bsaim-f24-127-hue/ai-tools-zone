@@ -330,6 +330,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'grammarly': [
+        ('/blog/grammarly-premium-price-in-pakistan/', 'Grammarly Premium price in Pakistan'),
         ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
         ('/blog/ai-tools-for-pakistani-freelancers/', 'Top AI tools for Pakistani freelancers on Upwork & Fiverr'),
         ('/use-cases/ai-tools-for-students/', 'AI tools guide for Pakistani students'),
