@@ -225,7 +225,7 @@ og_description=description
 twitter_title=title
 twitter_description=description
 og_image=f'{ORIGIN}/assets/og-image.jpg'
-item_list_elements=[{'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':p['name'],'brand':{'@type':'Brand','name':p['brand']},'category':p['category'],'description':p['description'],'url':f"{ORIGIN}/products/{p['slug']}/",'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':'PKR','url':f"{ORIGIN}/products/{p['slug']}/"}}} for i,p in enumerate(products)]
+item_list_elements=[{'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':p['name'],'brand':{'@type':'Brand','name':p['brand']},'category':p['category'],'description':p['description'],'image':ORIGIN+'/'+p['logo'],'url':f"{ORIGIN}/products/{p['slug']}/",'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':'PKR','availability':'https://schema.org/InStock','url':f"{ORIGIN}/products/{p['slug']}/"}}} for i,p in enumerate(products)]
 schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','@id':ORIGIN+'/#itemlist','name':'AI tools and digital subscriptions in Pakistan','itemListElement':item_list_elements}]}
 schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'},'datePublished':'2026-10-26T00:00:00+05:00','dateModified':'2026-11-17T09:30:00+05:00'})
 home_faqs = [
