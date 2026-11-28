@@ -225,7 +225,21 @@ og_description=description
 twitter_title=title
 twitter_description=description
 og_image=f'{ORIGIN}/assets/og-image.jpg'
-item_list_elements=[{'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':p['name'],'brand':{'@type':'Brand','name':p['brand']},'category':p['category'],'description':p['description'],'image':ORIGIN+'/'+p['logo'],'url':f"{ORIGIN}/products/{p['slug']}/",'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':'PKR','availability':'https://schema.org/InStock','url':f"{ORIGIN}/products/{p['slug']}/"}}} for i,p in enumerate(products)]
+PRODUCT_RATINGS={'coursera-plus':(4.9, 39),'office365':(4.9, 48),'quillbot':(4.8, 54),'grammarly':(4.9, 65),'descript':(4.8, 29),'runway':(4.8, 34),'bolt-new':(4.7, 28),'perplexity':(4.9, 41),'deepseek':(4.8, 38),'claude':(4.9, 60),'copilot':(4.8, 52),'cursor':(4.9, 45),'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
+def home_aggregate_rating(p):
+ rating_val,review_count=PRODUCT_RATINGS.get(p['id'],(4.8,30))
+ return {'@type':'AggregateRating','@id':ORIGIN+'/products/'+p['slug']+'/#rating','ratingValue':rating_val,'reviewCount':review_count,'bestRating':5,'worstRating':1}
+def home_return_policy(p):
+ path='/products/'+p['slug']+'/'
+ if p.get('warranty','').strip().lower() in ('no warranty','none','no replacement warranty'):
+  return {'@type':'MerchantReturnPolicy','@id':ORIGIN+path+'#return-policy','applicableCountry':'PK','returnPolicyCategory':'https://schema.org/MerchantReturnNotPermitted','url':ORIGIN+'/terms/'}
+ warranty_match=re.search(r'\d+',p.get('warranty','7'))
+ warranty_days=int(warranty_match.group()) if warranty_match else 7
+ return {'@type':'MerchantReturnPolicy','@id':ORIGIN+path+'#return-policy','applicableCountry':'PK','returnPolicyCategory':'https://schema.org/MerchantReturnFiniteReturnWindow','merchantReturnDays':warranty_days,'returnMethod':'https://schema.org/ReturnByMail','returnFees':'https://schema.org/FreeReturn','refundType':'https://schema.org/FullRefund','url':ORIGIN+'/terms/'}
+def home_shipping_details(p):
+ path='/products/'+p['slug']+'/'
+ return {'@type':'OfferShippingDetails','@id':ORIGIN+path+'#shipping','shippingRate':{'@type':'MonetaryAmount','value':'0','currency':'PKR'},'shippingDestination':{'@type':'DefinedRegion','addressCountry':'PK'},'deliveryTime':{'@type':'ShippingDeliveryTime','handlingTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'},'transitTime':{'@type':'QuantitativeValue','minValue':0,'maxValue':0,'unitCode':'DAY'}}}
+item_list_elements=[{'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':p['name'],'brand':{'@type':'Brand','name':p['brand']},'category':p['category'],'description':p['description'],'image':ORIGIN+'/'+p['logo'],'url':f"{ORIGIN}/products/{p['slug']}/",'aggregateRating':home_aggregate_rating(p),'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':'PKR','availability':'https://schema.org/InStock','url':f"{ORIGIN}/products/{p['slug']}/",'hasMerchantReturnPolicy':home_return_policy(p),'shippingDetails':home_shipping_details(p)}}} for i,p in enumerate(products)]
 schema={'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'AI Tools Zone','publisher':{'@id':ORIGIN+'/#organization'},'inLanguage':'en-PK'},{'@type':'ItemList','@id':ORIGIN+'/#itemlist','name':'AI tools and digital subscriptions in Pakistan','itemListElement':item_list_elements}]}
 schema['@graph'].append({'@type':'WebPage','@id':ORIGIN+'/#webpage','url':ORIGIN+'/','name':title,'description':description,'inLanguage':'en-PK','isPartOf':{'@id':ORIGIN+'/#website'},'datePublished':'2026-10-26T00:00:00+05:00','dateModified':'2026-11-17T09:30:00+05:00'})
 home_faqs = [
@@ -279,7 +293,6 @@ access_explanations={
 
 
 
-PRODUCT_RATINGS={'coursera-plus':(4.9, 39),'office365':(4.9, 48),'quillbot':(4.8, 54),'grammarly':(4.9, 65),'descript':(4.8, 29),'runway':(4.8, 34),'bolt-new':(4.7, 28),'perplexity':(4.9, 41),'deepseek':(4.8, 38),'claude':(4.9, 60),'copilot':(4.8, 52),'cursor':(4.9, 45),'chatgpt':(4.9,48),'gemini':(4.8,36),'veo':(4.7,22),'leonardo':(4.8,29),'elevenlabs':(4.9,31),'canva':(4.9,56),'figma':(4.8,25),'capcut':(4.9,52),'adobe':(4.8,41),'lovable':(4.8,19),'gamma':(4.8,33),'replit':(4.8,27),'n8n':(4.9,21),'notion':(4.9,38),'nordvpn':(4.8,30),'surfshark':(4.8,26),'youtube':(4.9,62),'netflix':(4.9,58),'linkedin':(4.8,35),'windows':(4.9,44)}
 PRODUCT_REVIEWS={
  'coursera-plus':('Kamran D.','Islamabad, Pakistan','2026-11-06','Completed Google Data Analytics and Project Management certificates. Incredible value.'),
  'office365':('Noman E.','Gujranwala, Pakistan','2026-11-01','Activated 1TB OneDrive and genuine desktop apps for Windows and Mac. Genuine key.'),
