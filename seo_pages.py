@@ -323,6 +323,7 @@ PRODUCT_GUIDES = {
         ('/pricing/', 'Compare AI subscription prices in PKR')
     ],
     'quillbot': [
+        ('/blog/quillbot-premium-price-in-pakistan/', 'QuillBot Premium price in Pakistan'),
         ('/blog/ai-tools-for-pakistani-students-research-thesis/', 'AI tools for student thesis writing & Turnitin safety'),
         ('/blog/best-ai-tools-for-students-pakistan/', 'Best AI tools for Pakistani students (Free & Paid)'),
         ('/blog/cheap-ai-tools-for-students-pakistan/', '10 Best cheap AI tools for students in Pakistan'),
